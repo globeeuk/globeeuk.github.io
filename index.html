@@ -995,7 +995,7 @@ async function loadHolidayClubs(){
     console.error("[Globee] Sheet load error:",e);
     holidayData=HOLIDAY_FALLBACK;holidayStatus="error";
   }
-  if(currentMode==="holiday") renderPlaces();
+  renderPlaces();
 }
 /* ── SHEET EVENTS ── */
 async function loadSheetEvents(){
