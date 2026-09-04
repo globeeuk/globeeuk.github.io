@@ -253,6 +253,17 @@
   .event-item-arrow{font-size:15px;color:#ccc;}
   /* ── MAP ── */
   #map-el{position:absolute;inset:0;z-index:1;}
+  .map-empty{
+    position:absolute;z-index:5;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:min(280px,calc(100% - 40px));padding:14px 16px;border-radius:13px;
+    background:rgba(255,255,255,.94);box-shadow:0 3px 16px rgba(0,0,0,.12);
+    text-align:center;font-size:12px;line-height:1.5;color:var(--ink-soft);
+  }
+  .map-empty strong{display:block;margin-bottom:3px;color:var(--ink);font-size:13px;}
+  .section-empty{
+    background:#fff;border:1.5px dashed var(--line-strong);border-radius:var(--radius-sm);
+    padding:13px 14px;text-align:center;font-size:12px;line-height:1.5;color:var(--ink-soft);
+  }
   .map-toolbar{
     position:absolute;top:10px;left:10px;right:10px;z-index:10;
     display:flex;justify-content:flex-start;gap:7px;pointer-events:none;
@@ -435,6 +446,7 @@
   <!-- MAP VIEW -->
   <div class="view" id="view-map">
     <div id="map-el"></div>
+    <div class="map-empty" id="mapEmpty" hidden></div>
     <div class="map-toolbar">
       <button class="map-toolbar-btn" onclick="locateMe()">📍 My location</button>
     </div>
@@ -492,7 +504,7 @@ const DAYOUT_PLACES = [
      cautions:["Long queues in peak season","On-site food is pricey"],
      kid:["Toddler ride zone","Baby-change & feeding room","Pram hire on-site"],
      url:"https://www.crealy.co.uk/",
-     bookUrl:"https://www.crealy.co.uk/plan-your-visit/book-tickets/"}},
+     bookUrl:"https://www.crealy.co.uk/theme-park/tickets-prices/"}},
   {name:"Exeter Quay",region:"Exeter",emoji:"⛵",iconBg:"#e8f0ff",type:"places",area:"city",
    rating:4.7,count:3840,tags:["#walk","#canoe","#free","#under-5-OK"],regionKey:"Exeter",flags:["under5","free","kids"],
    detail:{price:"Free (canoe hire extra)",hours:"Always open",location:"The Quay, Exeter EX2 4AN",
@@ -555,10 +567,10 @@ const DAYOUT_PLACES = [
 ];
 /* ── HOLIDAY CLUBS FALLBACK ── */
 const HOLIDAY_FALLBACK = [
-  {name:"Rising Stars Holiday Club",type:"camp",region:"Exeter",price:"From £20/day",price_type:"paid",
+  {name:"Rising Stars Holiday Club",type:"camp",region:"Exeter",price:"From £20/day",price_type:"paid",end_date:"2026-07-31",
    description:"Full-day club with breakfast & lunch included.",season:"Summer",
    age_min:4,age_max:10,dates:"23 Jul – 31 Jul",location:"St Leonards Primary, Exeter EX2 4NQ",
-   url:"https://risingstarsexeter.co.uk/",featured:true},
+   url:"",featured:true},
   {name:"Sporty Stars Holiday Camps",type:"sports",region:"Exeter",price:"£30–£45/day",price_type:"paid",
    description:"Multi-sport camps with a different focus each day.",season:"All school holidays",
    age_min:5,age_max:12,dates:"All half-terms + summer",location:"Various schools, Exeter",
@@ -566,7 +578,7 @@ const HOLIDAY_FALLBACK = [
   {name:"Meraki Art School",type:"art",region:"Exeter",price:"£15–£27",price_type:"paid",
    description:"Artist-led canvas & 3D-make workshops.",season:"Term-time + holidays",
    age_min:4,age_max:12,dates:"Weekly + holiday sessions",location:"Exeter city centre",
-   url:"https://www.meraki-artschool.co.uk/"},
+   url:"https://www.merakiartschool.co.uk/"},
   {name:"Premier Education – St Luke's",type:"sports",region:"Exeter",price:"£30–£45/day",price_type:"paid",
    description:"Daily-themed sports & crafts mix.",season:"All school holidays",
    age_min:5,age_max:11,dates:"Easter / Summer / half-terms",location:"St Luke's Campus, Heavitree Rd EX1 2LU",
@@ -588,13 +600,13 @@ const HOLIDAY_FALLBACK = [
   {name:"Laser Camps",type:"sports",region:"Exeter",price:"£40–£55/day",price_type:"paid",
    description:"High-energy laser tag and team games.",season:"School holidays",
    age_min:6,age_max:14,dates:"All school holidays",location:"Exeter area",url:""},
-  {name:"Puffins of Exeter",type:"multi",region:"Exeter",price:"£25–£35/session",price_type:"paid",
+  {name:"Puffins of Exeter",type:"multi",region:"Exeter",price:"£25–£35/session",price_type:"paid",end_date:"2026-08-22",
    description:"Half and full-day mixed activity sessions.",season:"Summer",
    age_min:4,age_max:10,dates:"29 Jul – 22 Aug",location:"Exeter",url:""},
   {name:"Junior Tennis – Exeter Tennis Centre",type:"sports",region:"Exeter",price:"From £80/course",price_type:"paid",
    description:"LTA-qualified coaches at the University indoor courts.",season:"Term-time",
    age_min:5,age_max:16,dates:"Weekly during term",location:"Streatham Campus, University of Exeter",
-   url:"https://www.exetertenniscentre.co.uk/"},
+   url:"https://sport.exeter.ac.uk/facilities/universityofexetertenniscentre/"},
 ];
 /* ── Q&A ── */
 const QUESTIONS_FALLBACK = {
@@ -616,7 +628,7 @@ const EAT_DEALS = [
   {region:"Devon",name:"Bella Italia",where:"Queen St, city centre",deal:"Kids: 3 courses + drink free with adult main · Sun–Thu, all year",price:"Free",icon:"🍝",bg:"#fce8f7",url:"https://www.bellaitalia.co.uk/kids"},
   {region:"Devon",name:"Hub Box",where:"Exeter city centre",deal:"Has run kids-eat-free in past half terms — summer 2026 not announced yet",price:"Watch",icon:"🍔",bg:"#fff0e8",url:"https://hubbox.co.uk/news/"},
   {region:"Devon",name:"Pizza Express",where:"Exeter",deal:"Kids Eat Free ran May half-term (via app) — watch for a summer return",price:"Watch",icon:"🍕",bg:"#e8f0ff",url:"https://www.pizzaexpress.com/offers"},
-  {region:"Nottingham",name:"The Starting Gate",where:"Colwick, Nottingham NG2 4DX",deal:"Kids meal (main, dessert & drink) 88p with an adult main · Mon–Fri all day · to 28 Aug",price:"88p",end:"2026-08-28",icon:"🍗",bg:"#f0ffe8",url:"https://www.greeneking.co.uk/pubs/nottinghamshire/starting-gate/kids-eat-free"},
+  {region:"Nottingham",name:"The Starting Gate",where:"Colwick, Nottingham NG2 4DX",deal:"Kids meal (main, dessert & drink) 88p with an adult main · Mon–Fri all day · to 28 Aug",price:"88p",end:"2026-08-28",icon:"🍗",bg:"#f0ffe8",url:"https://www.flaminggrillpubs.co.uk/pubs/nottinghamshire/starting-gate/kids-eat-free"},
   {region:"Nottingham",name:"The Ram Inn",where:"Nottingham (Sizzling Pubs)",deal:"Kids main £1 with an adult main · every Monday from 12pm (daily in school holidays)",price:"£1",icon:"🍽",bg:"#fff0e8",url:"https://www.sizzlingpubs.co.uk/findapub/eastandwestmidlands/theraminnnottingham/offers"},
   {region:"Nottingham",name:"Morrisons Café",where:"Nottingham stores",deal:"1 kid eats free with any adult meal £5+ · every day · under 16",price:"Free",icon:"🛒",bg:"#f0ffe8",url:"https://www.morrisons.com/inspiration/shopping-at-morrisons/cafe"},
   {region:"Nottingham",name:"ASK Italian",where:"Chapel Quarter, Nottingham",deal:"Up to 2 kids' meals free with an adult main · every day · ASK Perks app · to 6 Sep",price:"Free",end:"2026-09-06",icon:"🍝",bg:"#fce8f7",url:"https://www.askitalian.co.uk/offers/kids-eat-free"},
@@ -635,7 +647,7 @@ function dealHTML(d){
     </a>`;
 }
 const EAT_DEALS_NOTE=`<div style="font-size:11px;color:var(--ink-mute);padding:2px 4px 6px;">ℹ️ Asda's £1 kids' meal: no Exeter store (nearest ~20km). Offers change — check each provider before you go.</div>`;
-function dealsForRegion(){const t=new Date().toISOString().slice(0,10);return EAT_DEALS.filter(d=>(d.region||"Devon")===currentRegion&&(!d.end||d.end>=t));}
+function dealsForRegion(){const t=todayISO();return EAT_DEALS.filter(d=>(d.region||"Devon")===currentRegion&&(!d.end||d.end>=t));}
 function renderEatDeals(){
   const box=document.getElementById("eatDeals");if(!box)return;
   const head=document.getElementById("eatDealsHead");
@@ -698,7 +710,7 @@ const ONGOING = [
   {name:"Sporty Stars Camps",icon:"🏆",bg:"#ffe8e8",price:"£30–45/day",summer:true},
   {name:"Laser Camps",icon:"🎯",bg:"#fff0f8",price:"£40–55/day",summer:true},
   {name:"A Touch of the Wild",icon:"🪓",bg:"#f0ffe8",price:"£35–50/day",summer:true},
-  {name:"Puffins of Exeter (29 Jul–22 Aug)",icon:"🐠",bg:"#f0f8ff",price:"£25–35/session",summer:true},
+  {name:"Puffins of Exeter (29 Jul–22 Aug)",icon:"🐠",bg:"#f0f8ff",price:"£25–35/session",summer:true,end:"2026-08-22"},
   {name:"Exeter Library Summer Workshops (6–11)",icon:"📚",bg:"#e8f7ee",price:"Free–low cost",summer:true},
   {name:"Exeter Phoenix Family Workshops",icon:"🎨",bg:"#fce8f7",price:"Paid",summer:true},
 ];
@@ -728,16 +740,27 @@ const COORDS = {
 /* ── STATE ── */
 let currentMode="dayout", currentTab="explore";
 let currentRegion="Devon";
-const REGION_META={Devon:{colour:"#378ADD"},Nottingham:{colour:"#A32D2D"}};
 let activeChip="All", searchTerm="";
 let holidayData=null, holidayStatus="idle";
-let calYear=2026, calMonth=5, selectedDate=null;
+function londonDateParts(){
+  return Object.fromEntries(
+    new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/London",year:"numeric",month:"2-digit",day:"2-digit"})
+      .formatToParts(new Date()).filter(p=>p.type!=="literal").map(p=>[p.type,p.value])
+  );
+}
+const todayISO=()=>{const d=londonDateParts();return `${d.year}-${d.month}-${d.day}`;};
+const INITIAL_LONDON_DATE=londonDateParts();
+let calYear=Number(INITIAL_LONDON_DATE.year), calMonth=Number(INITIAL_LONDON_DATE.month)-1, selectedDate=null;
 let leafletMap=null, mapMarkers=[], userMarker=null, userLatLng=null;
 let mapItems=[], activeSheetIdx=-1, activePill=null;
 /* ── HELPERS ── */
 function isSummer(d){return d>="2026-07-25"&&d<="2026-09-04";}
 function itemRegion(p){return ((p.regionKey||p.region||"")==="Nottingham")?"Nottingham":"Devon";}
 function evRegion(e){return (e.region==="Nottingham")?"Nottingham":"Devon";}
+const REGION_META={
+  Devon:{colour:"#378ADD",centre:[50.7236,-3.5275],zoom:12},
+  Nottingham:{colour:"#A32D2D",centre:[52.9548,-1.1581],zoom:12}
+};
 function setRegion(r){currentRegion=r;if(r!=="Devon"&&activeChip==="🍽 Kids eat free")activeChip="All";renderChips();renderEatDeals();document.querySelectorAll(".region-btn").forEach(b=>{const on=b.dataset.region===r;b.classList.toggle("active",on);b.style.background=on?REGION_META[r].colour:"var(--gold-soft)";b.style.color=on?"#fff":"var(--ink-soft)";b.style.borderColor=on?"transparent":"var(--line)";});renderPlaces();renderUpcoming();if(currentTab==="calendar"){renderCalendar();if(selectedDate)selectDate(selectedDate);}if(currentTab==="map"&&leafletMap)renderMap();}
 function ageLabel(min,max){
   min=parseInt(min);max=parseInt(max);
@@ -814,7 +837,7 @@ function getDataset(){
   const sheetData=holidayData||[];
   if(currentMode==="dayout")
     return [...DAYOUT_PLACES,...sheetData.filter(p=>p.tab==="dayout")];
-  return sheetData.filter(p=>!p.tab||p.tab==="club"); // fallback items have no tab
+  return sheetData.filter(p=>!p.tab||p.tab==="club").filter(p=>!p.end_date||p.end_date>=todayISO()); // fallback items have no tab
 }
 function cardHTML(p){
   if(currentMode==="dayout"&&p.detail){
@@ -943,6 +966,9 @@ function renderPlaces(){
   });
   wrap.innerHTML=banner+filtered.map(p=>cardHTML(p)).join("");
   document.getElementById("placeCount").textContent=filtered.length;
+  empty.textContent=(!filtered.length&&currentRegion==="Nottingham"&&activeChip==="All"&&!searchTerm)
+    ? "The Nottingham directory is being curated. Verified kids-eat-free offers are listed above."
+    : "😢 No matches — try a different filter";
   empty.style.display=filtered.length?"none":"block";
 }
 /* ── SHEETS CSV ── */
@@ -1030,7 +1056,7 @@ function isNew(g){if(!g.added)return false;var a=new Date(g.added);if(isNaN(a))r
 function renderUpcoming(){
   const box=document.getElementById("upcomingCards");
   if(!box) return;
-  const today=new Date().toISOString().slice(0,10);
+  const today=todayISO();
   // group multi-day events: name -> first upcoming date + last date
   const groups={};
   SPECIFIC_EVENTS.filter(e=>e.date>=today&&evRegion(e)===currentRegion).forEach(e=>{
@@ -1039,7 +1065,10 @@ function renderUpcoming(){
     if(e.date>g.last) g.last=e.date;
   });
   const list=Object.values(groups).sort((a,b)=>a.first.localeCompare(b.first)).slice(0,20);
-  if(!list.length){box.innerHTML="";return;}
+  if(!list.length){
+    box.innerHTML=`<div class="section-empty">No verified upcoming events are listed for ${currentRegion} yet.</div>`;
+    return;
+  }
   const fmt=ds=>{const d=new Date(ds);return d.toLocaleDateString("en-GB",{day:"numeric",month:"short"});};
   const wk=ds=>new Date(ds).toLocaleDateString("en-GB",{weekday:"short"});
   box.innerHTML=list.map(g=>{
@@ -1060,7 +1089,7 @@ function renderCalendar(){
   const names=["January","February","March","April","May","June","July","August","September","October","November","December"];
   document.getElementById("calMonthName").textContent=`${names[calMonth]} ${calYear}`;
   const grid=document.getElementById("calGrid");
-  const today=new Date().toISOString().slice(0,10);
+  const today=todayISO();
   const labels=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
   let html=labels.map(l=>`<div class="cal-day-label">${l}</div>`).join("");
   const firstDay=new Date(calYear,calMonth,1).getDay();
@@ -1106,7 +1135,9 @@ function selectDate(ds){
       </div>`;
     });
   }
-  const ongoing=currentRegion==="Devon"?ONGOING.filter(o=>o.always||(o.summer&&summer)):[];
+  const ongoing=currentRegion==="Devon"
+    ? ONGOING.filter(o=>(o.always||(o.summer&&summer))&&(!o.end||o.end>=ds))
+    : [];
   if(ongoing.length){
     html+=`<div class="event-section-label">${summer?"Also this summer":"Always available"}</div>`;
     ongoing.forEach(o=>{
@@ -1154,12 +1185,20 @@ function buildMapItems(){
 }
 function renderMap(){
   if(!leafletMap){
-    leafletMap=L.map("map-el",{zoomControl:true,attributionControl:false}).setView([50.7236,-3.5275],12);
+    const {centre,zoom}=REGION_META[currentRegion];
+    leafletMap=L.map("map-el",{zoomControl:true,attributionControl:false}).setView(centre,zoom);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19}).addTo(leafletMap);
     L.control.attribution({prefix:false}).addTo(leafletMap);
   }
   mapMarkers.forEach(m=>leafletMap.removeLayer(m));
   mapMarkers=[];mapItems=buildMapItems();
+  const mapEmpty=document.getElementById("mapEmpty");
+  mapEmpty.hidden=mapItems.length>0;
+  if(!mapItems.length){
+    const {centre,zoom}=REGION_META[currentRegion];
+    if(!userLatLng) leafletMap.setView(centre,zoom);
+    mapEmpty.innerHTML=`<strong>No verified locations yet</strong>${currentRegion} places will appear here once they have been checked.`;
+  }
   mapItems.forEach((item,idx)=>{
     const m=L.marker(item.coords,{icon:makePill(item.emoji,item.color,item.price,idx)}).addTo(leafletMap);
     m.on("click",()=>openSheet(idx));
