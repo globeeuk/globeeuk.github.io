@@ -751,7 +751,9 @@ function matchesChip(p,chip){
   if(chip==="📍 Exeter")   return (p.regionKey||p.region)==="Exeter";
   if(chip==="🌿 Dartmoor") return (p.regionKey||p.region)==="Dartmoor";
   if(chip==="☔ Rainy day") return p.flags&&p.flags.includes("rainy");
-  if(chip==="👶 Under 5")  return (p.age_min!=null?parseInt(p.age_min)<=2:false)||(p.flags&&p.flags.includes("under5"));
+  // If an organiser has not published an age range, keep the card visible rather
+  // than implying that it is unsuitable for younger children.
+  if(chip==="👶 Under 5")  return p.age_min==null||p.age_min===""||parseInt(p.age_min)<=2||(p.flags&&p.flags.includes("under5"));
   if(chip==="🧒 Age 5–12"){
     if(p.age_min!=null&&p.age_max!=null) return parseInt(p.age_min)<=12&&parseInt(p.age_max)>=5;
     return p.flags&&p.flags.includes("kids");
