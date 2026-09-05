@@ -266,8 +266,11 @@
   }
   .map-toolbar{
     position:absolute;top:10px;left:10px;right:10px;z-index:10;
-    display:flex;justify-content:flex-start;gap:7px;pointer-events:none;
+    display:flex;justify-content:space-between;gap:7px;pointer-events:none;
   }
+  .map-intro{pointer-events:none;max-width:220px;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border:1.5px solid var(--line);border-radius:13px;padding:9px 11px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+  .map-intro strong{display:block;font-size:13px;color:var(--ink);}
+  .map-intro span{display:block;margin-top:2px;font-size:10px;line-height:1.35;color:var(--ink-soft);}
   .map-toolbar-btn{
     pointer-events:all;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);
     border:1.5px solid var(--line);border-radius:999px;
@@ -448,7 +451,8 @@
     <div id="map-el"></div>
     <div class="map-empty" id="mapEmpty" hidden></div>
     <div class="map-toolbar">
-      <button class="map-toolbar-btn" onclick="locateMe()">📍 My location</button>
+      <div class="map-intro" id="mapIntro"></div>
+      <button class="map-toolbar-btn" onclick="locateMe()">📍 Near me</button>
     </div>
     <div class="map-sheet" id="mapSheet">
       <div class="sheet-handle"></div>
@@ -482,7 +486,7 @@
       <span class="ico">📅</span><span class="lbl">Calendar</span>
     </button>
     <button class="nav-item" data-tab="map" onclick="switchTab(this)">
-      <span class="ico">🗺️</span><span class="lbl">Map</span>
+      <span class="ico">🍦</span><span class="lbl">Ice cream</span>
     </button>
   </nav>
   <div class="toast" id="toast"></div>
@@ -737,6 +741,21 @@ const COORDS = {
   "FISH Kids Holiday Club":[50.7270,-3.5280],
   "Junior Tennis – Exeter Tennis Centre":[50.7363,-3.5354],
 };
+/* ── ICE CREAM MAP ──
+   Built from local recommendations. Each submission is reviewed before it
+   appears on the map. */
+const ICE_CREAM_STOPS = [
+  {name:"Delphini’s Gelato",region:"Devon",emoji:"🍨",color:"#F5A623",
+   coords:[50.4315458,-3.6874358],
+   address:"5B High Street, Totnes TQ9 5NN",
+   note:"Homemade gelato in Totnes, with vegan options listed locally. Check current opening details before travelling.",
+   status:"Local recommendation",url:"https://www.facebook.com/delphinisgelato/"},
+  {name:"Sea Shore Ice Creamery",region:"Devon",emoji:"🍦",color:"#F5A623",
+   coords:[50.613627,-3.407437],
+   address:"Queen’s Drive, Exmouth EX8 2AY",
+   note:"A seafront ice-cream stop. Dairy-free and gluten-free options are advertised; opening can depend on the weather.",
+   status:"Local recommendation",url:"https://www.facebook.com/seashoreicecreamery/"},
+];
 /* ── STATE ── */
 let currentMode="dayout", currentTab="explore";
 let currentRegion="Devon";
@@ -1167,23 +1186,20 @@ function distKm(a,b,c,d){
   return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
 }
 function buildMapItems(){
-  const data=currentMode==="dayout"?DAYOUT_PLACES:(holidayData||HOLIDAY_FALLBACK);
   const items=[];
-  data.forEach(p=>{
-    if(itemRegion(p)!==currentRegion) return;
-    const coords=COORDS[p.name];if(!coords) return;
-    const type=(p.type||"multi").toLowerCase();
-    const color=TYPE_COLORS[type]||"#a78bfa";
-    const emoji=currentMode==="dayout"?p.emoji:(TYPE_ICONS[type]||"📍");
-    const price=currentMode==="dayout"?(p.flags&&p.flags.includes("free")?"Free":p.detail?.price||""):(p.price||"");
-    const desc=currentMode==="dayout"?"":(p.description||"");
-    const dist=userLatLng?distKm(userLatLng[0],userLatLng[1],coords[0],coords[1]):null;
-    items.push({name:p.name,emoji,color,price,desc,coords,dist,type:currentMode==="holiday"?"club":type});
+  ICE_CREAM_STOPS.forEach(p=>{
+    if(p.region!==currentRegion) return;
+    const dist=userLatLng?distKm(userLatLng[0],userLatLng[1],p.coords[0],p.coords[1]):null;
+    items.push({...p,price:"",status:p.status||"Verified starter pick",desc:p.note,dist,type:"icecream"});
   });
   items.sort((a,b)=>(a.dist??999)-(b.dist??999));
   return items;
 }
 function renderMap(){
+  const intro=document.getElementById("mapIntro");
+  if(intro) intro.innerHTML=currentRegion==="Devon"
+    ? "<strong>Devon Ice Cream Map</strong><span>Made from local recommendations. Every stop is checked before it appears.</span>"
+    : "<strong>Nottingham Ice Cream Map</strong><span>Local tips coming soon.</span>";
   if(!leafletMap){
     const {centre,zoom}=REGION_META[currentRegion];
     leafletMap=L.map("map-el",{zoomControl:true,attributionControl:false}).setView(centre,zoom);
@@ -1197,13 +1213,16 @@ function renderMap(){
   if(!mapItems.length){
     const {centre,zoom}=REGION_META[currentRegion];
     if(!userLatLng) leafletMap.setView(centre,zoom);
-    mapEmpty.innerHTML=`<strong>No verified locations yet</strong>${currentRegion} places will appear here once they have been checked.`;
+    mapEmpty.innerHTML=`<strong>Coming soon</strong>${currentRegion} ice-cream stops will appear here once they have been checked.`;
   }
   mapItems.forEach((item,idx)=>{
     const m=L.marker(item.coords,{icon:makePill(item.emoji,item.color,item.price,idx)}).addTo(leafletMap);
     m.on("click",()=>openSheet(idx));
     mapMarkers.push(m);
   });
+  if(mapItems.length>1&&!userLatLng){
+    leafletMap.fitBounds(L.latLngBounds(mapItems.map(item=>item.coords)),{padding:[42,42],maxZoom:10});
+  }
   closeSheet();
   setTimeout(()=>leafletMap.invalidateSize(),120);
 }
@@ -1215,20 +1234,20 @@ function openSheet(idx){
   const pill=document.getElementById(`pill-${idx}`);
   if(pill){pill.classList.add("active");activePill=pill;}
   const isFree=item.price==="Free"||(item.price||"").toLowerCase().includes("free");
-  const typeLabel=item.type==="club"?"Holiday Club":(item.type.charAt(0).toUpperCase()+item.type.slice(1));
+  const typeLabel=item.type==="icecream"?"Ice-cream stop":(item.type.charAt(0).toUpperCase()+item.type.slice(1));
   const hero=document.getElementById("sheetHero");
   hero.style.background=`linear-gradient(135deg,${item.color}30,${item.color}10)`;
   hero.textContent=item.emoji;
   document.getElementById("sheetName").textContent=item.name;
   document.getElementById("sheetMeta").innerHTML=
-    `<span class="price-pill${isFree?" free":""}">${item.price||"See website"}</span>
+    `<span class="price-pill${isFree?" free":""}">${item.status||item.price||"See website"}</span>
      <span>·</span><span class="type-pill">${item.emoji} ${typeLabel}</span>
      ${item.dist?`<span>· 📍 ${item.dist.toFixed(1)}km</span>`:""}`;
   document.getElementById("sheetActions").innerHTML=
-    `<button class="sheet-btn" onclick="goToExplore()">📋 View details</button>
-     <a class="sheet-btn sec" href="https://maps.google.com/?q=${item.coords[0]},${item.coords[1]}" target="_blank">🗺️</a>`;
+    `<a class="sheet-btn" href="https://maps.google.com/?q=${encodeURIComponent(item.address)}" target="_blank" rel="noopener">🗺️ Get directions</a>
+     <a class="sheet-btn sec" href="${item.url}" target="_blank" rel="noopener">🌐</a>`;
   const note=document.getElementById("sheetNote");
-  if(item.desc){note.style.display="block";document.getElementById("sheetNoteTxt").textContent=item.desc;}
+  if(item.desc){note.style.display="block";document.getElementById("sheetNoteTxt").textContent=`${item.address} · ${item.desc}`;}
   else note.style.display="none";
   document.getElementById("sheetCounter").textContent=`${idx+1} / ${mapItems.length}`;
   document.getElementById("mapSheet").classList.add("open");
