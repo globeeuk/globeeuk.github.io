@@ -220,6 +220,8 @@
   .cal-month-name{font-size:16px;font-weight:800;}
   .cal-nav{background:#fff;border:1.5px solid var(--line-strong);border-radius:9px;padding:5px 13px;cursor:pointer;font-size:15px;transition:border-color .15s;}
   .cal-nav:hover{border-color:var(--gold);}
+  .cal-guide{margin:-4px 0 10px;text-align:center;font-size:10.5px;line-height:1.4;color:var(--ink-soft);}
+  .cal-guide strong{color:var(--ink);}
   .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:12px;}
   .cal-day-label{text-align:center;font-size:10px;font-weight:700;color:#bbb;padding:5px 0 3px;}
   .cal-day{
@@ -436,6 +438,7 @@
         <div class="cal-month-name" id="calMonthName"></div>
         <button class="cal-nav" onclick="changeMonth(1)">›</button>
       </div>
+      <div class="cal-guide"><strong>• Days with events</strong></div>
       <div class="cal-grid" id="calGrid"></div>
       <div class="cal-legend">
         <div><span style="background:var(--gold)"></span>Paid event</div>
