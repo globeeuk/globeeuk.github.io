@@ -1,0 +1,311 @@
+{
+  "checked_at": "2026-09-10T12:37:44.823549+00:00",
+  "scope": "Current master rows; HTTP availability only, not re-verification of all dates and prices",
+  "links": [
+    {
+      "url": "https://atouchofthewild.co.uk/woodland-club/",
+      "status": 200,
+      "final_url": "https://atouchofthewild.co.uk/programmes/woodland-adventure-club/"
+    },
+    {
+      "url": "https://chessed.me",
+      "status": 200,
+      "final_url": "https://www.chessed.me/"
+    },
+    {
+      "url": "https://discover.librariesunlimited.org.uk/-/children",
+      "status": 200,
+      "final_url": "https://discover.librariesunlimited.org.uk/-/children"
+    },
+    {
+      "url": "https://exeter.gov.uk/leisure-and-culture/sport-and-leisure/sports-pitches-and-courts/skate-parks/",
+      "status": 200,
+      "final_url": "https://exeter.gov.uk/leisure-and-culture/sport-and-leisure/sports-pitches-and-courts/skate-parks/"
+    },
+    {
+      "url": "https://exetercct.org/holiday-clubs-ecct/",
+      "status": 200,
+      "final_url": "https://exetercct.org/holiday-clubs-ecct/"
+    },
+    {
+      "url": "https://exetercustomhouse.co.uk",
+      "status": 200,
+      "final_url": "https://exetercustomhouse.co.uk"
+    },
+    {
+      "url": "https://exetercustomhouse.co.uk/event/quayside-shanty-festival-2026/",
+      "status": 200,
+      "final_url": "https://exetercustomhouse.co.uk/event/quayside-shanty-festival-2026/"
+    },
+    {
+      "url": "https://exeterphoenix.org.uk/events/brickfilm-lego-animation/",
+      "status": 200,
+      "final_url": "https://exeterphoenix.org.uk/events/brickfilm-lego-animation/"
+    },
+    {
+      "url": "https://exeterphoenix.org.uk/events/freefall/",
+      "status": 200,
+      "final_url": "https://exeterphoenix.org.uk/events/freefall/"
+    },
+    {
+      "url": "https://exeterphoenix.org.uk/events/the-truth-about-trees/",
+      "status": 200,
+      "final_url": "https://exeterphoenix.org.uk/events/the-truth-about-trees/"
+    },
+    {
+      "url": "https://exeterphoenix.org.uk/events/young-animated-saturday-club/",
+      "status": 200,
+      "final_url": "https://exeterphoenix.org.uk/events/young-animated-saturday-club/"
+    },
+    {
+      "url": "https://fishkids.co.uk/holiday-club/",
+      "status": 200,
+      "final_url": "https://www.fishkids.co.uk/holiday-club/"
+    },
+    {
+      "url": "https://lasercamp.co.uk/",
+      "status": 200,
+      "final_url": "https://lasercamp.co.uk/"
+    },
+    {
+      "url": "https://pennywellfarm.co.uk/pages/pumpkin-patch",
+      "status": 200,
+      "final_url": "https://pennywellfarm.co.uk/pages/pumpkin-patch"
+    },
+    {
+      "url": "https://rammuseum.org.uk/whats-on/",
+      "status": 200,
+      "final_url": "https://rammuseum.org.uk/whats-on/"
+    },
+    {
+      "url": "https://rammuseum.org.uk/whats-on/art-club-for-home-educators-aged-7-to-11-selections-of-dates-between-september-and-december/",
+      "status": 200,
+      "final_url": "https://rammuseum.org.uk/whats-on/art-club-for-home-educators-aged-7-to-11-selections-of-dates-between-september-and-december/"
+    },
+    {
+      "url": "https://rammuseum.org.uk/whats-on/mushroom-magic-build-a-woodland-dwelling/",
+      "status": 200,
+      "final_url": "https://rammuseum.org.uk/whats-on/mushroom-magic-build-a-woodland-dwelling/"
+    },
+    {
+      "url": "https://rammuseum.org.uk/whats-on/musical-moments-for-home-educators-5-11-year-olds/",
+      "status": 200,
+      "final_url": "https://rammuseum.org.uk/whats-on/musical-moments-for-home-educators-5-11-year-olds/"
+    },
+    {
+      "url": "https://rammuseum.org.uk/whats-on/rainbow-colour-clash-at-northernhay-gardens/",
+      "status": 200,
+      "final_url": "https://rammuseum.org.uk/whats-on/rainbow-colour-clash-at-northernhay-gardens/"
+    },
+    {
+      "url": "https://rammuseum.org.uk/whats-on/roman-exeter-gallery-handling/",
+      "status": 200,
+      "final_url": "https://rammuseum.org.uk/whats-on/roman-exeter-gallery-handling/"
+    },
+    {
+      "url": "https://rammuseum.org.uk/whats-on/second-world-war-and-the-exeter-blitz-gallery-handling/",
+      "status": 200,
+      "final_url": "https://rammuseum.org.uk/whats-on/second-world-war-and-the-exeter-blitz-gallery-handling/"
+    },
+    {
+      "url": "https://rammuseum.org.uk/whats-on/summer-of-colour/",
+      "status": 200,
+      "final_url": "https://rammuseum.org.uk/whats-on/summer-of-colour/"
+    },
+    {
+      "url": "https://rammuseum.org.uk/whats-on/the-mushroom-show/",
+      "status": 200,
+      "final_url": "https://rammuseum.org.uk/whats-on/the-mushroom-show/"
+    },
+    {
+      "url": "https://sport.exeter.ac.uk/facilities/universityofexetertenniscentre/youthtennis/",
+      "status": 200,
+      "final_url": "https://sport.exeter.ac.uk/facilities/universityofexetertenniscentre/youthtennis/"
+    },
+    {
+      "url": "https://sportystars.co.uk/holiday-camps.html",
+      "status": 200,
+      "final_url": "https://sportystars.co.uk/holiday-camps.html"
+    },
+    {
+      "url": "https://tubers.uk/holiday-club/",
+      "status": 200,
+      "final_url": "https://tubers.uk/holiday-club/"
+    },
+    {
+      "url": "https://wollatonhall.org.uk/autumn-festival-at-the-walled-garden/",
+      "status": 200,
+      "final_url": "https://wollatonhall.org.uk/autumn-festival-at-the-walled-garden/"
+    },
+    {
+      "url": "https://wollatonhall.org.uk/halloween-outdoor-cinema-2026/",
+      "status": 200,
+      "final_url": "https://wollatonhall.org.uk/halloween-outdoor-cinema-2026/"
+    },
+    {
+      "url": "https://www.bdcmuseum.org.uk/",
+      "status": 200,
+      "final_url": "https://www.bdcmuseum.org.uk/"
+    },
+    {
+      "url": "https://www.canonteignfalls.co.uk/",
+      "status": 200,
+      "final_url": "https://www.canonteignfalls.co.uk/"
+    },
+    {
+      "url": "https://www.crealy.co.uk/events/halloween-at-crealy/",
+      "status": 200,
+      "final_url": "https://www.crealy.co.uk/events/halloween-at-crealy/"
+    },
+    {
+      "url": "https://www.dartsfarm.co.uk",
+      "status": 200,
+      "final_url": "https://www.dartsfarm.co.uk"
+    },
+    {
+      "url": "https://www.davidlloyd.co.uk/clubs/exeter/club-facilities/kids-club/",
+      "status": 200,
+      "final_url": "https://www.davidlloyd.co.uk/clubs/exeter/club-facilities/kids-club/"
+    },
+    {
+      "url": "https://www.devon.gov.uk/children-families-education/child-family-support/family-support/haf-programme/",
+      "status": 200,
+      "final_url": "https://www.devon.gov.uk/children-families-education/child-family-support/family-support/haf-programme/"
+    },
+    {
+      "url": "https://www.exeter-cathedral.org.uk/",
+      "status": 200,
+      "final_url": "https://www.exeter-cathedral.org.uk/"
+    },
+    {
+      "url": "https://www.forestryengland.uk/haldon-forest-park/room-on-the-broom",
+      "status": 200,
+      "final_url": "https://www.forestryengland.uk/haldon-forest-park/room-on-the-broom"
+    },
+    {
+      "url": "https://www.haven-banks.co.uk/",
+      "status": 200,
+      "final_url": "https://www.haven-banks.co.uk/"
+    },
+    {
+      "url": "https://www.heritageopendays.org.uk/submission-event/poltimore-house-grounds-2026-2.html",
+      "status": 200,
+      "final_url": "https://www.heritageopendays.org.uk/submission-event/poltimore-house-grounds-2026-2.html"
+    },
+    {
+      "url": "https://www.lakesidearts.org.uk/event/magical-garden/",
+      "status": 200,
+      "final_url": "https://www.lakesidearts.org.uk/event/magical-garden/"
+    },
+    {
+      "url": "https://www.lakesidearts.org.uk/festival/family-workshops/",
+      "status": 200,
+      "final_url": "https://www.lakesidearts.org.uk/festival/family-workshops/"
+    },
+    {
+      "url": "https://www.letsleapsportsacademy.co.uk/camp-locations/nottingham-schools/nottingham-high-school",
+      "status": 200,
+      "final_url": "https://www.letsleapsportsacademy.co.uk/camp-locations/nottingham-schools/nottingham-high-school"
+    },
+    {
+      "url": "https://www.librariesunlimited.org.uk/all-aboard-the-summer-book-quest/",
+      "status": 403,
+      "final_url": "https://www.librariesunlimited.org.uk/all-aboard-the-summer-book-quest/"
+    },
+    {
+      "url": "https://www.maverickskateparks.co.uk/exeter/exeter-arena",
+      "status": 200,
+      "final_url": "https://www.maverickskateparks.co.uk/exeter/exeter-arena"
+    },
+    {
+      "url": "https://www.merakiartschool.co.uk/workshops",
+      "status": 200,
+      "final_url": "https://www.merakiartschool.co.uk/workshops"
+    },
+    {
+      "url": "https://www.mommatruckerskates.co.uk/",
+      "status": 200,
+      "final_url": "https://www.mommatruckerskates.co.uk/"
+    },
+    {
+      "url": "https://www.nationaljusticemuseum.org.uk/museum/events/heritage-open-day-courtroom-trial",
+      "status": 200,
+      "final_url": "https://www.nationaljusticemuseum.org.uk/museum/events/heritage-open-day-courtroom-trial"
+    },
+    {
+      "url": "https://www.nationaljusticemuseum.org.uk/museum/events/heritage-open-day-laundry-with-matron",
+      "status": 200,
+      "final_url": "https://www.nationaljusticemuseum.org.uk/museum/events/heritage-open-day-laundry-with-matron"
+    },
+    {
+      "url": "https://www.nationaljusticemuseum.org.uk/museum/events/kids-ghost-hunter-tours",
+      "status": 200,
+      "final_url": "https://www.nationaljusticemuseum.org.uk/museum/events/kids-ghost-hunter-tours"
+    },
+    {
+      "url": "https://www.nationaltrust.org.uk/visit/devon/a-la-ronde",
+      "status": 200,
+      "final_url": "https://www.nationaltrust.org.uk/visit/devon/a-la-ronde"
+    },
+    {
+      "url": "https://www.nationaltrust.org.uk/visit/devon/fingle-bridge",
+      "status": 200,
+      "final_url": "https://www.nationaltrust.org.uk/visit/devon/fingle-bridge"
+    },
+    {
+      "url": "https://www.nottinghamcitygymnastics.co.uk/class/",
+      "status": 200,
+      "final_url": "https://www.nottinghamcitygymnastics.co.uk/class/"
+    },
+    {
+      "url": "https://www.nottinghamcontemporary.org/whats-on/early-years-sensory-workshops-we-are-wonderlings-sep-oct-nov-dec26/",
+      "status": 200,
+      "final_url": "https://www.nottinghamcontemporary.org/whats-on/early-years-sensory-workshops-we-are-wonderlings-sep-oct-nov-dec26/"
+    },
+    {
+      "url": "https://www.outdoorsgroup.co.uk/forest-school-holiday-club/",
+      "status": 200,
+      "final_url": "https://www.outdoorsgroup.co.uk/forest-school-holiday-club/"
+    },
+    {
+      "url": "https://www.powderham.co.uk/event/powderham-food-festival-2/",
+      "status": 200,
+      "final_url": "https://www.powderham.co.uk/event/powderham-food-festival-2/"
+    },
+    {
+      "url": "https://www.premier-education.com/parents/venue/courses/20996/?location=Exeter",
+      "status": 200,
+      "final_url": "https://www.premier-education.com/parents/venue/courses/20996/?location=Exeter"
+    },
+    {
+      "url": "https://www.thedonkeysanctuary.org.uk/visit-us/sidmouth",
+      "status": 403,
+      "final_url": "https://www.thedonkeysanctuary.org.uk/visit-us/sidmouth"
+    },
+    {
+      "url": "https://www.trch.co.uk/whats-on/dear-zoo-live-fghq",
+      "status": 200,
+      "final_url": "https://www.trch.co.uk/whats-on/dear-zoo-live-fghq"
+    },
+    {
+      "url": "https://www.trch.co.uk/whats-on/how-to-train-your-dragon-2-t4bc",
+      "status": 200,
+      "final_url": "https://www.trch.co.uk/whats-on/how-to-train-your-dragon-2-t4bc"
+    },
+    {
+      "url": "https://www.trch.co.uk/whats-on/nb-cinderella-1hfr",
+      "status": 200,
+      "final_url": "https://www.trch.co.uk/whats-on/nb-cinderella-1hfr"
+    },
+    {
+      "url": "https://www.trch.co.uk/whats-on/the-princess-proms-qhst",
+      "status": 200,
+      "final_url": "https://www.trch.co.uk/whats-on/the-princess-proms-qhst"
+    },
+    {
+      "url": "https://www.visitexeter.com/inspire-me/blog/read/2026/07/explore-exeter-with-heritage-open-days-2026-b797",
+      "status": 200,
+      "final_url": "https://www.visitexeter.com/inspire-me/blog/read/2026/07/explore-exeter-with-heritage-open-days-2026-b797"
+    }
+  ]
+}

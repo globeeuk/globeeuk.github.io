@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://globeeuk.github.io/sitemap.xml

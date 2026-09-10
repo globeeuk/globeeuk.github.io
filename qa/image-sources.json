@@ -1,0 +1,64 @@
+{
+  "checked_on": "2026-09-10",
+  "assets": [
+    {
+      "venue": "Exeter Phoenix",
+      "width": 768,
+      "height": 512,
+      "kind": "programme-reference",
+      "description": "Photograph of a clay model and art materials, with existing graphic squiggles; hands only in background. Same clay subject as current Young & Animated Saturday Club event page. Not evidence of a particular 2026 session.",
+      "alt": "A clay model and art materials for Young & Animated at Exeter Phoenix",
+      "source_page": "https://exeterphoenix.org.uk/events/young-animated-saturday-club/",
+      "image_metadata_source": "https://exeterphoenix.org.uk/wp-json/wp/v2/media/98575",
+      "image_url": "https://exeterphoenix.org.uk/wp-content/uploads/2026/04/Young-Animated-Landscape-768x512.png",
+      "credit": "Image source: Exeter Phoenix",
+      "reuse": "No named photographer or image-specific reuse licence in official media metadata. Site footer says © Copyright 2026 Exeter Phoenix. All Rights Reserved. Source credit is not a reuse permission.",
+      "bytes": 116605,
+      "sha256": "b5a98ab372326ba7a30a9c7b7a482a80feb3e2648bb4768782f0a304fdc1a6e3"
+    },
+    {
+      "venue": "Crealy",
+      "width": 768,
+      "height": 432,
+      "kind": "event-specific",
+      "description": "Exterior of Buddy’s Spooky Maze / Creaky Hotel, used as hero photograph on the current Spook-Fest 2026 page. No people. Not evidence of date when photograph was taken.",
+      "alt": "The spooky maze exterior at Crealy",
+      "source_page": "https://www.crealy.co.uk/events/halloween-at-crealy/",
+      "image_url": "https://www.crealy.co.uk/media/5jxhtkyz/_mg_4423.jpg?anchor=center&rmode=crop&width=768&height=432&quality=80",
+      "credit": "Image source: Crealy Theme Park & Resort",
+      "reuse": "No named photographer or external reuse licence found beside the official page image. No permission inferred.",
+      "bytes": 65612,
+      "sha256": "9f0b34150a14a31528271045a5751eba128e62cf596bee83d217330ed174c049"
+    },
+    {
+      "venue": "Pennywell Farm",
+      "width": 720,
+      "height": 500,
+      "kind": "venue-reference",
+      "description": "Empty Treetops adventure playground. Included in venue activities section on the official Pumpkin Festival page; not a pumpkin-event photograph.",
+      "alt": "Wooden towers and slides at Pennywell Farm",
+      "source_page": "https://pennywellfarm.co.uk/pages/pumpkin-patch",
+      "image_url": "https://pennywellfarm.co.uk/cdn/shop/files/Treetops_adventure_towers.webp?v=1753887124&width=720",
+      "credit": "Image source: Pennywell Farm",
+      "reuse": "No named photographer or external reuse licence found beside the official page image. Site footer says © Copyright 2006–2026 Pennywell Farm. No permission inferred.",
+      "bytes": 119103,
+      "sha256": "17463f29a4fbb2a38fabd44a9695d34296316b2ee7d3eefe8bc9d234f85a5b88"
+    },
+    {
+      "venue": "Powderham",
+      "width": 768,
+      "height": 512,
+      "kind": "venue-reference",
+      "description": "Castle exterior with flowering wisteria. No people. Spring-season reference photograph; do not present as a photograph of the autumn Food Festival.",
+      "alt": "Powderham Castle with flowering wisteria",
+      "source_page": "https://www.powderham.co.uk/visit/castle/",
+      "image_metadata_source": "https://www.powderham.co.uk/wp-json/wp/v2/media/491",
+      "image_url": "https://www.powderham.co.uk/wp-content/uploads/2024/02/Wisteria-768x512.jpeg",
+      "credit": "Image source: Powderham Castle",
+      "reuse": "No named photographer or image-specific reuse licence in official media metadata. Site footer says © Powderham Castle 2026. No permission inferred.",
+      "bytes": 103360,
+      "sha256": "62fe12ff417e8e5fc61d58f72ebf8d683bc8b2b493cff6ab13f95e191e3fb434"
+    }
+  ],
+  "implementation": "Remote provider thumbnails in editorial.js; these source files are not copied into the repository. Credit does not establish a reuse licence."
+}

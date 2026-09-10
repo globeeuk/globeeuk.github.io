@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,follow">
-  <title>Family activities in Exeter, Devon &amp; Nottingham | Globee</title>
-  <meta name="description" content="Find family activities, upcoming events and holiday clubs in Exeter, Devon and Nottingham. Explore by date, age and budget, with local edits and a map.">
-  <link rel="canonical" href="https://globeeuk.github.io/">
-  <meta property="og:title" content="Family activities in Exeter, Devon &amp; Nottingham | Globee">
-  <meta property="og:description" content="Find family activities, upcoming events and holiday clubs in Exeter, Devon and Nottingham. Explore by date, age and budget, with local edits and a map.">
-  <meta property="og:url" content="https://globeeuk.github.io/">
+  <title>What’s on &amp; holiday clubs in Exeter, Devon &amp; Nottingham | Globee</title>
+  <meta name="description" content="Browse upcoming family events and holiday clubs. Filter by date, age and budget, then explore the list or map with links to official providers.">
+  <link rel="canonical" href="https://globeeuk.github.io/plans.html">
+  <meta property="og:title" content="What’s on &amp; holiday clubs in Exeter, Devon &amp; Nottingham | Globee">
+  <meta property="og:description" content="Browse upcoming family events and holiday clubs. Filter by date, age and budget, then explore the list or map with links to official providers.">
+  <meta property="og:url" content="https://globeeuk.github.io/plans.html">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,14 +24,14 @@
   <script defer src="db-loader.js?v=live1"></script>
   <script defer src="analytics.js?v=live1"></script>
 </head>
-<body>
+<body class="plans-page" data-page="plans">
   <header class="site-header">
     <div class="header-inner">
       <a href="./" class="brand" aria-label="Globee home"><span class="brand-mark">G<span class="brand-dot"></span></span><span>Glo<span class="brand-bee">bee</span></span></a>
       <p class="brand-caption">Little plans. Lovely days.</p>
       <span class="header-note">A local eye for family time.</span>
     </div>
-    <nav class="filterbar" aria-label="Search and filter places">
+    <nav class="filterbar" aria-label="Search and filter events and holiday clubs">
       <button class="filter-control search-button" data-menu="search" aria-label="Search places" aria-expanded="false"><span data-icon="search"></span><span class="search-word">Search</span></button>
       <button class="filter-control region-control" data-menu="region" aria-expanded="false"><span data-icon="pin" class="filter-leading"></span><span id="region-label">Exeter · Devon</span><span data-icon="chevron"></span></button>
       <button class="filter-control date-control" data-menu="dates" aria-expanded="false"><span data-icon="calendar" class="filter-leading"></span><span id="dates-label">Dates</span><span data-icon="chevron"></span></button>
@@ -42,19 +42,18 @@
   </header>
   <a class="skip-link" href="#results-heading">Skip to activities</a>
   <main>
-    <div class="intro content-width">
-      <div><p class="eyebrow" id="location-eyebrow">THE EXETER · DEVON EDIT</p><h1>Your next <span>little plan.</span></h1></div>
+    <nav class="content-width plans-breadcrumb" aria-label="Breadcrumb"><a id="back-explore" href="index.html?region=Devon"><span data-icon="arrow"></span>Back to Explore</a></nav>
+    <div class="intro content-width plans-intro">
+      <div><p class="eyebrow" id="location-eyebrow">EXETER · DEVON</p><h1>What’s on &amp; holiday clubs</h1><p class="plans-intro-copy">Browse upcoming events and holiday clubs in one place.</p></div>
       <button class="weekend-shortcut" data-date-shortcut="weekend"><span data-icon="calendar"></span>This weekend<span data-icon="arrow"></span></button>
     </div>
-    <section class="content-width main-plans" id="main-plans" aria-label="What’s on and holiday clubs"></section>
-    <section class="content-width guide-section" id="guide-section" aria-labelledby="guide-heading"><div class="guide-section-head"><h2 id="guide-heading">The Globee edits</h2><span>Good places to keep.</span></div><div id="guide-rail" class="guide-rail"></div><details class="edits-method"><summary>How we choose these edits</summary><div id="edits-criteria" class="edits-criteria"></div><p class="edit-review-note">We revisit a choice when its offering, access or family experience changes. Unknown details are marked TBC.</p></details></section>
     <section class="content-width result-section" aria-labelledby="results-heading">
-      <div class="results-top"><div><h2 id="results-heading" tabindex="-1">A few lovely places to start</h2><p id="results-subtitle">A few practical ideas for time together.</p></div><span id="result-count" class="result-count" aria-live="polite"></span></div>
+      <div class="results-top"><div><h2 id="results-heading" tabindex="-1">All upcoming plans</h2><p id="results-subtitle">Events and clubs together, ordered by date. Dates TBC appear last.</p></div><span id="result-count" class="result-count" aria-live="polite"></span></div>
       <p id="database-status" class="database-status" role="status">Loading the directory…</p>
       <div id="applied-filters" class="applied-filters" hidden></div>
       <p id="date-scope-note" class="date-scope-note" hidden></p>
-      <div id="list-view"><div id="discovery-rails"></div><div id="empty-state" class="empty-state" hidden><span data-icon="search"></span><h3>No little plans found just yet</h3><p>Try another date, age, price or type to see more places.</p><button id="empty-reset" class="primary-button">Clear filters</button></div></div>
-      <div id="map-view" hidden><div id="map" aria-label="Map of the filtered places"></div><p id="map-note" class="map-note"></p><div id="map-selection" class="map-selection" hidden></div></div>
+      <div id="list-view"><div id="discovery-rails"></div><div id="empty-state" class="empty-state" hidden><span data-icon="search"></span><h3>No plans found just yet</h3><p>Try different filters, or choose another region.<br>New plans are added as details are checked.</p><button id="empty-reset" class="primary-button">Clear filters</button></div></div>
+      <div id="map-view" hidden><div id="map" aria-label="Map of matching events and holiday clubs"></div><p id="map-note" class="map-note"></p><div id="map-selection" class="map-selection" hidden></div></div>
       <div id="results-pagination" class="results-pagination" hidden></div>
     </section>
     <footer class="content-width footer"><div><span class="footer-brand">Glo<span>bee</span></span><p>Prices &amp; schedules change — always check the provider before booking.</p></div><div class="footer-links"><a href="https://forms.gle/tVQQETV24frZhhpa6" target="_blank" rel="noopener">Ask a question or share a tip</a><a href="privacy.html">Privacy</a><button class="text-button" data-cookie-settings>Cookie settings</button></div></footer>
