@@ -2,6 +2,8 @@
 
 These images supplement licensed venue photographs where no suitable reusable event photograph has been confirmed. They are labelled Illustration in the UI, and described as AI-generated in details. They are not factual depictions of venues or events. Generated with the built-in imagegen tool; resized only and encoded as 640px WebP for delivery.
 
+After the licensed-photo expansion on 10 September, 16 of 62 current cards still use illustrations. They are providers with multiple or undisclosed venues, broad county-wide programmes, or places for which the available reusable photograph was too weak or potentially misleading. Six of the nine themes are currently displayed; the remaining assets stay available for future records.
+
 ## Shared prompt
 
 Use case: illustration-story. Asset type: polished editorial illustration for a British family-activities directory card. Create ONE landscape image, ideally 1536 by 1024. Style: sophisticated tactile cut-paper and hand-painted gouache still life with subtle natural shadows and realistic paper texture, beautifully art-directed magazine illustration. Not a flat icon, not a diagram, not a children's cartoon. Restrained warm cream, muted sage, dusty blue, clay and honey accents; enough colour and contrast to read clearly at 240px wide. Fill the image with an appealing simple composition, generous breathing room, main objects centred and safe for 4:3 or 1.4:1 crops. Bright softly diffused natural light, inviting and calm. No text, lettering, signage, logos, characters, faces, real venue likenesses, or artist imitation. This is an illustrative activity theme, not a photograph or factual depiction of a venue. 
@@ -61,4 +63,3 @@ Final asset: `assets/images/food.webp`
 A gentle autumn family-outing scene: a few orange and pale pumpkins, fallen maple and oak leaves, wellington boots and a wicker basket along a sunlit garden path. Cosy seasonal mood, no frightening elements, no people.
 
 Final asset: `assets/images/autumn.webp`
-

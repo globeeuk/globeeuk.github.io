@@ -28,7 +28,7 @@ Below it, Explore all shows the complete current directory, including places, ev
 - A filter change returns the list to its first batch. Map/list switching retains loaded list cards and its scroll position. The map uses every matching record with a known location, independently of list batching. Nearby pins form numbered groups that zoom in on click; activities at the same venue share one pin.
 - On first map opening, one current regional recommendation is randomly selected (falling back to another located result). Selection remains stable on list/map toggles and can be closed. Only one preview card/photo is rendered at a time.
 - Both CSV files load together; a five-minute browser cache reduces repeat requests. Batching applies to card rendering, not Sheet downloads.
-- Local WebP images are 640px wide and at most 74 KB. They load near the viewport; repeated themes reuse the same URL. Leaflet and map tiles load on demand.
+- Local WebP images are 640px wide and at most 74 KB. They load near the viewport; the 2.2 MB image library is never downloaded as one bundle. Leaflet and map tiles load on demand.
 - Normal loading/update dates are hidden. A failed refresh still exposes the saved-data date and Refresh button. This is a data fallback, not a fully offline website or map.
 
 ## Map locations
@@ -37,7 +37,7 @@ As of this review, 25 of 47 Devon records and 14 of 15 Nottingham records have m
 
 ## Image policy
 
-`image-catalog.js` decorates DB entries without changing the Sheet. Confirmed, licensed venue/location photographs take priority. Where no suitable reusable photograph is confirmed, labelled activity illustrations fill the image area. A generic chess photograph is marked Activity photo. Generated visuals never claim to show a real venue or programme.
+`image-catalog.js` decorates DB entries without changing the Sheet. Confirmed, licensed venue/location photographs take priority. At this review, 46 of 62 current cards use 41 licensed photo assets; 16 cards use six shared illustration themes. Multiple activities at RAMM, Exeter Phoenix, Lakeside Arts, Theatre Royal, Royal Concert Hall, the National Justice Museum and Wollaton use different venue views where the source library allows it. Where no suitable reusable photograph is confirmed, labelled activity illustrations fill the image area. A generic chess photograph is marked Activity photo. Generated visuals never claim to show a real venue or programme.
 
 All photographs have creator, source, licence and modification notices in place details and `image-credits.html`. WebP derivatives retain their source licences. Previous remote provider images with no confirmed reuse permission have been removed. A public website image or a credit alone is not evidence of permission. See `qa/image-sources.json` and `qa/illustrations.md` for the source records and illustration prompts.
 

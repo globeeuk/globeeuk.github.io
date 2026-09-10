@@ -1,5 +1,6 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
 const model=require('../discovery-model.js'),images=require('../image-catalog.js'),db=require('../db-adapter.js');
+const imageSources=JSON.parse(fs.readFileSync(path.join(__dirname,'..','qa','image-sources.json'),'utf8'));
 const ctx={window:{}};vm.createContext(ctx);for(const f of ['db-snapshot.js','editorial.js'])vm.runInContext(fs.readFileSync(path.join(__dirname,'..',f),'utf8'),ctx);
 const items=db.normalise(ctx.window.GLOBEE_SNAPSHOT.master,ctx.window.GLOBEE_SNAPSHOT.events,ctx.window.GLOBEE_EDITORIAL);
 const current=items.filter(p=>p.datePeriods?.length?p.datePeriods.some(d=>d.end>='2026-09-10'):!p.endDate||p.endDate>='2026-09-10');
@@ -23,12 +24,25 @@ test('Twelve-card batches reach every actual record exactly once with a partial 
  assert.equal(shown.length,all.length);assert.equal(new Set(shown.map(p=>p.id)).size,all.length);assert.deepEqual(model.nextBatch(all,shown.length),[]);}
 });
 test('Every current card has a small local asset and honest image metadata',()=>{
- for(const p of current.map(images.decorate)){
- assert.match(p.image,/^assets\/images\/[a-z]+\.webp$/);const asset=path.join(__dirname,'..',p.image);assert(fs.statSync(asset).size<80000,p.name);
- assert(p.imageAlt);if(p.imageKind==='illustration'){assert(p.imageReference.includes('AI-generated'));assert.equal(p.photoSource,'');}else{assert.match(p.photoSource,/^https:\/\/commons.wikimedia.org/);assert(p.photoLicence.startsWith('CC BY'));assert.match(p.photoLicenceUrl,/^https:\/\/creativecommons.org/);}
+ const decorated=current.map(images.decorate);
+ for(const p of decorated){
+ assert.match(p.image,/^assets\/images\/[a-z-]+\.webp$/);const asset=path.join(__dirname,'..',p.image);assert(fs.statSync(asset).size<80000,p.name);
+ assert(p.imageAlt);if(p.imageKind==='illustration'){assert(p.imageReference.includes('AI-generated'));assert.equal(p.photoSource,'');}else{
+  assert.match(p.photoSource,/^https:\/\/commons.wikimedia.org/);assert.match(p.photoLicence,/^(CC BY|CC0)/);assert.match(p.photoLicenceUrl,/^https:\/\/creativecommons.org\/(licenses\/by(?:-sa)?|publicdomain\/zero)\//);assert(p.imageReference.includes('not a photograph of the current event'));
  }
+ }
+ assert.equal(decorated.filter(p=>p.imageKind!=='illustration').length,46);
+ assert.equal(decorated.filter(p=>p.imageKind==='illustration').length,16);
+ assert.equal(new Set(decorated.map(p=>p.image)).size,47);
  // A place sharing a word with a venue must not inherit another region's photo.
  assert.equal(images.decorate({name:'RAMM workshop',region:'Nottingham',type:'art'}).imageKind,'illustration');
+});
+test('The public image register matches every licensed local photo',()=>{
+ assert.equal(imageSources.photos.length,41);assert.equal(imageSources.coverage.licensedPhotoCards,46);
+ assert.equal(new Set(imageSources.photos.map(p=>p.key)).size,41);assert.equal(new Set(imageSources.photos.map(p=>p.image)).size,41);
+ for(const p of imageSources.photos){
+  const asset=path.join(__dirname,'..',p.image);assert.equal(fs.statSync(asset).size,p.bytes,p.key);assert(p.creator);assert.match(p.source,/^https:\/\/commons.wikimedia.org\/wiki\/File:/);assert.match(p.licence,/^(CC BY|CC0)/);
+ }
 });
 test('Map selection considers all located records, prefers existing recommendations and stays stable',()=>{
  const all=Array.from({length:24},(_,i)=>({id:String(i),coords:[50.7+i/1000,-3.5],collections:i>=20?['best']:[]}));
