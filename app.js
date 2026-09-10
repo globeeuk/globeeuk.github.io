@@ -8,13 +8,12 @@ const escapeHTML=v=>String(v??'').replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;'
 const isPlansPage=document.body.dataset.page==='plans';
 const routeParams=new URLSearchParams(window.location.search);
 const PAGE_SIZE=12;
-const requestedPage=Number(routeParams.get('page'));
-const state={region:routeParams.get('region')==='Nottingham'?'Nottingham':'Exeter',age:[],price:'all',type:'all',query:'',dates:null,collection:null,view:'list',browseAll:false,page:isPlansPage&&Number.isSafeInteger(requestedPage)&&requestedPage>0?requestedPage:1};
+const state={region:routeParams.get('region')==='Nottingham'?'Nottingham':'Exeter',age:[],price:'all',type:'all',query:'',dates:null,collection:null,view:'list',browseAll:false};
 const ageBands=[{id:'0-2',label:'0–2',min:0,max:2},{id:'3-5',label:'3–5',min:3,max:5},{id:'6-8',label:'6–8',min:6,max:8},{id:'9-12',label:'9–12',min:9,max:12},{id:'13+',label:'13+',min:13,max:17}];
 const types=[['all','All types'],['activity','Activities'],['cafe','Cafés'],['ice','Ice cream'],['outdoors','Parks & nature'],['art','Arts & making'],['club','Holiday clubs']];
 const availableTypes=isPlansPage?types.filter(([id])=>!['cafe','ice'].includes(id)):types;
 let currentMenu=null,map=null,markers=[],selectedId=null,listScroll=0;
-let mapPagePlaces=[];
+let mapPlaces=[],mapSelectionContext=null,mapSelectionDismissed=false;
 const spotKey=p=>p.coords?.map(n=>Number(n).toFixed(4)).join(',');
 let data=(window.GLOBEE_PLACES||[]).map(GlobeeImages.decorate);
 const TODAY=window.GLOBEE_TODAY||new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
@@ -47,7 +46,6 @@ function updatePlanRoute(){
   if(state.price!=='all')params.set('price',state.price);
   if(state.type!=='all')params.set('type',state.type);
   if(state.dates){params.set('from',state.dates.start);params.set('to',state.dates.end);}
-  if(state.page>1)params.set('page',String(state.page));
   window.history.replaceState(null,'',`${window.location.pathname}?${params}`);
   $('#back-explore').href=pageLink('index.html');
   $('.brand').href=pageLink('index.html');
@@ -95,17 +93,6 @@ function fixImages(container){
 }
 function card(p){return `<article class="place-card"><button class="card-open" data-open="${escapeHTML(p.id)}" aria-label="View ${escapeHTML(p.name)}"><div class="picture">${photo(p)}${p.image?`<span class="category-badge">${icon(p.type)}${escapeHTML(p.category)}</span>`:''}</div><div class="card-body">${locality(p)}<div class="card-heading"><h3>${escapeHTML(p.name)}</h3>${icon('arrow')}</div><p class="card-description">${escapeHTML(p.description)}</p><div class="card-meta">${meta(p)}</div>${(p.dateNote||p.datePeriods?.length)?`<p class="date-note ${p.datePeriods?'event-date':''}">${p.datePeriods?icon('calendar'):''}${escapeHTML(scheduleLabel(p))}</p>`:''}</div></button></article>`;}
 function hasFilters(){return state.browseAll||state.age.length||state.price!=='all'||state.type!=='all'||state.query||state.dates||state.collection;}
-function pageResults(places){const pages=Math.max(1,Math.ceil(places.length/PAGE_SIZE));state.page=Math.min(Math.max(1,state.page),pages);const start=(state.page-1)*PAGE_SIZE;return {items:places.slice(start,start+PAGE_SIZE),start,total:places.length,pages};}
-function renderPagination(page,enabled){
-  const container=$('#results-pagination');container.hidden=!enabled||!page.total;
-  if(container.hidden){container.innerHTML='';return;}
-  const button=(n,label,disabled=false)=>`<button type="button" data-results-page="${n}" ${disabled?'disabled':''} ${n===state.page?'aria-current="page"':''} aria-label="${typeof label==='number'?`Page ${n}`:label}">${label}</button>`;
-  const numbers=[1,state.page-1,state.page,state.page+1,page.pages].filter((n,i,all)=>n>=1&&n<=page.pages&&all.indexOf(n)===i).sort((a,b)=>a-b);
-  let previous=0;
-  const links=numbers.map(n=>{const gap=previous&&n-previous>1?'<span aria-hidden="true">…</span>':'';previous=n;return gap+button(n,n);}).join('');
-  container.innerHTML=`<p class="page-range" role="status">Showing ${page.start+1}–${page.start+page.items.length} of ${page.total}<span>Up to ${PAGE_SIZE} per page</span></p>${page.pages>1?`<nav class="page-controls" aria-label="Results pages">${button(state.page-1,'Previous',state.page===1)}<div class="page-numbers">${links}</div>${button(state.page+1,'Next',state.page===page.pages)}</nav>`:''}`;
-}
-function goToPage(n){if(!Number.isSafeInteger(n)||n<1)return;state.page=n;render();const heading=$('#results-heading');heading.focus({preventScroll:true});heading.scrollIntoView({block:'start',behavior:'instant'});}
 function renderWeekend(){
   if(isPlansPage)return;
   const container=$('#main-plans');
@@ -161,9 +148,8 @@ function setupRails(){
 function render(){
   const places=visiblePlaces();
   const filterSignature=JSON.stringify([state.region,state.age,state.price,state.type,state.query,state.dates,state.collection,state.browseAll]);
-  if(lastFilterSignature!==null&&lastFilterSignature!==filterSignature){state.page=1;visibleCount=PAGE_SIZE;if(state.view==='list')window.scrollTo({top:0,behavior:'instant'});}
+  if(lastFilterSignature!==null&&lastFilterSignature!==filterSignature){visibleCount=PAGE_SIZE;if(state.view==='list')window.scrollTo({top:0,behavior:'instant'});}
   lastFilterSignature=filterSignature;
-  const page=pageResults(places);
   updatePlanRoute();
   $('#region-label').textContent=state.region==='Exeter'?'Exeter · Devon':state.region;
   $('#dates-label').textContent=state.dates?dateRangeLabel(state.dates):'Dates';
@@ -179,7 +165,6 @@ function render(){
   $('#date-scope-note').textContent=isPlansPage?'Showing events and clubs with confirmed dates. Clear Dates to include clubs with dates TBC.':'Showing date-confirmed events. Clear Dates to include cafés, regular places and activities with dates TBC.';
   renderWeekend();
   if(state.view==='list'&&filterSignature!==lastListSignature){renderRails(places.slice(0,visibleCount));lastListSignature=filterSignature;}
-  renderPagination(page,state.view==='map');
   renderLoadMore(places.length);
   $('#empty-state').hidden=places.length>0;
   const chips=[];
@@ -191,9 +176,9 @@ function render(){
   if(state.type!=='all')chips.push(['type',types.find(t=>t[0]===state.type)[1]]);
   $('#applied-filters').hidden=!chips.length;
   $('#applied-filters').innerHTML=chips.map(([key,label])=>`<button class="applied-chip" data-clear="${key}" aria-label="Remove ${escapeHTML(label)} filter">${escapeHTML(label)}${icon('close')}</button>`).join('')+(chips.length>1?'<button class="clear-all" data-reset>Clear all</button>':'');
-  if(state.view==='map')renderMap(page.items);
+  if(state.view==='map')renderMap(places);
 }
-function resetFilters(){state.age=[];state.price='all';state.type='all';state.query='';state.dates=null;state.collection=null;state.browseAll=false;state.page=1;render();}
+function resetFilters(){state.age=[];state.price='all';state.type='all';state.query='';state.dates=null;state.collection=null;state.browseAll=false;render();}
 function clearFilter(key){state[key]=key==='browseAll'?false:['dates','collection'].includes(key)?null:key==='age'?[]:key==='query'?'':'all';render();}
 function option(value,title,sub,selected,inputType='radio',name='choice'){return `<label class="option-label"><input type="${inputType}" name="${name}" value="${escapeHTML(value)}" ${selected?'checked':''}><span>${escapeHTML(title)}${sub?`<small>${escapeHTML(sub)}</small>`:''}</span></label>`;}
 function renderCalendar(){
@@ -267,8 +252,8 @@ function openDetail(id){
 $('#detail-close').addEventListener('click',()=>$('#detail-dialog').close());
 document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));
 document.addEventListener('click',event=>{
+  if(event.target.closest('[data-close-map-selection]')){selectedId=null;mapSelectionDismissed=true;$('#map-selection').hidden=true;document.querySelectorAll('.map-pin.selected').forEach(el=>el.classList.remove('selected'));return;}
   const mapChoice=event.target.closest('[data-select-map]');if(mapChoice){selectMapPlace(mapChoice.dataset.selectMap);return;}
-  const pageButton=event.target.closest('[data-results-page]');if(pageButton&&!pageButton.disabled){goToPage(Number(pageButton.dataset.resultsPage));return;}
   if(event.target.closest('[data-browse-all]')){state.browseAll=true;render();$('#results-heading').scrollIntoView({block:'start'});return;}
   if(event.target.closest('[data-retry-map]')){render();return;}
   if(event.target.closest('[data-load-more]')){loadMore(true);return;}
@@ -303,6 +288,22 @@ function loadMapAsset(kind){
   });
   return mapAssetLoads[kind];
 }
+function drawMapMarkers(){
+  if(!map||state.view!=='map')return;
+  const L=window.L;
+  markers.forEach(m=>map.removeLayer(m));markers=[];
+  const groups=GlobeeDiscovery.mapGroups(mapPlaces,p=>map.latLngToContainerPoint(p.coords),map.getZoom()>=18?0:65);
+  groups.forEach(({places:group})=>{
+    const p=group.find(v=>v.id===selectedId)||group[0];
+    const clustered=new Set(group.map(spotKey)).size>1;
+    const isEvent=p.type!=='club'&&p.datePeriods?.length>0;
+    const baseLabel=p.type==='club'?'Holiday club':isEvent?'What’s on':p.type==='cafe'?'Café':p.type==='ice'?'Ice cream':p.category||'Activity';
+    const label=clustered?`${group.length} plans`:group.length>1?`${group.every(v=>v.kind===p.kind)?baseLabel:'Places'} · ${group.length}`:baseLabel;
+    const coords=clustered?[0,1].map(i=>group.reduce((sum,v)=>sum+v.coords[i],0)/group.length):p.coords;
+    const marker=L.marker(coords,{icon:L.divIcon({className:'globee-map-marker',html:`<span class="map-pin ${clustered?'cluster ':''}${group.some(v=>v.id===selectedId)?'selected':''}" data-marker-id="${escapeHTML(p.id)}" data-group-ids="${escapeHTML(group.map(v=>v.id).join('|'))}">${icon(clustered?'map':isEvent?'calendar':p.type)}${escapeHTML(label)}</span>`,iconSize:null,iconAnchor:[32,20]}),title:clustered?`${group.length} nearby plans — zoom in to explore`:group.map(v=>v.name).join(' · '),keyboard:true}).addTo(map);
+    marker.on('click',()=>{if(clustered){const bounds=L.latLngBounds(group.map(v=>v.coords)),zoom=Math.min(18,Math.max(map.getZoom()+2,map.getBoundsZoom(bounds,false,[90,90])));map.setView(bounds.getCenter(),zoom,{animate:false});}else selectMapPlace(p.id);});markers.push(marker);
+  });
+}
 async function renderMap(places){
   const version=++mapRenderVersion;
   if(!map){
@@ -318,32 +319,29 @@ async function renderMap(places){
     map=L.map('map',{zoomControl:false,scrollWheelZoom:false});
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,updateWhenIdle:true,updateWhenZooming:false,keepBuffer:1,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
     L.control.zoom({position:'topright'}).addTo(map);
+    map.on('zoomend',drawMapMarkers);
   }
-  markers.forEach(m=>map.removeLayer(m));markers=[];
-  const located=places.filter(p=>p.coords);
-  mapPagePlaces=located;
-  selectedId=located[0]?.id||null;
-  const spots=new Map();located.forEach(p=>{const key=spotKey(p);if(!spots.has(key))spots.set(key,[]);spots.get(key).push(p);});
-  spots.forEach(group=>{
-    const p=group[0];
-    const isEvent=p.type!=='club'&&p.datePeriods?.length>0;
-    const baseLabel=p.type==='club'?'Holiday club':isEvent?'What’s on':p.type==='cafe'?'Café':p.type==='ice'?'Ice cream':p.category||'Activity';
-    const label=group.length>1?`${group.every(v=>v.kind===p.kind)?baseLabel:'Places'} · ${group.length}`:baseLabel;
-    const marker=L.marker(p.coords,{icon:L.divIcon({className:'globee-map-marker',html:`<span class="map-pin" data-marker-id="${escapeHTML(p.id)}" data-group-ids="${escapeHTML(group.map(v=>v.id).join('|'))}">${icon(isEvent?'calendar':p.type)}${escapeHTML(label)}</span>`,iconSize:null,iconAnchor:[32,20]}),title:group.map(v=>v.name).join(' · '),keyboard:true}).addTo(map);
-    marker.on('click',()=>selectMapPlace(p.id));markers.push(marker);
-  });
+  const located=places.filter(GlobeeDiscovery.hasMapLocation);
+  mapPlaces=located;
+  if(mapSelectionContext!==lastFilterSignature)mapSelectionDismissed=false;
+  mapSelectionContext=lastFilterSignature;
+  selectedId=mapSelectionDismissed?null:GlobeeDiscovery.initialMapSelection(located,selectedId);
+  const spots=new Set(located.map(spotKey));
   map.invalidateSize();
   if(located.length)map.fitBounds(L.latLngBounds(located.map(p=>p.coords)),{paddingTopLeft:[40,40],paddingBottomRight:[40,200],maxZoom:14,animate:false});
   else map.setView(state.region==='Exeter'?[50.7236,-3.5303]:[52.951,-1.15],12);
+  drawMapMarkers();
   const missing=places.length-located.length;
-  $('#map-note').textContent=`Showing this page’s ${places.length} ${places.length===1?'result':'results'} (up to ${PAGE_SIZE}). Map locations are approximate; check the provider for the exact entrance.${missing?` ${missing} ${missing===1?'place has':'places have'} no confirmed map location and ${missing===1?'is':'are'} still shown in the list.`:''}`;
+  $('#map-note').textContent=`${located.length} of ${places.length} results mapped · ${spots.size} ${spots.size===1?'location':'locations'}. Zoom into numbered groups.${missing?` ${missing} ${missing===1?'result has':'results have'} no single confirmed pin; see the list.`:''} Pins mark venues or grounds; check the provider for the entrance.`;
   if(selectedId)selectMapPlace(selectedId);else $('#map-selection').hidden=true;
+  $('#map-view').scrollIntoView({block:'start',behavior:'instant'});
 }
 function selectMapPlace(id){
-  selectedId=id;const p=data.find(v=>v.id===id);if(!p)return;
+  const p=mapPlaces.find(v=>v.id===id);if(!p)return;
+  selectedId=id;mapSelectionDismissed=false;
   $('#map-selection').hidden=false;
-  $('#map-selection').innerHTML=`<button class="map-card" data-open="${escapeHTML(p.id)}">${p.image?imageTag(p):`<div>${icon(p.type)}</div>`}<div><p>${escapeHTML(p.category)} · ${escapeHTML(p.region==='Exeter'?'Exeter · Devon':p.region)}</p><h3>${escapeHTML(p.name)}</h3><span class="price ${p.priceType==='free'?'free':''}">${escapeHTML(p.priceLabel)}</span></div></button>`;
-  const group=mapPagePlaces.filter(v=>spotKey(v)===spotKey(p)),index=group.findIndex(v=>v.id===id);
+  $('#map-selection').innerHTML=`<button class="map-selection-close" data-close-map-selection aria-label="Hide selected place">${icon('close')}</button><button class="map-card" data-open="${escapeHTML(p.id)}">${p.image?imageTag(p):`<div>${icon(p.type)}</div>`}<div><p>${escapeHTML(p.category)} · ${escapeHTML(p.region==='Exeter'?'Exeter · Devon':p.region)}</p><h3>${escapeHTML(p.name)}</h3><span class="price ${p.priceType==='free'?'free':''}">${escapeHTML(p.priceLabel)}</span></div></button>`;
+  const group=mapPlaces.filter(v=>spotKey(v)===spotKey(p)),index=group.findIndex(v=>v.id===id);
   if(group.length>1)$('#map-selection').innerHTML+=`<div class="map-group-nav"><button data-select-map="${escapeHTML(group[(index-1+group.length)%group.length].id)}" aria-label="Previous activity at this location">←</button><span>${index+1} of ${group.length} at this location</span><button data-select-map="${escapeHTML(group[(index+1)%group.length].id)}" aria-label="Next activity at this location">→</button></div>`;
   fixImages($('#map-selection'));
   document.querySelectorAll('[data-marker-id]').forEach(e=>e.classList.toggle('selected',(e.dataset.groupIds||e.dataset.markerId).split('|').includes(id)));
@@ -354,7 +352,9 @@ $('#view-toggle').addEventListener('click',()=>{
   $('#map-view').hidden=!toMap;$('#list-view').hidden=toMap;
   $('#view-toggle').innerHTML=`${icon(toMap?'list':'map')}<span>${toMap?'Show list':'Show map'}</span>`;
   $('#view-toggle').setAttribute('aria-label',toMap?'Show list':'Show map');
-  render();window.scrollTo({top:toMap?0:listScroll,behavior:'instant'});
+  if(toMap)window.scrollTo({top:0,behavior:'instant'});
+  render();
+  if(!toMap)window.scrollTo({top:listScroll,behavior:'instant'});
   if(toMap&&map)requestAnimationFrame(()=>map.invalidateSize());
 });
 window.addEventListener('globee:data',event=>{data=event.detail.places.map(GlobeeImages.decorate);lastListSignature='';lastWeekendRegion=null;render();if(currentMenu==='dates')renderCalendar();});

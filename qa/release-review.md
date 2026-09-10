@@ -4,16 +4,25 @@
 
 - Replaced the four-edit menu and separate home rails with one weekend shortlist (up to five) and the complete directory underneath. Removed the introductory slogan, edit eyebrow, normal update date and visible selection-criteria panel.
 - At this check, 47 current Devon entries and 15 Nottingham entries remained in the existing DB. This weekend has five Devon entries and one Nottingham entry; small selections are not padded with invented dates or out-of-window events.
-- Both lists append twelve cards per batch. Browser scrolling verified Devon counts of 12 → 24 → 36 → 47, with 47 distinct IDs and an end message. Region changes reset to twelve cards. Map pages retain their twelve-result cap and return to the loaded list.
-- Desktop layout has four grid columns at 1365px with no document overflow. Mobile at 390px has two columns, a swipeable weekend row and a horizontal filter row. Calendar selection 12–13 September returned exactly five Devon results and hid the weekend row. Map page 2 in Nottingham showed results 13–15; return to list retained its existing cards.
+- Both lists append twelve cards per batch. Browser scrolling verified Devon counts of 12 → 24 → 36 → 47, with 47 distinct IDs and an end message. Region changes reset to twelve cards. The map includes all located results independently of list batches and returns to the loaded list.
+- Desktop layout has four grid columns at 1365px with no document overflow. Mobile at 390px has two columns, a swipeable weekend row and a horizontal filter row. Calendar selection 12–13 September returned exactly five Devon results and hid the weekend row. Map QA now covers every located Nottingham entry, including the final list batch; return to list retains existing cards.
 - Six licensed venue/location photographs and one licensed chess reference photo cover 20 current cards. Nine labelled generated themes cover the remaining 42. All 62 current cards have local image assets and descriptive alternative text. No photograph of a venue is described as the current event.
 - Images total 773,710 bytes across 16 reusable assets; individual files are 27–73 KB. At the initial mobile view only four image elements had started loading out of 17 rendered images. Later scroll checks found no broken loaded images. This is not a measured slow-network load-time guarantee.
-- Sixteen automated tests pass: existing DB/consent/loading regressions, weekend boundaries and deduplication, real-region selection counts, full batch traversal and image completeness/licences/size. The saved-data error notice and retry remain available; successful update dates are hidden.
+- Nineteen automated tests pass: existing DB/consent/loading regressions, weekend boundaries and deduplication, real-region selection counts, full batch traversal, image completeness/licences/size, all-map selection, zoom grouping and location validation. The saved-data error notice and retry remain available; successful update dates are hidden.
 - No Sheet dates, prices or historical rows changed. GA collection behaviour is unchanged. The previous limitations around missing map coordinates and source uncertainties still apply.
 
 ## Image provenance
 
 Each detail card and the public Image credits page expose creator/source/licence and resizing/crop notices. `image-sources.json` records the selected licences. Official-site images without confirmed reuse permission were removed. `illustrations.md` records the generated themes and full prompts.
+
+## Full map follow-up
+
+- Removed map pagination entirely. All matching coordinates are considered even when the list has only rendered its first twelve cards. No extra geocoding service or clustering dependency is loaded in the browser.
+- Added nineteen named venue coordinate records. Current coverage: Devon 25 records across 16 locations; Nottingham 14 records across 7 locations. Existing unlocated records remain in the list. Online and multi-venue programmes are not assigned an arbitrary headquarters pin. The New Hampshire Exeter Library search result and broad forest coordinates were rejected.
+- Nearby pins form count groups which zoom in when chosen. A shared venue keeps its activities on one pin and uses previous/next controls on a single preview. The default recommendation is random within the current region's existing recommended places, or another located result when no recommendation is available. It stays stable across list/map toggles and can be dismissed.
+- Browser QA counted 25 represented Devon IDs and 14 Nottingham IDs, with no page controls and one preview card. Closing the card kept pins visible; zooming groups preserved all represented IDs; selecting Nottingham Contemporary opened only that place's preview. List/map toggling retained the original selection. No browser console errors were recorded.
+- Date-filtered plans (10–23 September, Devon) mapped all seven located results out of ten. At both 480×707 and 1365×900, entering the map positioned it below the sticky filters with the selected card fully in view and separate from the Show list button; neither layout overflowed horizontally.
+- Coordinates, matches, scope and sources are recorded in `map-locations.json`. Prices and dates were not changed. Also corrected the Cathedral photo's year label to 2005.
 
 ---
 

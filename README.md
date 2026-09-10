@@ -25,10 +25,15 @@ Below it, Explore all shows the complete current directory, including places, ev
 ## Loading and display limits
 
 - Both lists start with twelve cards; a near-bottom observer adds the next twelve. A Show more button supports manual and keyboard access. The last batch can be smaller, with a visible end-of-results message. No arbitrary total-results cap: at this review there are 47 Devon and 15 Nottingham entries.
-- A filter change returns the list to its first batch. Map/list switching retains loaded list cards and its scroll position. The map keeps twelve-result pages to bound the number of markers.
+- A filter change returns the list to its first batch. Map/list switching retains loaded list cards and its scroll position. The map uses every matching record with a known location, independently of list batching. Nearby pins form numbered groups that zoom in on click; activities at the same venue share one pin.
+- On first map opening, one current regional recommendation is randomly selected (falling back to another located result). Selection remains stable on list/map toggles and can be closed. Only one preview card/photo is rendered at a time.
 - Both CSV files load together; a five-minute browser cache reduces repeat requests. Batching applies to card rendering, not Sheet downloads.
 - Local WebP images are 640px wide and at most 74 KB. They load near the viewport; repeated themes reuse the same URL. Leaflet and map tiles load on demand.
 - Normal loading/update dates are hidden. A failed refresh still exposes the saved-data date and Refresh button. This is a data fallback, not a fully offline website or map.
+
+## Map locations
+
+As of this review, 25 of 47 Devon records and 14 of 15 Nottingham records have map coordinates, covering 16 and 7 locations respectively. Nineteen named venue location records were added from published coordinates, matched against existing provider addresses; provenance is in `qa/map-locations.json`. Pins represent a venue or its grounds, not a verified entrance. Online, multi-venue and uncertain locations remain in the list. No coordinates are geocoded at visit time.
 
 ## Image policy
 

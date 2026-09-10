@@ -135,3 +135,18 @@
 @media(max-width:359px){.plans-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.plans-grid .card-heading h3{font-size:15px}.plans-grid .picture{aspect-ratio:1.15}}
 
 .main-plans .rail-heading h2{font-family:var(--heading);font-weight:500;line-height:1.3;margin:0}
+
+/* One selected map card; all known matching locations remain visible. */
+.map-stage{position:relative}
+#map-view{scroll-margin-top:158px}
+#map{height:calc(100dvh - 255px);min-height:320px;max-height:700px}
+#map-selection{position:absolute;bottom:16px;left:16px;width:350px;max-width:calc(100% - 32px);z-index:5}
+.map-selection-close{position:absolute;z-index:8;right:8px;top:8px;width:30px;height:30px;border:1px solid var(--line);border-radius:50%;background:white;display:grid;place-items:center}
+.map-selection-close svg{width:14px;height:14px}
+#map-selection .map-card{padding-right:43px}
+#map-selection .map-card h3{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.map-mode .results-top{margin-top:0}
+@media(max-width:600px){#map-selection{left:10px;bottom:12px;max-width:calc(100% - 20px)}.map-note{font-size:11px}.map-mode .result-section{padding-bottom:60px}}
+@media(max-width:600px){#map-view{scroll-margin-top:125px}#map{height:calc(100dvh - 225px)}}
+
+.map-pin.cluster{border-width:2px;background:#f3f1eb}.map-pin.cluster.selected{background:var(--ink)}

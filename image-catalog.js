@@ -8,7 +8,7 @@
     "photoSource": "https://commons.wikimedia.org/wiki/File:Exeter_Cathedral.jpg",
     "photoLicence": "CC BY 2.5",
     "photoLicenceUrl": "https://creativecommons.org/licenses/by/2.5",
-    "imageReference": "Venue photograph (8 Oc); not a photograph of the current event. Resized, converted to WebP and cropped by the card layout. The derivative retains the source licence.",
+    "imageReference": "Venue photograph (2005); not a photograph of the current event. Resized, converted to WebP and cropped by the card layout. The derivative retains the source licence.",
     "imageKind": "venue",
     "imageAlt": "The west front of Exeter Cathedral; venue photograph from 2005"
   },

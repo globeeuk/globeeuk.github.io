@@ -14,6 +14,23 @@
     return eligible.sort((a,b)=>span(a)-span(b)||a.name.localeCompare(b.name)).slice(0,limit);
   }
   function nextBatch(places,shown,size=12){return places.slice(Math.max(0,shown),Math.max(0,shown)+size);}
-  const api={weekendRange,weekendPicks,nextBatch};
+  function hasMapLocation(p){return Array.isArray(p.coords)&&p.coords.length===2&&p.coords.every(Number.isFinite)&&Math.abs(p.coords[0])<=90&&Math.abs(p.coords[1])<=180;}
+  function initialMapSelection(places,previousId,random=Math.random){
+    const located=places.filter(hasMapLocation);
+    if(located.some(p=>p.id===previousId))return previousId;
+    const recommended=located.filter(p=>(p.collections||[]).includes('best'));
+    const pool=recommended.length?recommended:located;
+    return pool.length?pool[Math.min(pool.length-1,Math.max(0,Math.floor(random()*pool.length)))].id:null;
+  }
+  function mapGroups(places,project,radius=65){
+    const groups=[];
+    for(const p of places.filter(hasMapLocation)){
+      const point=project(p),key=p.coords.map(n=>n.toFixed(4)).join(',');
+      const group=groups.find(g=>g.key===key||Math.hypot(g.point.x-point.x,g.point.y-point.y)<radius);
+      if(group)group.places.push(p);else groups.push({key,point,places:[p]});
+    }
+    return groups;
+  }
+  const api={weekendRange,weekendPicks,nextBatch,hasMapLocation,initialMapSelection,mapGroups};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.GlobeeDiscovery=api;
 })(typeof window!=='undefined'?window:globalThis);

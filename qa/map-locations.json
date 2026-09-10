@@ -1,0 +1,330 @@
+{
+  "checked": "2026-09-10",
+  "method": "Match named UK venues to the existing official provider address in the DB. Record published venue/grounds coordinates; do not infer session entrances, multi-venue programmes or online locations. Wikipedia/Wikimedia sources and the OpenStreetMap Exeter Library building are linked below. Broad Haldon Forest coordinates were not used as a trail entrance. The US Phillips Exeter Academy Library result was rejected.",
+  "locations": [
+    {
+      "venue": "Exeter Cathedral",
+      "names": [
+        "Exeter Cathedral"
+      ],
+      "coords": [
+        50.7225,
+        -3.52972222
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Exeter_Cathedral",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://www.exeter-cathedral.org.uk/"
+      ]
+    },
+    {
+      "venue": "A la Ronde",
+      "names": [
+        "A la Ronde - Summer of Play & The Grand Tour"
+      ],
+      "coords": [
+        50.6417,
+        -3.4088
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/A_la_Ronde",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://www.nationaltrust.org.uk/visit/devon/a-la-ronde"
+      ]
+    },
+    {
+      "venue": "Bill Douglas Cinema Museum",
+      "names": [
+        "Bill Douglas Cinema Museum"
+      ],
+      "coords": [
+        50.7333,
+        -3.5341
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Bill_Douglas_Cinema_Museum",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://www.bdcmuseum.org.uk/"
+      ]
+    },
+    {
+      "venue": "Canonteign Falls",
+      "names": [
+        "Canonteign Falls"
+      ],
+      "coords": [
+        50.6296,
+        -3.6515
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Canonteign_Falls",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://www.canonteignfalls.co.uk/"
+      ]
+    },
+    {
+      "venue": "Crealy Theme Park & Resort",
+      "names": [
+        "Halloween Spook-Fest – Crealy"
+      ],
+      "coords": [
+        50.705669,
+        -3.416076
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Crealy_Theme_Park_%26_Resort",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://www.crealy.co.uk/events/halloween-at-crealy/"
+      ]
+    },
+    {
+      "venue": "Fingle Bridge",
+      "names": [
+        "National Trust - Fingle Bridge"
+      ],
+      "coords": [
+        50.69551,
+        -3.781
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Fingle_Bridge",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://www.nationaltrust.org.uk/visit/devon/fingle-bridge"
+      ]
+    },
+    {
+      "venue": "Northernhay Gardens",
+      "names": [
+        "Rainbow Colour Clash – Northernhay Gardens"
+      ],
+      "coords": [
+        50.727,
+        -3.531
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Northernhay_Gardens",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://rammuseum.org.uk/whats-on/rainbow-colour-clash-at-northernhay-gardens/"
+      ]
+    },
+    {
+      "venue": "Nottingham High School",
+      "names": [
+        "Let's Leap - Nottingham High School"
+      ],
+      "coords": [
+        52.96253,
+        -1.15912
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Nottingham_High_School",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://www.letsleapsportsacademy.co.uk/camp-locations/nottingham-schools/nottingham-high-school"
+      ]
+    },
+    {
+      "venue": "Pennywell Farm",
+      "names": [
+        "Pennywell Pumpkin Festival"
+      ],
+      "coords": [
+        50.45916667,
+        -3.77694444
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Pennywell_Farm",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://pennywellfarm.co.uk/pages/pumpkin-patch"
+      ]
+    },
+    {
+      "venue": "Poltimore House",
+      "names": [
+        "Stories of Poltimore House & Grounds"
+      ],
+      "coords": [
+        50.75794,
+        -3.46498
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Poltimore_House",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://www.heritageopendays.org.uk/submission-event/poltimore-house-grounds-2026-2.html"
+      ]
+    },
+    {
+      "venue": "Powderham Castle",
+      "names": [
+        "Powderham Food Festival"
+      ],
+      "coords": [
+        50.64297222,
+        -3.45997222
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Powderham_Castle",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://www.powderham.co.uk/event/powderham-food-festival-2/"
+      ]
+    },
+    {
+      "venue": "The Donkey Sanctuary",
+      "names": [
+        "Donkey Sanctuary Sidmouth – Curious Coastal Quest"
+      ],
+      "coords": [
+        50.6973,
+        -3.1905
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/The_Donkey_Sanctuary",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://www.thedonkeysanctuary.org.uk/visit-us/sidmouth"
+      ]
+    },
+    {
+      "venue": "National Justice Museum",
+      "names": [
+        "A Very Victorian Summer – National Justice Museum",
+        "Historical Trial Re-enactment – National Justice Museum",
+        "Kids' Ghost Hunter Tours – National Justice Museum",
+        "Heritage Open Day: Laundry with Matron – National Justice Museum"
+      ],
+      "coords": [
+        52.95083333,
+        -1.14444444
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/National_Justice_Museum",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://www.nationaljusticemuseum.org.uk/museum/events/summer-activities",
+        "https://www.nationaljusticemuseum.org.uk/museum/events/heritage-open-day-courtroom-trial",
+        "https://www.nationaljusticemuseum.org.uk/museum/events/kids-ghost-hunter-tours",
+        "https://www.nationaljusticemuseum.org.uk/museum/events/heritage-open-day-laundry-with-matron"
+      ]
+    },
+    {
+      "venue": "Nottingham Contemporary",
+      "names": [
+        "We Are Wonderlings! Early Years Sensory Workshops – Nottingham Contemporary"
+      ],
+      "coords": [
+        52.9511,
+        -1.1458
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Nottingham_Contemporary",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://www.nottinghamcontemporary.org/whats-on/early-years-sensory-workshops-we-are-wonderlings-sep-oct-nov-dec26/"
+      ]
+    },
+    {
+      "venue": "Wollaton Hall",
+      "names": [
+        "Autumn Festival at the Walled Garden – Wollaton Park",
+        "Halloween Outdoor Cinema – Wollaton Hall"
+      ],
+      "coords": [
+        52.948,
+        -1.2096
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Wollaton_Hall",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://wollatonhall.org.uk/autumn-festival-at-the-walled-garden/",
+        "https://wollatonhall.org.uk/halloween-outdoor-cinema-2026/"
+      ]
+    },
+    {
+      "venue": "Theatre Royal, Nottingham",
+      "names": [
+        "Dear Zoo Live – Theatre Royal Nottingham",
+        "Northern Ballet: Cinderella – Theatre Royal Nottingham"
+      ],
+      "coords": [
+        52.9556,
+        -1.1517
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Theatre_Royal%2C_Nottingham",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://www.trch.co.uk/whats-on/dear-zoo-live-fghq",
+        "https://www.trch.co.uk/whats-on/nb-cinderella-1hfr"
+      ]
+    },
+    {
+      "venue": "Nottingham Royal Concert Hall",
+      "names": [
+        "How To Train Your Dragon 2 – Film with Live Orchestra",
+        "The Princess Proms – Royal Concert Hall Nottingham"
+      ],
+      "coords": [
+        52.95555556,
+        -1.15138889
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Nottingham_Royal_Concert_Hall",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://www.trch.co.uk/whats-on/how-to-train-your-dragon-2-t4bc",
+        "https://www.trch.co.uk/whats-on/the-princess-proms-qhst"
+      ]
+    },
+    {
+      "venue": "Exeter Phoenix",
+      "names": [
+        "Exeter Phoenix Summer Family Workshops",
+        "The Truth About Trees – Exeter Phoenix",
+        "Brickfilm: Lego Animation – Exeter Phoenix",
+        "Young & Animated Saturday Club – Exeter Phoenix",
+        "Freefall Youth Arts Group – Exeter Phoenix"
+      ],
+      "coords": [
+        50.72525,
+        -3.5314
+      ],
+      "coordinateSource": "https://commons.wikimedia.org/wiki/File:Exeter_Phoenix_-_geograph.org.uk_-_315723.jpg",
+      "precision": "Object location; venue building, not a session room",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://exeterphoenix.org.uk/genre/family/",
+        "https://exeterphoenix.org.uk/events/the-truth-about-trees/",
+        "https://exeterphoenix.org.uk/events/brickfilm-lego-animation/",
+        "https://exeterphoenix.org.uk/events/young-animated-saturday-club/",
+        "https://exeterphoenix.org.uk/events/freefall/"
+      ]
+    },
+    {
+      "venue": "Exeter Library",
+      "names": [
+        "Exeter Library"
+      ],
+      "coords": [
+        50.7251877,
+        -3.53013525
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/way/82405213",
+      "precision": "Building bounds centre; name, Castle Street and EX4 3PQ match the provider address",
+      "checked": "2026-09-10",
+      "providerSources": [
+        "https://discover.librariesunlimited.org.uk/-/children"
+      ]
+    }
+  ]
+}
