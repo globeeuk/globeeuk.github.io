@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="style.css?v=2">
-  <link rel="stylesheet" href="discovery-v2.css?v=live1">
+  <link rel="stylesheet" href="discovery-v2.css?v=inline-consent1">
   <script defer src="db-adapter.js?v=live1"></script>
   <script defer src="editorial.js?v=live1"></script>
   <script defer src="db-snapshot.js?v=live1"></script>
@@ -57,6 +57,7 @@
       <div id="map-view" hidden><div id="map" aria-label="Map of the filtered places"></div><p id="map-note" class="map-note"></p><div id="map-selection" class="map-selection" hidden></div></div>
       <div id="results-pagination" class="results-pagination" hidden></div>
     </section>
+    <aside id="analytics-choice" class="analytics-choice content-width" aria-label="Optional analytics" hidden><p><strong>Optional analytics.</strong> Allow Google Analytics cookies to help us improve Globee. You can browse without them.</p><div class="analytics-actions"><button type="button" data-analytics-choice="denied">No thanks</button><button type="button" data-analytics-choice="granted">Allow analytics</button><a href="privacy.html">Details</a></div></aside>
     <footer class="content-width footer"><div><span class="footer-brand">Glo<span>bee</span></span><p>Prices &amp; schedules change — always check the provider before booking.</p></div><div class="footer-links"><a href="https://forms.gle/tVQQETV24frZhhpa6" target="_blank" rel="noopener">Ask a question or share a tip</a><a href="privacy.html">Privacy</a><button class="text-button" data-cookie-settings>Cookie settings</button></div></footer>
   </main>
   <button class="view-toggle" id="view-toggle" aria-label="Show map"><span data-icon="map"></span><span id="view-toggle-label">Show map</span></button>
@@ -64,6 +65,6 @@
     <form id="filter-form"><div class="dialog-head"><h2 id="filter-title"></h2><button type="button" class="icon-button" id="filter-close" aria-label="Close filters"><span data-icon="close"></span></button></div><div id="filter-content"></div><div class="dialog-actions"><button type="button" class="text-button" id="filter-clear">Clear</button><button type="submit" class="primary-button" id="filter-apply">Show places</button></div></form>
   </dialog>
   <dialog id="detail-dialog" class="detail-dialog" aria-label="Place details"><button class="icon-button detail-close" id="detail-close" aria-label="Close details"><span data-icon="close"></span></button><div id="detail-content"></div></dialog>
-<aside id="analytics-choice" class="analytics-choice" aria-label="Optional analytics"><p><strong>Help us improve Globee?</strong> Optional Google Analytics cookies help us understand which features get used. You can browse without them.</p><div><button type="button" data-analytics-choice="denied">No thanks</button><button type="button" data-analytics-choice="granted">Allow analytics</button><a href="privacy.html">Details</a></div></aside>
+
 </body>
 </html>

@@ -4,7 +4,7 @@ The previous public site contained GA4 measurement ID `G-YRRY654LS1`. This relea
 
 ## Implemented and checked
 
-- Basic opt-in: the Google tag is not requested before a visitor chooses Allow analytics. No thanks leaves the directory fully usable. The choice persists locally and can be changed in the footer.
+- Basic opt-in: the Google tag is not requested before a visitor chooses Allow analytics. No thanks leaves the directory fully usable. The choice persists locally and can be changed in the footer. The first-visit choice appears in normal page flow above the footer, not as a floating banner or modal; on the privacy page it sits inside the analytics section.
 - Local previews never load Google Analytics, including when Allow analytics is chosen.
 - One explicit page view is sent per document load. Automatic initial page views are disabled in the website configuration.
 - Page location is reduced to origin and pathname. Referrers are reduced to their origin. The website's custom events do not include search text, child age selections or date ranges.
