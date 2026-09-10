@@ -6,7 +6,7 @@ Live site: https://globeeuk.github.io/
 
 ## Run and check
 
-This is a static, build-free site. Serve the repository with `python3 -m http.server 8767`, then open the local address. Run `node --test tests/*.test.cjs` for the data-loading and analytics checks. Analytics is disabled on local hosts.
+This is a static, build-free site. Serve the repository with `python3 -m http.server 8767`, then open the local address. Run `node --test tests/*.test.cjs` for the data-loading, discovery, image and analytics checks. Analytics is disabled on local hosts.
 
 ## Data flow
 
@@ -14,21 +14,27 @@ The existing published Google Sheet is the source of truth. `db-loader.js` reads
 
 `db-snapshot.js` preserves a dated copy of all public rows for first paint and connection failures. The release snapshot contains 116 master records and 135 event rows; these overlap and are not 251 unique activities. Historical rows remain in the source and snapshot; expired or cancelled activities are excluded from current browsing. `db-adapter.js` joins explicit name aliases and normalises schedules without guessing dates, ages or prices.
 
-`editorial.js` contains display-only name aliases, photographs, checked map positions and editorial selections. It is not a second event database. Add a new record to the Sheet first. Dates and prices stay in the Sheet. Unknown positions stay off the map; unknown ages and dates stay TBC.
+`editorial.js` contains display-only name aliases, checked map positions and editorial notes. It is not a second event database. Add a new record to the Sheet first. Dates and prices stay in the Sheet. Unknown positions stay off the map; unknown ages and dates stay TBC.
 
-## The Globee edits
+## Home and discovery
 
-Next two weeks opens the shared plans page with an inclusive fourteen-day date range: today in Europe/London through today + 13 days. It includes ongoing events and dated holiday clubs, excludes undated/TBC plans and expired events, and counts recurring activities once. The date range is recalculated on each page load and the count refreshes when the Sheet refreshes. Devon and Nottingham use the same rule. Results keep the existing date order, filters, map and twelve-card pagination. This collects matching entries from the existing DB; it does not crawl or write new rows.
+One horizontal shortlist leads the home page: This weekend, with up to five date-confirmed entries from the selected region. Saturday and Sunday are calculated using the current Europe/London date; on Sunday only the remaining day is shown. Ongoing programmes can qualify. Recurring entries count once; TBC and out-of-window activities never fill empty slots. Shorter dated outings come first, with names breaking ties. This is a date-based selection, not a quality or popularity ranking.
 
-The BEST 10, Rainy-day rescues and Eat, then play selections remain available alongside it.
+Below it, Explore all shows the complete current directory, including places, events and holiday clubs, ordered by next confirmed date with undated entries afterwards. Active filters hide the weekend shortlist. The existing plans page remains available for dated activities and clubs. Dates and prices still come from the Sheet; this change does not crawl or write new event rows.
 
 ## Loading and display limits
 
-- Home: six cards per horizontal rail; View all opens the complete events-and-clubs list.
-- Browse and map: twelve results per page, with page controls. No arbitrary total-results cap.
-- Metadata: both small CSV files load together; a five-minute browser cache reduces repeat requests. This is client-side pagination, not paginated Sheet downloads.
-- Photos load near the viewport and use existing provider thumbnails where available. Leaflet and map tiles load only when the map is opened.
-- When the Sheet cannot load, the saved directory remains visible with its date and a retry button. This is a data fallback, not a fully offline website or offline map.
+- Both lists start with twelve cards; a near-bottom observer adds the next twelve. A Show more button supports manual and keyboard access. The last batch can be smaller, with a visible end-of-results message. No arbitrary total-results cap: at this review there are 47 Devon and 15 Nottingham entries.
+- A filter change returns the list to its first batch. Map/list switching retains loaded list cards and its scroll position. The map keeps twelve-result pages to bound the number of markers.
+- Both CSV files load together; a five-minute browser cache reduces repeat requests. Batching applies to card rendering, not Sheet downloads.
+- Local WebP images are 640px wide and at most 74 KB. They load near the viewport; repeated themes reuse the same URL. Leaflet and map tiles load on demand.
+- Normal loading/update dates are hidden. A failed refresh still exposes the saved-data date and Refresh button. This is a data fallback, not a fully offline website or map.
+
+## Image policy
+
+`image-catalog.js` decorates DB entries without changing the Sheet. Confirmed, licensed venue/location photographs take priority. Where no suitable reusable photograph is confirmed, labelled activity illustrations fill the image area. A generic chess photograph is marked Activity photo. Generated visuals never claim to show a real venue or programme.
+
+All photographs have creator, source, licence and modification notices in place details and `image-credits.html`. WebP derivatives retain their source licences. Previous remote provider images with no confirmed reuse permission have been removed. A public website image or a credit alone is not evidence of permission. See `qa/image-sources.json` and `qa/illustrations.md` for the source records and illustration prompts.
 
 ## Release review
 

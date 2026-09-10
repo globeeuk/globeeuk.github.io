@@ -5,23 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,follow">
   <title>Family activities in Exeter, Devon &amp; Nottingham | Globee</title>
-  <meta name="description" content="Find family activities, upcoming events and holiday clubs in Exeter, Devon and Nottingham. Explore by date, age and budget, with local edits and a map.">
+  <meta name="description" content="Find family activities, upcoming events and holiday clubs in Exeter, Devon and Nottingham. Browse weekend ideas, filter by date, age and budget, and explore the map.">
   <link rel="canonical" href="https://globeeuk.github.io/">
   <meta property="og:title" content="Family activities in Exeter, Devon &amp; Nottingham | Globee">
-  <meta property="og:description" content="Find family activities, upcoming events and holiday clubs in Exeter, Devon and Nottingham. Explore by date, age and budget, with local edits and a map.">
+  <meta property="og:description" content="Find family activities, upcoming events and holiday clubs in Exeter, Devon and Nottingham. Browse weekend ideas, filter by date, age and budget, and explore the map.">
   <meta property="og:url" content="https://globeeuk.github.io/">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="style.css?v=2">
-  <link rel="stylesheet" href="discovery-v2.css?v=fortnight1">
+  <link rel="stylesheet" href="discovery-v2.css?v=simple1">
   <script defer src="db-adapter.js?v=live1"></script>
-  <script defer src="editorial.js?v=live1"></script>
+  <script defer src="editorial.js?v=simple1"></script>
   <script defer src="db-snapshot.js?v=live1"></script>
   <script defer src="data.js?v=live1"></script>
-  <script defer src="app.js?v=fortnight1"></script>
-  <script defer src="db-loader.js?v=live1"></script>
+  <script defer src="image-catalog.js?v=simple1"></script>
+  <script defer src="discovery-model.js?v=simple1"></script>
+  <script defer src="app.js?v=simple1"></script>
+  <script defer src="db-loader.js?v=simple1"></script>
   <script defer src="analytics.js?v=live1"></script>
 </head>
 <body>
@@ -42,23 +44,20 @@
   </header>
   <a class="skip-link" href="#results-heading">Skip to activities</a>
   <main>
-    <div class="intro content-width">
-      <div><p class="eyebrow" id="location-eyebrow">THE EXETER · DEVON EDIT</p><h1>Your next <span>little plan.</span></h1></div>
-      <button class="weekend-shortcut" data-date-shortcut="weekend"><span data-icon="calendar"></span>This weekend<span data-icon="arrow"></span></button>
-    </div>
-    <section class="content-width main-plans" id="main-plans" aria-label="What’s on and holiday clubs"></section>
-    <section class="content-width guide-section" id="guide-section" aria-labelledby="guide-heading"><div class="guide-section-head"><h2 id="guide-heading">The Globee edits</h2><span>For now. For another day.</span></div><div id="guide-rail" class="guide-rail"></div><details class="edits-method"><summary>How we choose these edits</summary><div id="edits-criteria" class="edits-criteria"></div><p class="edit-review-note">Next two weeks follows confirmed dates in the directory. We revisit our lasting picks when their offering, access or family experience changes. Unknown details are marked TBC.</p></details></section>
+    <h1 class="visually-hidden">Family places, events and holiday clubs</h1>
+    <section class="content-width main-plans" id="main-plans" aria-label="This weekend"></section>
     <section class="content-width result-section" aria-labelledby="results-heading">
-      <div class="results-top"><div><h2 id="results-heading" tabindex="-1">A few lovely places to start</h2><p id="results-subtitle">A few practical ideas for time together.</p></div><span id="result-count" class="result-count" aria-live="polite"></span></div>
-      <p id="database-status" class="database-status" role="status">Loading the directory…</p>
+      <div class="results-top"><div><h2 id="results-heading" tabindex="-1">Explore all</h2><p id="results-subtitle">Places, what’s on &amp; holiday clubs</p></div><span id="result-count" class="result-count" aria-live="polite"></span></div>
+      <p id="database-status" class="database-status" hidden role="status">Loading the directory…</p>
       <div id="applied-filters" class="applied-filters" hidden></div>
       <p id="date-scope-note" class="date-scope-note" hidden></p>
       <div id="list-view"><div id="discovery-rails"></div><div id="empty-state" class="empty-state" hidden><span data-icon="search"></span><h3>No little plans found just yet</h3><p>Try another date, age, price or type to see more places.</p><button id="empty-reset" class="primary-button">Clear filters</button></div></div>
       <div id="map-view" hidden><div id="map" aria-label="Map of the filtered places"></div><p id="map-note" class="map-note"></p><div id="map-selection" class="map-selection" hidden></div></div>
+      <div id="list-progress" class="list-progress" hidden></div>
       <div id="results-pagination" class="results-pagination" hidden></div>
     </section>
     <aside id="analytics-choice" class="analytics-choice content-width" aria-label="Optional analytics" hidden><p><strong>Optional analytics.</strong> Allow Google Analytics cookies to help us improve Globee. You can browse without them.</p><div class="analytics-actions"><button type="button" data-analytics-choice="denied">No thanks</button><button type="button" data-analytics-choice="granted">Allow analytics</button><a href="privacy.html">Details</a></div></aside>
-    <footer class="content-width footer"><div><span class="footer-brand">Glo<span>bee</span></span><p>Prices &amp; schedules change — always check the provider before booking.</p></div><div class="footer-links"><a href="https://forms.gle/tVQQETV24frZhhpa6" target="_blank" rel="noopener">Ask a question or share a tip</a><a href="privacy.html">Privacy</a><button class="text-button" data-cookie-settings>Cookie settings</button></div></footer>
+    <footer class="content-width footer"><div><span class="footer-brand">Glo<span>bee</span></span><p>Prices &amp; schedules change — always check the provider before booking.</p></div><div class="footer-links"><a href="https://forms.gle/tVQQETV24frZhhpa6" target="_blank" rel="noopener">Ask a question or share a tip</a><a href="image-credits.html">Image credits</a><a href="privacy.html">Privacy</a><button class="text-button" data-cookie-settings>Cookie settings</button></div></footer>
   </main>
   <button class="view-toggle" id="view-toggle" aria-label="Show map"><span data-icon="map"></span><span id="view-toggle-label">Show map</span></button>
   <dialog id="filter-dialog" class="filter-dialog" aria-labelledby="filter-title">

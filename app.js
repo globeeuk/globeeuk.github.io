@@ -7,7 +7,7 @@ const $=s=>document.querySelector(s);
 const escapeHTML=v=>String(v??'').replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
 const isPlansPage=document.body.dataset.page==='plans';
 const routeParams=new URLSearchParams(window.location.search);
-const PAGE_SIZE=12,HOME_RAIL_LIMIT=6;
+const PAGE_SIZE=12;
 const requestedPage=Number(routeParams.get('page'));
 const state={region:routeParams.get('region')==='Nottingham'?'Nottingham':'Exeter',age:[],price:'all',type:'all',query:'',dates:null,collection:null,view:'list',browseAll:false,page:isPlansPage&&Number.isSafeInteger(requestedPage)&&requestedPage>0?requestedPage:1};
 const ageBands=[{id:'0-2',label:'0–2',min:0,max:2},{id:'3-5',label:'3–5',min:3,max:5},{id:'6-8',label:'6–8',min:6,max:8},{id:'9-12',label:'9–12',min:9,max:12},{id:'13+',label:'13+',min:13,max:17}];
@@ -16,7 +16,7 @@ const availableTypes=isPlansPage?types.filter(([id])=>!['cafe','ice'].includes(i
 let currentMenu=null,map=null,markers=[],selectedId=null,listScroll=0;
 let mapPagePlaces=[];
 const spotKey=p=>p.coords?.map(n=>Number(n).toFixed(4)).join(',');
-let data=window.GLOBEE_PLACES||[];
+let data=(window.GLOBEE_PLACES||[]).map(GlobeeImages.decorate);
 const TODAY=window.GLOBEE_TODAY||new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 const utcDate=s=>new Date(s+'T12:00:00Z');
 const isoDate=d=>d.toISOString().slice(0,10);
@@ -40,7 +40,7 @@ if(isPlansPage){
   if(validDate(from)&&validDate(to)&&from<=to)state.dates={start:from,end:to};
 }
 function updatePlanRoute(){
-  if(!isPlansPage)return;
+  if(!isPlansPage){const params=new URLSearchParams(window.location.search);params.set('region',state.region==='Exeter'?'Devon':state.region);window.history.replaceState(null,'',`${window.location.pathname}?${params}`);return;}
   const params=new URLSearchParams();params.set('region',state.region==='Exeter'?'Devon':state.region);
   if(state.query)params.set('q',state.query);
   if(state.age.length)params.set('age',state.age.join(','));
@@ -52,23 +52,16 @@ function updatePlanRoute(){
   $('#back-explore').href=pageLink('index.html');
   $('.brand').href=pageLink('index.html');
 }
-const collections=[
- {id:'fortnight',badge:'A LITTLE LOOK AHEAD',title:'Next two<br>weeks',name:'Next two weeks',range:{start:TODAY,end:addDays(TODAY,13)},criteria:[['Today and the next thirteen days','Use UK dates, including events already under way and events on the final day. The window moves forward on each new visit.'],['Confirmed dates in your region','Show events and holiday clubs from the shared directory whose confirmed dates overlap this window. Dates TBC and regular undated places stay in the wider directory.'],['One plan, all its dates','Keep recurring sessions together on one card, order plans by their next date and show up to twelve per page.']],exclusion:'This is a date-based selection from our directory, not a claim to list every local event. Check the organiser for availability, prices and booking before travelling.'},
- {id:'best',badge:'THE LOCAL SHORTLIST',title:'BEST <strong>10</strong>',name:'BEST 10 · The local shortlist',caption:'Building a lasting shortlist',target:10,imageId:'ramm',note:'A lasting local shortlist, chosen across five criteria: things for children to do, practical facilities, value, reasons to return and local character. We are building this shortlist as practical details are checked.',criteria:[['Something for children','A clear activity, discovery or food stop that fits a family outing.'],['Practical to visit','Consider travel, toilets, buggy access, seating and booking needs; show anything still to be confirmed.'],['Worth the spend','Weigh the whole visit, including food, parking and extra activities.'],['Worth returning to','Favour regular places with more than a one-off reason to visit.'],['A sense of place','Include local character and a balance of ages, budgets, activities and locations.']],exclusion:'We choose the ten as a balanced set, not by Google rating alone. The list grows as we check candidates; we do not fill ten places just to reach a number.'},
- {id:'rain',badge:'A PLAN UNDER COVER',title:'Rainy-day<br>rescues',name:'Rainy-day rescues',caption:'Something to do indoors',imageId:'ramm',note:'Regular indoor places where children can explore, make or play when the weather turns. Each pick names the indoor activity; check opening times and any age or booking conditions.',criteria:[['The main activity is indoors','A visit should work without relying on a garden, outdoor play area or fine weather.'],['Something to do','Look for exhibits to explore, hands-on activities, making or indoor play. A café seat alone does not qualify.'],['A practical family visit','Check age suitability, opening and booking arrangements, access and toilets. Unconfirmed details stay TBC.']],exclusion:'Temporary exhibitions stay with dated events. Where a venue has both indoor and outdoor areas, this edit recommends only the named indoor part.'},
- {id:'eat-play',badge:'A BITE. THEN AN ADVENTURE.',title:'Eat, then<br>play',name:'Eat, then play',caption:'Food stops with play nearby',imageId:'cow-cacao',note:'A food stop paired with a named outdoor play space, on the same site or a checked short walk away. Each pick shows both parts of the outing.',criteria:[['Food children can choose','Confirm the menu, food costs and whether the stop is sit-in or takeaway.'],['A real place to play','Name a playground or a suitable park space. Outdoor tables or a waterside pavement alone do not qualify.'],['An easy connection','Use the same site, or a walking route checked at about ten minutes or less. Record crossings, access and toilets; do not guess walking times.']],exclusion:'The food and play pairing is checked separately from Google ratings. Weather, supervision and age suitability still matter; unverified facilities are marked TBC.'}
-];
-function inCollection(p,id){const range=collections.find(c=>c.id===id)?.range;return range?isFamilyPlan(p)&&occursWithin(p,range):!p.datePeriods&&(p.collections||[]).includes(id);}
 let draftDates=null,calendarMonth=TODAY.slice(0,7),calendarPickingEnd=false;
 const railObservers=[];
 let lastListSignature='';
-let lastFilterSignature=null,lastGuideRegion=null;
+let lastFilterSignature=null,lastWeekendRegion=null;
+let visibleCount=PAGE_SIZE,moreObserver=null;
 function matches(p,ignore){
   if(!isCurrent(p))return false;
   if(isPlansPage&&!isFamilyPlan(p))return false;
   if(ignore!=='region'&&p.region!==state.region)return false;
   if(ignore!=='dates'&&state.dates&&!occursWithin(p,state.dates))return false;
-  if(ignore!=='collection'&&state.collection&&!inCollection(p,state.collection))return false;
   if(ignore!=='price'&&state.price!=='all'&&p.priceType!==state.price)return false;
   if(ignore!=='type'&&state.type!=='all'&&!(p.type===state.type||(state.type==='activity'&&['club','art','outdoors'].includes(p.type))))return false;
   if(ignore!=='age'&&state.age.length){
@@ -81,10 +74,10 @@ function matches(p,ignore){
   }
   return true;
 }
-function visiblePlaces(){const places=data.filter(p=>matches(p));return isPlansPage?places.sort((a,b)=>nextPlanDate(a).localeCompare(nextPlanDate(b))||a.name.localeCompare(b.name)):places;}
+function visiblePlaces(){return data.filter(p=>matches(p)).sort((a,b)=>nextPlanDate(a).localeCompare(nextPlanDate(b))||a.name.localeCompare(b.name));}
 function fallback(p){return `<div class="photo-fallback">${icon(p.type)}<span>${escapeHTML(p.category)}</span></div>`;}
-function imageTag(p,alt=p.imageAlt||p.name){return `<img data-src="${escapeHTML(p.image)}" data-place-id="${escapeHTML(p.id)}" alt="${escapeHTML(alt)}" draggable="false" loading="lazy" decoding="async" width="640" height="426" referrerpolicy="no-referrer">`;}
-function photo(p){return p.image?`${imageTag(p)}<span class="photo-credit">Photo: ${escapeHTML(p.credit)}</span>`:fallback(p);}
+function imageTag(p,alt=p.imageAlt||p.name){return `<img data-src="${escapeHTML(p.image)}" data-place-id="${escapeHTML(p.id)}" alt="${escapeHTML(alt)}" style="object-position:${p.image.endsWith('/ramm.webp')?'50% 0%':'50% 50%'}" draggable="false" loading="lazy" decoding="async" width="640" height="426" referrerpolicy="no-referrer">`;}
+function photo(p){return p.image?`${imageTag(p)}<span class="image-kind">${p.imageKind==='illustration'?'Illustration':p.imageKind==='location'?'Location photo':p.imageKind==='activity'?'Activity photo':'Venue photo'}</span>`:fallback(p);}
 function meta(p){return `<span class="price ${p.priceType==='free'?'free':''}">${escapeHTML(p.priceLabel)}</span><span class="meta-dot">·</span><span class="age">${escapeHTML(p.ageLabel||'Age TBC')}</span>`;}
 function locality(p){return `<span class="card-locality ${p.region==='Nottingham'?'nottingham':''}">${icon('pin')}${p.region==='Exeter'?'Exeter · Devon':'Nottingham'}</span>`;}
 const observedImages=new Set(),preparedImages=new WeakSet();
@@ -100,7 +93,7 @@ function fixImages(container){
     if(imageObserver){imageObserver.observe(img);observedImages.add(img);}else loadImage(img);
   });
 }
-function card(p){return `<article class="place-card"><button class="card-open" data-open="${escapeHTML(p.id)}" aria-label="View ${escapeHTML(p.name)}"><div class="picture">${photo(p)}${p.image?`<span class="category-badge">${icon(p.type)}${escapeHTML(p.category)}</span>`:''}</div><div class="card-body">${locality(p)}<div class="card-heading"><h3>${escapeHTML(p.name)}</h3>${icon('arrow')}</div><p class="card-description">${escapeHTML(p.editReasons?.[state.collection]||p.description)}</p><div class="card-meta">${meta(p)}</div>${(p.dateNote||p.datePeriods?.length)?`<p class="date-note ${p.datePeriods?'event-date':''}">${p.datePeriods?icon('calendar'):''}${escapeHTML(scheduleLabel(p))}</p>`:''}</div></button></article>`;}
+function card(p){return `<article class="place-card"><button class="card-open" data-open="${escapeHTML(p.id)}" aria-label="View ${escapeHTML(p.name)}"><div class="picture">${photo(p)}${p.image?`<span class="category-badge">${icon(p.type)}${escapeHTML(p.category)}</span>`:''}</div><div class="card-body">${locality(p)}<div class="card-heading"><h3>${escapeHTML(p.name)}</h3>${icon('arrow')}</div><p class="card-description">${escapeHTML(p.description)}</p><div class="card-meta">${meta(p)}</div>${(p.dateNote||p.datePeriods?.length)?`<p class="date-note ${p.datePeriods?'event-date':''}">${p.datePeriods?icon('calendar'):''}${escapeHTML(scheduleLabel(p))}</p>`:''}</div></button></article>`;}
 function hasFilters(){return state.browseAll||state.age.length||state.price!=='all'||state.type!=='all'||state.query||state.dates||state.collection;}
 function pageResults(places){const pages=Math.max(1,Math.ceil(places.length/PAGE_SIZE));state.page=Math.min(Math.max(1,state.page),pages);const start=(state.page-1)*PAGE_SIZE;return {items:places.slice(start,start+PAGE_SIZE),start,total:places.length,pages};}
 function renderPagination(page,enabled){
@@ -112,42 +105,45 @@ function renderPagination(page,enabled){
   const links=numbers.map(n=>{const gap=previous&&n-previous>1?'<span aria-hidden="true">…</span>':'';previous=n;return gap+button(n,n);}).join('');
   container.innerHTML=`<p class="page-range" role="status">Showing ${page.start+1}–${page.start+page.items.length} of ${page.total}<span>Up to ${PAGE_SIZE} per page</span></p>${page.pages>1?`<nav class="page-controls" aria-label="Results pages">${button(state.page-1,'Previous',state.page===1)}<div class="page-numbers">${links}</div>${button(state.page+1,'Next',state.page===page.pages)}</nav>`:''}`;
 }
-function goToPage(n){if(!Number.isSafeInteger(n)||n<1)return;state.page=n;render();const heading=$('#results-heading');heading.focus({preventScroll:true});heading.scrollIntoView({block:'start',behavior:'instant'});listScroll=window.scrollY;}
-function renderGuides(){
-  if(lastGuideRegion===state.region){document.querySelectorAll('button[data-collection]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.collection===state.collection)));return;}
-  lastGuideRegion=state.region;
-  const scrollPosition=$('#guide-rail').scrollLeft;
-  $('#guide-rail').innerHTML=collections.map(c=>{
-    const choices=data.filter(p=>p.region===state.region&&inCollection(p,c.id));
-    const imagePlace=choices.find(p=>p.image);
-    const tag=c.range?'a':'button';
-    const attributes=c.range?`href="${escapeHTML(pageLink('plans.html')+'&from='+c.range.start+'&to='+c.range.end)}"`:`${choices.length?'':'disabled'} aria-pressed="${state.collection===c.id}"`;
-    const sample=c.range?`${choices.length} ${choices.length===1?'plan':'plans'} · including today`:!choices.length?'Being checked · coming soon':c.target?`${choices.length} picks · building our ten`:`${choices.length} ${choices.length===1?'pick':'picks'}`;
-    return `<${tag} class="guide-cover ${c.id}" data-collection="${c.id}" ${attributes}>${imagePlace?.image?imageTag(imagePlace,''):''}<span class="guide-kicker">${c.badge}</span><span class="guide-name">${c.title}</span><span class="guide-caption">${c.range?escapeHTML(dateRangeLabel(c.range)):c.caption}</span><span class="guide-sample">${sample}</span><span class="guide-arrow">${icon('arrow')}</span></${tag}>`;
-  }).join('');
-  $('#edits-criteria').innerHTML=collections.map(c=>`<section class="edit-method"><h3>${escapeHTML(c.name)}</h3><ul>${c.criteria.map(([label,reason])=>`<li><strong>${escapeHTML(label)}</strong><span>${escapeHTML(reason)}</span></li>`).join('')}</ul><p>${escapeHTML(c.exclusion)}</p></section>`).join('');
-  $('#guide-rail').scrollLeft=scrollPosition;
-  fixImages($('#guide-rail'));
+function goToPage(n){if(!Number.isSafeInteger(n)||n<1)return;state.page=n;render();const heading=$('#results-heading');heading.focus({preventScroll:true});heading.scrollIntoView({block:'start',behavior:'instant'});}
+function renderWeekend(){
+  if(isPlansPage)return;
+  const container=$('#main-plans');
+  container.hidden=!!hasFilters()||state.view==='map';
+  if(container.hidden)return;
+  if(lastWeekendRegion===state.region){container.hidden=!container.children.length;return;}
+  lastWeekendRegion=state.region;
+  const picks=GlobeeDiscovery.weekendPicks(data.filter(p=>p.region===state.region),TODAY);
+  const range=GlobeeDiscovery.weekendRange(TODAY);
+  container.innerHTML=picks.length?rail('weekend-picks',`This weekend · ${picks.length} ${picks.length===1?'idea':'ideas'}`,dateRangeLabel(range),picks):'';
+  container.hidden=!picks.length;
+  fixImages(container);setupRails();
 }
-function rail(id,title,subtitle,places,allLink=''){if(!places.length)return '';return `<section class="discovery-row" aria-labelledby="${id}-heading"><div class="rail-heading"><div><h3 id="${id}-heading">${escapeHTML(title)}</h3><p>${escapeHTML(subtitle)}</p></div><div class="rail-tools"><span>${places.length} ${places.length===1?'pick':'picks'}</span>${allLink?`<a class="view-all-link" href="${escapeHTML(allLink)}" aria-label="View all events and holiday clubs">View all${icon('arrow')}</a>`:''}<button class="rail-nav previous" data-rail="${id}" data-direction="-1" aria-label="Previous ${escapeHTML(title)} places">${icon('arrow')}</button><button class="rail-nav" data-rail="${id}" data-direction="1" aria-label="Next ${escapeHTML(title)} places">${icon('arrow')}</button></div></div><div id="${id}" class="place-rail" aria-label="${escapeHTML(title)}">${places.map(card).join('')}</div></section>`;}
+function rail(id,title,subtitle,places,allLink=''){if(!places.length)return '';return `<section class="discovery-row" aria-labelledby="${id}-heading"><div class="rail-heading"><div><h2 id="${id}-heading">${escapeHTML(title)}</h2><p>${escapeHTML(subtitle)}</p></div><div class="rail-tools"><span>${places.length} ${places.length===1?'pick':'picks'}</span>${allLink?`<a class="view-all-link" href="${escapeHTML(allLink)}" aria-label="View all events and holiday clubs">View all${icon('arrow')}</a>`:''}<button class="rail-nav previous" data-rail="${id}" data-direction="-1" aria-label="Previous ${escapeHTML(title)} places">${icon('arrow')}</button><button class="rail-nav" data-rail="${id}" data-direction="1" aria-label="Next ${escapeHTML(title)} places">${icon('arrow')}</button></div></div><div id="${id}" class="place-rail" aria-label="${escapeHTML(title)}">${places.map(card).join('')}</div></section>`;}
 function renderRails(places){
-  if(isPlansPage){
-    $('#discovery-rails').innerHTML=places.length?`<div class="plans-grid" aria-label="All matching events and holiday clubs">${places.map(card).join('')}</div>`:'';
-    fixImages($('#discovery-rails'));return;
+  $('#discovery-rails').innerHTML=places.length?`<div class="plans-grid" aria-label="${isPlansPage?'All matching events and holiday clubs':'All matching places, events and holiday clubs'}">${places.map(card).join('')}</div>`:'';
+  fixImages($('#discovery-rails'));
+}
+function renderLoadMore(total){
+  moreObserver?.disconnect();
+  const container=$('#list-progress');
+  container.hidden=state.view!=='list'||!total;
+  if(container.hidden)return;
+  const shown=Math.min(visibleCount,total),remaining=total-shown;
+  container.innerHTML=`<p role="status">${remaining?`${shown} of ${total}`:`You’ve seen all ${total} results`}</p>${remaining?`<button type="button" class="load-more" data-load-more>Show ${Math.min(PAGE_SIZE,remaining)} more</button>`:''}`;
+  if(remaining&&'IntersectionObserver' in window){
+    moreObserver=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)&&!container.contains(document.activeElement)){moreObserver.disconnect();loadMore();}},{rootMargin:'180px 0px'});
+    moreObserver.observe(container);
   }
-  const active=collections.find(c=>c.id===state.collection);
-  if(hasFilters())$('#main-plans').innerHTML='';
-  if(hasFilters())$('#discovery-rails').innerHTML=(active?`<p class="guide-selection-note">${escapeHTML(active.note)}</p>`:'')+rail('filtered-places',state.dates?`Plans for ${dateRangeLabel(state.dates)}`:active?active.name:'Your little shortlist',state.dates?'Dated events and clubs · check opening and booking details on each card':'Swipe to explore the selection',places);
-  else{
-    const upcoming=places.filter(p=>p.type!=='club'&&isFamilyPlan(p)).sort((a,b)=>nextPlanDate(a).localeCompare(nextPlanDate(b)));
-    const clubs=places.filter(p=>p.type==='club'&&(!p.datePeriods||p.datePeriods.some(d=>d.end>=TODAY)));
-    const plans=[...upcoming,...clubs];
-    const anytime=places.filter(p=>!isFamilyPlan(p));
-    $('#main-plans').innerHTML=rail('family-plans','What’s on & holiday clubs','Upcoming events and holiday club options. View all to explore every date.',plans.slice(0,HOME_RAIL_LIMIT),pageLink('plans.html'))||`<div class="primary-plans-empty"><h2>What’s on &amp; holiday clubs</h2><p>No upcoming events or holiday clubs are listed for this region yet.</p><a class="view-all-link" href="${escapeHTML(pageLink('plans.html'))}">View all${icon('arrow')}</a></div>`;
-    $('#discovery-rails').innerHTML=rail('local-list','Good places to have up your sleeve','Museums, outdoor stops and everyday family activities.',anytime.slice(0,HOME_RAIL_LIMIT))+(anytime.length>HOME_RAIL_LIMIT?'<button class="text-button browse-all-places" data-browse-all>See all places</button>':'');
-  }
-  fixImages($('#main-plans'));
-  fixImages($('#discovery-rails'));setupRails();
+}
+function loadMore(manual=false){
+  if(state.view!=='list')return;
+  const places=visiblePlaces(),next=GlobeeDiscovery.nextBatch(places,visibleCount,PAGE_SIZE);
+  if(!next.length)return;
+  $('#discovery-rails .plans-grid').insertAdjacentHTML('beforeend',next.map(card).join(''));
+  const firstNewIndex=visibleCount;visibleCount+=next.length;
+  if(manual)$('#discovery-rails .plans-grid').children[firstNewIndex]?.querySelector('button')?.focus({preventScroll:true});
+  fixImages($('#discovery-rails'));renderLoadMore(places.length);
 }
 function setupRails(){
   railObservers.splice(0).forEach(observer=>observer.disconnect());
@@ -165,9 +161,9 @@ function setupRails(){
 function render(){
   const places=visiblePlaces();
   const filterSignature=JSON.stringify([state.region,state.age,state.price,state.type,state.query,state.dates,state.collection,state.browseAll]);
-  if(lastFilterSignature!==null&&lastFilterSignature!==filterSignature)state.page=1;
+  if(lastFilterSignature!==null&&lastFilterSignature!==filterSignature){state.page=1;visibleCount=PAGE_SIZE;if(state.view==='list')window.scrollTo({top:0,behavior:'instant'});}
   lastFilterSignature=filterSignature;
-  const paginated=isPlansPage||!!hasFilters()||state.view==='map',page=pageResults(places);
+  const page=pageResults(places);
   updatePlanRoute();
   $('#region-label').textContent=state.region==='Exeter'?'Exeter · Devon':state.region;
   $('#dates-label').textContent=state.dates?dateRangeLabel(state.dates):'Dates';
@@ -175,21 +171,19 @@ function render(){
   $('#price-label').textContent=state.price==='all'?'Price':state.price==='free'?'Free':'Paid';
   $('#type-label').textContent=state.type==='all'?'Type':'Type (1)';
   document.querySelectorAll('[data-menu]').forEach(b=>b.classList.toggle('active',b.dataset.menu==='dates'?!!state.dates:b.dataset.menu==='age'?!!state.age.length:b.dataset.menu==='search'?!!state.query:b.dataset.menu==='region'?false:state[b.dataset.menu]!=='all'));
-  $('#location-eyebrow').textContent=isPlansPage?(state.region==='Exeter'?'EXETER · DEVON':'NOTTINGHAM'):state.region==='Exeter'?'THE EXETER · DEVON EDIT':'THE NOTTINGHAM EDIT';
-  $('#results-heading').textContent=isPlansPage?(state.view==='map'?'Explore on the map':hasFilters()?'Matching plans':'All upcoming plans'):hasFilters()?'Your kind of day':state.view==='map'?'Find your next little stop':'A few lovely places to start';
-  $('#results-subtitle').textContent=isPlansPage?'Events and clubs together, ordered by date. Dates TBC appear last.':hasFilters()?'Places and activities that match your filters.':state.region==='Exeter'?'A few practical ideas for time together.':'Local places and activities, added as details are checked.';
-  $('#result-count').textContent=`${places.length} ${isPlansPage?(places.length===1?'plan':'plans'):(places.length===1?'place':'places')}`;
-  $('.results-top').classList.toggle('home-results',!isPlansPage&&!hasFilters()&&state.view==='list');
+  if($('#location-eyebrow'))$('#location-eyebrow').textContent=state.region==='Exeter'?'EXETER · DEVON':'NOTTINGHAM';
+  $('#results-heading').textContent=state.view==='map'?'Explore on the map':hasFilters()?'Matching plans':isPlansPage?'All upcoming plans':'Explore all';
+  $('#results-subtitle').textContent=isPlansPage?'What’s on & holiday clubs':hasFilters()?'Places and activities that match your filters.':'Places, what’s on & holiday clubs';
+  $('#result-count').textContent=`${places.length} ${places.length===1?'result':'results'}`;
   $('#date-scope-note').hidden=!state.dates;
   $('#date-scope-note').textContent=isPlansPage?'Showing events and clubs with confirmed dates. Clear Dates to include clubs with dates TBC.':'Showing date-confirmed events. Clear Dates to include cafés, regular places and activities with dates TBC.';
-  if(!isPlansPage){$('#main-plans').hidden=hasFilters()||state.view==='map';renderGuides();}
-  const signature=JSON.stringify([filterSignature,paginated,state.page]);
-  if(state.view==='list'&&signature!==lastListSignature){renderRails(paginated?page.items:places);lastListSignature=signature;}
-  renderPagination(page,paginated);
+  renderWeekend();
+  if(state.view==='list'&&filterSignature!==lastListSignature){renderRails(places.slice(0,visibleCount));lastListSignature=filterSignature;}
+  renderPagination(page,state.view==='map');
+  renderLoadMore(places.length);
   $('#empty-state').hidden=places.length>0;
   const chips=[];
   if(state.browseAll)chips.push(['browseAll','All places']);
-  if(state.collection)chips.push(['collection',collections.find(c=>c.id===state.collection).name]);
   if(state.dates)chips.push(['dates',dateRangeLabel(state.dates)]);
   if(state.query)chips.push(['query',`“${state.query}”`]);
   if(state.age.length)chips.push(['age',`Ages ${state.age.map(id=>ageBands.find(b=>b.id===id).label).join(', ')}`]);
@@ -262,7 +256,7 @@ $('#filter-close').addEventListener('click',closeMenu);
 $('#empty-reset').addEventListener('click',resetFilters);
 function openDetail(id){
   const p=data.find(v=>v.id===id);if(!p)return;
-  const credits=p.photoSource?`Photo: <a href="${escapeHTML(p.photoSource)}" target="_blank" rel="noopener noreferrer">${escapeHTML(p.credit)}</a>${p.photoLicenceUrl?` · <a href="${escapeHTML(p.photoLicenceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHTML(p.photoLicence)}</a>`:''}. ${escapeHTML(p.imageReference||'Photograph shown with a layout crop.')}`:`Photo: ${escapeHTML(p.credit||'to be confirmed')}.`;
+  const credits=p.imageKind==='illustration'?'AI-generated activity illustration, created for Globee. It does not depict the venue or event.':p.photoSource?`Photo: <a href="${escapeHTML(p.photoSource)}" target="_blank" rel="noopener noreferrer">${escapeHTML(p.credit)}</a>${p.photoLicenceUrl?` · <a href="${escapeHTML(p.photoLicenceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHTML(p.photoLicence)}</a>`:''}. ${escapeHTML(p.imageReference||'Photograph shown with a layout crop.')}`:`Photo: ${escapeHTML(p.credit||'to be confirmed')}.`;
   const editReason=p.editReasons?.[state.collection];
   const evidence=p.editEvidence?.[state.collection];
   const editNote=editReason?`<div class="detail-note edit-detail"><h3>Why it’s in this edit</h3><p>${escapeHTML(editReason)}</p>${evidence?`<p>${evidence.map(s=>`<a href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(s.label)}</a>`).join(' · ')}</p><p class="evidence-date">Official information checked ${escapeHTML(p.editChecked)}.</p>`:''}</div>`:'';
@@ -277,7 +271,7 @@ document.addEventListener('click',event=>{
   const pageButton=event.target.closest('[data-results-page]');if(pageButton&&!pageButton.disabled){goToPage(Number(pageButton.dataset.resultsPage));return;}
   if(event.target.closest('[data-browse-all]')){state.browseAll=true;render();$('#results-heading').scrollIntoView({block:'start'});return;}
   if(event.target.closest('[data-retry-map]')){render();return;}
-  const guide=event.target.closest('button[data-collection]');if(guide){state.collection=state.collection===guide.dataset.collection?null:guide.dataset.collection;render();}
+  if(event.target.closest('[data-load-more]')){loadMore(true);return;}
   const nav=event.target.closest('[data-rail]');if(nav){const el=document.getElementById(nav.dataset.rail);el.scrollBy({left:Number(nav.dataset.direction)*(el.querySelector('.place-card').offsetWidth+18),behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}
   const shortcut=event.target.closest('[data-date-shortcut]');if(shortcut){state.dates=shortcutDates(shortcut.dataset.dateShortcut);render();}
   const quick=event.target.closest('[data-calendar-quick]');if(quick){draftDates=shortcutDates(quick.dataset.calendarQuick);calendarPickingEnd=false;calendarMonth=(draftDates?.start||TODAY).slice(0,7);renderCalendar();}
@@ -356,7 +350,6 @@ function selectMapPlace(id){
 }
 $('#view-toggle').addEventListener('click',()=>{
   const toMap=state.view==='list';if(toMap)listScroll=window.scrollY;
-  if(toMap&&!isPlansPage&&!hasFilters())state.browseAll=true;
   state.view=toMap?'map':'list';document.body.classList.toggle('map-mode',toMap);
   $('#map-view').hidden=!toMap;$('#list-view').hidden=toMap;
   $('#view-toggle').innerHTML=`${icon(toMap?'list':'map')}<span>${toMap?'Show list':'Show map'}</span>`;
@@ -364,5 +357,5 @@ $('#view-toggle').addEventListener('click',()=>{
   render();window.scrollTo({top:toMap?0:listScroll,behavior:'instant'});
   if(toMap&&map)requestAnimationFrame(()=>map.invalidateSize());
 });
-window.addEventListener('globee:data',event=>{data=event.detail.places;lastListSignature='';lastGuideRegion=null;render();if(currentMenu==='dates')renderCalendar();});
+window.addEventListener('globee:data',event=>{data=event.detail.places.map(GlobeeImages.decorate);lastListSignature='';lastWeekendRegion=null;render();if(currentMenu==='dates')renderCalendar();});
 render();
