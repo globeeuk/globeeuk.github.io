@@ -25,3 +25,10 @@ The link audit checks availability; it is not a fresh verification of every sche
 - Powderham Food Festival's official page heading gives 3–4 October 2026 while body text gives different dates. Source dates have not been silently changed; the card records the inconsistency and asks visitors to confirm before booking.
 - Provider photographs are credited reference images, not evidence of a particular event date. New provider images are linked remotely and not copied into this repository. No reuse licence is inferred from source credit; see `image-sources.json`.
 - Analytics dashboard receipt remains unverified; see `analytics-review.md`. Promotional files are drafts and have not been posted to Google or Instagram.
+
+
+## Next two weeks edit — 10 September 2026
+
+Added a first edit linking to the existing plans page for today through today + 13 days in Europe/London. Counts come from the same normalised DB as the destination page: Devon 10 plans, Nottingham 3 at this check. Recurring sessions count once; ongoing events and the final day are included. Undated, past and out-of-window events are excluded. No Sheet rows were created or changed.
+
+Verified the four-edit home layout and link on a 1440px desktop and 390px mobile viewport, matching destination counts, retained date filters in map/list views, no document overflow and no browser console errors. All 12 existing tests passed. Additional boundary checks covered TBC dates, ongoing events, the final day, recurring clubs, year rollover and the autumn DST change. The existing twelve-card pagination remains in use. GA opt-in behaviour is unchanged.

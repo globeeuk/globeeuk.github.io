@@ -16,6 +16,12 @@ The existing published Google Sheet is the source of truth. `db-loader.js` reads
 
 `editorial.js` contains display-only name aliases, photographs, checked map positions and editorial selections. It is not a second event database. Add a new record to the Sheet first. Dates and prices stay in the Sheet. Unknown positions stay off the map; unknown ages and dates stay TBC.
 
+## The Globee edits
+
+Next two weeks opens the shared plans page with an inclusive fourteen-day date range: today in Europe/London through today + 13 days. It includes ongoing events and dated holiday clubs, excludes undated/TBC plans and expired events, and counts recurring activities once. The date range is recalculated on each page load and the count refreshes when the Sheet refreshes. Devon and Nottingham use the same rule. Results keep the existing date order, filters, map and twelve-card pagination. This collects matching entries from the existing DB; it does not crawl or write new rows.
+
+The BEST 10, Rainy-day rescues and Eat, then play selections remain available alongside it.
+
 ## Loading and display limits
 
 - Home: six cards per horizontal rail; View all opens the complete events-and-clubs list.
