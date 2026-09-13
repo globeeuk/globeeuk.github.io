@@ -66,6 +66,8 @@
         if(/Truth About Trees/.test(p.name))return 'phoenix-front';
         if(/Brickfilm/.test(p.name))return 'phoenix-sculpture';
         if(/Young & Animated/.test(p.name))return 'phoenix-side';
+        if(/Model a Monster/.test(p.name))return 'phoenix-sculpture';
+        if(/Sketch A Skeleton/.test(p.name))return 'phoenix-front';
         return 'phoenix';
       }
       if(/Quayside Shanty|Custom House|Haven Banks/.test(p.name))return 'quay';

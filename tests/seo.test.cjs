@@ -7,7 +7,7 @@ test('Halloween has an indexable dedicated page and sitemap entry',()=>{
   assert.match(html,/data-edit="halloween"/);
   assert.match(html,/og:image" content="https:\/\/globeeuk\.github\.io\/assets\/halloween-plans-2026\.jpg"/);
   const schema=JSON.parse(html.match(/<script type="application\/ld\+json">([^<]+)<\/script>/)[1]);
-  assert.equal(schema['@type'],'CollectionPage');assert.equal(schema.mainEntity.numberOfItems,5);
+  assert.equal(schema['@type'],'CollectionPage');assert.equal(schema.mainEntity.numberOfItems,8);
   const sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');
   assert.match(sitemap,/https:\/\/globeeuk\.github\.io\/halloween\.html/);
 });

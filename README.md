@@ -12,7 +12,7 @@ This is a static, build-free site. Serve the repository with `python3 -m http.se
 
 The existing published Google Sheet is the source of truth. `db-loader.js` reads the master tab (`gid=0`) and curated events (`gid=1801686098`) as public CSV. Both must load and validate before replacing displayed data. No browser write credentials are used.
 
-`db-snapshot.js` preserves a dated copy of all public rows for first paint and connection failures. The release snapshot contains 130 master records and 149 event rows; these overlap and are not 279 unique activities. Historical rows remain in the source and snapshot; expired or cancelled activities are excluded from current browsing. `db-adapter.js` joins explicit name aliases and normalises schedules without guessing dates, ages or prices.
+`db-snapshot.js` preserves a dated copy of all public rows for first paint and connection failures. The release snapshot contains 133 master records and 152 event rows; these overlap and are not 285 unique activities. Historical rows remain in the source and snapshot; expired or cancelled activities are excluded from current browsing. `db-adapter.js` joins explicit name aliases and normalises schedules without guessing dates, ages or prices.
 
 `editorial.js` contains display-only name aliases, checked map positions and editorial notes. It is not a second event database. Add a new record to the Sheet first. Dates and prices stay in the Sheet. Unknown positions stay off the map; unknown ages and dates stay TBC.
 

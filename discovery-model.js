@@ -3,7 +3,7 @@
   'use strict';
   const date=s=>new Date(s+'T12:00:00Z');
   const SEASONAL_EDITS=[
-    {id:'halloween',title:'Halloween plans',page:'halloween.html',start:'2026-09-13',end:'2026-10-31',minPicks:1,terms:/halloween|pumpkin|ghost|spook|trick or treat|tim burton|hocus pocus|nightmare before christmas/i,subtitle:'Book ahead for October half term'},
+    {id:'halloween',title:'Halloween plans',page:'halloween.html',start:'2026-09-13',end:'2026-10-31',minPicks:1,terms:/halloween|pumpkin|ghost|spook|trick or treat|monster|skeleton|tim burton|hocus pocus|nightmare before christmas/i,subtitle:'Book ahead for October half term'},
     {id:'christmas',title:'Christmas plans',start:'2026-11-01',end:'2026-12-24',minPicks:1,terms:/christmas|festive|santa|father christmas|pantomime|polar express|nativity/i,subtitle:'Book ahead for the festive season'}
   ];
   function plusDays(s,n){const d=date(s);d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10);}
