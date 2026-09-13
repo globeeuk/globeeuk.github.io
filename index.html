@@ -26,7 +26,7 @@
   <script defer src="discovery-model.js?v=seasonal2"></script>
   <script defer src="app.js?v=seasonal2"></script>
   <script defer src="db-loader.js?v=simple1"></script>
-  <script defer src="analytics.js?v=live1"></script>
+  <script defer src="analytics.js?v=stats1"></script>
 </head>
 <body>
   <header class="site-header">
@@ -57,8 +57,7 @@
       <div id="map-view" hidden><div class="map-stage"><div id="map" aria-label="Map of the filtered places"></div><div id="map-selection" hidden></div></div><p id="map-note" class="map-note"></p></div>
       <div id="list-progress" class="list-progress" hidden></div>
     </section>
-    <aside id="analytics-choice" class="analytics-choice content-width" aria-label="Optional analytics" hidden><p><strong>Optional analytics.</strong> Allow Google Analytics cookies to help us improve Globee. You can browse without them.</p><div class="analytics-actions"><button type="button" data-analytics-choice="denied">No thanks</button><button type="button" data-analytics-choice="granted">Allow analytics</button><a href="privacy.html">Details</a></div></aside>
-    <footer class="content-width footer"><div><span class="footer-brand">Glo<span>bee</span></span><p>Prices &amp; schedules change — always check the provider before booking.</p></div><div class="footer-links"><a href="https://forms.gle/tVQQETV24frZhhpa6" target="_blank" rel="noopener">Ask a question or share a tip</a><a href="/exeter/">Exeter family guides</a><a href="/exeter/this-weekend/">This weekend</a><a href="image-credits.html">Image credits</a><a href="privacy.html">Privacy</a><button class="text-button" data-cookie-settings>Cookie settings</button></div></footer>
+    <footer class="content-width footer"><div><span class="footer-brand">Glo<span>bee</span></span><p>Prices &amp; schedules change — always check the provider before booking.</p></div><div class="footer-links"><a href="https://forms.gle/tVQQETV24frZhhpa6" target="_blank" rel="noopener">Ask a question or share a tip</a><a href="/exeter/">Exeter family guides</a><a href="/exeter/this-weekend/">This weekend</a><a href="image-credits.html">Image credits</a><a href="privacy.html">Privacy &amp; analytics</a><button class="text-button" data-analytics-toggle>Stop site analytics</button></div></footer>
   </main>
   <button class="view-toggle" id="view-toggle" aria-label="Show map"><span data-icon="map"></span><span id="view-toggle-label">Show map</span></button>
   <dialog id="filter-dialog" class="filter-dialog" aria-labelledby="filter-title">

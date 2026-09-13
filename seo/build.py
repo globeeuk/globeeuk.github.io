@@ -227,7 +227,7 @@ def head(title, description, route, indexable, schema, production=False):
     robots = "index,follow" if indexable else "noindex,follow"
     canonical = PUBLIC_BASE + route
     structured = json.dumps(schema, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e")
-    analytics = '<script defer src="/analytics.js"></script>' if production else ""
+    analytics = '<script defer src="/analytics.js?v=stats1"></script>' if production else ""
     return f'''<!doctype html><html lang="en-GB"><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"><title>{esc(title)} | Globee</title>
     <meta name="description" content="{esc(description)}"><meta name="robots" content="{robots}">
@@ -251,12 +251,11 @@ def navigation(slug=None):
 
 
 def footer(production=False):
-    consent = '''<aside id="analytics-choice" class="analytics-choice" aria-label="Optional analytics" hidden><p><strong>Optional analytics.</strong> Allow Google Analytics cookies to help us improve Globee. You can browse without them.</p><div class="analytics-actions"><button type="button" data-analytics-choice="denied">No thanks</button><button type="button" data-analytics-choice="granted">Allow analytics</button><a href="/privacy.html">Details</a></div></aside>''' if production else ""
-    settings = '<button type="button" class="text-button" data-cookie-settings>Cookie settings</button>' if production else ""
-    return consent + f'''<footer><p>Curated by Globee for families in Exeter and Devon.</p>
+    settings = '<button type="button" class="text-button" data-analytics-toggle>Stop site analytics</button>' if production else ""
+    return f'''<footer><p>Curated by Globee for families in Exeter and Devon.</p>
     <p>These guides use official provider information. An official-source check does not mean we have visited every activity.</p>
     <p>Prices &amp; schedules change — always check the provider before booking.</p>
-    <div class="footer-links"><a href="{PUBLIC_BASE}/">Explore the Globee directory</a><a href="/exeter/">All Exeter guides</a><a href="/privacy.html">Privacy</a>{settings}</div></footer></body></html>'''
+    <div class="footer-links"><a href="{PUBLIC_BASE}/">Explore the Globee directory</a><a href="/exeter/">All Exeter guides</a><a href="/privacy.html">Privacy &amp; analytics</a>{settings}</div></footer></body></html>'''
 
 
 def guide(slug, items, as_of, production):
