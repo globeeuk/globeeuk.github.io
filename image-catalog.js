@@ -80,7 +80,8 @@
       if(/Poltimore House/.test(p.name))return 'poltimore';
       if(/Bill Douglas/.test(p.name))return 'bill-douglas';
       if(/Northernhay Gardens/.test(p.name))return 'northernhay';
-      if(p.name==='Darts Farm')return 'darts-farm';
+      if(/Darts Farm/.test(p.name))return 'darts-farm';
+      if(/Devon Science/.test(p.name))return 'heavitree';
       if(/Junior Tennis – Exeter Tennis Centre/.test(p.name))return 'exeter-tennis';
       if(/Park Life Fun Day/.test(p.name))return 'heavitree';
       if(/Exeter City Council Skate Parks/.test(p.name))return 'flowerpot-skatepark';
@@ -107,7 +108,7 @@
   }
   function theme(p){
     const title=p.name.toLowerCase(),text=[p.name,p.category,p.description].join(' ').toLowerCase();
-    if(/halloween|pumpkin|autumn/.test(title))return 'autumn';
+    if(/halloween|pumpkin|autumn|trick or treat/.test(title))return 'autumn';
     if(/library|libraries|book quest|reading/.test(title))return 'reading';
     if(/cinema|film|theatre|music|ballet|proms|dance/.test(text)&&p.type!=='art'&&p.kind!=='club')return 'performance';
     if(/art|animation|animated|brickfilm|craft|meraki/.test(title)||p.type==='art')return 'making';

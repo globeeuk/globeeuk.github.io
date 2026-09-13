@@ -1,6 +1,6 @@
 {
-  "checked": "2026-09-10",
-  "method": "Match named UK venues to the existing official provider address in the DB. Record published venue/grounds coordinates; do not infer session entrances, multi-venue programmes or online locations. Wikipedia/Wikimedia sources and the OpenStreetMap Exeter Library building are linked below. Broad Haldon Forest coordinates were not used as a trail entrance. The US Phillips Exeter Academy Library result was rejected.",
+  "checked": "2026-09-13",
+  "method": "Match named UK venues to the existing official provider address in the DB. Record published venue/grounds coordinates; do not infer session entrances, multi-venue programmes or online locations. Wikipedia/Wikimedia sources and selected OpenStreetMap venue records are linked below. Broad Haldon Forest coordinates were not used as a trail entrance. The US Phillips Exeter Academy Library result was rejected.",
   "locations": [
     {
       "venue": "Exeter Cathedral",
@@ -324,6 +324,57 @@
       "checked": "2026-09-10",
       "providerSources": [
         "https://discover.librariesunlimited.org.uk/-/children"
+      ]
+    },
+    {
+      "venue": "Darts Farm",
+      "names": [
+        "Darts Farm",
+        "Darts Farm Pumpkin Fest 2026"
+      ],
+      "coords": [
+        50.6858074,
+        -3.448664
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/node/13274254624",
+      "precision": "Named place on the Darts Farm site; official postcode EX3 0QH matches",
+      "checked": "2026-09-13",
+      "providerSources": [
+        "https://www.dartsfarm.co.uk/contact",
+        "https://shop.dartsfarm.co.uk/collections/all/products/pumpkin-fest-2026"
+      ]
+    },
+    {
+      "venue": "Park Life Heavitree",
+      "names": [
+        "Halloween Potions Lab – Devon Science"
+      ],
+      "coords": [
+        50.7221061,
+        -3.5004991
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/node/10048733860",
+      "precision": "Named Park Life Heavitree hub; Whipton Lane matches the official event address",
+      "checked": "2026-09-13",
+      "providerSources": [
+        "https://devonscience.co.uk/halloween/"
+      ]
+    },
+    {
+      "venue": "Seaton Tramway",
+      "names": [
+        "Trick or Treat Tram – Seaton Tramway"
+      ],
+      "coords": [
+        50.7051288,
+        -3.0677619
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/way/667035417",
+      "precision": "Named Seaton Tramway station building on Harbour Road; official postcode matches",
+      "checked": "2026-09-13",
+      "providerSources": [
+        "https://www.tram.co.uk/",
+        "https://www.tram.co.uk/events/view/halloween-trick-or-treat-tram"
       ]
     }
   ]

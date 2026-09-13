@@ -1,24 +1,34 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://globeeuk.github.io/</loc>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://globeeuk.github.io/plans.html</loc>
+    <lastmod>2026-09-13</lastmod>
+  </url>
+  <url>
+    <loc>https://globeeuk.github.io/halloween.html</loc>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://globeeuk.github.io/privacy.html</loc>
   </url>
   <url>
     <loc>https://globeeuk.github.io/exeter/this-weekend/</loc>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://globeeuk.github.io/exeter/free-things-to-do/</loc>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://globeeuk.github.io/exeter/rainy-day/</loc>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://globeeuk.github.io/exeter/</loc>
+    <lastmod>2026-09-13</lastmod>
   </url>
 </urlset>

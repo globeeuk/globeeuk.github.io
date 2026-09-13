@@ -3,7 +3,7 @@ const model=require('../discovery-model.js'),images=require('../image-catalog.js
 const imageSources=JSON.parse(fs.readFileSync(path.join(__dirname,'..','qa','image-sources.json'),'utf8'));
 const ctx={window:{}};vm.createContext(ctx);for(const f of ['db-snapshot.js','editorial.js'])vm.runInContext(fs.readFileSync(path.join(__dirname,'..',f),'utf8'),ctx);
 const items=db.normalise(ctx.window.GLOBEE_SNAPSHOT.master,ctx.window.GLOBEE_SNAPSHOT.events,ctx.window.GLOBEE_EDITORIAL);
-const current=items.filter(p=>p.datePeriods?.length?p.datePeriods.some(d=>d.end>='2026-09-10'):!p.endDate||p.endDate>='2026-09-10');
+const current=items.filter(p=>p.datePeriods?.length?p.datePeriods.some(d=>d.end>='2026-09-13'):!p.endDate||p.endDate>='2026-09-13');
 test('Weekend moves forward on Monday, includes remaining Sunday, and crosses year boundaries',()=>{
  assert.deepEqual(model.weekendRange('2026-09-10'),{start:'2026-09-12',end:'2026-09-13'});
  assert.deepEqual(model.weekendRange('2026-09-13'),{start:'2026-09-13',end:'2026-09-13'});
@@ -11,12 +11,33 @@ test('Weekend moves forward on Monday, includes remaining Sunday, and crosses ye
  assert.deepEqual(model.weekendRange('2027-12-31'),{start:'2028-01-01',end:'2028-01-02'});
 });
 test('Actual weekend picks use confirmed dates, stay in-region and do not pad a small selection',()=>{
- const devon=model.weekendPicks(current.filter(p=>p.region==='Exeter'),'2026-09-10');
+ const devon=model.weekendPicks(items.filter(p=>p.region==='Exeter'),'2026-09-10');
  assert.equal(devon.length,5);assert(devon.some(p=>p.name.includes('Shanty')));assert(!devon.some(p=>p.name.includes('Halloween')));
- const notts=model.weekendPicks(current.filter(p=>p.region==='Nottingham'),'2026-09-10');assert.equal(notts.length,1);assert(notts[0].name.includes('Trial'));
+ const notts=model.weekendPicks(items.filter(p=>p.region==='Nottingham'),'2026-09-10');assert.equal(notts.length,1);assert(notts[0].name.includes('Trial'));
  const p={id:'repeat',name:'Recurring',datePeriods:[{start:'2026-09-12',end:'2026-09-12'},{start:'2026-09-13',end:'2026-09-13'}]};
  assert.equal(model.weekendPicks([p,p,{id:'tbc',name:'TBC'}],'2026-09-10').length,1);
  assert.deepEqual(model.weekendPicks([p],'2026-09-14'),[]);
+});
+test('Seasonal edits run through their end date, stay regional and never pad the shortlist',()=>{
+ assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Exeter'),'2026-09-12'),null);
+ const devon=model.seasonalEdit(current.filter(p=>p.region==='Exeter'),'2026-09-13');
+ assert.equal(devon.id,'halloween');assert.equal(devon.total,5);assert.equal(devon.picks.length,5);assert.deepEqual(devon.picks.map(p=>p.name),['Pennywell Pumpkin Festival','Darts Farm Pumpkin Fest 2026','Halloween Spook-Fest – Crealy','Trick or Treat Tram – Seaton Tramway','Halloween Potions Lab – Devon Science']);
+ const notts=model.seasonalEdit(current.filter(p=>p.region==='Nottingham'),'2026-09-13');
+ assert.equal(notts.picks.length,4);assert(notts.picks.every(p=>p.region==='Nottingham'));
+ assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Nottingham'),'2026-10-31').picks.length,2);
+  const undated={id:'undated',name:'Halloween event',description:'Family Halloween activity'};
+ assert.equal(model.seasonalEdit([undated],'2026-10-01'),null);
+ const festive=i=>({id:String(i),name:`Christmas activity ${i}`,description:'Family Christmas event',datePeriods:[{start:'2026-12-01',end:'2026-12-24'}]});
+ assert.equal(model.seasonalEdit([festive(1)],'2026-11-01').id,'christmas');
+ assert.equal(model.seasonalEdit([festive(1)],'2026-12-25'),null);
+});
+test('Seasonal list keeps every matching event while the home edit stays at five cards',()=>{
+ const halloween=Array.from({length:17},(_,i)=>({id:String(i),name:`Halloween plan ${String(i).padStart(2,'0')}`,description:'Pumpkin activity',datePeriods:[{start:'2026-10-01',end:'2026-10-31'}]}));
+ const edit=model.seasonalEdit(halloween,'2026-09-13');
+ assert.equal(edit.picks.length,5);assert.equal(edit.total,17);
+ assert.equal(model.seasonalPlaces(halloween,'2026-09-13','halloween').length,17);
+ assert(model.matchesSeasonal(halloween[0],'2026-09-13','halloween'));
+ assert.equal(model.nextBatch(model.seasonalPlaces(halloween,'2026-09-13','halloween'),12).length,5);
 });
 test('Twelve-card batches reach every actual record exactly once with a partial final batch',()=>{
  for(const region of ['Exeter','Nottingham']){const all=current.filter(p=>p.region===region),shown=[];let chunk;
@@ -31,14 +52,14 @@ test('Every current card has a small local asset and honest image metadata',()=>
   assert.match(p.photoSource,/^https:\/\/commons.wikimedia.org/);assert.match(p.photoLicence,/^(CC BY|CC0)/);assert.match(p.photoLicenceUrl,/^https:\/\/creativecommons.org\/(licenses\/by(?:-sa)?|publicdomain\/zero)\//);assert(p.imageReference.includes('not a photograph of the current event'));
  }
  }
- assert.equal(decorated.filter(p=>p.imageKind!=='illustration').length,46);
- assert.equal(decorated.filter(p=>p.imageKind==='illustration').length,16);
- assert.equal(new Set(decorated.map(p=>p.image)).size,47);
+ assert.equal(decorated.filter(p=>p.imageKind!=='illustration').length,49);
+ assert.equal(decorated.filter(p=>p.imageKind==='illustration').length,24);
+ assert.equal(new Set(decorated.map(p=>p.image)).size,49);
  // A place sharing a word with a venue must not inherit another region's photo.
  assert.equal(images.decorate({name:'RAMM workshop',region:'Nottingham',type:'art'}).imageKind,'illustration');
 });
 test('The public image register matches every licensed local photo',()=>{
- assert.equal(imageSources.photos.length,41);assert.equal(imageSources.coverage.licensedPhotoCards,46);
+ assert.equal(imageSources.photos.length,41);assert.equal(imageSources.coverage.licensedPhotoCards,49);
  assert.equal(new Set(imageSources.photos.map(p=>p.key)).size,41);assert.equal(new Set(imageSources.photos.map(p=>p.image)).size,41);
  for(const p of imageSources.photos){
   const asset=path.join(__dirname,'..',p.image);assert.equal(fs.statSync(asset).size,p.bytes,p.key);assert(p.creator);assert.match(p.source,/^https:\/\/commons.wikimedia.org\/wiki\/File:/);assert.match(p.licence,/^(CC BY|CC0)/);
@@ -62,7 +83,8 @@ test('Map groups keep every matching record, split on zoom and retain shared-ven
 });
 test('New map locations match named UK venues; multi-venue and online records remain unlocated',()=>{
  const map=current.filter(model.hasMapLocation);
- assert.equal(map.filter(p=>p.region==='Exeter').length,25);assert.equal(map.filter(p=>p.region==='Nottingham').length,14);
+ assert.equal(map.filter(p=>p.region==='Exeter').length,29);assert.equal(map.filter(p=>p.region==='Nottingham').length,14);
+ const halloween=model.seasonalPlaces(current.filter(p=>p.region==='Exeter'),'2026-09-13','halloween');assert.equal(halloween.length,5);assert(halloween.every(model.hasMapLocation));
  for(const name of ['Chessed.me (Online Chess)','Sporty Stars Holiday Camps','Heritage Open Days - Exeter','Nottingham City Gymnastics'])assert.equal(current.find(p=>p.name===name).coords,null);
  const library=current.find(p=>p.name==='Exeter Library');assert(library.coords[0]>50&&library.coords[0]<51);assert(library.coords[1]>-4&&library.coords[1]<-3);
 });
