@@ -1,0 +1,802 @@
+{
+  "schema_version": 1,
+  "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
+  "source_verified_at": "2026-09-13",
+  "items": [
+    {
+      "id": "quayside-shanty-festival-2026",
+      "name": "Quayside Shanty & Heritage Harbour Festival",
+      "description": "Hear sea shanties around Exeter Quayside, with harbour activities on Piazza Terracina from noon to 4pm.",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Exeter",
+      "address": "Exeter's historic quayside; harbour activities at Piazza Terracina, Exeter, Devon",
+      "age_text": "All ages welcome",
+      "price_text": "Free festival admission.",
+      "price_type": "free",
+      "booking_text": "TBC — the festival listing does not state a booking requirement. Check the programme for individual venues.",
+      "schedule_text": "Saturday 12 September 2026, noon–10pm. Harbour activities: noon–4pm.",
+      "occurrences": [
+        {
+          "start": "2026-09-12",
+          "end": "2026-09-12",
+          "start_time": "12:00",
+          "end_time": "22:00",
+          "weekday": "Saturday"
+        }
+      ],
+      "indoor": null,
+      "rainy_day": {
+        "suitable": null,
+        "basis": "Mixed waterfront venues are listed; a fully sheltered programme is not established.",
+        "classification": "TBC"
+      },
+      "tags": [
+        "weekend",
+        "free",
+        "in-town",
+        "music",
+        "heritage"
+      ],
+      "practical_notes": [
+        "The daytime harbour activities finish earlier than the overall festival."
+      ],
+      "sources": [
+        {
+          "url": "https://exetercustomhouse.co.uk/event/quayside-shanty-festival-2026/",
+          "supports": "The organiser lists 12 September 2026, noon–10pm, free admission and all-age suitability. Piazza Terracina activities run noon–4pm; music uses several Quayside venues.",
+          "retrieval": "Official-source content reviewed on 13 September 2026.",
+          "previous_retrieval": "Official event page opened successfully on 10 September 2026."
+        }
+      ],
+      "verified_at": "2026-09-13",
+      "sheet_match": {
+        "live_sheet_checked": false,
+        "row_id": null,
+        "candidate_names": [
+          "Quayside Shanty Festival",
+          "Quayside Shanty & Heritage Harbour Festival 2026"
+        ],
+        "local_matches": [
+          {
+            "file": "exeter-devon-family-events.md",
+            "line": 503,
+            "name": "Quayside Shanty Festival"
+          },
+          {
+            "file": "인스타 홍보용/weekend-edit-2026-09-12-13/SOURCES_AND_CREDITS.md",
+            "line": 7,
+            "name": "Quayside Shanty & Heritage Harbour Festival"
+          }
+        ],
+        "reconciliation_note": "The local research note still mentions a 2024 11pm finish. The current 2026 organiser page confirms 10pm. Do not carry forward the old finish time or an unverified no-booking claim."
+      },
+      "limitations": [
+        "No single event postcode is given because the programme spans several waterfront venues.",
+        "Check individual venue access and the latest programme before travelling.",
+        "This festival ended on 12 September 2026 and must not be promoted as upcoming."
+      ],
+      "previous_verified_at": "2026-09-10",
+      "review_status": "historical",
+      "city": "Exeter",
+      "notes": [
+        "The daytime harbour activities finish earlier than the overall festival."
+      ],
+      "free_basis": "Free festival admission."
+    },
+    {
+      "id": "killerton-heritage-open-days-2026",
+      "name": "Heritage Open Days at Killerton",
+      "description": "Visit Killerton's house, gardens and historic laundry during its free-entry weekend near Exeter.",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Broadclyst, near Exeter",
+      "address": "Killerton, Broadclyst, Exeter, Devon, EX5 3LE",
+      "age_text": "Children welcome; no numerical age restriction is stated.",
+      "price_text": "Free admission. Non-member parking: £2.60 for up to two hours or £5.20 all day; members park free.",
+      "price_type": "free",
+      "booking_text": "No advance booking required. Collect an entry ticket at Visitor Reception.",
+      "schedule_text": "Friday 11–Sunday 13 September 2026, 10am–5pm. On Sunday 13 September the house opens 11am–4pm, last entry 3.30pm; the garden opens 10am–5pm.",
+      "occurrences": [
+        {
+          "start": "2026-09-11",
+          "end": "2026-09-11",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Friday"
+        },
+        {
+          "start": "2026-09-12",
+          "end": "2026-09-12",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-09-13",
+          "end": "2026-09-13",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Sunday"
+        }
+      ],
+      "indoor": null,
+      "rainy_day": {
+        "suitable": null,
+        "basis": "The visit combines historic interiors with hillside gardens and outdoor routes. Do not describe the whole visit as indoors.",
+        "classification": "Mixed indoor and outdoor visit"
+      },
+      "tags": [
+        "weekend",
+        "free-entry",
+        "day-trip",
+        "heritage",
+        "gardens"
+      ],
+      "practical_notes": [
+        "On Sunday 13 September, the house closes at 4pm with last entry at 3.30pm. The garden closes at 5pm.",
+        "The property lists Hill Fort play-area works for 5–16 October.",
+        "The gardens include slopes and steep sections; dress for the weather."
+      ],
+      "sources": [
+        {
+          "url": "https://www.nationaltrust.org.uk/visit/devon/killerton/events/e3f92406-99c9-4422-8032-93b942c47cd7",
+          "supports": "Confirms the 11–13 September festival period and the remaining Sunday 13 September 2026 time of 10am–5pm. Free admission, children welcome and no advance booking; collect a ticket at reception. Parking is extra.",
+          "retrieval": "Official-source content reviewed on 13 September 2026.",
+          "previous_retrieval": "Official National Trust event page opened successfully on 10 September 2026.",
+          "label": "Official event details"
+        },
+        {
+          "url": "https://www.nationaltrust.org.uk/visit/devon/killerton",
+          "supports": "Confirms address, parking tariffs, 13 September house and garden opening hours, and last house admission 30 minutes before closing. The Hill Fort play-area notice now gives 5–16 October for works.",
+          "retrieval": "Official-source content reviewed on 13 September 2026.",
+          "previous_retrieval": "Official property page opened successfully on 10 September 2026.",
+          "label": "Property information and parking"
+        }
+      ],
+      "verified_at": "2026-09-13",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 131,
+        "event_rows": [
+          150
+        ],
+        "reconciliation_note": "Checked against the live Sheet after official-source verification on 13 September 2026."
+      },
+      "limitations": [
+        "The event page omits the short-stay parking duration; the property page specifies up to two hours.",
+        "Free admission excludes parking and purchases.",
+        "Building hours are shorter than the overall event window."
+      ],
+      "previous_verified_at": "2026-09-10",
+      "review_status": "verified",
+      "sheet_bindings": [
+        {
+          "candidate_id": "2b48b96b12bf102a1df76ae3",
+          "name": "Heritage Open Days at Killerton",
+          "region": "Devon",
+          "fingerprint": "4e8907a1f8f17323fc80cbca82e42c0a414e687151daa1e20f0d4aa64f35e52b"
+        }
+      ],
+      "city": "",
+      "notes": [
+        "On Sunday 13 September, the house closes at 4pm with last entry at 3.30pm. The garden closes at 5pm.",
+        "The property lists Hill Fort play-area works for 5–16 October.",
+        "The gardens include slopes and steep sections; dress for the weather."
+      ],
+      "free_basis": "Free admission. Non-member parking: GBP 2.60 for up to two hours or GBP 5.20 all day; members park free."
+    },
+    {
+      "id": "knightshayes-heritage-open-day-2026",
+      "name": "Heritage Open Day at Knightshayes",
+      "description": "Explore the gardens and parkland around Knightshayes' Gothic Revival house on a free-entry day near Tiverton.",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Bolham, Tiverton",
+      "address": "Knightshayes, Bolham, Tiverton, Devon, EX16 7RQ",
+      "age_text": "All ages welcome",
+      "price_text": "Free admission. Parking conditions for this event: TBC; the property normally charges non-members.",
+      "price_type": "free",
+      "booking_text": "No advance booking required.",
+      "schedule_text": "Saturday 12 September 2026, 10am–5pm. Check separate house opening hours before visiting.",
+      "occurrences": [
+        {
+          "start": "2026-09-12",
+          "end": "2026-09-12",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Saturday"
+        }
+      ],
+      "indoor": null,
+      "rainy_day": {
+        "suitable": null,
+        "basis": "The programme includes a house alongside gardens, woodland and parkland; the operator advises clothing suited to the weather.",
+        "classification": "Mixed indoor and outdoor visit"
+      },
+      "tags": [
+        "weekend",
+        "free-entry",
+        "day-trip",
+        "heritage",
+        "gardens"
+      ],
+      "practical_notes": [
+        "This is near Tiverton, outside Exeter city centre."
+      ],
+      "sources": [
+        {
+          "url": "https://www.nationaltrust.org.uk/visit/devon/knightshayes/events/a9ed831d-1bb2-4848-b24c-d082293f33fd",
+          "supports": "Confirms Saturday 12 September 2026, 10am–5pm, free admission, no advance booking and all-age suitability. The event centres on the house, gardens, woodland and wider parkland.",
+          "retrieval": "Official National Trust event content reviewed in the search index on 13 September 2026 after a direct-open retrieval error. The entry explicitly confirms 12 September 2026; retained as a past event.",
+          "previous_retrieval": "Official National Trust event page opened successfully on 10 September 2026."
+        },
+        {
+          "url": "https://www.nationaltrust.org.uk/visit/devon/knightshayes",
+          "supports": "Confirms the Bolham address and ordinary non-member parking charges. The page returned opening times for 12 September 2026; these are historical and do not establish future dates.",
+          "retrieval": "Official-source content reviewed on 13 September 2026.",
+          "previous_retrieval": "Official property page opened successfully on 10 September 2026."
+        }
+      ],
+      "verified_at": "2026-09-13",
+      "sheet_match": {
+        "live_sheet_checked": false,
+        "row_id": null,
+        "candidate_names": [
+          "Heritage Open Days: Knightshayes",
+          "Knightshayes Heritage Open Day"
+        ],
+        "local_matches": [
+          {
+            "file": "인스타 홍보용/weekend-edit-2026-09-12-13/CAPTION.md",
+            "line": 5,
+            "name": "Knightshayes Heritage Open Day"
+          }
+        ],
+        "reconciliation_note": "Matches the existing Weekend Edit candidate by event URL and date; a live Sheet duplicate check is still required."
+      },
+      "limitations": [
+        "The free-event wording does not explicitly resolve whether normal parking charges are waived. Do not promise free parking.",
+        "The overall event hours do not establish separate house admission hours.",
+        "This free event ended on 12 September 2026 and must not be promoted as upcoming."
+      ],
+      "previous_verified_at": "2026-09-10",
+      "review_status": "historical",
+      "city": "",
+      "notes": [
+        "This is near Tiverton, outside Exeter city centre."
+      ],
+      "free_basis": "Free admission. Parking conditions for this event: TBC; the property normally charges non-members."
+    },
+    {
+      "id": "ramm",
+      "name": "Royal Albert Memorial Museum & Art Gallery (RAMM)",
+      "description": "Browse displays of Devon history, animals and world cultures in a free city-centre museum.",
+      "kind": "place",
+      "region": "Devon",
+      "locality": "Exeter city centre",
+      "address": "Queen Street, Exeter, Devon, EX4 3RX",
+      "age_text": "TBC — the checked general-visit page does not specify an age range.",
+      "price_text": "Free museum admission. Check individual event listings for any separate charges.",
+      "price_type": "free",
+      "booking_text": "General-visit booking requirement: TBC. Check separately for organised workshops and events.",
+      "schedule_text": "Monday closed; Tuesday 10.30am–5pm; Wednesday–Sunday 10am–5pm. Check for exceptional closures before travelling.",
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "Editorial classification based on the museum's indoor galleries described on its official visit page.",
+        "classification": "Indoor galleries"
+      },
+      "tags": [
+        "free",
+        "in-town",
+        "museum",
+        "rainy-day",
+        "evergreen"
+      ],
+      "sources": [
+        {
+          "url": "https://rammuseum.org.uk/visit/",
+          "supports": "Confirms free entry, the Queen Street address and the weekly opening times above. Describes history, natural-history and world-cultures galleries.",
+          "retrieval": "Official-source content reviewed on 13 September 2026.",
+          "previous_retrieval": "Official museum visit page opened successfully on 10 September 2026.",
+          "label": "Plan your museum visit"
+        }
+      ],
+      "verified_at": "2026-09-13",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 5,
+        "event_rows": [],
+        "reconciliation_note": "Checked against the live Sheet after official-source verification on 13 September 2026."
+      },
+      "limitations": [
+        "Specific children's trail availability and numerical age guidance were not established in this refresh.",
+        "A general place has not been converted into dated event occurrences."
+      ],
+      "previous_verified_at": "2026-09-10",
+      "review_status": "verified",
+      "practical_notes": [
+        "The official website flags Gallery 20 as closed on Tuesday 15 September. Other exceptional notices may appear before a visit."
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "f5492124652f836e731fef31",
+          "name": "RAMM – Royal Albert Memorial Museum",
+          "region": "Devon",
+          "fingerprint": "33fab659354f134179d5ddf4ce63911beb31d7995514931c30f6349faae8e906"
+        }
+      ],
+      "city": "Exeter",
+      "notes": [
+        "The official website flags Gallery 20 as closed on Tuesday 15 September. Other exceptional notices may appear before a visit."
+      ],
+      "free_basis": "Free museum admission. Check individual event listings for any separate charges.",
+      "indoor_basis": "Editorial classification based on the museum's indoor galleries described on its official visit page."
+    },
+    {
+      "id": "exeter-library",
+      "name": "Exeter Library",
+      "description": "Choose books together in the children's section overlooking Rougemont Gardens. Reading and borrowing books are free.",
+      "kind": "place",
+      "region": "Devon",
+      "locality": "Exeter city centre",
+      "address": "Castle Street, Exeter, Devon, EX4 3PQ",
+      "age_text": "Children of all ages, including babies, are welcome.",
+      "price_text": "Free to read books; joining and borrowing books are also free. Individual events may have separate charges.",
+      "price_type": "free",
+      "booking_text": "Reading-visit booking requirement: TBC. Check event listings before attending a scheduled activity.",
+      "schedule_text": "Operator-published hours: Monday and Friday 9am–6pm; Tuesday and Thursday 9am–7pm; Wednesday 10am–6pm; Saturday 9am–5pm; Sunday noon–4pm. Check exceptional closures before travelling.",
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "Editorial classification based on the operator's description of the indoor children's library area.",
+        "classification": "Indoor reading visit"
+      },
+      "tags": [
+        "free",
+        "in-town",
+        "library",
+        "rainy-day",
+        "evergreen"
+      ],
+      "sources": [
+        {
+          "url": "https://discover.librariesunlimited.org.uk/-/exeter-library",
+          "supports": "Confirms the Castle Street address and branch contact details.",
+          "retrieval": "Official branch page reviewed on 13 September 2026; its returned text did not expose opening hours.",
+          "previous_retrieval": "Official branch page opened successfully on 10 September 2026; opening hours were not present in the returned text.",
+          "label": "Library details"
+        },
+        {
+          "url": "https://discover.librariesunlimited.org.uk/-/services-at-exeter-library",
+          "supports": "Confirms a large children's section overlooking Rougemont Gardens and step-free access to library areas.",
+          "retrieval": "Official-source content reviewed on 13 September 2026.",
+          "previous_retrieval": "Official branch services page opened successfully on 10 September 2026.",
+          "label": "Facilities and access"
+        },
+        {
+          "url": "https://discover.librariesunlimited.org.uk/-/children",
+          "supports": "The library operator welcomes children of every age and states that browsing, borrowing books and joining are free.",
+          "retrieval": "Official-source content reviewed on 13 September 2026.",
+          "previous_retrieval": "Official children's services page opened successfully on 10 September 2026.",
+          "label": "Children’s library services"
+        },
+        {
+          "url": "https://roomhire.librariesunlimited.org.uk/venues/99-exeter-library",
+          "supports": "The operator's Exeter Library venue page publishes the full weekly opening schedule and Castle Street address.",
+          "retrieval": "Official operator room-hire page opened successfully on 13 September 2026.",
+          "label": "Published opening hours"
+        }
+      ],
+      "verified_at": "2026-09-13",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 6,
+        "event_rows": [],
+        "reconciliation_note": "Checked against the live Sheet after official-source verification on 13 September 2026."
+      },
+      "limitations": [
+        "Hours come from the operator's general venue page, not a date-specific confirmation of special opening or closures.",
+        "The general children's programme list does not establish a scheduled session on a particular day."
+      ],
+      "previous_verified_at": "2026-09-10",
+      "review_status": "verified",
+      "sheet_bindings": [
+        {
+          "candidate_id": "30f593f42a078376115b3b14",
+          "name": "Exeter Library",
+          "region": "Devon",
+          "fingerprint": "358a121e628e2c304b0d1b3848cf90066e27a23442b5e38de1bc28f1271c858e"
+        }
+      ],
+      "city": "Exeter",
+      "notes": [],
+      "free_basis": "Free to read books; joining and borrowing books are also free. Individual events may have separate charges.",
+      "indoor_basis": "Editorial classification based on the operator's description of the indoor children's library area."
+    },
+    {
+      "id": "exeter-custom-house",
+      "name": "Exeter Custom House",
+      "description": "Explore indoor displays about Exeter's trading past in the historic Custom House beside the Quay.",
+      "kind": "place",
+      "region": "Devon",
+      "locality": "Exeter Quayside",
+      "address": "46 The Quay, Exeter, Devon, EX2 4AN",
+      "age_text": "TBC — no general-visit age range is stated on the checked pages.",
+      "price_text": "Free general admission; some separately advertised events are ticketed.",
+      "price_type": "free",
+      "booking_text": "Groups must contact the venue in advance. Requirements for an ordinary family visit: TBC.",
+      "schedule_text": "April–October: daily 10am–5pm, last entry 4.30pm. November–March: Thursday–Sunday 11am–4pm, last entry 3.30pm.",
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "Editorial classification based on visitor-centre displays inside the historic building; nearby waterfront activities are outdoors.",
+        "classification": "Indoor visitor centre"
+      },
+      "tags": [
+        "free",
+        "in-town",
+        "heritage",
+        "rainy-day",
+        "evergreen"
+      ],
+      "practical_notes": [
+        "Parts of the display may close for private events; call ahead if this is the main purpose of your visit."
+      ],
+      "sources": [
+        {
+          "url": "https://exetercustomhouse.co.uk/your-visit/",
+          "supports": "Confirms the address, seasonal opening pattern, entry cut-off 30 minutes before closing and free general admission. Groups should arrange visits in advance. Some display areas may close for private bookings.",
+          "retrieval": "Official-source content reviewed on 13 September 2026.",
+          "previous_retrieval": "Official visitor page opened successfully on 10 September 2026.",
+          "label": "Opening times and visitor information"
+        },
+        {
+          "url": "https://exetercustomhouse.co.uk/about/",
+          "supports": "Describes displays and objects inside the building about the development of Exeter Quayside.",
+          "retrieval": "Official about page opened successfully on 10 September 2026.",
+          "previous_retrieval": "Official about page opened successfully on 10 September 2026.",
+          "review_note": "Supplemental identity/background evidence retained from the earlier review; current visitor conditions checked through the primary visit page.",
+          "label": "About the displays"
+        }
+      ],
+      "verified_at": "2026-09-13",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 21,
+        "event_rows": [],
+        "reconciliation_note": "Checked against the live Sheet after official-source verification on 13 September 2026."
+      },
+      "limitations": [
+        "No particular children's trail, minimum age or guaranteed display availability is asserted.",
+        "This is an ordinary place visit, not an additional occurrence of the shanty festival."
+      ],
+      "previous_verified_at": "2026-09-10",
+      "review_status": "verified",
+      "sheet_bindings": [
+        {
+          "candidate_id": "f3cd1820b7abdbd990a8d14f",
+          "name": "Custom House – Exeter Quayside",
+          "region": "Devon",
+          "fingerprint": "8669e3a93d63d786a579f640e30f7fd7cf81e0e09a2106b88c883744ec1dcb68"
+        }
+      ],
+      "city": "Exeter",
+      "notes": [
+        "Parts of the display may close for private events; call ahead if this is the main purpose of your visit."
+      ],
+      "free_basis": "Free general admission; some separately advertised events are ticketed.",
+      "indoor_basis": "Editorial classification based on visitor-centre displays inside the historic building; nearby waterfront activities are outdoors."
+    },
+    {
+      "id": "exeter-underground-passages",
+      "name": "Exeter's Underground Passages",
+      "description": "Explore the exhibition and follow a guide beneath the city through medieval water passages.",
+      "kind": "place",
+      "region": "Devon",
+      "locality": "Exeter",
+      "address": "2 Paris Street, Exeter, Devon, EX1 1GA",
+      "age_text": "Tours: ages 5+; children aged 5–17 must be accompanied by an adult.",
+      "price_text": "Ticketed: adult £9; concession £7; child 5–17 £6; family up to 2 adults and 3 children £25.",
+      "price_type": "paid",
+      "booking_text": "Advance booking advised at weekends and during school holidays. Arrive 15 minutes before your tour.",
+      "schedule_text": "Term time: Thursday–Friday and Sunday 11am–4pm; Saturday 10.30am–4.30pm (subject to change); Monday–Wednesday closed. Summer holidays: Wednesday–Sunday 11am–4pm. Closed 24–25 December.",
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "Exhibition and enclosed underground tour.",
+        "classification": "Editorial inference from the official description."
+      },
+      "tags": [
+        "In town",
+        "Indoor",
+        "History",
+        "Ticketed"
+      ],
+      "practical_notes": [
+        "Under-5s may visit the exhibition free with an adult, but cannot join the tour.",
+        "Wheelchairs and pushchairs can access the exhibition only. Passages are narrow and low; unsuitable for claustrophobia."
+      ],
+      "sources": [
+        {
+          "url": "https://www.exetercornexchange.co.uk/book-tickets/exeters-underground-passages/",
+          "supports": "Official council ticket page verifies admission, age limits, access, booking advice, address and seasonal hours.",
+          "retrieval": "Official-source content reviewed on 13 September 2026.",
+          "previous_retrieval": "Opened successfully on 10 September 2026.",
+          "label": "Times, tickets and booking"
+        }
+      ],
+      "verified_at": "2026-09-13",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 127,
+        "event_rows": [],
+        "reconciliation_note": "Checked against the live Sheet after official-source verification on 13 September 2026."
+      },
+      "limitations": [
+        "General visitor record; individual tour availability has not been checked.",
+        "Separate free Heritage Open Days tours must not be implied by this ordinary paid-place listing."
+      ],
+      "previous_verified_at": "2026-09-10",
+      "review_status": "verified",
+      "sheet_bindings": [
+        {
+          "candidate_id": "65d15a18b564f7812563c8a2",
+          "name": "Exeter's Underground Passages",
+          "region": "Devon",
+          "fingerprint": "cee5d726d2eb825fdb7cc2653b3231937f3985c7b8f41f40d6a24e46379a2593"
+        }
+      ],
+      "city": "Exeter",
+      "notes": [
+        "Under-5s may visit the exhibition free with an adult, but cannot join the tour.",
+        "Wheelchairs and pushchairs can access the exhibition only. Passages are narrow and low; unsuitable for claustrophobia."
+      ],
+      "indoor_basis": "Exhibition and enclosed underground tour."
+    },
+    {
+      "id": "heavitree-pleasure-grounds",
+      "name": "Heavitree Pleasure Grounds",
+      "description": "Take a picnic to this outdoor neighbourhood park, with space for play and ball games.",
+      "kind": "place",
+      "region": "Devon",
+      "locality": "Exeter",
+      "address": "Whipton Lane, Exeter, Devon, EX1 2TN",
+      "age_text": "For children and families; specific age limits TBC.",
+      "price_text": "Free general admission. Charges for optional activities or refreshments are not included.",
+      "price_type": "free",
+      "booking_text": "TBC — the official park listing does not specify a general booking requirement.",
+      "schedule_text": "Listed for visits throughout 2026. Daily gate opening and closing times TBC.",
+      "indoor": false,
+      "rainy_day": {
+        "suitable": false,
+        "basis": "Official listing classifies the park as an outdoor attraction.",
+        "classification": "Editorial suitability judgement based on the official classification."
+      },
+      "tags": [
+        "In town",
+        "Outdoor",
+        "Free",
+        "Park",
+        "Picnic"
+      ],
+      "practical_notes": [
+        "Check current play-area access before a visit: the council has announced planned play and water-play improvements."
+      ],
+      "sources": [
+        {
+          "url": "https://www.visitexeter.com/things-to-do/heavitree-pleasure-grounds-p763523",
+          "supports": "Lists free admission, outdoor park facilities, family suitability, address and a January–December 2026 visiting period; no daily hours.",
+          "retrieval": "Official-source content reviewed on 13 September 2026.",
+          "previous_retrieval": "Official city tourism page opened successfully on 10 September 2026.",
+          "label": "Official park information"
+        },
+        {
+          "url": "https://www.visitexeter.com/info-maps/members-area",
+          "supports": "Confirms Visit Exeter is managed by Exeter City Council.",
+          "retrieval": "Official page search result retrieved on 10 September 2026.",
+          "previous_retrieval": "Official page search result retrieved on 10 September 2026.",
+          "review_note": "Supplemental identity/background evidence retained from the earlier review; current visitor conditions checked through the primary visit page.",
+          "label": "About Visit Exeter"
+        },
+        {
+          "url": "https://engage.exeter.gov.uk/heavitree-play-area",
+          "supports": "Council consultation describes planned play-area and water-play improvements; it does not establish closure dates.",
+          "retrieval": "Official-source content reviewed on 13 September 2026.",
+          "previous_retrieval": "Opened successfully on 10 September 2026.",
+          "label": "Play-area improvement notices"
+        }
+      ],
+      "verified_at": "2026-09-13",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 128,
+        "event_rows": [],
+        "reconciliation_note": "Checked against the live Sheet after official-source verification on 13 September 2026."
+      },
+      "limitations": [
+        "No claim that paddling pools are open on 12–13 September; seasonal wording is insufficient to confirm this.",
+        "Daily access hours and availability of individual facilities remain unconfirmed.",
+        "The tennis operator lists a different postcode for its courts (EX1 3DS); the park address follows the official city tourism listing."
+      ],
+      "previous_verified_at": "2026-09-10",
+      "review_status": "verified",
+      "sheet_bindings": [
+        {
+          "candidate_id": "0463ffda3140648ec754c0f7",
+          "name": "Heavitree Pleasure Grounds",
+          "region": "Devon",
+          "fingerprint": "5112aedfb187c2d0b90f79a1e4d5bcf54f0ce584cec9dbf74c973bdc617f1686"
+        }
+      ],
+      "city": "Exeter",
+      "notes": [
+        "Check current play-area access before a visit: the council has announced planned play and water-play improvements."
+      ],
+      "free_basis": "Free general admission. Charges for optional activities or refreshments are not included."
+    },
+    {
+      "id": "a-la-ronde-heritage-open-day-2026",
+      "name": "Heritage Open Days at A la Ronde",
+      "description": "Explore the 16-sided house, travel collections and Grand Tour exhibition, with grounds overlooking the Exe Estuary.",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Exmouth",
+      "address": "A la Ronde, Summer Lane, Exmouth, Devon, EX8 5BD",
+      "age_text": "All ages welcome.",
+      "price_text": "Free admission; parking is free for house visitors.",
+      "price_type": "free",
+      "booking_text": "No advance booking needed. Collect an entry ticket at Visitor Reception.",
+      "schedule_text": "Saturday 19 September 2026, 10.30am–5pm. Check separate house last-admission times before travelling.",
+      "occurrences": [
+        {
+          "start": "2026-09-19",
+          "end": "2026-09-19",
+          "start_time": "10:30",
+          "end_time": "17:00",
+          "weekday": "Saturday"
+        }
+      ],
+      "indoor": null,
+      "rainy_day": {
+        "suitable": null,
+        "basis": "House interiors and outdoor grounds form a mixed visit.",
+        "classification": "Mixed indoor and outdoor visit"
+      },
+      "tags": [
+        "weekend",
+        "free-entry",
+        "day-trip",
+        "heritage"
+      ],
+      "practical_notes": [
+        "The fragile Shell Gallery has no physical visitor access.",
+        "Check separate house last-admission times before travelling."
+      ],
+      "sources": [
+        {
+          "url": "https://www.nationaltrust.org.uk/visit/devon/a-la-ronde/events/8441e910-4903-4527-8af2-fb74858524cf",
+          "supports": "Confirms 19 September 2026, time, free admission, parking for house visitors, all-age suitability and no booking requirement.",
+          "retrieval": "Official event page reviewed on 13 September 2026.",
+          "label": "Official event details"
+        },
+        {
+          "url": "https://www.nationaltrust.org.uk/visit/devon/a-la-ronde",
+          "supports": "Confirms the address and Shell Gallery access restriction.",
+          "retrieval": "Official property page checked by the parallel research agent on 13 September 2026.",
+          "label": "Property information and access"
+        }
+      ],
+      "verified_at": "2026-09-13",
+      "review_status": "verified",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 129,
+        "event_rows": [
+          148
+        ],
+        "reconciliation_note": "Checked against the live Sheet after official-source verification on 13 September 2026."
+      },
+      "limitations": [
+        "The event window does not mean that entry to every room continues until 5pm."
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "c5a93ea921227c97d13b003e",
+          "name": "Heritage Open Days at A la Ronde",
+          "region": "Devon",
+          "fingerprint": "581533b622ca8dbec88b4746fcc2b92bd41c363b3f9d79920bd54569c857d9f2"
+        }
+      ],
+      "city": "",
+      "notes": [
+        "The fragile Shell Gallery has no physical visitor access.",
+        "Check separate house last-admission times before travelling."
+      ],
+      "free_basis": "Free admission; parking is free for house visitors."
+    },
+    {
+      "id": "silverton-park-stables-open-days-2026",
+      "name": "Stableyard Stories: Silverton Park Stables Open Days",
+      "description": "Explore the historic stables and courtyard, with children's activity sheets available.",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Silverton, near Cullompton",
+      "address": "The Old Stables Road, Silverton, Devon, EX5 4DE",
+      "age_text": "Children welcome; numerical age guidance TBC.",
+      "price_text": "Free entry. Refreshments cost extra or invite a donation; parking charges TBC.",
+      "price_type": "free",
+      "booking_text": "Advance booking via Eventbrite is preferred, rather than stated as compulsory. Live ticket availability TBC.",
+      "schedule_text": "Saturday 19 and Sunday 20 September 2026, 10am–4pm each day.",
+      "occurrences": [
+        {
+          "start": "2026-09-19",
+          "end": "2026-09-19",
+          "start_time": "10:00",
+          "end_time": "16:00",
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-09-20",
+          "end": "2026-09-20",
+          "start_time": "10:00",
+          "end_time": "16:00",
+          "weekday": "Sunday"
+        }
+      ],
+      "indoor": null,
+      "rainy_day": {
+        "suitable": null,
+        "basis": "Building and courtyard visit with an outdoor approach.",
+        "classification": "Mixed indoor and outdoor visit"
+      },
+      "tags": [
+        "weekend",
+        "free-entry",
+        "day-trip",
+        "heritage"
+      ],
+      "practical_notes": [
+        "Field parking is about 100 yards away over grass and a rough path; expect cobbles and steps. Toilets are available.",
+        "Public transport access is limited."
+      ],
+      "sources": [
+        {
+          "url": "https://www.landmarktrust.org.uk/news-and-events/opendays/silverton-park-stables-open-days-2026/",
+          "supports": "The event-specific heading and description confirm the 2026 dates, hours, free entry, children's activities, booking preference, address and visitor access.",
+          "retrieval": "Official Landmark Trust page opened successfully on 13 September 2026.",
+          "label": "Official event details and booking link"
+        }
+      ],
+      "verified_at": "2026-09-13",
+      "review_status": "verified",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 130,
+        "event_rows": [
+          149
+        ],
+        "reconciliation_note": "Checked against the live Sheet after official-source verification on 13 September 2026."
+      },
+      "limitations": [
+        "A generic donations paragraph still says 2025; event-specific text explicitly gives 19–20 September 2026.",
+        "The linked Eventbrite page could not be retrieved; no ticket availability is promised."
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "db96626091713e5a32f8bf2c",
+          "name": "Stableyard Stories: Silverton Park Stables Open Days",
+          "region": "Devon",
+          "fingerprint": "cf4de41c57bf14e903051f470641afa97c823b7c65ba227095176c994262b293"
+        }
+      ],
+      "city": "",
+      "notes": [
+        "Field parking is about 100 yards away over grass and a rough path; expect cobbles and steps. Toilets are available.",
+        "Public transport access is limited."
+      ],
+      "free_basis": "Free entry. Refreshments cost extra or invite a donation; parking charges TBC."
+    }
+  ]
+}
