@@ -2,7 +2,7 @@
 
 Plain HTML guides help parents find a useful answer through search and continue into the existing Globee directory. The publication repository is **`globeeuk/globeeuk.github.io`**, serving **https://globeeuk.github.io/**. The older `globeeuk/globee` repository is not this deployment target.
 
-This document describes the implementation and release procedure. Public deployment, the recurring schedule and Search Console setup must each be confirmed separately; generating files does not establish that they succeeded. See [OPERATIONS.md](OPERATIONS.md) for the regular operating procedure.
+The guide index and three guides were deployed and checked at their public URLs on **13 September 2026**. The **Globee SEO refresh** schedule is active, and Search Console ownership was verified. The guide index and all three guides were accepted into the crawl request queue. Sitemap processing and actual search indexing are separate outcomes; see [OPERATIONS.md](OPERATIONS.md) for the current Search Console status and regular operating procedure.
 
 ## Pages and publication rules
 

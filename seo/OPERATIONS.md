@@ -8,14 +8,14 @@ Work in the checkout whose origin is `https://github.com/globeeuk/globeeuk.githu
 
 Keep the existing broad daily research automation **paused**. This procedure does not resume it or establish another general event-research pipeline.
 
-The proposed narrow SEO heartbeat runs twice daily in **Europe/London**, following the local clock through summer and winter:
+The active narrow SEO heartbeat, **Globee SEO refresh**, runs twice daily in **Europe/London**, following the local clock through summer and winter:
 
 | Time | Purpose |
 | --- | --- |
 | 07:30 | Review official sources for the selected guides, reconcile relevant Sheet changes and rebuild when appropriate |
 | 18:30 | Rebuild primarily to remove expired or ended choices; review source changes only when needed |
 
-**Activation is pending confirmation of the saved automation.** Record the actual result before describing this schedule as active. A scheduled invocation is not proof of successful publication.
+**Activated on 13 September 2026** and confirmed in the saved automation. A scheduled invocation is not proof of successful publication. This local scheduled task requires the computer to remain on, the desktop app to be running and the checkout to be available. See [official scheduled-task guidance](https://learn.chatgpt.com/docs/automations?surface=app).
 
 Twice-daily builds do not remove an event at the exact second it ends. An urgent cancellation or material correction can justify an additional run.
 
@@ -38,7 +38,7 @@ The renderer excludes events after their confirmed end time. With no end time it
 
 If public files are unchanged, do not make an empty publication. Never renew `verified_at` simply to keep an activity visible. Review any selected item's material source or Sheet change before publishing it.
 
-Keep the current and next weekend visibly separate. After the current weekend's events finish, next weekend's choices stay under their own dates. Do not relabel them as this weekend. Fewer than two distinct current choices means `noindex`; keep an honest limited state rather than padding it with unverified activities.
+Keep the current and next weekend visibly separate. After the current weekend's events finish, next weekend's choices stay under their own dates. Do not relabel them as this weekend. Fewer than two distinct eligible choices across the two weekend sections means `noindex`; keep an honest limited state rather than padding it with unverified activities.
 
 ## When the Sheet binding check fails
 
@@ -99,6 +99,10 @@ Report meaningful corrections, publication failures or required action. Keep rou
 
 ## Search Console and measurement
 
-Search Console ownership and sitemap setup are **pending until verified in the actual owner's property**. Once access is confirmed, use the root-domain property and submit the combined `https://globeeuk.github.io/sitemap.xml`, retaining its existing URLs. Inspect guide URLs and indexability; sitemap submission does not prove indexing.
+On **13 September 2026**, ownership of `https://globeeuk.github.io/` was verified in the owner's Search Console account using the homepage HTML tag. Preserve that tag. The combined `https://globeeuk.github.io/sitemap.xml` was submitted, and the hub plus all three guides were individually accepted into the priority crawl queue through Request indexing. These actions do not prove actual indexing.
+
+The sitemap report initially showed **Couldn't fetch / 0 discovered pages**. A live URL Inspection test of that exact sitemap at **16:15 BST** confirmed **Crawl allowed: Yes**, **Page fetch: Successful** and **Indexing allowed: Yes**. Public HTTP checks also returned 200 with valid XML. The sitemap was resubmitted once after that successful live test. Report processing still needs a later status check; do not describe it as successfully parsed until Search Console says so. If it persists, follow [Google's sitemap troubleshooting guidance](https://support.google.com/webmasters/answer/7451001?hl=en). A new property is not by itself proof that an error is harmless.
+
+During the next scheduled SEO run, check this outstanding sitemap status once if access is available, record the result and report a meaningful change or required action. Stop this temporary check after successful processing. Do not submit the same URL repeatedly or invent a resolution time.
 
 Review queries, impressions, clicks and consented site visits manually when useful data and time are available. This procedure does not add a statistics schedule. Assess whether parents are reaching and using the guides before adding more pages or distribution systems.
