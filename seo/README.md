@@ -67,7 +67,7 @@ python3 -B -m unittest discover -s seo -p 'test_*.py'
 python3 seo/stage.py
 ```
 
-`stage.py` fetches the live Sheet, checks bindings and builds production pages using the same London time. It copies only the six generated SEO files into their root publication paths and merges the SEO entries into root `sitemap.xml`, preserving other URLs and their metadata. It prepares working-tree files; it does not commit, push or publish to GitHub.
+`stage.py` fetches the live Sheet, checks bindings and builds production pages using the same London time. It copies only the six generated SEO files into their root publication paths and merges the SEO entries into root `sitemap.xml`, preserving metadata for retained SEO URLs and all non-SEO URLs. Only a URL whose corresponding HTML bytes changed receives a new `lastmod`, using the current London date; merely running a refresh does not change it. It prepares working-tree files; it does not commit, push or publish to GitHub.
 
 Review `seo/production/build-report.json`, the rendered pages and the Git diff before committing and publishing. The report contains the evaluation time, selected IDs and indexability; it is not evidence of a new source check.
 
@@ -79,9 +79,9 @@ The homepage's guide links, footer, branding and privacy setup are separate inte
 
 Production guides reuse root `/analytics.js` and its existing optional analytics consent controls. Privacy and Cookie settings are available; provider links use the existing `detail-link` hook. The generator does not embed or start Google Analytics directly. The existing consent state and host checks govern collection.
 
-Each guide has a unique title and description, a root-domain canonical, crawlable links and CollectionPage/ItemList structured data. There are no invented ratings or unsupported Event rich-result claims. A build timestamp is not written as sitemap `lastmod`.
+Each guide has a unique title and description, a root-domain canonical, crawlable links and CollectionPage/ItemList structured data. There are no invented ratings or unsupported Event rich-result claims. The generated `seo-sitemap.xml` omits `lastmod`; the root sitemap retains it or updates it only when the page HTML changes.
 
-Search Console ownership verification and sitemap submission are separate setup steps. Treat them as pending until confirmed in the actual owner's property. Afterwards, inspect indexing, search impressions and clicks manually when useful; no additional statistics schedule is established here. Indexability and sitemap submission do not guarantee ranking.
+Search Console ownership and sitemap submission are confirmed; sitemap processing remains a separate outcome tracked in [OPERATIONS.md](OPERATIONS.md). Inspect indexing, search impressions and clicks manually when useful; no additional statistics schedule is established here. Indexability and sitemap submission do not guarantee ranking.
 
 There is no email signup form in these guides. Subscription collection and newsletter sending belong to a separate implementation.
 

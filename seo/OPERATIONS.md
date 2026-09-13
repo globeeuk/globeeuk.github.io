@@ -77,7 +77,7 @@ Use the preview and production commands in [README.md](README.md). After prepari
 python3 seo/stage.py
 ```
 
-This command fetches the live Sheet, validates bindings, renders at that same London time and copies only the generated SEO publication files. It also merges the root sitemap while preserving non-SEO URLs and their metadata. It changes working-tree files but does not commit, push or publish. Inspect its report, pages and Git diff before release; do not bypass the guard with a manual copy of older output.
+This command fetches the live Sheet, validates bindings, renders at that same London time and copies only the generated SEO publication files. Its root sitemap merge preserves metadata for retained SEO URLs and all non-SEO URLs, while removing SEO URLs that become `noindex`. Before copying, it compares the existing and generated HTML bytes; only changed pages receive a new `lastmod` using the current London date. A refresh run, report timestamp or stylesheet change alone does not renew it. It changes working-tree files but does not commit, push or publish. Inspect its report, pages and Git diff before release; do not bypass the guard with a manual copy of older output.
 
 Recurring releases are limited to:
 
@@ -102,6 +102,8 @@ Report meaningful corrections, publication failures or required action. Keep rou
 On **13 September 2026**, ownership of `https://globeeuk.github.io/` was verified in the owner's Search Console account using the homepage HTML tag. Preserve that tag. The combined `https://globeeuk.github.io/sitemap.xml` was submitted, and the hub plus all three guides were individually accepted into the priority crawl queue through Request indexing. These actions do not prove actual indexing.
 
 The sitemap report initially showed **Couldn't fetch / 0 discovered pages**. A live URL Inspection test of that exact sitemap at **16:15 BST** confirmed **Crawl allowed: Yes**, **Page fetch: Successful** and **Indexing allowed: Yes**. Public HTTP checks also returned 200 with valid XML. The sitemap was resubmitted once after that successful live test. Report processing still needs a later status check; do not describe it as successfully parsed until Search Console says so. If it persists, follow [Google's sitemap troubleshooting guidance](https://support.google.com/webmasters/answer/7451001?hl=en). A new property is not by itself proof that an error is harmless.
+
+**Follow-up — 13 September 2026, 19:21 BST:** the sitemap detail still reported that it could not read the sitemap, with **last read: 13 September 2026** and **0 discovered pages**. No manual action was detected. No sitemap resubmission or settings changes were made during this check. The successful 16:15 live test above remains a historical observation; it was not repeated or refreshed at 19:21.
 
 During the next scheduled SEO run, check this outstanding sitemap status once if access is available, record the result and report a meaningful change or required action. Stop this temporary check after successful processing. Do not submit the same URL repeatedly or invent a resolution time.
 
