@@ -46,7 +46,7 @@ From the **public repository checkout**, using Python 3.9 or later:
 ```sh
 mkdir -p seo/preview
 python3 seo/sheet_candidates.py --output seo/research/sheet-candidates.json
-python3 seo/prepare_catalog.py seo/research/verified-candidates-2026-09-13.json --output seo/preview/catalog-review.json
+python3 seo/prepare_catalog.py seo/research/verified-candidates-2026-09-14.json --output seo/preview/catalog-review.json
 python3 seo/check_sheet_bindings.py --catalog seo/preview/catalog-review.json --queue seo/research/sheet-candidates.json
 python3 seo/build.py --catalog seo/preview/catalog-review.json --output seo/preview
 python3 -B -m unittest discover -s seo -p 'test_*.py'
@@ -62,7 +62,7 @@ Open `/exeter/` on the local server. Preview pages use `noindex,follow`, an empt
 After official review, reconciliation and successful checks, use the same reviewed export:
 
 ```sh
-python3 seo/prepare_catalog.py seo/research/verified-candidates-2026-09-13.json --output seo/catalog.json
+python3 seo/prepare_catalog.py seo/research/verified-candidates-2026-09-14.json --output seo/catalog.json
 python3 -B -m unittest discover -s seo -p 'test_*.py'
 python3 seo/stage.py
 ```
