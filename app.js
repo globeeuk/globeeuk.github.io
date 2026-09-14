@@ -131,6 +131,9 @@ function renderRails(places){
   $('#discovery-rails').innerHTML=places.length?`<div class="plans-grid" aria-label="${isPlansPage?'All matching events and holiday clubs':'All matching places, events and holiday clubs'}">${places.map(card).join('')}</div>`:'';
   fixImages($('#discovery-rails'));
 }
+function renderBristolGrowthNote(){
+  $('#discovery-rails').innerHTML=`<aside class="region-growth-note" aria-label="Help Globee grow in Bristol"><p><strong>Want more Bristol?</strong> Follow <a class="growth-social-link" data-social-platform="instagram" href="https://www.instagram.com/a.better.daily.uk/" target="_blank" rel="noopener noreferrer">@a.better.daily.uk</a> and let us know you’re here — the more Bristol families join in, the faster we can grow this guide. <span aria-hidden="true">🐝</span></p></aside>`;
+}
 function renderLoadMore(total){
   moreObserver?.disconnect();
   const container=$('#list-progress');
@@ -186,13 +189,13 @@ function render(){
     document.title=activeEdit?`${activeEdit.title} in ${state.region==='Exeter'?'Exeter & Devon':state.region} | Globee`:'What’s on & holiday clubs | Globee';
   }
   if($('.weekend-shortcut'))$('.weekend-shortcut').hidden=!!activeEdit;
-  $('#results-heading').textContent=state.view==='map'?(activeEdit?`${activeEdit.title} on the map`:'Explore on the map'):activeEdit?`All ${activeEdit.title}`:weekendOnlyPilot?'Bristol is growing':hasFilters()?'Matching plans':isPlansPage?'All upcoming plans':'Explore all';
-  $('#results-subtitle').textContent=activeEdit?`${activeEdit.subtitle} · Until ${dateShort(activeEdit.end)}`:weekendOnlyPilot?`We’re starting with ${places.length} checked picks for this weekend. More local places will appear here as they’re verified.`:isPlansPage?'What’s on & holiday clubs':hasFilters()?'Places and activities that match your filters.':'Places, what’s on & holiday clubs';
+  $('#results-heading').textContent=state.view==='map'?(activeEdit?`${activeEdit.title} on the map`:'Explore on the map'):activeEdit?`All ${activeEdit.title}`:weekendOnlyPilot?'Bristol is growing 🐝':hasFilters()?'Matching plans':isPlansPage?'All upcoming plans':'Explore all';
+  $('#results-subtitle').textContent=activeEdit?`${activeEdit.subtitle} · Until ${dateShort(activeEdit.end)}`:weekendOnlyPilot?`We’re starting with ${places.length} checked picks for this weekend.`:isPlansPage?'What’s on & holiday clubs':hasFilters()?'Places and activities that match your filters.':'Places, what’s on & holiday clubs';
   $('#result-count').textContent=weekendOnlyPilot?'':`${places.length} ${places.length===1?'result':'results'}`;
   $('#date-scope-note').hidden=!state.dates;
   $('#date-scope-note').textContent=isPlansPage?'Showing events and clubs with confirmed dates. Clear Dates to include clubs with dates TBC.':'Showing date-confirmed events. Clear Dates to include cafés, regular places and activities with dates TBC.';
   renderWeekend();
-  if(state.view==='list'&&filterSignature!==lastListSignature){renderRails(weekendOnlyPilot?[]:places.slice(0,visibleCount));lastListSignature=filterSignature;}
+  if(state.view==='list'&&filterSignature!==lastListSignature){if(weekendOnlyPilot)renderBristolGrowthNote();else renderRails(places.slice(0,visibleCount));lastListSignature=filterSignature;}
   renderLoadMore(weekendOnlyPilot?0:places.length);
   $('#empty-state').hidden=places.length>0;
   const chips=[];
