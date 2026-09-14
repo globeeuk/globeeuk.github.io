@@ -8,7 +8,7 @@
   ];
   function plusDays(s,n){const d=date(s);d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10);}
   function weekendRange(today){const day=date(today).getUTCDay(),start=day===0?today:plusDays(today,(6-day+7)%7);return {start,end:day===0?today:plusDays(start,1)};}
-  function weekendPicks(places,today,limit=5){
+  function weekendPicks(places,today,limit=10){
     const range=weekendRange(today),seen=new Set();
     // Keep only confirmed overlapping dates, and one card per directory entry.
     const eligible=places.filter(p=>{if(seen.has(p.id))return false;seen.add(p.id);return (p.datePeriods||[]).some(d=>d.start<=range.end&&d.end>=range.start);});

@@ -170,7 +170,7 @@ function setupRails(){
 }
 function render(){
   const places=visiblePlaces();
-  const weekendOnlyPilot=!isPlansPage&&state.region==='Bristol'&&!hasFilters()&&state.view==='list'&&places.length>0&&places.length<=3&&GlobeeDiscovery.weekendPicks(places,TODAY).length===places.length;
+  const weekendOnlyPilot=!isPlansPage&&state.region==='Bristol'&&!hasFilters()&&state.view==='list'&&places.length>0&&places.length<=10&&GlobeeDiscovery.weekendPicks(places,TODAY).length===places.length;
   const filterSignature=JSON.stringify([state.region,state.age,state.price,state.type,state.query,state.dates,state.collection,state.edit,state.browseAll]);
   if(lastFilterSignature!==null&&lastFilterSignature!==filterSignature){visibleCount=PAGE_SIZE;if(state.view==='list')window.scrollTo({top:0,behavior:'instant'});}
   lastFilterSignature=filterSignature;

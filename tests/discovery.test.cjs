@@ -12,11 +12,13 @@ test('Weekend moves forward on Monday, includes remaining Sunday, and crosses ye
 });
 test('Actual weekend picks use confirmed dates, stay in-region and do not pad a small selection',()=>{
  const devon=model.weekendPicks(items.filter(p=>p.region==='Exeter'),'2026-09-10');
- assert.equal(devon.length,5);assert(devon.some(p=>p.name.includes('Shanty')));assert(!devon.some(p=>p.name.includes('Halloween')));
+ assert.equal(devon.length,7);assert(devon.some(p=>p.name.includes('Shanty')));assert(!devon.some(p=>p.name.includes('Halloween')));
  const notts=model.weekendPicks(items.filter(p=>p.region==='Nottingham'),'2026-09-10');assert.equal(notts.length,1);assert(notts[0].name.includes('Trial'));
  const p={id:'repeat',name:'Recurring',datePeriods:[{start:'2026-09-12',end:'2026-09-12'},{start:'2026-09-13',end:'2026-09-13'}]};
  assert.equal(model.weekendPicks([p,p,{id:'tbc',name:'TBC'}],'2026-09-10').length,1);
  assert.deepEqual(model.weekendPicks([p],'2026-09-14'),[]);
+ const many=Array.from({length:14},(_,i)=>({id:String(i),name:`Weekend plan ${i}`,datePeriods:[{start:'2026-09-12',end:'2026-09-12'}]}));
+ assert.equal(model.weekendPicks(many,'2026-09-10').length,10);
 });
 test('Seasonal edits run through their end date, stay regional and never pad the shortlist',()=>{
  assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Exeter'),'2026-09-12'),null);
