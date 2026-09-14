@@ -1,10 +1,10 @@
 {
-  "checked": "2026-09-13",
+  "checked": "2026-09-14",
   "policy": "Only photographs with a confirmed reuse licence are copied. Official website photographs without confirmed permission are excluded. Venue and location photos are labelled and do not represent the current event.",
   "coverage": {
-    "currentCards": 76,
-    "licensedPhotoCards": 52,
-    "illustrationCards": 24,
+    "currentCards": 88,
+    "licensedPhotoCards": 53,
+    "illustrationCards": 35,
     "uniqueDisplayedAssets": 49,
     "licensedSourceAssets": 41
   },

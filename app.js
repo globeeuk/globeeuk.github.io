@@ -8,8 +8,12 @@ const escapeHTML=v=>String(v??'').replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;'
 const isPlansPage=document.body.dataset.page==='plans';
 const dedicatedEdit=document.body.dataset.edit||null;
 const routeParams=new URLSearchParams(window.location.search);
+const REGIONS=['Exeter','Bristol','Nottingham'];
+const REGION_LABELS={Exeter:'Exeter · Devon',Bristol:'Bristol',Nottingham:'Nottingham'};
+const REGION_CENTRES={Exeter:[50.7236,-3.5303],Bristol:[51.4545,-2.5879],Nottingham:[52.951,-1.15]};
+const requestedRegion=routeParams.get('region');
 const PAGE_SIZE=12;
-const state={region:routeParams.get('region')==='Nottingham'?'Nottingham':'Exeter',age:[],price:'all',type:'all',query:'',dates:null,collection:null,edit:null,view:'list',browseAll:false};
+const state={region:requestedRegion==='Devon'?'Exeter':REGIONS.includes(requestedRegion)?requestedRegion:'Exeter',age:[],price:'all',type:'all',query:'',dates:null,collection:null,edit:null,view:'list',browseAll:false};
 const ageBands=[{id:'0-2',label:'0–2',min:0,max:2},{id:'3-5',label:'3–5',min:3,max:5},{id:'6-8',label:'6–8',min:6,max:8},{id:'9-12',label:'9–12',min:9,max:12},{id:'13+',label:'13+',min:13,max:17}];
 const types=[['all','All types'],['activity','Activities'],['cafe','Cafés'],['ice','Ice cream'],['outdoors','Parks & nature'],['art','Arts & making'],['club','Holiday clubs']];
 const availableTypes=isPlansPage?types.filter(([id])=>!['cafe','ice'].includes(id)):types;
@@ -82,7 +86,7 @@ function fallback(p){return `<div class="photo-fallback">${icon(p.type)}<span>${
 function imageTag(p,alt=p.imageAlt||p.name){return `<img data-src="${escapeHTML(p.image)}" data-place-id="${escapeHTML(p.id)}" alt="${escapeHTML(alt)}" style="object-position:${p.image.endsWith('/ramm.webp')?'50% 0%':'50% 50%'}" draggable="false" loading="lazy" decoding="async" width="640" height="426" referrerpolicy="no-referrer">`;}
 function photo(p){return p.image?`${imageTag(p)}<span class="image-kind">${p.imageKind==='illustration'?'Illustration':p.imageKind==='location'?'Location photo':p.imageKind==='activity'?'Activity photo':'Venue photo'}</span>`:fallback(p);}
 function meta(p){return `<span class="price ${p.priceType==='free'?'free':''}">${escapeHTML(p.priceLabel)}</span><span class="meta-dot">·</span><span class="age">${escapeHTML(p.ageLabel||'Age TBC')}</span>`;}
-function locality(p){return `<span class="card-locality ${p.region==='Nottingham'?'nottingham':''}">${icon('pin')}${p.region==='Exeter'?'Exeter · Devon':'Nottingham'}</span>`;}
+function locality(p){return `<span class="card-locality ${p.region.toLowerCase()}">${icon('pin')}${escapeHTML(REGION_LABELS[p.region]||p.region)}</span>`;}
 const observedImages=new Set(),preparedImages=new WeakSet();
 function loadImage(img){const src=img.dataset.src;if(!src||!img.isConnected)return;img.src=src;delete img.dataset.src;imageObserver?.unobserve(img);observedImages.delete(img);}
 const imageObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)loadImage(entry.target);});},{rootMargin:'80px 0px',threshold:0.01}):null;
@@ -167,13 +171,13 @@ function render(){
   if(lastFilterSignature!==null&&lastFilterSignature!==filterSignature){visibleCount=PAGE_SIZE;if(state.view==='list')window.scrollTo({top:0,behavior:'instant'});}
   lastFilterSignature=filterSignature;
   updatePlanRoute();
-  $('#region-label').textContent=state.region==='Exeter'?'Exeter · Devon':state.region;
+  $('#region-label').textContent=REGION_LABELS[state.region];
   $('#dates-label').textContent=state.dates?dateRangeLabel(state.dates):'Dates';
   $('#age-label').textContent=state.age.length===1?ageBands.find(b=>b.id===state.age[0]).label:state.age.length?`Age (${state.age.length})`:'Age';
   $('#price-label').textContent=state.price==='all'?'Price':state.price==='free'?'Free':'Paid';
   $('#type-label').textContent=state.type==='all'?'Type':'Type (1)';
   document.querySelectorAll('[data-menu]').forEach(b=>b.classList.toggle('active',b.dataset.menu==='dates'?!!state.dates:b.dataset.menu==='age'?!!state.age.length:b.dataset.menu==='search'?!!state.query:b.dataset.menu==='region'?false:state[b.dataset.menu]!=='all'));
-  if($('#location-eyebrow'))$('#location-eyebrow').textContent=state.region==='Exeter'?'EXETER · DEVON':'NOTTINGHAM';
+  if($('#location-eyebrow'))$('#location-eyebrow').textContent=REGION_LABELS[state.region].toUpperCase();
   const activeEdit=state.edit?GlobeeDiscovery.seasonalDefinition(state.edit,TODAY):null;
   if($('#plans-page-title')){
     $('#plans-page-title').textContent=activeEdit?activeEdit.title:'What’s on & holiday clubs';
@@ -232,7 +236,7 @@ function openMenu(menu){
   $('#filter-title').textContent=titles[menu];
   let html='';
   if(menu==='search')html=`<label for="search-input" class="filter-help">${isPlansPage?'Search events, activities and holiday clubs.':'Search places, activities or a little treat.'}</label><input id="search-input" class="search-field" type="search" name="query" value="${escapeHTML(state.query)}" placeholder="${isPlansPage?'Music, sport, holiday camps…':'Museum, coffee, ice cream…'}" autocomplete="off"><p class="search-examples">${isPlansPage?'Search the full event and club list.':'Try RAMM, art or gelato.'}<br>Search stays within your selected region.</p>`;
-  if(menu==='region')html=`<p class="filter-help">Handpicked places in two corners of the country.</p><div class="filter-options">${option('Exeter','Exeter · Devon','Exeter and across Devon',state.region==='Exeter')}${option('Nottingham','Nottingham','Nottingham & nearby places',state.region==='Nottingham')}</div>`;
+  if(menu==='region')html=`<p class="filter-help">Choose a local area to explore.</p><div class="filter-options">${option('Exeter','Exeter · Devon','Exeter and across Devon',state.region==='Exeter')}${option('Bristol','Bristol','Bristol family events and days out',state.region==='Bristol')}${option('Nottingham','Nottingham','Nottingham & nearby places',state.region==='Nottingham')}</div>`;
   if(menu==='age')html=`<p class="filter-help">Choose one or more ages. We’ll show places suitable for at least one selected age. Places with unconfirmed ages are left out.</p><div class="filter-options age-options">${ageBands.map(b=>option(b.id,b.label+' years','',state.age.includes(b.id),'checkbox','ages')).join('')}</div>`;
   if(menu==='price')html=`<p class="filter-help">Paid includes tickets and food or drink purchases. Conditional offers are explained on the place card.</p><div class="filter-options">${option('all','Any price','',state.price==='all')}${option('free','Free','No entry fee for the activity shown',state.price==='free')}${option('paid','Paid','Tickets, food or drink',state.price==='paid')}</div>`;
   if(menu==='type')html=`<div class="filter-options">${availableTypes.map(([id,title])=>option(id,title,id==='activity'?'Includes arts, outdoor activities and holiday clubs':'',state.type===id)).join('')}</div>`;
@@ -353,7 +357,7 @@ async function renderMap(places){
   const spots=new Set(located.map(spotKey));
   map.invalidateSize();
   if(located.length)map.fitBounds(L.latLngBounds(located.map(p=>p.coords)),{paddingTopLeft:[40,40],paddingBottomRight:[40,200],maxZoom:14,animate:false});
-  else map.setView(state.region==='Exeter'?[50.7236,-3.5303]:[52.951,-1.15],12);
+  else map.setView(REGION_CENTRES[state.region],12);
   drawMapMarkers();
   const missing=places.length-located.length;
   $('#map-note').textContent=`${located.length} of ${places.length} results mapped · ${spots.size} ${spots.size===1?'location':'locations'}. Zoom into numbered groups.${missing?` ${missing} ${missing===1?'result has':'results have'} no single confirmed pin; see the list.`:''} Pins mark venues or grounds; check the provider for the entrance.`;
@@ -364,7 +368,7 @@ function selectMapPlace(id){
   const p=mapPlaces.find(v=>v.id===id);if(!p)return;
   selectedId=id;mapSelectionDismissed=false;
   $('#map-selection').hidden=false;
-  $('#map-selection').innerHTML=`<button class="map-selection-close" data-close-map-selection aria-label="Hide selected place">${icon('close')}</button><button class="map-card" data-open="${escapeHTML(p.id)}">${p.image?imageTag(p):`<div>${icon(p.type)}</div>`}<div><p>${escapeHTML(p.category)} · ${escapeHTML(p.region==='Exeter'?'Exeter · Devon':p.region)}</p><h3>${escapeHTML(p.name)}</h3><span class="price ${p.priceType==='free'?'free':''}">${escapeHTML(p.priceLabel)}</span></div></button>`;
+  $('#map-selection').innerHTML=`<button class="map-selection-close" data-close-map-selection aria-label="Hide selected place">${icon('close')}</button><button class="map-card" data-open="${escapeHTML(p.id)}">${p.image?imageTag(p):`<div>${icon(p.type)}</div>`}<div><p>${escapeHTML(p.category)} · ${escapeHTML(REGION_LABELS[p.region]||p.region)}</p><h3>${escapeHTML(p.name)}</h3><span class="price ${p.priceType==='free'?'free':''}">${escapeHTML(p.priceLabel)}</span></div></button>`;
   const group=mapPlaces.filter(v=>spotKey(v)===spotKey(p)),index=group.findIndex(v=>v.id===id);
   if(group.length>1)$('#map-selection').innerHTML+=`<div class="map-group-nav"><button data-select-map="${escapeHTML(group[(index-1+group.length)%group.length].id)}" aria-label="Previous activity at this location">←</button><span>${index+1} of ${group.length} at this location</span><button data-select-map="${escapeHTML(group[(index+1)%group.length].id)}" aria-label="Next activity at this location">→</button></div>`;
   fixImages($('#map-selection'));

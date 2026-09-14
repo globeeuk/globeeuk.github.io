@@ -32,7 +32,7 @@ MASTER_HEADERS = {
     "dates", "end_date", "season", "location", "url", "description", "date_added", "region",
 }
 EVENT_HEADERS = {"date", "end", "name", "icon", "price", "bg", "added", "region"}
-REGION_ALIASES = {"Exeter": "Devon", "Devon": "Devon", "Nottingham": "Nottingham"}
+REGION_ALIASES = {"Exeter": "Devon", "Devon": "Devon", "Nottingham": "Nottingham", "Bristol": "Bristol"}
 QUEUE_TYPE = "globee_sheet_candidates"
 MAX_BYTES = 10 * 1024 * 1024
 

@@ -18,7 +18,7 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from build import GUIDES, choose, parse_date, validate
+from build import PUBLISHED_GUIDES, choose, parse_date, validate
 from sheet_candidates import (EVENT_HEADERS, EVENTS_URL, MASTER_HEADERS, MASTER_URL,
                               QUEUE_TYPE, REGION_ALIASES, fingerprint, load_csv,
                               prepare_queue)
@@ -97,9 +97,9 @@ def published_selection(catalog, as_of):
     """Use the renderer's actual rules, including its next-weekend section."""
     items = validate(catalog, as_of)
     selected = {}
-    for slug in GUIDES:
+    for region_key, slug in PUBLISHED_GUIDES:
         for offset in ((0, 1) if slug == "this-weekend" else (0,)):
-            for item in choose(items, slug, as_of, week_offset=offset):
+            for item in choose(items, slug, as_of, week_offset=offset, region_key=region_key):
                 entry = selected.setdefault(item["id"], {"item": item, "occurrences": []})
                 entry["occurrences"].extend(item.get("occurrences", []))
     return selected

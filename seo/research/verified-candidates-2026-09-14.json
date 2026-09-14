@@ -2,12 +2,12 @@
   "schema_version": "1.0",
   "verified_at": "2026-09-14",
   "timezone": "Europe/London",
-  "scope": "Morning review for Exeter free and rainy-day guides and weekends 19–20 and 26–27 September 2026.",
+  "scope": "Official-source refresh for Exeter and Bristol family activity search pages, covering 19–20 and 26–27 September 2026.",
   "publication_status": "Reconciled with the operational Sheet for the public SEO release; public deployment is checked separately.",
   "source_policy": "Official-source research supplements the operational Google Sheet. Active publication records are bound to checked master/event rows; source changes require rechecking before publication.",
   "disclaimer": "Prices & schedules change — always check the provider before booking.",
   "coverage": {
-    "confirmed_weekend_events": 2,
+    "confirmed_weekend_events": 5,
     "confirmed_next_weekend_events": 1,
     "current_weekend": [
       "2026-09-19",
@@ -19,7 +19,8 @@
     ],
     "free_general_visit_places": 4,
     "indoor_general_visit_places": 4,
-    "note": "Seven active records were reviewed today. Exeter Library retains its 13 September item verification date because opening hours could not be rechecked. Historical records retain their earlier dates."
+    "note": "Seven active Exeter records and three Bristol pilot records were reviewed on 14 September. Exeter Library retains its 13 September item verification date because opening hours could not be rechecked. Historical records retain their earlier dates.",
+    "confirmed_bristol_weekend_events": 3
   },
   "records": [
     {
@@ -933,17 +934,263 @@
         "Separate last admission and the booking rule for a child exactly 90cm tall were not established; check with the provider.",
         "Prices are date-specific and are not a guarantee of the final checkout total."
       ]
+    },
+    {
+      "id": "play-the-bluey-way-bristol-2026",
+      "name": "Play The Bluey Way",
+      "description": "Meet Bluey, make a Barky Boat and see a new mural at this free family event in Millennium Square.",
+      "kind": "event",
+      "region": "Bristol",
+      "city": "Bristol",
+      "locality": "Bristol Harbourside",
+      "address": "Millennium Square, 1 Anchor Road, Bristol, BS1 5DB",
+      "age_text": "Best suited to ages 2–10; no strict age limit",
+      "price_text": "Free. Each child needs a ticket; adults do not need tickets.",
+      "price_type": "free",
+      "booking_text": "Booking essential. A limited number of same-day tickets may be available, but this is not guaranteed.",
+      "schedule_text": "Saturday 19 September 2026, 12.30pm–6.30pm.",
+      "occurrences": [
+        {
+          "start": "2026-09-19",
+          "end": "2026-09-19",
+          "start_time": "12:30",
+          "end_time": "18:30",
+          "weekday": "Saturday"
+        }
+      ],
+      "indoor": false,
+      "rainy_day": {
+        "suitable": false,
+        "basis": "The event takes place outside in Millennium Square and includes a water feature.",
+        "classification": "Outdoor event"
+      },
+      "tags": [
+        "weekend",
+        "free",
+        "in-town",
+        "family",
+        "play"
+      ],
+      "practical_notes": [
+        "Bring water shoes or wellington boots, plus a change of clothes for the Barky Boat water activity.",
+        "Allow for a possible queue; the experience itself lasts about 15–30 minutes."
+      ],
+      "sources": [
+        {
+          "url": "https://www.wethecurious.org/whats-on/events/play-bluey-way",
+          "supports": [
+            "The organiser confirms Saturday 19 September 2026, 12.30pm–6.30pm, Millennium Square and free admission with booking essential.",
+            "The page gives the recommended ages, child-ticket rule, activities, accessibility and water-play advice."
+          ],
+          "retrieval": "Official We The Curious event page opened successfully on 14 September 2026.",
+          "label": "Official event details and booking"
+        }
+      ],
+      "verified_at": "2026-09-14",
+      "review_status": "verified",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 144,
+        "event_rows": [
+          171
+        ],
+        "reconciliation_note": "Added to and read back from the live Sheet after official-source verification on 14 September 2026."
+      },
+      "limitations": [
+        "Meet-and-greets and same-day ticket availability are subject to availability.",
+        "The event is outdoors; check the organiser again before travelling in poor weather."
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "19996c4e04248649038cfb1b",
+          "name": "Play The Bluey Way",
+          "region": "Bristol",
+          "fingerprint": "01eb92b092b845569bba0bf1066c5ad323a487f72eb2a65a95d8b19fc59314a3"
+        }
+      ]
+    },
+    {
+      "id": "docks-heritage-weekend-bristol-2026",
+      "name": "Docks Heritage Weekend – M Shed",
+      "description": "Explore Bristol's working harbour heritage with a quiz trail, demonstrations, quayside theatre and a Saturday children's workshop.",
+      "kind": "event",
+      "region": "Bristol",
+      "city": "Bristol",
+      "locality": "Bristol Harbourside",
+      "address": "M Shed, Princes Wharf, Bristol, BS1 4RN",
+      "age_text": "Age TBC; Saturday includes paper-boat making and colouring for children",
+      "price_text": "Free museum entry and core programme. Ticket charges apply to boat trips and crane visits.",
+      "price_type": "free",
+      "booking_text": "No booking is stated for the core weekend programme. Paid boat trips and crane visits are subject to availability; check their official listings.",
+      "schedule_text": "Saturday 19–Sunday 20 September 2026. M Shed is open 10am–5pm; individual activities vary.",
+      "occurrences": [
+        {
+          "start": "2026-09-19",
+          "end": "2026-09-20",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Saturday–Sunday"
+        }
+      ],
+      "indoor": null,
+      "rainy_day": {
+        "suitable": null,
+        "basis": "The programme combines M Shed museum activities with outdoor quayside demonstrations, boats and cranes.",
+        "classification": "Mixed indoor and outdoor event"
+      },
+      "tags": [
+        "weekend",
+        "free-entry",
+        "in-town",
+        "heritage",
+        "making"
+      ],
+      "practical_notes": [
+        "Saturday includes the children's paper-boat and colouring workshop; Sunday includes historic Port of Bristol films.",
+        "Working exhibits can change because of weather, mechanical issues or volunteer availability."
+      ],
+      "sources": [
+        {
+          "url": "https://www.bristolmuseums.org.uk/whats-on/m-shed/docks-heritage-weekend/",
+          "supports": [
+            "The organiser confirms 19–20 September 2026 and lists the quiz trail, demonstrations, models, theatre and children's activity.",
+            "The event page states that ticket charges apply to crane visits and boat trips."
+          ],
+          "retrieval": "Official Bristol Museums event page opened successfully on 14 September 2026.",
+          "label": "Official weekend programme"
+        },
+        {
+          "url": "https://www.bristolmuseums.org.uk/m-shed/plan-your-visit/opening-times/",
+          "supports": [
+            "The official venue page confirms Saturday and Sunday opening hours of 10am–5pm in 2026."
+          ],
+          "retrieval": "Official M Shed opening-times page reviewed on 14 September 2026.",
+          "label": "Official venue opening times"
+        }
+      ],
+      "verified_at": "2026-09-14",
+      "review_status": "verified",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 145,
+        "event_rows": [
+          172
+        ],
+        "reconciliation_note": "Added to and read back from the live Sheet after official-source verification on 14 September 2026."
+      },
+      "limitations": [
+        "The organiser does not publish one age range for the whole weekend.",
+        "Individual activity times and availability may change during the weekend."
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "6bdc7b337b84512389da058d",
+          "name": "Docks Heritage Weekend – M Shed",
+          "region": "Bristol",
+          "fingerprint": "26400339f75c71fe0e1672880836fee3bcda115df6b63ec0c005c2c3dabd633f"
+        }
+      ]
+    },
+    {
+      "id": "aardman-mini-museum-hunt-bristol-2026",
+      "name": "Mini-museum hunt! 50 years of Aardman",
+      "description": "Pick up a free detective map and hunt for tiny Aardman treasures around Bristol Museum & Art Gallery.",
+      "kind": "event",
+      "region": "Bristol",
+      "city": "Bristol",
+      "locality": "Clifton, Bristol",
+      "address": "Bristol Museum & Art Gallery, Queens Road, Bristol, BS8 1RL",
+      "age_text": "Families and curious explorers of all ages",
+      "price_text": "Free trail and free museum entry; donations welcome.",
+      "price_type": "free",
+      "booking_text": "No booking required for an ordinary family visit. Groups of 10 or more must book in advance.",
+      "schedule_text": "13 February–1 November 2026. Open Saturday and Sunday, 10am–5pm.",
+      "occurrences": [
+        {
+          "start": "2026-09-19",
+          "end": "2026-09-19",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-09-20",
+          "end": "2026-09-20",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Sunday"
+        }
+      ],
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "The hunt takes place inside Bristol Museum & Art Gallery, which has lifts to all floors.",
+        "classification": "Indoor museum activity"
+      },
+      "tags": [
+        "weekend",
+        "free",
+        "in-town",
+        "animation",
+        "rainy-day"
+      ],
+      "practical_notes": [
+        "This free trail is at Bristol Museum & Art Gallery, not the sold-out paid Aardman exhibition at M Shed.",
+        "The British and World Wildlife Galleries are closed until summer 2027, but the museum and trail remain open."
+      ],
+      "sources": [
+        {
+          "url": "https://www.bristolmuseums.org.uk/whats-on/bristol-museum-and-art-gallery/mini-museum-hunt-aardman/",
+          "supports": [
+            "The organiser confirms 13 February–1 November 2026, free participation and all-age family suitability.",
+            "The official listing explains that visitors collect a free detective map to find Aardman treasures around the museum."
+          ],
+          "retrieval": "Official Bristol Museums activity page opened successfully on 14 September 2026.",
+          "label": "Official activity details"
+        },
+        {
+          "url": "https://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/plan-your-visit/",
+          "supports": [
+            "The official venue page confirms free entry, Tuesday–Sunday opening from 10am–5pm and no booking for ordinary visits."
+          ],
+          "retrieval": "Official Bristol Museum & Art Gallery visitor page opened successfully on 14 September 2026.",
+          "label": "Official visitor information"
+        }
+      ],
+      "verified_at": "2026-09-14",
+      "review_status": "verified",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 146,
+        "event_rows": [
+          173
+        ],
+        "reconciliation_note": "Added to and read back from the live Sheet after official-source verification on 14 September 2026."
+      },
+      "limitations": [
+        "The activity page does not publish a separate daily trail timetable; the museum's opening hours apply.",
+        "Special exhibitions inside the museum may have separate booking or charges."
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "c5230e44cdcbbe418f8c358f",
+          "name": "Mini-museum hunt! 50 years of Aardman",
+          "region": "Bristol",
+          "fingerprint": "aa5c9497786e7fbe6d736e6dc8075058b10f54fadfec1fb626f02f34627ff045"
+        }
+      ]
     }
   ],
   "previous_research_file": "verified-candidates-2026-09-13.json",
-  "reviewed_at": "2026-09-14T08:12:08+00:00",
+  "reviewed_at": "2026-09-14T14:00:16+01:00",
   "review_notes": [
     "Official sources for the two current-weekend events and four evergreen records were reviewed; original dates were retained for historical records.",
     "Library branch, children and facilities content was reviewed; the opening-hours source failed in web, direct retrieval and browser, so its item verification date remains 13 September.",
     "Native Sheet descriptions N5 and N104 were supplemented and read back; published CSV changes were confirmed before binding refresh. All other selected existing bindings remained identical.",
     "Pennywell was selected from the existing master/events candidate. Its official booking data confirmed 2026 and the specific next-weekend dates; this is separate from Pumpkin Nights.",
     "Other existing next-weekend course candidates were not promoted as one-off visits when block-booking applicability was not established.",
-    "Source retrieval can return indexed official content; review timestamps do not imply telephone confirmation or guaranteed ticket availability."
+    "Source retrieval can return indexed official content; review timestamps do not imply telephone confirmation or guaranteed ticket availability.",
+    "Three Bristol pilot records were checked against organiser pages, added to Sheet1 and events, and bound to the live published Sheet fingerprints."
   ],
   "excluded_candidates": [
     {

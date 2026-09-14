@@ -136,7 +136,10 @@ class GuideChecks(unittest.TestCase):
             self.assertNotIn("analytics.js", (destination / "exeter/index.html").read_text())
             self.assertNotIn("analytics-choice", (destination / "exeter/index.html").read_text())
             production = build(fixture, destination, TODAY, True)
-            self.assertTrue(all(p["indexable"] for p in production["pages"]))
+            self.assertTrue(all(p["indexable"] for p in production["pages"]
+                                if p["path"].startswith("/exeter/")))
+            self.assertFalse(any(p["indexable"] for p in production["pages"]
+                                 if p["path"].startswith("/bristol/")))
             sitemap = (destination / "seo-sitemap.xml").read_text()
             self.assertNotIn("/globee/", sitemap)
             self.assertNotIn("lastmod", sitemap)
@@ -157,6 +160,25 @@ class GuideChecks(unittest.TestCase):
             self.assertNotIn('id="analytics-choice"', hub)
             self.assertIn('data-analytics-toggle', hub)
             self.assertIn('<script defer src="/analytics.js?v=stats1"></script>', hub)
+
+    def test_bristol_weekend_pilot_uses_only_bristol_records(self):
+        source = json.loads((HERE / "research/verified-candidates-2026-09-14.json").read_text())
+        catalog = prepare(source)
+        items = validate(catalog, date(2026, 9, 14))
+        selected = choose(items, "this-weekend", date(2026, 9, 14), region_key="bristol")
+        self.assertEqual({item["id"] for item in selected}, {
+            "play-the-bluey-way-bristol-2026",
+            "docks-heritage-weekend-bristol-2026",
+            "aardman-mini-museum-hunt-bristol-2026",
+        })
+        self.assertTrue(all(item["region"] == "Bristol" for item in selected))
+        page, _, indexable = guide("this-weekend", items, date(2026, 9, 14), True,
+                                   region_key="bristol")
+        self.assertTrue(indexable)
+        self.assertIn("Things to do in Bristol with kids this weekend", page)
+        self.assertIn('rel="canonical" href="https://globeeuk.github.io/bristol/this-weekend/"', page)
+        self.assertIn("Bristol family guides", page)
+        self.assertNotIn("Silverton Park", page)
 
     def test_generated_ids_are_unique_and_provider_links_use_existing_tracking(self):
         class Elements(HTMLParser):

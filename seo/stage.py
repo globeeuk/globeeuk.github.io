@@ -13,13 +13,11 @@ from datetime import datetime
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-from build import GUIDES, HERE, LONDON, PUBLIC_BASE, build
+from build import HERE, LONDON, PUBLIC_BASE, build, published_routes
 from check_sheet_bindings import check_bindings, fetch_queue
 
 NAMESPACE = "http://www.sitemaps.org/schemas/sitemap/0.9"
-SEO_HTML = {PUBLIC_BASE + "/exeter/": "exeter/index.html"} | {
-    PUBLIC_BASE + f"/exeter/{slug}/": f"exeter/{slug}/index.html" for slug in GUIDES
-}
+SEO_HTML = {PUBLIC_BASE + route: route.strip("/") + "/index.html" for route in published_routes()}
 SEO_URLS = set(SEO_HTML)
 
 
@@ -104,8 +102,7 @@ def main():
     sitemap = merged_sitemap((root / "sitemap.xml").read_bytes(),
                              (output / "seo-sitemap.xml").read_bytes(),
                              changed_urls=changed_urls, moment=moment)
-    files = ["exeter/index.html", "seo-assets/guides.css", "seo-sitemap.xml"]
-    files += [f"exeter/{slug}/index.html" for slug in GUIDES]
+    files = sorted(set(SEO_HTML.values())) + ["seo-assets/guides.css", "seo-sitemap.xml"]
     for relative in files:
         destination = root / relative
         destination.parent.mkdir(parents=True, exist_ok=True)

@@ -46,6 +46,51 @@ GUIDES = {
     },
 }
 
+BRISTOL_GUIDES = {
+    "this-weekend": {
+        "title": "Things to do in Bristol with kids this weekend",
+        "short": "This weekend",
+        "intro": "A short list of family activities in Bristol, with dates, costs and booking details together.",
+        "description": "Plan this weekend with children in Bristol. Compare checked event dates, prices, age guidance and official booking links.",
+        "help_title": "Before you set off",
+        "help": "Check the organiser’s latest update before travelling. Free admission can still mean paying for parking, food or an optional activity. An age marked TBC has not been confirmed by the organiser.",
+    },
+}
+
+REGIONS = {
+    "exeter": {
+        "label": "Exeter · Devon",
+        "data_regions": ("Exeter", "Devon"),
+        "city": "Exeter",
+        "guides": GUIDES,
+        "hub_title": "Exeter family activity guides",
+        "hub_description": "Plan a family day out in Exeter: this weekend, free activities and indoor choices for rainy days. Checked details and official provider links.",
+        "footer": "Curated by Globee for families in Exeter and Devon.",
+    },
+    "bristol": {
+        "label": "Bristol",
+        "data_regions": ("Bristol",),
+        "city": "Bristol",
+        "guides": BRISTOL_GUIDES,
+        "hub_title": "Bristol family activity guides",
+        "hub_description": "Plan a family day out in Bristol this weekend, with checked dates, practical details and official provider links.",
+        "footer": "Curated by Globee for families in Bristol.",
+    },
+}
+PUBLISHED_GUIDES = tuple(
+    (region_key, slug)
+    for region_key, region in REGIONS.items()
+    for slug in region["guides"]
+)
+
+
+def published_routes():
+    routes = []
+    for region_key, region in REGIONS.items():
+        routes.append(f"/{region_key}/")
+        routes.extend(f"/{region_key}/{slug}/" for slug in region["guides"])
+    return routes
+
 
 def esc(value):
     return html.escape(str(value), quote=True)
@@ -108,7 +153,7 @@ def validate(catalog, as_of):
         ids.add(item["id"])
         if item["kind"] not in ("place", "event") or item["price_type"] not in ("free", "paid", "unknown"):
             raise ValueError(f"{item['id']}: invalid kind or price_type")
-        if item["region"] not in ("Devon", "Exeter", "Nottingham"):
+        if item["region"] not in ("Devon", "Exeter", "Nottingham", "Bristol"):
             raise ValueError(f"{item['id']}: region is not in the existing region allowlist")
         if parse_date(item["verified_at"]) > as_of:
             raise ValueError(f"{item['id']}: future verification date")
@@ -152,14 +197,15 @@ def occurrence_end(occurrence):
     return datetime.combine(end + timedelta(days=1), time.min, tzinfo=LONDON)
 
 
-def choose(items, slug, as_of, *, week_offset=0):
+def choose(items, slug, as_of, *, week_offset=0, region_key="exeter"):
+    region = REGIONS[region_key]
     now = local_now(as_of)
     saturday, sunday = weekend(as_of)
     saturday += timedelta(weeks=week_offset)
     sunday += timedelta(weeks=week_offset)
     selected = []
     for item in items:
-        if item["region"] not in ("Exeter", "Devon") or not current(item, as_of):
+        if item["region"] not in region["data_regions"] or not current(item, as_of):
             continue
         if slug == "this-weekend":
             if item["kind"] != "event":
@@ -174,7 +220,7 @@ def choose(items, slug, as_of, *, week_offset=0):
             item = dict(item, occurrences=sorted(occurrences, key=lambda o: (o["start"], o.get("start_time", ""))))
         else:
             # Evergreen pages do not present one-off free days as year-round free entry.
-            if item["kind"] != "place" or item.get("city") != "Exeter":
+            if item["kind"] != "place" or item.get("city") != region["city"]:
                 continue
             if slug == "free-things-to-do" and item["price_type"] != "free":
                 continue
@@ -223,7 +269,8 @@ def card(item, *, anchor=None, heading_level=2):
     </article>'''
 
 
-def head(title, description, route, indexable, schema, production=False):
+def head(title, description, route, indexable, schema, production=False, *, region_key="exeter"):
+    region = REGIONS[region_key]
     robots = "index,follow" if indexable else "noindex,follow"
     canonical = PUBLIC_BASE + route
     structured = json.dumps(schema, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e")
@@ -241,34 +288,42 @@ def head(title, description, route, indexable, schema, production=False):
     <script type="application/ld+json">{structured}</script>{analytics}</head><body>
     <a class="skip" href="#main">Skip to activities</a>
     <header><a class="brand" href="{PUBLIC_BASE}/" aria-label="Globee home"><span class="brand-mark">G<span class="brand-dot"></span></span><span>Glo<span class="brand-bee">bee</span></span></a>
-    <span class="region">Exeter · Devon</span><a class="directory" href="{PUBLIC_BASE}/">Explore Globee <span aria-hidden="true">↗</span></a></header>'''
+    <a class="region" href="/{region_key}/">{esc(region['label'])}</a><a class="directory" href="{PUBLIC_BASE}/">Explore Globee <span aria-hidden="true">↗</span></a></header>'''
 
 
-def navigation(slug=None):
-    return '<nav aria-label="Exeter guides">' + "".join(
-        f'<a href="/exeter/{key}/"' + (' aria-current="page"' if key == slug else '') + f'>{esc(info["short"])}</a>'
-        for key, info in GUIDES.items()) + '</nav>'
+def navigation(slug=None, *, region_key="exeter"):
+    region = REGIONS[region_key]
+    return f'<nav aria-label="{esc(region["city"])} guides">' + "".join(
+        f'<a href="/{region_key}/{key}/"' + (' aria-current="page"' if key == slug else '') + f'>{esc(info["short"])}</a>'
+        for key, info in region["guides"].items()) + '</nav>'
 
 
-def footer(production=False):
+def footer(production=False, *, region_key="exeter"):
+    region = REGIONS[region_key]
     settings = '<button type="button" class="text-button" data-analytics-toggle>Stop site analytics</button>' if production else ""
-    return f'''<footer><p>Curated by Globee for families in Exeter and Devon.</p>
+    other_regions = "".join(
+        f'<a href="/{key}/">{esc(value["label"])} guides</a>'
+        for key, value in REGIONS.items()
+        if key != region_key
+    )
+    return f'''<footer><p>{esc(region['footer'])}</p>
     <p>These guides use official provider information. An official-source check does not mean we have visited every activity.</p>
     <p>Prices &amp; schedules change — always check the provider before booking.</p>
-    <div class="footer-links"><a href="{PUBLIC_BASE}/">Explore the Globee directory</a><a href="/exeter/">All Exeter guides</a><a href="/privacy.html">Privacy &amp; analytics</a>{settings}</div></footer></body></html>'''
+    <div class="footer-links"><a href="{PUBLIC_BASE}/">Explore the Globee directory</a><a href="/{region_key}/">All {esc(region['city'])} guides</a>{other_regions}<a href="/privacy.html">Privacy &amp; analytics</a>{settings}</div></footer></body></html>'''
 
 
-def guide(slug, items, as_of, production):
-    info = GUIDES[slug]
-    this_weekend = choose(items, slug, as_of)
-    next_weekend = choose(items, slug, as_of, week_offset=1) if slug == "this-weekend" else []
+def guide(slug, items, as_of, production, *, region_key="exeter"):
+    region = REGIONS[region_key]
+    info = region["guides"][slug]
+    this_weekend = choose(items, slug, as_of, region_key=region_key)
+    next_weekend = choose(items, slug, as_of, week_offset=1, region_key=region_key) if slug == "this-weekend" else []
     # Count actual distinct choices, even if a longer event spans both weekends.
     selected = list({item["id"]: item for item in next_weekend + this_weekend}.values())
     entries = [(item, item["id"]) for item in this_weekend]
     entries += [(item, item["id"] + "-next-weekend") for item in next_weekend]
     # An editorial starting threshold, not a Google ranking rule.
     indexable = production and len(selected) >= 2
-    route = f"/exeter/{slug}/"
+    route = f"/{region_key}/{slug}/"
     schema = {"@context": "https://schema.org", "@type": "CollectionPage", "name": info["title"],
               "url": PUBLIC_BASE + route, "inLanguage": "en-GB",
               "mainEntity": {"@type": "ItemList", "itemListElement": [
@@ -301,13 +356,14 @@ def guide(slug, items, as_of, production):
             cards = '<p class="empty">No current choices have been confirmed for this guide yet. You can explore the other guides or check the Globee directory.</p>'
         contents = f'''<div class="results"><p>{len(selected)} checked {'choice' if len(selected) == 1 else 'choices'}</p><span>Official links with every activity</span></div>
             <div class="activities">{cards}</div>'''
-    page = head(info["title"], info["description"], route, indexable, schema, production) + navigation(slug)
-    page += f'''<main id="main"><div class="intro"><a class="breadcrumb" href="/exeter/">Exeter family guides</a>
+    page = head(info["title"], info["description"], route, indexable, schema, production,
+                region_key=region_key) + navigation(slug, region_key=region_key)
+    page += f'''<main id="main"><div class="intro"><a class="breadcrumb" href="/{region_key}/">{esc(region['city'])} family guides</a>
       <h1>{esc(info['title'])}</h1><p>{esc(info['intro'])}</p></div>
       {contents}
       <aside class="planning"><h2>{esc(info['help_title'])}</h2><p>{esc(info['help'])}</p></aside>
       <section class="continue"><h2>Keep planning with Globee</h2><p>Explore more places, holiday clubs and the calendar.</p>
-      <a class="button" href="{PUBLIC_BASE}/">Open Globee</a></section></main>''' + footer(production)
+      <a class="button" href="{PUBLIC_BASE}/">Open Globee</a></section></main>''' + footer(production, region_key=region_key)
     return page, selected, indexable
 
 
@@ -321,29 +377,36 @@ def build(catalog_path, output, as_of, production=False):
     (output / "seo-assets").mkdir(exist_ok=True)
     shutil.copyfile(HERE / "guides.css", output / "seo-assets/guides.css")
     sitemap = ET.Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
-    guide_links = []
-    for slug, info in GUIDES.items():
-        page, selected, indexable = guide(slug, items, as_of, production)
-        route = f"/exeter/{slug}/"
-        destination = output / route.strip("/") / "index.html"
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        destination.write_text(page, encoding="utf-8")
-        manifest["pages"].append({"path": route, "items": [x["id"] for x in selected], "indexable": indexable})
-        scope = " across this weekend and next" if slug == "this-weekend" else ""
-        guide_links.append(f'<a class="guide-link" href="{route}"><h2>{esc(info["short"])}</h2><p>{esc(info["intro"])}</p><span>{len(selected)} checked choices{scope} <span aria-hidden="true">→</span></span></a>')
-        if indexable:
-            ET.SubElement(ET.SubElement(sitemap, "url"), "loc").text = PUBLIC_BASE + route
-    # Do not fabricate lastmod by using the time a build happened to run.
-    hub_title = "Exeter family activity guides"
-    hub_description = "Plan a family day out in Exeter: this weekend, free activities and indoor choices for rainy days. Checked details and official provider links."
-    hub_indexable = production and any(p["indexable"] for p in manifest["pages"])
-    hub = head(hub_title, hub_description, "/exeter/", hub_indexable,
-               {"@context": "https://schema.org", "@type": "CollectionPage", "name": hub_title,
-                "url": PUBLIC_BASE + "/exeter/", "inLanguage": "en-GB"}, production)
-    hub += f'<main id="main"><div class="intro"><p class="eyebrow">Plan your next day out</p><h1>{hub_title}</h1><p>Choose a guide, compare the practical details, and check the official provider before travelling.</p></div><div class="guide-links">{"".join(guide_links)}</div></main>' + footer(production)
-    (output / "exeter/index.html").write_text(hub, encoding="utf-8")
-    if hub_indexable:
-        ET.SubElement(ET.SubElement(sitemap, "url"), "loc").text = PUBLIC_BASE + "/exeter/"
+    for region_key, region in REGIONS.items():
+        guide_links = []
+        region_pages = []
+        for slug, info in region["guides"].items():
+            page, selected, indexable = guide(slug, items, as_of, production, region_key=region_key)
+            route = f"/{region_key}/{slug}/"
+            destination = output / route.strip("/") / "index.html"
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(page, encoding="utf-8")
+            entry = {"path": route, "items": [x["id"] for x in selected], "indexable": indexable}
+            manifest["pages"].append(entry)
+            region_pages.append(entry)
+            scope = " across this weekend and next" if slug == "this-weekend" else ""
+            guide_links.append(f'<a class="guide-link" href="{route}"><h2>{esc(info["short"])}</h2><p>{esc(info["intro"])}</p><span>{len(selected)} checked choices{scope} <span aria-hidden="true">→</span></span></a>')
+            if indexable:
+                ET.SubElement(ET.SubElement(sitemap, "url"), "loc").text = PUBLIC_BASE + route
+        # Do not fabricate lastmod by using the time a build happened to run.
+        hub_route = f"/{region_key}/"
+        hub_title = region["hub_title"]
+        hub_description = region["hub_description"]
+        hub_indexable = production and any(page["indexable"] for page in region_pages)
+        hub = head(hub_title, hub_description, hub_route, hub_indexable,
+                   {"@context": "https://schema.org", "@type": "CollectionPage", "name": hub_title,
+                    "url": PUBLIC_BASE + hub_route, "inLanguage": "en-GB"}, production,
+                   region_key=region_key)
+        hub += f'<main id="main"><div class="intro"><p class="eyebrow">Plan your next day out</p><h1>{esc(hub_title)}</h1><p>Choose a guide, compare the practical details, and check the official provider before travelling.</p></div><div class="guide-links">{"".join(guide_links)}</div></main>' + footer(production, region_key=region_key)
+        (output / region_key / "index.html").write_text(hub, encoding="utf-8")
+        manifest["pages"].append({"path": hub_route, "items": [], "indexable": hub_indexable, "kind": "hub"})
+        if hub_indexable:
+            ET.SubElement(ET.SubElement(sitemap, "url"), "loc").text = PUBLIC_BASE + hub_route
     ET.ElementTree(sitemap).write(output / "seo-sitemap.xml", encoding="utf-8", xml_declaration=True)
     (output / "build-report.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     return manifest

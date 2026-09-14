@@ -27,5 +27,6 @@ h1{font-weight:500}
 .analytics-choice button{background:#fff;border:1px solid var(--line);border-radius:8px;padding:9px 12px;min-height:44px;font-weight:700}
 .analytics-choice button:hover{background:var(--soft)}
 .analytics-choice a{color:var(--ink);padding:8px 4px}
+.region{text-decoration:none}
 @media(max-width:900px){.analytics-choice{align-items:flex-start;flex-direction:column;gap:10px}}
 @media(max-width:700px){.brand{font-size:28px;gap:8px}.brand-mark{width:35px;height:35px;border-radius:10px;font-size:27px}.analytics-choice{padding:1rem}.footer-links{align-items:flex-start;column-gap:1rem}}

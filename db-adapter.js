@@ -1,6 +1,6 @@
 (function(root){
   'use strict';
-  const region=r=>({Devon:'Exeter',Exeter:'Exeter',Nottingham:'Nottingham'}[String(r).trim()]||null);
+  const region=r=>({Devon:'Exeter',Exeter:'Exeter',Bristol:'Bristol',Nottingham:'Nottingham'}[String(r).trim()]||null);
   const key=s=>String(s||'').normalize('NFC').trim().toLowerCase().replace(/[–—]/g,'-').replace(/\s+/g,' ');
   const iso=s=>/^\d{4}-\d{2}-\d{2}$/.test(s||'')&&!Number.isNaN(Date.parse(s))&&new Date(s+'T12:00:00Z').toISOString().slice(0,10)===s;
   const safeURL=s=>{try{const u=new URL(s);return ['http:','https:'].includes(u.protocol)?u.href:'';}catch{return '';}};
