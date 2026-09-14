@@ -12,7 +12,7 @@ import re
 import shutil
 from datetime import date, datetime, time, timedelta
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlencode, urlsplit
 from xml.etree import ElementTree as ET
 from zoneinfo import ZoneInfo
 
@@ -90,6 +90,11 @@ def published_routes():
         routes.append(f"/{region_key}/")
         routes.extend(f"/{region_key}/{slug}/" for slug in region["guides"])
     return routes
+
+
+def directory_url(region_key):
+    """Keep the visitor's guide region selected in the main directory."""
+    return f"{PUBLIC_BASE}/?{urlencode({'region': REGIONS[region_key]['city']})}"
 
 
 def esc(value):
@@ -271,6 +276,7 @@ def card(item, *, anchor=None, heading_level=2):
 
 def head(title, description, route, indexable, schema, production=False, *, region_key="exeter"):
     region = REGIONS[region_key]
+    directory = directory_url(region_key)
     robots = "index,follow" if indexable else "noindex,follow"
     canonical = PUBLIC_BASE + route
     structured = json.dumps(schema, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e")
@@ -287,8 +293,8 @@ def head(title, description, route, indexable, schema, production=False, *, regi
     <link rel="stylesheet" href="/seo-assets/guides.css">
     <script type="application/ld+json">{structured}</script>{analytics}</head><body>
     <a class="skip" href="#main">Skip to activities</a>
-    <header><a class="brand" href="{PUBLIC_BASE}/" aria-label="Globee home"><span class="brand-mark">G<span class="brand-dot"></span></span><span>Glo<span class="brand-bee">bee</span></span></a>
-    <a class="region" href="/{region_key}/">{esc(region['label'])}</a><a class="directory" href="{PUBLIC_BASE}/">Explore Globee <span aria-hidden="true">↗</span></a></header>'''
+    <header><a class="brand" href="{directory}" aria-label="Globee home"><span class="brand-mark">G<span class="brand-dot"></span></span><span>Glo<span class="brand-bee">bee</span></span></a>
+    <a class="region" href="/{region_key}/">{esc(region['label'])}</a><a class="directory" href="{directory}">Explore Globee <span aria-hidden="true">↗</span></a></header>'''
 
 
 def navigation(slug=None, *, region_key="exeter"):
@@ -300,6 +306,7 @@ def navigation(slug=None, *, region_key="exeter"):
 
 def footer(production=False, *, region_key="exeter"):
     region = REGIONS[region_key]
+    directory = directory_url(region_key)
     settings = '<button type="button" class="text-button" data-analytics-toggle>Stop site analytics</button>' if production else ""
     other_regions = "".join(
         f'<a href="/{key}/">{esc(value["label"])} guides</a>'
@@ -309,11 +316,12 @@ def footer(production=False, *, region_key="exeter"):
     return f'''<footer><p>{esc(region['footer'])}</p>
     <p>These guides use official provider information. An official-source check does not mean we have visited every activity.</p>
     <p>Prices &amp; schedules change — always check the provider before booking.</p>
-    <div class="footer-links"><a href="{PUBLIC_BASE}/">Explore the Globee directory</a><a href="/{region_key}/">All {esc(region['city'])} guides</a>{other_regions}<a href="/privacy.html">Privacy &amp; analytics</a>{settings}</div></footer></body></html>'''
+    <div class="footer-links"><a href="{directory}">Explore the Globee directory</a><a href="/{region_key}/">All {esc(region['city'])} guides</a>{other_regions}<a href="/privacy.html">Privacy &amp; analytics</a>{settings}</div></footer></body></html>'''
 
 
 def guide(slug, items, as_of, production, *, region_key="exeter"):
     region = REGIONS[region_key]
+    directory = directory_url(region_key)
     info = region["guides"][slug]
     this_weekend = choose(items, slug, as_of, region_key=region_key)
     next_weekend = choose(items, slug, as_of, week_offset=1, region_key=region_key) if slug == "this-weekend" else []
@@ -363,7 +371,7 @@ def guide(slug, items, as_of, production, *, region_key="exeter"):
       {contents}
       <aside class="planning"><h2>{esc(info['help_title'])}</h2><p>{esc(info['help'])}</p></aside>
       <section class="continue"><h2>Keep planning with Globee</h2><p>Explore more places, holiday clubs and the calendar.</p>
-      <a class="button" href="{PUBLIC_BASE}/">Open Globee</a></section></main>''' + footer(production, region_key=region_key)
+      <a class="button" href="{directory}">Open Globee</a></section></main>''' + footer(production, region_key=region_key)
     return page, selected, indexable
 
 

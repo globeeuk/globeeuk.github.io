@@ -177,6 +177,7 @@ class GuideChecks(unittest.TestCase):
         self.assertTrue(indexable)
         self.assertIn("Things to do in Bristol with kids this weekend", page)
         self.assertIn('rel="canonical" href="https://globeeuk.github.io/bristol/this-weekend/"', page)
+        self.assertIn('href="https://globeeuk.github.io/?region=Bristol"', page)
         self.assertIn("Bristol family guides", page)
         self.assertNotIn("Silverton Park", page)
 
