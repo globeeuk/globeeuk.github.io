@@ -167,6 +167,7 @@ function setupRails(){
 }
 function render(){
   const places=visiblePlaces();
+  const weekendOnlyPilot=!isPlansPage&&state.region==='Bristol'&&!hasFilters()&&state.view==='list'&&places.length>0&&places.length<=3&&GlobeeDiscovery.weekendPicks(places,TODAY).length===places.length;
   const filterSignature=JSON.stringify([state.region,state.age,state.price,state.type,state.query,state.dates,state.collection,state.edit,state.browseAll]);
   if(lastFilterSignature!==null&&lastFilterSignature!==filterSignature){visibleCount=PAGE_SIZE;if(state.view==='list')window.scrollTo({top:0,behavior:'instant'});}
   lastFilterSignature=filterSignature;
@@ -185,14 +186,14 @@ function render(){
     document.title=activeEdit?`${activeEdit.title} in ${state.region==='Exeter'?'Exeter & Devon':state.region} | Globee`:'What’s on & holiday clubs | Globee';
   }
   if($('.weekend-shortcut'))$('.weekend-shortcut').hidden=!!activeEdit;
-  $('#results-heading').textContent=state.view==='map'?(activeEdit?`${activeEdit.title} on the map`:'Explore on the map'):activeEdit?`All ${activeEdit.title}`:hasFilters()?'Matching plans':isPlansPage?'All upcoming plans':'Explore all';
-  $('#results-subtitle').textContent=activeEdit?`${activeEdit.subtitle} · Until ${dateShort(activeEdit.end)}`:isPlansPage?'What’s on & holiday clubs':hasFilters()?'Places and activities that match your filters.':'Places, what’s on & holiday clubs';
-  $('#result-count').textContent=`${places.length} ${places.length===1?'result':'results'}`;
+  $('#results-heading').textContent=state.view==='map'?(activeEdit?`${activeEdit.title} on the map`:'Explore on the map'):activeEdit?`All ${activeEdit.title}`:weekendOnlyPilot?'Bristol is growing':hasFilters()?'Matching plans':isPlansPage?'All upcoming plans':'Explore all';
+  $('#results-subtitle').textContent=activeEdit?`${activeEdit.subtitle} · Until ${dateShort(activeEdit.end)}`:weekendOnlyPilot?`We’re starting with ${places.length} checked picks for this weekend. More local places will appear here as they’re verified.`:isPlansPage?'What’s on & holiday clubs':hasFilters()?'Places and activities that match your filters.':'Places, what’s on & holiday clubs';
+  $('#result-count').textContent=weekendOnlyPilot?'':`${places.length} ${places.length===1?'result':'results'}`;
   $('#date-scope-note').hidden=!state.dates;
   $('#date-scope-note').textContent=isPlansPage?'Showing events and clubs with confirmed dates. Clear Dates to include clubs with dates TBC.':'Showing date-confirmed events. Clear Dates to include cafés, regular places and activities with dates TBC.';
   renderWeekend();
-  if(state.view==='list'&&filterSignature!==lastListSignature){renderRails(places.slice(0,visibleCount));lastListSignature=filterSignature;}
-  renderLoadMore(places.length);
+  if(state.view==='list'&&filterSignature!==lastListSignature){renderRails(weekendOnlyPilot?[]:places.slice(0,visibleCount));lastListSignature=filterSignature;}
+  renderLoadMore(weekendOnlyPilot?0:places.length);
   $('#empty-state').hidden=places.length>0;
   const chips=[];
   if(activeEdit&&!dedicatedEdit)chips.push(['edit',activeEdit.title]);
