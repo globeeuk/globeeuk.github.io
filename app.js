@@ -132,7 +132,7 @@ function renderRails(places){
   fixImages($('#discovery-rails'));
 }
 function renderBristolGrowthNote(){
-  $('#discovery-rails').innerHTML=`<aside class="region-growth-note" aria-label="Help Globee grow in Bristol"><p><strong>Want more Bristol?</strong> Follow <a class="growth-social-link" data-social-platform="instagram" href="https://www.instagram.com/a.better.daily.uk/" target="_blank" rel="noopener noreferrer">@a.better.daily.uk</a> and let us know you’re here — the more Bristol families join in, the faster we can grow this guide. <span aria-hidden="true">🐝</span></p></aside>`;
+  $('#discovery-rails').innerHTML=`<aside class="region-growth-note" aria-label="Help Globee grow in Bristol"><p><strong>Want more Bristol?</strong> Follow <a class="growth-social-link" data-social-platform="instagram" href="https://www.instagram.com/globee.uk/" target="_blank" rel="noopener noreferrer">@globee.uk</a> and let us know you’re here — the more Bristol families join in, the faster we can grow this guide. <span aria-hidden="true">🐝</span></p></aside>`;
 }
 function renderLoadMore(total){
   moreObserver?.disconnect();
