@@ -1112,6 +1112,20 @@
           "start_time": "10:00",
           "end_time": "17:00",
           "weekday": "Sunday"
+        },
+        {
+          "start": "2026-09-26",
+          "end": "2026-09-26",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-09-27",
+          "end": "2026-09-27",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Sunday"
         }
       ],
       "indoor": true,
@@ -1135,17 +1149,17 @@
         {
           "url": "https://www.bristolmuseums.org.uk/whats-on/bristol-museum-and-art-gallery/mini-museum-hunt-aardman/",
           "supports": "The organiser confirms 13 February–1 November 2026, free participation and all-age family suitability. The official listing explains that visitors collect a free detective map to find Aardman treasures around the museum.",
-          "retrieval": "Official Bristol Museums activity page opened successfully on 14 September 2026.",
+          "retrieval": "Official Bristol Museums activity page opened successfully on 20 September 2026.",
           "label": "Official activity details"
         },
         {
           "url": "https://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/plan-your-visit/",
           "supports": "The official venue page confirms free entry, Tuesday–Sunday opening from 10am–5pm and no booking for ordinary visits.",
-          "retrieval": "Official Bristol Museum & Art Gallery visitor page opened successfully on 14 September 2026.",
+          "retrieval": "Official Bristol Museum & Art Gallery visitor page opened successfully on 20 September 2026.",
           "label": "Official visitor information"
         }
       ],
-      "verified_at": "2026-09-14",
+      "verified_at": "2026-09-20",
       "review_status": "verified",
       "sheet_match": {
         "live_sheet_checked": true,
@@ -1153,7 +1167,7 @@
         "event_rows": [
           173
         ],
-        "reconciliation_note": "Added to and read back from the live Sheet after official-source verification on 14 September 2026."
+        "reconciliation_note": "Existing live Sheet rows were matched after the official activity and venue pages were rechecked on 20 September 2026."
       },
       "limitations": [
         "The activity page does not publish a separate daily trail timetable; the museum's opening hours apply.",
@@ -1173,6 +1187,257 @@
       ],
       "free_basis": "Free trail and free museum entry; donations welcome.",
       "indoor_basis": "The hunt takes place inside Bristol Museum & Art Gallery, which has lifts to all floors."
+    },
+    {
+      "id": "bristol-harbour-railway-train-rides-2026",
+      "name": "Bristol Harbour Railway train rides",
+      "description": "Ride behind a working steam or diesel locomotive along Bristol's historic harbour railway from M Shed.",
+      "kind": "event",
+      "region": "Bristol",
+      "city": "Bristol",
+      "locality": "Harbourside, Bristol",
+      "address": "M Shed, Princes Wharf, Wapping Road, Bristol, BS1 4RN",
+      "age_text": "Family activity; numerical age range TBC.",
+      "price_text": "Ride fare TBC. Entry to M Shed is free; donations welcome.",
+      "price_type": "unknown",
+      "booking_text": "Advance booking information is not published; rides are subject to availability.",
+      "schedule_text": "Saturday 26 and Sunday 27 September 2026, from 11am. Rides are subject to weather, mechanical and crew availability.",
+      "occurrences": [
+        {
+          "start": "2026-09-26",
+          "end": "2026-09-26",
+          "start_time": "11:00",
+          "end_time": null,
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-09-27",
+          "end": "2026-09-27",
+          "start_time": "11:00",
+          "end_time": null,
+          "weekday": "Sunday"
+        }
+      ],
+      "indoor": false,
+      "rainy_day": {
+        "suitable": false,
+        "basis": "The train ride operates outdoors and may change or be cancelled in unsuitable weather.",
+        "classification": "Outdoor heritage railway"
+      },
+      "tags": [
+        "weekend",
+        "in-town",
+        "heritage",
+        "trains"
+      ],
+      "practical_notes": [
+        "Check the official page on the day because weather, mechanical issues or crew availability can alter the service.",
+        "M Shed entry is free; the railway fare is not published on the event page."
+      ],
+      "sources": [
+        {
+          "url": "https://www.bristolmuseums.org.uk/whats-on/m-shed/train-rides/",
+          "supports": "The organiser lists train rides on 26–27 September 2026 from 11am and describes them as a family activity. The official page states that operation depends on weather, mechanical and crew availability.",
+          "retrieval": "Official Bristol Museums event page opened successfully on 20 September 2026.",
+          "label": "Official train ride details"
+        },
+        {
+          "url": "https://www.bristolmuseums.org.uk/m-shed/plan-your-visit/",
+          "supports": "The official venue page confirms the M Shed address and free museum entry.",
+          "retrieval": "Official M Shed visitor page opened successfully on 20 September 2026.",
+          "label": "Official visitor information"
+        }
+      ],
+      "verified_at": "2026-09-20",
+      "review_status": "verified",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 147,
+        "event_rows": [
+          180
+        ],
+        "reconciliation_note": "Added to and read back from the live Sheet after official-source verification on 20 September 2026."
+      },
+      "limitations": [
+        "The official event page does not publish the ride fare or a numerical age range.",
+        "Service is not guaranteed and may change on the day."
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "72732d57ed93fb1e51a95ffb",
+          "name": "Bristol Harbour Railway train rides",
+          "region": "Bristol",
+          "fingerprint": "795f7884dde896326339c8dfc7867f503da95976a713f43b2fe1399e9c36e5b0"
+        }
+      ],
+      "notes": [
+        "Check the official page on the day because weather, mechanical issues or crew availability can alter the service.",
+        "M Shed entry is free; the railway fare is not published on the event page."
+      ]
+    },
+    {
+      "id": "visit-the-villa-kings-weston-2026",
+      "name": "Visit the Villa – Kings Weston Roman Villa",
+      "description": "Explore Roman mosaic floors, underfloor heating and a bath suite, with soldiers, crafts, dressing up and family trails.",
+      "kind": "event",
+      "region": "Bristol",
+      "city": "Bristol",
+      "locality": "Lawrence Weston, Bristol",
+      "address": "Kings Weston Roman Villa, Long Cross, Bristol, BS11 0LH",
+      "age_text": "Family activity; numerical age range TBC.",
+      "price_text": "Free; donations welcome.",
+      "price_type": "free",
+      "booking_text": "Booking requirement TBC; the event page does not state one.",
+      "schedule_text": "Saturday 26 September 2026, 10am–2pm.",
+      "occurrences": [
+        {
+          "start": "2026-09-26",
+          "end": "2026-09-26",
+          "start_time": "10:00",
+          "end_time": "14:00",
+          "weekday": "Saturday"
+        }
+      ],
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "The visit centres on the covered Roman villa remains and indoor family activities.",
+        "classification": "Indoor heritage activity"
+      },
+      "tags": [
+        "weekend",
+        "free",
+        "day-trip",
+        "history",
+        "rainy-day"
+      ],
+      "practical_notes": [
+        "The event includes Roman soldiers, craft activities, dressing up and trails.",
+        "Check the official listing before travelling because booking instructions are not stated."
+      ],
+      "sources": [
+        {
+          "url": "https://www.bristolmuseums.org.uk/whats-on/blaise-museum/visit-the-villa/",
+          "supports": "The organiser confirms Saturday 26 September 2026, 10am–2pm and the listed family activities. The official listing describes the villa's mosaics, underfloor heating and bath suite.",
+          "retrieval": "Official Bristol Museums event page opened successfully on 20 September 2026.",
+          "label": "Official villa event details"
+        },
+        {
+          "url": "https://www.bristolmuseums.org.uk/plan-your-visit/",
+          "supports": "Bristol Museums confirms free entry to its venues and welcomes donations.",
+          "retrieval": "Official Bristol Museums visitor page opened successfully on 20 September 2026.",
+          "label": "Official admission information"
+        }
+      ],
+      "verified_at": "2026-09-20",
+      "review_status": "verified",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 148,
+        "event_rows": [
+          181
+        ],
+        "reconciliation_note": "Added to and read back from the live Sheet after official-source verification on 20 September 2026."
+      },
+      "limitations": [
+        "The event page does not publish a numerical age range or explicit booking instruction.",
+        "Accessibility details for this event were not established in this review."
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "572cb7daf59654a99d78a48e",
+          "name": "Visit the Villa – Kings Weston Roman Villa",
+          "region": "Bristol",
+          "fingerprint": "cf98b0f23faa1e6c3c8cf4805d02cb0dbcebabe18afb5474bae5d401a27127ec"
+        }
+      ],
+      "notes": [
+        "The event includes Roman soldiers, craft activities, dressing up and trails.",
+        "Check the official listing before travelling because booking instructions are not stated."
+      ],
+      "free_basis": "Free; donations welcome.",
+      "indoor_basis": "The visit centres on the covered Roman villa remains and indoor family activities."
+    },
+    {
+      "id": "great-bristol-ball-run-2026",
+      "name": "The Great Bristol Ball Run",
+      "description": "Send a wooden ball through six giant outdoor runs across Millennium Square and Anchor Square.",
+      "kind": "event",
+      "region": "Bristol",
+      "city": "Bristol",
+      "locality": "Harbourside, Bristol",
+      "address": "Millennium Square and Anchor Square, Bristol, BS1 5DB",
+      "age_text": "Family activity; numerical age range TBC.",
+      "price_text": "£6 for a wooden ball, yours to keep and reuse on repeat visits.",
+      "price_type": "paid",
+      "booking_text": "No advance booking requirement is stated; balls are sold from the We The Curious shop.",
+      "schedule_text": "4 August–2 November 2026. Outdoor ball runs are available across Millennium Square and Anchor Square; check shop opening before collecting a ball.",
+      "occurrences": [
+        {
+          "start": "2026-09-26",
+          "end": "2026-09-26",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-09-27",
+          "end": "2026-09-27",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Sunday"
+        }
+      ],
+      "indoor": false,
+      "rainy_day": {
+        "suitable": false,
+        "basis": "All six ball runs are outdoors in the public squares around We The Curious.",
+        "classification": "Outdoor city-centre activity"
+      },
+      "tags": [
+        "weekend",
+        "in-town",
+        "outdoor",
+        "play"
+      ],
+      "practical_notes": [
+        "Keep the wooden ball to reuse on all six runs and on repeat visits.",
+        "Check We The Curious shop opening before travelling to buy or collect a ball."
+      ],
+      "sources": [
+        {
+          "url": "https://www.wethecurious.org/whats-on/events/great-bristol-ball-run",
+          "supports": "The organiser confirms six giant ball runs from 4 August to 2 November 2026 across Millennium Square and Anchor Square. The official listing confirms a wooden ball costs £6 and can be kept and reused.",
+          "retrieval": "Official We The Curious event page opened successfully on 20 September 2026.",
+          "label": "Official ball run details"
+        }
+      ],
+      "verified_at": "2026-09-20",
+      "review_status": "verified",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 149,
+        "event_rows": [
+          182
+        ],
+        "reconciliation_note": "Added to and read back from the live Sheet after official-source verification on 20 September 2026."
+      },
+      "limitations": [
+        "The event page does not publish a numerical age range.",
+        "No activity-specific daily hours are published; shop access is needed to obtain a ball."
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "b19eb6eddcd77b2a3b5f6bde",
+          "name": "The Great Bristol Ball Run",
+          "region": "Bristol",
+          "fingerprint": "bddec6e53ca538a4afa21eeb267995837bf1101c09150580a922ad24ef6a5df9"
+        }
+      ],
+      "notes": [
+        "Keep the wooden ball to reuse on all six runs and on repeat visits.",
+        "Check We The Curious shop opening before travelling to buy or collect a ball."
+      ]
     },
     {
       "id": "donkey-sanctuary-curious-coastal-quest-2026",
