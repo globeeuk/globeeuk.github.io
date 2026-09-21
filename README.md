@@ -35,7 +35,7 @@ Below it, Explore all shows the complete current directory, including places, ev
 
 ## Map locations
 
-As of this review, 29 of 58 Devon records, 14 of 15 Nottingham records and the six Bristol pilot records have map coordinates, covering 17, 7 and 4 locations respectively. All current Devon Halloween picks and current Bristol edit picks are mapped. Named venue positions come from published coordinates matched against provider addresses; provenance is in `qa/map-locations.json`. Pins represent a venue or its grounds, not a verified entrance. Online, multi-venue and uncertain locations remain in the list. No coordinates are geocoded at visit time.
+As of this review, 29 of 58 Devon records, 14 of 15 Nottingham records and the nine Bristol pilot records have map coordinates, covering 17, 7 and 7 locations respectively. All current Devon and Bristol Halloween picks are mapped. Named venue positions come from published coordinates matched against provider addresses; provenance is in `qa/map-locations.json`. Pins represent a venue or its grounds, not a verified entrance. Online, multi-venue and uncertain locations remain in the list. No coordinates are geocoded at visit time.
 
 ## Image policy
 

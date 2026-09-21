@@ -70,3 +70,8 @@ Verified the four-edit home layout and link on a 1440px desktop and 390px mobile
 
 - Added a date-bounded Bristol editorial rail (21 September 2026–31 January 2027) with a dedicated `/bristol/edit/` SEO guide and a map link. The existing Halloween edit keeps its 13 September–31 October window and now links directly to its filtered map view.
 - Matched the six Bristol pilot records to four named OpenStreetMap venue records using the provider addresses: We The Curious/Millennium Square, M Shed, Bristol Museum & Art Gallery and Kings Weston Roman Villa. Shared venues remain grouped into one pin with activity navigation.
+
+## Bristol Halloween follow-up
+
+- Added three official Bristol Halloween listings to Sheet1 and the dated events feed on 21 September 2026: Pumpkin Patch at Avon Valley, Spooky Week at The Red Lodge Museum and Autumn Week at Blaise Museum. The active Halloween rail contains the two explicitly Halloween-named listings; Autumn Week remains in the full directory because it is autumnal rather than labelled Halloween by its provider.
+- Added OpenStreetMap venue/grounds coordinates for all three. The Bristol Halloween map currently shows the two active Halloween results as two mapped locations.

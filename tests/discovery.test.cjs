@@ -28,7 +28,7 @@ test('Seasonal edits run through their end date, stay regional and never pad the
  assert.equal(notts.picks.length,4);assert(notts.picks.every(p=>p.region==='Nottingham'));
  assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Nottingham'),'2026-10-31').picks.length,2);
  const bristol=model.seasonalEdit(items.filter(p=>p.region==='Bristol'),'2026-09-21');
- assert.equal(bristol.id,'bristol');assert.equal(bristol.total,4);assert(bristol.picks.every(p=>p.region==='Bristol'));
+ assert.equal(bristol.id,'halloween');assert.equal(bristol.total,2);assert(bristol.picks.every(p=>p.region==='Bristol'));
   const undated={id:'undated',name:'Halloween event',description:'Family Halloween activity'};
  assert.equal(model.seasonalEdit([undated],'2026-10-01'),null);
  const festive=i=>({id:String(i),name:`Christmas activity ${i}`,description:'Family Christmas event',datePeriods:[{start:'2026-12-01',end:'2026-12-24'}]});
@@ -57,7 +57,7 @@ test('Every current card has a small local asset and honest image metadata',()=>
  }
  }
  assert.equal(decorated.filter(p=>p.imageKind!=='illustration').length,57);
- assert.equal(decorated.filter(p=>p.imageKind==='illustration').length,31);
+ assert.equal(decorated.filter(p=>p.imageKind==='illustration').length,34);
  assert.equal(new Set(decorated.map(p=>p.image)).size,53);
  // A place sharing a word with a venue must not inherit another region's photo.
  assert.equal(images.decorate({name:'RAMM workshop',region:'Nottingham',type:'art'}).imageKind,'illustration');
@@ -89,8 +89,8 @@ test('New map locations match named UK venues; multi-venue and online records re
  const map=current.filter(model.hasMapLocation);
  assert.equal(map.filter(p=>p.region==='Exeter').length,32);assert.equal(map.filter(p=>p.region==='Nottingham').length,14);
  const halloween=model.seasonalPlaces(current.filter(p=>p.region==='Exeter'),'2026-09-13','halloween');assert.equal(halloween.length,7);assert(halloween.every(model.hasMapLocation));
- const bristol=current.filter(p=>p.region==='Bristol');assert.equal(bristol.length,3);assert(bristol.every(model.hasMapLocation));
- const allBristol=items.filter(p=>p.region==='Bristol');assert.equal(allBristol.length,6);assert(allBristol.every(model.hasMapLocation));
+ const bristol=current.filter(p=>p.region==='Bristol');assert.equal(bristol.length,6);assert(bristol.every(model.hasMapLocation));
+ const allBristol=items.filter(p=>p.region==='Bristol');assert.equal(allBristol.length,9);assert(allBristol.every(model.hasMapLocation));
  for(const name of ['Chessed.me (Online Chess)','Sporty Stars Holiday Camps','Heritage Open Days - Exeter','Nottingham City Gymnastics'])assert.equal(current.find(p=>p.name===name).coords,null);
  const library=current.find(p=>p.name==='Exeter Library');assert(library.coords[0]>50&&library.coords[0]<51);assert(library.coords[1]>-4&&library.coords[1]<-3);
 });

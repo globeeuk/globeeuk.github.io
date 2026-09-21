@@ -57,6 +57,8 @@ function updatePlanRoute(){
   window.history.replaceState(null,'',`${window.location.pathname}?${params}`);
   $('#back-explore').href=pageLink('index.html');
   $('.brand').href=pageLink('index.html');
+  const editMapLink=document.querySelector('[data-edit-map-link]');
+  if(editMapLink&&state.edit)editMapLink.href=`plans.html?region=${encodeURIComponent(state.region==='Exeter'?'Devon':state.region)}&edit=${encodeURIComponent(state.edit)}`;
 }
 let draftDates=null,calendarMonth=TODAY.slice(0,7),calendarPickingEnd=false;
 const railObservers=[];

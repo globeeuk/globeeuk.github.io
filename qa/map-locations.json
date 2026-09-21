@@ -1,6 +1,6 @@
 {
   "checked": "2026-09-21",
-  "method": "Match named UK venues to the existing official provider address in the DB. Record published venue/grounds coordinates; do not infer session entrances, multi-venue programmes or online locations. Wikipedia/Wikimedia sources and selected OpenStreetMap venue records are linked below. Bristol pilot venue coordinates were checked against the published BS postcodes on 21 September 2026.",
+  "method": "Match named UK venues to the existing official provider address in the DB. Record published venue/grounds coordinates; do not infer session entrances, multi-venue programmes or online locations. Wikipedia/Wikimedia sources and selected OpenStreetMap venue records are linked below. Bristol pilot and Halloween venue coordinates were checked against the published BS postcodes on 21 September 2026.",
   "locations": [
     {
       "venue": "Exeter Cathedral",
@@ -445,6 +445,54 @@
       "providerSources": [
         "https://www.bristolmuseums.org.uk/whats-on/blaise-museum/visit-the-villa/",
         "https://www.bristolmuseums.org.uk/blaise-museum/whats-at/kings-weston-roman-villa/"
+      ]
+    },
+    {
+      "venue": "Avon Valley Adventure And Wildlife Park",
+      "names": [
+        "Pumpkin Patch – Avon Valley"
+      ],
+      "coords": [
+        51.4159969,
+        -2.4739388
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/way/475059737",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-21",
+      "providerSources": [
+        "https://avonvalley.co.uk/event/pumpkin-patch/"
+      ]
+    },
+    {
+      "venue": "The Red Lodge Museum",
+      "names": [
+        "Spooky Week at The Red Lodge Museum"
+      ],
+      "coords": [
+        51.455441,
+        -2.5995615
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/way/97653396",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-21",
+      "providerSources": [
+        "https://www.bristolmuseums.org.uk/red-lodge-museum/whats-on/"
+      ]
+    },
+    {
+      "venue": "Blaise Castle House Museum",
+      "names": [
+        "Autumn Week at Blaise Museum"
+      ],
+      "coords": [
+        51.50578,
+        -2.6324601
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/way/265886158",
+      "precision": "Venue or grounds, not an entrance pin",
+      "checked": "2026-09-21",
+      "providerSources": [
+        "https://www.bristolmuseums.org.uk/whats-on/blaise-museum/autumn-week/"
       ]
     }
   ]
