@@ -65,3 +65,8 @@ The link audit checks availability; it is not a fresh verification of every sche
 Added a first edit linking to the existing plans page for today through today + 13 days in Europe/London. Counts come from the same normalised DB as the destination page: Devon 10 plans, Nottingham 3 at this check. Recurring sessions count once; ongoing events and the final day are included. Undated, past and out-of-window events are excluded. No Sheet rows were created or changed.
 
 Verified the four-edit home layout and link on a 1440px desktop and 390px mobile viewport, matching destination counts, retained date filters in map/list views, no document overflow and no browser console errors. All 12 existing tests passed. Additional boundary checks covered TBC dates, ongoing events, the final day, recurring clubs, year rollover and the autumn DST change. The existing twelve-card pagination remains in use. GA opt-in behaviour is unchanged.
+
+## Bristol edit and map follow-up
+
+- Added a date-bounded Bristol editorial rail (21 September 2026–31 January 2027) with a dedicated `/bristol/edit/` SEO guide and a map link. The existing Halloween edit keeps its 13 September–31 October window and now links directly to its filtered map view.
+- Matched the six Bristol pilot records to four named OpenStreetMap venue records using the provider addresses: We The Curious/Millennium Square, M Shed, Bristol Museum & Art Gallery and Kings Weston Roman Villa. Shared venues remain grouped into one pin with activity navigation.

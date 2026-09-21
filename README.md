@@ -18,7 +18,7 @@ The existing published Google Sheet is the source of truth. `db-loader.js` reads
 
 ## Home and discovery
 
-An active seasonal shortlist can appear above This weekend. It is hidden outside its configured dates or when the selected region has no verified matching event. Halloween runs from 13 September through 31 October 2026 and currently contains five verified Devon plans. The home shortlist shows at most five; View all opens the dedicated, indexable `halloween.html` list. Future seasonal lists retain the same twelve-card incremental loading as the main directory.
+An active editorial shortlist can appear above This weekend. It is hidden outside its configured dates or when the selected region has no verified matching event. Halloween runs from 13 September through 31 October 2026 and currently contains five verified Devon plans. The Bristol edit runs from 21 September 2026 through 31 January 2027 and groups the growing Bristol pilot. Home shortlists show at most five; View all opens the dedicated seasonal or SEO list. Future edits retain the same twelve-card incremental loading as the main directory.
 
 This weekend shows up to five date-confirmed entries from the selected region. Saturday and Sunday are calculated using the current Europe/London date; on Sunday only the remaining day is shown. Ongoing programmes can qualify. Recurring entries count once; TBC and out-of-window activities never fill empty slots. Shorter dated outings come first, with names breaking ties. This is a date-based selection, not a quality or popularity ranking.
 
@@ -35,7 +35,7 @@ Below it, Explore all shows the complete current directory, including places, ev
 
 ## Map locations
 
-As of this review, 29 of 58 Devon records and 14 of 15 Nottingham records have map coordinates, covering 17 and 7 locations respectively. All five current Devon Halloween picks are mapped. Named venue positions come from published coordinates matched against provider addresses; provenance is in `qa/map-locations.json`. Pins represent a venue or its grounds, not a verified entrance. Online, multi-venue and uncertain locations remain in the list. No coordinates are geocoded at visit time.
+As of this review, 29 of 58 Devon records, 14 of 15 Nottingham records and the six Bristol pilot records have map coordinates, covering 17, 7 and 4 locations respectively. All current Devon Halloween picks and current Bristol edit picks are mapped. Named venue positions come from published coordinates matched against provider addresses; provenance is in `qa/map-locations.json`. Pins represent a venue or its grounds, not a verified entrance. Online, multi-venue and uncertain locations remain in the list. No coordinates are geocoded at visit time.
 
 ## Image policy
 

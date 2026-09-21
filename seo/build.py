@@ -55,6 +55,14 @@ BRISTOL_GUIDES = {
         "help_title": "Before you set off",
         "help": "Check the organiser’s latest update before travelling. Free admission can still mean paying for parking, food or an optional activity. An age marked TBC has not been confirmed by the organiser.",
     },
+    "edit": {
+        "title": "The Bristol family edit",
+        "short": "The Bristol edit",
+        "intro": "A small, checked set of Bristol family picks, with the venue, dates, cost and official details together.",
+        "description": "Explore the Bristol family edit: checked activities, practical details and official provider links in one place.",
+        "help_title": "Before you set off",
+        "help": "This is a growing editorial set rather than a popularity ranking. Check the organiser’s latest update before travelling; prices, opening details and availability can change.",
+    },
 }
 
 REGIONS = {
@@ -223,6 +231,17 @@ def choose(items, slug, as_of, *, week_offset=0, region_key="exeter"):
                 continue
             # Keep each section's schedule distinct without changing the source snapshot.
             item = dict(item, occurrences=sorted(occurrences, key=lambda o: (o["start"], o.get("start_time", ""))))
+        elif slug == "edit":
+            if item["kind"] == "event":
+                occurrences = [o for o in item["occurrences"] if occurrence_end(o) > now]
+                if not occurrences:
+                    continue
+                item = dict(item, occurrences=sorted(occurrences, key=lambda o: (o["start"], o.get("start_time", ""))))
+            elif item["kind"] == "place":
+                if item.get("city") != region["city"]:
+                    continue
+            else:
+                continue
         else:
             # Evergreen pages do not present one-off free days as year-round free entry.
             if item["kind"] != "place" or item.get("city") != region["city"]:
@@ -371,7 +390,7 @@ def guide(slug, items, as_of, production, *, region_key="exeter"):
       {contents}
       <aside class="planning"><h2>{esc(info['help_title'])}</h2><p>{esc(info['help'])}</p></aside>
       <section class="continue"><h2>Keep planning with Globee</h2><p>Explore more places, holiday clubs and the calendar.</p>
-      <a class="button" href="{directory}">Open Globee</a></section></main>''' + footer(production, region_key=region_key)
+      <a class="button" href="{directory}">Open Globee</a>{f'<a class="button secondary" href="/plans.html?region=Bristol&amp;edit=bristol">Open the Bristol edit and map</a>' if region_key == 'bristol' else ''}</section></main>''' + footer(production, region_key=region_key)
     return page, selected, indexable
 
 

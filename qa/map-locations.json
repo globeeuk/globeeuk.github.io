@@ -1,6 +1,6 @@
 {
-  "checked": "2026-09-13",
-  "method": "Match named UK venues to the existing official provider address in the DB. Record published venue/grounds coordinates; do not infer session entrances, multi-venue programmes or online locations. Wikipedia/Wikimedia sources and selected OpenStreetMap venue records are linked below. Broad Haldon Forest coordinates were not used as a trail entrance. The US Phillips Exeter Academy Library result was rejected.",
+  "checked": "2026-09-21",
+  "method": "Match named UK venues to the existing official provider address in the DB. Record published venue/grounds coordinates; do not infer session entrances, multi-venue programmes or online locations. Wikipedia/Wikimedia sources and selected OpenStreetMap venue records are linked below. Bristol pilot venue coordinates were checked against the published BS postcodes on 21 September 2026.",
   "locations": [
     {
       "venue": "Exeter Cathedral",
@@ -375,6 +375,76 @@
       "providerSources": [
         "https://www.tram.co.uk/",
         "https://www.tram.co.uk/events/view/halloween-trick-or-treat-tram"
+      ]
+    },
+    {
+      "venue": "We The Curious / Millennium Square",
+      "names": [
+        "Play The Bluey Way",
+        "The Great Bristol Ball Run"
+      ],
+      "coords": [
+        51.4503631,
+        -2.600511
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/way/541580046",
+      "precision": "Named We The Curious building; Anchor Road and BS1 5DB match the provider addresses",
+      "checked": "2026-09-21",
+      "providerSources": [
+        "https://www.wethecurious.org/whats-on/events/play-bluey-way",
+        "https://www.wethecurious.org/whats-on/events/great-bristol-ball-run"
+      ]
+    },
+    {
+      "venue": "M Shed",
+      "names": [
+        "Docks Heritage Weekend – M Shed",
+        "Bristol Harbour Railway train rides"
+      ],
+      "coords": [
+        51.4476167,
+        -2.5983469
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/way/397358060",
+      "precision": "Named M Shed building; Princes Wharf, Wapping Road and BS1 4RN match the provider addresses",
+      "checked": "2026-09-21",
+      "providerSources": [
+        "https://www.bristolmuseums.org.uk/whats-on/m-shed/docks-heritage-weekend/",
+        "https://www.bristolmuseums.org.uk/whats-on/m-shed/train-rides/"
+      ]
+    },
+    {
+      "venue": "Bristol Museum & Art Gallery",
+      "names": [
+        "Mini-museum hunt! 50 years of Aardman"
+      ],
+      "coords": [
+        51.4564942,
+        -2.6050385
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/way/36990873",
+      "precision": "Named museum building; Queen’s Road and BS8 1RL match the provider address",
+      "checked": "2026-09-21",
+      "providerSources": [
+        "https://www.bristolmuseums.org.uk/whats-on/bristol-museum-and-art-gallery/mini-museum-hunt-aardman/",
+        "https://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/plan-your-visit/"
+      ]
+    },
+    {
+      "venue": "Kings Weston Roman Villa",
+      "names": [
+        "Visit the Villa – Kings Weston Roman Villa"
+      ],
+      "coords": [
+        51.4949867,
+        -2.672732
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/way/569144575",
+      "precision": "Named villa site; Long Cross and BS11 0LH match the provider address",
+      "checked": "2026-09-21",
+      "providerSources": [
+        "https://www.bristolmuseums.org.uk/whats-on/blaise-museum/visit-the-villa/",
+        "https://www.bristolmuseums.org.uk/blaise-museum/whats-at/kings-weston-roman-villa/"
       ]
     }
   ]
