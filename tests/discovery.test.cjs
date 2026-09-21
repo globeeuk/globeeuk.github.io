@@ -54,15 +54,15 @@ test('Every current card has a small local asset and honest image metadata',()=>
   assert.match(p.photoSource,/^https:\/\/commons.wikimedia.org/);assert.match(p.photoLicence,/^(CC BY|CC0)/);assert.match(p.photoLicenceUrl,/^https:\/\/creativecommons.org\/(licenses\/by(?:-sa)?|publicdomain\/zero)\//);assert(p.imageReference.includes('not a photograph of the current event'));
  }
  }
- assert.equal(decorated.filter(p=>p.imageKind!=='illustration').length,53);
- assert.equal(decorated.filter(p=>p.imageKind==='illustration').length,35);
- assert.equal(new Set(decorated.map(p=>p.image)).size,49);
+ assert.equal(decorated.filter(p=>p.imageKind!=='illustration').length,57);
+ assert.equal(decorated.filter(p=>p.imageKind==='illustration').length,31);
+ assert.equal(new Set(decorated.map(p=>p.image)).size,53);
  // A place sharing a word with a venue must not inherit another region's photo.
  assert.equal(images.decorate({name:'RAMM workshop',region:'Nottingham',type:'art'}).imageKind,'illustration');
 });
 test('The public image register matches every licensed local photo',()=>{
- assert.equal(imageSources.photos.length,41);assert.equal(imageSources.coverage.licensedPhotoCards,53);
- assert.equal(new Set(imageSources.photos.map(p=>p.key)).size,41);assert.equal(new Set(imageSources.photos.map(p=>p.image)).size,41);
+ assert.equal(imageSources.photos.length,45);assert.equal(imageSources.coverage.licensedPhotoCards,57);
+ assert.equal(new Set(imageSources.photos.map(p=>p.key)).size,45);assert.equal(new Set(imageSources.photos.map(p=>p.image)).size,45);
  for(const p of imageSources.photos){
   const asset=path.join(__dirname,'..',p.image);assert.equal(fs.statSync(asset).size,p.bytes,p.key);assert(p.creator);assert.match(p.source,/^https:\/\/commons.wikimedia.org\/wiki\/File:/);assert.match(p.licence,/^(CC BY|CC0)/);
  }

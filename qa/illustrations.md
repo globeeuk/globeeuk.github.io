@@ -1,8 +1,8 @@
-# Activity illustrations — 10 September 2026
+# Activity illustrations — 21 September 2026
 
 These images supplement licensed venue photographs where no suitable reusable event photograph has been confirmed. They are labelled Illustration in the UI, and described as AI-generated in details. They are not factual depictions of venues or events. Generated with the built-in imagegen tool; resized only and encoded as 640px WebP for delivery.
 
-After the licensed-photo expansion on 10 September, 16 of 62 current cards still use illustrations. They are providers with multiple or undisclosed venues, broad county-wide programmes, or places for which the available reusable photograph was too weak or potentially misleading. Six of the nine themes are currently displayed; the remaining assets stay available for future records.
+After the Bristol venue-photo expansion on 21 September, 31 of 88 current cards still use illustrations. They are providers with multiple or undisclosed venues, broad county-wide programmes, or places for which the available reusable photograph was too weak or potentially misleading. Six of the nine themes are currently displayed; the remaining assets stay available for future records.
 
 ## Shared prompt
 

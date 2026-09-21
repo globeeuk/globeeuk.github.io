@@ -30,6 +30,10 @@
     ['lakeside-day','Alan Murray-Rust','https://commons.wikimedia.org/wiki/File:Lakeside%20Arts%20Centre%20-%20geograph.org.uk%20-%207064347.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2022','venue','Lakeside Arts Centre and surrounding grounds'],
     ['lakeside-night','David Lally','https://commons.wikimedia.org/wiki/File:The%20Lakeside%20Arts%20Centre%20-%20geograph.org.uk%20-%20673112.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2008','venue','Lakeside Arts Centre illuminated at night'],
     ['nottingham-high-school','ClemRutter','https://commons.wikimedia.org/wiki/File:Nottingham%20High%20School%206503.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0','2017','venue','The garden and buildings at Nottingham High School'],
+    ['we-the-curious','Ruth Sharville','https://commons.wikimedia.org/wiki/File:%22We_the_Curious%22_museum_from_Trinity_Street_steps,_Bristol_-_geograph.org.uk_-_8331936.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2026','venue','We The Curious in Bristol, viewed from Trinity Street steps'],
+    ['m-shed','Christine Johnstone','https://commons.wikimedia.org/wiki/File:M_Shed_and_the_cranes,_Prince%27s_Wharf_-_geograph.org.uk_-_4485418.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2015','venue','M Shed and the harbour cranes on Princes Wharf, Bristol'],
+    ['bristol-museum','Gareth James','https://commons.wikimedia.org/wiki/File:Bristol_Museum_%5E_Art_Gallery_-_geograph.org.uk_-_8138804.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2025','venue','Bristol Museum & Art Gallery'],
+    ['kings-weston','Michael Murray','https://commons.wikimedia.org/wiki/File:Kings_Weston_Roman_Villa.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2006','venue','Kings Weston Roman Villa near Lawrence Weston, Bristol'],
     ['exeter-tennis','Pierre Terre','https://commons.wikimedia.org/wiki/File:Exeter%20Tennis%20Centre%2C%20University%20of%20Exeter%20-%20geograph.org.uk%20-%201004177.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2008','venue','Exeter Tennis Centre at the University of Exeter'],
     ['heavitree','David Smith','https://commons.wikimedia.org/wiki/File:Heavitree%20Pleasure%20Ground%2C%20Exeter%20-%20geograph.org.uk%20-%206477874.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2020','location','A wide green and path at Heavitree Pleasure Ground'],
     ['flowerpot-skatepark','Derek Harper','https://commons.wikimedia.org/wiki/File:Flowerpot%20Chill%20Zone%2C%20Exeter%20-%20geograph.org.uk%20-%201069980.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2008','location','The ramps at Flowerpot Skatepark in Exeter'],
@@ -105,6 +109,12 @@
       if(/Tim Burton Inspired Selfies/.test(p.name))return 'lakeside-night';
       if(/Magical Garden/.test(p.name))return 'lakeside-day';
       if(/Nottingham High School/.test(p.name))return 'nottingham-high-school';
+    }
+    if(p.region==='Bristol'){
+      if(/Play The Bluey Way|Great Bristol Ball Run/.test(p.name))return 'we-the-curious';
+      if(/Docks Heritage Weekend|Bristol Harbour Railway/.test(p.name))return 'm-shed';
+      if(/Aardman/.test(p.name))return 'bristol-museum';
+      if(/Kings Weston Roman Villa|Visit the Villa/.test(p.name))return 'kings-weston';
     }
     return null;
   }

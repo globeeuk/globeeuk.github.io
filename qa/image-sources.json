@@ -1,12 +1,12 @@
 {
-  "checked": "2026-09-14",
+  "checked": "2026-09-21",
   "policy": "Only photographs with a confirmed reuse licence are copied. Official website photographs without confirmed permission are excluded. Venue and location photos are labelled and do not represent the current event.",
   "coverage": {
     "currentCards": 88,
-    "licensedPhotoCards": 53,
-    "illustrationCards": 35,
-    "uniqueDisplayedAssets": 49,
-    "licensedSourceAssets": 41
+    "licensedPhotoCards": 57,
+    "illustrationCards": 31,
+    "uniqueDisplayedAssets": 53,
+    "licensedSourceAssets": 45
   },
   "photos": [
     {
@@ -390,6 +390,62 @@
       "checked": "2026-09-10",
       "changes": "Cropped to 3:2, resized to 640 × 426, converted to WebP and metadata stripped. The derivative retains the source licence.",
       "bytes": 67102
+    },
+    {
+      "key": "we-the-curious",
+      "title": "\"We the Curious\" museum from Trinity Street steps, Bristol - geograph.org.uk - 8331936.jpg",
+      "image": "assets/images/we-the-curious.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:%22We_the_Curious%22_museum_from_Trinity_Street_steps,_Bristol_-_geograph.org.uk_-_8331936.jpg",
+      "creator": "Ruth Sharville",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/%22We_the_Curious%22_museum_from_Trinity_Street_steps%2C_Bristol_-_geograph.org.uk_-_8331936.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2026-05-26",
+      "checked": "2026-09-21",
+      "changes": "Cropped to 3:2, resized to 640 × 426, converted to WebP and metadata stripped. The derivative retains the source licence.",
+      "bytes": 68968
+    },
+    {
+      "key": "m-shed",
+      "title": "M Shed and the cranes, Prince's Wharf - geograph.org.uk - 4485418.jpg",
+      "image": "assets/images/m-shed.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:M_Shed_and_the_cranes,_Prince%27s_Wharf_-_geograph.org.uk_-_4485418.jpg",
+      "creator": "Christine Johnstone",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/M_Shed_and_the_cranes%2C_Prince%27s_Wharf_-_geograph.org.uk_-_4485418.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2015-05-03",
+      "checked": "2026-09-21",
+      "changes": "Cropped to 3:2, resized to 640 × 426, converted to WebP and metadata stripped. The derivative retains the source licence.",
+      "bytes": 26586
+    },
+    {
+      "key": "bristol-museum",
+      "title": "Bristol Museum ^ Art Gallery - geograph.org.uk - 8138804.jpg",
+      "image": "assets/images/bristol-museum.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Bristol_Museum_%5E_Art_Gallery_-_geograph.org.uk_-_8138804.jpg",
+      "creator": "Gareth James",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/Bristol_Museum_%5E_Art_Gallery_-_geograph.org.uk_-_8138804.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2025-08-29",
+      "checked": "2026-09-21",
+      "changes": "Cropped to 3:2, resized to 640 × 426, converted to WebP and metadata stripped. The derivative retains the source licence.",
+      "bytes": 62210
+    },
+    {
+      "key": "kings-weston",
+      "title": "Kings Weston Roman Villa.jpg",
+      "image": "assets/images/kings-weston.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Kings_Weston_Roman_Villa.jpg",
+      "creator": "Michael Murray",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Kings_Weston_Roman_Villa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2006-10-08",
+      "checked": "2026-09-21",
+      "changes": "Cropped to 3:2, resized to 640 × 426, converted to WebP and metadata stripped. The derivative retains the source licence.",
+      "bytes": 77924
     },
     {
       "key": "exeter-tennis",
