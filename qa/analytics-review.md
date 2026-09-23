@@ -29,3 +29,25 @@ Canonical URLs, descriptions, robots.txt and a sitemap now refer to the active r
 - [Basic and advanced consent behaviour](https://developers.google.com/tag-platform/security/concepts/consent-mode)
 - [GA4 configuration reference](https://developers.google.com/analytics/devguides/collection/ga4/reference/config)
 - [Google search snippets](https://developers.google.com/search/docs/appearance/snippet)
+
+## 23 September 2026 — consent-based reporting repair
+
+This section supersedes the deployment behaviour described above and the 13 September cookieless-default setup. The owner chose to retain GA4 with an inline Allow analytics / No thanks choice (no modal or floating popup).
+
+### Diagnosis and correction
+
+- Public `analytics.js?v=stats1` sent a `page_view` to `region1.google-analytics.com` and received HTTP 204, with measurement ID `G-YRRY654LS1` and consent signal `G100`. No `_ga` cookies were present in the clean test browser. The earlier statement that transmission had stopped was incorrect.
+- The old code kept `analytics_storage` denied for every visitor. Google states that denied events are not reportable without sufficient consented traffic for modelling. The documented thresholds are 1,000 denied events/day for seven days and 1,000 consented users/day on seven of the preceding 28 days. A 30-day user total cannot establish post-update collection or the precise stop date.
+- The corrected version loads no GA tag until explicit acceptance. Acceptance grants analytics storage only; all advertising consent remains denied. Refusals from either earlier preference key remain refusals. An absent opt-out is never migrated as consent.
+- Settings reopen the inline choice; withdrawal disables measurement and clears first-party GA cookies. Re-acceptance on the same document resumes measurement without loading another tag.
+- All existing directory and guide pages and the SEO generator use `analytics.js?v=consent2`. The privacy notice now describes optional cookies, not anonymous default statistics.
+
+### Validation before publication
+
+- Seven Node consent/loading tests passed; 37 SEO Python tests passed.
+- Browser test: unanswered and No thanks produced no GA requests. Acceptance produced one `page_view` with `G101`, HTTP 204, and the expected measurement ID; GA cookies appeared. Withdrawal removed them; a refused reload produced no new requests.
+- Mobile (390px) and desktop (1440px) inline controls were visually inspected.
+- One consented test page view and one earlier denied diagnostic page view were sent during QA. These are test traffic, not audience growth.
+- HTTP 204 proves endpoint acknowledgement only; report visibility is a separate check. No historical recovery or exact historic cutoff has been established.
+
+References: [Google modelling rules](https://support.google.com/analytics/answer/11161109?hl=en), [Google consent behaviour](https://support.google.com/analytics/answer/13802165?hl=en).

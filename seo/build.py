@@ -299,7 +299,7 @@ def head(title, description, route, indexable, schema, production=False, *, regi
     robots = "index,follow" if indexable else "noindex,follow"
     canonical = PUBLIC_BASE + route
     structured = json.dumps(schema, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e")
-    analytics = '<script defer src="/analytics.js?v=stats1"></script>' if production else ""
+    analytics = '<script defer src="/analytics.js?v=consent2"></script>' if production else ""
     return f'''<!doctype html><html lang="en-GB"><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"><title>{esc(title)} | Globee</title>
     <meta name="description" content="{esc(description)}"><meta name="robots" content="{robots}">
@@ -326,7 +326,7 @@ def navigation(slug=None, *, region_key="exeter"):
 def footer(production=False, *, region_key="exeter"):
     region = REGIONS[region_key]
     directory = directory_url(region_key)
-    settings = '<button type="button" class="text-button" data-analytics-toggle>Stop site analytics</button>' if production else ""
+    settings = '<button type="button" class="text-button" data-analytics-toggle>Analytics settings</button>' if production else ""
     other_regions = "".join(
         f'<a href="/{key}/">{esc(value["label"])} guides</a>'
         for key, value in REGIONS.items()
