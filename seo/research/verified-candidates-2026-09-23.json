@@ -1,8 +1,33 @@
 {
-  "schema_version": 1,
-  "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-09-23",
-  "items": [
+  "schema_version": "1.0",
+  "verified_at": "2026-09-23",
+  "timezone": "Europe/London",
+  "scope": "Exeter and Bristol guides re-reviewed on 23 September 2026; weekends 26–27 September and 3–4 October 2026, plus five ordinary Exeter places. All 19 records and seven historical records retained.",
+  "publication_status": "Official-source research reconciled to the operational Sheet. Publication remains subject to the live binding guard, renderer checks and deployment verification.",
+  "source_policy": "Official-source research supplements the operational Google Sheet. Active publication records are bound to checked master/event rows; source changes require rechecking before publication.",
+  "disclaimer": "Prices & schedules change — always check the provider before booking.",
+  "coverage": {
+    "current_weekend": [
+      "2026-09-26",
+      "2026-09-27"
+    ],
+    "next_weekend": [
+      "2026-10-03",
+      "2026-10-04"
+    ],
+    "exeter_event_choices": {
+      "current": 2,
+      "next": 2,
+      "distinct": 3
+    },
+    "bristol_event_choices": {
+      "current": 4,
+      "next": 2,
+      "distinct": 4
+    },
+    "exeter_places": 5
+  },
+  "records": [
     {
       "id": "quayside-shanty-festival-2026",
       "name": "Quayside Shanty & Heritage Harbour Festival",
@@ -44,7 +69,10 @@
       "sources": [
         {
           "url": "https://exetercustomhouse.co.uk/event/quayside-shanty-festival-2026/",
-          "supports": "The organiser lists 12 September 2026, noon–10pm, free admission and all-age suitability. Piazza Terracina activities run noon–4pm; music uses several Quayside venues.",
+          "supports": [
+            "The organiser lists 12 September 2026, noon–10pm, free admission and all-age suitability.",
+            "Piazza Terracina activities run noon–4pm; music uses several Quayside venues."
+          ],
           "retrieval": "Official-source content reviewed on 13 September 2026.",
           "previous_retrieval": "Official event page opened successfully on 10 September 2026."
         }
@@ -77,12 +105,7 @@
         "This festival ended on 12 September 2026 and must not be promoted as upcoming."
       ],
       "previous_verified_at": "2026-09-10",
-      "review_status": "historical",
-      "city": "Exeter",
-      "notes": [
-        "The daytime harbour activities finish earlier than the overall festival."
-      ],
-      "free_basis": "Free festival admission."
+      "review_status": "historical"
     },
     {
       "id": "killerton-heritage-open-days-2026",
@@ -93,7 +116,7 @@
       "locality": "Broadclyst, near Exeter",
       "address": "Killerton, Broadclyst, Exeter, Devon, EX5 3LE",
       "age_text": "Children welcome; no numerical age restriction is stated.",
-      "price_text": "Free admission. Non-member parking: £2.60 for up to two hours or £5.20 all day; members park free.",
+      "price_text": "Free admission. Non-member parking: GBP 2.60 for up to two hours or GBP 5.20 all day; members park free.",
       "price_type": "free",
       "booking_text": "No advance booking required. Collect an entry ticket at Visitor Reception.",
       "schedule_text": "Friday 11–Sunday 13 September 2026, 10am–5pm. On Sunday 13 September the house opens 11am–4pm, last entry 3.30pm; the garden opens 10am–5pm.",
@@ -141,14 +164,20 @@
       "sources": [
         {
           "url": "https://www.nationaltrust.org.uk/visit/devon/killerton/events/e3f92406-99c9-4422-8032-93b942c47cd7",
-          "supports": "Confirms the 11–13 September festival period and the remaining Sunday 13 September 2026 time of 10am–5pm. Free admission, children welcome and no advance booking; collect a ticket at reception. Parking is extra.",
+          "supports": [
+            "Confirms the 11–13 September festival period and the remaining Sunday 13 September 2026 time of 10am–5pm.",
+            "Free admission, children welcome and no advance booking; collect a ticket at reception. Parking is extra."
+          ],
           "retrieval": "Official-source content reviewed on 13 September 2026.",
           "previous_retrieval": "Official National Trust event page opened successfully on 10 September 2026.",
           "label": "Official event details"
         },
         {
           "url": "https://www.nationaltrust.org.uk/visit/devon/killerton",
-          "supports": "Confirms address, parking tariffs, 13 September house and garden opening hours, and last house admission 30 minutes before closing. The Hill Fort play-area notice now gives 5–16 October for works.",
+          "supports": [
+            "Confirms address, parking tariffs, 13 September house and garden opening hours, and last house admission 30 minutes before closing.",
+            "The Hill Fort play-area notice now gives 5–16 October for works."
+          ],
           "retrieval": "Official-source content reviewed on 13 September 2026.",
           "previous_retrieval": "Official property page opened successfully on 10 September 2026.",
           "label": "Property information and parking"
@@ -177,14 +206,7 @@
           "region": "Devon",
           "fingerprint": "4e8907a1f8f17323fc80cbca82e42c0a414e687151daa1e20f0d4aa64f35e52b"
         }
-      ],
-      "city": "",
-      "notes": [
-        "On Sunday 13 September, the house closes at 4pm with last entry at 3.30pm. The garden closes at 5pm.",
-        "The property lists Hill Fort play-area works for 5–16 October.",
-        "The gardens include slopes and steep sections; dress for the weather."
-      ],
-      "free_basis": "Free admission. Non-member parking: GBP 2.60 for up to two hours or GBP 5.20 all day; members park free."
+      ]
     },
     {
       "id": "knightshayes-heritage-open-day-2026",
@@ -227,13 +249,19 @@
       "sources": [
         {
           "url": "https://www.nationaltrust.org.uk/visit/devon/knightshayes/events/a9ed831d-1bb2-4848-b24c-d082293f33fd",
-          "supports": "Confirms Saturday 12 September 2026, 10am–5pm, free admission, no advance booking and all-age suitability. The event centres on the house, gardens, woodland and wider parkland.",
+          "supports": [
+            "Confirms Saturday 12 September 2026, 10am–5pm, free admission, no advance booking and all-age suitability.",
+            "The event centres on the house, gardens, woodland and wider parkland."
+          ],
           "retrieval": "Official National Trust event content reviewed in the search index on 13 September 2026 after a direct-open retrieval error. The entry explicitly confirms 12 September 2026; retained as a past event.",
           "previous_retrieval": "Official National Trust event page opened successfully on 10 September 2026."
         },
         {
           "url": "https://www.nationaltrust.org.uk/visit/devon/knightshayes",
-          "supports": "Confirms the Bolham address and ordinary non-member parking charges. The page returned opening times for 12 September 2026; these are historical and do not establish future dates.",
+          "supports": [
+            "Confirms the Bolham address and ordinary non-member parking charges.",
+            "The page returned opening times for 12 September 2026; these are historical and do not establish future dates."
+          ],
           "retrieval": "Official-source content reviewed on 13 September 2026.",
           "previous_retrieval": "Official property page opened successfully on 10 September 2026."
         }
@@ -261,12 +289,7 @@
         "This free event ended on 12 September 2026 and must not be promoted as upcoming."
       ],
       "previous_verified_at": "2026-09-10",
-      "review_status": "historical",
-      "city": "",
-      "notes": [
-        "This is near Tiverton, outside Exeter city centre."
-      ],
-      "free_basis": "Free admission. Parking conditions for this event: TBC; the property normally charges non-members."
+      "review_status": "historical"
     },
     {
       "id": "ramm",
@@ -297,7 +320,10 @@
       "sources": [
         {
           "url": "https://rammuseum.org.uk/visit/",
-          "supports": "Confirms free entry, the Queen Street address and the weekly opening times above. Describes history, natural-history and world-cultures galleries.",
+          "supports": [
+            "Confirms free entry, the Queen Street address and the weekly opening times above.",
+            "Describes history, natural-history and world-cultures galleries."
+          ],
           "retrieval": "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body. Chrome also loaded the official page successfully after direct HTTP 403; the current Gallery 20 notices were checked separately.",
           "previous_retrieval": "Official Visit-page full body reviewed through the web tool on 22 September 2026; crawler timestamp was 21 September. Free entry, address, galleries and weekly hours matched. This may be indexed content and does not establish exceptional same-day opening. The 21 September direct-fetch 403 is historical, not a result of this review.",
           "label": "Plan your museum visit",
@@ -309,7 +335,9 @@
         },
         {
           "url": "https://rammuseum.org.uk/visit/access/",
-          "supports": "The museum access page lists Monday and bank-holiday closures alongside its regular weekly hours. Check exceptional opening before travelling.",
+          "supports": [
+            "The museum access page lists Monday and bank-holiday closures alongside its regular weekly hours. Check exceptional opening before travelling."
+          ],
           "retrieval": "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body. Chrome also loaded the official page successfully after direct HTTP 403; the current Gallery 20 notices were checked separately.",
           "label": "Access and holiday opening",
           "previous_retrieval": "Official Access-page full body reviewed through the web tool on 22 September 2026; crawler timestamp was 21 September. Weekly hours and Monday/bank-holiday closures matched. This may be indexed content and does not establish exceptional same-day opening.",
@@ -322,7 +350,9 @@
         {
           "url": "https://rammuseum.org.uk/",
           "label": "Current gallery closure notices",
-          "supports": "The current official homepage advertises an event-related Gallery 20 closure from midday Wednesday 23 to Thursday 24, and maintenance on 5–19 October. Neither notice provides a full dated year; the first also omits the month.",
+          "supports": [
+            "The current official homepage advertises an event-related Gallery 20 closure from midday Wednesday 23 to Thursday 24, and maintenance on 5–19 October. Neither notice provides a full dated year; the first also omits the month."
+          ],
           "retrieval": "Official homepage body and Chrome banner reviewed on 23 September 2026. Specific closure dates remain TBC; current programme dates and the footer year do not establish the banner dates."
         }
       ],
@@ -352,14 +382,7 @@
           "region": "Devon",
           "fingerprint": "d62a190f1e06cb072e411b6add617e74973b0eca962b4f70d400aa3ffb9b4c07"
         }
-      ],
-      "city": "Exeter",
-      "notes": [
-        "The museum lists bank-holiday closures; check exceptional opening before travelling.",
-        "Gallery 20 has temporary event and maintenance closure notices; confirm the affected dates with RAMM before travelling."
-      ],
-      "free_basis": "Free museum admission. Check individual event listings for any separate charges.",
-      "indoor_basis": "Editorial classification based on the museum's indoor galleries described on its official visit page."
+      ]
     },
     {
       "id": "exeter-library",
@@ -390,7 +413,9 @@
       "sources": [
         {
           "url": "https://discover.librariesunlimited.org.uk/-/exeter-library",
-          "supports": "Confirms the Castle Street address and branch contact details.",
+          "supports": [
+            "Confirms the Castle Street address and branch contact details."
+          ],
           "retrieval": "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body.",
           "previous_retrieval": "Official branch-page body reviewed through the web tool on 22 September 2026; crawler timestamp was 21 September. Castle Street address and branch details matched.",
           "label": "Library details",
@@ -402,7 +427,9 @@
         },
         {
           "url": "https://discover.librariesunlimited.org.uk/-/services-at-exeter-library",
-          "supports": "Confirms a large children's section overlooking Rougemont Gardens and step-free access to library areas.",
+          "supports": [
+            "Confirms a large children's section overlooking Rougemont Gardens and step-free access to library areas."
+          ],
           "retrieval": "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body.",
           "previous_retrieval": "Official services-page body reviewed through the web tool on 22 September 2026; crawler timestamp was 21 September. Indoor children’s section overlooking Rougemont Gardens and access information matched.",
           "label": "Facilities and access",
@@ -414,7 +441,9 @@
         },
         {
           "url": "https://discover.librariesunlimited.org.uk/-/children",
-          "supports": "The library operator welcomes children of every age and states that browsing, borrowing books and joining are free.",
+          "supports": [
+            "The library operator welcomes children of every age and states that browsing, borrowing books and joining are free."
+          ],
           "retrieval": "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body.",
           "previous_retrieval": "Official children’s-services body reviewed through the web tool on 22 September 2026; crawler timestamp was 21 September. All-age welcome and free reading, borrowing and membership matched.",
           "label": "Children’s library services",
@@ -426,7 +455,9 @@
         },
         {
           "url": "https://roomhire.librariesunlimited.org.uk/venues/99-exeter-library",
-          "supports": "The operator's Exeter Library venue page publishes the full weekly opening schedule and Castle Street address.",
+          "supports": [
+            "The operator's Exeter Library venue page publishes the full weekly opening schedule and Castle Street address."
+          ],
           "retrieval": "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body. Chrome confirmed the complete published weekly timetable after the direct client encountered a TLS error.",
           "label": "Published opening hours",
           "previous_retrieval": "Official operator room-hire venue body reviewed on 22 September 2026; crawler timestamp was today. Complete weekly opening timetable matched. Chrome fallback also loaded normally after a TLS retrieval problem. General hours do not guarantee exceptional date-specific opening.",
@@ -458,11 +489,7 @@
           "region": "Devon",
           "fingerprint": "358a121e628e2c304b0d1b3848cf90066e27a23442b5e38de1bc28f1271c858e"
         }
-      ],
-      "city": "Exeter",
-      "notes": [],
-      "free_basis": "Free to read books; joining and borrowing books are also free. Individual events may have separate charges.",
-      "indoor_basis": "Editorial classification based on the operator's description of the indoor children's library area."
+      ]
     },
     {
       "id": "exeter-custom-house",
@@ -496,7 +523,10 @@
       "sources": [
         {
           "url": "https://exetercustomhouse.co.uk/your-visit/",
-          "supports": "Confirms the address, seasonal opening pattern, entry cut-off 30 minutes before closing and free general admission. Groups should arrange visits in advance. Some display areas may close for private bookings.",
+          "supports": [
+            "Confirms the address, seasonal opening pattern, entry cut-off 30 minutes before closing and free general admission.",
+            "Groups should arrange visits in advance. Some display areas may close for private bookings."
+          ],
           "retrieval": "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
           "previous_retrieval": "Official visit-page body reviewed through the web tool on 22 September 2026; crawler timestamp was today. Free admission, address, seasonal hours, last-entry rule and group/private-event conditions matched.",
           "label": "Opening times and visitor information",
@@ -508,7 +538,9 @@
         },
         {
           "url": "https://exetercustomhouse.co.uk/about/",
-          "supports": "Describes displays and objects inside the building about the development of Exeter Quayside.",
+          "supports": [
+            "Describes displays and objects inside the building about the development of Exeter Quayside."
+          ],
           "retrieval": "Official About-page body reviewed on 23 September 2026; the web response was labelled crawled on 22 September. Indoor objects and displays about Exeter Quayside history matched. A separate direct link check returned HTTP 200.",
           "previous_retrieval": "Official About-page body reviewed through the web tool on 22 September 2026; crawler timestamp was today. Indoor objects and displays about Exeter Quayside history matched.",
           "label": "About the displays",
@@ -540,13 +572,7 @@
           "region": "Devon",
           "fingerprint": "8669e3a93d63d786a579f640e30f7fd7cf81e0e09a2106b88c883744ec1dcb68"
         }
-      ],
-      "city": "Exeter",
-      "notes": [
-        "Parts of the display may close for private events; call ahead if this is the main purpose of your visit."
-      ],
-      "free_basis": "Free general admission; some separately advertised events are ticketed.",
-      "indoor_basis": "Editorial classification based on visitor-centre displays inside the historic building; nearby waterfront activities are outdoors."
+      ]
     },
     {
       "id": "exeter-underground-passages",
@@ -557,7 +583,7 @@
       "locality": "Exeter",
       "address": "2 Paris Street, Exeter, Devon, EX1 1GA",
       "age_text": "Tours: ages 5+; children aged 5–17 must be accompanied by an adult.",
-      "price_text": "Ticketed: adult £9; concession £7; child 5–17 £6; family up to 2 adults and 3 children £25.",
+      "price_text": "Ticketed: adult GBP 9; concession GBP 7; child 5–17 GBP 6; family up to 2 adults and 3 children GBP 25.",
       "price_type": "paid",
       "booking_text": "Advance booking advised at weekends and during school holidays. Arrive 15 minutes before your tour.",
       "schedule_text": "Term time: Thursday–Friday and Sunday 11am–4pm; Saturday 10.30am–4.30pm (subject to change); Monday–Wednesday closed. Summer holidays: Wednesday–Sunday 11am–4pm. Closed 24–25 December.",
@@ -580,7 +606,9 @@
       "sources": [
         {
           "url": "https://www.exetercornexchange.co.uk/book-tickets/exeters-underground-passages/",
-          "supports": "Official council ticket page verifies admission, age limits, access, booking advice, address and seasonal hours.",
+          "supports": [
+            "Official council ticket page verifies admission, age limits, access, booking advice, address and seasonal hours."
+          ],
           "retrieval": "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
           "previous_retrieval": "Official council ticket-page body reviewed through HTTP/web retrieval on 22 September 2026; an independent link check also returned HTTP 200. Existing prices, hours, address, age restrictions, booking advice and access conditions matched. Individual tour availability was not checked.",
           "label": "Times, tickets and booking",
@@ -612,13 +640,7 @@
           "region": "Devon",
           "fingerprint": "cee5d726d2eb825fdb7cc2653b3231937f3985c7b8f41f40d6a24e46379a2593"
         }
-      ],
-      "city": "Exeter",
-      "notes": [
-        "Under-5s may visit the exhibition free with an adult, but cannot join the tour.",
-        "Wheelchairs and pushchairs can access the exhibition only. Passages are narrow and low; unsuitable for claustrophobia."
-      ],
-      "indoor_basis": "Exhibition and enclosed underground tour."
+      ]
     },
     {
       "id": "heavitree-pleasure-grounds",
@@ -652,7 +674,9 @@
       "sources": [
         {
           "url": "https://www.visitexeter.com/things-to-do/heavitree-pleasure-grounds-p763523",
-          "supports": "Lists free admission, outdoor park facilities, family suitability, address and a January–December 2026 visiting period; no daily hours.",
+          "supports": [
+            "Lists free admission, outdoor park facilities, family suitability, address and a January–December 2026 visiting period; no daily hours."
+          ],
           "retrieval": "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
           "previous_retrieval": "Official Visit Exeter park-page body reviewed through the web tool on 22 September 2026; crawler timestamp was today. Free admission, outdoor family facilities, address and 2026 visiting period matched; daily gate times remain unpublished.",
           "label": "Official park information",
@@ -664,7 +688,9 @@
         },
         {
           "url": "https://www.visitexeter.com/info-maps/members-area",
-          "supports": "Confirms Visit Exeter is managed by Exeter City Council.",
+          "supports": [
+            "Confirms Visit Exeter is managed by Exeter City Council."
+          ],
           "retrieval": "Official page search result retrieved on 10 September 2026.",
           "previous_retrieval": "Official page search result retrieved on 10 September 2026.",
           "review_note": "Supplemental identity/background evidence retained from the earlier review; current visitor conditions checked through the primary visit page.",
@@ -672,7 +698,9 @@
         },
         {
           "url": "https://engage.exeter.gov.uk/heavitree-play-area",
-          "supports": "Council consultation describes planned play-area and water-play improvements; it does not establish closure dates.",
+          "supports": [
+            "Council consultation describes planned play-area and water-play improvements; it does not establish closure dates."
+          ],
           "retrieval": "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
           "previous_retrieval": "Official council consultation-page body reviewed through the web tool on 22 September 2026; crawler timestamp was today. Planned play and water-play improvements matched; the notice does not establish current closure dates.",
           "label": "Play-area improvement notices",
@@ -705,12 +733,7 @@
           "region": "Devon",
           "fingerprint": "5112aedfb187c2d0b90f79a1e4d5bcf54f0ce584cec9dbf74c973bdc617f1686"
         }
-      ],
-      "city": "Exeter",
-      "notes": [
-        "Check current play-area access before a visit: the council has announced planned play and water-play improvements."
-      ],
-      "free_basis": "Free general admission. Charges for optional activities or refreshments are not included."
+      ]
     },
     {
       "id": "a-la-ronde-heritage-open-day-2026",
@@ -753,14 +776,18 @@
       "sources": [
         {
           "url": "https://www.nationaltrust.org.uk/visit/devon/a-la-ronde/events/8441e910-4903-4527-8af2-fb74858524cf",
-          "supports": "Confirms 19 September 2026, time, free admission, parking for house visitors, all-age suitability and no booking requirement.",
+          "supports": [
+            "Confirms 19 September 2026, time, free admission, parking for house visitors, all-age suitability and no booking requirement."
+          ],
           "retrieval": "Official-source content reviewed on 14 September 2026; retrieval may use indexed official content and does not establish live ticket availability.",
           "label": "Official event details",
           "previous_retrieval": "Official event page reviewed on 13 September 2026."
         },
         {
           "url": "https://www.nationaltrust.org.uk/visit/devon/a-la-ronde",
-          "supports": "Confirms the address and Shell Gallery access restriction.",
+          "supports": [
+            "Confirms the address and Shell Gallery access restriction."
+          ],
           "retrieval": "Official-source content reviewed on 14 September 2026; retrieval may use indexed official content and does not establish live ticket availability.",
           "label": "Property information and access",
           "previous_retrieval": "Official property page checked by the parallel research agent on 13 September 2026."
@@ -788,13 +815,7 @@
           "fingerprint": "581533b622ca8dbec88b4746fcc2b92bd41c363b3f9d79920bd54569c857d9f2"
         }
       ],
-      "previous_verified_at": "2026-09-13",
-      "city": "",
-      "notes": [
-        "The fragile Shell Gallery has no physical visitor access.",
-        "Check separate house last-admission times before travelling."
-      ],
-      "free_basis": "Free admission; parking is free for house visitors."
+      "previous_verified_at": "2026-09-13"
     },
     {
       "id": "silverton-park-stables-open-days-2026",
@@ -844,7 +865,9 @@
       "sources": [
         {
           "url": "https://www.landmarktrust.org.uk/news-and-events/opendays/silverton-park-stables-open-days-2026/",
-          "supports": "The event-specific heading and description confirm the 2026 dates, hours, free entry, children's activities, booking preference, address and visitor access.",
+          "supports": [
+            "The event-specific heading and description confirm the 2026 dates, hours, free entry, children's activities, booking preference, address and visitor access."
+          ],
           "retrieval": "Full official 2026 event content reviewed through web retrieval on 20 September 2026 at approximately 07:26 BST. Direct Python retrieval returned 403; linked Eventbrite retrieval failed, so no booking availability is promised.",
           "label": "Official event details and booking link",
           "previous_retrieval": "Official-source content reviewed on 14 September 2026; retrieval may use indexed official content and does not establish live ticket availability."
@@ -872,13 +895,7 @@
           "fingerprint": "cf4de41c57bf14e903051f470641afa97c823b7c65ba227095176c994262b293"
         }
       ],
-      "previous_verified_at": "2026-09-14",
-      "city": "",
-      "notes": [
-        "Field parking is about 100 yards away over grass and a rough path; expect cobbles and steps. Toilets are available.",
-        "Public transport access is limited."
-      ],
-      "free_basis": "Free entry. Refreshments cost extra or invite a donation; parking charges TBC."
+      "previous_verified_at": "2026-09-14"
     },
     {
       "id": "pennywell-pumpkin-festival-2026",
@@ -889,7 +906,7 @@
       "locality": "Lower Dean, near Buckfastleigh",
       "address": "Pennywell Farm, Lower Dean, Buckfastleigh, Devon TQ11 0LT",
       "age_text": "Family-friendly; numerical age range TBC. Children need adult supervision; individual rides have age or height restrictions.",
-      "price_text": "For 26–27 September and 3–4 October: adult 16+ £24.95; child over 90cm £19.95; concession £21.95; infant below 90cm free. Check the final booking total. Pumpkin purchases, marshmallows, food and drink cost extra.",
+      "price_text": "For 26–27 September and 3–4 October: adult 16+ GBP 24.95; child over 90cm GBP 19.95; concession GBP 21.95; infant below 90cm free. Check the final booking total. Pumpkin purchases, marshmallows, food and drink cost extra.",
       "price_type": "paid",
       "booking_text": "All visitors must book online in advance, including free infants and season-pass holders. Availability may change.",
       "schedule_text": "Festival season: 26 September–1 November 2026. Dates checked for this guide: 26–27 September and 3–4 October, 9am–4pm.",
@@ -943,7 +960,9 @@
       "sources": [
         {
           "url": "https://pennywellfarm.co.uk/pages/pumpkin-patch",
-          "supports": "The daytime festival page confirms the seasonal dates, weekend 9am–4pm programme, family activities, required advance booking and extra purchases.",
+          "supports": [
+            "The daytime festival page confirms the seasonal dates, weekend 9am–4pm programme, family activities, required advance booking and extra purchases."
+          ],
           "label": "Festival details and visitor questions",
           "retrieval": "Official festival, opening, booking-condition and directions pages retrieved directly with HTTP 200 and reviewed on 23 September 2026 at about 08:59–09:03 BST. Live date-specific booking API retrieved at 08:59:57 BST confirms seasonYear 2026, all four listed dates available and unchanged ticket categories/prices. Availability may change.",
           "previous_retrieval": "Official festival, opening, booking-condition and directions pages plus live date-specific booking API reviewed on 22 September 2026 around 07:04 BST. The API confirmed seasonYear 2026 and all four listed dates available at review with unchanged ticket prices; availability may change.",
@@ -955,7 +974,9 @@
         },
         {
           "url": "https://pennywellfarm.co.uk/pages/opening-times",
-          "supports": "The operator confirms daytime opening from 9am to 4pm.",
+          "supports": [
+            "The operator confirms daytime opening from 9am to 4pm."
+          ],
           "label": "Opening times",
           "retrieval": "Official festival, opening, booking-condition and directions pages retrieved directly with HTTP 200 and reviewed on 23 September 2026 at about 08:59–09:03 BST. Live date-specific booking API retrieved at 08:59:57 BST confirms seasonYear 2026, all four listed dates available and unchanged ticket categories/prices. Availability may change.",
           "previous_retrieval": "Official festival, opening, booking-condition and directions pages plus live date-specific booking API reviewed on 22 September 2026 around 07:04 BST. The API confirmed seasonYear 2026 and all four listed dates available at review with unchanged ticket prices; availability may change.",
@@ -967,7 +988,9 @@
         },
         {
           "url": "https://pennywellfarm.co.uk/pages/booking-flow?flow=day-tickets",
-          "supports": "Official booking data explicitly identifies seasonYear 2026 and 26–27 September plus 3–4 October as Pumpkin Festival dates with the ticket categories and prices shown. Availability was present at review but is not promised.",
+          "supports": [
+            "Official booking data explicitly identifies seasonYear 2026 and 26–27 September plus 3–4 October as Pumpkin Festival dates with the ticket categories and prices shown. Availability was present at review but is not promised."
+          ],
           "evidence_url": "https://pennywellfarm.co.uk/apps/combined-listings/api/day-tickets?weeks=4",
           "label": "Date-specific tickets and booking",
           "retrieval": "Official festival, opening, booking-condition and directions pages retrieved directly with HTTP 200 and reviewed on 23 September 2026 at about 08:59–09:03 BST. Live date-specific booking API retrieved at 08:59:57 BST confirms seasonYear 2026, all four listed dates available and unchanged ticket categories/prices. Availability may change.",
@@ -980,7 +1003,9 @@
         },
         {
           "url": "https://pennywellfarm.co.uk/pages/buy-day-out-tickets",
-          "supports": "All visitors must reserve online, including season-pass holders and free infants.",
+          "supports": [
+            "All visitors must reserve online, including season-pass holders and free infants."
+          ],
           "label": "Ticket and booking conditions",
           "retrieval": "Official festival, opening, booking-condition and directions pages retrieved directly with HTTP 200 and reviewed on 23 September 2026 at about 08:59–09:03 BST. Live date-specific booking API retrieved at 08:59:57 BST confirms seasonYear 2026, all four listed dates available and unchanged ticket categories/prices. Availability may change.",
           "previous_retrieval": "Official festival, opening, booking-condition and directions pages plus live date-specific booking API reviewed on 22 September 2026 around 07:04 BST. The API confirmed seasonYear 2026 and all four listed dates available at review with unchanged ticket prices; availability may change.",
@@ -992,7 +1017,9 @@
         },
         {
           "url": "https://pennywellfarm.co.uk/pages/find",
-          "supports": "Confirms the Lower Dean address and free parking.",
+          "supports": [
+            "Confirms the Lower Dean address and free parking."
+          ],
           "label": "Directions and parking",
           "retrieval": "Official festival, opening, booking-condition and directions pages retrieved directly with HTTP 200 and reviewed on 23 September 2026 at about 08:59–09:03 BST. Live date-specific booking API retrieved at 08:59:57 BST confirms seasonYear 2026, all four listed dates available and unchanged ticket categories/prices. Availability may change.",
           "previous_retrieval": "Official festival, opening, booking-condition and directions pages plus live date-specific booking API reviewed on 22 September 2026 around 07:04 BST. The API confirmed seasonYear 2026 and all four listed dates available at review with unchanged ticket prices; availability may change.",
@@ -1028,13 +1055,7 @@
         "Separate last admission and the booking rule for a child exactly 90cm tall were not established; check with the provider.",
         "Prices are date-specific and are not a guarantee of the final checkout total."
       ],
-      "previous_verified_at": "2026-09-22",
-      "city": "",
-      "notes": [
-        "Daytime festival activities are included with farm admission; taking a pumpkin home costs extra.",
-        "Free parking. Some outdoor paths are uneven; an all-terrain pushchair is recommended.",
-        "This listing is for the daytime festival. Pumpkin Nights is a separate evening event."
-      ]
+      "previous_verified_at": "2026-09-22"
     },
     {
       "id": "play-the-bluey-way-bristol-2026",
@@ -1079,7 +1100,10 @@
       "sources": [
         {
           "url": "https://www.wethecurious.org/whats-on/events/play-bluey-way",
-          "supports": "The organiser confirms Saturday 19 September 2026, 12.30pm–6.30pm, Millennium Square and free admission with booking essential. The page gives the recommended ages, child-ticket rule, activities, accessibility and water-play advice.",
+          "supports": [
+            "The organiser confirms Saturday 19 September 2026, 12.30pm–6.30pm, Millennium Square and free admission with booking essential.",
+            "The page gives the recommended ages, child-ticket rule, activities, accessibility and water-play advice."
+          ],
           "retrieval": "Official We The Curious event page opened successfully on 14 September 2026.",
           "label": "Official event details and booking"
         }
@@ -1105,12 +1129,7 @@
           "region": "Bristol",
           "fingerprint": "01eb92b092b845569bba0bf1066c5ad323a487f72eb2a65a95d8b19fc59314a3"
         }
-      ],
-      "notes": [
-        "Bring water shoes or wellington boots, plus a change of clothes for the Barky Boat water activity.",
-        "Allow for a possible queue; the experience itself lasts about 15–30 minutes."
-      ],
-      "free_basis": "Free. Each child needs a ticket; adults do not need tickets."
+      ]
     },
     {
       "id": "docks-heritage-weekend-bristol-2026",
@@ -1155,13 +1174,18 @@
       "sources": [
         {
           "url": "https://www.bristolmuseums.org.uk/whats-on/m-shed/docks-heritage-weekend/",
-          "supports": "The organiser confirms 19–20 September 2026 and lists the quiz trail, demonstrations, models, theatre and children's activity. The event page states that ticket charges apply to crane visits and boat trips.",
+          "supports": [
+            "The organiser confirms 19–20 September 2026 and lists the quiz trail, demonstrations, models, theatre and children's activity.",
+            "The event page states that ticket charges apply to crane visits and boat trips."
+          ],
           "retrieval": "Official Bristol Museums event page opened successfully on 14 September 2026.",
           "label": "Official weekend programme"
         },
         {
           "url": "https://www.bristolmuseums.org.uk/m-shed/plan-your-visit/opening-times/",
-          "supports": "The official venue page confirms Saturday and Sunday opening hours of 10am–5pm in 2026.",
+          "supports": [
+            "The official venue page confirms Saturday and Sunday opening hours of 10am–5pm in 2026."
+          ],
           "retrieval": "Official M Shed opening-times page reviewed on 14 September 2026.",
           "label": "Official venue opening times"
         }
@@ -1187,12 +1211,7 @@
           "region": "Bristol",
           "fingerprint": "26400339f75c71fe0e1672880836fee3bcda115df6b63ec0c005c2c3dabd633f"
         }
-      ],
-      "notes": [
-        "Saturday includes the children's paper-boat and colouring workshop; Sunday includes historic Port of Bristol films.",
-        "Working exhibits can change because of weather, mechanical issues or volunteer availability."
-      ],
-      "free_basis": "Free museum entry and core programme. Ticket charges apply to boat trips and crane visits."
+      ]
     },
     {
       "id": "aardman-mini-museum-hunt-bristol-2026",
@@ -1272,7 +1291,10 @@
       "sources": [
         {
           "url": "https://www.bristolmuseums.org.uk/whats-on/bristol-museum-and-art-gallery/mini-museum-hunt-aardman/",
-          "supports": "The event body confirms 13 February–1 November 2026, 10am–5pm, a free all-age family trail, donations welcome, and drop-in entry without booking. Visitors collect a free detective map at Bristol Museum & Art Gallery; the page gives Queens Road, Bristol BS8 1RL.",
+          "supports": [
+            "The event body confirms 13 February–1 November 2026, 10am–5pm, a free all-age family trail, donations welcome, and drop-in entry without booking.",
+            "Visitors collect a free detective map at Bristol Museum & Art Gallery; the page gives Queens Road, Bristol BS8 1RL."
+          ],
           "retrieval": "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Response dated 23 September 2026 with CF-Cache-Status DYNAMIC; this does not establish when the organiser last edited the page. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
           "label": "Official activity details",
           "previous_retrieval": "Official public HTML retrieved directly with curl GET on 22 September 2026 (HTTP 200); visible body, including At a glance / Booking information where present, read after HTML parsing. No booking transaction or on-site check performed.",
@@ -1284,7 +1306,9 @@
         },
         {
           "url": "https://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/plan-your-visit/",
-          "supports": "The official venue page confirms free entry, Tuesday–Sunday opening from 10am–5pm and no booking for ordinary visits.",
+          "supports": [
+            "The official venue page confirms free entry, Tuesday–Sunday opening from 10am–5pm and no booking for ordinary visits."
+          ],
           "retrieval": "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Response dated 23 September 2026 with CF-Cache-Status DYNAMIC; this does not establish when the organiser last edited the page. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
           "label": "Official visitor information",
           "previous_retrieval": "Official public HTML retrieved directly with curl GET on 22 September 2026 (HTTP 200); visible body, including At a glance / Booking information where present, read after HTML parsing. No booking transaction or on-site check performed.",
@@ -1296,7 +1320,9 @@
         },
         {
           "url": "https://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/plan-your-visit/getting-here/",
-          "supports": "Confirms Queens Road and postcode BS8 1RL.",
+          "supports": [
+            "Confirms Queens Road and postcode BS8 1RL."
+          ],
           "label": "Directions",
           "retrieval": "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Response dated 23 September 2026 with CF-Cache-Status DYNAMIC; this does not establish when the organiser last edited the page. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
           "retrieval_history": [
@@ -1307,7 +1333,9 @@
         },
         {
           "url": "https://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/plan-your-visit/planning-school-group-visit/",
-          "supports": "Confirms lifts to all floors and the wildlife-gallery closure notice.",
+          "supports": [
+            "Confirms lifts to all floors and the wildlife-gallery closure notice."
+          ],
           "label": "Museum access",
           "retrieval": "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Response dated 23 September 2026 with CF-Cache-Status DYNAMIC; this does not establish when the organiser last edited the page. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
           "retrieval_history": [
@@ -1340,13 +1368,7 @@
           "fingerprint": "839aaeea706f29ed9e2e21540a41c61515cd6f2a06ab8a0d16bfb5709df9fc78"
         }
       ],
-      "previous_verified_at": "2026-09-22",
-      "notes": [
-        "Collect a free detective map at Bristol Museum & Art Gallery.",
-        "The British and World Wildlife Galleries are closed until summer 2027; the museum and trail remain listed as open."
-      ],
-      "free_basis": "Free trail and free museum entry; donations welcome.",
-      "indoor_basis": "The hunt takes place inside Bristol Museum & Art Gallery, which has lifts to all floors."
+      "previous_verified_at": "2026-09-22"
     },
     {
       "id": "bristol-harbour-railway-train-rides-2026",
@@ -1398,7 +1420,11 @@
       "sources": [
         {
           "url": "https://www.bristolmuseums.org.uk/whats-on/m-shed/train-rides/",
-          "supports": "Confirms 26–27 September 2026 and 11am–5pm; later listed dates are 10–11, 24–25 and 31 October–1 November. No 3–4 October run is listed. The booking block confirms on-the-day platform ticket-office sales, single £3.50 / return £5, under-six free travel, dogs welcome and approximately 15-minute trips. The page names Henbury and warns that volunteer shortages, mechanical faults and adverse weather may alter or cancel rides.",
+          "supports": [
+            "Confirms 26–27 September 2026 and 11am–5pm; later listed dates are 10–11, 24–25 and 31 October–1 November. No 3–4 October run is listed.",
+            "The booking block confirms on-the-day platform ticket-office sales, single £3.50 / return £5, under-six free travel, dogs welcome and approximately 15-minute trips.",
+            "The page names Henbury and warns that volunteer shortages, mechanical faults and adverse weather may alter or cancel rides."
+          ],
           "retrieval": "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Response dated 23 September 2026 with CF-Cache-Status DYNAMIC; this does not establish when the organiser last edited the page. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
           "label": "Official train ride details",
           "previous_retrieval": "Official public HTML retrieved directly with curl GET on 22 September 2026 (HTTP 200); visible body, including At a glance / Booking information where present, read after HTML parsing. No booking transaction or on-site check performed.",
@@ -1410,7 +1436,9 @@
         },
         {
           "url": "https://www.bristolmuseums.org.uk/m-shed/plan-your-visit/",
-          "supports": "The official venue page confirms the M Shed address and free museum entry.",
+          "supports": [
+            "The official venue page confirms the M Shed address and free museum entry."
+          ],
           "retrieval": "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Response dated 23 September 2026 with CF-Cache-Status DYNAMIC; this does not establish when the organiser last edited the page. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
           "label": "Official visitor information",
           "previous_retrieval": "Official public HTML retrieved directly with curl GET on 22 September 2026 (HTTP 200); visible body, including At a glance / Booking information where present, read after HTML parsing. No booking transaction or on-site check performed.",
@@ -1422,7 +1450,9 @@
         },
         {
           "url": "https://www.bristolmuseums.org.uk/m-shed/venue-hire/",
-          "supports": "Confirms Princes Wharf, Wapping Road, Bristol BS1 4RN.",
+          "supports": [
+            "Confirms Princes Wharf, Wapping Road, Bristol BS1 4RN."
+          ],
           "label": "M Shed location",
           "retrieval": "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Response dated 23 September 2026 with CF-Cache-Status DYNAMIC; this does not establish when the organiser last edited the page. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
           "retrieval_history": [
@@ -1456,12 +1486,7 @@
           "fingerprint": "f9967b69d6f23ce4f7cf7cb958e9a211a2abbc447f3696c72f326c5e79ad42ba"
         }
       ],
-      "previous_verified_at": "2026-09-22",
-      "notes": [
-        "Trips last approximately 15 minutes. Buy tickets at the ticket office by the M Shed platform.",
-        "Check the official page on the day because weather, mechanical issues or crew availability can alter the service.",
-        "Children under six travel free; dogs are welcome."
-      ]
+      "previous_verified_at": "2026-09-22"
     },
     {
       "id": "visit-the-villa-kings-weston-2026",
@@ -1506,7 +1531,11 @@
       "sources": [
         {
           "url": "https://www.bristolmuseums.org.uk/whats-on/blaise-museum/visit-the-villa/",
-          "supports": "Confirms Saturday 26 September 2026, 10am–2pm, Roman soldiers and the listed family activities. The event booking block explicitly states free admission, donations welcome, drop-in attendance with no booking, and an outdoor archaeological site with uneven/grassy surfaces and low walls. The event location block gives Kings Weston Roman Villa, Long Cross, Bristol BS11 0LH; nearby street parking and buses 3 or 4 are mentioned.",
+          "supports": [
+            "Confirms Saturday 26 September 2026, 10am–2pm, Roman soldiers and the listed family activities.",
+            "The event booking block explicitly states free admission, donations welcome, drop-in attendance with no booking, and an outdoor archaeological site with uneven/grassy surfaces and low walls.",
+            "The event location block gives Kings Weston Roman Villa, Long Cross, Bristol BS11 0LH; nearby street parking and buses 3 or 4 are mentioned."
+          ],
           "retrieval": "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Response dated 23 September 2026 with CF-Cache-Status DYNAMIC; this does not establish when the organiser last edited the page. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
           "label": "Official villa event details",
           "previous_retrieval": "Official public HTML retrieved directly with curl GET on 22 September 2026 (HTTP 200); visible body, including At a glance / Booking information where present, read after HTML parsing. No booking transaction or on-site check performed.",
@@ -1518,7 +1547,9 @@
         },
         {
           "url": "https://www.bristolmuseums.org.uk/plan-your-visit/",
-          "supports": "Bristol Museums confirms free entry to its venues and welcomes donations.",
+          "supports": [
+            "Bristol Museums confirms free entry to its venues and welcomes donations."
+          ],
           "retrieval": "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Response dated 23 September 2026 with CF-Cache-Status DYNAMIC; this does not establish when the organiser last edited the page. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
           "label": "Official admission information",
           "previous_retrieval": "Official public HTML retrieved directly with curl GET on 22 September 2026 (HTTP 200); visible body, including At a glance / Booking information where present, read after HTML parsing. No booking transaction or on-site check performed.",
@@ -1530,7 +1561,10 @@
         },
         {
           "url": "https://www.bristolmuseums.org.uk/blaise-museum/whats-at/kings-weston-roman-villa/",
-          "supports": "Confirms the villa remains and family open days; school and organised group visits require advance arrangements, and separately arranged guided tours may have a fee. The Additional information block gives Long Cross, Lawrence Weston, Bristol BS11 0LP, which conflicts with BS11 0LH on the dated event page.",
+          "supports": [
+            "Confirms the villa remains and family open days; school and organised group visits require advance arrangements, and separately arranged guided tours may have a fee.",
+            "The Additional information block gives Long Cross, Lawrence Weston, Bristol BS11 0LP, which conflicts with BS11 0LH on the dated event page."
+          ],
           "label": "Villa visit information",
           "retrieval": "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Response dated 23 September 2026 with CF-Cache-Status DYNAMIC; this does not establish when the organiser last edited the page. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
           "retrieval_history": [
@@ -1565,13 +1599,7 @@
           "fingerprint": "f0638dacdcc9f2aa29dd9385bbf57260a73c86989b7d890f546712654a1ed2a1"
         }
       ],
-      "previous_verified_at": "2026-09-22",
-      "notes": [
-        "The event includes Roman soldiers, craft activities, dressing up and trails.",
-        "Expect uneven surfaces, grassy areas and low walls.",
-        "The organiser mentions parking on surrounding residential streets and buses 3 or 4 stopping on Long Cross."
-      ],
-      "free_basis": "Free; donations welcome."
+      "previous_verified_at": "2026-09-22"
     },
     {
       "id": "great-bristol-ball-run-2026",
@@ -1637,7 +1665,11 @@
       "sources": [
         {
           "url": "https://www.wethecurious.org/whats-on/events/great-bristol-ball-run",
-          "supports": "The organiser confirms six giant ball runs from 4 August to 2 November 2026 across Millennium Square and Anchor Square. The official listing confirms a wooden ball costs £6 and can be kept and reused. The page classifies the six runs as outdoors and partially accessible; it provides no numerical age range or separate outdoor operating timetable.",
+          "supports": [
+            "The organiser confirms six giant ball runs from 4 August to 2 November 2026 across Millennium Square and Anchor Square.",
+            "The official listing confirms a wooden ball costs £6 and can be kept and reused.",
+            "The page classifies the six runs as outdoors and partially accessible; it provides no numerical age range or separate outdoor operating timetable."
+          ],
           "retrieval": "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Request started 07:59:28 UTC; response Date 07:59:29 UTC, X-Cache HIT and Age 64 seconds. The web search copy was labelled crawled yesterday; verification uses the directly retrieved body. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
           "label": "Official ball run details",
           "previous_retrieval": "Official public HTML retrieved directly with curl GET on 22 September 2026 (HTTP 200); visible body, including At a glance / Booking information where present, read after HTML parsing. No booking transaction or on-site check performed.",
@@ -1649,7 +1681,9 @@
         },
         {
           "url": "https://www.wethecurious.org/visit-us",
-          "supports": "The FAQ confirms Tuesday–Sunday 10am–5pm in term time and the same hours for the shop. The contact line 9am–4.30pm Monday–Friday is not the shop timetable.",
+          "supports": [
+            "The FAQ confirms Tuesday–Sunday 10am–5pm in term time and the same hours for the shop. The contact line 9am–4.30pm Monday–Friday is not the shop timetable."
+          ],
           "label": "Shop opening information",
           "retrieval": "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Request started 07:59:28 UTC; response Date 07:59:30 UTC, X-Cache MISS and Age 0. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
           "retrieval_history": [
@@ -1683,12 +1717,7 @@
           "fingerprint": "bddec6e53ca538a4afa21eeb267995837bf1101c09150580a922ad24ef6a5df9"
         }
       ],
-      "previous_verified_at": "2026-09-22",
-      "notes": [
-        "Keep the wooden ball to reuse on all six runs and on repeat visits.",
-        "The shop normally opens 10am–5pm on Saturdays and Sundays. These are ball-collection hours; separate outdoor activity hours remain TBC.",
-        "The organiser labels this outdoor activity as partially accessible; check access for your family."
-      ]
+      "previous_verified_at": "2026-09-22"
     },
     {
       "id": "donkey-sanctuary-curious-coastal-quest-2026",
@@ -1746,7 +1775,10 @@
       "sources": [
         {
           "url": "https://www.thedonkeysanctuary.org.uk/visit-us/events/01-06-2026/curious-coastal-quest",
-          "supports": "Confirms a daily family trail from 1 June to 30 September 2026, £5 including a prize, no booking required, and free general admission and parking. The trail involves coastal-themed boards and stickers; the event is listed as all day.",
+          "supports": [
+            "Confirms a daily family trail from 1 June to 30 September 2026, £5 including a prize, no booking required, and free general admission and parking.",
+            "The trail involves coastal-themed boards and stickers; the event is listed as all day."
+          ],
           "retrieval": "Official event and Sidmouth visitor pages read in Chrome on 23 September 2026 around 09:00–09:01 BST after web retrieval returned 403. Expanded visitor FAQs rechecked the Hermitage Woods/Nature Centre closure and other open outdoor areas. No booking or contact was made.",
           "label": "Official trail details",
           "previous_retrieval": "Official event and Sidmouth visitor pages read in Chrome on 22 September 2026 around 07:04–07:05 BST after web retrieval failed. Expanded visitor FAQs confirmed the specific Hermitage Woods/Nature Centre closure and other open outdoor areas.",
@@ -1758,7 +1790,11 @@
         },
         {
           "url": "https://www.thedonkeysanctuary.org.uk/visit-us/sidmouth",
-          "supports": "Confirms sanctuary opening seven days a week, 9am–5pm, and last car-park entry at 4.30pm. Confirms the Sidmouth location, free entry and parking. Expanded visitor FAQs state that Hermitage Woods and the Nature Centre are closed due to ash dieback; walkways around Slade House Farm and Trow Farm, plus the play area and maze, remain open. The current event page continues to list the Coastal Quest through 30 September.",
+          "supports": [
+            "Confirms sanctuary opening seven days a week, 9am–5pm, and last car-park entry at 4.30pm.",
+            "Confirms the Sidmouth location, free entry and parking.",
+            "Expanded visitor FAQs state that Hermitage Woods and the Nature Centre are closed due to ash dieback; walkways around Slade House Farm and Trow Farm, plus the play area and maze, remain open. The current event page continues to list the Coastal Quest through 30 September."
+          ],
           "retrieval": "Official event and Sidmouth visitor pages read in Chrome on 23 September 2026 around 09:00–09:01 BST after web retrieval returned 403. Expanded visitor FAQs rechecked the Hermitage Woods/Nature Centre closure and other open outdoor areas. No booking or contact was made.",
           "label": "Visiting and opening times",
           "previous_retrieval": "Official event and Sidmouth visitor pages read in Chrome on 22 September 2026 around 07:04–07:05 BST after web retrieval failed. Expanded visitor FAQs confirmed the specific Hermitage Woods/Nature Centre closure and other open outdoor areas.",
@@ -1794,13 +1830,7 @@
           "fingerprint": "a303774a98f9ae3a93962d5522bf1b2a250c5afcf84b1bce4996448eb2cb834a"
         }
       ],
-      "previous_verified_at": "2026-09-22",
-      "city": "",
-      "notes": [
-        "The trail costs £5 even though sanctuary entry and parking are free.",
-        "The hours shown are sanctuary opening times. Last car-park entry is 4.30pm; the sanctuary closes at 5pm. A separate trail sales cutoff is TBC.",
-        "Hermitage Woods and the Nature Centre are closed due to ash dieback; follow the open sanctuary routes."
-      ]
+      "previous_verified_at": "2026-09-22"
     },
     {
       "id": "powderham-food-festival-2026",
@@ -1811,7 +1841,7 @@
       "locality": "Kenton, near Exeter",
       "address": "Powderham Castle, Kenton, Exeter, Devon EX6 8JQ",
       "age_text": "Family-friendly. Adult tickets are for ages 16+; under-16s must be accompanied by a paying adult aged 18 or over. Individual activity age guidance TBC.",
-      "price_text": "Ticketed: adult 16+ admission £5.50 in advance or £7.50 on the gate. Under-16s enter free but need a ticket. Check the final booking total.",
+      "price_text": "Ticketed: adult 16+ admission GBP 5.50 in advance or GBP 7.50 on the gate. Under-16s enter free but need a ticket. Check the final booking total.",
       "price_type": "paid",
       "booking_text": "Book advance tickets online, including a free ticket for each under-16. Under-16s must be accompanied by a paying adult aged 18 or over. Gate admission is advertised. Check the final booking total; live availability may change.",
       "schedule_text": "Saturday 3 and Sunday 4 October 2026, 10am–5pm each day.",
@@ -1853,7 +1883,9 @@
         {
           "url": "https://www.powderhamfoodfestival.com/",
           "label": "Official festival details",
-          "supports": "Confirms the 3–4 October 2026 festival, food and craft stalls, demonstrations and family entertainment.",
+          "supports": [
+            "Confirms the 3–4 October 2026 festival, food and craft stalls, demonstrations and family entertainment."
+          ],
           "retrieval": "Official festival, visit, tickets and accessibility pages retrieved directly with HTTP 200 at about 08:59:57 BST on 23 September 2026 and reviewed. Linked TicketMonkey page read in Chrome around 09:01–09:03 BST: after hydration both adult 16+ ticket entries show GBP 5.00, contradicting the festival website GBP 5.50 advance price. No cart addition, reservation or checkout was made.",
           "previous_retrieval": "Official festival, visit, tickets and accessibility pages read on 22 September 2026 around 07:04–07:06 BST. The linked TicketMonkey page was then checked in Chrome; both day accordions now identify adult admission as 16+.",
           "retrieval_history": [
@@ -1864,7 +1896,9 @@
         {
           "url": "https://www.powderhamfoodfestival.com/visit/",
           "label": "Tickets, times and visiting",
-          "supports": "Confirms 2026 dates, 10am–5pm opening both days, adult advance and gate prices, required free under-16 tickets, free parking and address.",
+          "supports": [
+            "Confirms 2026 dates, 10am–5pm opening both days, adult advance and gate prices, required free under-16 tickets, free parking and address."
+          ],
           "retrieval": "Evening 23 September 2026 recheck: official visit and ticket pages reviewed through web (today crawl label). Live Chrome booking day accordions show adult 16+ GBP 5.50 for Saturday and Sunday, free under-16 tickets; Sunday price also screenshot-confirmed. Current ticket terms retain paying-adult age 18+ accompaniment. No cart, reservation or checkout.",
           "previous_retrieval": "Official festival, visit, tickets and accessibility pages retrieved directly with HTTP 200 at about 08:59:57 BST on 23 September 2026 and reviewed. Linked TicketMonkey page read in Chrome around 09:01–09:03 BST: after hydration both adult 16+ ticket entries show GBP 5.00, contradicting the festival website GBP 5.50 advance price. No cart addition, reservation or checkout was made.",
           "retrieval_history": [
@@ -1876,7 +1910,9 @@
         {
           "url": "https://www.powderhamfoodfestival.com/tickets/",
           "label": "Book festival tickets",
-          "supports": "Confirms adult advance GBP 5.50 and gate GBP 7.50, under-16 free ticket requirement and links to official TicketMonkey booking.",
+          "supports": [
+            "Confirms adult advance GBP 5.50 and gate GBP 7.50, under-16 free ticket requirement and links to official TicketMonkey booking."
+          ],
           "retrieval": "Evening 23 September 2026 recheck: official visit and ticket pages reviewed through web (today crawl label). Live Chrome booking day accordions show adult 16+ GBP 5.50 for Saturday and Sunday, free under-16 tickets; Sunday price also screenshot-confirmed. Current ticket terms retain paying-adult age 18+ accompaniment. No cart, reservation or checkout.",
           "previous_retrieval": "Official festival, visit, tickets and accessibility pages retrieved directly with HTTP 200 at about 08:59:57 BST on 23 September 2026 and reviewed. Linked TicketMonkey page read in Chrome around 09:01–09:03 BST: after hydration both adult 16+ ticket entries show GBP 5.00, contradicting the festival website GBP 5.50 advance price. No cart addition, reservation or checkout was made.",
           "retrieval_history": [
@@ -1900,7 +1936,9 @@
         {
           "url": "https://www.powderhamfoodfestival.com/accessibility/",
           "label": "Accessibility",
-          "supports": "Confirms accessible parking and toilets in the festival car park.",
+          "supports": [
+            "Confirms accessible parking and toilets in the festival car park."
+          ],
           "retrieval": "Official festival, visit, tickets and accessibility pages retrieved directly with HTTP 200 at about 08:59:57 BST on 23 September 2026 and reviewed. Linked TicketMonkey page read in Chrome around 09:01–09:03 BST: after hydration both adult 16+ ticket entries show GBP 5.00, contradicting the festival website GBP 5.50 advance price. No cart addition, reservation or checkout was made.",
           "previous_retrieval": "Official festival, visit, tickets and accessibility pages read on 22 September 2026 around 07:04–07:06 BST. The linked TicketMonkey page was then checked in Chrome; both day accordions now identify adult admission as 16+.",
           "retrieval_history": [
@@ -1911,7 +1949,9 @@
         {
           "url": "https://shop.ticketmonkey.co.uk/events/37b6c6d4-14ed-4f31-98ba-f27dfba75bad/terms",
           "label": "Official event ticket conditions",
-          "supports": "Under-16s must be accompanied by a paying adult aged 18 or over.",
+          "supports": [
+            "Under-16s must be accompanied by a paying adult aged 18 or over."
+          ],
           "retrieval": "Evening 23 September 2026 recheck: official visit and ticket pages reviewed through web (today crawl label). Live Chrome booking day accordions show adult 16+ GBP 5.50 for Saturday and Sunday, free under-16 tickets; Sunday price also screenshot-confirmed. Current ticket terms retain paying-adult age 18+ accompaniment. No cart, reservation or checkout.",
           "retrieval_history": [
             "Linked official ticket conditions read in Chrome on 23 September 2026 around 09:03 BST. No fee explanation appeared in the displayed conditions; no agreement was accepted."
@@ -1944,14 +1984,39 @@
           "fingerprint": "25e6d6f972475453014466647f94534e08ca87e57e0a34abed03b848c156053c"
         }
       ],
-      "previous_verified_at": "2026-09-22",
-      "city": "",
-      "notes": [
-        "Free parking is signposted from the A379. Accessible parking and toilets are available.",
-        "The festival is outdoors on grass, hardstanding and estate paths.",
-        "Under-16s need a free ticket and must be accompanied by a paying adult aged 18 or over; visitors aged 16 and over need an adult ticket.",
-        "Parking is free; food, drink and purchases cost extra. Check the final booking total and live availability."
-      ]
+      "previous_verified_at": "2026-09-22"
+    }
+  ],
+  "previous_research_file": "verified-candidates-2026-09-22.json",
+  "reviewed_at": "2026-09-23T09:09:06.216010+01:00",
+  "review_notes": [
+    "Reverified 12 selected records on 23 September 2026. Source-specific retrieval limits and prior evidence are retained. Seven historical records remain unchanged.",
+    "RAMM has new Gallery 20 event and maintenance closure notices. The banners omit full calendar dates; affected dates remain TBC and no whole-museum closure is inferred. A practical note links visitors to current official notices.",
+    "Powderham official website advance price GBP 5.50 differs from the fully loaded linked booking display GBP 5.00. Final advance total is TBC; no fee explanation or checkout total was established. Under-16s need a free ticket and accompaniment by a paying adult aged 18 or over.",
+    "Only master description cells N5 and N105 were amended. Native readback preserved neighbouring cells, formatting and validations. The Powderham events row104 remains Ticketed and unchanged. Published CSV values matched before refreshing the two affected bindings.",
+    "Initial CSV retrieval returned HTTP 400; subsequent retrievals of the unchanged canonical published URLs succeeded. The normal live guard is retained.",
+    "Exeter has two current and two next-weekend choices; Bristol has four current and two next-weekend choices. Free and rainy-day guides each retain four choices. No new event rows are needed.",
+    "Bristol Villa postcode conflict, Ball Run activity-time TBC, and Donkey Sanctuary partial access restrictions remain. No unrelated records, regions, application assets or automation settings changed.",
+    "Evening run preserves all morning verified_at values. Powderham official live ticket price was rechecked and now matches GBP 5.50 advance; the morning price conflict is historical. RAMM Gallery 20 notice remains limited to the named gallery and incomplete dates."
+  ],
+  "excluded_candidates": [
+    {
+      "name": "Underground Passages Heritage Open Days free tours",
+      "reason": "Marked sold out on the official council tourism page; not added as an available event.",
+      "source_url": "https://www.visitexeter.com/whats-on/heritage-open-days-2026",
+      "checked_at": "2026-09-13",
+      "scope_note": "Does not determine availability of ordinary paid tours."
+    },
+    {
+      "candidate_id": "453480a2ba59e1f4c2532090",
+      "name": "Pumpkin Trick or Treat Trail – The Donkey Sanctuary",
+      "official_url": "https://www.thedonkeysanctuary.org.uk/visit-us/events/01-10-2026/pumpkin-trick-or-treat-trail",
+      "review": "Browser confirms 1 October–2 November 2026, no booking, family trail with prize, free general admission and parking. Current event page does not display a trail price; existing Sheet GBP 5 could not be reverified. Do not transfer the Coastal Quest price to this different event. Not proposed for SEO pending official price confirmation.",
+      "sheet_rows": [
+        132,
+        150
+      ],
+      "can_renew_verified_at": false
     }
   ]
 }
