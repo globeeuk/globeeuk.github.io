@@ -51,3 +51,10 @@ This section supersedes the deployment behaviour described above and the 13 Sept
 - HTTP 204 proves endpoint acknowledgement only; report visibility is a separate check. No historical recovery or exact historic cutoff has been established.
 
 References: [Google modelling rules](https://support.google.com/analytics/answer/11161109?hl=en), [Google consent behaviour](https://support.google.com/analytics/answer/13802165?hl=en).
+
+### Publication and remaining report check
+
+- Published commit `0ff55b8`; the served script matches the committed SHA-256. Public home, Halloween and Bristol guide pages passed inline/no-overflow checks at 390px and 1440px. No GA request was made while the choice remained unanswered.
+- The property web stream measurement ID matches `G-YRRY654LS1`. Its active `Internal Traffic` exclusion and `Home network` rule were inspected: the rule matches one exact IP, not all traffic. No property setting was changed.
+- A post-publication consented request received HTTP 204 with `G101`, `page_view` and `tt=internal`. This explains why tests from this network cannot validate public-audience counts in Realtime. Google tag diagnostics also displayed that the tag was sending data without detected issues.
+- The owner was asked to make one consented mobile-data visit with Wi-Fi off. Actual non-internal report appearance remains unverified pending that visit. Do not claim that HTTP acknowledgement or the code fix alone proves report receipt, or that prior zero counts meant no visitors.
