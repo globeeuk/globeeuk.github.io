@@ -11,24 +11,33 @@
   }catch{enabled=false;/* Without persistent preferences, leave measurement off. */}
   if(navigator.globalPrivacyControl===true)enabled=false;
   const notice=document.createElement('aside');
-  notice.className='basic-analytics-notice content-width';
+  notice.className='basic-analytics-notice';
   notice.setAttribute('aria-label','Basic site statistics');
-  notice.style.cssText='font-size:12px;line-height:1.6;padding:8px 0;color:#595959';
+  notice.style.cssText='display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 18px;width:100%;flex-basis:100%;margin-top:4px;padding-top:16px;border-top:1px solid #e6e4df;font-size:11px;line-height:1.6;color:#66665f';
   const text=document.createElement('span');
   text.textContent=!live?'Local preview: basic statistics are not sent. ':enabled?'We use cookie-free visit counts to improve Globee. ':'Cookie-free visit counts are off on this browser. ';
+  const actions=document.createElement('span');
+  actions.style.cssText='display:inline-flex;align-items:center;flex-wrap:wrap;gap:4px 12px';
   const toggle=document.createElement('button');
   toggle.type='button';toggle.dataset.basicAnalyticsToggle='';
   toggle.textContent=enabled?'Stop basic statistics':'Enable basic statistics';
-  toggle.style.cssText='font:inherit;color:inherit;background:none;border:0;text-decoration:underline;cursor:pointer;padding:4px';
+  toggle.style.cssText='font:inherit;color:inherit;background:none;border:0;text-decoration:underline;cursor:pointer;padding:4px 0';
   if(navigator.globalPrivacyControl===true){toggle.disabled=true;toggle.textContent='Disabled by your browser privacy signal';}
   toggle.addEventListener('click',()=>{
     try{localStorage.setItem(KEY,enabled?'off':'on');}catch{text.textContent='Your browser cannot save this setting. Basic statistics remain off. ';return;}
     // Reload so the third-party beacon and its listeners are removed completely.
     location.reload();
   });
-  const details=document.createElement('a');details.href='/privacy.html';details.textContent='Privacy details';details.style.marginLeft='8px';
-  notice.append(text,toggle,details);
-  const main=document.querySelector('main');if(main)main.prepend(notice);else document.body.appendChild(notice);
+  const details=document.createElement('a');details.href='/privacy.html';details.textContent='Privacy details';details.style.color='inherit';
+  actions.append(toggle,details);notice.append(text,actions);
+  const footer=document.querySelector('footer');
+  if(footer){footer.style.flexWrap='wrap';footer.appendChild(notice);}
+  else{
+    const main=document.querySelector('main');
+    const container=main||document.body;
+    if(!container.classList.contains('content-width'))notice.classList.add('content-width');
+    container.appendChild(notice);
+  }
   if(!live||!enabled)return;
   const script=document.createElement('script');script.type='module';
   script.src='https://static.cloudflareinsights.com/beacon.min.js';

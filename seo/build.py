@@ -299,7 +299,7 @@ def head(title, description, route, indexable, schema, production=False, *, regi
     robots = "index,follow" if indexable else "noindex,follow"
     canonical = PUBLIC_BASE + route
     structured = json.dumps(schema, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e")
-    analytics = '<script defer src="/basic-analytics.js?v=basic1"></script>\n<script defer src="/analytics.js?v=consent3"></script>' if production else ""
+    analytics = '<script defer src="/basic-analytics.js?v=basic2"></script>\n<script defer src="/analytics.js?v=consent3"></script>' if production else ""
     return f'''<!doctype html><html lang="en-GB"><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"><title>{esc(title)} | Globee</title>
     <meta name="description" content="{esc(description)}"><meta name="robots" content="{robots}">
