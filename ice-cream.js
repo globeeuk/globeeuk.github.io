@@ -5,9 +5,16 @@
   const safe=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const cone='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9a7 7 0 0 1 14 0M5 9h14l-7 13ZM8 9l4 10M16 9l-4 10"/></svg>';
   const params=new URLSearchParams(location.search);
-  let region=params.get('region')==='Bristol'?'Bristol':'Devon';
+  const incomingRegion=params.get('from')||params.get('region');
+  const returnRegion=['Devon','Bristol','Nottingham'].includes(incomingRegion)?incomingRegion:'Devon';
+  if(params.has('region')){
+    params.delete('region');params.set('from',returnRegion);
+    history.replaceState(null,'',`${location.pathname}?${params}`);
+  }
+  let region=['Devon','Bristol'].includes(params.get('area'))?params.get('area'):'All';
   let listed=false,map=null,markers=[],selectedId=null,assetPromise=null;
-  const current=()=>places.filter(place=>place.region===region);
+  const current=()=>region==='All'?places:places.filter(place=>place.region===region);
+  const status=()=>region==='All'?`${current().length} places across Devon & Bristol · Zoom in or choose a region to separate nearby pins.`:`${current().length} places on the map · Tap a pin for scoop notes.`;
   const placeArea=place=>place.town===place.region?place.town:`${place.town} · ${place.region}`;
   function placeLinks(place){
     const query=encodeURIComponent(`${place.name}, ${place.address}`);
@@ -42,7 +49,7 @@
   function fitRegion(){
     if(!map)return;
     const visible=current();
-    if(visible.length)map.fitBounds(L.latLngBounds(visible.map(place=>place.coords)),{paddingTopLeft:[38,45],paddingBottomRight:[38,155],maxZoom:13,animate:false});
+    if(visible.length)map.fitBounds(L.latLngBounds(visible.map(place=>place.coords)),{paddingTopLeft:[38,45],paddingBottomRight:region==='All'&&!selectedId?[38,45]:[38,155],maxZoom:13,animate:false});
     else map.setView(region==='Bristol'?[51.4545,-2.5879]:[50.7236,-3.5303],11);
   }
   function loadAssets(){
@@ -75,8 +82,9 @@
       }
     }
     map.invalidateSize();drawMarkers();fitRegion();
-    if(!selectedId||!current().some(place=>place.id===selectedId))select(current()[0]?.id);
-    $('#scoop-status').textContent=`${current().length} places on the map · Tap a pin for scoop notes.`;
+    if(region==='All'&&!selectedId)$('#scoop-selection').hidden=true;
+    else if(!selectedId||!current().some(place=>place.id===selectedId))select((current().find(place=>place.region===returnRegion)||current()[0])?.id);
+    $('#scoop-status').textContent=status();
   }
   function setList(value){
     listed=value;
@@ -87,20 +95,20 @@
     if(!value)requestAnimationFrame(showMap);
   }
   function render(){
-    const label=region==='Bristol'?'Bristol':'Exeter & Devon';
+    const label=region==='All'?'Devon & Bristol':region==='Bristol'?'Bristol':'Exeter & Devon';
     $('#scoop-region-label').textContent=label;
     $('#scoop-count').textContent=`${current().length} places`;
-    $('#scoop-status').textContent=`${current().length} places on the map · Tap a pin for scoop notes.`;
-    $('#scoop-home-link').href=`index.html?region=${region}`;
-    $('#scoop-back').href=`index.html?region=${region}`;
-    $('#scoop-footer-home').href=`index.html?region=${region}`;
+    $('#scoop-status').textContent=status();
+    $('#scoop-home-link').href=`index.html?region=${returnRegion}`;
+    $('#scoop-back').href=`index.html?region=${returnRegion}`;
+    $('#scoop-footer-home').href=`index.html?region=${returnRegion}`;
     document.querySelectorAll('[data-scoop-region]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.scoopRegion===region)));
     renderList();
     if(!listed)showMap();
   }
   document.addEventListener('click',event=>{
     const regionButton=event.target.closest('[data-scoop-region]');
-    if(regionButton){region=regionButton.dataset.scoopRegion;selectedId=null;params.set('region',region);history.replaceState(null,'',`${location.pathname}?${params}`);render();return;}
+    if(regionButton){region=regionButton.dataset.scoopRegion;selectedId=null;if(region==='All')params.delete('area');else params.set('area',region);const query=params.toString();history.replaceState(null,'',`${location.pathname}${query?`?${query}`:''}`);render();return;}
     if(event.target.closest('[data-close-selection]')){$('#scoop-selection').hidden=true;selectedId=null;drawMarkers();return;}
     const see=event.target.closest('[data-see-on-map]');if(see){selectedId=see.dataset.seeOnMap;setList(false);$('#scoop-map-stage').scrollIntoView({block:'start'});return;}
     if(event.target.closest('#scoop-view-toggle'))setList(!listed);

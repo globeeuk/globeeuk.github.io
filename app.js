@@ -193,9 +193,7 @@ function render(){
   if($('.weekend-shortcut'))$('.weekend-shortcut').hidden=!!activeEdit;
   const scoopPromo=$('#scoop-promo');
   if(scoopPromo){
-    scoopPromo.hidden=state.region==='Nottingham'||!!hasFilters()||state.view==='map';
-    $('#scoop-promo-link').href=`ice-cream.html?region=${state.region==='Bristol'?'Bristol':'Devon'}`;
-    $('#scoop-promo-region').textContent=`Explore by map · ${state.region==='Bristol'?'Bristol':'Exeter & Devon'}`;
+    $('#scoop-promo-link').href=`ice-cream.html?from=${state.region==='Exeter'?'Devon':state.region}`;
   }
   $('#results-heading').textContent=state.view==='map'?(activeEdit?`${activeEdit.title} on the map`:'Explore on the map'):activeEdit?`All ${activeEdit.title}`:weekendOnlyPilot?'Bristol is growing 🐝':hasFilters()?'Matching plans':isPlansPage?'All upcoming plans':'Explore all';
   $('#results-subtitle').textContent=activeEdit?`${activeEdit.subtitle} · Until ${dateShort(activeEdit.end)}`:weekendOnlyPilot?`We’re starting with ${places.length} checked picks for this weekend.`:isPlansPage?'What’s on & holiday clubs':hasFilters()?'Places and activities that match your filters.':'Places, what’s on & holiday clubs';
