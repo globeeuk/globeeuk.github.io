@@ -191,6 +191,12 @@ function render(){
     document.title=activeEdit?`${activeEdit.title} in ${state.region==='Exeter'?'Exeter & Devon':state.region} | Globee`:'What’s on & holiday clubs | Globee';
   }
   if($('.weekend-shortcut'))$('.weekend-shortcut').hidden=!!activeEdit;
+  const scoopPromo=$('#scoop-promo');
+  if(scoopPromo){
+    scoopPromo.hidden=state.region==='Nottingham'||!!hasFilters()||state.view==='map';
+    $('#scoop-promo-link').href=`ice-cream.html?region=${state.region==='Bristol'?'Bristol':'Devon'}`;
+    $('#scoop-promo-region').textContent=`Explore by map · ${state.region==='Bristol'?'Bristol':'Exeter & Devon'}`;
+  }
   $('#results-heading').textContent=state.view==='map'?(activeEdit?`${activeEdit.title} on the map`:'Explore on the map'):activeEdit?`All ${activeEdit.title}`:weekendOnlyPilot?'Bristol is growing 🐝':hasFilters()?'Matching plans':isPlansPage?'All upcoming plans':'Explore all';
   $('#results-subtitle').textContent=activeEdit?`${activeEdit.subtitle} · Until ${dateShort(activeEdit.end)}`:weekendOnlyPilot?`We’re starting with ${places.length} checked picks for this weekend.`:isPlansPage?'What’s on & holiday clubs':hasFilters()?'Places and activities that match your filters.':'Places, what’s on & holiday clubs';
   $('#result-count').textContent=weekendOnlyPilot?'':`${places.length} ${places.length===1?'result':'results'}`;
