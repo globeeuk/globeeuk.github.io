@@ -58,3 +58,14 @@ References: [Google modelling rules](https://support.google.com/analytics/answer
 - The property web stream measurement ID matches `G-YRRY654LS1`. Its active `Internal Traffic` exclusion and `Home network` rule were inspected: the rule matches one exact IP, not all traffic. No property setting was changed.
 - A post-publication consented request received HTTP 204 with `G101`, `page_view` and `tt=internal`. This explains why tests from this network cannot validate public-audience counts in Realtime. Google tag diagnostics also displayed that the tag was sending data without detected issues.
 - The owner was asked to make one consented mobile-data visit with Wi-Fi off. Actual non-internal report appearance remains unverified pending that visit. Do not claim that HTTP acknowledgement or the code fix alone proves report receipt, or that prior zero counts meant no visitors.
+
+## 24 September 2026 — separate cookie-free basic statistics
+
+- Created a free Cloudflare Web Analytics site for `globeeuk.github.io`; manually installed the dashboard-provided public beacon token. Hosting and DNS remain on GitHub Pages.
+- `basic-analytics.js` runs before the separate GA consent script. New browsers receive basic counts by default; prior recorded refusals migrate to basic statistics off. Later GA choices do not change this separate preference.
+- A visible inline notice links to privacy information and offers a one-click stop. Changing the preference reloads the document to remove the beacon and its listeners. Global Privacy Control and unavailable preference storage leave basic statistics off. Local previews never load either provider.
+- No advertising purpose or persistent visitor identifier is added. Cloudflare counts visits/page views, not unique people. Counts are in Cloudflare, not GA4. Ad blockers and explicit refusals still cause omissions.
+- The current official beacon (JS version 2026.9.1) cleans query strings/fragments from reported location and referrer. SPA tracking is disabled so directory filter changes do not inflate page views.
+- Local verification: 7 existing Node checks, 37 SEO checks, plus browser scenarios for default counts, GA separation, refusal migration, stop/reload, Global Privacy Control, storage failure, local preview and mobile overflow passed. External scripts were stubbed for these scenarios to avoid fabricated report traffic.
+- Reference: https://developers.cloudflare.com/web-analytics/get-started/ and https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/what-are-the-exceptions/ . Use is limited to service-improvement statistics, with clear information and a free means to object.
+- Live endpoint receipt and dashboard display are separate checks; deployment verification is recorded below when observed.

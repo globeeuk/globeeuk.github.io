@@ -33,7 +33,7 @@
       button.setAttribute('aria-expanded',String(!panel.hidden));
     });
     document.querySelectorAll('[data-analytics-status]').forEach(status=>{
-      status.textContent=!live?'Local preview: analytics are not sent.':choice==='granted'?'Analytics cookies are allowed on this browser.':choice==='denied'?'Analytics are stopped on this browser.':'Analytics are off until you choose Allow analytics.';
+      status.textContent=!live?'Local preview: analytics are not sent.':choice==='granted'?'Analytics cookies are allowed on this browser.':choice==='denied'?'Google Analytics cookies are off on this browser.':'Google Analytics is off until you choose Allow analytics.';
     });
   }
   function pageView(){gtag('event','page_view',{page_location:location.origin+location.pathname,page_title:document.title});}

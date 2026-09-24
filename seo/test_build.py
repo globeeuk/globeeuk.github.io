@@ -147,7 +147,7 @@ class GuideChecks(unittest.TestCase):
             self.assertIn('rel="canonical" href="https://globeeuk.github.io/exeter/this-weekend/"', html)
             self.assertIn("Quayside Shanty", html)
             self.assertNotIn("fetch(", html)
-            self.assertIn('<script defer src="/analytics.js?v=consent2"></script>', html)
+            self.assertIn('<script defer src="/analytics.js?v=consent3"></script>', html)
             self.assertNotIn("googletagmanager", html)
             self.assertNotIn("gtag(", html)
             self.assertNotIn('id="analytics-choice"', html)
@@ -159,7 +159,7 @@ class GuideChecks(unittest.TestCase):
             hub = (destination / "exeter/index.html").read_text()
             self.assertNotIn('id="analytics-choice"', hub)
             self.assertIn('data-analytics-toggle', hub)
-            self.assertIn('<script defer src="/analytics.js?v=consent2"></script>', hub)
+            self.assertIn('<script defer src="/analytics.js?v=consent3"></script>', hub)
 
     def test_bristol_weekend_pilot_uses_only_bristol_records(self):
         source = json.loads((HERE / "research/verified-candidates-2026-09-14.json").read_text())
