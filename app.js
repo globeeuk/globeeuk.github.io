@@ -193,6 +193,8 @@ function render(){
   if($('.weekend-shortcut'))$('.weekend-shortcut').hidden=!!activeEdit;
   const scoopPromo=$('#scoop-promo-link');
   if(scoopPromo)scoopPromo.href=`ice-cream.html?from=${state.region==='Bristol'?'Bristol':'Devon'}`;
+  const classesEntry=$('#classes-entry-link');
+  if(classesEntry){classesEntry.href=state.region==='Bristol'?'/bristol/classes/':'/classes.html';classesEntry.querySelector('.entry-kicker').textContent=state.region==='Bristol'?'Bristol':'Exeter · Devon';}
   $('#results-heading').textContent=state.view==='map'?(activeEdit?`${activeEdit.title} on the map`:'Explore on the map'):activeEdit?`All ${activeEdit.title}`:weekendOnlyPilot?'Bristol is growing 🐝':hasFilters()?'Matching plans':isPlansPage?'All upcoming plans':'Explore all';
   $('#results-subtitle').textContent=activeEdit?`${activeEdit.subtitle} · Until ${dateShort(activeEdit.end)}`:weekendOnlyPilot?`We’re starting with ${places.length} checked picks for this weekend.`:isPlansPage?'What’s on & holiday clubs':hasFilters()?'Places and activities that match your filters.':'Places, what’s on & holiday clubs';
   $('#result-count').textContent=weekendOnlyPilot?'':`${places.length} ${places.length===1?'result':'results'}`;
