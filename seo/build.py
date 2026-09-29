@@ -83,6 +83,12 @@ REGIONS = {
         "hub_title": "Bristol family activity guides",
         "hub_description": "Plan a family day out in Bristol this weekend, with checked dates, practical details and official provider links.",
         "footer": "Curated by Globee for families in Bristol.",
+        "extra_hub_links": (
+            ("/bristol/classes/", "Classes & lessons",
+             "Compare Bristol children’s sport, dance, music and language lessons by age, place and cost.",
+             "27 class options"),
+        ),
+        "hub_trailing_newline": True,
     },
 }
 PUBLISHED_GUIDES = tuple(
@@ -420,6 +426,12 @@ def build(catalog_path, output, as_of, production=False):
             guide_links.append(f'<a class="guide-link" href="{route}"><h2>{esc(info["short"])}</h2><p>{esc(info["intro"])}</p><span>{len(selected)} checked choices{scope} <span aria-hidden="true">→</span></span></a>')
             if indexable:
                 ET.SubElement(ET.SubElement(sitemap, "url"), "loc").text = PUBLIC_BASE + route
+        for route, title, description, summary in region.get("extra_hub_links", ()):
+            guide_links.append(
+                f'<a class="guide-link" href="{esc(route)}"><h2>{esc(title)}</h2>'
+                f'<p>{esc(description)}</p><span>{esc(summary)} '
+                '<span aria-hidden="true">→</span></span></a>'
+            )
         # Do not fabricate lastmod by using the time a build happened to run.
         hub_route = f"/{region_key}/"
         hub_title = region["hub_title"]
@@ -430,6 +442,8 @@ def build(catalog_path, output, as_of, production=False):
                     "url": PUBLIC_BASE + hub_route, "inLanguage": "en-GB"}, production,
                    region_key=region_key)
         hub += f'<main id="main"><div class="intro"><p class="eyebrow">Plan your next day out</p><h1>{esc(hub_title)}</h1><p>Choose a guide, compare the practical details, and check the official provider before travelling.</p></div><div class="guide-links">{"".join(guide_links)}</div></main>' + footer(production, region_key=region_key)
+        if region.get("hub_trailing_newline"):
+            hub += "\n"
         (output / region_key / "index.html").write_text(hub, encoding="utf-8")
         manifest["pages"].append({"path": hub_route, "items": [], "indexable": hub_indexable, "kind": "hub"})
         if hub_indexable:

@@ -160,6 +160,8 @@ class GuideChecks(unittest.TestCase):
             self.assertNotIn('id="analytics-choice"', hub)
             self.assertIn('data-analytics-toggle', hub)
             self.assertIn('<script defer src="/analytics.js?v=consent3"></script>', hub)
+            bristol_hub = (destination / "bristol/index.html").read_text()
+            self.assertIn('href="/bristol/classes/"', bristol_hub)
 
     def test_bristol_weekend_pilot_uses_only_bristol_records(self):
         source = json.loads((HERE / "research/verified-candidates-2026-09-14.json").read_text())
