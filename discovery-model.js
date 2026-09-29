@@ -3,9 +3,9 @@
   'use strict';
   const date=s=>new Date(s+'T12:00:00Z');
   const SEASONAL_EDITS=[
-    {id:'halloween',title:'Halloween plans',page:'halloween.html',start:'2026-09-13',end:'2026-10-31',minPicks:1,terms:/halloween|pumpkin|ghost|spook|trick or treat|monster|skeleton|tim burton|hocus pocus|nightmare before christmas/i,subtitle:'Book ahead for October half term'},
-    {id:'bristol',title:'The Bristol edit',page:'bristol/edit/',region:'Bristol',start:'2026-09-21',end:'2027-01-31',minPicks:1,terms:/./i,subtitle:'A growing set of checked Bristol family picks'},
-    {id:'christmas',title:'Christmas plans',start:'2026-11-01',end:'2026-12-24',minPicks:1,terms:/christmas|festive|santa|father christmas|pantomime|polar express|nativity/i,subtitle:'Book ahead for the festive season'}
+    {id:'halloween',title:'Halloween plans',page:'halloween.html',start:'2026-09-13',end:'2026-10-31',homeEnd:'2026-10-30',minPicks:1,terms:/halloween|pumpkin|ghost|spook|trick or treat|monster|skeleton|tim burton|hocus pocus|nightmare before christmas/i,subtitle:'Book ahead for October half term'},
+    {id:'christmas',title:'The Christmas Edit',start:'2026-10-31',end:'2026-12-24',minPicks:1,showWhileChecking:true,terms:/christmas|festive|santa|father christmas|pantomime|polar express|nativity/i,subtitle:'Book ahead for the festive season'},
+    {id:'bristol',title:'The Bristol edit',page:'bristol/edit/',region:'Bristol',start:'2026-09-21',end:'2027-01-31',minPicks:1,terms:/./i,subtitle:'A growing set of checked Bristol family picks'}
   ];
   function plusDays(s,n){const d=date(s);d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10);}
   function weekendRange(today){const day=date(today).getUTCDay(),start=day===0?today:plusDays(today,(6-day+7)%7);return {start,end:day===0?today:plusDays(start,1)};}
@@ -37,9 +37,9 @@
   function seasonalEdit(places,today,limit=5){
     for(const candidate of SEASONAL_EDITS){
       const edit=seasonalDefinition(candidate.id,today);
-      if(!edit)continue;
+      if(!edit||edit.homeEnd&&today>edit.homeEnd)continue;
       const all=seasonalPlaces(places,today,edit.id),picks=all.slice(0,limit);
-      if(picks.length>=edit.minPicks)return {...edit,total:all.length,picks};
+      if(picks.length>=edit.minPicks||edit.showWhileChecking)return {...edit,total:all.length,picks};
     }
     return null;
   }

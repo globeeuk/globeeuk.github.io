@@ -150,3 +150,7 @@
 @media(max-width:600px){#map-view{scroll-margin-top:125px}#map{height:calc(100dvh - 225px)}}
 
 .map-pin.cluster{border-width:2px;background:#f3f1eb}.map-pin.cluster.selected{background:var(--ink)}
+.seasonal-pending{border:1px solid var(--line);border-radius:16px;background:#fbf8f1;padding:22px 26px;margin-bottom:20px}
+.seasonal-pending h2{font:500 26px/1.2 var(--heading);letter-spacing:-.6px;margin:0 0 8px}
+.seasonal-pending p{font-size:14px;line-height:1.6;color:var(--muted);margin:0;max-width:60ch}
+@media(max-width:600px){.seasonal-pending{padding:19px 20px}.seasonal-pending h2{font-size:23px}}

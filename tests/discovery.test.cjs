@@ -28,13 +28,18 @@ test('Seasonal edits run through their end date, stay regional and never pad the
  assert(coaver);assert.equal(coaver.datePeriods[0].start,'2026-10-23');assert.match(coaver.priceLabel,/members and guests/i);
  const notts=model.seasonalEdit(current.filter(p=>p.region==='Nottingham'),'2026-09-13');
  assert(notts.picks.length<=5);assert(notts.picks.length>0);assert(notts.picks.every(p=>p.region==='Nottingham'));
- assert(model.seasonalEdit(current.filter(p=>p.region==='Nottingham'),'2026-10-31').picks.length>0);
+ assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Nottingham'),'2026-10-31').id,'christmas');
  const bristol=model.seasonalEdit(items.filter(p=>p.region==='Bristol'),'2026-09-21');
  assert.equal(bristol.id,'halloween');assert(bristol.total>=2);assert(bristol.picks.every(p=>p.region==='Bristol'));
+ const bristolChristmas=model.seasonalEdit(items.filter(p=>p.region==='Bristol'),'2026-10-31');
+ assert.equal(bristolChristmas.id,'christmas');assert.equal(bristolChristmas.total,0);assert.deepEqual(bristolChristmas.picks,[]);
   const undated={id:'undated',name:'Halloween event',description:'Family Halloween activity'};
  assert.equal(model.seasonalEdit([undated],'2026-10-01'),null);
  const festive=i=>({id:String(i),name:`Christmas activity ${i}`,description:'Family Christmas event',datePeriods:[{start:'2026-12-01',end:'2026-12-24'}]});
- assert.equal(model.seasonalEdit([festive(1)],'2026-11-01').id,'christmas');
+ assert.equal(model.seasonalEdit([festive(1)],'2026-10-31').id,'christmas');
+ assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Exeter'),'2026-10-30').id,'halloween');
+ assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Exeter'),'2026-10-31').id,'christmas');
+ assert.equal(model.seasonalDefinition('halloween','2026-10-31').id,'halloween');
  assert.equal(model.seasonalEdit([festive(1)],'2026-12-25'),null);
 });
 test('Seasonal list keeps every matching event while the home edit stays at five cards',()=>{

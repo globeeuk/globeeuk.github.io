@@ -111,7 +111,7 @@ function renderWeekend(){
   if(container.hidden)return;
   const regional=data.filter(p=>p.region===state.region);
   const seasonal=GlobeeDiscovery.seasonalEdit(regional,TODAY);
-  const weekend=GlobeeDiscovery.weekendPicks(regional,TODAY);
+  const weekend=GlobeeDiscovery.weekendPicks(regional,TODAY).filter(p=>TODAY<='2026-10-30'||!GlobeeDiscovery.matchesSeasonal(p,TODAY,'halloween'));
   const primaryKey=`${state.region}|${TODAY}|${seasonal?.id||'none'}|${seasonal?.picks.length||0}|${weekend.length}`;
   if(lastPrimaryPlansKey===primaryKey){container.hidden=!container.children.length;return;}
   lastPrimaryPlansKey=primaryKey;
@@ -120,7 +120,8 @@ function renderWeekend(){
   if(seasonal){
     const region=encodeURIComponent(state.region==='Exeter'?'Devon':state.region);
     const allLink=seasonal.page?`${seasonal.page}?region=${region}`:`plans.html?region=${region}&edit=${encodeURIComponent(seasonal.id)}`;
-    sections.push(rail(`${seasonal.id}-picks`,`${seasonal.title} · ${seasonal.picks.length} ${seasonal.picks.length===1?'pick':'picks'}`,`${seasonal.subtitle} · Until ${dateShort(seasonal.end)}`,seasonal.picks,allLink,`View all (${seasonal.total})`));
+    if(seasonal.picks.length)sections.push(rail(`${seasonal.id}-picks`,`${seasonal.title} · ${seasonal.picks.length} ${seasonal.picks.length===1?'pick':'picks'}`,`${seasonal.subtitle} · Until ${dateShort(seasonal.end)}`,seasonal.picks,allLink,`View all (${seasonal.total})`));
+    else sections.push(`<section class="seasonal-pending" aria-labelledby="seasonal-pending-heading"><h2 id="seasonal-pending-heading">${escapeHTML(seasonal.title)}</h2><p>We’re checking festive family plans in ${escapeHTML(REGION_LABELS[state.region])}. Dates and booking details will appear here once confirmed.</p></section>`);
   }
   if(weekend.length)sections.push(rail('weekend-picks',`This weekend · ${weekend.length} ${weekend.length===1?'idea':'ideas'}`,dateRangeLabel(range),weekend));
   container.setAttribute('aria-label',seasonal?'Seasonal and weekend plans':'This weekend');
