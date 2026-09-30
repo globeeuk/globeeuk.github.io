@@ -15,6 +15,7 @@
     ['canonteign','Elliott Brown','https://commons.wikimedia.org/wiki/File:Canonteign%20Falls%20-%20Waterfall%20near%20Exeter%20-%202000%20%285371099464%29.jpg','CC BY 2.0','https://creativecommons.org/licenses/by/2.0','2000','location','Canonteign Falls in Devon'],
     ['alaaronde','Markfromexeter','https://commons.wikimedia.org/wiki/File:A%20la%20Ronde%2002.JPG','CC BY-SA 3.0','https://creativecommons.org/licenses/by-sa/3.0','2013','venue','The sixteen-sided A la Ronde house in Exmouth'],
     ['donkey-sanctuary','Richard Gillin','https://commons.wikimedia.org/wiki/File:Donkey%20Sanctuary.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2010','venue','A donkey in a field at The Donkey Sanctuary in Sidmouth'],
+    ['donkey-sanctuary-quest','JOHN K THORNE','https://commons.wikimedia.org/wiki/File:Sidmouth_Donkey_Sanctuary_(52345146915).jpg','CC0','https://creativecommons.org/publicdomain/zero/1.0','2022','venue','Two donkeys in a paddock at The Donkey Sanctuary in Sidmouth'],
     ['fingle-bridge','Partonez','https://commons.wikimedia.org/wiki/File:Fingle%20Bridge.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0','2016','location','The stone Fingle Bridge over the River Teign'],
     ['haldon-forest','Roger Cornfoot','https://commons.wikimedia.org/wiki/File:Walking%20trail%2C%20Haldon%20Forest%20Park%20-%20geograph.org.uk%20-%201429313.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2009','location','A walking trail through Haldon Forest Park'],
     ['poltimore','David Smith','https://commons.wikimedia.org/wiki/File:The%20front%20of%20Poltimore%20House%20-%20geograph.org.uk%20-%208126540.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2025','venue','The front of Poltimore House during restoration work'],
@@ -80,6 +81,7 @@
       if(/Crealy/.test(p.name))return 'crealy';
       if(/Canonteign Falls/.test(p.name))return 'canonteign';
       if(/A la Ronde/.test(p.name))return 'alaaronde';
+      if(p.name==='Donkey Sanctuary Sidmouth – Curious Coastal Quest')return 'donkey-sanctuary-quest';
       if(/Donkey Sanctuary/.test(p.name))return 'donkey-sanctuary';
       if(/Fingle Bridge/.test(p.name))return 'fingle-bridge';
       if(/Haldon Forest/.test(p.name))return 'haldon-forest';

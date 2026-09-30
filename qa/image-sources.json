@@ -5,8 +5,8 @@
     "currentCards": 88,
     "licensedPhotoCards": 57,
     "illustrationCards": 31,
-    "uniqueDisplayedAssets": 53,
-    "licensedSourceAssets": 45
+    "uniqueDisplayedAssets": 54,
+    "licensedSourceAssets": 46
   },
   "photos": [
     {
@@ -180,6 +180,20 @@
       "checked": "2026-09-10",
       "changes": "Cropped to 3:2, resized to 640 × 426, converted to WebP and metadata stripped. The derivative retains the source licence.",
       "bytes": 35462
+    },
+    {
+      "key": "donkey-sanctuary-quest",
+      "title": "Sidmouth Donkey Sanctuary (52345146915).jpg",
+      "image": "assets/images/donkey-sanctuary-quest.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Sidmouth_Donkey_Sanctuary_(52345146915).jpg",
+      "creator": "JOHN K THORNE",
+      "licence": "CC0",
+      "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Sidmouth_Donkey_Sanctuary_%2852345146915%29.jpg",
+      "date": "2022-09-08 12:14",
+      "checked": "2026-09-30",
+      "changes": "Cropped to 3:2, resized to 640 × 426, converted to WebP and metadata stripped. The photograph shows the venue, not the 2026 trail.",
+      "bytes": 72964
     },
     {
       "key": "fingle-bridge",
