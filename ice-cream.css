@@ -6,3 +6,21 @@
 @media(max-width:700px){.scoop-toolbar,.scoop-regions{flex-wrap:wrap}.scoop-toolbar p{padding-top:0;margin-left:auto}}
 .entry-intro{margin-top:28px}.entry-intro h1{font:500 clamp(30px,3.6vw,46px)/1.12 Outfit,Arial,sans-serif;letter-spacing:-1.4px;margin:0 0 8px;color:#282823}.entry-intro p{max-width:680px;margin:0;color:#66665f;font-size:14px;line-height:1.6}.entry-cards{margin-top:20px}
 @media(max-width:760px){.entry-intro{margin-top:22px}.entry-intro h1{font-size:32px;letter-spacing:-.9px}.entry-intro p{font-size:12px;line-height:1.55}.entry-cards{margin-top:17px}}
+
+/* A short-lived Exeter-only feature, placed below the three exploration cards. */
+.music-feature[hidden]{display:none!important}
+.music-feature{display:grid;grid-template-columns:minmax(0,1fr) 190px;min-height:164px;margin-top:20px;overflow:hidden;border:1px solid #edcf9d;border-radius:17px;background:#fff2d8;color:#2f2b27}
+.music-feature-copy{padding:22px 27px}
+.music-feature-eyebrow{display:block;margin-bottom:7px;color:#8b551e;font-size:10px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase}
+.music-feature h2{margin:0 0 6px;font:500 clamp(24px,2.4vw,31px)/1.18 Outfit,Arial,sans-serif;letter-spacing:-.65px}
+.music-feature p{max-width:600px;margin:0;font-size:13px;line-height:1.5}
+.music-feature-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.music-feature-links a{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:7px 13px;border:1px solid #b78b52;border-radius:999px;background:#fffaf0;color:#3d2e1d;font-size:12px;font-weight:800;text-decoration:none}
+.music-feature-links a:hover{background:#f7dfb4}
+.music-feature-links a:focus-visible{outline:3px solid #9b5f00;outline-offset:2px}
+.music-feature-art{position:relative;display:grid;place-items:center;overflow:hidden;background:#dceef5}
+.music-feature-art span{position:relative;z-index:1;color:#366b7f;font:100px/1 Georgia,serif;transform:rotate(-12deg)}
+.music-feature-art::before,.music-feature-art::after{position:absolute;width:180px;height:180px;border:1px solid #8db8c5;border-radius:50%;content:''}
+.music-feature-art::before{top:-105px;left:-105px}
+.music-feature-art::after{right:-105px;bottom:-105px}
+@media(max-width:600px){.music-feature{grid-template-columns:1fr;margin-top:12px;border-radius:14px}.music-feature-copy{padding:18px 20px}.music-feature-art{display:none}.music-feature h2{font-size:24px}.music-feature p{font-size:12px}.music-feature-links a{min-height:39px}}

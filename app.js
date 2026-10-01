@@ -179,6 +179,7 @@ function render(){
   lastFilterSignature=filterSignature;
   updatePlanRoute();
   $('#region-label').textContent=REGION_LABELS[state.region];
+  window.GlobeeMusicFeature?.sync(state.region);
   $('#dates-label').textContent=state.dates?dateRangeLabel(state.dates):'Dates';
   $('#age-label').textContent=state.age.length===1?ageBands.find(b=>b.id===state.age[0]).label:state.age.length?`Age (${state.age.length})`:'Age';
   $('#price-label').textContent=state.price==='all'?'Price':state.price==='free'?'Free':'Paid';
