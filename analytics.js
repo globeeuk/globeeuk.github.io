@@ -86,6 +86,10 @@
     if(el.dataset.collection)globeeTrack('open_edit',{collection:el.dataset.collection});
     if(el.dataset.resultsPage)globeeTrack('results_page',{page_number:Number(el.dataset.resultsPage)});
     if(el.matches('.detail-link'))globeeTrack('provider_visit',{provider_host:new URL(el.href).hostname});
+    if(el.matches('#exeter-music-feature .music-feature-links a')){
+      const host=new URL(el.href).hostname;
+      globeeTrack('music_banner_click',{region:'Exeter',social_platform:host.includes('instagram.com')?'instagram':'facebook'});
+    }
     if(el.dataset.socialPlatform)globeeTrack('social_visit',{social_platform:el.dataset.socialPlatform,region:new URLSearchParams(location.search).get('region')||''});
   });
 })();
