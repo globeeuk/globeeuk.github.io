@@ -50,6 +50,21 @@ test('Seasonal list keeps every matching event while the home edit stays at five
  assert(model.matchesSeasonal(halloween[0],'2026-09-13','halloween'));
  assert.equal(model.nextBatch(model.seasonalPlaces(halloween,'2026-09-13','halloween'),12).length,5);
 });
+test('Christmas book-ahead edit appears beside Halloween and contains only checked Exeter booking pages',()=>{
+ const exeter=items.filter(p=>p.region==='Exeter');
+ const early=model.bookAheadEdit(exeter,'2026-10-05');
+ assert.equal(model.seasonalEdit(exeter,'2026-10-05').id,'halloween');
+ assert(early);assert.equal(early.total,3);
+ assert.deepEqual(early.picks.map(p=>p.name),[
+  'Sleeping Beauty – Exeter Northcott',
+  'Yeti – Exeter Phoenix',
+  'A (little) Christmas Carol – Exeter Northcott'
+ ]);
+ assert(early.picks.every(p=>p.source&&p.priceType==='paid'&&p.datePeriods?.length));
+ assert.equal(model.bookAheadEdit(items.filter(p=>p.region==='Bristol'),'2026-10-05'),null);
+ assert.equal(model.bookAheadEdit(exeter,'2027-01-04'),null);
+ assert.equal(model.seasonalEdit(exeter,'2026-10-31').id,'christmas');
+});
 test('Twelve-card batches reach every actual record exactly once with a partial final batch',()=>{
  for(const region of ['Exeter','Bristol','Nottingham']){const all=current.filter(p=>p.region===region),shown=[];let chunk;
  while((chunk=model.nextBatch(all,shown.length)).length){assert(chunk.length<=12);shown.push(...chunk);}

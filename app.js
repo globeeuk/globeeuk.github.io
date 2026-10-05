@@ -111,8 +111,9 @@ function renderWeekend(){
   if(container.hidden)return;
   const regional=data.filter(p=>p.region===state.region);
   const seasonal=GlobeeDiscovery.seasonalEdit(regional,TODAY);
+  const bookAhead=TODAY<='2026-10-30'?GlobeeDiscovery.bookAheadEdit(regional,TODAY):null;
   const weekend=GlobeeDiscovery.weekendPicks(regional,TODAY).filter(p=>TODAY<='2026-10-30'||!GlobeeDiscovery.matchesSeasonal(p,TODAY,'halloween'));
-  const primaryKey=`${state.region}|${TODAY}|${seasonal?.id||'none'}|${seasonal?.picks.length||0}|${weekend.length}`;
+  const primaryKey=`${state.region}|${TODAY}|${seasonal?.id||'none'}|${seasonal?.picks.map(p=>p.id).join(',')||''}|${bookAhead?.picks.map(p=>p.id).join(',')||''}|${weekend.map(p=>p.id).join(',')}`;
   if(lastPrimaryPlansKey===primaryKey){container.hidden=!container.children.length;return;}
   lastPrimaryPlansKey=primaryKey;
   const range=GlobeeDiscovery.weekendRange(TODAY);
@@ -123,8 +124,13 @@ function renderWeekend(){
     if(seasonal.picks.length)sections.push(rail(`${seasonal.id}-picks`,`${seasonal.title} · ${seasonal.picks.length} ${seasonal.picks.length===1?'pick':'picks'}`,seasonal.homeEnd?seasonal.subtitle:`${seasonal.subtitle} · Until ${dateShort(seasonal.end)}`,seasonal.picks,allLink,`View all (${seasonal.total})`));
     else sections.push(`<section class="seasonal-pending" aria-labelledby="seasonal-pending-heading"><h2 id="seasonal-pending-heading">${escapeHTML(seasonal.title)}</h2><p>We’re checking festive family plans in ${escapeHTML(REGION_LABELS[state.region])}. Dates and booking details will appear here once confirmed.</p></section>`);
   }
+  if(bookAhead){
+    const region=encodeURIComponent(state.region==='Exeter'?'Devon':state.region);
+    const allLink=`plans.html?region=${region}&edit=christmas-book-ahead`;
+    sections.push(rail('christmas-book-ahead-picks',bookAhead.title,`${bookAhead.subtitle} · Check current availability`,bookAhead.picks,allLink,`View all (${bookAhead.total})`));
+  }
   if(weekend.length)sections.push(rail('weekend-picks',`This weekend · ${weekend.length} ${weekend.length===1?'idea':'ideas'}`,dateRangeLabel(range),weekend));
-  container.setAttribute('aria-label',seasonal?'Seasonal and weekend plans':'This weekend');
+  container.setAttribute('aria-label',seasonal||bookAhead?'Seasonal and weekend plans':'This weekend');
   container.innerHTML=sections.join('');
   container.hidden=!sections.length;
   fixImages(container);setupRails();
@@ -189,7 +195,7 @@ function render(){
   const activeEdit=state.edit?GlobeeDiscovery.seasonalDefinition(state.edit,TODAY):null;
   if($('#plans-page-title')){
     $('#plans-page-title').textContent=activeEdit?activeEdit.title:'What’s on & holiday clubs';
-    $('.plans-intro-copy').textContent=activeEdit?'Every verified seasonal plan, together in one list.':'Browse upcoming events and holiday clubs in one place.';
+    $('.plans-intro-copy').textContent=activeEdit?.id==='christmas-book-ahead'?'Family Christmas shows with published 2026 dates and booking links. Check availability with the organiser.':activeEdit?'Every verified seasonal plan, together in one list.':'Browse upcoming events and holiday clubs in one place.';
     document.title=activeEdit?`${activeEdit.title} in ${state.region==='Exeter'?'Exeter & Devon':state.region} | Globee`:'What’s on & holiday clubs | Globee';
   }
   if($('.weekend-shortcut'))$('.weekend-shortcut').hidden=!!activeEdit;

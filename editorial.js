@@ -20,3 +20,14 @@ window.GLOBEE_EDITORIAL.annotations['Greendale Farm Shop']={
   },
   editChecked:'30 September 2026'
 };
+
+// The organisers' 2026 pages show dates and live booking links (checked 5 October 2026).
+for(const name of ['Sleeping Beauty – Exeter Northcott','A (little) Christmas Carol – Exeter Northcott','Yeti – Exeter Phoenix']){
+  window.GLOBEE_EDITORIAL.annotations[name]={
+    ...window.GLOBEE_EDITORIAL.annotations[name],
+    bookAhead:true,
+    note:'The organiser has published 2026 performance dates and a booking link. Check the current times, prices and availability before making plans.'
+  };
+}
+window.GLOBEE_EDITORIAL.annotations['Sleeping Beauty – Exeter Northcott'].ageLabel='5+ years';
+window.GLOBEE_EDITORIAL.annotations['Sleeping Beauty – Exeter Northcott'].ages=[5,99];

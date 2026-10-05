@@ -4,6 +4,7 @@
   const date=s=>new Date(s+'T12:00:00Z');
   const SEASONAL_EDITS=[
     {id:'halloween',title:'Halloween plans',page:'halloween.html',start:'2026-09-13',end:'2026-10-31',homeEnd:'2026-10-30',minPicks:1,terms:/halloween|pumpkin|ghost|spook|trick or treat|monster|skeleton|tim burton|hocus pocus|nightmare before christmas/i,subtitle:'Book ahead for October half term'},
+    {id:'christmas-book-ahead',title:'Christmas · book ahead',start:'2026-10-05',end:'2027-01-03',secondary:true,minPicks:1,terms:/./,subtitle:'Festive family shows with booking links'},
     {id:'christmas',title:'The Christmas Edit',start:'2026-10-31',end:'2026-12-24',minPicks:1,showWhileChecking:true,terms:/christmas|festive|santa|father christmas|pantomime|polar express|nativity/i,subtitle:'Book ahead for the festive season'},
     {id:'bristol',title:'The Bristol edit',page:'bristol/edit/',region:'Bristol',start:'2026-09-21',end:'2027-01-31',minPicks:1,terms:/./i,subtitle:'A growing set of checked Bristol family picks'}
   ];
@@ -26,7 +27,7 @@
     const edit=seasonalDefinition(id,today);
     if(!edit)return false;
     const text=[p.name,p.description,p.category,...(p.keywords||[])].join(' ');
-    return (!edit.region||p.region===edit.region)&&edit.terms.test(text)&&(p.datePeriods||[]).some(d=>d.end>=today&&d.start<=edit.end);
+    return (!edit.region||p.region===edit.region)&&(!edit.secondary||p.bookAhead===true)&&(edit.terms.test(text)||edit.id==='christmas'&&p.bookAhead===true)&&(p.datePeriods||[]).some(d=>d.end>=today&&d.start<=edit.end);
   }
   function seasonalPlaces(places,today,id){
     const edit=seasonalDefinition(id,today);
@@ -36,12 +37,19 @@
   }
   function seasonalEdit(places,today,limit=5){
     for(const candidate of SEASONAL_EDITS){
+      if(candidate.secondary)continue;
       const edit=seasonalDefinition(candidate.id,today);
       if(!edit||edit.homeEnd&&today>edit.homeEnd)continue;
       const all=seasonalPlaces(places,today,edit.id),picks=all.slice(0,limit);
       if(picks.length>=edit.minPicks||edit.showWhileChecking)return {...edit,total:all.length,picks};
     }
     return null;
+  }
+  function bookAheadEdit(places,today,limit=5){
+    const edit=seasonalDefinition('christmas-book-ahead',today);
+    if(!edit)return null;
+    const all=seasonalPlaces(places,today,edit.id);
+    return all.length?{...edit,total:all.length,picks:all.slice(0,limit)}:null;
   }
   function nextBatch(places,shown,size=12){return places.slice(Math.max(0,shown),Math.max(0,shown)+size);}
   function hasMapLocation(p){return Array.isArray(p.coords)&&p.coords.length===2&&p.coords.every(Number.isFinite)&&Math.abs(p.coords[0])<=90&&Math.abs(p.coords[1])<=180;}
@@ -61,6 +69,6 @@
     }
     return groups;
   }
-  const api={SEASONAL_EDITS,weekendRange,weekendPicks,seasonalDefinition,matchesSeasonal,seasonalPlaces,seasonalEdit,nextBatch,hasMapLocation,initialMapSelection,mapGroups};
+  const api={SEASONAL_EDITS,weekendRange,weekendPicks,seasonalDefinition,matchesSeasonal,seasonalPlaces,seasonalEdit,bookAheadEdit,nextBatch,hasMapLocation,initialMapSelection,mapGroups};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.GlobeeDiscovery=api;
 })(typeof window!=='undefined'?window:globalThis);
