@@ -2,6 +2,19 @@
 (function(root){
   'use strict';
   const photoRows=[
+    ["barnfield-auditorium","SamJonesTech","https://commons.wikimedia.org/wiki/File:Auditorium_Panorama.jpg","CC BY-SA 4.0","https://creativecommons.org/licenses/by-sa/4.0","2025","venue","The empty auditorium at Barnfield Theatre, where A (little) Christmas Carol takes place"],
+    ["christmas-tree-field","Hugh Chevallier","https://commons.wikimedia.org/wiki/File:Christmas_tree_plantation_-_geograph.org.uk_-_237550.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2006","activity","A Christmas tree plantation in Ellisfield, Hampshire; a tree-growing reference, not Cotley Farm"],
+    ["dartington","Derek Harper","https://commons.wikimedia.org/wiki/File:Dartington_Hall_at_dusk_-_geograph.org.uk_-_5223578.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2016","venue","Dartington Hall at dusk"],
+    ["plymouth-centre","Mick Lobb","https://commons.wikimedia.org/wiki/File:Plymouth_Guildhall_and_tower_of_St_Andrew%27s_Church_-_geograph.org.uk_-_1397691.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2009","location","Plymouth city centre with the Guildhall and St Andrew’s Church; not the Christmas market"],
+    ["rosemoor","Julie Munckton","https://commons.wikimedia.org/wiki/File:RHS_Rosemoor_gardens_-_geograph.org.uk_-_3041782.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2012","venue","The gardens at RHS Rosemoor in summer; not the Glow light trail"],
+    ["tavistock","Andrew Abbott","https://commons.wikimedia.org/wiki/File:Tavistock_Town_Hall_(geograph_6275904).jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2019","location","Tavistock Town Hall and Bedford Square; not the Dickensian event"],
+    ["thorverton","Martin Bodman","https://commons.wikimedia.org/wiki/File:Thorverton,_Devon.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2007","location","Thorverton village near Exe Valley Christmas Trees; not Canns Farm"],
+    ["torquay-harbour","Laura H.","https://commons.wikimedia.org/wiki/File:Torquay_Harbour.JPG","CC BY-SA 3.0","https://creativecommons.org/licenses/by-sa/3.0","2009","location","Torquay harbour; not the Bay of Lights installations"],
+    ["totnes-christmas","Phil Gayton from Totnes, UK","https://commons.wikimedia.org/wiki/File:Totnes_Fore_Street_Christmas_lights_(23515688059).jpg","CC BY 2.0","https://creativecommons.org/licenses/by/2.0","2015","location","Christmas lights on Fore Street, Totnes in 2015; not the 2026 market"],
+    ["bristol-hippodrome","Mike Hume","https://commons.wikimedia.org/wiki/File:Bristol_Hippodrome_Stage.jpg","CC BY-SA 3.0","https://creativecommons.org/licenses/by-sa/3.0","2009","venue","The stage and auditorium at Bristol Hippodrome; not the 2026 pantomime"],
+    ["noahs-ark","Elephantlady2017","https://commons.wikimedia.org/wiki/File:Elephant_at_Noah%27s_Ark_Zoo_Farm.jpg","CC BY-SA 4.0","https://creativecommons.org/licenses/by-sa/4.0","2015","venue","An elephant at Noah’s Ark Zoo Farm; not the Santa experience"],
+    ["northcott","Smalljim","https://commons.wikimedia.org/wiki/File:Northcott_theatre.jpg","CC BY-SA 3.0","https://creativecommons.org/licenses/by-sa/3.0","2008","venue","Exeter Northcott Theatre exterior"],
+    ["old-down","Steve Coffin","https://commons.wikimedia.org/wiki/File:Old_Down_Manor_-_geograph.org.uk_-_2508827.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2011","venue","Old Down Manor on the estate; not the festive light trail"],
     ['cathedral','Wigulf~commonswiki','https://commons.wikimedia.org/wiki/File:Exeter_Cathedral.jpg','CC BY 2.5','https://creativecommons.org/licenses/by/2.5','2005','venue','The west front of Exeter Cathedral'],
     ['ramm','Pymouss','https://commons.wikimedia.org/wiki/File:RAMM_-_Gerald_the_giraffe_02.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0','2015','venue','Gerald the giraffe inside RAMM'],
     ['wollaton','ChrisSampson87','https://commons.wikimedia.org/wiki/File:Wollaton_Hall_Nottingham.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0','2012','venue','Wollaton Hall in Nottingham'],
@@ -59,6 +72,16 @@
   function photoKey(p){
     if(p.name==='Chessed.me (Online Chess)')return 'chess';
     if(p.region==='Exeter'){
+      if(p.name==='Cotley Farm Christmas')return 'christmas-tree-field';
+      if(/^Exe Valley Christmas Trees/.test(p.name))return 'thorverton';
+      if(p.name==='RHS Glow – Rosemoor')return 'rosemoor';
+      if(p.name==='Bay of Lights Christmas Illumination Trail – Torquay')return 'torquay-harbour';
+      if(p.name==='Dartington Christmas Makers Fayre')return 'dartington';
+      if(p.name==='Totnes Christmas Markets and Late Night Shopping')return 'totnes-christmas';
+      if(p.name==='Tavistock Dickensian Christmas Evening')return 'tavistock';
+      if(p.name==='Plymouth Christmas Market')return 'plymouth-centre';
+      if(p.name==='A (little) Christmas Carol – Exeter Northcott')return 'barnfield-auditorium';
+      if(p.name==='Sleeping Beauty – Exeter Northcott')return 'northcott';
       if(p.name==='Exeter Cathedral')return 'cathedral';
       if(/RAMM|Royal Albert Memorial Museum/.test(p.name)){
         if(/^RAMM – Royal Albert/.test(p.name))return 'ramm';
@@ -113,6 +136,9 @@
       if(/Nottingham High School/.test(p.name))return 'nottingham-high-school';
     }
     if(p.region==='Bristol'){
+      if(p.name==='Meet Santa – Noah’s Ark Zoo Farm')return 'noahs-ark';
+      if(p.name==='Festive Illumination Light Trail – Old Down Estate')return 'old-down';
+      if(p.name==='Sleeping Beauty – Bristol Hippodrome')return 'bristol-hippodrome';
       if(/Play The Bluey Way|Great Bristol Ball Run/.test(p.name))return 'we-the-curious';
       if(/Docks Heritage Weekend|Bristol Harbour Railway/.test(p.name))return 'm-shed';
       if(/Aardman/.test(p.name))return 'bristol-museum';
@@ -138,7 +164,8 @@
   function decorate(p){
     const k=photoKey(p),t=theme(p);
     const image=k?photos[k]:{image:`assets/images/${t}.webp`,imageKind:'illustration',imageAlt:descriptions[t]+'; an activity illustration, not the venue',credit:'Globee',imageReference:'AI-generated activity illustration, created for Globee. It does not depict the venue or event.',photoSource:'',photoLicence:'',photoLicenceUrl:''};
-    return {...p,...image};
+    const clarification=k==='christmas-tree-field'?{imageLabel:'Tree reference photo',imageReference:'Tree-growing reference photographed in Ellisfield, Hampshire in 2006; NOT Cotley Farm or its Christmas event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:k==='thorverton'?{imageLabel:'Thorverton village',imageReference:'Thorverton village photograph from 2007; NOT Canns Farm or Exe Valley Christmas Trees. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:{};
+    return {...p,...image,...clarification};
   }
   const api={decorate,theme};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.GlobeeImages=api;

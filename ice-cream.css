@@ -7,6 +7,33 @@
 .entry-intro{margin-top:28px}.entry-intro h1{font:500 clamp(30px,3.6vw,46px)/1.12 Outfit,Arial,sans-serif;letter-spacing:-1.4px;margin:0 0 8px;color:#282823}.entry-intro p{max-width:680px;margin:0;color:#66665f;font-size:14px;line-height:1.6}.entry-cards{margin-top:20px}
 @media(max-width:760px){.entry-intro{margin-top:22px}.entry-intro h1{font-size:32px;letter-spacing:-.9px}.entry-intro p{font-size:12px;line-height:1.55}.entry-cards{margin-top:17px}}
 
+/* Approved winter entry: desktop triptych; compact banner + two cards on mobile. */
+.entry-card[hidden],.winter-map-link[hidden]{display:none!important}
+.entry-card-tree{padding:0;border-color:#718368;background:#fcf5e6;color:#244731}
+.tree-desktop-art{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+.tree-mobile-copy,.tree-mobile-art{display:none}
+.winter-map-link{margin-top:9px;margin-bottom:0;font-size:12px;color:#66665f}
+.winter-map-link a{color:inherit;text-underline-offset:3px;display:inline-block;padding:5px 0}
+@media(max-width:760px){
+  .entry-cards-winter{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .entry-cards-winter .entry-card-tree{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(86px,30%);gap:7px;align-items:center;padding:14px 14px 15px;min-height:174px;border-radius:15px}
+  .tree-desktop-art{display:none}
+  .tree-mobile-copy{display:block}
+  .tree-mobile-art{display:block;width:100%;height:auto;max-height:122px;object-fit:contain}
+  .tree-edition{display:block;color:#9d343c;font:italic 19px/1.1 Georgia,serif;margin-bottom:6px}
+  .tree-mobile-copy .entry-kicker{display:none}
+  .entry-card-tree h2{font:700 clamp(22px,6.4vw,25px)/1.04 Georgia,serif;letter-spacing:-.6px;margin:0 0 7px}
+  .entry-card-tree p{font-size:12px;line-height:1.35;padding:0;margin:0 0 9px}
+  .entry-card-tree .entry-action{font-size:12px}
+  .entry-cards-winter .entry-card:not(.entry-card-tree){min-height:117px;padding:13px 14px}
+  .entry-cards-winter .entry-card:not(.entry-card-tree) h2{font-size:18px;line-height:1.15;letter-spacing:-.35px;margin:9px 0}
+  .entry-cards-winter .entry-card:not(.entry-card-tree) p,.entry-cards-winter .entry-symbol{display:none}
+  .entry-cards-winter .entry-kicker{font-size:9px;letter-spacing:.8px}
+  .entry-cards-winter .entry-action{font-size:12px}
+  .winter-map-link{font-size:11px}
+}
+@media(max-width:350px){.entry-cards-winter .entry-card-tree{grid-template-columns:minmax(0,1fr) 83px;padding:13px 11px}.entry-card-tree h2{font-size:22px}}
+
 /* A short-lived Exeter-only feature, placed below the three exploration cards. */
 .music-feature[hidden]{display:none!important}
 .music-feature{display:grid;grid-template-columns:minmax(0,1fr) 190px;min-height:164px;margin-top:20px;overflow:hidden;border:1px solid #edcf9d;border-radius:17px;background:#fff2d8;color:#2f2b27}

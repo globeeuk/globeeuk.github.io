@@ -86,7 +86,7 @@ function matches(p,ignore){
 function visiblePlaces(){return data.filter(p=>matches(p)).sort((a,b)=>nextPlanDate(a).localeCompare(nextPlanDate(b))||a.name.localeCompare(b.name));}
 function fallback(p){return `<div class="photo-fallback">${icon(p.type)}<span>${escapeHTML(p.category)}</span></div>`;}
 function imageTag(p,alt=p.imageAlt||p.name){return `<img data-src="${escapeHTML(p.image)}" data-place-id="${escapeHTML(p.id)}" alt="${escapeHTML(alt)}" style="object-position:${p.image.endsWith('/ramm.webp')?'50% 0%':'50% 50%'}" draggable="false" loading="lazy" decoding="async" width="640" height="426" referrerpolicy="no-referrer">`;}
-function photo(p){return p.image?`${imageTag(p)}<span class="image-kind">${p.imageKind==='illustration'?'Illustration':p.imageKind==='location'?'Location photo':p.imageKind==='activity'?'Activity photo':'Venue photo'}</span>`:fallback(p);}
+function photo(p){return p.image?`${imageTag(p)}<span class="image-kind">${escapeHTML(p.imageLabel||(p.imageKind==='illustration'?'Illustration':p.imageKind==='location'?'Location photo':p.imageKind==='activity'?'Activity photo':'Venue photo'))}</span>`:fallback(p);}
 function meta(p){return `<span class="price ${p.priceType==='free'?'free':''}">${escapeHTML(p.priceLabel)}</span><span class="meta-dot">·</span><span class="age">${escapeHTML(p.ageLabel||'Age TBC')}</span>`;}
 function locality(p){return `<span class="card-locality ${p.region.toLowerCase()}">${icon('pin')}${escapeHTML(REGION_LABELS[p.region]||p.region)}</span>`;}
 const observedImages=new Set(),preparedImages=new WeakSet();
@@ -200,6 +200,15 @@ function render(){
   }
   if($('.weekend-shortcut'))$('.weekend-shortcut').hidden=!!activeEdit;
   const scoopPromo=$('#scoop-promo-link');
+  const treeEntry=$('#christmas-tree-entry');
+  const winterMapLink=$('#winter-map-link');
+  if(treeEntry){
+    const isTreeRegion=state.region==='Exeter';
+    treeEntry.hidden=!isTreeRegion;
+    if(scoopPromo)scoopPromo.hidden=isTreeRegion;
+    if(winterMapLink)winterMapLink.hidden=!isTreeRegion;
+    treeEntry.closest('.entry-cards').classList.toggle('entry-cards-winter',isTreeRegion);
+  }
   if(scoopPromo)scoopPromo.href=`ice-cream.html?from=${state.region==='Bristol'?'Bristol':'Devon'}`;
   const classesEntry=$('#classes-entry-link');
   if(classesEntry){classesEntry.href=state.region==='Bristol'?'/bristol/classes/':state.region==='Nottingham'?'/nottingham/classes/':'/classes.html';classesEntry.querySelector('.entry-kicker').textContent=state.region==='Bristol'?'Bristol':state.region==='Nottingham'?'Nottingham':'Exeter · Devon';}

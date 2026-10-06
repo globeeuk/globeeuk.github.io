@@ -97,6 +97,12 @@ Review the change list explicitly before committing. A source review with no res
 
 Report meaningful corrections, publication failures or required action. Keep routine unchanged runs quiet. Record deployment as complete only after public verification succeeds.
 
+## Seasonal tree guide — 6 October 2026
+
+The user-approved winter homepage entry links to `/exeter/christmas-trees/`, a hand-maintained seasonal guide, not an output of `seo/build.py`. Preserve that route and its root-sitemap entry during routine staging. It summarises the existing Cotley Farm Christmas and Exe Valley Christmas Trees Sheet records; it is not a separate operating database. Their official sites were rechecked on 6 October 2026. Reconcile material factual changes with the Sheet before changing the guide, and do not refresh its checked date without a new official-source review. Exeter rental coverage remains unconfirmed.
+
+This release also replaces nine Devon Christmas search illustrations and four additional Exeter/Bristol venue mappings with licensed photographs. `qa/image-sources.json`, `qa/christmas-photo-sources.json` and `image-credits.html` record licences and provenance. Cotley uses a labelled tree-growing reference, not a Cotley photograph; Exe Valley uses a labelled Thorverton village photograph, not a farm photograph. Other images show venues or locations, not the 2026 event. The decorative tree banner is distinct from event photography. No claim of Google indexing or visitor growth follows from this release.
+
 ## Search Console and measurement
 
 On **13 September 2026**, ownership of `https://globeeuk.github.io/` was verified in the owner's Search Console account using the homepage HTML tag. Preserve that tag. The combined `https://globeeuk.github.io/sitemap.xml` was submitted, and the hub plus all three guides were individually accepted into the priority crawl queue through Request indexing. These actions do not prove actual indexing.

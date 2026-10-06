@@ -1,5 +1,5 @@
 {
-  "checked": "2026-09-21",
+  "checked": "2026-10-06",
   "policy": "Only photographs with a confirmed reuse licence are copied. Official website photographs without confirmed permission are excluded. Venue and location photos are labelled and do not represent the current event.",
   "coverage": {
     "currentCards": 88,
@@ -642,6 +642,191 @@
       "checked": "2026-09-10",
       "changes": "Cropped to 3:2, resized to 640 × 426, converted to WebP and metadata stripped. The derivative retains the source licence.",
       "bytes": 68966
+    },
+    {
+      "key": "barnfield-auditorium",
+      "image": "assets/images/barnfield-auditorium.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Auditorium_Panorama.jpg",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "creator": "SamJonesTech",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Auditorium_Panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2025-01-24",
+      "checked": "2026-10-06",
+      "changes": "Resized and converted to WebP; cropped by the card layout. The derivative retains the source licence.",
+      "bytes": 27786
+    },
+    {
+      "key": "christmas-tree-field",
+      "image": "assets/images/christmas-tree-field.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Christmas_tree_plantation_-_geograph.org.uk_-_237550.jpg",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "creator": "Hugh Chevallier",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Christmas_tree_plantation_-_geograph.org.uk_-_237550.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2006-09-11",
+      "checked": "2026-10-06",
+      "changes": "Resized and converted to WebP; cropped by the card layout. The derivative retains the source licence.",
+      "bytes": 71816
+    },
+    {
+      "key": "dartington",
+      "image": "assets/images/dartington.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Dartington_Hall_at_dusk_-_geograph.org.uk_-_5223578.jpg",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "creator": "Derek Harper",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Dartington_Hall_at_dusk_-_geograph.org.uk_-_5223578.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2016-12-04",
+      "checked": "2026-10-06",
+      "changes": "Resized and converted to WebP; cropped by the card layout. The derivative retains the source licence.",
+      "bytes": 65096
+    },
+    {
+      "key": "plymouth-centre",
+      "image": "assets/images/plymouth-centre.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Plymouth_Guildhall_and_tower_of_St_Andrew%27s_Church_-_geograph.org.uk_-_1397691.jpg",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "creator": "Mick Lobb",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Plymouth_Guildhall_and_tower_of_St_Andrew%27s_Church_-_geograph.org.uk_-_1397691.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2009-07-08",
+      "checked": "2026-10-06",
+      "changes": "Resized and converted to WebP; cropped by the card layout. The derivative retains the source licence.",
+      "bytes": 62334
+    },
+    {
+      "key": "rosemoor",
+      "image": "assets/images/rosemoor.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:RHS_Rosemoor_gardens_-_geograph.org.uk_-_3041782.jpg",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "creator": "Julie Munckton",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/RHS_Rosemoor_gardens_-_geograph.org.uk_-_3041782.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2012-07-12",
+      "checked": "2026-10-06",
+      "changes": "Resized and converted to WebP; cropped by the card layout. The derivative retains the source licence.",
+      "bytes": 72708
+    },
+    {
+      "key": "tavistock",
+      "image": "assets/images/tavistock.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Tavistock_Town_Hall_(geograph_6275904).jpg",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "creator": "Andrew Abbott",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Tavistock_Town_Hall_%28geograph_6275904%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2019-09-24",
+      "checked": "2026-10-06",
+      "changes": "Resized and converted to WebP; cropped by the card layout. The derivative retains the source licence.",
+      "bytes": 56160
+    },
+    {
+      "key": "thorverton",
+      "image": "assets/images/thorverton.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Thorverton,_Devon.jpg",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "creator": "Martin Bodman",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Thorverton%2C_Devon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2007-04-17",
+      "checked": "2026-10-06",
+      "changes": "Resized and converted to WebP; cropped by the card layout. The derivative retains the source licence.",
+      "bytes": 49670
+    },
+    {
+      "key": "torquay-harbour",
+      "image": "assets/images/torquay-harbour.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Torquay_Harbour.JPG",
+      "licence": "CC BY-SA 3.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "creator": "Laura H.",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Torquay_Harbour.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2009-02",
+      "checked": "2026-10-06",
+      "changes": "Resized and converted to WebP; cropped by the card layout. The derivative retains the source licence.",
+      "bytes": 45530
+    },
+    {
+      "key": "totnes-christmas",
+      "image": "assets/images/totnes-christmas.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Totnes_Fore_Street_Christmas_lights_(23515688059).jpg",
+      "licence": "CC BY 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+      "creator": "Phil Gayton from Totnes, UK",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Totnes_Fore_Street_Christmas_lights_%2823515688059%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2015-12-21 08:49",
+      "checked": "2026-10-06",
+      "changes": "Resized and converted to WebP; cropped by the card layout. The derivative retains the source licence.",
+      "bytes": 40632
+    },
+    {
+      "key": "bristol-hippodrome",
+      "image": "assets/images/bristol-hippodrome.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Bristol_Hippodrome_Stage.jpg",
+      "licence": "CC BY-SA 3.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "creator": "Mike Hume",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Bristol_Hippodrome_Stage.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2009-09-19 12:10:35",
+      "checked": "2026-10-06",
+      "changes": "Resized and converted to WebP; cropped by the card layout. The derivative retains the source licence.",
+      "bytes": 52138
+    },
+    {
+      "key": "noahs-ark",
+      "image": "assets/images/noahs-ark.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Elephant_at_Noah%27s_Ark_Zoo_Farm.jpg",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "creator": "Elephantlady2017",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Elephant_at_Noah%27s_Ark_Zoo_Farm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2015-07-30",
+      "checked": "2026-10-06",
+      "changes": "Resized and converted to WebP; cropped by the card layout. The derivative retains the source licence.",
+      "bytes": 49652
+    },
+    {
+      "key": "northcott",
+      "image": "assets/images/northcott.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Northcott_theatre.jpg",
+      "licence": "CC BY-SA 3.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "creator": "Smalljim",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Northcott_theatre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2008-01-24",
+      "checked": "2026-10-06",
+      "changes": "Resized and converted to WebP; cropped by the card layout. The derivative retains the source licence.",
+      "bytes": 37222
+    },
+    {
+      "key": "old-down",
+      "image": "assets/images/old-down.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Old_Down_Manor_-_geograph.org.uk_-_2508827.jpg",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "creator": "Steve Coffin",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Old_Down_Manor_-_geograph.org.uk_-_2508827.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "date": "2011-07-10",
+      "checked": "2026-10-06",
+      "changes": "Resized and converted to WebP; cropped by the card layout. The derivative retains the source licence.",
+      "bytes": 46468
     }
-  ]
+  ],
+  "coverageAsOf": "2026-09-21 (historical coverage snapshot; new photo sources below checked separately)",
+  "christmasRefresh": {
+    "checked": "2026-10-06",
+    "devonChristmasSearch": {
+      "cards": 9,
+      "illustrations": 0,
+      "venueOrLocationPhotos": 8,
+      "treeReferencePhotos": 1
+    },
+    "notes": [
+      "Cotley Farm uses a clearly labelled generic tree-growing reference; it is not a photograph of Cotley Farm.",
+      "Exe Valley uses a Thorverton village location photo, not Canns Farm.",
+      "Rejected geograph 2900073: different Cotley Farm, confirmed by coordinates.",
+      "All photographs depict prior venue/location views, not the current 2026 event."
+    ]
+  }
 }
