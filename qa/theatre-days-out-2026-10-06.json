@@ -1,0 +1,120 @@
+{
+  "checked": "2026-10-06",
+  "validation": {
+    "newRegressionTests": "6 passed",
+    "fullSuite": "33 of 38 passed; the same 5 unrelated failures reproduced on d299768 (DB fixed count, Coaver price, Halloween map coordinates, analytics cache-version assertion, Halloween title assertion).",
+    "syntaxAndWhitespace": "Changed JavaScript node --check and git diff --check passed.",
+    "nativeSheet": "Readback checked values, UNICHAR formulas and existing validation. Google Sheets master rows 229–231 and event rows 350 onward visually checked.",
+    "responsive": "Desktop, 390px and 320px checked. No document horizontal overflow. Date tabs, keyboard arrows, View all, Theatre & shows filter and Shrek details checked.",
+    "discovery": "Exeter theatre filter has 10 upcoming listings. 6 Oct–2 Nov View all has 32 matching plans; theatre filter narrows this to 5. No separate theatre page/database created."
+  },
+  "policy": "Performances use existing Days out records, type theatre; no separate database or permanent section. Dated occurrences drive weekend/four-week views. Only verified festive shows receive bookAhead.",
+  "sources": [
+    {
+      "name": "Shrek the Musical Jr – Stage by Stage",
+      "url": "https://www.exetercornexchange.co.uk/whats-on/stage-by-stage-shrek-the-musical-jr/",
+      "schedule": "Mon 26 and Tue 27 October 2026, 2pm and 6pm; doors 45 minutes before",
+      "notes": "Stage by Stage students perform the fairy-tale musical with Shrek, Donkey and Fiona. Standard GBP 16; concessions GBP 13; family of four GBP 48, including booking fee. Book tickets; under-14s need an adult. Recommended age and running time TBC.",
+      "dates": [
+        "2026-10-26",
+        "2026-10-27"
+      ]
+    },
+    {
+      "name": "Pinocchio – Exeter Corn Exchange",
+      "url": "https://www.exetercornexchange.co.uk/whats-on/pinocchio/",
+      "schedule": "Public shows on 12, 13, 15–17, 19–24 and 26–31 December 2026, plus 1–2 January 2027; times vary. Relaxed show 16 December, 1.30pm.",
+      "notes": "Family Christmas pantomime with songs, costumes and audience participation. About 150 minutes including interval. Standard GBP 22.50–28.50; concessions GBP 18.50–22.50, including booking fee. Book tickets; under-14s need an adult. Recommended age TBC. School-only performances excluded.",
+      "dates": [
+        "2026-12-12",
+        "2026-12-13",
+        "2026-12-15",
+        "2026-12-16",
+        "2026-12-17",
+        "2026-12-19",
+        "2026-12-20",
+        "2026-12-21",
+        "2026-12-22",
+        "2026-12-23",
+        "2026-12-24",
+        "2026-12-26",
+        "2026-12-27",
+        "2026-12-28",
+        "2026-12-29",
+        "2026-12-30",
+        "2026-12-31",
+        "2027-01-01",
+        "2027-01-02"
+      ]
+    },
+    {
+      "name": "Cinderella – Barnfield Theatre",
+      "url": "https://exeternorthcott.co.uk/events/cinderella/",
+      "schedule": "Thu 31 December 2026, 11am and 3pm; Fri 1 January 2027, 1pm and 5pm",
+      "notes": "Wonder Pantomimes brings Cinderella's fairy tale to the stage with music and audience participation. All ages; 120 minutes including interval. Tickets GBP 18; check any order fee at checkout. Contains smoke and haze. Advance booking available.",
+      "dates": [
+        "2026-12-31",
+        "2027-01-01"
+      ]
+    }
+  ],
+  "correctedExisting": [
+    {
+      "name": "Sleeping Beauty – Exeter Northcott",
+      "url": "https://exeternorthcott.co.uk/events/sleeping-beauty/",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29",
+        "2026-12-01",
+        "2026-12-02",
+        "2026-12-03",
+        "2026-12-04",
+        "2026-12-05",
+        "2026-12-06",
+        "2026-12-10",
+        "2026-12-12",
+        "2026-12-13",
+        "2026-12-15",
+        "2026-12-16",
+        "2026-12-17",
+        "2026-12-19",
+        "2026-12-20",
+        "2026-12-21",
+        "2026-12-22",
+        "2026-12-23",
+        "2026-12-24",
+        "2026-12-26",
+        "2026-12-27",
+        "2026-12-28",
+        "2026-12-29",
+        "2026-12-31",
+        "2027-01-01",
+        "2027-01-02",
+        "2027-01-03"
+      ],
+      "notes": "Family booking table only. Removed continuous-range false positives, including no-show dates and adult-only dates. Prices GBP 21.50–79.80 on review; dynamic. 140 minutes including interval; recommended 5+."
+    },
+    {
+      "name": "A (little) Christmas Carol – Exeter Northcott",
+      "url": "https://exeternorthcott.co.uk/events/a-little-christmas-carol/",
+      "dates": [
+        "2026-12-17",
+        "2026-12-19",
+        "2026-12-21",
+        "2026-12-22",
+        "2026-12-23",
+        "2026-12-24",
+        "2026-12-27",
+        "2026-12-28",
+        "2026-12-29"
+      ],
+      "notes": "Only nine dates in the public booking table; not a daily 17–29 December run. 60 minutes, no interval. Created for ages 3–8; age guidance 3+, older children welcome."
+    }
+  ],
+  "sheetWrites": {
+    "master": "시트1!A229:P231; targeted fields of rows 121–122",
+    "events": "events!A350:H408; end dates removed from rows 140–141",
+    "pastRows": "Preserved"
+  }
+}

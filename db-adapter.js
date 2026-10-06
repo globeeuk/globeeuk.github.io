@@ -39,7 +39,8 @@
       for(const e of es){if(!iso(e.date)||e.end&&!iso(e.end))continue;const d={start:e.date,end:e.end||e.date};if(d.end<d.start)continue;if(!datePeriods.some(v=>v.start===d.start&&v.end===d.end))datePeriods.push(d);}
       datePeriods.sort((x,y)=>x.start.localeCompare(y.start));
       const kind=a.kind||(m.tab==='club'?'club':datePeriods.length||iso(m.end_date)?'event':'place');
-      const type=kind==='club'?'club':a.type||({art:'art',arts:'art',animation:'art',outdoor:'outdoors',themepark:'outdoors',cafe:'cafe',ice:'ice'}[m.type]||'activity');
+      const isShow=m.tab==='dayout'&&m.type==='theatre';
+      const type=kind==='club'?'club':isShow?'theatre':a.type||({art:'art',arts:'art',animation:'art',outdoor:'outdoors',themepark:'outdoors',cafe:'cafe',ice:'ice'}[m.type]||'activity');
       const category=a.category||(kind==='club'?'Holiday club':({sports:'Sport',theatre:'Theatre',music:'Music',arts:'Arts & making',art:'Arts & making',history:'History',sensory:'Sensory activities',education:'Learning',food:'Food & drink',outdoor:'Outdoors',themepark:'Theme park',film:'Film',cinema:'Cinema',dance:'Dance',animation:'Animation',festival:'Festival'}[m.type]|| (kind==='event'?'What’s on':'Family activity')));
       const ageMin=m.age_min===''||m.age_min==null?null:Number(m.age_min),ageMax=m.age_max===''||m.age_max==null?null:Number(m.age_max);
       const ages=Number.isFinite(ageMin)&&Number.isFinite(ageMax)&&ageMin>=0&&ageMax>=ageMin?[ageMin,ageMax]:null;
@@ -53,6 +54,7 @@
       const item={id:'db-'+encodeURIComponent(k),name,region:g.region,type,kind,category,description:m.description||'Open the details for the available schedule. Further venue information is being checked.',address:m.location||'Location details TBC',source,priceType,priceLabel,ages:filteredAges,ageLabel:a.ageLabel||(filteredAges?(filteredAges[0]===0&&filteredAges[1]>=16?'All ages':`${filteredAges[0]}–${filteredAges[1]} years`):'Age TBC'),dateNote:datePeriods.length?'':kind==='place'?(m.dates||'Check opening times'):'Dates TBC',datePeriods:datePeriods.length?datePeriods:null,endDate:iso(m.end_date)?m.end_date:null,scheduleText:m.dates||'Dates TBC',note:a.priceCaution||'Prices & schedules change — always check the provider before booking.',image:a.image||'',imageAlt:a.imageAlt||'',credit:a.credit||'',imageReference:a.imageReference||'',coords:a.coords||venue?.coords||null,collections:kind==='place'?(a.collections||[]):[],bookAhead:a.bookAhead===true,editReasons:a.editReasons||{},editEvidence:a.editEvidence||{},editChecked:a.editChecked||'',eatPlay:a.eatPlay||null,photoSource:a.photoSource||'',photoLicence:a.photoLicence||'',photoLicenceUrl:a.photoLicenceUrl||'',sourceRows:{master:!!g.master,events:es.length}};
       if(a.note)item.note=a.note+' Prices & schedules change — always check the provider before booking.';
       if(!source)item.note='The official venue link and practical details are being checked. Please confirm the event with its organiser before travelling.';
+      if(isShow)item.category='Theatre & shows';
       items.push(item);
     }
     return items;

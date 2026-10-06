@@ -10,6 +10,19 @@
   },
   "photos": [
     {
+      "key": "corn-exchange",
+      "image": "assets/images/corn-exchange.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Entrance_to_Exeter_Corn_Exchange_-_geograph.org.uk_-_3658813.jpg",
+      "creator": "David Smith",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Entrance_to_Exeter_Corn_Exchange_-_geograph.org.uk_-_3658813.jpg",
+      "date": "2013-09-09",
+      "checked": "2026-10-06",
+      "changes": "Resized to 640 × 466 and converted to WebP; cropped by the card layout. The derivative retains the source licence.",
+      "bytes": 20368
+    },
+    {
       "key": "cathedral",
       "image": "assets/images/cathedral.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Exeter_Cathedral.jpg",

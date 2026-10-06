@@ -2,7 +2,8 @@
 (function(root){
   'use strict';
   const photoRows=[
-    ["barnfield-auditorium","SamJonesTech","https://commons.wikimedia.org/wiki/File:Auditorium_Panorama.jpg","CC BY-SA 4.0","https://creativecommons.org/licenses/by-sa/4.0","2025","venue","The empty auditorium at Barnfield Theatre, where A (little) Christmas Carol takes place"],
+    ["corn-exchange","David Smith","https://commons.wikimedia.org/wiki/File:Entrance_to_Exeter_Corn_Exchange_-_geograph.org.uk_-_3658813.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2013","venue","The entrance to Exeter Corn Exchange on Market Street"],
+    ["barnfield-auditorium","SamJonesTech","https://commons.wikimedia.org/wiki/File:Auditorium_Panorama.jpg","CC BY-SA 4.0","https://creativecommons.org/licenses/by-sa/4.0","2025","venue","The empty auditorium at Barnfield Theatre"],
     ["christmas-tree-field","Hugh Chevallier","https://commons.wikimedia.org/wiki/File:Christmas_tree_plantation_-_geograph.org.uk_-_237550.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2006","activity","A Christmas tree plantation in Ellisfield, Hampshire; a tree-growing reference, not Cotley Farm"],
     ["dartington","Derek Harper","https://commons.wikimedia.org/wiki/File:Dartington_Hall_at_dusk_-_geograph.org.uk_-_5223578.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2016","venue","Dartington Hall at dusk"],
     ["plymouth-centre","Mick Lobb","https://commons.wikimedia.org/wiki/File:Plymouth_Guildhall_and_tower_of_St_Andrew%27s_Church_-_geograph.org.uk_-_1397691.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2009","location","Plymouth city centre with the Guildhall and St Andrew’s Church; not the Christmas market"],
@@ -80,8 +81,9 @@
       if(p.name==='Totnes Christmas Markets and Late Night Shopping')return 'totnes-christmas';
       if(p.name==='Tavistock Dickensian Christmas Evening')return 'tavistock';
       if(p.name==='Plymouth Christmas Market')return 'plymouth-centre';
-      if(p.name==='A (little) Christmas Carol – Exeter Northcott')return 'barnfield-auditorium';
-      if(p.name==='Sleeping Beauty – Exeter Northcott')return 'northcott';
+      if(['Shrek the Musical Jr – Stage by Stage','Pinocchio – Exeter Corn Exchange'].includes(p.name))return 'corn-exchange';
+      if(['A (little) Christmas Carol – Exeter Northcott','Cinderella – Barnfield Theatre'].includes(p.name))return 'barnfield-auditorium';
+      if(['Sleeping Beauty – Exeter Northcott','The Space Explorers Academy – Exeter Northcott'].includes(p.name))return 'northcott';
       if(p.name==='Exeter Cathedral')return 'cathedral';
       if(/RAMM|Royal Albert Memorial Museum/.test(p.name)){
         if(/^RAMM – Royal Albert/.test(p.name))return 'ramm';
@@ -164,7 +166,7 @@
   function decorate(p){
     const k=photoKey(p),t=theme(p);
     const image=k?photos[k]:{image:`assets/images/${t}.webp`,imageKind:'illustration',imageAlt:descriptions[t]+'; an activity illustration, not the venue',credit:'Globee',imageReference:'AI-generated activity illustration, created for Globee. It does not depict the venue or event.',photoSource:'',photoLicence:'',photoLicenceUrl:''};
-    const clarification=k==='christmas-tree-field'?{imageLabel:'Tree reference photo',imageReference:'Tree-growing reference photographed in Ellisfield, Hampshire in 2006; NOT Cotley Farm or its Christmas event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:k==='thorverton'?{imageLabel:'Thorverton village',imageReference:'Thorverton village photograph from 2007; NOT Canns Farm or Exe Valley Christmas Trees. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:{};
+    const clarification=k==='christmas-tree-field'?{imageLabel:'Tree reference photo',imageReference:'Tree-growing reference photographed in Ellisfield, Hampshire in 2006; NOT Cotley Farm and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:k==='thorverton'?{imageLabel:'Thorverton village',imageReference:'Thorverton village photograph from 2007; NOT Canns Farm or Exe Valley Christmas Trees and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:{};
     return {...p,...image,...clarification};
   }
   const api={decorate,theme};

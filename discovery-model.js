@@ -10,6 +10,13 @@
   ];
   function plusDays(s,n){const d=date(s);d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10);}
   function weekendRange(today){const day=date(today).getUTCDay(),start=day===0?today:plusDays(today,(6-day+7)%7);return {start,end:day===0?today:plusDays(start,1)};}
+  // Twenty-eight local calendar dates, including today. Keep one card per show.
+  function nextFourWeeksRange(today){return {start:today,end:plusDays(today,27)};}
+  function nextFourWeeksPicks(places,today,limit=10){
+    const range=nextFourWeeksRange(today),seen=new Set();
+    const next=p=>(p.datePeriods||[]).filter(d=>d.start<=range.end&&d.end>=range.start).map(d=>d.start<today?today:d.start).sort()[0];
+    return places.filter(p=>{if(seen.has(p.id)||!next(p))return false;seen.add(p.id);return true;}).sort((a,b)=>next(a).localeCompare(next(b))||a.name.localeCompare(b.name)).slice(0,limit);
+  }
   function weekendPicks(places,today,limit=10){
     const range=weekendRange(today),seen=new Set();
     // Keep only confirmed overlapping dates, and one card per directory entry.
@@ -69,6 +76,6 @@
     }
     return groups;
   }
-  const api={SEASONAL_EDITS,weekendRange,weekendPicks,seasonalDefinition,matchesSeasonal,seasonalPlaces,seasonalEdit,bookAheadEdit,nextBatch,hasMapLocation,initialMapSelection,mapGroups};
+  const api={SEASONAL_EDITS,weekendRange,weekendPicks,nextFourWeeksRange,nextFourWeeksPicks,seasonalDefinition,matchesSeasonal,seasonalPlaces,seasonalEdit,bookAheadEdit,nextBatch,hasMapLocation,initialMapSelection,mapGroups};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.GlobeeDiscovery=api;
 })(typeof window!=='undefined'?window:globalThis);

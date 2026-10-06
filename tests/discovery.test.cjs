@@ -54,11 +54,13 @@ test('Christmas book-ahead edit contains checked Exeter and Bristol booking page
  const exeter=items.filter(p=>p.region==='Exeter');
  const early=model.bookAheadEdit(exeter,'2026-10-05');
  assert.equal(model.seasonalEdit(exeter,'2026-10-05').id,'halloween');
- assert(early);assert.equal(early.total,3);
+ assert(early);assert.equal(early.total,5);
  assert.deepEqual(early.picks.map(p=>p.name),[
   'Sleeping Beauty – Exeter Northcott',
+  'Pinocchio – Exeter Corn Exchange',
   'Yeti – Exeter Phoenix',
-  'A (little) Christmas Carol – Exeter Northcott'
+  'A (little) Christmas Carol – Exeter Northcott',
+  'Cinderella – Barnfield Theatre'
  ]);
  assert(early.picks.every(p=>p.source&&p.priceType==='paid'&&p.datePeriods?.length));
  const bristol=model.bookAheadEdit(items.filter(p=>p.region==='Bristol'),'2026-10-06');
@@ -100,7 +102,7 @@ test('Every current card has a small local asset and honest image metadata',()=>
  assert.equal(images.decorate({name:'RAMM workshop',region:'Nottingham',type:'art'}).imageKind,'illustration');
 });
 test('The public image register matches every licensed local photo',()=>{
- assert.equal(imageSources.photos.length,59);
+ assert.equal(imageSources.photos.length,60);
  assert.equal(new Set(imageSources.photos.map(p=>p.key)).size,imageSources.photos.length);assert.equal(new Set(imageSources.photos.map(p=>p.image)).size,imageSources.photos.length);
  for(const p of imageSources.photos){
   const asset=path.join(__dirname,'..',p.image);assert.equal(fs.statSync(asset).size,p.bytes,p.key);assert(p.creator);assert.match(p.source,/^https:\/\/commons.wikimedia.org\/wiki\/File:/);assert.match(p.licence,/^(CC BY|CC0)/);

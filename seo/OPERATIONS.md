@@ -21,6 +21,14 @@ Twice-daily builds do not remove an event at the exact second it ends. An urgent
 
 ## Morning review
 
+### Family theatre within Days out — 6 October 2026
+
+Family plays, storybook adaptations, musicals, puppetry and pantomimes belong in the existing Days out directory, not a new permanent theatre section. Use `tab=dayout`, `type=theatre` in the shared master Sheet; the site labels these **Theatre & shows**. Drama, singing and musical-theatre tuition remain Classes & lessons (`tab=lesson`); do not turn lessons into outings.
+
+Keep one master entry per production and region. Add only confirmed public performance dates to `events`, leaving gaps intact rather than representing a selected-date run as daily. Exclude school-only and adult-only performances. The same dates feed **This weekend** and **Next 4 weeks** (today plus 27 days, up to 10 homepage cards, all matches under View all). Verified festive productions with booking links may also receive the existing `bookAhead` annotation; do not copy rows into a separate Christmas database.
+
+Verify venue, year/weekday, age guidance, running time/interval, prices/fees and booking conditions from the organiser. Leave missing ages or duration TBC. Label student/amateur productions clearly. Use licensed venue photographs if production-photo reuse is unconfirmed; never imply that a venue photograph depicts the show. Preserve ended performances and re-check changed schedules during normal reviews. No extra research automation or new-region expansion is authorised by this classification rule.
+
 1. Confirm the repository and inspect its working state. Preserve unrelated work and start from the current public version.
 2. Read Sheet1 and events with `sheet_candidates.py`. Identify relevant changes and missing matches. A row's added date or a successful download does not establish verification.
 3. Review official provider sources for the choices to be shown this weekend, next weekend, in the free guide and in the rainy-day guide. Confirm the year, dates or opening schedule, admission basis, location, age guidance and material conditions. A working URL alone does not verify its contents.

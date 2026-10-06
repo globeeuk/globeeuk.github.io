@@ -44,3 +44,9 @@ window.GLOBEE_EDITORIAL.annotations['Meet Santa – Noah’s Ark Zoo Farm'].ageL
 window.GLOBEE_EDITORIAL.annotations['Meet Santa – Noah’s Ark Zoo Farm'].ages=[0,99];
 window.GLOBEE_EDITORIAL.annotations['Festive Illumination Light Trail – Old Down Estate'].ageLabel='All ages';
 window.GLOBEE_EDITORIAL.annotations['Festive Illumination Light Trail – Old Down Estate'].ages=[0,99];
+// One Days out record per production; reuse its verified dates across edits.
+for(const name of ['Pinocchio – Exeter Corn Exchange','Cinderella – Barnfield Theatre']){
+  window.GLOBEE_EDITORIAL.annotations[name]={...window.GLOBEE_EDITORIAL.annotations[name],bookAhead:true,note:'Public family performances and booking links checked on 6 October 2026. Check live ticket availability before booking.'};
+}
+window.GLOBEE_EDITORIAL.annotations['A (little) Christmas Carol – Exeter Northcott'].ageLabel='3+ · created for 3–8';
+window.GLOBEE_EDITORIAL.annotations['A (little) Christmas Carol – Exeter Northcott'].ages=[3,99];
