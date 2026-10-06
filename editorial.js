@@ -31,3 +31,16 @@ for(const name of ['Sleeping Beauty – Exeter Northcott','A (little) Christmas 
 }
 window.GLOBEE_EDITORIAL.annotations['Sleeping Beauty – Exeter Northcott'].ageLabel='5+ years';
 window.GLOBEE_EDITORIAL.annotations['Sleeping Beauty – Exeter Northcott'].ages=[5,99];
+
+// Bristol dates and available slots checked in the official booking calendars, 6 October 2026.
+for(const name of ['Meet Santa – Noah’s Ark Zoo Farm','Festive Illumination Light Trail – Old Down Estate','Sleeping Beauty – Bristol Hippodrome']){
+  window.GLOBEE_EDITORIAL.annotations[name]={
+    ...window.GLOBEE_EDITORIAL.annotations[name],
+    bookAhead:true,
+    note:'2026 dates and available booking slots checked on 6 October. Availability can change; choose your date on the organiser’s booking page.'
+  };
+}
+window.GLOBEE_EDITORIAL.annotations['Meet Santa – Noah’s Ark Zoo Farm'].ageLabel='All ages';
+window.GLOBEE_EDITORIAL.annotations['Meet Santa – Noah’s Ark Zoo Farm'].ages=[0,99];
+window.GLOBEE_EDITORIAL.annotations['Festive Illumination Light Trail – Old Down Estate'].ageLabel='All ages';
+window.GLOBEE_EDITORIAL.annotations['Festive Illumination Light Trail – Old Down Estate'].ages=[0,99];

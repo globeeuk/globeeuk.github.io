@@ -118,16 +118,16 @@ function renderWeekend(){
   lastPrimaryPlansKey=primaryKey;
   const range=GlobeeDiscovery.weekendRange(TODAY);
   const sections=[];
+  if(bookAhead){
+    const region=encodeURIComponent(state.region==='Exeter'?'Devon':state.region);
+    const allLink=`plans.html?region=${region}&edit=christmas-book-ahead`;
+    sections.push(rail('christmas-book-ahead-picks',bookAhead.title,`${bookAhead.subtitle} · Check current availability`,bookAhead.picks,allLink,`View all (${bookAhead.total})`));
+  }
   if(seasonal){
     const region=encodeURIComponent(state.region==='Exeter'?'Devon':state.region);
     const allLink=seasonal.page?`${seasonal.page}?region=${region}`:`plans.html?region=${region}&edit=${encodeURIComponent(seasonal.id)}`;
     if(seasonal.picks.length)sections.push(rail(`${seasonal.id}-picks`,`${seasonal.title} · ${seasonal.picks.length} ${seasonal.picks.length===1?'pick':'picks'}`,seasonal.homeEnd?seasonal.subtitle:`${seasonal.subtitle} · Until ${dateShort(seasonal.end)}`,seasonal.picks,allLink,`View all (${seasonal.total})`));
     else sections.push(`<section class="seasonal-pending" aria-labelledby="seasonal-pending-heading"><h2 id="seasonal-pending-heading">${escapeHTML(seasonal.title)}</h2><p>We’re checking festive family plans in ${escapeHTML(REGION_LABELS[state.region])}. Dates and booking details will appear here once confirmed.</p></section>`);
-  }
-  if(bookAhead){
-    const region=encodeURIComponent(state.region==='Exeter'?'Devon':state.region);
-    const allLink=`plans.html?region=${region}&edit=christmas-book-ahead`;
-    sections.push(rail('christmas-book-ahead-picks',bookAhead.title,`${bookAhead.subtitle} · Check current availability`,bookAhead.picks,allLink,`View all (${bookAhead.total})`));
   }
   if(weekend.length)sections.push(rail('weekend-picks',`This weekend · ${weekend.length} ${weekend.length===1?'idea':'ideas'}`,dateRangeLabel(range),weekend));
   container.setAttribute('aria-label',seasonal||bookAhead?'Seasonal and weekend plans':'This weekend');
@@ -195,7 +195,7 @@ function render(){
   const activeEdit=state.edit?GlobeeDiscovery.seasonalDefinition(state.edit,TODAY):null;
   if($('#plans-page-title')){
     $('#plans-page-title').textContent=activeEdit?activeEdit.title:'What’s on & holiday clubs';
-    $('.plans-intro-copy').textContent=activeEdit?.id==='christmas-book-ahead'?'Family Christmas shows with published 2026 dates and booking links. Check availability with the organiser.':activeEdit?'Every verified seasonal plan, together in one list.':'Browse upcoming events and holiday clubs in one place.';
+    $('.plans-intro-copy').textContent=activeEdit?.id==='christmas-book-ahead'?'Family Christmas events with published 2026 dates and booking links. Check availability with the organiser.':activeEdit?'Every verified seasonal plan, together in one list.':'Browse upcoming events and holiday clubs in one place.';
     document.title=activeEdit?`${activeEdit.title} in ${state.region==='Exeter'?'Exeter & Devon':state.region} | Globee`:'What’s on & holiday clubs | Globee';
   }
   if($('.weekend-shortcut'))$('.weekend-shortcut').hidden=!!activeEdit;

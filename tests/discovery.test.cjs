@@ -32,7 +32,7 @@ test('Seasonal edits run through their end date, stay regional and never pad the
  const bristol=model.seasonalEdit(items.filter(p=>p.region==='Bristol'),'2026-09-21');
  assert.equal(bristol.id,'halloween');assert(bristol.total>=2);assert(bristol.picks.every(p=>p.region==='Bristol'));
  const bristolChristmas=model.seasonalEdit(items.filter(p=>p.region==='Bristol'),'2026-10-31');
- assert.equal(bristolChristmas.id,'christmas');assert.equal(bristolChristmas.total,0);assert.deepEqual(bristolChristmas.picks,[]);
+ assert.equal(bristolChristmas.id,'christmas');assert.equal(bristolChristmas.total,3);assert(bristolChristmas.picks.every(p=>p.region==='Bristol'));
   const undated={id:'undated',name:'Halloween event',description:'Family Halloween activity'};
  assert.equal(model.seasonalEdit([undated],'2026-10-01'),null);
  const festive=i=>({id:String(i),name:`Christmas activity ${i}`,description:'Family Christmas event',datePeriods:[{start:'2026-12-01',end:'2026-12-24'}]});
@@ -50,7 +50,7 @@ test('Seasonal list keeps every matching event while the home edit stays at five
  assert(model.matchesSeasonal(halloween[0],'2026-09-13','halloween'));
  assert.equal(model.nextBatch(model.seasonalPlaces(halloween,'2026-09-13','halloween'),12).length,5);
 });
-test('Christmas book-ahead edit appears beside Halloween and contains only checked Exeter booking pages',()=>{
+test('Christmas book-ahead edit contains checked Exeter and Bristol booking pages without mixing regions',()=>{
  const exeter=items.filter(p=>p.region==='Exeter');
  const early=model.bookAheadEdit(exeter,'2026-10-05');
  assert.equal(model.seasonalEdit(exeter,'2026-10-05').id,'halloween');
@@ -61,9 +61,24 @@ test('Christmas book-ahead edit appears beside Halloween and contains only check
   'A (little) Christmas Carol – Exeter Northcott'
  ]);
  assert(early.picks.every(p=>p.source&&p.priceType==='paid'&&p.datePeriods?.length));
- assert.equal(model.bookAheadEdit(items.filter(p=>p.region==='Bristol'),'2026-10-05'),null);
+ const bristol=model.bookAheadEdit(items.filter(p=>p.region==='Bristol'),'2026-10-06');
+ assert.equal(bristol.total,3);
+ assert(bristol.picks.every(p=>p.region==='Bristol'&&p.source&&p.priceType==='paid'));
+ assert.equal(bristol.picks.find(p=>p.name.includes('Noah')).datePeriods.length,10);
+ assert.equal(bristol.picks.find(p=>p.name.includes('Old Down')).datePeriods.length,18);
+ assert.equal(bristol.picks.find(p=>p.name.includes('Hippodrome')).datePeriods.length,25);
+ assert(!bristol.picks.some(p=>p.datePeriods.some(d=>d.start<='2026-12-25'&&d.end>='2026-12-25')));
+ assert.equal(model.bookAheadEdit(items.filter(p=>p.region==='Nottingham'),'2026-10-06'),null);
  assert.equal(model.bookAheadEdit(exeter,'2027-01-04'),null);
  assert.equal(model.seasonalEdit(exeter,'2026-10-31').id,'christmas');
+});
+test('Christmas book-ahead rail is rendered before Halloween on the homepage',()=>{
+ const app=fs.readFileSync(path.join(__dirname,'..','app.js'),'utf8');
+ const body=app.slice(app.indexOf('function renderWeekend(){'),app.indexOf('function rail('));
+ assert(body.indexOf("rail('christmas-book-ahead-picks'")<body.indexOf('rail(`${seasonal.id}-picks`'));
+ const home=fs.readFileSync(path.join(__dirname,'..','index.html'),'utf8');
+ assert(!home.includes('id="exeter-music-feature"'));
+ assert(!home.includes('src="music-feature.js'));
 });
 test('Twelve-card batches reach every actual record exactly once with a partial final batch',()=>{
  for(const region of ['Exeter','Bristol','Nottingham']){const all=current.filter(p=>p.region===region),shown=[];let chunk;

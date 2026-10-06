@@ -4,7 +4,7 @@
   const date=s=>new Date(s+'T12:00:00Z');
   const SEASONAL_EDITS=[
     {id:'halloween',title:'Halloween plans',page:'halloween.html',start:'2026-09-13',end:'2026-10-31',homeEnd:'2026-10-30',minPicks:1,terms:/halloween|pumpkin|ghost|spook|trick or treat|monster|skeleton|tim burton|hocus pocus|nightmare before christmas/i,subtitle:'Book ahead for October half term'},
-    {id:'christmas-book-ahead',title:'Christmas · book ahead',start:'2026-10-05',end:'2027-01-03',secondary:true,minPicks:1,terms:/./,subtitle:'Festive family shows with booking links'},
+    {id:'christmas-book-ahead',title:'Christmas · book ahead',start:'2026-10-05',end:'2027-01-03',secondary:true,minPicks:1,terms:/./,subtitle:'Festive family events with booking links'},
     {id:'christmas',title:'The Christmas Edit',start:'2026-10-31',end:'2026-12-24',minPicks:1,showWhileChecking:true,terms:/christmas|festive|santa|father christmas|pantomime|polar express|nativity/i,subtitle:'Book ahead for the festive season'},
     {id:'bristol',title:'The Bristol edit',page:'bristol/edit/',region:'Bristol',start:'2026-09-21',end:'2027-01-31',minPicks:1,terms:/./i,subtitle:'A growing set of checked Bristol family picks'}
   ];

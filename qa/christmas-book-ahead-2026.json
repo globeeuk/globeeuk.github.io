@@ -1,0 +1,107 @@
+{
+  "checkedAt": "2026-10-06",
+  "scope": "Christmas book-ahead homepage and existing plans listing; no claim of SEO indexing or measured growth.",
+  "sheet": {
+    "master": "시트1!A218:P220",
+    "events": "events!A269:H321"
+  },
+  "events": [
+    {
+      "name": "Meet Santa – Noah’s Ark Zoo Farm",
+      "region": "Bristol",
+      "officialURL": "https://www.noahsarkzoofarm.co.uk/whats-on/upcoming-events/meet-santa-at-noahs-ark-zoo-farm/",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-12-05",
+        "2026-12-06",
+        "2026-12-12",
+        "2026-12-13",
+        "2026-12-19",
+        "2026-12-20",
+        "2026-12-21",
+        "2026-12-22"
+      ],
+      "bookingStatus": "Available dated slots observed in the official booking calendar; stock may change",
+      "notes": "Meet Santa in his library and take home a wrapped book; children aged 2+ also receive a decoration. Santa tickets: GBP 13.95 ages 2–15, GBP 11.95 under-2s, plus GBP 2 per order. Zoo admission is extra. Book a timed slot."
+    },
+    {
+      "name": "Festive Illumination Light Trail – Old Down Estate",
+      "region": "Bristol",
+      "officialURL": "https://www.olddownestate.co.uk/whats-on/festive-illumination-light-trail-2026/",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-12-05",
+        "2026-12-06",
+        "2026-12-11",
+        "2026-12-12",
+        "2026-12-13",
+        "2026-12-14",
+        "2026-12-17",
+        "2026-12-18",
+        "2026-12-19",
+        "2026-12-20",
+        "2026-12-21",
+        "2026-12-22",
+        "2026-12-23",
+        "2026-12-24",
+        "2026-12-27",
+        "2026-12-28"
+      ],
+      "bookingStatus": "Available dated slots observed in the official booking calendar; stock may change",
+      "notes": "An outdoor Christmas light trail with marshmallow toasting and an after-dark adventure park. Adult GBP 20.50; child 2–15 GBP 13.65; under-2s free. Book timed entry. Daytime park admission is separate; quieter sessions on 14 December."
+    },
+    {
+      "name": "Sleeping Beauty – Bristol Hippodrome",
+      "region": "Bristol",
+      "officialURL": "https://www.atgtickets.com/shows/sleeping-beauty-pantomime/bristol-hippodrome/",
+      "dates": [
+        "2026-12-04",
+        "2026-12-06",
+        "2026-12-07",
+        "2026-12-09",
+        "2026-12-10",
+        "2026-12-11",
+        "2026-12-13",
+        "2026-12-14",
+        "2026-12-15",
+        "2026-12-16",
+        "2026-12-17",
+        "2026-12-18",
+        "2026-12-20",
+        "2026-12-21",
+        "2026-12-22",
+        "2026-12-23",
+        "2026-12-24",
+        "2026-12-26",
+        "2026-12-27",
+        "2026-12-28",
+        "2026-12-29",
+        "2026-12-30",
+        "2026-12-31",
+        "2027-01-02",
+        "2027-01-03"
+      ],
+      "bookingStatus": "Available dated slots observed in the official booking calendar; stock may change",
+      "notes": "A Christmas pantomime with music, comedy and audience participation. Tickets from GBP 15 on selected performances; prices vary by seat and date. Check age guidance and the live seating plan before booking."
+    }
+  ],
+  "bookingEvidence": [
+    {
+      "name": "Meet Santa – Noah’s Ark Zoo Farm",
+      "url": "https://noahsarkzoofarm.digitickets.co.uk/event-tickets/61994?catID=34482",
+      "observed": "28 Nov 2026 11:00–11:15 Tickets available, child GBP 13.95; GBP 2 online order fee. Search cache showed old prices; live browser checked current prices."
+    },
+    {
+      "name": "Festive Illumination Light Trail – Old Down Estate",
+      "url": "https://olddownestate.digitickets.co.uk/event-tickets/60392?catID=58218&navItem=1363542",
+      "observed": "5 Dec 2026 17:00–17:45 Tickets available, adult GBP 20.50. Booking entry slots supersede inconsistent page headline; listed days omit closed days."
+    },
+    {
+      "name": "Sleeping Beauty – Bristol Hippodrome",
+      "url": "https://www.atgtickets.com/shows/sleeping-beauty-pantomime/bristol-hippodrome/calendar/",
+      "observed": "4 Dec 2026 19:00 Medium availability from GBP 15; 7 Dec 19:00 Good availability. Exact numeric age not confirmed, retained TBC."
+    }
+  ]
+}
