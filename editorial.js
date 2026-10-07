@@ -50,3 +50,14 @@ for(const name of ['Pinocchio – Exeter Corn Exchange','Cinderella – Barnfiel
 }
 window.GLOBEE_EDITORIAL.annotations['A (little) Christmas Carol – Exeter Northcott'].ageLabel='3+ · created for 3–8';
 window.GLOBEE_EDITORIAL.annotations['A (little) Christmas Carol – Exeter Northcott'].ages=[3,99];
+// Three distinct Christmas rail tickets, with only the organisers' selected 2026 dates in events.
+for(const name of ['Christmas Train of Lights – Dartmouth Steam Railway','Train of Lights+Santa – Dartmouth Steam Railway','THE POLAR EXPRESS™ Train Ride – South Devon Railway']){
+  window.GLOBEE_EDITORIAL.annotations[name]={
+    ...window.GLOBEE_EDITORIAL.annotations[name],
+    category:'Christmas trains',
+    bookAhead:true,
+    note:'Selected 2026 running dates and booking links checked on 7 October. Times, fares and availability can change; check the organiser before booking.'
+  };
+}
+window.GLOBEE_EDITORIAL.annotations['Christmas Train of Lights – Dartmouth Steam Railway'].note='Santa does not board the standard Train of Lights. Selected 2026 dates checked on 7 October; check times, fares and availability before booking.';
+window.GLOBEE_EDITORIAL.annotations['Train of Lights+Santa – Dartmouth Steam Railway'].note='This is a separate Train of Lights+Santa ticket with Santa on board. Selected 2026 dates checked on 7 October; check times, fares and availability before booking.';

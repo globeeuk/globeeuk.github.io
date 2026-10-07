@@ -2,6 +2,9 @@
 (function(root){
   'use strict';
   const photoRows=[
+    ['dartmouth-train-of-lights','Benjamin Smith','https://commons.wikimedia.org/wiki/File:Dartmouth_Steam_Railway_-_01.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/','2023','location','A Dartmouth Steam Railway locomotive at Kingswear; not the Christmas Train of Lights'],
+    ['dartmouth-train-santa','Geof Sheppard','https://commons.wikimedia.org/wiki/File:Greenway_Halt_train_hauled_by_4277.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/','2012','location','A Dartmouth Steam Railway train at Greenway Halt; not the Train of Lights+Santa service'],
+    ['south-devon-polar-express','Bob Walters','https://commons.wikimedia.org/wiki/File:Train_arriving_at_Buckfastleigh_-_geograph.org.uk_-_7234581.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2022','venue','A steam train arriving at Buckfastleigh Station; not THE POLAR EXPRESS train ride'],
     ["corn-exchange","David Smith","https://commons.wikimedia.org/wiki/File:Entrance_to_Exeter_Corn_Exchange_-_geograph.org.uk_-_3658813.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2013","venue","The entrance to Exeter Corn Exchange on Market Street"],
     ["barnfield-auditorium","SamJonesTech","https://commons.wikimedia.org/wiki/File:Auditorium_Panorama.jpg","CC BY-SA 4.0","https://creativecommons.org/licenses/by-sa/4.0","2025","venue","The empty auditorium at Barnfield Theatre"],
     ["christmas-tree-field","Hugh Chevallier","https://commons.wikimedia.org/wiki/File:Christmas_tree_plantation_-_geograph.org.uk_-_237550.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2006","activity","A Christmas tree plantation in Ellisfield, Hampshire; a tree-growing reference, not Cotley Farm"],
@@ -73,6 +76,9 @@
   function photoKey(p){
     if(p.name==='Chessed.me (Online Chess)')return 'chess';
     if(p.region==='Exeter'){
+      if(p.name==='Christmas Train of Lights – Dartmouth Steam Railway')return 'dartmouth-train-of-lights';
+      if(p.name==='Train of Lights+Santa – Dartmouth Steam Railway')return 'dartmouth-train-santa';
+      if(p.name==='THE POLAR EXPRESS™ Train Ride – South Devon Railway')return 'south-devon-polar-express';
       if(p.name==='Cotley Farm Christmas')return 'christmas-tree-field';
       if(/^Exe Valley Christmas Trees/.test(p.name))return 'thorverton';
       if(p.name==='RHS Glow – Rosemoor')return 'rosemoor';
@@ -166,7 +172,7 @@
   function decorate(p){
     const k=photoKey(p),t=theme(p);
     const image=k?photos[k]:{image:`assets/images/${t}.webp`,imageKind:'illustration',imageAlt:descriptions[t]+'; an activity illustration, not the venue',credit:'Globee',imageReference:'AI-generated activity illustration, created for Globee. It does not depict the venue or event.',photoSource:'',photoLicence:'',photoLicenceUrl:''};
-    const clarification=k==='christmas-tree-field'?{imageLabel:'Tree reference photo',imageReference:'Tree-growing reference photographed in Ellisfield, Hampshire in 2006; NOT Cotley Farm and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:k==='thorverton'?{imageLabel:'Thorverton village',imageReference:'Thorverton village photograph from 2007; NOT Canns Farm or Exe Valley Christmas Trees and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:{};
+    const clarification=k==='christmas-tree-field'?{imageLabel:'Tree reference photo',imageReference:'Tree-growing reference photographed in Ellisfield, Hampshire in 2006; NOT Cotley Farm and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:k==='thorverton'?{imageLabel:'Thorverton village',imageReference:'Thorverton village photograph from 2007; NOT Canns Farm or Exe Valley Christmas Trees and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:['dartmouth-train-of-lights','dartmouth-train-santa','south-devon-polar-express'].includes(k)?{imageLabel:'Railway photo'}:{};
     return {...p,...image,...clarification};
   }
   const api={decorate,theme};

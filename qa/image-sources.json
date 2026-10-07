@@ -1,14 +1,53 @@
 {
-  "checked": "2026-10-06",
+  "checked": "2026-10-07",
   "policy": "Only photographs with a confirmed reuse licence are copied. Official website photographs without confirmed permission are excluded. Venue and location photos are labelled and do not represent the current event.",
   "coverage": {
-    "currentCards": 88,
-    "licensedPhotoCards": 57,
-    "illustrationCards": 31,
-    "uniqueDisplayedAssets": 54,
-    "licensedSourceAssets": 46
+    "currentCards": 155,
+    "licensedPhotoCards": 86,
+    "illustrationCards": 69,
+    "uniqueDisplayedAssets": 59,
+    "licensedSourceAssets": 51
   },
   "photos": [
+    {
+      "key": "dartmouth-train-of-lights",
+      "image": "assets/images/dartmouth-train-of-lights.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Dartmouth_Steam_Railway_-_01.jpg",
+      "creator": "Benjamin Smith",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dartmouth_Steam_Railway_-_01.jpg",
+      "date": "2023",
+      "checked": "2026-10-07",
+      "changes": "Resized to 640 pixels wide and converted to WebP; cropped by the card layout. The derivative retains the source licence. Not the current event.",
+      "bytes": 50394
+    },
+    {
+      "key": "dartmouth-train-santa",
+      "image": "assets/images/dartmouth-train-santa.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Greenway_Halt_train_hauled_by_4277.jpg",
+      "creator": "Geof Sheppard",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Greenway_Halt_train_hauled_by_4277.jpg",
+      "date": "2012",
+      "checked": "2026-10-07",
+      "changes": "Resized to 640 pixels wide and converted to WebP; cropped by the card layout. The derivative retains the source licence. Not the current event.",
+      "bytes": 56232
+    },
+    {
+      "key": "south-devon-polar-express",
+      "image": "assets/images/south-devon-polar-express.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Train_arriving_at_Buckfastleigh_-_geograph.org.uk_-_7234581.jpg",
+      "creator": "Bob Walters",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Train_arriving_at_Buckfastleigh_-_geograph.org.uk_-_7234581.jpg",
+      "date": "2022",
+      "checked": "2026-10-07",
+      "changes": "Resized to 640 pixels wide and converted to WebP; cropped by the card layout. The derivative retains the source licence. Not the current event.",
+      "bytes": 67962
+    },
     {
       "key": "corn-exchange",
       "image": "assets/images/corn-exchange.webp",

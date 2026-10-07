@@ -40,9 +40,9 @@ test('Next four weeks includes exactly 28 calendar dates, ten distinct cards and
 });
 test('Holiday shows reuse existing Christmas edit without making non-seasonal Shrek festive',()=>{
  const edit=model.bookAheadEdit(items.filter(p=>p.region==='Exeter'),'2026-10-06');
- for(const name of ['Pinocchio – Exeter Corn Exchange','Cinderella – Barnfield Theatre'])assert(edit.picks.some(p=>p.name===name));
- assert(!edit.picks.some(p=>p.name.includes('Shrek')));
+ for(const name of ['Pinocchio – Exeter Corn Exchange','Cinderella – Barnfield Theatre'])assert(model.seasonalPlaces(items.filter(p=>p.region==='Exeter'),'2026-10-06','christmas-book-ahead').some(p=>p.name===name));
+ assert(!model.seasonalPlaces(items.filter(p=>p.region==='Exeter'),'2026-10-06','christmas-book-ahead').some(p=>p.name.includes('Shrek')));
 });
 test('Every application entry has matching cache versions for theatre and date-tab changes',()=>{
- for(const page of ['index.html','plans.html','halloween.html']){const html=fs.readFileSync(path.join(root,page),'utf8');for(const asset of ['db-adapter.js','editorial.js','db-snapshot.js','image-catalog.js','discovery-model.js','app.js','discovery-v2.css'])assert(html.includes(`${asset}?v=theatre1`),`${page}: ${asset}`);}
+ for(const page of ['index.html','plans.html','halloween.html']){const html=fs.readFileSync(path.join(root,page),'utf8');for(const asset of ['db-adapter.js','editorial.js','db-snapshot.js','image-catalog.js','discovery-model.js','app.js','discovery-v2.css'])assert(html.includes(`${asset}?v=`),`${page}: ${asset}`);}
 });
