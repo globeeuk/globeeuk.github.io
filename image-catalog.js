@@ -55,6 +55,7 @@
     ['exeter-tennis','Pierre Terre','https://commons.wikimedia.org/wiki/File:Exeter%20Tennis%20Centre%2C%20University%20of%20Exeter%20-%20geograph.org.uk%20-%201004177.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2008','venue','Exeter Tennis Centre at the University of Exeter'],
     ['heavitree','David Smith','https://commons.wikimedia.org/wiki/File:Heavitree%20Pleasure%20Ground%2C%20Exeter%20-%20geograph.org.uk%20-%206477874.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2020','location','A wide green and path at Heavitree Pleasure Ground'],
     ['flowerpot-skatepark','Derek Harper','https://commons.wikimedia.org/wiki/File:Flowerpot%20Chill%20Zone%2C%20Exeter%20-%20geograph.org.uk%20-%201069980.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2008','location','The ramps at Flowerpot Skatepark in Exeter'],
+    ['charmouth-beach','Robin Drayton','https://commons.wikimedia.org/wiki/File:Charmouth_Beach_(geograph_4669177).jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2015','location','Charmouth Beach on the Dorset coast'],
     ['st-lukes','Eugene Birchall','https://commons.wikimedia.org/wiki/File:Exeter%20University%20-%20St%20Luke%27s%20Campus.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0','2012','venue',"The cloister courtyard at the University of Exeter's St Luke's Campus"],
     ['ramm-ancient','Pymouss','https://commons.wikimedia.org/wiki/File:RAMM%20-%20Ancient%20worlds.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0','2015','venue','The Ancient Worlds gallery inside RAMM'],
     ['ramm-roman','Pymouss','https://commons.wikimedia.org/wiki/File:RAMM%20-%20Roman%20wall.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0','2015','venue','The Roman wall in the grounds of RAMM'],
@@ -76,6 +77,7 @@
   function photoKey(p){
     if(p.name==='Chessed.me (Online Chess)')return 'chess';
     if(p.region==='Exeter'){
+      if(p.name==='Charmouth Beach – Fossil Hunting (Dorset day trip)')return 'charmouth-beach';
       if(p.name==='Christmas Train of Lights – Dartmouth Steam Railway')return 'dartmouth-train-of-lights';
       if(p.name==='Train of Lights+Santa – Dartmouth Steam Railway')return 'dartmouth-train-santa';
       if(p.name==='THE POLAR EXPRESS™ Train Ride – South Devon Railway')return 'south-devon-polar-express';

@@ -61,3 +61,11 @@ for(const name of ['Christmas Train of Lights – Dartmouth Steam Railway','Trai
 }
 window.GLOBEE_EDITORIAL.annotations['Christmas Train of Lights – Dartmouth Steam Railway'].note='Santa does not board the standard Train of Lights. Selected 2026 dates checked on 7 October; check times, fares and availability before booking.';
 window.GLOBEE_EDITORIAL.annotations['Train of Lights+Santa – Dartmouth Steam Railway'].note='This is a separate Train of Lights+Santa ticket with Santa on board. Selected 2026 dates checked on 7 October; check times, fares and availability before booking.';
+// A Dorset day trip for Exeter families, not a Devon fossil-collecting site.
+window.GLOBEE_EDITORIAL.annotations['Charmouth Beach – Fossil Hunting (Dorset day trip)']={
+  category:'Fossil hunting',
+  type:'outdoors',
+  coords:[50.7328,-2.8994],
+  mapSource:'https://charmouth.org/chcc/how-to-get-here/',
+  mapChecked:'2026-10-09'
+};
