@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="15" fill="#F5A623"/><text x="32" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="43" font-weight="700" fill="#202322">G</text><circle cx="47" cy="15" r="4" fill="#202322"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Globee</title>
+  <rect width="64" height="64" rx="13" fill="#f7f2e8"/>
+  <g fill="none" stroke="#292620" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M30 13 29 8 33 3 35 10 34 14M22 21Q27 13 33 14Q43 15 45 27L43 53 20 52 21 30Z"/>
+    <path d="m21 40-8 14 9-3m22-10 9 16-12-5M21 28l24 1M22 37l21 2M30 15l3 22-4 15"/>
+    <path d="m33 40 8-1-1 10-8-1Z" fill="#f5a623" stroke="none"/>
+    <path d="m35 31 5 1-1 4-4-1Z"/>
+  </g>
+</svg>

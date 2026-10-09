@@ -1,0 +1,13 @@
+/* Shared identity, approved 9 October 2026. Preserve the artwork's original pixels.
+   The viewport removes transparent canvas padding without redrawing the lettering. */
+.brand:has(.brand-art){display:inline-flex;align-items:center;gap:0;flex:none;text-decoration:none;line-height:1}
+.brand-art{position:relative;display:block;overflow:hidden;width:178px;aspect-ratio:1574 / 500;flex:none}
+.brand-art>img{position:absolute;display:block;width:112.7065%;height:auto;max-width:none;left:-6.3532%;top:-40%;margin:0}
+.footer-brand{display:inline-block;line-height:1}
+.footer-brand .brand-art{width:130px}
+@media(max-width:700px){
+  .brand-art{width:138px}
+  .header-inner{gap:12px}
+  .brand-caption{white-space:nowrap}
+}
+@media(max-width:360px){.brand-art{width:126px}}

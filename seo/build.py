@@ -316,9 +316,11 @@ def head(title, description, route, indexable, schema, production=False, *, regi
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="/seo-assets/guides.css">
-    <script type="application/ld+json">{structured}</script>{analytics}</head><body>
+    <script type="application/ld+json">{structured}</script>{analytics}<link rel="stylesheet" href="/brand.css?v=child1">
+<link rel="icon" href="/favicon.svg?v=child1" type="image/svg+xml">
+</head><body>
     <a class="skip" href="#main">Skip to activities</a>
-    <header><a class="brand" href="{directory}" aria-label="Globee home"><span class="brand-mark">G<span class="brand-dot"></span></span><span>Glo<span class="brand-bee">bee</span></span></a>
+    <header><a class="brand" href="{directory}" aria-label="Globee home"><span class="brand-art"><img src="/assets/brand/globee-handwriting-v2.png" alt="Globee" width="1774" height="887"></span></a>
     <a class="region" href="/{region_key}/">{esc(region['label'])}</a><a class="directory" href="{directory}">Explore Globee <span aria-hidden="true">↗</span></a></header>'''
 
 
