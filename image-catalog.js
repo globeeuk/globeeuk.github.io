@@ -74,10 +74,17 @@
     imageKind,imageAlt:`${description}; ${imageKind==='activity'?'activity reference':imageKind} photograph${date?` from ${date}`:''}`
   }]));
   const descriptions={reading:'An illustrated reading nook with books and a comfortable chair',making:'An illustrated table of paints, brushes and clay animals',woodland:'An illustrated woodland path, ferns and wellington boots',sports:'An illustrated collection of sports and skate equipment',performance:'An illustrated theatre stage with musical instruments',play:'An illustrated arrangement of early years toys and soft play shapes',heritage:'An illustrated collection of historical objects and a magnifying glass',food:'An illustrated picnic with gelato, a pastry and fruit',autumn:'An illustrated autumn garden with pumpkins and wellington boots'};
+  photos['monmouth-beach']={
+    image:'assets/images/monmouth-beach.jpg',credit:'Dylan Moore / Geograph',
+    photoSource:'https://www.geograph.org.uk/photo/1988808',photoLicence:'CC BY-SA 2.0',photoLicenceUrl:'https://creativecommons.org/licenses/by-sa/2.0/',
+    imageKind:'location',imageAlt:'Monmouth Beach at low tide, looking towards Golden Cap; location photograph from July 2010',
+    imageReference:'Location photograph (2010), not current tide or access conditions. Original JPEG, cropped only by the card layout. Source licence and credit are recorded on the Image credits page.'
+  };
   function photoKey(p){
     if(p.name==='Chessed.me (Online Chess)')return 'chess';
     if(p.region==='Exeter'){
       if(p.name==='Charmouth Beach – Fossil Hunting (Dorset day trip)')return 'charmouth-beach';
+      if(p.name==='Monmouth Beach – Fossil Hunting (Dorset day trip)')return 'monmouth-beach';
       if(p.name==='Christmas Train of Lights – Dartmouth Steam Railway')return 'dartmouth-train-of-lights';
       if(p.name==='Train of Lights+Santa – Dartmouth Steam Railway')return 'dartmouth-train-santa';
       if(p.name==='THE POLAR EXPRESS™ Train Ride – South Devon Railway')return 'south-devon-polar-express';

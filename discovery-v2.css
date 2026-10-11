@@ -120,6 +120,7 @@
 .plans-grid .card-heading h3,.main-plans .card-heading h3{font-size:18px;line-height:1.35;letter-spacing:-.25px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .card-heading>svg{display:none}
 .card-locality{display:none}
+.card-locality.fossil-locality{display:flex}
 .detail-body>.card-locality{display:flex}
 .plans-grid .card-description,.main-plans .card-description{font-size:13px;line-height:1.5;min-height:0;-webkit-line-clamp:2;margin:6px 0 8px}
 .plans-grid .card-meta,.main-plans .card-meta{font-size:12px;flex-wrap:wrap}

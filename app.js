@@ -90,7 +90,7 @@ function fallback(p){return `<div class="photo-fallback">${icon(p.type)}<span>${
 function imageTag(p,alt=p.imageAlt||p.name){return `<img data-src="${escapeHTML(p.image)}" data-place-id="${escapeHTML(p.id)}" alt="${escapeHTML(alt)}" style="object-position:${p.image.endsWith('/ramm.webp')?'50% 0%':'50% 50%'}" draggable="false" loading="lazy" decoding="async" width="640" height="426" referrerpolicy="no-referrer">`;}
 function photo(p){return p.image?`${imageTag(p)}<span class="image-kind">${escapeHTML(p.imageLabel||(p.imageKind==='illustration'?'Illustration':p.imageKind==='location'?'Location photo':p.imageKind==='activity'?'Activity photo':'Venue photo'))}</span>`:fallback(p);}
 function meta(p){return `<span class="price ${p.priceType==='free'?'free':''}">${escapeHTML(p.priceLabel)}</span><span class="meta-dot">·</span><span class="age">${escapeHTML(p.ageLabel||'Age TBC')}</span>`;}
-function locality(p){return `<span class="card-locality ${p.region.toLowerCase()}">${icon('pin')}${escapeHTML(REGION_LABELS[p.region]||p.region)}</span>`;}
+function locality(p){const fossil=window.GlobeeFossilMap?.isFossilPlace(p);return `<span class="card-locality ${p.region.toLowerCase()}${fossil?' fossil-locality':''}">${icon('pin')}${escapeHTML(fossil?'Dorset · Day trip':REGION_LABELS[p.region]||p.region)}</span>`;}
 const observedImages=new Set(),preparedImages=new WeakSet();
 function loadImage(img){const src=img.dataset.src;if(!src||!img.isConnected)return;img.src=src;delete img.dataset.src;imageObserver?.unobserve(img);observedImages.delete(img);}
 const imageObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)loadImage(entry.target);});},{rootMargin:'80px 0px',threshold:0.01}):null;
@@ -104,7 +104,13 @@ function fixImages(container){
     if(imageObserver){imageObserver.observe(img);observedImages.add(img);}else loadImage(img);
   });
 }
-function card(p){return `<article class="place-card"><button class="card-open" data-open="${escapeHTML(p.id)}" aria-label="View ${escapeHTML(p.name)}"><div class="picture">${photo(p)}${p.image?`<span class="category-badge">${icon(p.type)}${escapeHTML(p.category)}</span>`:''}</div><div class="card-body">${locality(p)}<div class="card-heading"><h3>${escapeHTML(p.name)}</h3>${icon('arrow')}</div><p class="card-description">${escapeHTML(p.description)}</p><div class="card-meta">${meta(p)}</div>${(p.dateNote||p.datePeriods?.length)?`<p class="date-note ${p.datePeriods?'event-date':''}">${p.datePeriods?icon('calendar'):''}${escapeHTML(scheduleLabel(p))}</p>`:''}</div></button></article>`;}
+function card(p){
+  const fossil=window.GlobeeFossilMap?.isFossilPlace(p);
+  const title=fossil?p.name.replace(' (Dorset day trip)',''):p.name;
+  const description=fossil?p.description.split('. ')[0]+'.':p.description;
+  const practical=fossil?'<p class="date-note">Self-guided · No booking<br>Parking extra · Check tides before visiting</p>':(p.dateNote||p.datePeriods?.length)?`<p class="date-note ${p.datePeriods?'event-date':''}">${p.datePeriods?icon('calendar'):''}${escapeHTML(scheduleLabel(p))}</p>`:'';
+  return `<article class="place-card"><button class="card-open" data-open="${escapeHTML(p.id)}" aria-label="View ${escapeHTML(p.name)}"><div class="picture">${photo(p)}${p.image?`<span class="category-badge">${icon(p.type)}${escapeHTML(p.category)}</span>`:''}</div><div class="card-body">${locality(p)}<div class="card-heading"><h3>${escapeHTML(title)}</h3>${icon('arrow')}</div><p class="card-description">${escapeHTML(description)}</p><div class="card-meta">${meta(fossil?{...p,priceLabel:'Free beach entry'}:p)}</div>${practical}</div></button></article>`;
+}
 function hasFilters(){return state.browseAll||state.age.length||state.price!=='all'||state.type!=='all'||state.query||state.dates||state.collection||state.edit;}
 function renderWeekend(){
   if(isPlansPage)return;
@@ -362,13 +368,14 @@ function drawMapMarkers(){
   const L=window.L;
   markers.forEach(m=>map.removeLayer(m));markers=[];
   const fossilFocus=mapPlaces.length>0&&mapPlaces.every(p=>p.fossilSpot);
-  const groups=GlobeeDiscovery.mapGroups(mapPlaces,p=>map.latLngToContainerPoint(p.coords),fossilFocus||map.getZoom()>=18?0:65);
+  const groups=GlobeeDiscovery.mapGroups(mapPlaces,p=>map.latLngToContainerPoint(p.coords),(fossilFocus&&map.getZoom()>=15)||map.getZoom()>=18?0:65);
   groups.forEach(({places:group})=>{
     const p=group.find(v=>v.id===selectedId)||group[0];
     const clustered=new Set(group.map(spotKey)).size>1;
     const isEvent=p.type!=='club'&&p.datePeriods?.length>0;
     const baseLabel=p.type==='club'?'Holiday club':isEvent?'What’s on':p.type==='cafe'?'Café':p.type==='ice'?'Ice cream':p.category||'Activity';
-    const label=clustered?`${group.length} ${group.every(v=>v.fossilSpot)?'spots':'plans'}`:p.fossilSpot?p.name:group.length>1?`${group.every(v=>v.kind===p.kind)?baseLabel:'Places'} · ${group.length}`:baseLabel;
+    const fossilTown=group.every(v=>v.fossilSpot&&v.fossilSpot.town===p.fossilSpot?.town)?p.fossilSpot.town:null;
+    const label=clustered?`${fossilTown?fossilTown+' · ':''}${group.length} ${group.every(v=>v.fossilSpot)?'spots':'plans'}`:p.fossilSpot?p.name:group.length>1?`${group.every(v=>v.kind===p.kind)?baseLabel:'Places'} · ${group.length}`:baseLabel;
     const coords=clustered?[0,1].map(i=>group.reduce((sum,v)=>sum+v.coords[i],0)/group.length):p.coords;
     const pin=p.fossilSpot&&!clustered?`<span class="map-pin fossil-point ${p.fossilSpot.id==='heritage-centre'?'fossil-centre':''}" data-marker-id="${escapeHTML(p.id)}"><b>${escapeHTML(label)}</b></span>`:`<span class="map-pin ${clustered?'cluster ':''}${group.some(v=>v.id===selectedId)?'selected':''}" data-marker-id="${escapeHTML(p.id)}" data-group-ids="${escapeHTML(group.map(v=>v.id).join('|'))}">${icon(clustered?'map':isEvent?'calendar':p.type)}${escapeHTML(label)}</span>`;
     const marker=L.marker(coords,{icon:L.divIcon({className:'globee-map-marker',html:pin,iconSize:null,iconAnchor:p.fossilSpot&&!clustered?[10,10]:[32,20]}),title:clustered?`${group.length} nearby plans — zoom in to explore`:group.map(v=>v.name).join(' · '),keyboard:true}).addTo(map);
@@ -406,7 +413,7 @@ async function renderMap(places){
   drawMapMarkers();
   const missing=places.length-records.length;
   $('#map-note').textContent=fossilFocus?'Pins mark beach areas and the information centre, not guaranteed finds or a walking route. Check tides and conditions; keep well away from cliffs and mudslides.':`${records.length} of ${places.length} results mapped · ${spots.size} map points. Zoom into numbered groups.${missing?` ${missing} ${missing===1?'result has':'results have'} no single confirmed pin; see the list.`:''} Pins mark venues or grounds; check the provider for the entrance.`;
-  if(fossilFocus){$('#results-heading').textContent='Fossil hunting on the Jurassic Coast';$('#results-subtitle').textContent='Charmouth, Dorset · 2 beach areas + a place to start';$('#result-count').textContent='3 map spots';}
+  if(fossilFocus){$('#results-heading').textContent='Fossil hunting on the Jurassic Coast';$('#results-subtitle').textContent=[...new Set(located.map(p=>p.fossilSpot.town))].join(' & ')+' · Dorset day trips';$('#result-count').textContent=`${spots.size} map spots · ${records.length} ${records.length===1?'outing':'outings'}`;}
   if(selectedId)selectMapPlace(selectedId);else $('#map-selection').hidden=true;
   $('#map-view').scrollIntoView({block:'start',behavior:'instant'});
 }
@@ -414,7 +421,7 @@ function selectMapPlace(id){
   const p=mapPlaces.find(v=>v.id===id);if(!p)return;
   selectedId=id;mapSelectionDismissed=false;
   $('#map-selection').hidden=false;
-  $('#map-selection').innerHTML=`<button class="map-selection-close" data-close-map-selection aria-label="Hide selected place">${icon('close')}</button><button class="map-card" data-open="${escapeHTML(p.parentId||p.id)}">${p.image?imageTag(p):`<div>${icon(p.type)}</div>`}<div><p>${escapeHTML(p.category)} · ${escapeHTML(p.fossilSpot?'Charmouth · Dorset':REGION_LABELS[p.region]||p.region)}</p><h3>${escapeHTML(p.name)}</h3><span class="price ${p.priceType==='free'?'free':''}">${escapeHTML(p.priceLabel)}</span></div></button>`;
+  $('#map-selection').innerHTML=`<button class="map-selection-close" data-close-map-selection aria-label="Hide selected place">${icon('close')}</button><button class="map-card" data-open="${escapeHTML(p.parentId||p.id)}">${p.image?imageTag(p):`<div>${icon(p.type)}</div>`}<div><p>${escapeHTML(p.category)} · ${escapeHTML(p.fossilSpot?p.fossilSpot.locality:REGION_LABELS[p.region]||p.region)}</p><h3>${escapeHTML(p.name)}</h3><span class="price ${p.priceType==='free'?'free':''}">${escapeHTML(p.priceLabel)}</span></div></button>`;
   if(p.fossilSpot)$('#map-selection').innerHTML+=`<div class="fossil-map-note"><p>${escapeHTML(p.fossilSpot.description)}</p><a href="${escapeHTML(p.fossilSpot.source)}" target="_blank" rel="noopener noreferrer">Official collecting &amp; tide advice ↗</a></div>`;
   const group=mapPlaces.filter(v=>spotKey(v)===spotKey(p)),index=group.findIndex(v=>v.id===id);
   if(group.length>1)$('#map-selection').innerHTML+=`<div class="map-group-nav"><button data-select-map="${escapeHTML(group[(index-1+group.length)%group.length].id)}" aria-label="Previous activity at this location">←</button><span>${index+1} of ${group.length} at this location</span><button data-select-map="${escapeHTML(group[(index+1)%group.length].id)}" aria-label="Next activity at this location">→</button></div>`;

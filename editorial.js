@@ -69,3 +69,11 @@ window.GLOBEE_EDITORIAL.annotations['Charmouth Beach – Fossil Hunting (Dorset 
   mapSource:'https://charmouth.org/chcc/how-to-get-here/',
   mapChecked:'2026-10-09'
 };
+window.GLOBEE_EDITORIAL.annotations['Monmouth Beach – Fossil Hunting (Dorset day trip)']={
+  category:'Fossil hunting',
+  type:'outdoors',
+  coords:[50.7194904,-2.9454451],
+  mapSource:'https://www.lymeregistowncouncil.gov.uk/car-parks',
+  mapChecked:'2026-10-11',
+  note:'Self-guided beach visit, not a guided tour. The map marks the car-park/start area. Leave large embedded ammonites and the pavement for others to enjoy.'
+};

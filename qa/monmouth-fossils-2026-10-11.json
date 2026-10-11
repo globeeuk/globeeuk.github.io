@@ -1,0 +1,16 @@
+{
+  "checked": "2026-10-11",
+  "masterSheet": "1KHjG_wMTu0QUu-3mnNNqSv8cWopKJubnz1q8ThGUzK8",
+  "masterRange": "시트1!A242:P242",
+  "name": "Monmouth Beach – Fossil Hunting (Dorset day trip)",
+  "scope": "One undated self-guided outing; no dated event or tour added. Exeter region denotes the directory audience, not the actual locality, which is Lyme Regis, Dorset.",
+  "sources": [
+    {"url":"https://www.dinosaurland.co.uk/monmouth-beach/", "evidence":"Museum visitor guide describes the ammonite pavement and small fossils in loose gravel that visitors can collect; warns about unstable cliffs and slippery seaweed."},
+    {"url":"https://www.visit-dorset.com/lyme-regis/discovery-trail/monmouth-beach/", "evidence":"Local visitor board confirms Monmouth Beach and ammonite pavement at low tide; tide checks required."},
+    {"url":"https://www.lymeregistowncouncil.gov.uk/beaches", "evidence":"Council maintains this public pebble beach; no beach admission booking is specified."},
+    {"url":"https://www.lymeregistowncouncil.gov.uk/car-parks", "evidence":"Parking charges are separate. Pin uses the council-linked DT7 3LE Google Maps destination (50.7194904, -2.9454451) as an approximate start/car-park area. Do not use the map viewport centre. No precise parking tariff published here because the council labels that column 2025/26."}
+  ],
+  "image": {"path":"assets/images/monmouth-beach.jpg", "creator":"Dylan Moore", "source":"https://www.geograph.org.uk/photo/1988808", "licence":"CC BY-SA 2.0", "licenceUrl":"https://creativecommons.org/licenses/by-sa/2.0/", "date":"2010-07-26", "kind":"location", "modification":"Original JPEG; visual crop by card CSS only. Not current conditions."},
+  "safety": "Leave embedded ammonites, pavement and ledges intact. No cliff excavation or hammering promoted. Tides, weather, unstable cliffs, slippery seaweed and adult supervision stated; age guidance TBC.",
+  "map": "3 existing Charmouth points plus 1 Monmouth start-area point. Nearby points cluster at wider zoom. Not guaranteed finds or a walking route."
+}

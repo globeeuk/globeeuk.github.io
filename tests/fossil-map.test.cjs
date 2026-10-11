@@ -30,3 +30,23 @@ test('unrelated regions and lists do not acquire fossil pins',()=>{
  const other={id:'bristol',name:'Bristol museum',region:'Bristol'};
  assert.deepEqual(guide.expand([other]),[other]);
 });
+test('Monmouth is a separate self-guided Dorset outing, not a dated event or a Charmouth pin',()=>{
+ const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
+ const root=path.join(__dirname,'..'),context={window:{}};vm.createContext(context);
+ for(const file of ['db-snapshot.js','editorial.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context);
+ const snapshot=context.window.GLOBEE_SNAPSHOT;
+ assert.equal(snapshot.master.filter(p=>p.name===guide.monmouthName).length,1);
+ assert.equal(snapshot.events.filter(p=>p.name===guide.monmouthName).length,0);
+ const places=require('../db-adapter.js').normalise(snapshot.master,snapshot.events,context.window.GLOBEE_EDITORIAL);
+ const card=require('../image-catalog.js').decorate(places.find(p=>p.name===guide.monmouthName));
+ assert.equal(card.category,'Fossil hunting');assert.equal(card.kind,'place');assert.equal(card.priceType,'free');
+ assert(card.address.includes('Dorset'));assert(card.description.includes('parking costs extra'));
+ assert(card.description.includes('Leave the ammonite pavement'));assert.equal(card.imageKind,'location');
+ assert(fs.existsSync(path.join(root,card.image)));assert(card.credit.includes('Dylan Moore'));
+ const mapped=guide.expand(places.filter(p=>guide.isFossilPlace(p)));
+ assert.equal(mapped.length,4);assert.equal(new Set(mapped.map(p=>p.parentId)).size,2);
+ const monmouth=mapped.find(p=>p.name==='Monmouth Beach');
+ assert.equal(monmouth.fossilSpot.locality,'Lyme Regis · Dorset');
+ assert(monmouth.fossilSpot.description.includes('not a fossil-find pin'));
+ assert.equal(monmouth.fossilSpot.source,'https://www.dinosaurland.co.uk/monmouth-beach/');
+});
