@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-11",
+  "scope": "Hand-maintained Exeter tree-buying guide only; no calendar or Sheet additions",
+  "sources": [
+    {"id":"cotley-farm","urls":["https://www.cotleychristmas.co.uk/christmas-trees-2/","https://www.cotleychristmas.co.uk/faqs/"],"season":"Opening dates explicitly 2026; tree price table year unstated","pricesGBP":{"cutNordmannStandard5to6ft":38,"cutNordmannPremium5to6ft":55,"cutNorwayPremium5to6ft":32,"potgrownNorway2to3ft":24.5,"potgrownSerbian3to4ft":34},"notes":"Vehicle booking; entry refund with tree purchase, one entry voucher per tree. Larger potted Norway is dug from ground, distinct from pot-grown."},
+    {"id":"exe-valley","urls":["https://www.exevalleychristmastrees.co.uk/","https://www.exevalleychristmastrees.co.uk/our-trees/"],"season":"Opening dates and price list explicitly 2026","pricesGBP":{"cutNordmann5to6ft":50,"cutNordmann6to7ft":60,"cutNorway5to6ft":40,"potgrownNorway80to100cm":50,"potgrownBlueSpruce80to100cm":55,"potgrownNordmann100to120cm":60},"notes":"25 November–23 December. No visit time slot; no advance field-tree tagging/reserving. Pot-grown raised in pots from seedlings."},
+    {"id":"haldon","urls":["https://dartmoorchristmastrees.co.uk/where-to-buy-locally/"],"season":"2026 opening times; current shop price table on same page","pricesGBP":{"firMinimum5ft":46,"spruceMinimum5ft":30,"firMinimum6ft":55,"spruceMinimum6ft":40},"notes":"Haldon Centre at Buller’s Hill EX6 7XR; not Lower Cator Choose & Cut. 25 November–22 December, daily 9–5. Fir = Nordmann/Fraser. Cash/cheque. Free parking while choosing tree. Pot-grown not verified."},
+    {"id":"greendale","urls":["https://greendale.com/collections/christmas-trees/products/traditional-christmas-tree","https://greendale.com/collections/christmas-trees/products/non-drop-christmas-tree"],"season":"2026 dates, prices and stock unconfirmed; collection months omit year","pricesGBP":{"traditionalFrom":23,"nonDropFrom":35},"notes":"Visible pre-order listings, not proof of 2026 availability. Locally grown trees; choose size/type online then hand-pick at collection. Pot-grown not verified."}
+  ]
+}

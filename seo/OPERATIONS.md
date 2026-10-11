@@ -111,6 +111,12 @@ The user-approved winter homepage entry links to `/exeter/christmas-trees/`, a h
 
 This release also replaces nine Devon Christmas search illustrations and four additional Exeter/Bristol venue mappings with licensed photographs. `qa/image-sources.json`, `qa/christmas-photo-sources.json` and `image-credits.html` record licences and provenance. Cotley uses a labelled tree-growing reference, not a Cotley photograph; Exe Valley uses a labelled Thorverton village photograph, not a farm photograph. Other images show venues or locations, not the 2026 event. The decorative tree banner is distinct from event photography. No claim of Google indexing or visitor growth follows from this release.
 
+### Seasonal buying-guide follow-up — 11 October 2026
+
+The user requested purchase places and prices on the existing tree guide. Cotley and Exe Valley details were expanded, and Haldon and Greendale retail options added. This is guide-only shopping information, not four new calendar events. The live published Sheet was read to reconcile existing venue facts (Cotley and Greendale); no Sheet rows, snapshot, event dates or prices were changed. Supplemental buying facts and official-source checks are recorded in `qa/christmas-tree-buying-sources.json`. Preserve this hand-maintained guide when generating ordinary event guides.
+
+Exe Valley explicitly labels its price list 2026. Cotley’s price table has no season label. Haldon publishes 2026 opening dates and prices by minimum height. Greendale’s product collection dates omit a year, so its 2026 availability/prices remain TBC despite visible pre-order pages. Do not silently promote these caveats to confirmed stock, rental coverage or booking availability. No indexing or traffic result is inferred from publication.
+
 ## Search Console and measurement
 
 On **13 September 2026**, ownership of `https://globeeuk.github.io/` was verified in the owner's Search Console account using the homepage HTML tag. Preserve that tag. The combined `https://globeeuk.github.io/sitemap.xml` was submitted, and the hub plus all three guides were individually accepted into the priority crawl queue through Request indexing. These actions do not prove actual indexing.
