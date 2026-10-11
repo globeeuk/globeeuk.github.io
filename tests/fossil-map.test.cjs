@@ -1,0 +1,32 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const guide=require('../fossil-map.js');
+test('the saved Days out directory includes the Sheet activity once with a real location photo',()=>{
+ const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
+ const root=path.join(__dirname,'..'),context={window:{}};vm.createContext(context);
+ for(const file of ['db-snapshot.js','editorial.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context);
+ const snapshot=context.window.GLOBEE_SNAPSHOT,rows=snapshot.master.filter(p=>p.name===guide.placeName);
+ assert.equal(rows.length,1);assert.equal(rows[0].tab,'dayout');assert.equal(rows[0].area,'daytrip');
+ assert.equal(rows[0].region,'Exeter');assert(rows[0].location.includes('Dorset'));
+ const places=require('../db-adapter.js').normalise(snapshot.master,snapshot.events,context.window.GLOBEE_EDITORIAL);
+ const card=require('../image-catalog.js').decorate(places.find(p=>p.name===guide.placeName));
+ assert.equal(card.kind,'place');assert.equal(card.type,'outdoors');assert.equal(card.category,'Fossil hunting');
+ assert.equal(card.datePeriods,null);assert.equal(card.endDate,null);assert.equal(card.imageKind,'location');
+ assert(fs.existsSync(path.join(root,card.image)));assert.equal(card.priceLabel,'Free');
+ assert(card.description.includes('guided walks are ticketed'));assert(card.description.includes('tides'));
+});
+test('one existing activity expands into three named map points without mutating the directory',()=>{
+ const records=[{id:'charmouth',name:guide.placeName,region:'Exeter',priceLabel:'Free',source:'https://charmouth.org/chcc/'},{id:'other',name:'Another place',coords:[50,-3]}];
+ const before=JSON.stringify(records),mapped=guide.expand(records);
+ assert.equal(JSON.stringify(records),before);
+ assert.equal(mapped.length,4);
+ assert.equal(new Set(mapped.map(p=>p.id)).size,4);
+ assert.deepEqual(mapped.slice(0,3).map(p=>p.parentId),['charmouth','charmouth','charmouth']);
+ assert.deepEqual(mapped.slice(0,3).map(p=>p.name),['West Beach','East Beach','Heritage Coast Centre']);
+ assert.equal(mapped[3],records[1]);
+ assert(mapped.slice(0,3).every(p=>p.source===records[0].source&&p.fossilSpot.source.startsWith('https://charmouth.org/')));
+});
+test('unrelated regions and lists do not acquire fossil pins',()=>{
+ assert.deepEqual(guide.expand([]),[]);
+ const other={id:'bristol',name:'Bristol museum',region:'Bristol'};
+ assert.deepEqual(guide.expand([other]),[other]);
+});

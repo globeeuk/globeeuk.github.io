@@ -1,0 +1,13 @@
+{
+  "checked": "2026-10-11",
+  "activity": "Charmouth Beach – Fossil Hunting (Dorset day trip)",
+  "change": "Synced the existing Sheet Days out row into the saved directory so first paint and failed CSV refreshes retain the card. Added a Fossil hunting type filter and three map-only points under the same activity.",
+  "sheet": {"id": "1KHjG_wMTu0QUu-3mnNNqSv8cWopKJubnz1q8ThGUzK8", "gid": 0, "tab": "dayout", "region": "Exeter", "writes": 0},
+  "source": "https://charmouth.org/chcc/frequently-asked-questions/",
+  "evidence": "The Centre supports self-guided fossil hunting when tides are suitable. The Centre is free; guided walks are paid and bookable. Search loose shingle on a falling tide, avoid cliffs and mudslides, and never dig into cliffs or ledges. Specific find spots change with the tide. Map points identify beach areas and the information centre, not guaranteed finds or a walking route.",
+  "mapAreaSource": "https://charmouth.org/charmouth_village/charmouth-beach/",
+  "centreSource": "https://charmouth.org/chcc/how-to-get-here/",
+  "scope": "Charmouth is in Dorset, presented as a day trip for Exeter/Devon families. No invented dates or new event rows. All unrelated snapshot rows and the original snapshot fetchedAt are preserved.",
+  "photo": "Existing licensed Charmouth Beach location photograph; attribution retained in image-catalog.js and image-credits.html.",
+  "socialStatus": "Prepared, not confirmed posted"
+}

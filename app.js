@@ -15,9 +15,9 @@ const requestedRegion=routeParams.get('region');
 const PAGE_SIZE=12;
 const state={region:requestedRegion==='Devon'?'Exeter':REGIONS.includes(requestedRegion)?requestedRegion:'Exeter',age:[],price:'all',type:'all',query:'',dates:null,collection:null,edit:null,view:'list',browseAll:false};
 const ageBands=[{id:'0-2',label:'0–2',min:0,max:2},{id:'3-5',label:'3–5',min:3,max:5},{id:'6-8',label:'6–8',min:6,max:8},{id:'9-12',label:'9–12',min:9,max:12},{id:'13+',label:'13+',min:13,max:17}];
-const types=[['all','All types'],['activity','Activities'],['theatre','Theatre & shows'],['cafe','Cafés'],['ice','Ice cream'],['outdoors','Parks & nature'],['art','Arts & making'],['club','Holiday clubs']];
+const types=[['all','All types'],['activity','Activities'],['theatre','Theatre & shows'],['cafe','Cafés'],['ice','Ice cream'],['outdoors','Parks & nature'],['fossil','Fossil hunting'],['art','Arts & making'],['club','Holiday clubs']];
 let plansWindow='weekend';
-const availableTypes=isPlansPage?types.filter(([id])=>!['cafe','ice'].includes(id)):types;
+const availableTypes=isPlansPage?types.filter(([id])=>!['cafe','ice','fossil'].includes(id)):types;
 let currentMenu=null,map=null,markers=[],selectedId=null,listScroll=0;
 let mapPlaces=[],mapSelectionContext=null,mapSelectionDismissed=false;
 const spotKey=p=>p.coords?.map(n=>Number(n).toFixed(4)).join(',');
@@ -35,8 +35,8 @@ function isFamilyPlan(p){return (['event','club'].includes(p.kind)||p.datePeriod
 function scheduleLabel(p){const periods=(p.datePeriods||[]).filter(d=>d.end>=TODAY&&( !state.dates||d.start<=state.dates.end&&d.end>=state.dates.start));return periods.length?dateRangeLabel(periods[0])+(periods.length>1?` · +${periods.length-1} dates`:''):p.dateNote||'Dates TBC';}
 function pageLink(page){return `${page}?region=${encodeURIComponent(state.region==='Exeter'?'Devon':state.region)}`;}
 function nextPlanDate(p){return (p.datePeriods||[]).filter(d=>d.end>=(state.dates?.start||TODAY)).map(d=>d.start<TODAY?TODAY:d.start).sort()[0]||'9999-12-31';}
+state.query=routeParams.get('q')||'';
 if(isPlansPage){
-  state.query=routeParams.get('q')||'';
   state.age=(routeParams.get('age')||'').split(',').filter(id=>ageBands.some(b=>b.id===id));
   if(['free','paid'].includes(routeParams.get('price')))state.price=routeParams.get('price');
   if(availableTypes.some(([id])=>id===routeParams.get('type')))state.type=routeParams.get('type');
@@ -47,9 +47,10 @@ if(isPlansPage){
   if(GlobeeDiscovery.seasonalDefinition(edit,TODAY))state.edit=edit;
 }
 function updatePlanRoute(){
-  if(!isPlansPage){const params=new URLSearchParams(window.location.search);params.set('region',state.region==='Exeter'?'Devon':state.region);window.history.replaceState(null,'',`${window.location.pathname}?${params}`);return;}
+  if(!isPlansPage){const params=new URLSearchParams(window.location.search);params.set('region',state.region==='Exeter'?'Devon':state.region);if(state.query)params.set('q',state.query);else params.delete('q');if(state.view==='map')params.set('view','map');else params.delete('view');window.history.replaceState(null,'',`${window.location.pathname}?${params}`);return;}
   const params=new URLSearchParams();params.set('region',state.region==='Exeter'?'Devon':state.region);
   if(state.query)params.set('q',state.query);
+  if(state.view==='map')params.set('view','map');
   if(state.age.length)params.set('age',state.age.join(','));
   if(state.price!=='all')params.set('price',state.price);
   if(state.type!=='all')params.set('type',state.type);
@@ -73,7 +74,7 @@ function matches(p,ignore){
   if(ignore!=='region'&&p.region!==state.region)return false;
   if(ignore!=='dates'&&state.dates&&!occursWithin(p,state.dates))return false;
   if(ignore!=='price'&&state.price!=='all'&&p.priceType!==state.price)return false;
-  if(ignore!=='type'&&state.type!=='all'&&!(p.type===state.type||(state.type==='activity'&&['club','art','outdoors','theatre'].includes(p.type))))return false;
+  if(ignore!=='type'&&state.type!=='all'&&!(p.type===state.type||(state.type==='fossil'&&p.category==='Fossil hunting')||(state.type==='activity'&&['club','art','outdoors','theatre'].includes(p.type))))return false;
   if(ignore!=='age'&&state.age.length){
     if(!p.ages)return false;
     if(!state.age.some(id=>{const b=ageBands.find(v=>v.id===id);return p.ages[0]<=b.max&&p.ages[1]>=b.min;}))return false;
@@ -270,7 +271,7 @@ function openMenu(menu){
   if(menu==='region')html=`<p class="filter-help">Choose a local area to explore.</p><div class="filter-options">${option('Exeter','Exeter · Devon','Exeter and across Devon',state.region==='Exeter')}${option('Bristol','Bristol','Bristol family events and days out',state.region==='Bristol')}${option('Nottingham','Nottingham','Nottingham & nearby places',state.region==='Nottingham')}</div>`;
   if(menu==='age')html=`<p class="filter-help">Choose one or more ages. We’ll show places suitable for at least one selected age. Places with unconfirmed ages are left out.</p><div class="filter-options age-options">${ageBands.map(b=>option(b.id,b.label+' years','',state.age.includes(b.id),'checkbox','ages')).join('')}</div>`;
   if(menu==='price')html=`<p class="filter-help">Paid includes tickets and food or drink purchases. Conditional offers are explained on the place card.</p><div class="filter-options">${option('all','Any price','',state.price==='all')}${option('free','Free','No entry fee for the activity shown',state.price==='free')}${option('paid','Paid','Tickets, food or drink',state.price==='paid')}</div>`;
-  if(menu==='type')html=`<div class="filter-options">${availableTypes.map(([id,title])=>option(id,title,id==='activity'?'Includes arts, outdoor activities and holiday clubs':'',state.type===id)).join('')}</div>`;
+  if(menu==='type')html=`<div class="filter-options">${availableTypes.filter(([id])=>id!=='fossil'||state.region==='Exeter').map(([id,title])=>option(id,title,id==='activity'?'Includes arts, outdoor activities and holiday clubs':id==='fossil'?'Jurassic Coast day trips from Exeter · Devon':'',state.type===id)).join('')}</div>`;
   $('#filter-content').innerHTML=html;
   $('#filter-dialog').classList.toggle('date-dialog',menu==='dates');
   if(menu==='dates'){draftDates=state.dates?{...state.dates}:null;calendarPickingEnd=false;calendarMonth=(draftDates?.start||TODAY).slice(0,7);renderCalendar();}
@@ -306,6 +307,7 @@ function openDetail(id){
   const editNote=editReason?`<div class="detail-note edit-detail"><h3>Why it’s in this edit</h3><p>${escapeHTML(editReason)}</p>${evidence?`<p>${evidence.map(s=>`<a href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(s.label)}</a>`).join(' · ')}</p><p class="evidence-date">Official information checked ${escapeHTML(p.editChecked)}.</p>`:''}</div>`:'';
   const pairing=state.collection==='eat-play'&&p.eatPlay?`<div class="detail-note play-pair"><h3>Two stops, one outing</h3><dl><dt>Eat</dt><dd>${escapeHTML(p.eatPlay.food)}</dd><dt>Play</dt><dd>${escapeHTML(p.eatPlay.play)}</dd><dt>Between the two</dt><dd>${escapeHTML(p.eatPlay.connection)}</dd></dl><p>${escapeHTML(p.eatPlay.note)}</p></div>`:'';
   $('#detail-content').innerHTML=`<div class="detail-picture">${photo(p,true)}</div><div class="detail-body">${locality(p)}<h2>${escapeHTML(p.name)}</h2><div class="card-meta">${meta(p)}</div>${(p.dateNote||p.datePeriods?.length)?`<p class="date-note event-date">${p.datePeriods?icon('calendar'):''}${escapeHTML(scheduleLabel(p))}</p>`:''}<p>${escapeHTML(p.description)}</p>${editNote}${pairing}<div class="detail-note"><h3>Good to know</h3><p>${escapeHTML(p.note)}</p><p><strong>Schedule:</strong> ${escapeHTML(p.scheduleText||'Check the provider')}</p>${p.datePeriods?.length?`<p>${p.datePeriods.filter(d=>d.end>=TODAY).map(dateRangeLabel).join(' · ')}</p>`:''}</div><p class="detail-address">${icon('pin')} ${escapeHTML(p.address)}</p>${p.source?`<a class="primary-button detail-link" href="${escapeHTML(p.source)}" target="_blank" rel="noopener noreferrer">Check the official details${icon('external')}</a>`:'<p class="detail-note">Official link to follow.</p>'}<p class="detail-source">${credits}${p.checked?`<br>Official event details checked: ${escapeHTML(p.checked)}.`:''}<br>Prices & schedules change — always check the provider before booking.</p></div>`;
+  if(window.GlobeeFossilMap?.isFossilPlace(p))$('#detail-content .detail-address').insertAdjacentHTML('afterend','<p><a class="primary-button" href="/?region=Devon&amp;q=fossil&amp;view=map">See fossil-hunting spots on the Globee Map ↗</a></p>');
   fixImages($('#detail-content'));$('#detail-dialog').showModal();
 }
 $('#detail-close').addEventListener('click',()=>$('#detail-dialog').close());
@@ -359,15 +361,17 @@ function drawMapMarkers(){
   if(!map||state.view!=='map')return;
   const L=window.L;
   markers.forEach(m=>map.removeLayer(m));markers=[];
-  const groups=GlobeeDiscovery.mapGroups(mapPlaces,p=>map.latLngToContainerPoint(p.coords),map.getZoom()>=18?0:65);
+  const fossilFocus=mapPlaces.length>0&&mapPlaces.every(p=>p.fossilSpot);
+  const groups=GlobeeDiscovery.mapGroups(mapPlaces,p=>map.latLngToContainerPoint(p.coords),fossilFocus||map.getZoom()>=18?0:65);
   groups.forEach(({places:group})=>{
     const p=group.find(v=>v.id===selectedId)||group[0];
     const clustered=new Set(group.map(spotKey)).size>1;
     const isEvent=p.type!=='club'&&p.datePeriods?.length>0;
     const baseLabel=p.type==='club'?'Holiday club':isEvent?'What’s on':p.type==='cafe'?'Café':p.type==='ice'?'Ice cream':p.category||'Activity';
-    const label=clustered?`${group.length} plans`:group.length>1?`${group.every(v=>v.kind===p.kind)?baseLabel:'Places'} · ${group.length}`:baseLabel;
+    const label=clustered?`${group.length} ${group.every(v=>v.fossilSpot)?'spots':'plans'}`:p.fossilSpot?p.name:group.length>1?`${group.every(v=>v.kind===p.kind)?baseLabel:'Places'} · ${group.length}`:baseLabel;
     const coords=clustered?[0,1].map(i=>group.reduce((sum,v)=>sum+v.coords[i],0)/group.length):p.coords;
-    const marker=L.marker(coords,{icon:L.divIcon({className:'globee-map-marker',html:`<span class="map-pin ${clustered?'cluster ':''}${group.some(v=>v.id===selectedId)?'selected':''}" data-marker-id="${escapeHTML(p.id)}" data-group-ids="${escapeHTML(group.map(v=>v.id).join('|'))}">${icon(clustered?'map':isEvent?'calendar':p.type)}${escapeHTML(label)}</span>`,iconSize:null,iconAnchor:[32,20]}),title:clustered?`${group.length} nearby plans — zoom in to explore`:group.map(v=>v.name).join(' · '),keyboard:true}).addTo(map);
+    const pin=p.fossilSpot&&!clustered?`<span class="map-pin fossil-point ${p.fossilSpot.id==='heritage-centre'?'fossil-centre':''}" data-marker-id="${escapeHTML(p.id)}"><b>${escapeHTML(label)}</b></span>`:`<span class="map-pin ${clustered?'cluster ':''}${group.some(v=>v.id===selectedId)?'selected':''}" data-marker-id="${escapeHTML(p.id)}" data-group-ids="${escapeHTML(group.map(v=>v.id).join('|'))}">${icon(clustered?'map':isEvent?'calendar':p.type)}${escapeHTML(label)}</span>`;
+    const marker=L.marker(coords,{icon:L.divIcon({className:'globee-map-marker',html:pin,iconSize:null,iconAnchor:p.fossilSpot&&!clustered?[10,10]:[32,20]}),title:clustered?`${group.length} nearby plans — zoom in to explore`:group.map(v=>v.name).join(' · '),keyboard:true}).addTo(map);
     marker.on('click',()=>{if(clustered){const bounds=L.latLngBounds(group.map(v=>v.coords)),zoom=Math.min(18,Math.max(map.getZoom()+2,map.getBoundsZoom(bounds,false,[90,90])));map.setView(bounds.getCenter(),zoom,{animate:false});}else selectMapPlace(p.id);});markers.push(marker);
   });
 }
@@ -388,18 +392,21 @@ async function renderMap(places){
     L.control.zoom({position:'topright'}).addTo(map);
     map.on('zoomend',drawMapMarkers);
   }
-  const located=places.filter(GlobeeDiscovery.hasMapLocation);
+  const records=places.filter(GlobeeDiscovery.hasMapLocation);
+  const located=window.GlobeeFossilMap?GlobeeFossilMap.expand(records):records;
+  const fossilFocus=located.length>0&&located.every(p=>p.fossilSpot);
   mapPlaces=located;
   if(mapSelectionContext!==lastFilterSignature)mapSelectionDismissed=false;
   mapSelectionContext=lastFilterSignature;
-  selectedId=mapSelectionDismissed?null:GlobeeDiscovery.initialMapSelection(located,selectedId);
+  selectedId=mapSelectionDismissed?null:fossilFocus?(located.some(p=>p.id===selectedId)?selectedId:null):GlobeeDiscovery.initialMapSelection(located,selectedId);
   const spots=new Set(located.map(spotKey));
   map.invalidateSize();
-  if(located.length)map.fitBounds(L.latLngBounds(located.map(p=>p.coords)),{paddingTopLeft:[40,40],paddingBottomRight:[40,200],maxZoom:14,animate:false});
+  if(located.length)map.fitBounds(L.latLngBounds(located.map(p=>p.coords)),{paddingTopLeft:fossilFocus?[90,110]:[40,40],paddingBottomRight:fossilFocus?[130,110]:[40,200],maxZoom:fossilFocus?17:14,animate:false});
   else map.setView(REGION_CENTRES[state.region],12);
   drawMapMarkers();
-  const missing=places.length-located.length;
-  $('#map-note').textContent=`${located.length} of ${places.length} results mapped · ${spots.size} ${spots.size===1?'location':'locations'}. Zoom into numbered groups.${missing?` ${missing} ${missing===1?'result has':'results have'} no single confirmed pin; see the list.`:''} Pins mark venues or grounds; check the provider for the entrance.`;
+  const missing=places.length-records.length;
+  $('#map-note').textContent=fossilFocus?'Pins mark beach areas and the information centre, not guaranteed finds or a walking route. Check tides and conditions; keep well away from cliffs and mudslides.':`${records.length} of ${places.length} results mapped · ${spots.size} map points. Zoom into numbered groups.${missing?` ${missing} ${missing===1?'result has':'results have'} no single confirmed pin; see the list.`:''} Pins mark venues or grounds; check the provider for the entrance.`;
+  if(fossilFocus){$('#results-heading').textContent='Fossil hunting on the Jurassic Coast';$('#results-subtitle').textContent='Charmouth, Dorset · 2 beach areas + a place to start';$('#result-count').textContent='3 map spots';}
   if(selectedId)selectMapPlace(selectedId);else $('#map-selection').hidden=true;
   $('#map-view').scrollIntoView({block:'start',behavior:'instant'});
 }
@@ -407,7 +414,8 @@ function selectMapPlace(id){
   const p=mapPlaces.find(v=>v.id===id);if(!p)return;
   selectedId=id;mapSelectionDismissed=false;
   $('#map-selection').hidden=false;
-  $('#map-selection').innerHTML=`<button class="map-selection-close" data-close-map-selection aria-label="Hide selected place">${icon('close')}</button><button class="map-card" data-open="${escapeHTML(p.id)}">${p.image?imageTag(p):`<div>${icon(p.type)}</div>`}<div><p>${escapeHTML(p.category)} · ${escapeHTML(REGION_LABELS[p.region]||p.region)}</p><h3>${escapeHTML(p.name)}</h3><span class="price ${p.priceType==='free'?'free':''}">${escapeHTML(p.priceLabel)}</span></div></button>`;
+  $('#map-selection').innerHTML=`<button class="map-selection-close" data-close-map-selection aria-label="Hide selected place">${icon('close')}</button><button class="map-card" data-open="${escapeHTML(p.parentId||p.id)}">${p.image?imageTag(p):`<div>${icon(p.type)}</div>`}<div><p>${escapeHTML(p.category)} · ${escapeHTML(p.fossilSpot?'Charmouth · Dorset':REGION_LABELS[p.region]||p.region)}</p><h3>${escapeHTML(p.name)}</h3><span class="price ${p.priceType==='free'?'free':''}">${escapeHTML(p.priceLabel)}</span></div></button>`;
+  if(p.fossilSpot)$('#map-selection').innerHTML+=`<div class="fossil-map-note"><p>${escapeHTML(p.fossilSpot.description)}</p><a href="${escapeHTML(p.fossilSpot.source)}" target="_blank" rel="noopener noreferrer">Official collecting &amp; tide advice ↗</a></div>`;
   const group=mapPlaces.filter(v=>spotKey(v)===spotKey(p)),index=group.findIndex(v=>v.id===id);
   if(group.length>1)$('#map-selection').innerHTML+=`<div class="map-group-nav"><button data-select-map="${escapeHTML(group[(index-1+group.length)%group.length].id)}" aria-label="Previous activity at this location">←</button><span>${index+1} of ${group.length} at this location</span><button data-select-map="${escapeHTML(group[(index+1)%group.length].id)}" aria-label="Next activity at this location">→</button></div>`;
   fixImages($('#map-selection'));
@@ -426,3 +434,4 @@ $('#view-toggle').addEventListener('click',()=>{
 });
 window.addEventListener('globee:data',event=>{data=event.detail.places.map(GlobeeImages.decorate);lastListSignature='';lastPrimaryPlansKey=null;render();if(currentMenu==='dates')renderCalendar();});
 render();
+if(routeParams.get('view')==='map')$('#view-toggle').click();
