@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-10-10",
+  "source_verified_at": "2026-10-12",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -1462,7 +1462,7 @@
       "price_text": "£6 for a wooden ball, yours to keep and reuse on repeat visits.",
       "price_type": "paid",
       "booking_text": "No advance booking requirement is stated; balls are sold from the We The Curious shop.",
-      "schedule_text": "4 August–2 November 2026. The outdoor runs cover 10–11 and 17–18 October; weekend ball collection is during shop opening, normally 10am–5pm. Separate outdoor activity hours TBC.",
+      "schedule_text": "4 August–2 November 2026; outdoor ball runs also cover 17–18 and 24–25 October. Weekend ball collection is during shop opening, normally 10am–5pm; separate outdoor activity hours TBC.",
       "occurrences": [
         {
           "start": "2026-09-26",
@@ -1519,6 +1519,20 @@
           "start_time": null,
           "end_time": null,
           "weekday": "Sunday"
+        },
+        {
+          "start": "2026-10-24",
+          "end": "2026-10-24",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-10-25",
+          "end": "2026-10-25",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Sunday"
         }
       ],
       "indoor": false,
@@ -1541,8 +1555,8 @@
       "sources": [
         {
           "url": "https://www.wethecurious.org/whats-on/events/great-bristol-ball-run",
-          "supports": "The organiser confirms six giant ball runs from 4 August to 2 November 2026 across Millennium Square and Anchor Square. The official listing confirms a wooden ball costs £6 and can be kept and reused. The page classifies the six runs as outdoors and partially accessible; it provides no numerical age range or separate outdoor operating timetable. The current official listing confirms the 4 August–2 November 2026 outdoor season, six runs in Millennium and Anchor Squares, a GBP 6 reusable wooden ball, and partial accessibility. Numerical age guidance and separate outdoor hours remain TBC.",
-          "retrieval": "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability.",
+          "supports": "The organiser confirms six giant ball runs from 4 August to 2 November 2026 across Millennium Square and Anchor Square. The official listing confirms a wooden ball costs £6 and can be kept and reused. The page classifies the six runs as outdoors and partially accessible; it provides no numerical age range or separate outdoor operating timetable. The current official listing confirms the 4 August–2 November 2026 outdoor season, six runs in Millennium and Anchor Squares, a GBP 6 reusable wooden ball, and partial accessibility. Numerical age guidance and separate outdoor hours remain TBC. The official event page confirms the outdoor runs remain listed through 2 November 2026, with a £6 reusable ball, partial accessibility and no separately published outdoor activity hours or numerical age range.",
+          "retrieval": "Official organiser event page reviewed through the web tool on 12 October 2026 (BST). The 2026 dates, time or separate activity-hour limits, price basis, age guidance, booking terms and access notes were checked where stated; live availability may change.",
           "label": "Official ball run details",
           "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked.",
           "retrieval_history": [
@@ -1550,24 +1564,26 @@
             "Official source content reviewed on 21 September 2026 using web open; indexed responses may be returned. This is not a guarantee of same-day operation or ticket availability.",
             "Official public HTML retrieved directly with curl GET on 22 September 2026 (HTTP 200); visible body, including At a glance / Booking information where present, read after HTML parsing. No booking transaction or on-site check performed.",
             "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Request started 07:59:28 UTC; response Date 07:59:29 UTC, X-Cache HIT and Age 64 seconds. The web search copy was labelled crawled yesterday; verification uses the directly retrieved body. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
-            "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked."
+            "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked.",
+            "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability."
           ]
         },
         {
           "url": "https://www.wethecurious.org/visit-us",
-          "supports": "The FAQ confirms Tuesday–Sunday 10am–5pm in term time and the same hours for the shop. The contact line 9am–4.30pm Monday–Friday is not the shop timetable. The current official Visit FAQ confirms the shop follows Tuesday–Sunday 10am–5pm term-time opening, distinct from the outdoor Ball Run hours which remain TBC.",
+          "supports": "The FAQ confirms Tuesday–Sunday 10am–5pm in term time and the same hours for the shop. The contact line 9am–4.30pm Monday–Friday is not the shop timetable. The current official Visit FAQ confirms the shop follows Tuesday–Sunday 10am–5pm term-time opening, distinct from the outdoor Ball Run hours which remain TBC. The official Visit us FAQ currently confirms that the shop follows the museum opening schedule: Tuesday–Sunday 10am–5pm in term time and daily 10am–5pm during Bristol school holidays.",
           "label": "Shop opening information",
-          "retrieval": "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
+          "retrieval": "Official Visit us FAQ reviewed through the web tool on 12 October 2026 (BST); shop follows Tuesday–Sunday 10am–5pm term-time visitor hours and every day in Bristol school holidays. These are not published hours for the outdoor ball runs.",
           "retrieval_history": [
             "Official page content reviewed on 21 September 2026.",
             "Official public HTML retrieved directly with curl GET on 22 September 2026 (HTTP 200); visible body, including At a glance / Booking information where present, read after HTML parsing. No booking transaction or on-site check performed.",
             "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Request started 07:59:28 UTC; response Date 07:59:30 UTC, X-Cache MISS and Age 0. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
-            "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official visit FAQ reviewed on 5 October 2026 (BST)."
+            "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official visit FAQ reviewed on 5 October 2026 (BST).",
+            "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed."
           ],
           "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official visit FAQ reviewed on 5 October 2026 (BST)."
         }
       ],
-      "verified_at": "2026-10-07",
+      "verified_at": "2026-10-12",
       "review_status": "verified",
       "sheet_match": {
         "live_sheet_checked": true,
@@ -1575,8 +1591,8 @@
         "event_rows": [
           182
         ],
-        "reconciliation_note": "Published Bristol master and event row match official 4 August–2 November 2026 season. Outdoor activity hours remain TBC; the 10am–5pm window refers only to the shop. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed.",
-        "checked_at": "2026-10-07T07:08:34+01:00"
+        "reconciliation_note": "Published Bristol master and event row match official 4 August–2 November 2026 season. Outdoor activity hours remain TBC; the 10am–5pm window refers only to the shop. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed. On 12 October the existing public Sheet candidate and event periods were rechecked against the organiser for 17–18 and 24–25 October; no Sheet cell or binding fingerprint changed.",
+        "checked_at": "2026-10-12T07:08:14+01:00"
       },
       "limitations": [
         "No numerical age range or explicit advance booking rule is published for the outdoor ball runs.",
@@ -1591,7 +1607,7 @@
           "fingerprint": "bddec6e53ca538a4afa21eeb267995837bf1101c09150580a922ad24ef6a5df9"
         }
       ],
-      "previous_verified_at": "2026-10-05",
+      "previous_verified_at": "2026-10-07",
       "notes": [
         "Keep the wooden ball to reuse on all six runs and on repeat visits.",
         "The shop normally opens 10am–5pm on Saturdays and Sundays. These are ball-collection hours; separate outdoor activity hours remain TBC.",
@@ -1874,7 +1890,7 @@
       "price_text": "Ticketed; exact 2026 patch-entry price TBC. Pumpkins, optional rides and stalls cost extra. Check the final booking total; on-the-day tickets carry a surcharge.",
       "price_type": "paid",
       "booking_text": "Book in advance to avoid disappointment; the operator says this event can sell out. On-the-day tickets, if available, carry a surcharge.",
-      "schedule_text": "Selected daytime dates include 3–4, 10–11 and 17–18 October 2026, 10am–5pm. Other October dates are listed by the operator.",
+      "schedule_text": "Selected daytime dates include 17–18 and 24–31 October 2026, 10am–5pm; the 24–25 weekend is confirmed.",
       "occurrences": [
         {
           "start": "2026-10-03",
@@ -1917,6 +1933,20 @@
           "start_time": "10:00",
           "end_time": "17:00",
           "weekday": "Sunday"
+        },
+        {
+          "start": "2026-10-24",
+          "end": "2026-10-24",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-10-25",
+          "end": "2026-10-25",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Sunday"
         }
       ],
       "indoor": false,
@@ -1939,17 +1969,18 @@
       "sources": [
         {
           "url": "https://avonvalley.co.uk/event/pumpkin-patch/",
-          "supports": "The official 2026 page lists 3–4 and 10–11 October among selected daytime dates and states the patch is open 10am–5pm. The operator describes an all-ages family activity, advance booking advice, possible sell-out and an on-the-day surcharge, without showing a date-specific admission amount. It distinguishes optional pumpkin, rides and stall charges, says the adventure park is closed to patch visitors, and warns that the muddy farmland is unsuitable for wheelchairs or pushchairs. The current official Pumpkin Patch page explicitly lists 17–18 October among 2026 selected days, open 10am–5pm. It remains ticketed with exact entry amount TBC; pumpkins and optional activities cost extra, advance booking is advised, and the farmland patch is unsuitable for wheelchairs or pushchairs.",
+          "supports": "The official 2026 page lists 3–4 and 10–11 October among selected daytime dates and states the patch is open 10am–5pm. The operator describes an all-ages family activity, advance booking advice, possible sell-out and an on-the-day surcharge, without showing a date-specific admission amount. It distinguishes optional pumpkin, rides and stall charges, says the adventure park is closed to patch visitors, and warns that the muddy farmland is unsuitable for wheelchairs or pushchairs. The current official Pumpkin Patch page explicitly lists 17–18 October among 2026 selected days, open 10am–5pm. It remains ticketed with exact entry amount TBC; pumpkins and optional activities cost extra, advance booking is advised, and the farmland patch is unsuitable for wheelchairs or pushchairs. The official daytime Pumpkin Patch page lists 17–18 and 24–31 October among selected 2026 dates, 10am–5pm; booking ahead is advised, exact admission remains TBC, pumpkins and optional activities cost extra, and muddy farmland is not suitable for wheelchairs or pushchairs.",
           "label": "Official pumpkin patch dates and visit conditions",
-          "retrieval": "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability.",
+          "retrieval": "Official organiser event page reviewed through the web tool on 12 October 2026 (BST). The 2026 dates, time or separate activity-hour limits, price basis, age guidance, booking terms and access notes were checked where stated; live availability may change.",
           "retrieval_history": [
             "Official event page retrieved directly on 27 September 2026 at 07:04 BST (HTTP 200; response Date Sun, 27 Sep 2026 06:04:15 GMT). Full displayed body and date list reviewed. The exact 2026 ticket amount and live availability were not established.",
-            "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked."
+            "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked.",
+            "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability."
           ],
           "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked."
         }
       ],
-      "verified_at": "2026-10-07",
+      "verified_at": "2026-10-12",
       "review_status": "verified",
       "sheet_match": {
         "live_sheet_checked": true,
@@ -1957,13 +1988,13 @@
         "event_rows": [
           183
         ],
-        "reconciliation_note": "Published Bristol master and event row match the official selected dates. Official list explicitly includes 3–4 and 10–11 October; exact patch entry price remains TBC. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed.",
-        "checked_at": "2026-10-07T07:08:34+01:00"
+        "reconciliation_note": "Published Bristol master and event row match the official selected dates. Official list explicitly includes 3–4 and 10–11 October; exact patch entry price remains TBC. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed. On 12 October the existing public Sheet candidate and event periods were rechecked against the organiser for 17–18 and 24–25 October; no Sheet cell or binding fingerprint changed.",
+        "checked_at": "2026-10-12T07:08:14+01:00"
       },
       "limitations": [
         "Exact 2026 patch-entry amount and online booking fee are TBC.",
-        "Only 3–4, 10–11 and 17–18 October are included for reviewed weekends; later selected dates require their own guide review.",
-        "Live ticket availability was not established."
+        "Live ticket availability was not established.",
+        "Only selected reviewed weekend dates through 24–25 October appear in the guide; live ticket availability was not established."
       ],
       "sheet_bindings": [
         {
@@ -1973,7 +2004,7 @@
           "fingerprint": "6d44ef44e11b7b4c1fede66677aa3b94a6310b5249950aa9a09e958d798608e1"
         }
       ],
-      "previous_verified_at": "2026-10-05",
+      "previous_verified_at": "2026-10-07",
       "notes": [
         "Pumpkins, rides and side stalls are not included in patch entry; the ticket does not include access to Avon Valley Adventure Park.",
         "The operator advises boots or wellies and says the farmland patch is unsuitable for wheelchairs or pushchairs.",
@@ -1992,7 +2023,7 @@
       "price_text": "£5 per adult or child; under-1s free. Pumpkins and some activities cost extra.",
       "price_type": "paid",
       "booking_text": "Advance booking of an arrival slot is recommended. Walk-ins may be admitted, but entry is not guaranteed. Last entry is 3pm; parking is free and payment is card only.",
-      "schedule_text": "Saturday–Sunday 10–11 and 17–18 October 2026, 10am–4.30pm; last entry 3pm. Further selected October dates are listed.",
+      "schedule_text": "Selected 2026 dates include 17–18 and 24–25 October, 10am–4.30pm; last entry 3pm. A further run is listed for 26–31 October.",
       "occurrences": [
         {
           "start": "2026-10-10",
@@ -2018,6 +2049,20 @@
         {
           "start": "2026-10-18",
           "end": "2026-10-18",
+          "start_time": "10:00",
+          "end_time": "16:30",
+          "weekday": "Sunday"
+        },
+        {
+          "start": "2026-10-24",
+          "end": "2026-10-24",
+          "start_time": "10:00",
+          "end_time": "16:30",
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-10-25",
+          "end": "2026-10-25",
           "start_time": "10:00",
           "end_time": "16:30",
           "weekday": "Sunday"
@@ -2044,16 +2089,17 @@
         {
           "url": "https://shop.dartsfarm.co.uk/collections/all/products/pumpkin-fest-2026",
           "label": "Official 2026 festival ticket and visit details",
-          "supports": "The official shop lists 10–11 and 17–18 October 2026, opening 10am–4.30pm with last entry at 3pm, £5 admission per adult or child, and under-1s free. The official FAQ says walk-ins are accepted but entry is not guaranteed, and recommends advance booking of an arrival slot. Pumpkin purchases and some activities cost extra. The organiser lists free parking, card-only payment and dogs on leads. An arrival booking slot sets arrival time; visitors may stay until closing.",
-          "retrieval": "Official 2026 ticket page and FAQ reviewed through the web tool on 10 October 2026 (BST). Dates, opening hours, admission, walk-in/advance booking guidance and practical conditions checked; live slot availability may change.",
+          "supports": "The official shop lists 10–11 and 17–18 October 2026, opening 10am–4.30pm with last entry at 3pm, £5 admission per adult or child, and under-1s free. The official FAQ says walk-ins are accepted but entry is not guaranteed, and recommends advance booking of an arrival slot. Pumpkin purchases and some activities cost extra. The organiser lists free parking, card-only payment and dogs on leads. An arrival booking slot sets arrival time; visitors may stay until closing. The official 2026 page confirms 17–18 and 24–25 October, 10am–4.30pm, last entry 3pm; £5 per adult or child, under-1s free; arrival-slot booking is recommended though walk-ins may be admitted.",
+          "retrieval": "Official organiser event page reviewed through the web tool on 12 October 2026 (BST). The 2026 dates, time or separate activity-hour limits, price basis, age guidance, booking terms and access notes were checked where stated; live availability may change.",
           "retrieval_history": [
             "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked.",
-            "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked."
+            "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked.",
+            "Official 2026 ticket page and FAQ reviewed through the web tool on 10 October 2026 (BST). Dates, opening hours, admission, walk-in/advance booking guidance and practical conditions checked; live slot availability may change."
           ],
           "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked."
         }
       ],
-      "verified_at": "2026-10-10",
+      "verified_at": "2026-10-12",
       "review_status": "verified",
       "sheet_match": {
         "live_sheet_checked": true,
@@ -2063,8 +2109,8 @@
           143,
           144
         ],
-        "reconciliation_note": "Published Exeter master row124 and events row143 match the official 10–11 October 2026 dates and ticketed status; later event rows remain untouched. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed. On 10 October, the official FAQ corrected booking guidance only; the current published Sheet has no booking field to amend. Master and three events candidate values remain compatible, and the existing bound fingerprint is unchanged.",
-        "checked_at": "2026-10-10T12:06:28+01:00"
+        "reconciliation_note": "Published Exeter master row124 and events row143 match the official 10–11 October 2026 dates and ticketed status; later event rows remain untouched. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed. On 10 October, the official FAQ corrected booking guidance only; the current published Sheet has no booking field to amend. Master and three events candidate values remain compatible, and the existing bound fingerprint is unchanged. On 12 October the existing public Sheet candidate and event periods were rechecked against the organiser for 17–18 and 24–25 October; no Sheet cell or binding fingerprint changed.",
+        "checked_at": "2026-10-12T07:08:14+01:00"
       },
       "limitations": [
         "Walk-in entry is not guaranteed; advance-booking availability can change.",
@@ -2078,7 +2124,7 @@
           "fingerprint": "ecbf7d6ff506df3b7711b843f6cea67d96180e3da9122ae79371787168ff9bba"
         }
       ],
-      "previous_verified_at": "2026-10-07",
+      "previous_verified_at": "2026-10-10",
       "city": "",
       "notes": [
         "Last entry is 3pm although the event closes at 4.30pm.",
@@ -2098,7 +2144,7 @@
       "price_text": "Online tickets from £20 per person; gate price £25 per person; children under 92cm free. Some extras cost more. Check the date-specific final total.",
       "price_type": "paid",
       "booking_text": "Advance online booking offers the advertised lower price; gate tickets are listed. Check date-specific availability and ride restrictions.",
-      "schedule_text": "Saturday–Sunday 10–11 and 17–18 October 2026, 10am–5pm. Further dates: 24–31 October.",
+      "schedule_text": "17–18 and 24–31 October 2026, 10am–5pm on listed dates.",
       "occurrences": [
         {
           "start": "2026-10-10",
@@ -2127,6 +2173,20 @@
           "start_time": "10:00",
           "end_time": "17:00",
           "weekday": "Sunday"
+        },
+        {
+          "start": "2026-10-24",
+          "end": "2026-10-24",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-10-25",
+          "end": "2026-10-25",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Sunday"
         }
       ],
       "indoor": null,
@@ -2149,15 +2209,16 @@
         {
           "url": "https://www.crealy.co.uk/events/halloween-at-crealy/",
           "label": "Official 2026 Halloween programme",
-          "supports": "The official event page lists 10–11, 17–18 and 24–31 October 2026, 10am–5pm. Online tickets start at £20 per person, gate tickets are £25, and children under 92cm are free; extra experiences may cost more. The family programme includes gentler activities for younger children; some attractions have separate restrictions. The current official Spook-Fest page confirms 10–11 and 17–18 October 2026, 10am–5pm, online admission from GBP 20, GBP 25 at the gate and free entry below 92cm. Attraction-specific restrictions and extras remain.",
-          "retrieval": "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability.",
+          "supports": "The official event page lists 10–11, 17–18 and 24–31 October 2026, 10am–5pm. Online tickets start at £20 per person, gate tickets are £25, and children under 92cm are free; extra experiences may cost more. The family programme includes gentler activities for younger children; some attractions have separate restrictions. The current official Spook-Fest page confirms 10–11 and 17–18 October 2026, 10am–5pm, online admission from GBP 20, GBP 25 at the gate and free entry below 92cm. Attraction-specific restrictions and extras remain. The official 2026 page confirms 17–18 and 24–31 October, 10am–5pm, online tickets from £20, gate tickets £25, under-92cm admission free and the under-10s trick-or-treat option.",
+          "retrieval": "Official organiser event page reviewed through the web tool on 12 October 2026 (BST). The 2026 dates, time or separate activity-hour limits, price basis, age guidance, booking terms and access notes were checked where stated; live availability may change.",
           "retrieval_history": [
-            "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked."
+            "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked.",
+            "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability."
           ],
           "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked."
         }
       ],
-      "verified_at": "2026-10-07",
+      "verified_at": "2026-10-12",
       "review_status": "verified",
       "sheet_match": {
         "live_sheet_checked": true,
@@ -2167,8 +2228,8 @@
           98,
           99
         ],
-        "reconciliation_note": "After checking the official 2026 page, corrected master I101 final block to 24–31 October and events A99 to 24 October. Native readback and published master/events CSVs agree. This guide selects already-curated events row97 for 10–11 October. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed.",
-        "checked_at": "2026-10-07T07:08:34+01:00"
+        "reconciliation_note": "After checking the official 2026 page, corrected master I101 final block to 24–31 October and events A99 to 24 October. Native readback and published master/events CSVs agree. This guide selects already-curated events row97 for 10–11 October. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed. On 12 October the existing public Sheet candidate and event periods were rechecked against the organiser for 17–18 and 24–25 October; no Sheet cell or binding fingerprint changed.",
+        "checked_at": "2026-10-12T07:08:14+01:00"
       },
       "limitations": [
         "The advertised online price is a starting price; the actual date-specific checkout total may vary.",
@@ -2182,7 +2243,7 @@
           "fingerprint": "4af32261e7a67c42f5b6622eed0f13f04de8ab9a50e6c41b33fe85cf3650125e"
         }
       ],
-      "previous_verified_at": "2026-10-05",
+      "previous_verified_at": "2026-10-07",
       "city": "",
       "notes": [
         "Individual attractions have their own age and height rules.",
