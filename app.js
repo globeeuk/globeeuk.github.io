@@ -15,7 +15,7 @@ const requestedRegion=routeParams.get('region');
 const PAGE_SIZE=12;
 const state={region:requestedRegion==='Devon'?'Exeter':REGIONS.includes(requestedRegion)?requestedRegion:'Exeter',age:[],price:'all',type:'all',query:'',dates:null,collection:null,edit:null,view:'list',browseAll:false};
 const ageBands=[{id:'0-2',label:'0–2',min:0,max:2},{id:'3-5',label:'3–5',min:3,max:5},{id:'6-8',label:'6–8',min:6,max:8},{id:'9-12',label:'9–12',min:9,max:12},{id:'13+',label:'13+',min:13,max:17}];
-const types=[['all','All types'],['activity','Activities'],['theatre','Theatre & shows'],['ice','Ice cream'],['outdoors','Parks & nature'],['fossil','Fossil hunting'],['art','Arts & making'],['club','Holiday clubs']];
+const types=[['all','All types'],['activity','Activities'],['theatre','Theatre & shows'],['market','Markets'],['ice','Ice cream'],['outdoors','Parks & nature'],['fossil','Fossil hunting'],['art','Arts & making'],['club','Holiday clubs']];
 let plansWindow='weekend';
 const availableTypes=isPlansPage?types.filter(([id])=>!['ice','fossil'].includes(id)):types;
 let currentMenu=null,map=null,markers=[],selectedId=null,listScroll=0;
@@ -74,7 +74,7 @@ function matches(p,ignore){
   if(ignore!=='region'&&p.region!==state.region)return false;
   if(ignore!=='dates'&&state.dates&&!occursWithin(p,state.dates))return false;
   if(ignore!=='price'&&state.price!=='all'&&p.priceType!==state.price)return false;
-  if(ignore!=='type'&&state.type!=='all'&&!(p.type===state.type||(state.type==='fossil'&&p.category==='Fossil hunting')||(state.type==='activity'&&['club','art','outdoors','theatre'].includes(p.type))))return false;
+  if(ignore!=='type'&&state.type!=='all'&&!(p.type===state.type||(state.type==='fossil'&&p.category==='Fossil hunting')||(state.type==='activity'&&['club','art','outdoors','theatre','market'].includes(p.type))))return false;
   if(ignore!=='age'&&state.age.length){
     if(!p.ages)return false;
     if(!state.age.some(id=>{const b=ageBands.find(v=>v.id===id);return p.ages[0]<=b.max&&p.ages[1]>=b.min;}))return false;
@@ -277,7 +277,7 @@ function openMenu(menu){
   if(menu==='region')html=`<p class="filter-help">Choose a local area to explore.</p><div class="filter-options">${option('Exeter','Exeter · Devon','Exeter and across Devon',state.region==='Exeter')}${option('Bristol','Bristol','Bristol family events and days out',state.region==='Bristol')}${option('Nottingham','Nottingham','Nottingham & nearby places',state.region==='Nottingham')}</div>`;
   if(menu==='age')html=`<p class="filter-help">Choose one or more ages. We’ll show places suitable for at least one selected age. Places with unconfirmed ages are left out.</p><div class="filter-options age-options">${ageBands.map(b=>option(b.id,b.label+' years','',state.age.includes(b.id),'checkbox','ages')).join('')}</div>`;
   if(menu==='price')html=`<p class="filter-help">Paid includes tickets and food or drink purchases. Conditional offers are explained on the place card.</p><div class="filter-options">${option('all','Any price','',state.price==='all')}${option('free','Free','No entry fee for the activity shown',state.price==='free')}${option('paid','Paid','Tickets, food or drink',state.price==='paid')}</div>`;
-  if(menu==='type')html=`<div class="filter-options">${availableTypes.filter(([id])=>id!=='fossil'||state.region==='Exeter').map(([id,title])=>option(id,title,id==='activity'?'Includes arts, outdoor activities and holiday clubs':id==='fossil'?'Jurassic Coast day trips from Exeter · Devon':'',state.type===id)).join('')}</div>`;
+  if(menu==='type')html=`<div class="filter-options">${availableTypes.filter(([id])=>id!=='fossil'||state.region==='Exeter').map(([id,title])=>option(id,title,id==='activity'?'Includes arts, outdoor activities and holiday clubs':id==='market'?'Farmers’ markets, produce and food & makers markets':id==='fossil'?'Jurassic Coast day trips from Exeter · Devon':'',state.type===id)).join('')}</div>`;
   $('#filter-content').innerHTML=html;
   $('#filter-dialog').classList.toggle('date-dialog',menu==='dates');
   if(menu==='dates'){draftDates=state.dates?{...state.dates}:null;calendarPickingEnd=false;calendarMonth=(draftDates?.start||TODAY).slice(0,7);renderCalendar();}

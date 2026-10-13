@@ -77,3 +77,39 @@ window.GLOBEE_EDITORIAL.annotations['Monmouth Beach – Fossil Hunting (Dorset d
   mapChecked:'2026-10-11',
   note:'Self-guided beach visit, not a guided tour. The map marks the car-park/start area. Leave large embedded ammonites and the pavement for others to enjoy.'
 };
+
+// Official market schedules checked 13 October 2026. Recurrence-derived dates stay qualified.
+Object.assign(window.GLOBEE_EDITORIAL.annotations,{
+  "Exeter Quayside Farmers’ Market": {
+    "category": "Farmers’ market",
+    "note": "Checked 13 October 2026. 2026 dates explicitly published by organiser. Visitor admission is free; purchases extra."
+  },
+  "Crediton Farmers’ Market": {
+    "category": "Farmers’ market",
+    "note": "Checked 13 October 2026. Dates calculated from organiser’s published first/third-Saturday rule; not separate dated announcements. Visitor admission TBC."
+  },
+  "Cullompton Farmers’ Market": {
+    "category": "Farmers’ market",
+    "note": "Checked 13 October 2026. Date calculated from organiser’s second-Saturday rule; special festival times may differ. Exact current venue TBC; the photo is a town reference. Visitor admission TBC."
+  },
+  "Whiteladies Road Market": {
+    "category": "Produce market",
+    "note": "Checked 13 October 2026. Dates calculated from organiser’s current every-Saturday rule. Visitor admission TBC."
+  },
+  "Tobacco Factory Sunday Market": {
+    "category": "Food & makers market",
+    "note": "Checked 13 October 2026. 2026 dates explicitly shown on organiser’s current market calendar. Visitor admission TBC."
+  },
+  "West Bridgford Farmers’ Market": {
+    "category": "Farmers’ market",
+    "note": "Checked 13 October 2026. Dates calculated from council’s second/fourth-Saturday rule; usual site stated, not a guaranteed exact pitch. Visitor admission TBC."
+  },
+  "Ruddington Village Market": {
+    "category": "Food & makers market",
+    "note": "Checked 13 October 2026. Date calculated from organiser/council’s first-Saturday rule; no January market. Visitor admission TBC."
+  },
+  "Beeston Food and Produce Market": {
+    "category": "Produce market",
+    "note": "Checked 13 October 2026. Dates calculated from current council third-Saturday rule. Visitor admission TBC."
+  }
+});

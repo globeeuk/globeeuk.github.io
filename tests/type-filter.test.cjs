@@ -4,7 +4,7 @@ const declaration=app.match(/^const types=.*;$/m)[0];
 const available=app.match(/^const availableTypes=.*;$/m)[0];
 function options(isPlansPage){return vm.runInNewContext(`${declaration}\n${available}\nJSON.stringify(availableTypes)`,{isPlansPage});}
 test('Cafés is removed from visible type choices without removing the other filters',()=>{
- assert.deepEqual(JSON.parse(options(false)).map(([id])=>id),['all','activity','theatre','ice','outdoors','fossil','art','club']);
+ assert.deepEqual(JSON.parse(options(false)).map(([id])=>id),['all','activity','theatre','market','ice','outdoors','fossil','art','club']);
  assert(!JSON.parse(options(true)).some(([id])=>id==='cafe'));
 });
 test('retiring the café filter leaves the legacy record adapter intact',()=>{

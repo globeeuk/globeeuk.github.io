@@ -40,7 +40,7 @@
       datePeriods.sort((x,y)=>x.start.localeCompare(y.start));
       const kind=a.kind||(m.tab==='club'?'club':datePeriods.length||iso(m.end_date)?'event':'place');
       const isShow=m.tab==='dayout'&&m.type==='theatre';
-      const type=kind==='club'?'club':isShow?'theatre':a.type||({art:'art',arts:'art',animation:'art',outdoor:'outdoors',themepark:'outdoors',cafe:'cafe',ice:'ice'}[m.type]||'activity');
+      const type=kind==='club'?'club':isShow?'theatre':a.type||({art:'art',arts:'art',animation:'art',outdoor:'outdoors',themepark:'outdoors',cafe:'cafe',ice:'ice',market:'market'}[m.type]||'activity');
       const category=a.category||(kind==='club'?'Holiday club':({sports:'Sport',theatre:'Theatre',music:'Music',arts:'Arts & making',art:'Arts & making',history:'History',sensory:'Sensory activities',education:'Learning',food:'Food & drink',outdoor:'Outdoors',themepark:'Theme park',film:'Film',cinema:'Cinema',dance:'Dance',animation:'Animation',festival:'Festival'}[m.type]|| (kind==='event'?'What’s on':'Family activity')));
       const ageMin=m.age_min===''||m.age_min==null?null:Number(m.age_min),ageMax=m.age_max===''||m.age_max==null?null:Number(m.age_max);
       const ages=Number.isFinite(ageMin)&&Number.isFinite(ageMax)&&ageMin>=0&&ageMax>=ageMin?[ageMin,ageMax]:null;

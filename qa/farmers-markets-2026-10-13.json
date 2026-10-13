@@ -1,0 +1,90 @@
+{
+  "checked_on": "2026-10-13",
+  "scope": "Existing Exeter/Devon, Bristol and Nottingham regions. Published regular schedules are distinguished from date-specific announcements. No visitor booking, age, admission, accessibility or cancellation claim is inferred from a market being outdoors.",
+  "markets": [
+    {
+      "name": "Exeter Quayside Farmers’ Market", "region": "Exeter", "area": "city", "category": "Farmers’ market",
+      "source": "https://foodexeter.org.uk/home/exeter-quayside-farmers-market/",
+      "additional_sources": ["https://www.visitexeter.com/whats-on/exeter-quayside-farmers-market-p3771823", "https://www.instagram.com/exequayside_farmersmarket/"],
+      "location": "Piazza Terracina, Exeter Quayside, Devon", "price": "Free", "price_type": "free",
+      "schedule": "17 October, 21 November and 19 December 2026, 9am–1pm; third Saturday of the month",
+      "dates": ["2026-10-17", "2026-11-21", "2026-12-19"], "start_time": "09:00", "end_time": "13:00", "basis": "2026 dates explicitly published by organiser",
+      "description": "A monthly farmers’ market with local growers, bakers and food producers on Exeter Quay. Free entry; purchases extra. The organiser explicitly lists the remaining 2026 dates. No visitor booking requirement or numerical age restriction is published. Check @exequayside_farmersmarket before travelling for changes.",
+      "limitations": ["Instagram could not be read by the web tool; latest Story/cancellation notices are unverified. The organiser website confirms dates and times.", "Visit Exeter is used for the free visitor admission statement, not its expired event-calendar state."], "photo_key": "quay"
+    },
+    {
+      "name": "Crediton Farmers’ Market", "region": "Exeter", "area": "daytrip", "category": "Farmers’ market",
+      "source": "https://creditonfarmersmarket.org.uk/cfm/",
+      "additional_sources": ["https://creditonfarmersmarket.org.uk/cfm/dates/", "https://www.middevon.gov.uk/media/356742/mid-devon-retail-leisure-tourism-study-feb-24-vol-3-centre-healthchecks.pdf"],
+      "location": "Town Square, Market Street, Crediton, Devon", "price": "TBC", "price_type": "unknown",
+      "schedule": "First and third Saturdays; scheduled 17 October, 7 and 21 November 2026. Current opening hours TBC",
+      "dates": ["2026-10-17", "2026-11-07", "2026-11-21"], "start_time": null, "end_time": null, "basis": "Dates calculated from organiser’s published first/third-Saturday rule; not separate dated announcements",
+      "description": "Local producers sell what they grow or make at Crediton’s Town Square market. Dates shown follow the organiser’s first-and-third-Saturday rule, rather than individual 2026 announcements. Its dates page currently has no event entries. Current hours, visitor admission, age guidance and booking requirements TBC; check the organiser before setting off.",
+      "limitations": ["The empty event widget is not treated as a cancellation, but no dated 2026 announcement was verified.", "Council town-centre study confirms Town Square location; current opening hours are not stated on the accessible organiser page."], "photo_key": "crediton-market-square"
+    },
+    {
+      "name": "Cullompton Farmers’ Market", "region": "Exeter", "area": "daytrip", "category": "Farmers’ market",
+      "source": "https://www.cullomptonfarmersmarket.com/",
+      "additional_sources": ["https://www.cullomptonfarmersmarket.com/dates.html"],
+      "location": "Cullompton, Devon; exact current market site TBC with organiser", "price": "TBC", "price_type": "unknown",
+      "schedule": "Usually second Saturday, 9.30am–12.30pm; next scheduled 14 November 2026",
+      "dates": ["2026-11-14"], "start_time": "09:30", "end_time": "12:30", "basis": "Date calculated from organiser’s second-Saturday rule; special festival times may differ",
+      "description": "A monthly market of local food producers from around Cullompton. The organiser currently says the second Saturday, usually 9.30am–12.30pm; special festivals may have longer hours. The next date follows that regular rule. Exact current site, visitor admission, age guidance and booking requirements TBC. Confirm arrangements before travelling.",
+      "limitations": ["Older/local listings disagree about second/fourth Saturdays. Current organiser website is used: second Saturday only.", "The accessible organiser site does not confirm an exact present venue. The Walronds photograph is explicitly a Cullompton location reference, not proof of the market site."], "photo_key": "cullompton-walronds"
+    },
+    {
+      "name": "Whiteladies Road Market", "region": "Bristol", "area": "city", "category": "Produce market",
+      "source": "https://www.wrmcic.co.uk/home", "additional_sources": ["https://www.wrmcic.co.uk/new-traders", "https://www.wrmcic.co.uk/about"],
+      "location": "Junction of Whiteladies Road and Apsley Road, Bristol BS8 2ST", "price": "TBC", "price_type": "unknown",
+      "schedule": "Every Saturday, 8.30am–1pm; dates shown through 28 November 2026 follow the regular schedule",
+      "dates": ["2026-10-17", "2026-10-24", "2026-10-31", "2026-11-07", "2026-11-14", "2026-11-21", "2026-11-28"], "start_time": "08:30", "end_time": "13:00", "basis": "Dates calculated from organiser’s current every-Saturday rule",
+      "description": "A predominantly local produce market with seasonal fruit and vegetables, meat, cheese, fish and bread, plus some plants and crafts. The organiser now lists every Saturday, 8.30am–1pm. Dates follow that published weekly rule. It is not generally a street-food market. Visitor admission, numerical age guidance and booking requirements TBC; purchases extra.",
+      "limitations": ["Use the current every-Saturday rule, not older first/third-Saturday listings.", "The photograph shows Whiteladies Road in 2017, not market stalls or the current event."], "photo_key": "whiteladies-road"
+    },
+    {
+      "name": "Tobacco Factory Sunday Market", "region": "Bristol", "area": "city", "category": "Food & makers market",
+      "source": "https://tobaccofactory.com/whats-on/sunday-market/", "additional_sources": ["https://tobaccofactory.com/sunday-market/", "https://tobaccofactory.com/whats-on/category/market/"],
+      "location": "Tobacco Factory, Raleigh Road, Bristol BS3 1TF", "price": "TBC", "price_type": "unknown",
+      "schedule": "Sundays, 10am–2.30pm; organiser calendar lists 18/25 October; 1/8/15/22/29 November; 6/13/20 December 2026",
+      "dates": ["2026-10-18", "2026-10-25", "2026-11-01", "2026-11-08", "2026-11-15", "2026-11-22", "2026-11-29", "2026-12-06", "2026-12-13", "2026-12-20"], "start_time": "10:00", "end_time": "14:30", "basis": "2026 dates explicitly shown on organiser’s current market calendar",
+      "description": "A weekly market mixing local food, produce, street food and handmade goods at the Tobacco Factory. Sundays 10am–2.30pm; listed 2026 dates come from the venue calendar. This is a food-and-makers market, not solely a farmers’ market. Visitor admission and numerical age guidance TBC. No visitor booking requirement is stated; stallholder pitch booking is separate. Purchases extra.",
+      "limitations": ["No visitor free-admission statement was found; trading fees are not visitor admission.", "27 December is not in the checked calendar and is not generated from the generic weekly rule."], "photo_key": "tobacco-factory"
+    },
+    {
+      "name": "West Bridgford Farmers’ Market", "region": "Nottingham", "area": "city", "category": "Farmers’ market",
+      "source": "https://www.rushcliffe.gov.uk/leisure-and-culture/whats-on-in-rushcliffe/markets/", "additional_sources": [],
+      "location": "Usually the Croquet Lawn, Central Avenue, West Bridgford, Nottinghamshire", "price": "TBC", "price_type": "unknown",
+      "schedule": "Second and fourth Saturdays from 8am; scheduled 24 October, 14 and 28 November 2026; closing time TBC",
+      "dates": ["2026-10-24", "2026-11-14", "2026-11-28"], "start_time": "08:00", "end_time": null, "basis": "Dates calculated from council’s second/fourth-Saturday rule; usual site stated, not a guaranteed exact pitch",
+      "description": "A regular market of local produce including honey, cakes, organic meat and vegetables. Rushcliffe Council lists second and fourth Saturdays from 8am, usually on the Croquet Lawn along Central Avenue. Dates follow that rule. Closing time, visitor admission, numerical age guidance and booking requirements TBC; check for location changes before going.",
+      "limitations": ["Council does not publish a closing time on the checked page. Older 8am–2pm reports are not used to fill it.", "Market location is described as usual, not guaranteed. The photo shows Central Avenue shops, not the actual Croquet Lawn or current market."], "photo_key": "west-bridgford-central-avenue"
+    },
+    {
+      "name": "Ruddington Village Market", "region": "Nottingham", "area": "daytrip", "category": "Food & makers market",
+      "source": "https://www.ruddingtonvillagemarket.co.uk/", "additional_sources": ["https://www.rushcliffe.gov.uk/leisure-and-culture/whats-on-in-rushcliffe/markets/"],
+      "location": "The Village Green, Ruddington, Nottinghamshire", "price": "TBC", "price_type": "unknown",
+      "schedule": "First Saturday, February–December, 9am–2pm; next scheduled 7 November 2026",
+      "dates": ["2026-11-07"], "start_time": "09:00", "end_time": "14:00", "basis": "Date calculated from organiser/council’s first-Saturday rule; no January market",
+      "description": "A monthly village market of food, produce and handmade goods on Ruddington’s Green. The organiser and council list the first Saturday, February–December, 9am–2pm. Next date follows that rule. Council describes music and children’s entertainment, but no date-specific programme was verified. Visitor admission, age guidance and booking requirements TBC.",
+      "limitations": ["No January occurrence is generated.", "A separate Christmas special is not inferred from the regular December pattern."], "photo_key": "ruddington-green"
+    },
+    {
+      "name": "Beeston Food and Produce Market", "region": "Nottingham", "area": "city", "category": "Produce market",
+      "source": "https://www.broxtowe.gov.uk/for-business/town-centres/markets-in-town-centres/", "additional_sources": ["https://www.broxtowe.gov.uk/news-events/whats-on-where/2026/beeston-food-fair/?date=16-05-2026"],
+      "location": "The Square, High Road, Beeston, Nottingham NG9 2JL", "price": "TBC", "price_type": "unknown",
+      "schedule": "Third Saturday, 8am–2pm; scheduled 17 October and 21 November 2026",
+      "dates": ["2026-10-17", "2026-11-21"], "start_time": "08:00", "end_time": "14:00", "basis": "Dates calculated from current council third-Saturday rule",
+      "description": "A monthly food-and-produce market on Beeston Square. Current Broxtowe Council information lists the third Saturday, 8am–2pm; dates shown follow that rule. This is separate from the second-Saturday craft fair and the Monday/Wednesday general market. Visitor admission, numerical age guidance and booking requirements TBC; check official market notices for weather cancellations.",
+      "limitations": ["Use current council 8am opening, not older 9am listings.", "Stallholder fees are not visitor charges. The location photograph is from 2009, before later Square redevelopment."], "photo_key": "beeston-square"
+    }
+  ],
+  "photos": [
+    {"key":"crediton-market-square","title":"File:Crediton , Town Square - geograph.org.uk - 4752956.jpg","description":"Crediton Town Square in 2015; a location reference, not the current market","kind":"location"},
+    {"key":"cullompton-walronds","title":"File:Cullompton , The Walronds - geograph.org.uk - 7316157.jpg","description":"The Walronds in Cullompton in 2022; a town reference, not confirmation of the current market site","kind":"location"},
+    {"key":"whiteladies-road","title":"File:Whiteladies Road - geograph.org.uk - 5478932.jpg","description":"Whiteladies Road in Bristol in 2017; a street reference, not the market stalls","kind":"location"},
+    {"key":"tobacco-factory","title":"File:Tobacco Factory theatre, Bedminster, Bristol - geograph.org.uk - 2232001.jpg","description":"The Tobacco Factory building in Bristol in 2010; not the current Sunday market","kind":"venue"},
+    {"key":"west-bridgford-central-avenue","title":"File:West Bridgford, Central Avenue shops - geograph.org.uk - 7178826.jpg","description":"Central Avenue shops in West Bridgford in 2022; not the Croquet Lawn or current market","kind":"location"},
+    {"key":"ruddington-green","title":"File:The Green, Ruddington - geograph.org.uk - 7097216.jpg","description":"The Village Green in Ruddington in 2022; not the current market","kind":"location"},
+    {"key":"beeston-square","title":"File:Beeston Square - geograph.org.uk - 1479054.jpg","description":"Beeston Square in 2009, before later redevelopment; not the current market","kind":"location"}
+  ]
+}

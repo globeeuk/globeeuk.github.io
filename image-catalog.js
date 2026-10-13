@@ -2,6 +2,13 @@
 (function(root){
   'use strict';
   const photoRows=[
+    ['crediton-market-square','Lewis Clarke','https://commons.wikimedia.org/wiki/File:Crediton_,_Town_Square_-_geograph.org.uk_-_4752956.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2015','location','Crediton Town Square; not the current farmers’ market'],
+    ['cullompton-walronds','Lewis Clarke','https://commons.wikimedia.org/wiki/File:Cullompton_,_The_Walronds_-_geograph.org.uk_-_7316157.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2022','location','The Walronds in Cullompton; a town reference, not confirmation of the current market site'],
+    ['whiteladies-road','Bill Boaden','https://commons.wikimedia.org/wiki/File:Whiteladies_Road_-_geograph.org.uk_-_5478932.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2017','location','Whiteladies Road in Bristol; not the market stalls'],
+    ['tobacco-factory','Anthony O’Neil','https://commons.wikimedia.org/wiki/File:Tobacco_Factory_theatre,_Bedminster,_Bristol_-_geograph.org.uk_-_2232001.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2010','venue','The Tobacco Factory building in Bristol; not the current Sunday market'],
+    ['west-bridgford-central-avenue','John Sutton','https://commons.wikimedia.org/wiki/File:West_Bridgford,_Central_Avenue_shops_-_geograph.org.uk_-_7178826.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2022','location','Central Avenue shops in West Bridgford; not the Croquet Lawn or current market'],
+    ['ruddington-green','Jonathan Thacker','https://commons.wikimedia.org/wiki/File:The_Green,_Ruddington_-_geograph.org.uk_-_7097216.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2022','location','The Village Green in Ruddington; not the current market'],
+    ['beeston-square','Alan Murray-Rust','https://commons.wikimedia.org/wiki/File:Beeston_Square_-_geograph.org.uk_-_1479054.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2009','location','Beeston Square before later redevelopment; not the current market'],
     ['dartmouth-train-of-lights','Benjamin Smith','https://commons.wikimedia.org/wiki/File:Dartmouth_Steam_Railway_-_01.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/','2023','location','A Dartmouth Steam Railway locomotive at Kingswear; not the Christmas Train of Lights'],
     ['dartmouth-train-santa','Geof Sheppard','https://commons.wikimedia.org/wiki/File:Greenway_Halt_train_hauled_by_4277.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/','2012','location','A Dartmouth Steam Railway train at Greenway Halt; not the Train of Lights+Santa service'],
     ['south-devon-polar-express','Bob Walters','https://commons.wikimedia.org/wiki/File:Train_arriving_at_Buckfastleigh_-_geograph.org.uk_-_7234581.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2022','venue','A steam train arriving at Buckfastleigh Station; not THE POLAR EXPRESS train ride'],
@@ -83,6 +90,9 @@
   function photoKey(p){
     if(p.name==='Chessed.me (Online Chess)')return 'chess';
     if(p.region==='Exeter'){
+      if(p.name==='Exeter Quayside Farmers’ Market')return 'quay';
+      if(p.name==='Crediton Farmers’ Market')return 'crediton-market-square';
+      if(p.name==='Cullompton Farmers’ Market')return 'cullompton-walronds';
       if(p.name==='Charmouth Beach – Fossil Hunting (Dorset day trip)')return 'charmouth-beach';
       if(p.name==='Monmouth Beach – Fossil Hunting (Dorset day trip)')return 'monmouth-beach';
       if(p.name==='Christmas Train of Lights – Dartmouth Steam Railway')return 'dartmouth-train-of-lights';
@@ -136,6 +146,9 @@
       if(/Premier Education – St Luke's Campus/.test(p.name))return 'st-lukes';
     }
     if(p.region==='Nottingham'){
+      if(p.name==='West Bridgford Farmers’ Market')return 'west-bridgford-central-avenue';
+      if(p.name==='Ruddington Village Market')return 'ruddington-green';
+      if(p.name==='Beeston Food and Produce Market')return 'beeston-square';
       if(/National Justice Museum/.test(p.name)){
         if(/Historical Trial/.test(p.name))return 'justice-courtroom';
         if(/Laundry with Matron/.test(p.name))return 'justice-door';
@@ -153,6 +166,8 @@
       if(/Nottingham High School/.test(p.name))return 'nottingham-high-school';
     }
     if(p.region==='Bristol'){
+      if(p.name==='Whiteladies Road Market')return 'whiteladies-road';
+      if(p.name==='Tobacco Factory Sunday Market')return 'tobacco-factory';
       if(p.name==='Meet Santa – Noah’s Ark Zoo Farm')return 'noahs-ark';
       if(p.name==='Festive Illumination Light Trail – Old Down Estate')return 'old-down';
       if(p.name==='Sleeping Beauty – Bristol Hippodrome')return 'bristol-hippodrome';
