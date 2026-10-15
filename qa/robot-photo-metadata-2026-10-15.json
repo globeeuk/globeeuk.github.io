@@ -1,0 +1,20 @@
+{
+  "key": "robotics-activity",
+  "image": "assets/images/robotics-activity.webp",
+  "source": "https://commons.wikimedia.org/wiki/File:Lego_Mindstorms_EV3_Robot.jpg",
+  "creator": "Javier Leiva",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Lego_Mindstorms_EV3_Robot.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "date": "2020-10-29 16:20:44",
+  "checked": "2026-10-15",
+  "imageKind": "activity",
+  "description": "A real LEGO Mindstorms EV3 educational robot; an activity reference, not the Sidmouth workshop, its venue or promised equipment.",
+  "changes": "Resized to 960 pixels wide and converted to WebP; layout crop only. The derivative retains CC BY-SA 4.0. No AI-generated or altered scene.",
+  "bytes": 64198,
+  "pixels": [
+    960,
+    720
+  ],
+  "originalSha256": "24ad379c4217b58651331de18c1ad3e62b0fef4082fcad8457c6214937fac328"
+}

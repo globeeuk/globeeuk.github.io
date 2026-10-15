@@ -10,6 +10,19 @@
   },
   "photos": [
     {
+      "key": "robotics-activity",
+      "image": "assets/images/robotics-activity.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Lego_Mindstorms_EV3_Robot.jpg",
+      "creator": "Javier Leiva",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Lego_Mindstorms_EV3_Robot.jpg",
+      "date": "2020-10-29",
+      "checked": "2026-10-15",
+      "changes": "Resized to 960 pixels wide and converted to WebP; cropped by layout. CC BY-SA 4.0 retained. Activity reference, not the Sidmouth event or promised equipment. No AI-generated scene.",
+      "bytes": 64198
+    },
+    {
       "key": "dartmouth-train-of-lights",
       "image": "assets/images/dartmouth-train-of-lights.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Dartmouth_Steam_Railway_-_01.jpg",

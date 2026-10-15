@@ -2,6 +2,7 @@
 (function(root){
   'use strict';
   const photoRows=[
+    ["robotics-activity","Javier Leiva","https://commons.wikimedia.org/wiki/File:Lego_Mindstorms_EV3_Robot.jpg","CC BY-SA 4.0","https://creativecommons.org/licenses/by-sa/4.0/","2020-10-29","activity","A real LEGO Mindstorms EV3 educational robot; an activity reference, not the Sidmouth workshop or its promised equipment"],
     ["sidmouth-all-saints-hall","Jaggery","https://commons.wikimedia.org/wiki/File:All_Saints_church_hall,_Sidmouth_-_geograph.org.uk_-_6430818.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2018-05-20","venue","All Saints church hall in Sidmouth; a venue photograph, not the 2026 Robot Workshop"],
     ["topsham-matthews-hall","Roger Cornfoot","https://commons.wikimedia.org/wiki/File:Matthews_Hall,_Topsham_-_geograph.org.uk_-_958930.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2008-09-11","venue","Matthews Hall in Topsham; a venue photograph, not the writing workshop"],
     ["norman-lockyer-observatory","Paul Lang","https://commons.wikimedia.org/wiki/File:Norman_Lockyer_Observatory_228.jpg","CC BY-SA 3.0","http://creativecommons.org/licenses/by-sa/3.0/","2007","venue","The Norman Lockyer Observatory and James Lockyer Planetarium in Sidmouth; a venue photograph, not the 2026 family event"],
@@ -93,7 +94,7 @@
   function photoKey(p){
     if(p.name==='Chessed.me (Online Chess)')return 'chess';
     if(p.region==='Exeter'){
-      if(p.name==="Robot Workshop – Sidmouth Science Festival")return "sidmouth-all-saints-hall";
+      if(p.name==="Robot Workshop – Sidmouth Science Festival")return "robotics-activity";
       if(p.name==="Mermaids and Monsters Writing Workshop – Topsham (8–12)")return "topsham-matthews-hall";
       if(p.name==="Family Fun Day – Norman Lockyer Observatory")return "norman-lockyer-observatory";
       if(p.name==='Exeter Quayside Farmers’ Market')return 'quay';
@@ -202,7 +203,7 @@
   function decorate(p){
     const k=photoKey(p),t=theme(p);
     const image=k?photos[k]:{image:`assets/images/${t}.webp`,imageKind:'illustration',imageAlt:descriptions[t]+'; an activity illustration, not the venue',credit:'Globee',imageReference:'AI-generated activity illustration, created for Globee. It does not depict the venue or event.',photoSource:'',photoLicence:'',photoLicenceUrl:''};
-    const clarification=k==='christmas-tree-field'?{imageLabel:'Tree reference photo',imageReference:'Tree-growing reference photographed in Ellisfield, Hampshire in 2006; NOT Cotley Farm and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:k==='thorverton'?{imageLabel:'Thorverton village',imageReference:'Thorverton village photograph from 2007; NOT Canns Farm or Exe Valley Christmas Trees and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:['dartmouth-train-of-lights','dartmouth-train-santa','south-devon-polar-express'].includes(k)?{imageLabel:'Railway photo'}:{};
+    const clarification=k==='robotics-activity'?{imageLabel:'Robot reference photo',imageReference:'Educational robotics reference photographed in 2020, not a photograph of the current event. NOT a photograph of the Sidmouth event, and not a promise that this exact robot is available there. Resized, converted to WebP and cropped by the layout. CC BY-SA 4.0.'}:k==='christmas-tree-field'?{imageLabel:'Tree reference photo',imageReference:'Tree-growing reference photographed in Ellisfield, Hampshire in 2006; NOT Cotley Farm and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:k==='thorverton'?{imageLabel:'Thorverton village',imageReference:'Thorverton village photograph from 2007; NOT Canns Farm or Exe Valley Christmas Trees and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:['dartmouth-train-of-lights','dartmouth-train-santa','south-devon-polar-express'].includes(k)?{imageLabel:'Railway photo'}:{};
     return {...p,...image,...clarification};
   }
   const api={decorate,theme};

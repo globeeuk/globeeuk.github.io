@@ -102,7 +102,7 @@ test('Every current card has a small local asset and honest image metadata',()=>
  assert.equal(images.decorate({name:'RAMM workshop',region:'Nottingham',type:'art'}).imageKind,'illustration');
 });
 test('The public image register matches every licensed local photo',()=>{
- assert.equal(imageSources.photos.length,73);
+ assert.equal(imageSources.photos.length,74);
  assert.equal(new Set(imageSources.photos.map(p=>p.key)).size,imageSources.photos.length);assert.equal(new Set(imageSources.photos.map(p=>p.image)).size,imageSources.photos.length);
  for(const p of imageSources.photos){
   const asset=path.join(__dirname,'..',p.image);assert.equal(fs.statSync(asset).size,p.bytes,p.key);assert(p.creator);assert.match(p.source,/^https:\/\/commons.wikimedia.org\/wiki\/File:/);assert.match(p.licence,/^(CC BY|CC0)/);

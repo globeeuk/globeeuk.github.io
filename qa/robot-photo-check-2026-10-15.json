@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-15T10:51:38.623Z",
+  "baseline_commit": "8399e08c0c81c8e41e0a52f6f8ad6c69e999e653",
+  "baseline": {
+    "tests": 63,
+    "failed": [
+      "Seasonal edits run through their end date, stay regional and never pad the shortlist",
+      "Every current card has a small local asset and honest image metadata",
+      "New map locations match named UK venues; multi-venue and online records remain unlocated",
+      "All public entry pages use the revised settings control and script",
+      "Halloween has an indexable dedicated page and sitemap entry"
+    ]
+  },
+  "current": {
+    "tests": 64,
+    "failed": [
+      "Seasonal edits run through their end date, stay regional and never pad the shortlist",
+      "Every current card has a small local asset and honest image metadata",
+      "New map locations match named UK venues; multi-venue and online records remain unlocated",
+      "All public entry pages use the revised settings control and script",
+      "Halloween has an indexable dedicated page and sitemap entry"
+    ]
+  },
+  "introduced_failures": [],
+  "robot": {
+    "image": "assets/images/robotics-activity.webp",
+    "label": "Robot reference photo",
+    "licence": "CC BY-SA 4.0",
+    "bytes": 64198
+  },
+  "unrelated_untracked_preserved": true,
+  "scope": "Thumbnail and source attribution only; schedules, Sheet, consent and analytics unchanged."
+}
