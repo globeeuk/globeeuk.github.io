@@ -1,0 +1,41 @@
+[
+  {
+    "key": "sidmouth-all-saints-hall",
+    "image": "assets/images/sidmouth-all-saints-hall.webp",
+    "creator": "Jaggery",
+    "source": "https://commons.wikimedia.org/wiki/File:All_Saints_church_hall,_Sidmouth_-_geograph.org.uk_-_6430818.jpg",
+    "licence": "CC BY-SA 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "date": "2018-05-20",
+    "checked": "2026-10-15",
+    "description": "All Saints church hall in Sidmouth; a venue photograph, not the 2026 Robot Workshop",
+    "bytes": 45096,
+    "changes": "Resized to 640 pixels wide and converted to WebP; card layout crops the image. The derivative retains CC BY-SA 2.0. Historical venue photo, not the 2026 event."
+  },
+  {
+    "key": "topsham-matthews-hall",
+    "image": "assets/images/topsham-matthews-hall.webp",
+    "creator": "Roger Cornfoot",
+    "source": "https://commons.wikimedia.org/wiki/File:Matthews_Hall,_Topsham_-_geograph.org.uk_-_958930.jpg",
+    "licence": "CC BY-SA 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "date": "2008-09-11",
+    "checked": "2026-10-15",
+    "description": "Matthews Hall in Topsham; a venue photograph, not the writing workshop",
+    "bytes": 68670,
+    "changes": "Resized to 640 pixels wide and converted to WebP; card layout crops the image. The derivative retains CC BY-SA 2.0. Historical venue photo, not the 2026 event."
+  },
+  {
+    "key": "norman-lockyer-observatory",
+    "image": "assets/images/norman-lockyer-observatory.webp",
+    "creator": "Paul Lang",
+    "source": "https://commons.wikimedia.org/wiki/File:Norman_Lockyer_Observatory_228.jpg",
+    "licence": "CC BY-SA 3.0",
+    "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "date": "2007",
+    "checked": "2026-10-15",
+    "description": "The Norman Lockyer Observatory and James Lockyer Planetarium in Sidmouth; a venue photograph, not the 2026 family event",
+    "bytes": 17716,
+    "changes": "Resized to 640 pixels wide and converted to WebP; card layout crops the image. The derivative retains CC BY-SA 3.0. Historical venue photo, not the 2026 event."
+  }
+]

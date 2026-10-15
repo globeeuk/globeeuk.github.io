@@ -113,3 +113,28 @@ Object.assign(window.GLOBEE_EDITORIAL.annotations,{
     "note": "Checked 13 October 2026. Dates calculated from current council third-Saturday rule. Visitor admission TBC."
   }
 });
+
+// Weekend discoveries: official programme checked 15 October; map points are venue references.
+Object.assign(window.GLOBEE_EDITORIAL.annotations,{
+  'Robot Workshop – Sidmouth Science Festival':{
+    category:'Robotics & science',ageLabel:'Age guidance TBC',
+    coords:[50.682087,-3.23959677],
+    mapSource:'https://commons.wikimedia.org/wiki/File:All_Saints_church_hall,_Sidmouth_-_geograph.org.uk_-_6430818.jpg',mapChecked:'2026-10-15',
+    note:'Checked 15 October 2026. Free hands-on robotics; no booking required. Activities vary by age. Map pin is a hall-area reference, not a precise entrance. Capacity and waiting times are not published.'
+  },
+  'Mermaids and Monsters Writing Workshop – Topsham (8–12)':{
+    category:'Writing workshop',coords:[50.6845472,-3.4660694],
+    mapSource:'https://commons.wikimedia.org/wiki/Category:Matthews_Hall,_Topsham',mapChecked:'2026-10-15',
+    note:'Schedule and ages checked against the organiser’s indexed 2026 Eventbrite listing on 15 October. Direct ticket page was rate-limited; price, remaining places and accompanying-adult arrangements TBC. Confirm before travelling.'
+  },
+  'Family Fun Day – Norman Lockyer Observatory':{
+    category:'Space & science',ageLabel:'Family event · check sessions',coords:[50.6877778,-3.2186111],
+    mapSource:'https://normanlockyer.com/visitor-information/finding-us/',mapChecked:'2026-10-15',
+    note:'Checked 15 October 2026. Daytime science activities, not a night-sky observing session. Advance booking advised; free timed planetarium tickets collected on arrival. Jet-car kits £15 extra. Outdoor activities are weather-dependent; total capacity and live ticket availability are unconfirmed.'
+  },
+  'Arietty (U) – Exeter Phoenix':{
+    category:'Film',ageLabel:'U certificate',coords:[50.72525,-3.5314],
+    mapSource:'https://exeterphoenix.org.uk/visit/',mapChecked:'2026-10-15',
+    note:'Checked 15 October 2026. English-dubbed screening, 94 minutes. Saturday 17 October at 1pm and 3.30pm; Monday 19 October at 5pm. £9 standard, £7 members, £5 students/under-25s; stated £1.50 ticketing-system charge. Check the checkout total and remaining seats.'
+  }
+});

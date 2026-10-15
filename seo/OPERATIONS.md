@@ -117,6 +117,14 @@ The user requested purchase places and prices on the existing tree guide. Cotley
 
 Exe Valley explicitly labels its price list 2026. Cotley’s price table has no season label. Haldon publishes 2026 opening dates and prices by minimum height. Greendale’s product collection dates omit a year, so its 2026 availability/prices remain TBC despite visible pre-order pages. Do not silently promote these caveats to confirmed stock, rental coverage or booking availability. No indexing or traffic result is inferred from publication.
 
+## Weekend discovery completion gate — 15 October 2026
+
+The user explicitly authorised ongoing registration and homepage updates for selected, officially checked Exeter/Devon and Bristol Weekend Edit discoveries. A recommendation table or social draft alone is not completion. Prefer varied experiences (science, creative workshops, culture and free activities), not only familiar large attractions; never fill a numerical quota with weak evidence.
+
+Before marking a selected edit ready: reconcile exact names/regions in the native master and events tabs; add missing records and only officially supported dates; preserve historical rows; read back the native cells and complete published CSV; refresh the complete directory snapshot; retain real licensed venue photography where available; run the existing live-binding and staging checks; deploy; then verify the public homepage directory, map reference where verified, and matching Weekend Edit URL. This authorisation covers these bounded event-data/photo integrations, not analytics/privacy changes or new regions. Unconfirmed fees, suitability, capacity and live ticket availability remain explicitly TBC. If a source or deployment blocks completion, distinguish recommendation, DB registration, deployment and Instagram preparation/publication states. File existence never proves an Instagram post.
+
+The 15 October selection is Robot Workshop, Mermaids and Monsters writing, Arrietty and Norman Lockyer Family Fun Day for 17–18 October. Darts Farm/Crealy remain in the directory and next-weekend guide; their omission from the current editorial selection is curation, not cancellation. Eventbrite direct retrieval was rate-limited; only its organiser-authored indexed schedule/age/venue was supported, with price/places/adult arrangements TBC. Do not bypass rate limits or promote placeholder prices to verified admission.
+
 ## Search Console and measurement
 
 On **13 September 2026**, ownership of `https://globeeuk.github.io/` was verified in the owner's Search Console account using the homepage HTML tag. Preserve that tag. The combined `https://globeeuk.github.io/sitemap.xml` was submitted, and the hub plus all three guides were individually accepted into the priority crawl queue through Request indexing. These actions do not prove actual indexing.

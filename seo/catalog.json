@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-10-12",
+  "source_verified_at": "2026-10-15",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -2026,34 +2026,6 @@
       "schedule_text": "Selected 2026 dates include 17–18 and 24–25 October, 10am–4.30pm; last entry 3pm. A further run is listed for 26–31 October.",
       "occurrences": [
         {
-          "start": "2026-10-10",
-          "end": "2026-10-10",
-          "start_time": "10:00",
-          "end_time": "16:30",
-          "weekday": "Saturday"
-        },
-        {
-          "start": "2026-10-11",
-          "end": "2026-10-11",
-          "start_time": "10:00",
-          "end_time": "16:30",
-          "weekday": "Sunday"
-        },
-        {
-          "start": "2026-10-17",
-          "end": "2026-10-17",
-          "start_time": "10:00",
-          "end_time": "16:30",
-          "weekday": "Saturday"
-        },
-        {
-          "start": "2026-10-18",
-          "end": "2026-10-18",
-          "start_time": "10:00",
-          "end_time": "16:30",
-          "weekday": "Sunday"
-        },
-        {
           "start": "2026-10-24",
           "end": "2026-10-24",
           "start_time": "10:00",
@@ -2147,34 +2119,6 @@
       "schedule_text": "17–18 and 24–31 October 2026, 10am–5pm on listed dates.",
       "occurrences": [
         {
-          "start": "2026-10-10",
-          "end": "2026-10-10",
-          "start_time": "10:00",
-          "end_time": "17:00",
-          "weekday": "Saturday"
-        },
-        {
-          "start": "2026-10-11",
-          "end": "2026-10-11",
-          "start_time": "10:00",
-          "end_time": "17:00",
-          "weekday": "Sunday"
-        },
-        {
-          "start": "2026-10-17",
-          "end": "2026-10-17",
-          "start_time": "10:00",
-          "end_time": "17:00",
-          "weekday": "Saturday"
-        },
-        {
-          "start": "2026-10-18",
-          "end": "2026-10-18",
-          "start_time": "10:00",
-          "end_time": "17:00",
-          "weekday": "Sunday"
-        },
-        {
           "start": "2026-10-24",
           "end": "2026-10-24",
           "start_time": "10:00",
@@ -2249,6 +2193,307 @@
         "Individual attractions have their own age and height rules.",
         "The final October run begins on 24 October."
       ]
+    },
+    {
+      "id": "sidmouth-robot-workshop-2026",
+      "name": "Robot Workshop – Sidmouth Science Festival",
+      "description": "A free hands-on robotics day with remote-control activities, Lego-compatible robot cars and stop-motion filming demonstrations. Saturday 17 October 2026, 11am–4pm. No booking required; donations welcome. Numerical age limits and maximum capacity are not published.",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Sidmouth, near Exeter",
+      "address": "All Saints Church Hall, All Saints Road, Sidmouth EX10 8ES",
+      "age_text": "Activities for different ages; no numerical minimum is stated. Children need adult supervision.",
+      "price_text": "Free; donations welcome",
+      "price_type": "free",
+      "booking_text": "No advance booking required. Maximum capacity and live waiting times are not published.",
+      "schedule_text": "Saturday 2026-10-17, 11:00–16:00.",
+      "occurrences": [
+        {
+          "start": "2026-10-17",
+          "end": "2026-10-17",
+          "start_time": "11:00",
+          "end_time": "16:00"
+        }
+      ],
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "The named indoor hall is the published event venue.",
+        "classification": "indoor"
+      },
+      "tags": [
+        "weekend",
+        "science"
+      ],
+      "practical_notes": [
+        "Activities vary in complexity; not every activity suits every age.",
+        "No guaranteed immediate entry or published numerical capacity."
+      ],
+      "sources": [
+        {
+          "url": "https://www.sidmouthsciencefestival.org/events/robot-workshop",
+          "supports": "Official organiser event body and current festival programme read on 15 October 2026. Date, weekday, 11am–4pm, All Saints Church Hall, free admission and no-booking statement confirmed. No live occupancy check.",
+          "retrieval": "Official organiser event body and current festival programme read on 15 October 2026. Date, weekday, 11am–4pm, All Saints Church Hall, free admission and no-booking statement confirmed. No live occupancy check."
+        }
+      ],
+      "verified_at": "2026-10-15",
+      "review_status": "verified_with_explicit_limitations",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 255,
+        "event_rows": [
+          515
+        ],
+        "checked_at": "2026-10-15T09:54:55+00:00",
+        "reconciliation_note": "Native Sheet append and formatted readback confirmed; complete public CSV matched before binding."
+      },
+      "limitations": [
+        "Activities vary in complexity; not every activity suits every age.",
+        "No guaranteed immediate entry or published numerical capacity."
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "b323ae221c87abeef5633220",
+          "name": "Robot Workshop – Sidmouth Science Festival",
+          "region": "Devon",
+          "fingerprint": "cb8e0b76924c4467da2a37aae7ba58d1434ea1ceb1e75327804f11c4785ae73b"
+        }
+      ],
+      "city": "",
+      "notes": [
+        "Activities vary in complexity; not every activity suits every age.",
+        "No guaranteed immediate entry or published numerical capacity."
+      ],
+      "free_basis": "Free; donations welcome",
+      "indoor_basis": "The named indoor hall is the published event venue."
+    },
+    {
+      "id": "topsham-mermaids-monsters-writing-2026",
+      "name": "Mermaids and Monsters Writing Workshop – Topsham (8–12)",
+      "description": "An hour of creative writing with children's author Becca Rogers at Matthews Hall, Topsham, for ages 8–12. Sunday 18 October 2026, 11am–noon. Date, age and venue are supported by the organiser's indexed Eventbrite listing and 2026 festival collection. Current price, places and accompanying-adult arrangements remain TBC; confirm before travelling.",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Topsham, Exeter",
+      "address": "Matthews Hall, Fore Street, Topsham, Exeter EX3 0HF",
+      "age_text": "Children aged 8–12. Accompanying-adult arrangements TBC.",
+      "price_text": "TBC — check organiser ticket options",
+      "price_type": "unknown",
+      "booking_text": "Use the organiser's Eventbrite listing to check tickets. Current price, remaining places and adult attendance conditions are TBC; the direct page was rate-limited during review.",
+      "schedule_text": "Sunday 2026-10-18, 11:00–12:00.",
+      "occurrences": [
+        {
+          "start": "2026-10-18",
+          "end": "2026-10-18",
+          "start_time": "11:00",
+          "end_time": "12:00"
+        }
+      ],
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "The named indoor hall is the published event venue.",
+        "classification": "indoor"
+      },
+      "tags": [
+        "weekend",
+        "writing"
+      ],
+      "practical_notes": [
+        "Do not interpret a collection's zero-price placeholder as a free workshop.",
+        "Direct Eventbrite page retrieval returned 429; indexed organiser content supports the schedule, not live availability."
+      ],
+      "sources": [
+        {
+          "url": "https://www.eventbrite.co.uk/e/mermaids-and-monsters-writing-workshop-for-children-aged-8-12-tickets-2003122474243",
+          "supports": "Organiser-authored Eventbrite search result and 2026 collection read on 15 October. Both identify Sunday 18 October, 11am–noon, Becca Rogers, Matthews Hall and ages 8–12. Direct retrieval returned 429, so current price/places/adult rules remain unverified. No aggregator price used.",
+          "retrieval": "Organiser-authored Eventbrite search result and 2026 collection read on 15 October. Both identify Sunday 18 October, 11am–noon, Becca Rogers, Matthews Hall and ages 8–12. Direct retrieval returned 429, so current price/places/adult rules remain unverified. No aggregator price used."
+        },
+        {
+          "url": "https://www.eventbrite.co.uk/cc/the-topsham-ink-paper-and-print-festival-2026-4882358/",
+          "supports": "Organiser-authored Eventbrite search result and 2026 collection read on 15 October. Both identify Sunday 18 October, 11am–noon, Becca Rogers, Matthews Hall and ages 8–12. Direct retrieval returned 429, so current price/places/adult rules remain unverified. No aggregator price used."
+        }
+      ],
+      "verified_at": "2026-10-15",
+      "review_status": "verified_with_explicit_limitations",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 256,
+        "event_rows": [
+          516
+        ],
+        "checked_at": "2026-10-15T09:54:55+00:00",
+        "reconciliation_note": "Native Sheet append and formatted readback confirmed; complete public CSV matched before binding."
+      },
+      "limitations": [
+        "Do not interpret a collection's zero-price placeholder as a free workshop.",
+        "Direct Eventbrite page retrieval returned 429; indexed organiser content supports the schedule, not live availability."
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "938c4f55cf6bc3b14a16d2b9",
+          "name": "Mermaids and Monsters Writing Workshop – Topsham (8–12)",
+          "region": "Devon",
+          "fingerprint": "0f4c8ac6da9a1af72472f86ecfc10b6d569da75da447d756d6559b1010ab3140"
+        }
+      ],
+      "city": "",
+      "notes": [
+        "Do not interpret a collection's zero-price placeholder as a free workshop.",
+        "Direct Eventbrite page retrieval returned 429; indexed organiser content supports the schedule, not live availability."
+      ],
+      "indoor_basis": "The named indoor hall is the published event venue."
+    },
+    {
+      "id": "norman-lockyer-family-fun-day-2026",
+      "name": "Family Fun Day – Norman Lockyer Observatory",
+      "description": "A daytime family science event with rockets, planetarium shows, VR and hands-on space activities. Sunday 18 October 2026, 11am–4pm; doors 10.30am. Adults £15; ages 0–17 free with an adult. Jet-car kits £15 extra. Advance booking recommended; collect free timed planetarium tickets on arrival. Total event capacity and live ticket availability are unconfirmed.",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Sidmouth, near Exeter",
+      "address": "Norman Lockyer Observatory, Salcombe Hill Road, Sidmouth EX10 0NY",
+      "age_text": "Family event. All children must be accompanied. Some talks suit older children; planetarium sessions have individual guidance.",
+      "price_text": "Adults £15; ages 0–17 free; jet-car kits £15 extra",
+      "price_type": "paid",
+      "booking_text": "Advance booking recommended; door tickets advertised. Online booking closes 8am on 18 October. Collect a separate free timed planetarium ticket at the welcome desk; entry does not guarantee a particular session.",
+      "schedule_text": "Sunday 2026-10-18, 11:00–16:00.",
+      "occurrences": [
+        {
+          "start": "2026-10-18",
+          "end": "2026-10-18",
+          "start_time": "11:00",
+          "end_time": "16:00"
+        }
+      ],
+      "indoor": null,
+      "rainy_day": {
+        "suitable": null,
+        "basis": "Programme uses buildings, marquees and outdoor areas; not a wholly indoor day.",
+        "classification": "mixed"
+      },
+      "tags": [
+        "weekend",
+        "science"
+      ],
+      "practical_notes": [
+        "Activities use buildings, marquees and outdoor areas. Outdoor footwear and an extra layer are advised.",
+        "Planetarium sessions: 11.15, noon, 1pm, 2.15pm and 3.15pm. The 1pm Astronomy for Kids session is listed for all ages.",
+        "Jet-car kits cost £15; races at 3pm are weather-dependent. No numerical total capacity is published."
+      ],
+      "sources": [
+        {
+          "url": "https://www.sidmouthsciencefestival.org/events/family-fun-day-at-the-norman-lockyer-observatory",
+          "supports": "Official event and Plan Your Visit bodies read on 15 October. Explicit 2026 Sunday date, event hours/doors, adult/child prices, extra jet-car cost, timed planetarium booking and practical conditions confirmed. No live checkout inventory verified.",
+          "retrieval": "Official event and Plan Your Visit bodies read on 15 October. Explicit 2026 Sunday date, event hours/doors, adult/child prices, extra jet-car cost, timed planetarium booking and practical conditions confirmed. No live checkout inventory verified."
+        },
+        {
+          "url": "https://www.sidmouthsciencefestival.org/nlo-plan-your-visit",
+          "supports": "Official event and Plan Your Visit bodies read on 15 October. Explicit 2026 Sunday date, event hours/doors, adult/child prices, extra jet-car cost, timed planetarium booking and practical conditions confirmed. No live checkout inventory verified."
+        }
+      ],
+      "verified_at": "2026-10-15",
+      "review_status": "verified_with_explicit_limitations",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 257,
+        "event_rows": [
+          517
+        ],
+        "checked_at": "2026-10-15T09:54:55+00:00",
+        "reconciliation_note": "Native Sheet append and formatted readback confirmed; complete public CSV matched before binding."
+      },
+      "limitations": [
+        "Activities use buildings, marquees and outdoor areas. Outdoor footwear and an extra layer are advised.",
+        "Planetarium sessions: 11.15, noon, 1pm, 2.15pm and 3.15pm. The 1pm Astronomy for Kids session is listed for all ages.",
+        "Jet-car kits cost £15; races at 3pm are weather-dependent. No numerical total capacity is published."
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "7c75d30d5279ef366a83ae69",
+          "name": "Family Fun Day – Norman Lockyer Observatory",
+          "region": "Devon",
+          "fingerprint": "a613b44f8aa091f27280c7a8f35da2bb3d9cbbd8d9e8f12c936b31957b790433"
+        }
+      ],
+      "city": "",
+      "notes": [
+        "Activities use buildings, marquees and outdoor areas. Outdoor footwear and an extra layer are advised.",
+        "Planetarium sessions: 11.15, noon, 1pm, 2.15pm and 3.15pm. The 1pm Astronomy for Kids session is listed for all ages.",
+        "Jet-car kits cost £15; races at 3pm are weather-dependent. No numerical total capacity is published."
+      ]
+    },
+    {
+      "id": "arrietty-exeter-phoenix-october-2026",
+      "name": "Arrietty (U) – Exeter Phoenix",
+      "description": "An English-dubbed Studio Ghibli cinema outing at Studio 74. The film follows a tiny family living beneath the floorboards.",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Exeter",
+      "address": "Studio 74, Exeter Phoenix, Gandy Street, Exeter EX4 3LS",
+      "age_text": "U certificate. No numerical recommended age is stated.",
+      "price_text": "£9 standard; £7 members; £5 students and under-25s. A £1.50 ticketing-system charge is stated; confirm the total at checkout.",
+      "price_type": "paid",
+      "booking_text": "Book with Exeter Phoenix. Live ticket availability has not been checked.",
+      "schedule_text": "Saturday 17 October: 13:00 and 15:30. Monday 19 October: 17:00. Running time 94 minutes.",
+      "occurrences": [
+        {
+          "start": "2026-10-17",
+          "end": "2026-10-17",
+          "start_time": "13:00"
+        },
+        {
+          "start": "2026-10-17",
+          "end": "2026-10-17",
+          "start_time": "15:30"
+        },
+        {
+          "start": "2026-10-19",
+          "end": "2026-10-19",
+          "start_time": "17:00"
+        }
+      ],
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "Indoor screening in Studio 74 at Exeter Phoenix.",
+        "classification": "indoor"
+      },
+      "tags": [
+        "weekend",
+        "film"
+      ],
+      "practical_notes": [
+        "English-dubbed screening. Check availability and fees before booking."
+      ],
+      "sources": [
+        {
+          "url": "https://exeterphoenix.org.uk/events/arietty/",
+          "supports": "Official Exeter Phoenix event body reviewed 15 October 2026: Saturday 17 October 13:00/15:30, Monday 19 October 17:00; English dub, U, 94 minutes; £9/£7/£5 and stated £1.50 ticketing-system charge. No live ticket inventory checked."
+        }
+      ],
+      "verified_at": "2026-10-15",
+      "review_status": "verified",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 172,
+        "checked_at": "2026-10-15T09:54:55+00:00",
+        "reconciliation_note": "Retains existing master spelling Arietty and existing dated rows; no duplicate created."
+      },
+      "limitations": [
+        "Live ticket availability unconfirmed."
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "1619da9904c74dcb3d034d6f",
+          "name": "Arietty (U) – Exeter Phoenix",
+          "region": "Devon",
+          "fingerprint": "9cffe9e375a6faab021c7ca73762435ac9a3a1f34cb20d288c6e23427deb8555"
+        }
+      ],
+      "city": "Exeter",
+      "notes": [
+        "English-dubbed screening. Check availability and fees before booking."
+      ],
+      "indoor_basis": "Indoor screening in Studio 74 at Exeter Phoenix."
     }
   ]
 }

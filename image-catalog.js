@@ -2,6 +2,9 @@
 (function(root){
   'use strict';
   const photoRows=[
+    ["sidmouth-all-saints-hall","Jaggery","https://commons.wikimedia.org/wiki/File:All_Saints_church_hall,_Sidmouth_-_geograph.org.uk_-_6430818.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2018-05-20","venue","All Saints church hall in Sidmouth; a venue photograph, not the 2026 Robot Workshop"],
+    ["topsham-matthews-hall","Roger Cornfoot","https://commons.wikimedia.org/wiki/File:Matthews_Hall,_Topsham_-_geograph.org.uk_-_958930.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2008-09-11","venue","Matthews Hall in Topsham; a venue photograph, not the writing workshop"],
+    ["norman-lockyer-observatory","Paul Lang","https://commons.wikimedia.org/wiki/File:Norman_Lockyer_Observatory_228.jpg","CC BY-SA 3.0","http://creativecommons.org/licenses/by-sa/3.0/","2007","venue","The Norman Lockyer Observatory and James Lockyer Planetarium in Sidmouth; a venue photograph, not the 2026 family event"],
     ['crediton-market-square','Lewis Clarke','https://commons.wikimedia.org/wiki/File:Crediton_,_Town_Square_-_geograph.org.uk_-_4752956.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2015','location','Crediton Town Square; not the current farmers’ market'],
     ['cullompton-walronds','Lewis Clarke','https://commons.wikimedia.org/wiki/File:Cullompton_,_The_Walronds_-_geograph.org.uk_-_7316157.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2022','location','The Walronds in Cullompton; a town reference, not confirmation of the current market site'],
     ['whiteladies-road','Bill Boaden','https://commons.wikimedia.org/wiki/File:Whiteladies_Road_-_geograph.org.uk_-_5478932.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2017','location','Whiteladies Road in Bristol; not the market stalls'],
@@ -90,6 +93,9 @@
   function photoKey(p){
     if(p.name==='Chessed.me (Online Chess)')return 'chess';
     if(p.region==='Exeter'){
+      if(p.name==="Robot Workshop – Sidmouth Science Festival")return "sidmouth-all-saints-hall";
+      if(p.name==="Mermaids and Monsters Writing Workshop – Topsham (8–12)")return "topsham-matthews-hall";
+      if(p.name==="Family Fun Day – Norman Lockyer Observatory")return "norman-lockyer-observatory";
       if(p.name==='Exeter Quayside Farmers’ Market')return 'quay';
       if(p.name==='Crediton Farmers’ Market')return 'crediton-market-square';
       if(p.name==='Cullompton Farmers’ Market')return 'cullompton-walronds';
