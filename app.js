@@ -21,7 +21,18 @@ const availableTypes=isPlansPage?types.filter(([id])=>!['ice','fossil'].includes
 let currentMenu=null,map=null,markers=[],selectedId=null,listScroll=0;
 let mapPlaces=[],mapSelectionContext=null,mapSelectionDismissed=false;
 const spotKey=p=>p.coords?.map(n=>Number(n).toFixed(4)).join(',');
-let data=(window.GLOBEE_PLACES||[]).map(GlobeeImages.decorate);
+// Editorial stopgap for verified Bristol clubs missing from the published Sheet.
+// Keep these separate from the Sheet source and deduplicate when a provider is added there.
+const VERIFIED_HALF_TERM_CLUBS=[
+  {id:'verified-bristol-schools-out-henleaze-2026',name:'School’s Out Henleaze – October Holiday Club',region:'Bristol',type:'club',kind:'club',category:'Holiday club',description:'Autumn crafts, outdoor play, sports and games. Full or half days, 26–30 October; booking required.',address:'Henleaze Infant School, Park Grove, Bristol BS9 4LG',source:'https://www.schoolsouthenleaze.co.uk/holiday-club-programme',priceType:'paid',priceLabel:'£32.50 full day · £20 half day',ages:[4,11],ageLabel:'4–11 years',datePeriods:[{start:'2026-10-26',end:'2026-10-30'}],endDate:'2026-10-30',scheduleText:'26–30 Oct 2026 · full day 8.15am–5.30pm; half-day options',note:'£12 annual registration fee applies. Booking is open; check places with the organiser.',checked:'17 October 2026',coords:null,collections:[]},
+  {id:'verified-bristol-fun-science-2026',name:'Fun Science Bristol – October Holiday Club',region:'Bristol',type:'club',kind:'club',category:'Holiday club',description:'Three science days with biology, chemistry and physics activities, 27–29 October, 10am–3pm. Booking required.',address:'Scout Hut 6388, St Bartholomew’s Road, Bishopston, Bristol BS7 9BJ',source:'https://www.fun-science.org.uk/event/bristol-october-half-term-holiday-club-2026/',priceType:'paid',priceLabel:'£34 per day · £90 for three days',ages:[4,10],ageLabel:'4–10 years',datePeriods:[{start:'2026-10-27',end:'2026-10-29'}],endDate:'2026-10-29',scheduleText:'27–29 Oct 2026 · 10am–3pm; optional extra hours',note:'Sibling prices and optional stay-and-play hours are listed by the organiser. Check availability before booking.',checked:'17 October 2026',coords:null,collections:[]}
+];
+function withVerifiedHalfTermClubs(places){
+  const known=new Set(places.map(p=>`${p.region}|${p.name.toLowerCase().replace(/[^a-z0-9]+/g,'')}`));
+  const sources=new Set(places.map(p=>p.source).filter(Boolean));
+  return [...places,...VERIFIED_HALF_TERM_CLUBS.filter(p=>!known.has(`${p.region}|${p.name.toLowerCase().replace(/[^a-z0-9]+/g,'')}`)&&!sources.has(p.source))];
+}
+let data=withVerifiedHalfTermClubs(window.GLOBEE_PLACES||[]).map(GlobeeImages.decorate);
 const TODAY=window.GLOBEE_TODAY||new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 const utcDate=s=>new Date(s+'T12:00:00Z');
 const isoDate=d=>d.toISOString().slice(0,10);
@@ -130,7 +141,12 @@ function renderWeekend(){
   if(seasonal){
     const region=encodeURIComponent(state.region==='Exeter'?'Devon':state.region);
     const allLink=seasonal.page?`${seasonal.page}?region=${region}`:`plans.html?region=${region}&edit=${encodeURIComponent(seasonal.id)}`;
-    if(seasonal.picks.length)sections.push(rail(`${seasonal.id}-picks`,seasonal.title,seasonal.homeEnd?seasonal.subtitle:`${seasonal.subtitle} · Until ${dateShort(seasonal.end)}`,seasonal.picks,allLink,`View all (${seasonal.total})`));
+    if(seasonal.id==='half-term'){
+      const clubs=GlobeeDiscovery.seasonalPlaces(regional,TODAY,'half-term').filter(p=>p.kind==='club');
+      sections.push(rail('half-term-clubs','Half-term holiday clubs','Confirmed dates and official booking links',clubs.slice(0,5),`${allLink}&type=club`,`View all clubs (${clubs.length})`));
+    }
+    const seasonalPicks=seasonal.id==='half-term'?seasonal.picks.filter(p=>p.kind!=='club'):seasonal.picks;
+    if(seasonalPicks.length)sections.push(rail(`${seasonal.id}-picks`,seasonal.id==='half-term'?'October half-term days out & shows':seasonal.title,seasonal.homeEnd?seasonal.subtitle:`${seasonal.subtitle} · Until ${dateShort(seasonal.end)}`,seasonalPicks,allLink,`View all (${seasonal.total})`));
     else sections.push(`<section class="seasonal-pending" aria-labelledby="seasonal-pending-heading"><h2 id="seasonal-pending-heading">${escapeHTML(seasonal.title)}</h2><p>We’re checking festive family plans in ${escapeHTML(REGION_LABELS[state.region])}. Dates and booking details will appear here once confirmed.</p></section>`);
   }
   if(bookAhead){
@@ -148,7 +164,11 @@ function renderWeekend(){
 }
 function rail(id,title,subtitle,places,allLink='',allLabel='View all'){if(!places.length)return '';return `<section class="discovery-row" aria-labelledby="${id}-heading"><div class="rail-heading"><div><h2 id="${id}-heading">${escapeHTML(title)}</h2><p>${escapeHTML(subtitle)}</p></div><div class="rail-tools"><span>${places.length} ${places.length===1?'pick':'picks'}</span>${allLink?`<a class="view-all-link" href="${escapeHTML(allLink)}" aria-label="${escapeHTML(allLabel)} ${escapeHTML(title)}">${escapeHTML(allLabel)}${icon('arrow')}</a>`:''}<button class="rail-nav previous" data-rail="${id}" data-direction="-1" aria-label="Previous ${escapeHTML(title)} places">${icon('arrow')}</button><button class="rail-nav" data-rail="${id}" data-direction="1" aria-label="Next ${escapeHTML(title)} places">${icon('arrow')}</button></div></div><div id="${id}" class="place-rail" aria-label="${escapeHTML(title)}">${places.map(card).join('')}</div></section>`;}
 function renderRails(places){
-  $('#discovery-rails').innerHTML=places.length?`<div class="plans-grid" aria-label="${isPlansPage?'All matching events and holiday clubs':'All matching places, events and holiday clubs'}">${places.map(card).join('')}</div>`:'';
+  if(isPlansPage&&state.edit==='half-term'&&places.length){
+    const clubs=places.filter(p=>p.kind==='club'),outings=places.filter(p=>p.kind!=='club');
+    const group=(id,title,description,items)=>items.length?`<section class="half-term-results-group" aria-labelledby="${id}"><div class="half-term-results-heading"><h3 id="${id}">${title}</h3><p>${description} · ${items.length} ${items.length===1?'plan':'plans'}</p></div><div class="plans-grid" aria-label="${title}">${items.map(card).join('')}</div></section>`:'';
+    $('#discovery-rails').innerHTML=group('half-term-clubs-heading','Holiday clubs','For school-break days',clubs)+group('half-term-outings-heading','Days out & shows','For time together',outings);
+  }else $('#discovery-rails').innerHTML=places.length?`<div class="plans-grid" aria-label="${isPlansPage?'All matching events and holiday clubs':'All matching places, events and holiday clubs'}">${places.map(card).join('')}</div>`:'';
   fixImages($('#discovery-rails'));
 }
 function renderBristolGrowthNote(){
@@ -206,7 +226,7 @@ function render(){
   const activeEdit=state.edit?GlobeeDiscovery.seasonalDefinition(state.edit,TODAY):null;
   if($('#plans-page-title')){
     $('#plans-page-title').textContent=activeEdit?activeEdit.title:'What’s on & holiday clubs';
-    $('.plans-intro-copy').textContent=activeEdit?.id==='christmas-book-ahead'?'Family Christmas events with published 2026 dates and booking links. Check availability with the organiser.':activeEdit?.id==='half-term'?'Days out, shows and holiday clubs with published dates for the October school break. Check details with each organiser.':activeEdit?'Every verified seasonal plan, together in one list.':'Browse upcoming events and holiday clubs in one place.';
+    $('.plans-intro-copy').textContent=activeEdit?.id==='christmas-book-ahead'?'Family Christmas events with published 2026 dates and booking links. Check availability with the organiser.':activeEdit?.id==='half-term'?'Holiday clubs, days out and shows with confirmed dates for the October school break. Check places, times and prices with each organiser.':activeEdit?'Every verified seasonal plan, together in one list.':'Browse upcoming events and holiday clubs in one place.';
     document.title=activeEdit?`${activeEdit.title} in ${state.region==='Exeter'?'Exeter & Devon':state.region} | Globee`:'What’s on & holiday clubs | Globee';
   }
   if($('.weekend-shortcut'))$('.weekend-shortcut').hidden=!!activeEdit;
@@ -217,7 +237,6 @@ function render(){
     const active=!!GlobeeDiscovery.seasonalDefinition('half-term',TODAY);
     halfTermEntry.hidden=!active;
     halfTermEntry.href=`plans.html?region=${encodeURIComponent(state.region==='Exeter'?'Devon':state.region)}&edit=half-term`;
-    halfTermEntry.querySelector('.half-term-region').textContent=REGION_LABELS[state.region];
     if(scoopPromo)scoopPromo.hidden=active;
     if(winterMapLink)winterMapLink.hidden=!active||state.region==='Nottingham';
     halfTermEntry.closest('.entry-cards').classList.toggle('entry-cards-winter',active);
@@ -232,8 +251,8 @@ function render(){
   $('#date-scope-note').hidden=!state.dates;
   $('#date-scope-note').textContent=isPlansPage?'Showing events and clubs with confirmed dates. Clear Dates to include clubs with dates TBC.':'Showing date-confirmed events. Clear Dates to include cafés, regular places and activities with dates TBC.';
   renderWeekend();
-  if(state.view==='list'&&filterSignature!==lastListSignature){if(weekendOnlyPilot)renderBristolGrowthNote();else renderRails(places.slice(0,visibleCount));lastListSignature=filterSignature;}
-  renderLoadMore(weekendOnlyPilot?0:places.length);
+  if(state.view==='list'&&filterSignature!==lastListSignature){if(weekendOnlyPilot)renderBristolGrowthNote();else renderRails(state.edit==='half-term'&&isPlansPage?places:places.slice(0,visibleCount));lastListSignature=filterSignature;}
+  renderLoadMore(weekendOnlyPilot||state.edit==='half-term'&&isPlansPage?0:places.length);
   $('#empty-state').hidden=places.length>0;
   const chips=[];
   if(activeEdit&&!dedicatedEdit)chips.push(['edit',activeEdit.title]);
@@ -442,6 +461,6 @@ $('#view-toggle').addEventListener('click',()=>{
   if(!toMap)window.scrollTo({top:listScroll,behavior:'instant'});
   if(toMap&&map)requestAnimationFrame(()=>map.invalidateSize());
 });
-window.addEventListener('globee:data',event=>{data=event.detail.places.map(GlobeeImages.decorate);lastListSignature='';lastPrimaryPlansKey=null;render();if(currentMenu==='dates')renderCalendar();});
+window.addEventListener('globee:data',event=>{data=withVerifiedHalfTermClubs(event.detail.places).map(GlobeeImages.decorate);lastListSignature='';lastPrimaryPlansKey=null;render();if(currentMenu==='dates')renderCalendar();});
 render();
 if(routeParams.get('view')==='map')$('#view-toggle').click();

@@ -11,7 +11,7 @@
   ];
   const HALF_TERM_FEATURED={
     Exeter:['The Truth About Trees – Exeter Phoenix','Brickfilm: Lego Animation – Exeter Phoenix','Tubers Academy Holiday Club – Exeter','Pennywell Pumpkin Festival','Mushroom Magic – Build a Woodland Dwelling – RAMM'],
-    Bristol:['Autumn Week at Blaise Museum','The Great Bristol Ball Run','Mini-museum hunt! 50 years of Aardman','Pumpkin Patch – Avon Valley','Spooky Week at The Red Lodge Museum'],
+    Bristol:['School’s Out Henleaze – October Holiday Club','Fun Science Bristol – October Holiday Club','Autumn Week at Blaise Museum','The Great Bristol Ball Run','Mini-museum hunt! 50 years of Aardman'],
     Nottingham:['October Half Term at Clumber Park','How To Train Your Dragon 2 – Film with Live Orchestra','October Half Term Family Activities – Nottingham Contemporary',"Let's Leap - Nottingham High School",'‘Creepy Crawlies’ Outdoor Trail – Wollaton Park']
   };
   function halfTermWindow(region){return {start:region==='Nottingham'?'2026-10-17':'2026-10-24',end:'2026-11-01'};}

@@ -14,35 +14,37 @@
 .entry-cards .entry-card h2{font-size:23px;line-height:1.1;letter-spacing:-.6px;margin:0}
 .entry-cards .entry-card p{font-size:12px;line-height:1.45;margin:0;padding:0}
 .entry-cards .entry-action{margin-top:9px}
-.entry-cards .entry-card-half-term{padding:16px 18px;flex-direction:row;align-items:center;gap:10px;border-color:#cfbaa0;background:#fbf4e8;color:#3e4032}
-.entry-card-half-term::before{content:'';position:absolute;inset:5px;border:1px solid #dfcfb8;border-radius:12px;pointer-events:none}
+.entry-cards .entry-card-half-term{padding:14px 17px;flex-direction:row;align-items:center;gap:7px;border-color:#dfc6a6;background:#fff8e9;color:#2d4339}
+.entry-card-half-term::before{content:'';position:absolute;inset:5px;border:1px solid #dfbe94;border-radius:11px;pointer-events:none}
 .half-term-copy{position:relative;z-index:1;min-width:0}
-.half-term-edition{display:block;color:#946238;font-size:10px;font-weight:800;letter-spacing:1.1px;margin-bottom:7px}
-.entry-cards .entry-card-half-term h2{font:700 27px/.98 Georgia,serif;letter-spacing:-.8px;margin:0 0 10px}
-.entry-cards .entry-card-half-term .entry-action{display:inline-flex;align-items:center;gap:7px;font-size:12px;margin:0}
-.half-term-art{position:relative;display:grid;place-items:center;width:26%;max-width:110px;height:94px;margin-left:auto;flex:none;color:#9b6b42}
-.half-term-art-line{position:absolute;width:71px;height:71px;border:1px dashed #c5a47d;border-radius:50%;transform:rotate(-18deg)}
-.half-term-art-dot{position:absolute;top:11px;right:7px;width:15px;height:15px;border-radius:50%;background:#d4a57c}
-.half-term-art-mark{font:68px/.8 Georgia,serif;transform:rotate(-20deg)}
-.half-term-region{position:absolute;bottom:-1px;left:0;width:100%;font-size:9px;font-weight:800;letter-spacing:.2px;text-align:center;white-space:nowrap}
+.half-term-edition{display:block;color:#986341;font-size:9px;font-weight:800;letter-spacing:1.15px;margin-bottom:6px}
+.entry-cards .entry-card-half-term h2{font:800 26px/1 Outfit,Arial,sans-serif;letter-spacing:-.9px;margin:0 0 4px}
+.half-term-kinds{display:block;color:#88583d;font-size:10px;font-weight:800;letter-spacing:.1px;margin:0 0 6px}
+.entry-cards .entry-card-half-term .entry-action{display:inline-flex;align-items:center;gap:7px;width:max-content;padding:6px 10px;border-radius:999px;background:#2d5c49;color:#fff;font-size:11px;margin:0}
+.entry-card-half-term:hover .entry-action{background:#214a39}
+.half-term-art{position:relative;display:grid;place-items:center;width:42%;max-width:190px;height:112px;margin-left:auto;flex:none}
+.half-term-colour-wash{position:absolute;inset:8px 0 0 6px;border-radius:49% 41% 56% 45%;background:radial-gradient(ellipse at 25% 61%,#9ed1cb70 0 27%,transparent 58%),radial-gradient(ellipse at 67% 58%,#e79064ba 0 26%,transparent 57%),radial-gradient(ellipse at 68% 18%,#f2c16caa 0 24%,transparent 58%);transform:rotate(-11deg)}
+.half-term-rocket{position:relative;z-index:2;display:block;width:auto;max-width:95%;height:116px;object-fit:contain;transform:rotate(9deg);filter:drop-shadow(1px 2px 0 #b2aa7c44)}
+.half-term-trail{position:absolute;z-index:1;width:100%;height:100%;right:-9px;top:5px}
 .winter-map-link{margin-top:9px;margin-bottom:0;font-size:12px;color:#66665f}
 .winter-map-link a{color:inherit;text-underline-offset:3px;display:inline-block;padding:5px 0}
 @media(max-width:800px){
   .entry-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
   .entry-cards .entry-card-half-term,.entry-cards .entry-card-ice{grid-column:1/-1;min-height:112px;padding:12px 16px}
   .entry-cards .entry-card-half-term{gap:5px}
-  .half-term-art{width:25%;max-width:100px;height:82px}
-  .half-term-art-mark{font-size:55px}
+  .half-term-art{width:35%;max-width:132px;height:88px}
+  .half-term-rocket{height:92px}
   .half-term-edition{font-size:9px;margin-bottom:5px}
-  .entry-cards .entry-card-half-term h2{font-size:23px;letter-spacing:-.7px;margin-bottom:7px}
-  .entry-cards .entry-card-half-term .entry-action{font-size:11px}
+  .entry-cards .entry-card-half-term h2{font-size:23px;letter-spacing:-.7px;margin-bottom:3px}
+  .half-term-kinds{font-size:9px;margin-bottom:5px}
+  .entry-cards .entry-card-half-term .entry-action{font-size:10px;padding:5px 9px}
   .entry-cards .entry-card-days,.entry-cards .entry-card-classes{min-height:90px;padding:12px 14px;justify-content:flex-start;gap:6px}
   .entry-cards .entry-card-days h2,.entry-cards .entry-card-classes h2{font-size:20px;line-height:1.1;letter-spacing:-.5px}
   .entry-card-days p,.entry-card-classes p,.entry-card-days .entry-kicker,.entry-card-classes .entry-kicker{display:none}
   .entry-cards .entry-card-days .entry-action,.entry-cards .entry-card-classes .entry-action{font-size:12px;margin-top:auto}
   .winter-map-link{font-size:11px}
 }
-@media(max-width:360px){.entry-cards .entry-card-half-term h2{font-size:22px}.half-term-art{width:24%}.entry-cards .entry-card-days h2,.entry-cards .entry-card-classes h2{font-size:19px}}
+@media(max-width:360px){.entry-cards .entry-card-half-term h2{font-size:21px}.half-term-art{width:31%}.entry-cards .entry-card-days h2,.entry-cards .entry-card-classes h2{font-size:19px}}
 
 /* A short-lived Exeter-only feature, placed below the three exploration cards. */
 .music-feature[hidden]{display:none!important}
