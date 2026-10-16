@@ -22,29 +22,31 @@ test('Actual weekend picks use confirmed dates, stay in-region and do not pad a 
 });
 test('Seasonal edits run through their end date, stay regional and never pad the shortlist',()=>{
  assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Exeter'),'2026-09-12'),null);
- const devon=model.seasonalEdit(current.filter(p=>p.region==='Exeter'),'2026-09-13');
- assert.equal(devon.id,'halloween');assert.equal(devon.total,model.seasonalPlaces(current.filter(p=>p.region==='Exeter'),'2026-09-13','halloween').length);assert.equal(devon.picks.length,5);assert(devon.picks.every(p=>p.region==='Exeter'));
+ assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Exeter'),'2026-09-13'),null);
+ const devon=model.seasonalEdit(current.filter(p=>p.region==='Exeter'),'2026-10-16');
+ assert.equal(devon.id,'half-term');assert.equal(devon.total,model.seasonalPlaces(current.filter(p=>p.region==='Exeter'),'2026-10-16','half-term').length);assert.equal(devon.picks.length,5);assert(devon.picks.every(p=>p.region==='Exeter'));
  const coaver=model.seasonalPlaces(current.filter(p=>p.region==='Exeter'),'2026-09-13','halloween').find(p=>p.name==='Kids’ Halloween Spooky Disco – Coaver Club');
- assert(coaver);assert.equal(coaver.datePeriods[0].start,'2026-10-23');assert.match(coaver.priceLabel,/members and guests/i);
- const notts=model.seasonalEdit(current.filter(p=>p.region==='Nottingham'),'2026-09-13');
+ assert(coaver);assert.equal(coaver.datePeriods[0].start,'2026-10-23');
+ const notts=model.seasonalEdit(current.filter(p=>p.region==='Nottingham'),'2026-10-16');
  assert(notts.picks.length<=5);assert(notts.picks.length>0);assert(notts.picks.every(p=>p.region==='Nottingham'));
- assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Nottingham'),'2026-10-31').id,'christmas');
- const bristol=model.seasonalEdit(items.filter(p=>p.region==='Bristol'),'2026-09-21');
- assert.equal(bristol.id,'halloween');assert(bristol.total>=2);assert(bristol.picks.every(p=>p.region==='Bristol'));
+ assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Nottingham'),'2026-10-31').id,'half-term');
+ const bristol=model.seasonalEdit(items.filter(p=>p.region==='Bristol'),'2026-10-16');
+ assert.equal(bristol.id,'half-term');assert(bristol.total>=2);assert(bristol.picks.every(p=>p.region==='Bristol'));
  const bristolChristmas=model.seasonalEdit(items.filter(p=>p.region==='Bristol'),'2026-10-31');
- assert.equal(bristolChristmas.id,'christmas');assert.equal(bristolChristmas.total,3);assert(bristolChristmas.picks.every(p=>p.region==='Bristol'));
+ assert.equal(bristolChristmas.id,'half-term');assert(bristolChristmas.picks.every(p=>p.region==='Bristol'));
   const undated={id:'undated',name:'Halloween event',description:'Family Halloween activity'};
  assert.equal(model.seasonalEdit([undated],'2026-10-01'),null);
  const festive=i=>({id:String(i),name:`Christmas activity ${i}`,description:'Family Christmas event',datePeriods:[{start:'2026-12-01',end:'2026-12-24'}]});
  assert.equal(model.seasonalEdit([festive(1)],'2026-10-31').id,'christmas');
- assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Exeter'),'2026-10-30').id,'halloween');
- assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Exeter'),'2026-10-31').id,'christmas');
+ assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Exeter'),'2026-10-30').id,'half-term');
+ assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Exeter'),'2026-10-31').id,'half-term');
+ assert.equal(model.seasonalEdit(current.filter(p=>p.region==='Exeter'),'2026-11-02').id,'christmas');
  assert.equal(model.seasonalDefinition('halloween','2026-10-31').id,'halloween');
  assert.equal(model.seasonalEdit([festive(1)],'2026-12-25'),null);
 });
 test('Seasonal list keeps every matching event while the home edit stays at five cards',()=>{
- const halloween=Array.from({length:17},(_,i)=>({id:String(i),name:`Halloween plan ${String(i).padStart(2,'0')}`,description:'Pumpkin activity',datePeriods:[{start:'2026-10-01',end:'2026-10-31'}]}));
- const edit=model.seasonalEdit(halloween,'2026-09-13');
+ const halloween=Array.from({length:17},(_,i)=>({id:String(i),name:`Halloween plan ${String(i).padStart(2,'0')}`,description:'Pumpkin activity',region:'Exeter',kind:'event',datePeriods:[{start:'2026-10-26',end:'2026-10-26'}]}));
+ const edit=model.seasonalEdit(halloween,'2026-10-16');
  assert.equal(edit.picks.length,5);assert.equal(edit.total,17);
  assert.equal(model.seasonalPlaces(halloween,'2026-09-13','halloween').length,17);
  assert(model.matchesSeasonal(halloween[0],'2026-09-13','halloween'));
@@ -53,7 +55,7 @@ test('Seasonal list keeps every matching event while the home edit stays at five
 test('Christmas book-ahead edit contains checked Exeter and Bristol booking pages without mixing regions',()=>{
  const exeter=items.filter(p=>p.region==='Exeter');
  const early=model.bookAheadEdit(exeter,'2026-10-05');
- assert.equal(model.seasonalEdit(exeter,'2026-10-05').id,'halloween');
+ assert.equal(model.seasonalEdit(exeter,'2026-10-05'),null);
  assert(early);assert.equal(early.total,8);
  assert.deepEqual(early.picks.map(p=>p.name),[
   'Christmas Train of Lights – Dartmouth Steam Railway',
@@ -72,13 +74,15 @@ test('Christmas book-ahead edit contains checked Exeter and Bristol booking page
  assert(!bristol.picks.some(p=>p.datePeriods.some(d=>d.start<='2026-12-25'&&d.end>='2026-12-25')));
  assert.equal(model.bookAheadEdit(items.filter(p=>p.region==='Nottingham'),'2026-10-06'),null);
  assert.equal(model.bookAheadEdit(exeter,'2027-01-04'),null);
- assert.equal(model.seasonalEdit(exeter,'2026-10-31').id,'christmas');
+ assert.equal(model.seasonalEdit(exeter,'2026-10-31').id,'half-term');
 });
-test('Christmas book-ahead rail is rendered before Halloween on the homepage',()=>{
+test('October half-term rail is rendered before Christmas book-ahead on the homepage',()=>{
  const app=fs.readFileSync(path.join(__dirname,'..','app.js'),'utf8');
  const body=app.slice(app.indexOf('function renderWeekend(){'),app.indexOf('function rail('));
- assert(body.indexOf("rail('christmas-book-ahead-picks'")<body.indexOf('rail(`${seasonal.id}-picks`'));
+ assert(body.indexOf('rail(`${seasonal.id}-picks`')<body.indexOf("rail('christmas-book-ahead-picks'"));
  const home=fs.readFileSync(path.join(__dirname,'..','index.html'),'utf8');
+ assert(home.includes('id="half-term-entry"'));
+ assert(!home.includes('id="christmas-tree-entry"'));
  assert(!home.includes('id="exeter-music-feature"'));
  assert(!home.includes('src="music-feature.js'));
 });

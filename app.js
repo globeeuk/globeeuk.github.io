@@ -127,16 +127,16 @@ function renderWeekend(){
   lastPrimaryPlansKey=primaryKey;
   const range=plansWindow==='four-weeks'?GlobeeDiscovery.nextFourWeeksRange(TODAY):GlobeeDiscovery.weekendRange(TODAY);
   const sections=[];
+  if(seasonal){
+    const region=encodeURIComponent(state.region==='Exeter'?'Devon':state.region);
+    const allLink=seasonal.page?`${seasonal.page}?region=${region}`:`plans.html?region=${region}&edit=${encodeURIComponent(seasonal.id)}`;
+    if(seasonal.picks.length)sections.push(rail(`${seasonal.id}-picks`,seasonal.title,seasonal.homeEnd?seasonal.subtitle:`${seasonal.subtitle} · Until ${dateShort(seasonal.end)}`,seasonal.picks,allLink,`View all (${seasonal.total})`));
+    else sections.push(`<section class="seasonal-pending" aria-labelledby="seasonal-pending-heading"><h2 id="seasonal-pending-heading">${escapeHTML(seasonal.title)}</h2><p>We’re checking festive family plans in ${escapeHTML(REGION_LABELS[state.region])}. Dates and booking details will appear here once confirmed.</p></section>`);
+  }
   if(bookAhead){
     const region=encodeURIComponent(state.region==='Exeter'?'Devon':state.region);
     const allLink=`plans.html?region=${region}&edit=christmas-book-ahead`;
     sections.push(rail('christmas-book-ahead-picks',bookAhead.title,`${bookAhead.subtitle} · Check current availability`,bookAhead.picks,allLink,`View all (${bookAhead.total})`));
-  }
-  if(seasonal){
-    const region=encodeURIComponent(state.region==='Exeter'?'Devon':state.region);
-    const allLink=seasonal.page?`${seasonal.page}?region=${region}`:`plans.html?region=${region}&edit=${encodeURIComponent(seasonal.id)}`;
-    if(seasonal.picks.length)sections.push(rail(`${seasonal.id}-picks`,`${seasonal.title} · ${seasonal.picks.length} ${seasonal.picks.length===1?'pick':'picks'}`,seasonal.homeEnd?seasonal.subtitle:`${seasonal.subtitle} · Until ${dateShort(seasonal.end)}`,seasonal.picks,allLink,`View all (${seasonal.total})`));
-    else sections.push(`<section class="seasonal-pending" aria-labelledby="seasonal-pending-heading"><h2 id="seasonal-pending-heading">${escapeHTML(seasonal.title)}</h2><p>We’re checking festive family plans in ${escapeHTML(REGION_LABELS[state.region])}. Dates and booking details will appear here once confirmed.</p></section>`);
   }
   const tabs=`<div class="plans-window-tabs" role="tablist" aria-label="When to go">${[['weekend','This weekend'],['four-weeks','Next 4 weeks']].map(([id,label])=>`<button type="button" role="tab" id="plans-window-${id}" data-plans-window="${id}" aria-selected="${plansWindow===id}" aria-controls="plans-window-panel" tabindex="${plansWindow===id?0:-1}">${label}</button>`).join('')}</div>`;
   const allLink=`${pageLink('plans.html')}&from=${range.start}&to=${range.end}`;
@@ -206,24 +206,27 @@ function render(){
   const activeEdit=state.edit?GlobeeDiscovery.seasonalDefinition(state.edit,TODAY):null;
   if($('#plans-page-title')){
     $('#plans-page-title').textContent=activeEdit?activeEdit.title:'What’s on & holiday clubs';
-    $('.plans-intro-copy').textContent=activeEdit?.id==='christmas-book-ahead'?'Family Christmas events with published 2026 dates and booking links. Check availability with the organiser.':activeEdit?'Every verified seasonal plan, together in one list.':'Browse upcoming events and holiday clubs in one place.';
+    $('.plans-intro-copy').textContent=activeEdit?.id==='christmas-book-ahead'?'Family Christmas events with published 2026 dates and booking links. Check availability with the organiser.':activeEdit?.id==='half-term'?'Days out, shows and holiday clubs with published dates for the October school break. Check details with each organiser.':activeEdit?'Every verified seasonal plan, together in one list.':'Browse upcoming events and holiday clubs in one place.';
     document.title=activeEdit?`${activeEdit.title} in ${state.region==='Exeter'?'Exeter & Devon':state.region} | Globee`:'What’s on & holiday clubs | Globee';
   }
   if($('.weekend-shortcut'))$('.weekend-shortcut').hidden=!!activeEdit;
   const scoopPromo=$('#scoop-promo-link');
-  const treeEntry=$('#christmas-tree-entry');
+  const halfTermEntry=$('#half-term-entry');
   const winterMapLink=$('#winter-map-link');
-  if(treeEntry){
-    const isTreeRegion=state.region==='Exeter';
-    treeEntry.hidden=!isTreeRegion;
-    if(scoopPromo)scoopPromo.hidden=isTreeRegion;
-    if(winterMapLink)winterMapLink.hidden=!isTreeRegion;
-    treeEntry.closest('.entry-cards').classList.toggle('entry-cards-winter',isTreeRegion);
+  if(halfTermEntry){
+    const active=!!GlobeeDiscovery.seasonalDefinition('half-term',TODAY);
+    halfTermEntry.hidden=!active;
+    halfTermEntry.href=`plans.html?region=${encodeURIComponent(state.region==='Exeter'?'Devon':state.region)}&edit=half-term`;
+    halfTermEntry.querySelector('.half-term-region').textContent=REGION_LABELS[state.region];
+    if(scoopPromo)scoopPromo.hidden=active;
+    if(winterMapLink)winterMapLink.hidden=!active||state.region==='Nottingham';
+    halfTermEntry.closest('.entry-cards').classList.toggle('entry-cards-winter',active);
   }
   if(scoopPromo)scoopPromo.href=`ice-cream.html?from=${state.region==='Bristol'?'Bristol':'Devon'}`;
+  if(winterMapLink)winterMapLink.querySelector('a').href=`ice-cream.html?from=${state.region==='Bristol'?'Bristol':'Devon'}`;
   const classesEntry=$('#classes-entry-link');
   if(classesEntry){classesEntry.href=state.region==='Bristol'?'/bristol/classes/':state.region==='Nottingham'?'/nottingham/classes/':'/classes.html';classesEntry.querySelector('.entry-kicker').textContent=state.region==='Bristol'?'Bristol':state.region==='Nottingham'?'Nottingham':'Exeter · Devon';}
-  $('#results-heading').textContent=state.view==='map'?(activeEdit?`${activeEdit.title} on the map`:'Explore on the map'):activeEdit?`All ${activeEdit.title}`:weekendOnlyPilot?'Bristol is growing 🐝':hasFilters()?'Matching plans':isPlansPage?'All upcoming plans':'Explore all';
+  $('#results-heading').textContent=state.view==='map'?(activeEdit?`${activeEdit.title} on the map`:'Explore on the map'):activeEdit?.id==='half-term'?'All half-term plans':activeEdit?`All ${activeEdit.title}`:weekendOnlyPilot?'Bristol is growing 🐝':hasFilters()?'Matching plans':isPlansPage?'All upcoming plans':'Explore all';
   $('#results-subtitle').textContent=activeEdit?`${activeEdit.subtitle} · Until ${dateShort(activeEdit.end)}`:weekendOnlyPilot?`We’re starting with ${places.length} checked picks for this weekend.`:isPlansPage?'What’s on & holiday clubs':hasFilters()?'Places and activities that match your filters.':'Places, what’s on & holiday clubs';
   $('#result-count').textContent=weekendOnlyPilot?'':`${places.length} ${places.length===1?'result':'results'}`;
   $('#date-scope-note').hidden=!state.dates;
