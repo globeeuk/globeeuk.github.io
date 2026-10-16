@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-16",
+  "scope": "User-requested homepage founder film and Instagram shortcuts; no directory, Sheet, privacy or analytics configuration changes.",
+  "baseCommit": "57944b7e830a06d225e49dc65d44ca9be0fbfce8",
+  "instagramPost": "https://www.instagram.com/p/Dejg0QpNW9s/",
+  "instagramProfile": "https://www.instagram.com/globee.uk/",
+  "publicationEvidence": "Owner supplied the post as today's published film; its Globee account, caption and film were also verified in the signed-in browser. No Insights numbers collected.",
+  "media": {
+    "master": "Still-curious-76s-v13-Isabella.mp4",
+    "publicFile": "assets/founder-story/still-curious-76s.mp4",
+    "durationSeconds": 76,
+    "dimensions": "720x1280",
+    "sizeBytes": 10731687,
+    "provenance": "User-approved founder film produced in this project, using illustrated/AI-generated scenes and synthetic Isabella narration. The illustrated family thumbnail and title poster are extracted from this master. These are not photographs of real events.",
+    "music": "Narration-only project master. No music or media downloaded from Instagram or its licensed music library. The linked Instagram version retains its own soundtrack.",
+    "captions": "English burned-in subtitles, matching optional WebVTT track and readable transcript."
+  },
+  "delivery": {
+    "initialLoad": "Small local WebP thumbnail; no movie src, autoplay, iframe or Instagram embed script. Movie src assigned only on explicit play click.",
+    "accessibility": "Native modal with labelled heading and close button, Escape, focus restoration, pause on close, native controls/playsinline, captions, transcript and ordinary external-link fallback.",
+    "measurement": "founder_story_play routes through existing consent-gated globeeTrack only when playing. Profile/post links use existing social_visit. Neither event proves a follower or site-visitor increase.",
+    "responsiveQA": "Desktop 1427px, mobile 390px and 320px; no horizontal page overflow. Card 150px desktop, 191.5px at 390px and 209.5px at 320px. Hidden in map mode.",
+    "focusedTests": "9 passed, 0 failed (founder story, compact entry A and branding).",
+    "baseline": "Full suite has six pre-existing failures: seasonal shortlist fixture, image format fixture, map coordinate coverage, cache-version fixture, Halloween metadata fixture and Weekend Edit fixture. These also fail on untouched base; no fixes to unrelated data were bundled."
+  }
+}
