@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-16",
+  "request": "User asked to remove the illustrated founder-film presentation and leave only an Instagram account shortcut.",
+  "profile": "https://www.instagram.com/globee.uk/",
+  "change": "One small Instagram link beside the existing ice-cream-map link below the discovery cards. No founder story card, thumbnail, player, transcript, post embed or new JavaScript remains.",
+  "mediaRemoval": "Only the three website media copies, caption file and film-specific presentation/test code were removed. The approved private 76-second film and its production originals remain unchanged, and the previous website commit is recoverable through Git history.",
+  "preserved": "Current seasonal/Day out/classes cards, region-aware ice-cream link, directory/Sheet data, map, verification metadata and existing consent-gated social_visit tracking.",
+  "focusedTests": "7 passed, 0 failed (Instagram shortcut, compact entry A and branding).",
+  "scope": "Replaces homepage founder-film release debda888645a207895f653d2036404573e2b9201. No Instagram publication or Insights changes."
+}

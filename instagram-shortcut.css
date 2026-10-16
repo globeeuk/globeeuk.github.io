@@ -1,0 +1,8 @@
+/* A single account shortcut, without a video, thumbnail or extra banner. */
+.home-secondary-links{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:9px;margin-bottom:12px;flex-wrap:wrap}
+.home-secondary-links .winter-map-link{margin:0}
+.instagram-shortcut{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:40px;margin-left:auto;padding:8px 13px;border:1px solid #dedcd5;border-radius:99px;background:#fff;color:#494b40;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap}
+.instagram-shortcut svg{width:16px;height:16px}
+.instagram-shortcut:hover{background:#f7f6f3;border-color:#a7a69d}
+.map-mode .home-secondary-links{display:none}
+@media(max-width:600px){.home-secondary-links{gap:7px;margin-top:8px;margin-bottom:10px}.instagram-shortcut{min-height:40px;font-size:11px;padding:8px 10px}.home-secondary-links .winter-map-link{font-size:11px}}

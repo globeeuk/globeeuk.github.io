@@ -31,8 +31,7 @@
   <script defer src="basic-analytics.js?v=basic2"></script>
 <script defer src="analytics.js?v=music-banner-click1"></script>
 <link rel="stylesheet" href="/brand.css?v=child1">
-  <link rel="stylesheet" href="founder-story.css?v=1">
-  <script defer src="founder-story.js?v=1"></script>
+  <link rel="stylesheet" href="instagram-shortcut.css?v=1">
 </head>
 <body>
   <header class="site-header">
@@ -65,24 +64,10 @@
 <a class="entry-card entry-card-days" id="day-out-link" href="#results-heading"><span class="entry-kicker">Places &amp; things to do</span><h2>Day out</h2><p>Places to play, explore and spend time together.</p><span class="entry-action">Explore days out <span aria-hidden="true">↗</span></span></a>
 <a class="entry-card entry-card-classes" id="classes-entry-link" href="classes.html"><span class="entry-kicker">Exeter · Devon</span><h2>Classes &amp; lessons</h2><p>Weekly clubs, new interests and little discoveries.</p><span class="entry-action">Explore classes <span aria-hidden="true">↗</span></span></a>
     </nav>
-    <p class="content-width winter-map-link" id="winter-map-link"><a href="ice-cream.html?from=Devon">Still here: the ice cream map <span aria-hidden="true">↗</span></a></p>
-    <section class="content-width founder-story" id="our-story" aria-labelledby="founder-story-heading">
-      <div class="founder-story-card">
-        <a class="founder-story-thumbnail" data-founder-story-open href="https://www.instagram.com/p/Dejg0QpNW9s/" target="_blank" rel="noopener noreferrer" aria-label="Watch Still curious, the story of Globee">
-          <img src="assets/founder-story/family.webp" alt="An illustrated Yewon heading out with her two children" width="180" height="240" loading="lazy" decoding="async">
-          <span aria-hidden="true">▶</span>
-        </a>
-        <div class="founder-story-copy">
-          <p class="founder-story-eyebrow">A note from Yewon</p>
-          <h2 id="founder-story-heading">Still curious.</h2>
-          <p>Days out, classes and little discoveries. A short film about the family notebook that became Globee.</p>
-        </div>
-        <div class="founder-story-actions">
-          <a class="founder-story-watch" data-founder-story-open href="https://www.instagram.com/p/Dejg0QpNW9s/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▶</span> Watch the film <span class="founder-story-duration">1:16</span></a>
-          <a class="founder-story-instagram" href="https://www.instagram.com/globee.uk/" target="_blank" rel="noopener noreferrer" data-social-platform="instagram" aria-label="Visit Globee on Instagram, @globee.uk">Instagram <span class="founder-story-handle">@globee.uk</span> <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </section>
+    <div class="content-width home-secondary-links" id="instagram">
+      <p class="winter-map-link" id="winter-map-link"><a href="ice-cream.html?from=Devon">Still here: the ice cream map <span aria-hidden="true">↗</span></a></p>
+      <a class="instagram-shortcut" href="https://www.instagram.com/globee.uk/" target="_blank" rel="noopener noreferrer" data-social-platform="instagram" aria-label="Visit Globee on Instagram, @globee.uk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg><span>Instagram</span><span aria-hidden="true">↗</span></a>
+    </div>
     <section class="content-width main-plans" id="main-plans" aria-label="This weekend"></section>
     <section class="content-width result-section" aria-labelledby="results-heading">
       <div class="results-top"><div><h2 id="results-heading" tabindex="-1">Explore all</h2><p id="results-subtitle">Places, what’s on &amp; holiday clubs</p></div><span id="result-count" class="result-count" aria-live="polite"></span></div>
@@ -100,22 +85,6 @@
     <form id="filter-form"><div class="dialog-head"><h2 id="filter-title"></h2><button type="button" class="icon-button" id="filter-close" aria-label="Close filters"><span data-icon="close"></span></button></div><div id="filter-content"></div><div class="dialog-actions"><button type="button" class="text-button" id="filter-clear">Clear</button><button type="submit" class="primary-button" id="filter-apply">Show places</button></div></form>
   </dialog>
   <dialog id="detail-dialog" class="detail-dialog" aria-label="Place details"><button class="icon-button detail-close" id="detail-close" aria-label="Close details"><span data-icon="close"></span></button><div id="detail-content"></div></dialog>
-  <dialog id="founder-story-dialog" class="founder-story-dialog" aria-labelledby="founder-film-title">
-    <div class="founder-film-head"><h2 id="founder-film-title">Still curious. <span>The story of Globee.</span></h2><button type="button" class="founder-film-close" aria-label="Close film" autofocus>×</button></div>
-    <video id="founder-film" controls playsinline preload="none" width="720" height="1280" poster="assets/founder-story/title.webp" data-video-src="assets/founder-story/still-curious-76s.mp4" aria-label="Still curious: a 76-second illustrated film telling Yewon's story">
-      <track kind="captions" src="assets/founder-story/still-curious-en.vtt" srclang="en" label="English">
-      <p><a href="https://www.instagram.com/p/Dejg0QpNW9s/" target="_blank" rel="noopener noreferrer">Watch the film on Instagram</a>.</p>
-    </video>
-    <p class="founder-film-status" id="founder-film-status" role="status" hidden>Press play to begin, or watch on Instagram using the link below.</p>
-    <div class="founder-film-links"><a href="https://www.instagram.com/p/Dejg0QpNW9s/" target="_blank" rel="noopener noreferrer" data-social-platform="instagram">View this film on Instagram ↗</a><a href="https://www.instagram.com/globee.uk/" target="_blank" rel="noopener noreferrer" data-social-platform="instagram">@globee.uk ↗</a></div>
-    <details class="founder-film-transcript"><summary>Read the film transcript</summary>
-      <p>Lately, I've been looking back. At the places I've been, the work I've done, and what I've learned. Now, as a mum of two, I wonder how I could use it all. For myself, my children, and other families.</p>
-      <p>I was a curious child. And that curiosity has stayed with me. I travelled, took notes, and wrote a backpacking guidebook. I also worked in tech for over eight years, organising information and sharing ideas.</p>
-      <p>Now, in Britain, I share that curiosity with my two children. On days out, we find a fossil, then look it up together at home. Music or swimming leads us to a class to try. Our discoveries become learning. And learning brings us new things to enjoy.</p>
-      <p>Our family notebook filled with places, classes and discoveries. I wanted to share it, and learn from other families, too. That's how Globee began.</p>
-      <p>Dear fellow parent. They say it takes a village to raise a child. I hope Globee can help us on that journey, for my children, and for all our children. With love, Yewon.</p>
-    </details>
-  </dialog>
 
 </body>
 </html>
