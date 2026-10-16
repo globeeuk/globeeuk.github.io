@@ -10,39 +10,36 @@
 /* Approved A: three low cards on desktop; short tree banner + two cards on mobile. */
 .entry-card[hidden],.winter-map-link[hidden]{display:none!important}
 .entry-cards-winter{grid-template-columns:minmax(0,1.35fr) repeat(2,minmax(0,1fr))}
-.entry-cards .entry-card{min-height:230px;border-radius:16px;justify-content:center;gap:7px}
-.entry-cards .entry-card h2{font-size:26px;line-height:1.1;letter-spacing:-.6px;margin:0}
-.entry-cards .entry-card p{font-size:13px;line-height:1.5;margin:0;padding:0}
-.entry-cards .entry-action{margin-top:19px}
-.entry-cards .entry-card-tree{padding:22px;flex-direction:row;align-items:center;gap:8px;border-color:#a2ad8f;background:#fbf5e8;color:#244731}
+.entry-cards .entry-card{min-height:140px;border-radius:14px;justify-content:center;gap:6px;padding:16px 18px}
+.entry-cards .entry-card h2{font-size:23px;line-height:1.1;letter-spacing:-.6px;margin:0}
+.entry-cards .entry-card p{font-size:12px;line-height:1.45;margin:0;padding:0}
+.entry-cards .entry-action{margin-top:9px}
+.entry-cards .entry-card-tree{padding:16px 18px;flex-direction:row;align-items:center;gap:10px;border-color:#a2ad8f;background:#fbf5e8;color:#244731}
 .entry-card-tree::before{content:'';position:absolute;inset:5px;border:1px solid #bec6b0;border-radius:12px;pointer-events:none}
 .tree-copy{position:relative;z-index:1;min-width:0}
-.tree-edition{display:block;color:#a43139;font:italic 19px/1.1 Georgia,serif;margin-bottom:9px}
-.entry-cards .entry-card-tree h2{font:700 31px/.98 Georgia,serif;letter-spacing:-1.2px;margin:0 0 10px}
-.entry-cards .entry-card-tree p{max-width:205px;line-height:1.45;margin:0 0 15px;opacity:1}
-.entry-cards .entry-card-tree .entry-action{display:inline-flex;align-items:center;gap:9px;font-size:13px;margin:0}
-.tree-region{display:block;font-size:11px;letter-spacing:.5px;margin-top:11px;color:#486247}
-.tree-art{display:block;width:31%;height:auto;object-fit:contain;margin-left:auto;flex:none}
+.tree-edition{display:block;color:#a43139;font:italic 14px/1.1 Georgia,serif;margin-bottom:6px}
+.entry-cards .entry-card-tree h2{font:700 26px/.98 Georgia,serif;letter-spacing:-.8px;margin:0 0 9px}
+.entry-cards .entry-card-tree p,.tree-region{display:none}
+.entry-cards .entry-card-tree .entry-action{display:inline-flex;align-items:center;gap:7px;font-size:12px;margin:0}
+.tree-art{display:block;width:26%;max-height:100px;height:auto;object-fit:contain;margin-left:auto;flex:none}
 .winter-map-link{margin-top:9px;margin-bottom:0;font-size:12px;color:#66665f}
 .winter-map-link a{color:inherit;text-underline-offset:3px;display:inline-block;padding:5px 0}
-@media(min-width:1500px){.entry-cards .entry-card{min-height:240px}}
 @media(max-width:800px){
   .entry-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-  .entry-cards .entry-card-tree,.entry-cards .entry-card-ice{grid-column:1/-1;min-height:175px;padding:17px 18px}
+  .entry-cards .entry-card-tree,.entry-cards .entry-card-ice{grid-column:1/-1;min-height:112px;padding:12px 16px}
   .entry-cards .entry-card-tree{gap:5px}
-  .tree-art{width:30%;max-width:140px;max-height:136px}
-  .tree-edition{font-size:16px;margin-bottom:7px}
+  .tree-art{width:25%;max-width:100px;max-height:84px}
+  .tree-edition{font-size:13px;margin-bottom:5px}
   .tree-region{display:none}
-  .entry-cards .entry-card-tree h2{font-size:27px;letter-spacing:-.7px;margin-bottom:8px}
-  .entry-cards .entry-card-tree p{font-size:12px;max-width:220px;margin-bottom:10px}
-  .entry-cards .entry-card-tree .entry-action{font-size:12px}
-  .entry-cards .entry-card-days,.entry-cards .entry-card-classes{min-height:108px;padding:14px 15px;justify-content:flex-start;gap:6px}
-  .entry-cards .entry-card-days h2,.entry-cards .entry-card-classes h2{font-size:21px;line-height:1.1;letter-spacing:-.5px}
+  .entry-cards .entry-card-tree h2{font-size:23px;letter-spacing:-.7px;margin-bottom:7px}
+  .entry-cards .entry-card-tree .entry-action{font-size:11px}
+  .entry-cards .entry-card-days,.entry-cards .entry-card-classes{min-height:90px;padding:12px 14px;justify-content:flex-start;gap:6px}
+  .entry-cards .entry-card-days h2,.entry-cards .entry-card-classes h2{font-size:20px;line-height:1.1;letter-spacing:-.5px}
   .entry-card-days p,.entry-card-classes p,.entry-card-days .entry-kicker,.entry-card-classes .entry-kicker{display:none}
   .entry-cards .entry-card-days .entry-action,.entry-cards .entry-card-classes .entry-action{font-size:12px;margin-top:auto}
   .winter-map-link{font-size:11px}
 }
-@media(max-width:360px){.entry-cards .entry-card-tree h2{font-size:25px}.tree-art{width:28%}.entry-cards .entry-card-tree p{max-width:175px}.entry-cards .entry-card-days h2,.entry-cards .entry-card-classes h2{font-size:20px}}
+@media(max-width:360px){.entry-cards .entry-card-tree h2{font-size:22px}.tree-art{width:24%}.entry-cards .entry-card-days h2,.entry-cards .entry-card-classes h2{font-size:19px}}
 
 /* A short-lived Exeter-only feature, placed below the three exploration cards. */
 .music-feature[hidden]{display:none!important}
