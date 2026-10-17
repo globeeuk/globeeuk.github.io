@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-10-16",
+  "source_verified_at": "2026-10-17",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -2123,7 +2123,7 @@
       "price_text": "Online tickets from £20 per person; gate price £25 per person; children under 92cm free. Some extras cost more. Check the date-specific final total.",
       "price_type": "paid",
       "booking_text": "Advance online booking offers the advertised lower price; gate tickets are listed. Check date-specific availability and ride restrictions.",
-      "schedule_text": "17–18 and 24–31 October 2026, 10am–5pm on listed dates.",
+      "schedule_text": "17–18 and 24–31 October 2026, 10am–5pm on listed dates; the park calendar gives last entry at 4pm for the selected 17–18 and 24–25 October visits.",
       "occurrences": [
         {
           "start": "2026-10-24",
@@ -2154,7 +2154,8 @@
       ],
       "practical_notes": [
         "Individual attractions have their own age and height rules.",
-        "The final October run begins on 24 October."
+        "The final October run begins on 24 October.",
+        "The official park calendar gives 4pm as last entry on 17–18 and 24–25 October, one hour before the 5pm closing time."
       ],
       "sources": [
         {
@@ -2168,9 +2169,15 @@
             "Official organiser event page reviewed through the web tool on 12 October 2026 (BST). The 2026 dates, time or separate activity-hour limits, price basis, age guidance, booking terms and access notes were checked where stated; live availability may change."
           ],
           "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked."
+        },
+        {
+          "url": "https://www.crealy.co.uk/theme-park/plan-your-visit/opening-times/",
+          "label": "Official Crealy park calendar for October 2026",
+          "supports": "The 17, 18, 24 and 25 October 2026 calendar cells show 10am–5pm park opening and 4pm last entry.",
+          "retrieval": "Official calendar body reviewed through the web tool on 17 October 2026 (BST). The current-day banner was still dated Friday 16 October, so the explicit dated calendar cells were used instead."
         }
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-17",
       "review_status": "verified",
       "sheet_match": {
         "live_sheet_checked": true,
@@ -2195,11 +2202,12 @@
           "fingerprint": "4af32261e7a67c42f5b6622eed0f13f04de8ab9a50e6c41b33fe85cf3650125e"
         }
       ],
-      "previous_verified_at": "2026-10-12",
+      "previous_verified_at": "2026-10-16",
       "city": "",
       "notes": [
         "Individual attractions have their own age and height rules.",
-        "The final October run begins on 24 October."
+        "The final October run begins on 24 October.",
+        "The official park calendar gives 4pm as last entry on 17–18 and 24–25 October, one hour before the 5pm closing time."
       ]
     },
     {
