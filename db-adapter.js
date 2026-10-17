@@ -38,6 +38,10 @@
       const datePeriods=[];
       for(const e of es){if(!iso(e.date)||e.end&&!iso(e.end))continue;const d={start:e.date,end:e.end||e.date};if(d.end<d.start)continue;if(!datePeriods.some(v=>v.start===d.start&&v.end===d.end))datePeriods.push(d);}
       datePeriods.sort((x,y)=>x.start.localeCompare(y.start));
+      // Checked 17 Oct 2026: this St Luke's venue currently says it has no
+      // online-bookable courses. Hide its undated legacy listing, not the provider;
+      // a newly verified dated course can still appear from the Sheet.
+      if(/\/venue\/courses\/20996(?:\/|\?|$)/.test(m.url||'')&&!datePeriods.length)continue;
       const kind=a.kind||(m.tab==='club'?'club':datePeriods.length||iso(m.end_date)?'event':'place');
       const isShow=m.tab==='dayout'&&m.type==='theatre';
       const type=kind==='club'?'club':isShow?'theatre':a.type||({art:'art',arts:'art',animation:'art',outdoor:'outdoors',themepark:'outdoors',cafe:'cafe',ice:'ice',market:'market'}[m.type]||'activity');

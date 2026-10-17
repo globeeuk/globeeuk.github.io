@@ -2,6 +2,24 @@
 (function(root){
   'use strict';
   const photoRows=[
+    ['nottingham-castle-west','Alan Murray-Rust','https://commons.wikimedia.org/wiki/File:Nottingham_Castle,_West_Fa%C3%A7ade_-_geograph.org.uk_-_2721614.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2011-12-04','venue','West façade of Nottingham Castle; not the 2026 Spooky Circus trail'],
+    ['nottingham-castle-view','Alan Murray-Rust','https://commons.wikimedia.org/wiki/File:Nottingham_Castle_%E2%80%93_a_different_view_-_geograph.org.uk_-_7119076.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2022-03-14','venue','Nottingham Castle from a different viewpoint; not the 2026 Spooky Circus trail'],
+    ['clumber-parsonage','Neil Theasby','https://commons.wikimedia.org/wiki/File:Sundial_and_The_Old_Parsonage_-_Clumber_Estate_-_geograph.org.uk_-_4276557.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2014-12-12','venue','The Old Parsonage on the Clumber Estate; not the 2026 storytelling session'],
+    ['clumber-orchard','Peter Barr','https://commons.wikimedia.org/wiki/File:Orchard_in_Clumber%27s_Walled_Garden_-_geograph.org.uk_-_1310717.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2009-05-17','venue','Orchard in Clumber Park’s walled garden; not the 2026 Apple Celebrations'],
+    ['clumber-lake-autumn','Andy Stephenson','https://commons.wikimedia.org/wiki/File:Autumn_on_Clumber_Lake_-_geograph.org.uk_-_3713565.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2013-10-24','venue','Clumber Lake in autumn; not the 2026 Storyteller’s Workshop'],
+    ['red-lodge-museum','Rod Ward','https://commons.wikimedia.org/wiki/File:Red_Lodge_Museum,_Bristol.jpg','Public domain','https://creativecommons.org/publicdomain/mark/1.0/','2007-03-12','venue','Red Lodge Museum, Bristol; not the 2026 Spooky Week activity'],
+    ['seaton-tramway','Colin Smith','https://commons.wikimedia.org/wiki/File:Seaton_Tramway_(geograph_6675542).jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2019-06-17','venue','Trams at Seaton terminus; not the 2026 Trick or Treat Tram'],
+    ['wembury-beach','Lewis Clarke','https://commons.wikimedia.org/wiki/File:Wembury_,_Wembury_Beach_-_geograph.org.uk_-_3054014.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2012-07-25','location','Wembury Beach near the Marine Centre; not the 2026 cyanotype workshop'],
+    ['pumpkin-field-reference','Richard Humphrey','https://commons.wikimedia.org/wiki/File:Pumpkins_ready_for_harvesting_-_geograph.org.uk_-_3128501.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2012-09-11','activity','Pumpkins growing in a field in Cambridgeshire; not Avon Valley Adventure Park or its 2026 pumpkin patch'],
+    ['clumber-park-autumn','Graham Hogg','https://commons.wikimedia.org/wiki/File:Autumn_in_Clumber_Park_-_geograph.org.uk_-_7004399.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2021-10-27','venue','Autumn at Clumber Park; not the 2026 half-term activities'],
+    ['blaise-castle-museum','Derek Harper','https://commons.wikimedia.org/wiki/File:Blaise_Castle_House_Museum_(geograph_3827553).jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2014-01-19','venue','Blaise Castle House Museum; not the 2026 Autumn Week activities'],
+    ['national-ice-centre-club','NottinghamArena','https://commons.wikimedia.org/wiki/File:National_Ice_Centre.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/','2018-02-04','venue','Skaters on the ice at the National Ice Centre; not the 2026 Holiday Club'],
+    ['mill-reservoir-club','Jonathan Clitheroe','https://commons.wikimedia.org/wiki/File:Kings_Mill_Reservoir_in_Mansfield_-_geograph.org.uk_-_7146849.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2022-04-13','location','Kings Mill Reservoir near The Mill Adventure Base; not the October Holiday Club'],
+    ['mill-reservoir-teens','Sutton12','https://commons.wikimedia.org/wiki/File:Kings_Mill_Reservoir.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/','2020-08-31','location','A second view of Kings Mill Reservoir near The Mill Adventure Base; not the Teens Holiday Club'],
+    ['stapleford-playing-fields','Malcolm Neal','https://commons.wikimedia.org/wiki/File:Playing_fields_-_geograph.org.uk_-_7021631.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2021-11-18','location','Playing fields in Stapleford, Nottinghamshire; not Fairfield Spencer Academy or the JAG Holiday HQ'],
+    ['henleaze-infant-school','Eirian Evans','https://commons.wikimedia.org/wiki/File:Henleaze_Infant_School_-_geograph.org.uk_-_6368724.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2019-11-09','venue','Henleaze Infant School in Bristol; venue for School’s Out, not the 2026 Holiday Club session'],
+    ['science-flasks-reference','newlow','https://commons.wikimedia.org/wiki/File:Coloured_Erlenmeyer_flasks.jpg','CC BY 2.0','https://creativecommons.org/licenses/by/2.0/','2013-09-23','activity','Coloured flasks in a science laboratory; an activity reference, not Fun Science Bristol or its 2026 programme'],
+    ['filmmaking-camera-reference','deavmi','https://commons.wikimedia.org/wiki/File:Camera_tripod.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/','2015-07-20','activity','A video camera on a tripod; an equipment reference, not Tubers Academy or its 2026 Holiday Club'],
     ["robotics-activity","Javier Leiva","https://commons.wikimedia.org/wiki/File:Lego_Mindstorms_EV3_Robot.jpg","CC BY-SA 4.0","https://creativecommons.org/licenses/by-sa/4.0/","2020-10-29","activity","A real LEGO Mindstorms EV3 educational robot; an activity reference, not the Sidmouth workshop or its promised equipment"],
     ["sidmouth-all-saints-hall","Jaggery","https://commons.wikimedia.org/wiki/File:All_Saints_church_hall,_Sidmouth_-_geograph.org.uk_-_6430818.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2018-05-20","venue","All Saints church hall in Sidmouth; a venue photograph, not the 2026 Robot Workshop"],
     ["topsham-matthews-hall","Roger Cornfoot","https://commons.wikimedia.org/wiki/File:Matthews_Hall,_Topsham_-_geograph.org.uk_-_958930.jpg","CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0","2008-09-11","venue","Matthews Hall in Topsham; a venue photograph, not the writing workshop"],
@@ -94,6 +112,8 @@
   function photoKey(p){
     if(p.name==='Chessed.me (Online Chess)')return 'chess';
     if(p.region==='Exeter'){
+      if(p.name==='Trick or Treat Tram – Seaton Tramway')return 'seaton-tramway';
+      if(p.name==='Cyanotype Crafting Workshop – Wembury Marine Centre')return 'wembury-beach';
       if(p.name==="Robot Workshop – Sidmouth Science Festival")return "robotics-activity";
       if(p.name==="Mermaids and Monsters Writing Workshop – Topsham (8–12)")return "topsham-matthews-hall";
       if(p.name==="Family Fun Day – Norman Lockyer Observatory")return "norman-lockyer-observatory";
@@ -151,8 +171,19 @@
       if(/Park Life Fun Day/.test(p.name))return 'heavitree';
       if(/Exeter City Council Skate Parks/.test(p.name))return 'flowerpot-skatepark';
       if(/Premier Education – St Luke's Campus/.test(p.name))return 'st-lukes';
+      if(p.name==='Tubers Academy Holiday Club – Exeter')return 'filmmaking-camera-reference';
     }
     if(p.region==='Nottingham'){
+      if(p.name==='‘Spooky Circus’ Trail – Nottingham Castle')return 'nottingham-castle-west';
+      if(p.name==='Spooky Circus Trail – Nottingham Castle')return 'nottingham-castle-view';
+      if(p.name==='Half-term storytelling in the Parsonage')return 'clumber-parsonage';
+      if(p.name==='Apple Celebrations – Clumber Park')return 'clumber-orchard';
+      if(p.name==="Storyteller's Workshop – Clumber Park")return 'clumber-lake-autumn';
+      if(p.name==='October Half Term at Clumber Park')return 'clumber-park-autumn';
+      if(p.name==='National Ice Centre Holiday Club')return 'national-ice-centre-club';
+      if(p.name==='The Mill Adventure Base – October Holiday Club')return 'mill-reservoir-club';
+      if(p.name==='The Mill Adventure Base – Teens Holiday Club')return 'mill-reservoir-teens';
+      if(p.name==='JAG Holiday HQ – Fairfield Spencer Academy')return 'stapleford-playing-fields';
       if(p.name==='West Bridgford Farmers’ Market')return 'west-bridgford-central-avenue';
       if(p.name==='Ruddington Village Market')return 'ruddington-green';
       if(p.name==='Beeston Food and Produce Market')return 'beeston-square';
@@ -173,6 +204,11 @@
       if(/Nottingham High School/.test(p.name))return 'nottingham-high-school';
     }
     if(p.region==='Bristol'){
+      if(p.name==='Pumpkin Patch – Avon Valley')return 'pumpkin-field-reference';
+      if(p.name==='Spooky Week at The Red Lodge Museum')return 'red-lodge-museum';
+      if(p.name==='Autumn Week at Blaise Museum')return 'blaise-castle-museum';
+      if(p.name==='School’s Out Henleaze – October Holiday Club')return 'henleaze-infant-school';
+      if(p.name==='Fun Science Bristol – October Holiday Club')return 'science-flasks-reference';
       if(p.name==='Whiteladies Road Market')return 'whiteladies-road';
       if(p.name==='Tobacco Factory Sunday Market')return 'tobacco-factory';
       if(p.name==='Meet Santa – Noah’s Ark Zoo Farm')return 'noahs-ark';
@@ -204,7 +240,8 @@
     const k=photoKey(p),t=theme(p);
     const image=k?photos[k]:{image:`assets/images/${t}.webp`,imageKind:'illustration',imageAlt:descriptions[t]+'; an activity illustration, not the venue',credit:'Globee',imageReference:'AI-generated activity illustration, created for Globee. It does not depict the venue or event.',photoSource:'',photoLicence:'',photoLicenceUrl:''};
     const clarification=k==='robotics-activity'?{imageLabel:'Robot reference photo',imageReference:'Educational robotics reference photographed in 2020, not a photograph of the current event. NOT a photograph of the Sidmouth event, and not a promise that this exact robot is available there. Resized, converted to WebP and cropped by the layout. CC BY-SA 4.0.'}:k==='christmas-tree-field'?{imageLabel:'Tree reference photo',imageReference:'Tree-growing reference photographed in Ellisfield, Hampshire in 2006; NOT Cotley Farm and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:k==='thorverton'?{imageLabel:'Thorverton village',imageReference:'Thorverton village photograph from 2007; NOT Canns Farm or Exe Valley Christmas Trees and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:['dartmouth-train-of-lights','dartmouth-train-santa','south-devon-polar-express'].includes(k)?{imageLabel:'Railway photo'}:{};
-    return {...p,...image,...clarification};
+    const localLabel=['mill-reservoir-club','mill-reservoir-teens','wembury-beach'].includes(k)?'Nearby photo':k==='stapleford-playing-fields'?'Area photo':['science-flasks-reference','filmmaking-camera-reference','pumpkin-field-reference'].includes(k)?'Activity reference':null;
+    return {...p,...image,...clarification,...(localLabel?{imageLabel:localLabel}:{})};
   }
   const api={decorate,theme};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.GlobeeImages=api;
