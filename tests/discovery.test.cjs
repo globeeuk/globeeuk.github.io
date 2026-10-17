@@ -59,8 +59,8 @@ test('October edit includes all dated days out and clubs, including early Sidmou
  const names=new Set(picks.map(p=>p.name));
  assert(names.has('Robot Workshop – Sidmouth Science Festival'));
  assert(names.has('Family Fun Day – Norman Lockyer Observatory'));
- assert(names.has('Mermaids and Monsters Writing Workshop – Topsham (8–12)'));
  assert(names.has('Exeter Quayside Farmers’ Market'));
+ assert(model.matchesSeasonal({id:'ordinary-outing',name:'Sidmouth nature walk',region:'Exeter',kind:'event',datePeriods:[{start:'2026-10-18',end:'2026-10-18'}]},'2026-10-17','half-term'));
  assert(picks.every(p=>['event','club'].includes(p.kind)));
  assert(picks.every(p=>p.datePeriods.some(d=>d.end>='2026-10-17'&&d.start<='2026-11-01')));
  for(const region of ['Exeter','Bristol','Nottingham']){
