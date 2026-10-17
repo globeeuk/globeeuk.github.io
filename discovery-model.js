@@ -14,7 +14,9 @@
     Bristol:['School’s Out Henleaze – October Holiday Club','Fun Science Bristol – October Holiday Club','Autumn Week at Blaise Museum','The Great Bristol Ball Run','Mini-museum hunt! 50 years of Aardman'],
     Nottingham:['October Half Term at Clumber Park','How To Train Your Dragon 2 – Film with Live Orchestra','October Half Term Family Activities – Nottingham Contemporary',"Let's Leap - Nottingham High School",'‘Creepy Crawlies’ Outdoor Trail – Wollaton Park']
   };
-  function halfTermWindow(region){return {start:region==='Nottingham'?'2026-10-17':'2026-10-24',end:'2026-11-01'};}
+  // The edit covers the full October planning period, including the weekend
+  // before some local school holidays. A listing need not mention half-term.
+  function halfTermWindow(){return {start:'2026-10-16',end:'2026-11-01'};}
   function plusDays(s,n){const d=date(s);d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10);}
   function weekendRange(today){const day=date(today).getUTCDay(),start=day===0?today:plusDays(today,(6-day+7)%7);return {start,end:day===0?today:plusDays(start,1)};}
   // Twenty-eight local calendar dates, including today. Keep one card per show.
@@ -42,7 +44,7 @@
     if(!edit)return false;
     if(edit.id==='half-term'){
       const window=halfTermWindow(p.region);
-      return ['event','club'].includes(p.kind)&&p.type!=='market'&&p.name!=='Musical moments around the world – Under 5s – RAMM'&&p.name!=='Bayeux Around Britain digital trail – RAMM'&&(p.datePeriods||[]).some(d=>d.end>=today&&d.start<=window.end&&d.end>=window.start);
+      return ['event','club'].includes(p.kind)&&(p.datePeriods||[]).some(d=>d.end>=today&&d.start<=window.end&&d.end>=window.start);
     }
     const text=[p.name,p.description,p.category,...(p.keywords||[])].join(' ');
     return (!edit.region||p.region===edit.region)&&(!edit.secondary||p.bookAhead===true)&&edit.terms.test(text)&&(p.datePeriods||[]).some(d=>d.end>=today&&d.start<=edit.end);

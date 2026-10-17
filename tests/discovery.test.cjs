@@ -53,6 +53,25 @@ test('Seasonal list keeps every matching event while the home edit stays at five
  assert(model.matchesSeasonal(halloween[0],'2026-09-13','halloween'));
  assert.equal(model.nextBatch(model.seasonalPlaces(halloween,'2026-09-13','halloween'),12).length,5);
 });
+test('October edit includes all dated days out and clubs, including early Sidmouth science events',()=>{
+ const exeter=items.filter(p=>p.region==='Exeter');
+ const picks=model.seasonalPlaces(exeter,'2026-10-17','half-term');
+ const names=new Set(picks.map(p=>p.name));
+ assert(names.has('Robot Workshop – Sidmouth Science Festival'));
+ assert(names.has('Family Fun Day – Norman Lockyer Observatory'));
+ assert(names.has('Mermaids and Monsters Writing Workshop – Topsham (8–12)'));
+ assert(names.has('Exeter Quayside Farmers’ Market'));
+ assert(picks.every(p=>['event','club'].includes(p.kind)));
+ assert(picks.every(p=>p.datePeriods.some(d=>d.end>='2026-10-17'&&d.start<='2026-11-01')));
+ for(const region of ['Exeter','Bristol','Nottingham']){
+  const regional=items.filter(p=>p.region===region);
+  const expected=regional.filter(p=>['event','club'].includes(p.kind)&&p.datePeriods?.some(d=>d.end>='2026-10-17'&&d.start<='2026-11-01'));
+  const actual=model.seasonalPlaces(regional,'2026-10-17','half-term');
+  assert.deepEqual(new Set(actual.map(p=>p.id)),new Set(expected.map(p=>p.id)),region);
+ }
+ assert(!model.seasonalPlaces(exeter,'2026-10-18','half-term').some(p=>p.name==='Robot Workshop – Sidmouth Science Festival'));
+ assert.equal(model.seasonalDefinition('half-term','2026-10-30'),null);
+});
 test('Christmas book-ahead edit contains checked Exeter and Bristol booking pages without mixing regions',()=>{
  const exeter=items.filter(p=>p.region==='Exeter');
  const early=model.bookAheadEdit(exeter,'2026-10-05');
