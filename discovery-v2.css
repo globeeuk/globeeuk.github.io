@@ -171,4 +171,20 @@
 .half-term-results-heading{margin:0 0 16px;padding-bottom:11px;border-bottom:1px solid var(--line)}
 .half-term-results-heading h3{font:600 24px/1.15 var(--heading);letter-spacing:-.5px;margin:0 0 5px;color:#2d4339}
 .half-term-results-heading p{font-size:13px;line-height:1.5;color:var(--muted);margin:0}
-@media(max-width:600px){.half-term-results-group{margin-bottom:30px}.half-term-results-heading h3{font-size:21px}.half-term-results-heading p{font-size:12px}}
+.seasonal-results-group{margin-bottom:38px}
+.seasonal-results-heading{margin:0 0 16px;padding-bottom:11px;border-bottom:1px solid var(--line)}
+.seasonal-results-heading h3{font:600 24px/1.15 var(--heading);letter-spacing:-.5px;margin:0 0 5px;color:#2d4339}
+.seasonal-results-heading p{font-size:13px;line-height:1.5;color:var(--muted);margin:0}
+.seasonal-guide-link{display:inline-flex;align-items:center;gap:7px;margin-top:10px;color:#2d5c49;font-size:13px;font-weight:800;text-underline-offset:3px}
+.seasonal-guide-link svg{width:16px;height:16px}
+.tree-source-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.tree-source-card{display:flex;flex-direction:column;min-height:155px;padding:17px;border:1px solid #dfded8;border-radius:15px;background:#f8f7f3;color:#263c32;text-decoration:none;transition:border-color .2s,transform .2s}
+.tree-source-card:hover{border-color:#7b9a82;transform:translateY(-2px)}
+.tree-source-area{font-size:11px;font-weight:700;color:#657368}
+.tree-source-card h4{font:600 19px/1.18 var(--heading);letter-spacing:-.35px;margin:10px 0 7px}
+.tree-source-status{font-size:12px;color:#566a5d}
+.tree-source-action{display:inline-flex;align-items:center;gap:5px;margin-top:auto;padding-top:13px;font-size:12px;font-weight:800;color:#2d5c49}
+.tree-source-action svg{width:15px;height:15px}
+@media(max-width:800px){.tree-source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.half-term-results-group,.seasonal-results-group{margin-bottom:30px}.half-term-results-heading h3,.seasonal-results-heading h3{font-size:21px}.half-term-results-heading p,.seasonal-results-heading p{font-size:12px}}
+@media(max-width:420px){.tree-source-card{min-height:145px;padding:13px}.tree-source-card h4{font-size:16px}.tree-source-area,.tree-source-status,.tree-source-action{font-size:10px}}

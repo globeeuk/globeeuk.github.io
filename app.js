@@ -130,8 +130,8 @@ function renderWeekend(){
   if(container.hidden)return;
   const regional=data.filter(p=>p.region===state.region);
   const seasonal=GlobeeDiscovery.seasonalEdit(regional,TODAY);
-  const bookAhead=TODAY<='2026-10-30'?GlobeeDiscovery.bookAheadEdit(regional,TODAY):null;
-  const eligible=regional.filter(p=>TODAY<='2026-10-30'||!GlobeeDiscovery.matchesSeasonal(p,TODAY,'halloween'));
+  const bookAhead=TODAY<'2026-10-30'?GlobeeDiscovery.bookAheadEdit(regional,TODAY):null;
+  const eligible=regional.filter(p=>TODAY<'2026-10-30'||!GlobeeDiscovery.matchesSeasonal(p,TODAY,'halloween'));
   const weekend=plansWindow==='four-weeks'?GlobeeDiscovery.nextFourWeeksPicks(eligible,TODAY):GlobeeDiscovery.weekendPicks(eligible,TODAY);
   const primaryKey=`${state.region}|${TODAY}|${plansWindow}|${seasonal?.id||'none'}|${seasonal?.picks.map(p=>p.id).join(',')||''}|${bookAhead?.picks.map(p=>p.id).join(',')||''}|${weekend.map(p=>p.id).join(',')}`;
   if(lastPrimaryPlansKey===primaryKey){container.hidden=!container.children.length;return;}
@@ -146,7 +146,10 @@ function renderWeekend(){
       sections.push(rail('half-term-clubs','Half-term holiday clubs','Confirmed dates and official booking links',clubs.slice(0,5),`${allLink}&type=club`,`View all clubs (${clubs.length})`));
     }
     const seasonalPicks=seasonal.id==='half-term'?seasonal.picks.filter(p=>p.kind!=='club'):seasonal.picks;
-    if(seasonalPicks.length)sections.push(rail(`${seasonal.id}-picks`,seasonal.id==='half-term'?'October half-term days out & shows':seasonal.title,seasonal.homeEnd?seasonal.subtitle:`${seasonal.subtitle} · Until ${dateShort(seasonal.end)}`,seasonalPicks,allLink,`View all (${seasonal.total})`));
+    if(seasonalPicks.length){
+      const seasonalSubtitle=seasonal.id==='christmas'&&state.region!=='Exeter'?'Festive days out and shows':seasonal.subtitle;
+      sections.push(rail(`${seasonal.id}-picks`,seasonal.id==='half-term'?'October half-term days out & shows':seasonal.title,seasonal.homeEnd?seasonalSubtitle:`${seasonalSubtitle} · Until ${dateShort(seasonal.end)}`,seasonalPicks,allLink,`View all (${seasonal.total})`));
+    }
     else sections.push(`<section class="seasonal-pending" aria-labelledby="seasonal-pending-heading"><h2 id="seasonal-pending-heading">${escapeHTML(seasonal.title)}</h2><p>We’re checking festive family plans in ${escapeHTML(REGION_LABELS[state.region])}. Dates and booking details will appear here once confirmed.</p></section>`);
   }
   if(bookAhead){
@@ -168,6 +171,18 @@ function renderRails(places){
     const clubs=places.filter(p=>p.kind==='club'),outings=places.filter(p=>p.kind!=='club');
     const group=(id,title,description,items)=>items.length?`<section class="half-term-results-group" aria-labelledby="${id}"><div class="half-term-results-heading"><h3 id="${id}">${title}</h3><p>${description} · ${items.length} ${items.length===1?'plan':'plans'}</p></div><div class="plans-grid" aria-label="${title}">${items.map(card).join('')}</div></section>`:'';
     $('#discovery-rails').innerHTML=group('half-term-clubs-heading','Holiday clubs','For school-break days',clubs)+group('half-term-outings-heading','Days out & shows','For time together',outings);
+  }else if(isPlansPage&&state.edit==='christmas'){
+    const showTreeSources=state.region==='Exeter'&&!state.age.length&&state.price==='all'&&state.type==='all'&&!state.query&&!state.dates&&!state.collection;
+    const treeSources=[
+      ['Cotley Farm Christmas','Whimple · East Devon','Book a vehicle slot','cotley-farm'],
+      ['Exe Valley Christmas Trees','Thorverton · Mid Devon','25 Nov–23 Dec 2026','exe-valley'],
+      ['Haldon Christmas Tree Centre','Haldon Forest · Near Exeter','25 Nov–22 Dec 2026','haldon'],
+      ['Greendale Farm Shop','Near Farringdon · East Devon','2026 collection dates TBC','greendale']
+    ];
+    const treeGuide=showTreeSources?`<section class="seasonal-results-group" aria-labelledby="christmas-trees-heading"><div class="seasonal-results-heading"><h3 id="christmas-trees-heading">Christmas trees</h3><p>Four places to buy a real tree near Exeter. Compare cut and pot-grown choices, prices and visiting details.</p><a class="seasonal-guide-link" href="/exeter/christmas-trees/">Compare tree-buying places ${icon('arrow')}</a></div><div class="tree-source-grid" aria-label="Christmas tree buying places">${treeSources.map(([name,area,status,id])=>`<a class="tree-source-card" href="/exeter/christmas-trees/#${id}"><span class="tree-source-area">${area}</span><h4>${name}</h4><span class="tree-source-status">${status}</span><span class="tree-source-action">See buying details ${icon('arrow')}</span></a>`).join('')}</div></section>`:'';
+    const events=showTreeSources?places.filter(p=>p.name!=='Cotley Farm Christmas'):places;
+    const eventGroup=events.length?`<section class="seasonal-results-group" aria-labelledby="christmas-events-heading"><div class="seasonal-results-heading"><h3 id="christmas-events-heading">Festive events &amp; shows</h3><p>${events.length} ${events.length===1?'plan':'plans'} with published dates and organiser links. Check availability before booking.</p></div><div class="plans-grid" aria-label="Festive events and shows">${events.map(card).join('')}</div></section>`:'';
+    $('#discovery-rails').innerHTML=treeGuide+eventGroup;
   }else $('#discovery-rails').innerHTML=places.length?`<div class="plans-grid" aria-label="${isPlansPage?'All matching events and holiday clubs':'All matching places, events and holiday clubs'}">${places.map(card).join('')}</div>`:'';
   fixImages($('#discovery-rails'));
 }
@@ -226,33 +241,41 @@ function render(){
   const activeEdit=state.edit?GlobeeDiscovery.seasonalDefinition(state.edit,TODAY):null;
   if($('#plans-page-title')){
     $('#plans-page-title').textContent=activeEdit?activeEdit.title:'What’s on & holiday clubs';
-    $('.plans-intro-copy').textContent=activeEdit?.id==='christmas-book-ahead'?'Family Christmas events with published 2026 dates and booking links. Check availability with the organiser.':activeEdit?.id==='half-term'?'Holiday clubs, days out and shows with confirmed dates for the October school break. Check places, times and prices with each organiser.':activeEdit?'Every verified seasonal plan, together in one list.':'Browse upcoming events and holiday clubs in one place.';
+    $('.plans-intro-copy').textContent=activeEdit?.id==='christmas-book-ahead'?'Family Christmas events with published 2026 dates and booking links. Check availability with the organiser.':activeEdit?.id==='half-term'?'Holiday clubs, days out and shows with confirmed dates for the October school break. Check places, times and prices with each organiser.':activeEdit?.id==='christmas'&&state.region==='Exeter'?'Tree-buying ideas and Christmas events together. Check dates, prices and booking with each organiser.':activeEdit?.id==='christmas'?'Christmas events and shows with published dates. Check availability with each organiser.':activeEdit?'Every verified seasonal plan, together in one list.':'Browse upcoming events and holiday clubs in one place.';
     document.title=activeEdit?`${activeEdit.title} in ${state.region==='Exeter'?'Exeter & Devon':state.region} | Globee`:'What’s on & holiday clubs | Globee';
   }
   if($('.weekend-shortcut'))$('.weekend-shortcut').hidden=!!activeEdit;
   const scoopPromo=$('#scoop-promo-link');
   const halfTermEntry=$('#half-term-entry');
+  const christmasEntry=$('#christmas-entry');
   const winterMapLink=$('#winter-map-link');
   if(halfTermEntry){
-    const active=!!GlobeeDiscovery.seasonalDefinition('half-term',TODAY);
-    halfTermEntry.hidden=!active;
+    const halfTermActive=!!GlobeeDiscovery.seasonalDefinition('half-term',TODAY);
+    const christmasActive=!!GlobeeDiscovery.seasonalDefinition('christmas',TODAY);
+    halfTermEntry.hidden=!halfTermActive;
     halfTermEntry.href=`plans.html?region=${encodeURIComponent(state.region==='Exeter'?'Devon':state.region)}&edit=half-term`;
-    if(scoopPromo)scoopPromo.hidden=active;
-    if(winterMapLink)winterMapLink.hidden=!active||state.region==='Nottingham';
-    halfTermEntry.closest('.entry-cards').classList.toggle('entry-cards-winter',active);
+    if(christmasEntry){
+      christmasEntry.hidden=!christmasActive;
+      christmasEntry.href=`plans.html?region=${encodeURIComponent(state.region==='Exeter'?'Devon':state.region)}&edit=christmas`;
+      christmasEntry.querySelector('.christmas-kinds').textContent=state.region==='Exeter'?'Trees · Festive days out · Shows':'Festive days out · Shows';
+    }
+    if(scoopPromo)scoopPromo.hidden=halfTermActive||christmasActive;
+    if(winterMapLink)winterMapLink.hidden=!halfTermActive||state.region==='Nottingham';
+    halfTermEntry.closest('.entry-cards').classList.toggle('entry-cards-winter',halfTermActive||christmasActive);
   }
   if(scoopPromo)scoopPromo.href=`ice-cream.html?from=${state.region==='Bristol'?'Bristol':'Devon'}`;
   if(winterMapLink)winterMapLink.querySelector('a').href=`ice-cream.html?from=${state.region==='Bristol'?'Bristol':'Devon'}`;
   const classesEntry=$('#classes-entry-link');
   if(classesEntry){classesEntry.href=state.region==='Bristol'?'/bristol/classes/':state.region==='Nottingham'?'/nottingham/classes/':'/classes.html';classesEntry.querySelector('.entry-kicker').textContent=state.region==='Bristol'?'Bristol':state.region==='Nottingham'?'Nottingham':'Exeter · Devon';}
-  $('#results-heading').textContent=state.view==='map'?(activeEdit?`${activeEdit.title} on the map`:'Explore on the map'):activeEdit?.id==='half-term'?'All half-term plans':activeEdit?`All ${activeEdit.title}`:weekendOnlyPilot?'Bristol is growing 🐝':hasFilters()?'Matching plans':isPlansPage?'All upcoming plans':'Explore all';
-  $('#results-subtitle').textContent=activeEdit?`${activeEdit.subtitle} · Until ${dateShort(activeEdit.end)}`:weekendOnlyPilot?`We’re starting with ${places.length} checked picks for this weekend.`:isPlansPage?'What’s on & holiday clubs':hasFilters()?'Places and activities that match your filters.':'Places, what’s on & holiday clubs';
-  $('#result-count').textContent=weekendOnlyPilot?'':`${places.length} ${places.length===1?'result':'results'}`;
+  $('#results-heading').textContent=state.view==='map'?(activeEdit?`${activeEdit.title} on the map`:'Explore on the map'):activeEdit?.id==='half-term'?'All half-term plans':activeEdit?.id==='christmas'?'All Christmas plans':activeEdit?`All ${activeEdit.title}`:weekendOnlyPilot?'Bristol is growing 🐝':hasFilters()?'Matching plans':isPlansPage?'All upcoming plans':'Explore all';
+  $('#results-subtitle').textContent=activeEdit?`${activeEdit.id==='christmas'&&state.region!=='Exeter'?'Festive days out and shows':activeEdit.subtitle} · Until ${dateShort(activeEdit.end)}`:weekendOnlyPilot?`We’re starting with ${places.length} checked picks for this weekend.`:isPlansPage?'What’s on & holiday clubs':hasFilters()?'Places and activities that match your filters.':'Places, what’s on & holiday clubs';
+  const combinedChristmas=activeEdit?.id==='christmas'&&state.region==='Exeter'&&!state.age.length&&state.price==='all'&&state.type==='all'&&!state.query&&!state.dates&&!state.collection;
+  $('#result-count').textContent=weekendOnlyPilot?'':combinedChristmas?`4 tree places · ${Math.max(0,places.length-1)} festive plans`:`${places.length} ${places.length===1?'result':'results'}`;
   $('#date-scope-note').hidden=!state.dates;
   $('#date-scope-note').textContent=isPlansPage?'Showing events and clubs with confirmed dates. Clear Dates to include clubs with dates TBC.':'Showing date-confirmed events. Clear Dates to include cafés, regular places and activities with dates TBC.';
   renderWeekend();
-  if(state.view==='list'&&filterSignature!==lastListSignature){if(weekendOnlyPilot)renderBristolGrowthNote();else renderRails(state.edit==='half-term'&&isPlansPage?places:places.slice(0,visibleCount));lastListSignature=filterSignature;}
-  renderLoadMore(weekendOnlyPilot||state.edit==='half-term'&&isPlansPage?0:places.length);
+  if(state.view==='list'&&filterSignature!==lastListSignature){if(weekendOnlyPilot)renderBristolGrowthNote();else renderRails(['half-term','christmas'].includes(state.edit)&&isPlansPage?places:places.slice(0,visibleCount));lastListSignature=filterSignature;}
+  renderLoadMore(weekendOnlyPilot||['half-term','christmas'].includes(state.edit)&&isPlansPage?0:places.length);
   $('#empty-state').hidden=places.length>0;
   const chips=[];
   if(activeEdit&&!dedicatedEdit)chips.push(['edit',activeEdit.title]);

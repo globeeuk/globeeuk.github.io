@@ -8,9 +8,10 @@ test('Nine Devon Christmas search choices use licensed photos with honest farm l
  assert.match(images.decorate({name:names[8],region:'Exeter'}).image,/barnfield-auditorium/);
  assert.equal(images.decorate({name:names[0],region:'Bristol'}).imageKind,'illustration');
 });
-test('Winter entry links to an indexable guide and retains the ice cream map',()=>{
+test('Winter entry opens the combined Christmas Edit and retains the tree guide and ice cream map',()=>{
  const home=read('index.html'),guide=read('exeter/christmas-trees/index.html'),css=read('ice-cream.css');
- assert.match(home,/id="christmas-tree-entry"/);assert.match(home,/href="\/exeter\/christmas-trees\/"/);assert.match(home,/id="winter-map-link"/);
+ assert.match(home,/id="christmas-entry"/);assert.match(home,/href="plans\.html\?region=Devon&amp;edit=christmas"/);assert.match(home,/id="winter-map-link"/);
+ assert.match(read('app.js'),/href="\/exeter\/christmas-trees\/"/);
  assert.match(css,/grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);assert.match(css,/grid-column:1\/-1/);
  assert.match(guide,/<link rel="canonical" href="https:\/\/globeeuk.github.io\/exeter\/christmas-trees\/">/);
  assert.match(read('sitemap.xml'),/<loc>https:\/\/globeeuk.github.io\/exeter\/christmas-trees\/<\/loc>/);
