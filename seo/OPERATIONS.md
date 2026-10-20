@@ -127,6 +127,14 @@ The 15 October selection is Robot Workshop, Mermaids and Monsters writing, Arrie
 
 ## Search Console and measurement
 
+### Birthday Parent note — 20 October 2026
+
+The user approved the researched birthday guide and its compact capacity, minimum-hire, maximum-hire and separately qualified party-slot labels. The hand-maintained, static route `/parent-notes/exeter-birthday-parties/` is linked from the homepage's Parent notes section and included in the root sitemap. Preserve it during ordinary SEO staging; it is not an event export or another regional directory. All nineteen provider entries must remain readable without JavaScript. Research provenance and hire qualifications are recorded in `qa/birthday-sources-2026-10-20.json`.
+
+This is Yewon's planning-stage note, not a completed-party review, a sponsored placement, a verified availability list or a live quote. Missing hire limits remain “Ask venue”; do not infer maximum hours from building opening times. Meraki off-site work requires direct agreement. Do not present a January voucher sale as confirmed. Published provider starting prices retain their basis, travel and eligibility conditions.
+
+Only the licensed Community Centre and Beacon exteriors and the credited Unsplash cake are reproduced. Six permission-pending official venue images from the private mockup are replaced by links to official photo pages. Do not add them back without documented permission or an appropriate licence. No child faces or AI venue placeholders are used. The article retains the site's existing analytics scripts and consent settings without changing collection policy. Publication does not prove search indexing, Instagram publication or visitor growth; marketing outreach and social posting require separate approval.
+
 On **13 September 2026**, ownership of `https://globeeuk.github.io/` was verified in the owner's Search Console account using the homepage HTML tag. Preserve that tag. The combined `https://globeeuk.github.io/sitemap.xml` was submitted, and the hub plus all three guides were individually accepted into the priority crawl queue through Request indexing. These actions do not prove actual indexing.
 
 The sitemap report initially showed **Couldn't fetch / 0 discovered pages**. A live URL Inspection test of that exact sitemap at **16:15 BST** confirmed **Crawl allowed: Yes**, **Page fetch: Successful** and **Indexing allowed: Yes**. Public HTTP checks also returned 200 with valid XML. The sitemap was resubmitted once after that successful live test. Report processing still needs a later status check; do not describe it as successfully parsed until Search Console says so. If it persists, follow [Google's sitemap troubleshooting guidance](https://support.google.com/webmasters/answer/7451001?hl=en). A new property is not by itself proof that an error is harmless.

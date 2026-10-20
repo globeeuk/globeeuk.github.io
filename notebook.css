@@ -1,6 +1,10 @@
 /* User-approved notebook navigation. Existing data, consent and maps are retained. */
 .notebook-page{--paper:#fffefa;--ink:#2d352f;--muted:#6b7267;--line:#e4e4d8;--soft:#f5f4ee;--font:'Manrope',system-ui,sans-serif;--heading:'Outfit',system-ui,sans-serif;--nb-sage:#e8ecdf;--nb-blue:#e9eff0;--nb-peach:#f2e5d6;--nb-rose:#f0e4de;--nb-green:#354e3d;--nb-rust:#96583c;background:var(--paper);color:var(--ink);font-family:var(--font)}
 .notebook-page [hidden]{display:none!important}
+.notebook-note-card{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:28px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:26px;max-width:850px}
+.notebook-note-card img{display:block;width:100%;height:160px;object-fit:cover;border-radius:3px}
+.notebook-note-link{display:inline-block;font-size:14px;color:var(--nb-green);font-weight:600;margin-top:18px;min-height:44px;padding:8px 0}
+@media(max-width:600px){.notebook-note-card{grid-template-columns:1fr;gap:18px}.notebook-note-card img{width:100%;height:145px;object-position:center 65%}}
 .notebook-page a:focus-visible,.notebook-page button:focus-visible,.notebook-page input:focus-visible{outline:3px solid var(--nb-rust);outline-offset:4px}
 .notebook-page .content-width,.notebook-page .wrap,.notebook-page .header-inner{width:100%;max-width:1264px;margin-inline:auto;padding-inline:48px}
 .notebook-page .site-header{position:static;background:var(--paper);border:0;backdrop-filter:none}

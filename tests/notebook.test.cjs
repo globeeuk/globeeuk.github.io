@@ -7,11 +7,12 @@ test('The approved four notebook sections are available in every regional class 
   assert.match(html,/notebook\.css\?v=notebook1/);assert.match(html,/notebook\.js\?v=notebook1/);
  }
 });
-test('Parent notes has an honest pending state and no unapproved birthday article or AI banner',()=>{
+test('Parent notes links to the approved birthday research, without an AI banner',()=>{
  const html=read('index.html');
  assert.match(html,/id="parent-notes-pending" hidden/);
- assert.match(html,/The first notes will appear here when they’re ready/);
- assert.doesNotMatch(html,/party-preview|Where do I start|birthday-cake|nh-article|Read the notes/);
+ assert.match(html,/href="\/parent-notes\/exeter-birthday-parties\/"/);
+ assert.match(html,/Research notes from Yewon’s own planning stage/);
+ assert.doesNotMatch(html,/party-preview|The first notes will appear here when they’re ready/);
 });
 test('Notebook lists use automatic batches with an all-items fallback and only holiday club records',()=>{
  const app=read('app.js');
