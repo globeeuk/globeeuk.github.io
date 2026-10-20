@@ -335,6 +335,7 @@ def footer(production=False, *, region_key="exeter"):
     region = REGIONS[region_key]
     directory = directory_url(region_key)
     settings = '<button type="button" class="text-button" data-analytics-toggle>Analytics settings</button>' if production else ""
+    parent_note = '<a href="/parent-notes/exeter-birthday-parties/">Exeter birthday parties &amp; hall hire</a>' if region_key == "exeter" else ""
     other_regions = "".join(
         f'<a href="/{key}/">{esc(value["label"])} guides</a>'
         for key, value in REGIONS.items()
@@ -343,7 +344,7 @@ def footer(production=False, *, region_key="exeter"):
     return f'''<footer><p>{esc(region['footer'])}</p>
     <p>These guides use official provider information. An official-source check does not mean we have visited every activity.</p>
     <p>Prices &amp; schedules change — always check the provider before booking.</p>
-    <div class="footer-links"><a href="{directory}">Explore the Globee directory</a><a href="/{region_key}/">All {esc(region['city'])} guides</a>{other_regions}<a href="/privacy.html">Privacy &amp; analytics</a>{settings}</div></footer></body></html>'''
+    <div class="footer-links"><a href="{directory}">Explore the Globee directory</a><a href="/{region_key}/">All {esc(region['city'])} guides</a>{parent_note}{other_regions}<a href="/privacy.html">Privacy &amp; analytics</a>{settings}</div></footer></body></html>'''
 
 
 def guide(slug, items, as_of, production, *, region_key="exeter"):

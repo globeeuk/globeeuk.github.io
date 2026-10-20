@@ -129,6 +129,8 @@ The 15 October selection is Robot Workshop, Mermaids and Monsters writing, Arrie
 
 ### Birthday Parent note — 20 October 2026
 
+The birthday SEO follow-up adds a descriptive, static link from each Exeter guide footer, maintained in `seo/build.py`, and a return link plus BreadcrumbList in the article. Keep this navigation local to Exeter; it is not a Bristol party list. Rebuild generated footers with `seo/stage.py` and its live Sheet binding guard, not hand-copied HTML. Do not alter the provider verification dates merely to promote the article. Social carousel files are preparation only until the owner confirms publication.
+
 The user approved the researched birthday guide and its compact capacity, minimum-hire, maximum-hire and separately qualified party-slot labels. The hand-maintained, static route `/parent-notes/exeter-birthday-parties/` is linked from the homepage's Parent notes section and included in the root sitemap. Preserve it during ordinary SEO staging; it is not an event export or another regional directory. All nineteen provider entries must remain readable without JavaScript. Research provenance and hire qualifications are recorded in `qa/birthday-sources-2026-10-20.json`.
 
 This is Yewon's planning-stage note, not a completed-party review, a sponsored placement, a verified availability list or a live quote. Missing hire limits remain “Ask venue”; do not infer maximum hours from building opening times. Meraki off-site work requires direct agreement. Do not present a January voucher sale as confirmed. Published provider starting prices retain their basis, travel and eligibility conditions.

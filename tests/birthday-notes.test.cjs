@@ -33,3 +33,11 @@ test('Existing analytics scripts and settings remain, with no new tracking in ar
  assert.doesNotMatch(read('parent-notes/birthday.js'),/localStorage|document.cookie|fetch\(|gtag|sendBeacon/);
  assert.match(html,/href="\/classes.html"/);
 });
+test('Birthday planning has valid breadcrumbs and crawlable links from the Exeter guides',()=>{
+ const graphs=[...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map(m=>JSON.parse(m[1]));
+ const breadcrumb=graphs.find(g=>g['@type']==='BreadcrumbList');
+ assert.equal(breadcrumb.itemListElement.length,3);
+ assert.deepEqual(breadcrumb.itemListElement.map(e=>e.position),[1,2,3]);
+ assert.match(html,/href="\/exeter\/"/);
+ for(const file of ['exeter/index.html','exeter/this-weekend/index.html','exeter/free-things-to-do/index.html','exeter/rainy-day/index.html'])assert.match(read(file),/href="\/parent-notes\/exeter-birthday-parties\/">Exeter birthday parties &amp; hall hire<\/a>/);
+});
