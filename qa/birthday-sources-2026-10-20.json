@@ -2,6 +2,41 @@
   "checked": "2026-10-20",
   "providers": [
     {
+      "id": "tenpin",
+      "group": "package",
+      "name": "Tenpin Exeter · bowling party",
+      "area": "Havenbanks Retail Park · Exeter EX2 8BY",
+      "offer": "Children’s bowling birthday party",
+      "price": "£13.99 per child",
+      "basis": "Exeter advertised price · Saturdays & Sundays, subject to availability",
+      "party_facts": {
+        "Ages": "4–13 years",
+        "Min children": "6",
+        "Party time": "2 hours",
+        "Max guests": null
+      },
+      "included": "Bowling, pizza and fries, unlimited squash and a goody bag for the birthday child. This is a party package, not private hire of the whole venue.",
+      "check": "Confirm the final Exeter quote, guest limit, time slot and dietary needs. The terms request two adults aged 18+ per four children; online bookings are paid in full. Bring your own cake: the current party FAQ says staff cannot present it. Confirm serving arrangements and cancellation terms before paying. The 36-person online booking limit is not a verified party capacity.",
+      "url": "https://www.tenpin.co.uk/parties-at-tenpin/bowling-parties/",
+      "venue_url": "https://www.tenpin.co.uk/exeter/",
+      "terms": "https://www.tenpin.co.uk/terms-privacy/terms-conditions/",
+      "terms_label": "Party terms",
+      "photo_link": "https://www.tenpin.co.uk/exeter/",
+      "instagram": "tenpin_uk",
+      "instagram_source": "https://www.tenpin.co.uk/exeter/",
+      "instagram_note": "National Tenpin account linked by the official Exeter page; not an Exeter-only account.",
+      "source_review": {
+        "checked": "2026-10-20",
+        "sources": [
+          "https://www.tenpin.co.uk/exeter/",
+          "https://www.tenpin.co.uk/parties-at-tenpin/bowling-parties/",
+          "https://www.tenpin.co.uk/terms-privacy/terms-conditions/"
+        ],
+        "qualification": "Use the specific party page’s 4–13 age guidance, not the broader under-16 wording in general terms. The current FAQ does not offer staff cake presentation, unlike older indexed copy. Maximum party capacity and live slots remain unconfirmed. No provider contact or booking was made.",
+        "image_rights": "No photo reproduction permission confirmed. Link to official venue photographs only."
+      }
+    },
+    {
       "id": "iplay",
       "group": "package",
       "name": "iPlay Exeter",

@@ -1,8 +1,9 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const read=file=>fs.readFileSync(path.join(__dirname,'..',file),'utf8');
 const html=read('parent-notes/exeter-birthday-parties/index.html');
-test('The birthday note is an indexable static article with all nineteen providers',()=>{
- assert.equal((html.match(/data-provider-id=/g)||[]).length,19);
+test('The birthday note is an indexable static article with all twenty providers',()=>{
+ assert.equal((html.match(/data-provider-id=/g)||[]).length,20);
+ assert.equal(JSON.parse(read('qa/birthday-sources-2026-10-20.json')).providers.length,20);
  assert.match(html,/<html lang="en-GB">/);
  assert.match(html,/<link rel="canonical" href="https:\/\/globeeuk.github.io\/parent-notes\/exeter-birthday-parties\/">/);
  assert.match(html,/<meta name="robots" content="index,follow">/);
@@ -20,12 +21,23 @@ test('The note retains compact hall limits, entertainment, savings and uncertain
  assert.match(html,/Studio party prices are not a quote/);
  assert.match(html,/not a review of a party we’ve already held/);
 });
-test('Only licensed photographs ship; the other six venues link to official galleries',()=>{
+test('Only licensed photographs ship; the other seven venues link to official galleries',()=>{
  assert.equal((html.match(/class="bp-venue-photo"/g)||[]).length,2);
- assert.equal((html.match(/Venue photos on official site/g)||[]).length,6);
+ assert.equal((html.match(/Venue photos on official site/g)||[]).length,7);
  for(const id of ['iplay','wonderland','sidwells','parklife','wonford','longdown'])assert(!fs.existsSync(path.join(__dirname,'../assets/parent-notes',id+'.jpg')));
  for(const src of html.matchAll(/<img[^>]+src="([^"]+)"/g))assert(fs.existsSync(path.join(__dirname,'..',src[1])));
  assert.match(html,/CC BY-SA 2.0/);assert.match(html,/Sam Grozyan/);
+});
+test('Exeter bowling is a verified party package with explicit unknown maximum capacity',()=>{
+ const card=html.match(/<article class="bp-provider" data-provider-id="tenpin">[\s\S]*?<\/article>/)?.[0];
+ assert(card,'Tenpin Exeter card');
+ for(const value of ['Tenpin Exeter','£13.99 per child','4–13 years','2 hours','Saturdays &amp; Sundays','pizza and fries','unlimited squash','two adults aged 18+ per four children','staff cannot present it','not private hire of the whole venue','not a verified party capacity'])assert(card.includes(value),value);
+ assert.match(card,/data-party-fact="Min children"><dt>Min children<\/dt><dd>6<\/dd>/);
+ assert.match(card,/data-party-fact="Max guests"><dt>Max guests<\/dt><dd>Ask venue<\/dd>/);
+ assert.match(card,/https:\/\/www\.instagram\.com\/tenpin_uk\//);
+ assert.match(card,/Party terms ↗/);assert.doesNotMatch(card,/<img/);
+ const source=JSON.parse(read('qa/birthday-sources-2026-10-20.json')).providers.find(p=>p.id==='tenpin');
+ assert.equal(source.source_review.checked,'2026-10-20');assert.equal(source.source_review.sources.length,3);
 });
 test('Existing analytics scripts and settings remain, with no new tracking in article behaviour',()=>{
  assert.match(html,/basic-analytics.js\?v=basic2/);assert.match(html,/analytics.js\?v=music-banner-click1/);
