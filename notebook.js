@@ -5,6 +5,13 @@
  if(!body.classList.contains('notebook-page'))return;
  const sections=['days','classes','holidays','notes'];
  const labels={days:'Days out',classes:'Classes & lessons',holidays:'Holiday clubs',notes:'Parent notes'};
+ const classRegion=document.querySelector('[data-notebook-class-region]');
+ if(classRegion&&!classRegion.closest('.region-switcher')){
+  const wrapper=document.createElement('label');wrapper.className='region-switcher';
+  const caption=document.createElement('span');caption.className='region-switch-label';caption.textContent='Change area';
+  const arrow=document.createElement('span');arrow.className='region-switch-arrow';arrow.setAttribute('aria-hidden','true');arrow.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
+  classRegion.before(wrapper);wrapper.append(caption,classRegion,arrow);
+ }
  function url(section,region){
   const key=region==='Exeter'?'Devon':region;
   if(section==='classes')return region==='Bristol'?'/bristol/classes/':region==='Nottingham'?'/nottingham/classes/':'/classes.html';
@@ -14,6 +21,8 @@
   const region=state.region||body.dataset.notebookRegion||'Exeter';
   const section=state.notebookSection||body.dataset.notebookSection||'days';
   body.dataset.notebookActive=section;
+  const regionButton=document.querySelector('.region-control[data-menu="region"]');
+  if(regionButton)regionButton.setAttribute('aria-label','Change area. Current area: '+(region==='Exeter'||region==='Devon'?'Exeter and Devon':region));
   const brand=document.querySelector('.site-header .brand');if(brand)brand.href=url('days',region);
   document.querySelectorAll('a[data-notebook-section]').forEach(a=>{
    const active=a.dataset.notebookSection===section;a.href=url(a.dataset.notebookSection,region);

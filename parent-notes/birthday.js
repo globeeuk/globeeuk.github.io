@@ -8,4 +8,11 @@
   }
   inputs.forEach(input => input.addEventListener('change', update));
   update();
+  const areaMenu=document.querySelector('.bp-region-switch');
+  if(areaMenu){
+    areaMenu.addEventListener('keydown',event=>{
+      if(event.key==='Escape'&&areaMenu.open){areaMenu.open=false;areaMenu.querySelector('summary').focus();}
+    });
+    document.addEventListener('click',event=>{if(areaMenu.open&&!areaMenu.contains(event.target))areaMenu.open=false;});
+  }
 })();
