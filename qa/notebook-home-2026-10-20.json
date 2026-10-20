@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-20",
+  "base_commit": "84fdfc98818cb970776315412f134c34cbf42759",
+  "scope": "Approved notebook navigation and listing presentation; Parent notes content remains pending owner collaboration.",
+  "public_content": {
+    "days_out": "Existing complete eligible directory, loaded in automatic twelve-item batches without a Show more button.",
+    "classes": "All existing entries retained: Exeter 28, Bristol 27, Nottingham 18. Search combines with interest filters.",
+    "holiday_clubs": "Existing current regional kind=club records; no copied sample listings or invented dates.",
+    "parent_notes": "Honest preparation notice only. No birthday article or AI birthday banner published."
+  },
+  "preserved": ["Sheet data and schema", "original provider facts and checked dates", "SEO guide pages", "cookie choices and analytics logic", "30 October Christmas switch and combined tree/events edit", "map and fallback code", "Google site verification"],
+  "local_checks": {
+    "viewport_widths": [320, 390, 1280],
+    "responsive_route_combinations": 24,
+    "javascript_errors": 0,
+    "synthetic_continuous_list": "100 of 100, no button required",
+    "without_intersection_observer": "100 of 100 rendered",
+    "search_and_filters": "passed",
+    "regional_navigation": "passed",
+    "parent_notes_pending_state": "passed",
+    "seasonal_page_and_october_30_switch": "passed",
+    "map": "Network-unavailable fallback observed in local browser; external map tile rendering not certified.",
+    "unit_tests": {"total": 73, "passed": 65, "failed": 8, "new_regressions": 0},
+    "baseline_unit_tests": {"total": 69, "passed": 61, "failed": 8},
+    "unchanged_baseline_failures": ["current-card image metadata assertion", "image-register count assertion", "map-location completeness assertion", "analytics cache-version assertion", "Halloween legacy title assertion", "type-filter legacy cache-version assertion", "robot-image legacy cache-version assertion", "previous-weekend selection assertion"]
+  },
+  "publication": "Verify the deployed HTML and shared assets after the main-branch update; local checks alone are not proof of publication."
+}

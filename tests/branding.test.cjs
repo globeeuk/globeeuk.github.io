@@ -26,7 +26,7 @@ test('Small-page icons and the SEO generation template cannot restore the old G 
   assert.doesNotMatch(read('favicon.svg'), /<text[^>]*>G<\/text>/);
 });
 test('Homepage uses the requested slogan while preserving mobile sizing and verification tag', () => {
-  assert.match(read('index.html'), /<p class="brand-caption">Dream &amp; explore, together 🌱<\/p>/);
+  assert.match(read('index.html'), /<p class="[^"]*\bbrand-caption[^"]*">Dream &amp; explore, together 🌱<\/p>/);
   assert.doesNotMatch(read('index.html'), /Little plans\. Lovely days\./);
   assert.match(read('index.html'), /google-site-verification/);
   assert.match(read('brand.css'), /@media\(max-width:700px\)/);

@@ -6,6 +6,7 @@ document.querySelectorAll('[data-icon]').forEach(e=>e.innerHTML=icon(e.dataset.i
 const $=s=>document.querySelector(s);
 const escapeHTML=v=>String(v??'').replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
 const isPlansPage=document.body.dataset.page==='plans';
+const isNotebookHome=document.body.classList.contains('notebook-home');
 const dedicatedEdit=document.body.dataset.edit||null;
 const routeParams=new URLSearchParams(window.location.search);
 const REGIONS=['Exeter','Bristol','Nottingham'];
@@ -14,6 +15,7 @@ const REGION_CENTRES={Exeter:[50.7236,-3.5303],Bristol:[51.4545,-2.5879],Notting
 const requestedRegion=routeParams.get('region');
 const PAGE_SIZE=12;
 const state={region:requestedRegion==='Devon'?'Exeter':REGIONS.includes(requestedRegion)?requestedRegion:'Exeter',age:[],price:'all',type:'all',query:'',dates:null,collection:null,edit:null,view:'list',browseAll:false};
+state.notebookSection=isNotebookHome&&['holidays','notes'].includes(routeParams.get('section'))?routeParams.get('section'):'days';
 const ageBands=[{id:'0-2',label:'0–2',min:0,max:2},{id:'3-5',label:'3–5',min:3,max:5},{id:'6-8',label:'6–8',min:6,max:8},{id:'9-12',label:'9–12',min:9,max:12},{id:'13+',label:'13+',min:13,max:17}];
 const types=[['all','All types'],['activity','Activities'],['theatre','Theatre & shows'],['market','Markets'],['ice','Ice cream'],['outdoors','Parks & nature'],['fossil','Fossil hunting'],['art','Arts & making'],['club','Holiday clubs']];
 let plansWindow='weekend';
@@ -47,18 +49,18 @@ function scheduleLabel(p){const periods=(p.datePeriods||[]).filter(d=>d.end>=TOD
 function pageLink(page){return `${page}?region=${encodeURIComponent(state.region==='Exeter'?'Devon':state.region)}`;}
 function nextPlanDate(p){return (p.datePeriods||[]).filter(d=>d.end>=(state.dates?.start||TODAY)).map(d=>d.start<TODAY?TODAY:d.start).sort()[0]||'9999-12-31';}
 state.query=routeParams.get('q')||'';
-if(isPlansPage){
+if(isPlansPage||isNotebookHome){
   state.age=(routeParams.get('age')||'').split(',').filter(id=>ageBands.some(b=>b.id===id));
   if(['free','paid'].includes(routeParams.get('price')))state.price=routeParams.get('price');
   if(availableTypes.some(([id])=>id===routeParams.get('type')))state.type=routeParams.get('type');
   const from=routeParams.get('from'),to=routeParams.get('to');
   const validDate=s=>/^\d{4}-\d{2}-\d{2}$/.test(s||'')&&!Number.isNaN(utcDate(s).getTime())&&isoDate(utcDate(s))===s;
   if(validDate(from)&&validDate(to)&&from<=to)state.dates={start:from,end:to};
-  const edit=dedicatedEdit||routeParams.get('edit');
+  const edit=dedicatedEdit||(isPlansPage?routeParams.get('edit'):null);
   if(GlobeeDiscovery.seasonalDefinition(edit,TODAY))state.edit=edit;
 }
 function updatePlanRoute(){
-  if(!isPlansPage){const params=new URLSearchParams(window.location.search);params.set('region',state.region==='Exeter'?'Devon':state.region);if(state.query)params.set('q',state.query);else params.delete('q');if(state.view==='map')params.set('view','map');else params.delete('view');window.history.replaceState(null,'',`${window.location.pathname}?${params}`);return;}
+  if(!isPlansPage){const params=new URLSearchParams(window.location.search);params.set('region',state.region==='Exeter'?'Devon':state.region);if(state.query)params.set('q',state.query);else params.delete('q');if(state.view==='map')params.set('view','map');else params.delete('view');if(isNotebookHome){if(state.notebookSection==='days')params.delete('section');else params.set('section',state.notebookSection);if(state.age.length)params.set('age',state.age.join(','));else params.delete('age');if(state.price!=='all')params.set('price',state.price);else params.delete('price');if(state.type!=='all')params.set('type',state.type);else params.delete('type');if(state.dates){params.set('from',state.dates.start);params.set('to',state.dates.end);}else{params.delete('from');params.delete('to');}}window.history.replaceState(null,'',`${window.location.pathname}?${params}${window.location.hash}`);return;}
   const params=new URLSearchParams();params.set('region',state.region==='Exeter'?'Devon':state.region);
   if(state.query)params.set('q',state.query);
   if(state.view==='map')params.set('view','map');
@@ -80,6 +82,8 @@ let lastFilterSignature=null,lastPrimaryPlansKey=null;
 let visibleCount=PAGE_SIZE,moreObserver=null;
 function matches(p,ignore){
   if(!isCurrent(p))return false;
+  if(isNotebookHome&&state.notebookSection==='notes')return false;
+  if(isNotebookHome&&state.notebookSection==='holidays'&&p.kind!=='club')return false;
   if(isPlansPage&&!isFamilyPlan(p))return false;
   if(ignore!=='edit'&&state.edit&&!GlobeeDiscovery.matchesSeasonal(p,TODAY,state.edit))return false;
   if(ignore!=='region'&&p.region!==state.region)return false;
@@ -120,9 +124,10 @@ function card(p){
   const title=fossil?p.name.replace(' (Dorset day trip)',''):p.name;
   const description=fossil?p.description.split('. ')[0]+'.':p.description;
   const practical=fossil?'<p class="date-note">Self-guided · No booking<br>Parking extra · Check tides before visiting</p>':(p.dateNote||p.datePeriods?.length)?`<p class="date-note ${p.datePeriods?'event-date':''}">${p.datePeriods?icon('calendar'):''}${escapeHTML(scheduleLabel(p))}</p>`:'';
-  return `<article class="place-card"><button class="card-open" data-open="${escapeHTML(p.id)}" aria-label="View ${escapeHTML(p.name)}"><div class="picture">${photo(p)}${p.image?`<span class="category-badge">${icon(p.type)}${escapeHTML(p.category)}</span>`:''}</div><div class="card-body">${locality(p)}<div class="card-heading"><h3>${escapeHTML(title)}</h3>${icon('arrow')}</div><p class="card-description">${escapeHTML(description)}</p><div class="card-meta">${meta(fossil?{...p,priceLabel:'Free beach entry'}:p)}</div>${practical}</div></button></article>`;
+  const clubSchedule=isNotebookHome&&state.notebookSection==='holidays'?`<p class="club-practical">${escapeHTML(p.scheduleText||'Daily hours TBC — check with the provider.')}</p>`:'';
+  return `<article class="place-card"><button class="card-open" data-open="${escapeHTML(p.id)}" aria-label="View ${escapeHTML(p.name)}"><div class="picture">${photo(p)}${p.image?`<span class="category-badge">${icon(p.type)}${escapeHTML(p.category)}</span>`:''}</div><div class="card-body">${locality(p)}<div class="card-heading"><h3>${escapeHTML(title)}</h3>${icon('arrow')}</div><p class="card-description">${escapeHTML(description)}</p><div class="card-meta">${meta(fossil?{...p,priceLabel:'Free beach entry'}:p)}</div>${practical}${clubSchedule}</div></button></article>`;
 }
-function hasFilters(){return state.browseAll||state.age.length||state.price!=='all'||state.type!=='all'||state.query||state.dates||state.collection||state.edit;}
+function hasFilters(){return isNotebookHome&&state.notebookSection!=='days'||state.browseAll||state.age.length||state.price!=='all'||state.type!=='all'||state.query||state.dates||state.collection||state.edit;}
 function renderWeekend(){
   if(isPlansPage)return;
   const container=$('#main-plans');
@@ -195,7 +200,7 @@ function renderLoadMore(total){
   container.hidden=state.view!=='list'||!total;
   if(container.hidden)return;
   const shown=Math.min(visibleCount,total),remaining=total-shown;
-  container.innerHTML=`<p role="status">${remaining?`${shown} of ${total}`:`You’ve seen all ${total} results`}</p>${remaining?`<button type="button" class="load-more" data-load-more>Show ${Math.min(PAGE_SIZE,remaining)} more</button>`:''}`;
+  container.innerHTML=`<p role="status">${remaining?`${shown} of ${total}${isNotebookHome?' · Keep scrolling':''}`:`You’ve seen all ${total} results`}</p>${remaining&&!isNotebookHome?`<button type="button" class="load-more" data-load-more>Show ${Math.min(PAGE_SIZE,remaining)} more</button>`:''}`;
   if(remaining&&'IntersectionObserver' in window){
     moreObserver=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)&&!container.contains(document.activeElement)){moreObserver.disconnect();loadMore();}},{rootMargin:'180px 0px'});
     moreObserver.observe(container);
@@ -225,10 +230,11 @@ function setupRails(){
 }
 function render(){
   const places=visiblePlaces();
-  const weekendOnlyPilot=!isPlansPage&&state.region==='Bristol'&&!hasFilters()&&state.view==='list'&&places.length>0&&places.length<=10&&GlobeeDiscovery.weekendPicks(places,TODAY).length===places.length;
+  const weekendOnlyPilot=!isNotebookHome&&!isPlansPage&&state.region==='Bristol'&&!hasFilters()&&state.view==='list'&&places.length>0&&places.length<=10&&GlobeeDiscovery.weekendPicks(places,TODAY).length===places.length;
   const filterSignature=JSON.stringify([state.region,state.age,state.price,state.type,state.query,state.dates,state.collection,state.edit,state.browseAll]);
   if(lastFilterSignature!==null&&lastFilterSignature!==filterSignature){visibleCount=PAGE_SIZE;if(state.view==='list')window.scrollTo({top:0,behavior:'instant'});}
   lastFilterSignature=filterSignature;
+  if(isNotebookHome&&!('IntersectionObserver' in window))visibleCount=places.length;
   updatePlanRoute();
   $('#region-label').textContent=REGION_LABELS[state.region];
   window.GlobeeMusicFeature?.sync(state.region);
@@ -269,6 +275,10 @@ function render(){
   if(classesEntry){classesEntry.href=state.region==='Bristol'?'/bristol/classes/':state.region==='Nottingham'?'/nottingham/classes/':'/classes.html';classesEntry.querySelector('.entry-kicker').textContent=state.region==='Bristol'?'Bristol':state.region==='Nottingham'?'Nottingham':'Exeter · Devon';}
   $('#results-heading').textContent=state.view==='map'?(activeEdit?`${activeEdit.title} on the map`:'Explore on the map'):activeEdit?.id==='half-term'?'All half-term plans':activeEdit?.id==='christmas'?'All Christmas plans':activeEdit?`All ${activeEdit.title}`:weekendOnlyPilot?'Bristol is growing 🐝':hasFilters()?'Matching plans':isPlansPage?'All upcoming plans':'Explore all';
   $('#results-subtitle').textContent=activeEdit?`${activeEdit.id==='christmas'&&state.region!=='Exeter'?'Festive days out and shows':activeEdit.subtitle} · Until ${dateShort(activeEdit.end)}`:weekendOnlyPilot?`We’re starting with ${places.length} checked picks for this weekend.`:isPlansPage?'What’s on & holiday clubs':hasFilters()?'Places and activities that match your filters.':'Places, what’s on & holiday clubs';
+  if(isNotebookHome&&state.notebookSection==='holidays'){
+    $('#results-heading').textContent=state.view==='map'?'Holiday clubs on the map':'Holiday clubs';
+    $('#results-subtitle').textContent='School-break clubs and multi-day workshops. Check dates, hours and places with the provider.';
+  }
   const combinedChristmas=activeEdit?.id==='christmas'&&state.region==='Exeter'&&!state.age.length&&state.price==='all'&&state.type==='all'&&!state.query&&!state.dates&&!state.collection;
   $('#result-count').textContent=weekendOnlyPilot?'':combinedChristmas?`4 tree places · ${Math.max(0,places.length-1)} festive plans`:`${places.length} ${places.length===1?'result':'results'}`;
   $('#date-scope-note').hidden=!state.dates;
@@ -287,6 +297,7 @@ function render(){
   if(state.type!=='all')chips.push(['type',types.find(t=>t[0]===state.type)[1]]);
   $('#applied-filters').hidden=!chips.length;
   $('#applied-filters').innerHTML=chips.map(([key,label])=>`<button class="applied-chip" data-clear="${key}" aria-label="Remove ${escapeHTML(label)} filter">${escapeHTML(label)}${icon('close')}</button>`).join('')+(chips.length>1?'<button class="clear-all" data-reset>Clear all</button>':'');
+  if(isNotebookHome)window.GlobeeNotebook?.sync(state);
   if(state.view==='map')renderMap(places);
 }
 function resetFilters(){state.age=[];state.price='all';state.type='all';state.query='';state.dates=null;state.collection=null;state.edit=dedicatedEdit;state.browseAll=false;render();}
@@ -484,6 +495,7 @@ $('#view-toggle').addEventListener('click',()=>{
   if(!toMap)window.scrollTo({top:listScroll,behavior:'instant'});
   if(toMap&&map)requestAnimationFrame(()=>map.invalidateSize());
 });
+window.GlobeeNotebookSearch=query=>{state.query=String(query||'').trim();render();};
 window.addEventListener('globee:data',event=>{data=withVerifiedHalfTermClubs(event.detail.places).map(GlobeeImages.decorate);lastListSignature='';lastPrimaryPlansKey=null;render();if(currentMenu==='dates')renderCalendar();});
 render();
 if(routeParams.get('view')==='map')$('#view-toggle').click();
