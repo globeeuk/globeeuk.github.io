@@ -34,6 +34,9 @@
   const notes=section==='notes';
   ['.entry-cards','.home-secondary-links','.notebook-browse-row','.notebook-home .result-section','.notebook-home .notebook-search-row'].forEach(selector=>{const el=document.querySelector(selector);if(el)el.hidden=notes;});
   const pending=document.getElementById('parent-notes-pending');if(pending)pending.hidden=!notes;
+  const localRegion=region==='Devon'?'Exeter':region;let localNotes=0;
+  document.querySelectorAll('[data-notes-region]').forEach(card=>{card.hidden=!card.dataset.notesRegion.split(' ').includes(localRegion);if(!card.hidden)localNotes++;});
+  const notesEmpty=document.querySelector('[data-notes-empty]');if(notesEmpty)notesEmpty.hidden=localNotes>0;
   const filters=document.getElementById('notebook-filter-controls');if(notes&&filters){filters.hidden=true;document.querySelector('[data-notebook-filter-toggle]')?.setAttribute('aria-expanded','false');}
   const browse=document.querySelector('[data-notebook-browse]');if(browse)browse.textContent=section==='holidays'?'All holiday clubs ↓':'Explore all ↓';
   const notesLink=document.querySelector('[data-notebook-notes-link]');if(notesLink)notesLink.href=url('notes',region);

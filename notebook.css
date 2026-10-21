@@ -195,3 +195,6 @@
 @media(max-width:359px){.notebook-page .content-width,.notebook-page .wrap,.notebook-page .header-inner{padding-inline:14px}.notebook-page .header-instagram .instagram-long{display:none}.notebook-page .header-instagram .instagram-short{display:inline}.notebook-page .header-instagram{min-width:29px}.notebook-index{margin-inline:10px}.notebook-index a{font-size:11px}.notebook-page .result-section{padding-inline:14px}}
 @media(max-width:359px){.notebook-page .header-inner{gap:4px}.notebook-brand-group{gap:6px}.notebook-page .site-header .region-control,.notebook-page .region-switcher{min-width:142px}.notebook-page .region-switcher{width:142px}}
 @media(prefers-reduced-motion:reduce){.notebook-page *{scroll-behavior:auto!important}}
+
+/* Compact Parent notes entries; no additional hero/banner. */
+.notebook-note-card.notebook-note-text{display:block;padding:24px 0}.notebook-note-card[data-notes-region]{margin-bottom:22px}.notebook-classes .class-note-link{display:flex;align-items:center;min-height:44px;font-size:12px;color:var(--nb-rust);text-underline-offset:4px}.notebook-classes .class-bill-note{font-size:11px;line-height:1.6;color:var(--muted);margin:10px 0}
