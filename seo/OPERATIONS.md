@@ -127,6 +127,10 @@ The 15 October selection is Robot Workshop, Mermaids and Monsters writing, Arrie
 
 ## Search Console and measurement
 
+### Wednesday selection — 21 October 2026
+
+The dated `verified-candidates-2026-10-21.json` review supplements the existing weekend choices with Exeter's RAMM Bayeux digital trail and Wildwood, and Bristol's Adire family workshop. The Adire workshop has a confirmed 24 October date but its time, fee, booking rule and numerical ages remain TBC. Its new native master/event rows are 272/532; it has no verified map point and uses the existing licensed Bristol Museum venue photograph. Blaise's event periods were split into 24–25 October and 29 October–1 November (events 184/533), excluding the closed days in between. Its specific 24–25 October booking pages quote adult £5/child 4–16 £3/under-4 free, differing from the general event page. Preserve that qualification and the separate under-4 ticket requirement. Other item verification dates were retained. The Bristol five-card carousel is preparation only, not evidence of publication or visitor growth.
+
 ### Birthday Parent note — 20 October 2026
 
 The shared notebook header now presents a prominent two-line “Change area” control in `notebook.css` and `notebook.js`; retain it and its cache versions when updating the homepage or regional classes. The birthday article uses a native region menu with an explicit Exeter-only qualifier: its links open the selected area's directory, not a nonexistent regional version of this article. Its export source is `reviews/globee-birthday-parent-notes-2026-10-20/publish.mjs` in the private project workspace. This usability change does not add tracking or establish a traffic increase.

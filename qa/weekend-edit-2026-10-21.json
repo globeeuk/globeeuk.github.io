@@ -1,0 +1,17 @@
+{
+  "checked": "2026-10-21",
+  "weekend": ["2026-10-24", "2026-10-25"],
+  "recommended_social_region": "Bristol",
+  "reason": "A varied group of autumn creativity, outdoor experimentation and textile culture; not a predicted traffic result.",
+  "social_status": "Prepared only; owner review and fresh practical-detail check required before posting.",
+  "native_changes": {"master_added": [272], "events_added": [532,533], "existing_event_period_corrected": 184, "existing_master_price_schedule_notes_corrected": 152},
+  "native_and_complete_published_csv_readback": true,
+  "snapshot_rows": {"master":271,"events":532},
+  "reviewed_ids": ["blaise-museum-autumn-week-2026","great-bristol-ball-run-2026","bristol-wear-your-story-adire-2026","ramm-bayeux-digital-trail-2026","exeter-phoenix-wildwood-2026"],
+  "uncertainties": ["Adire workshop time, fee, booking and numeric ages TBC.","Ball Run outdoor hours and numeric ages TBC; £6 is for a reusable ball.","Blaise general event listing differs from the specific booking-page price. Final selected-slot quote and live capacity can change.","Wildwood is rated 12A, not recommended here as universally suitable for younger children."],
+  "excluded_from_this_weekend": [{"name":"Cat Video Fest 2026 (U)","reason":"Official screenings on 23,26,28,31 October; none on 24–25 October.","source":"https://exeterphoenix.org.uk/events/cat-video-fest-2026/"}],
+  "images": {"reuse_existing_licensed_venue_photographs":true,"adire":"bristol-museum","blaise":"blaise-castle-museum","ball_run":"we-the-curious","source_register":"qa/image-sources.json","public_credits":"https://globeeuk.github.io/image-credits.html","no_event_photo_claim":true},
+  "analytics_privacy_settings_changed":false,
+  "instagram_posted":false,
+  "performance_measured":false
+}

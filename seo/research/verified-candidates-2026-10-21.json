@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "verified_at": "2026-10-21",
   "timezone": "Europe/London",
-  "scope": "21 October morning correction of the Exeter free and rainy-day guides: RAMM Gallery 20 maintenance now runs through 21 October. Other event and place verification dates are preserved.",
+  "scope": "Wednesday 24–25 October family Weekend Edit: Bristol creative/cultural/outdoor choices and Exeter self-guided history/cinema. Five records rechecked; other item dates retained. Concurrent RAMM Gallery 20 maintenance correction retained.",
   "publication_status": "Official-source research reconciled to the operational Sheet. Publication remains subject to the live binding guard, renderer checks and deployment verification.",
   "source_policy": "Official-source research supplements the operational Google Sheet. Active publication records are bound to checked master/event rows; source changes require rechecking before publication.",
   "disclaimer": "Prices & schedules change — always check the provider before booking.",
@@ -15,17 +15,13 @@
       "2026-10-31",
       "2026-11-01"
     ],
-    "exeter_event_choices": {
-      "current": 2,
-      "next": 2,
-      "distinct": 2
-    },
-    "bristol_event_choices": {
-      "current": 3,
-      "next": 3,
-      "distinct": 3
-    },
-    "exeter_places": 5
+    "selected_reviewed_ids": [
+      "blaise-museum-autumn-week-2026",
+      "great-bristol-ball-run-2026",
+      "bristol-wear-your-story-adire-2026",
+      "ramm-bayeux-digital-trail-2026",
+      "exeter-phoenix-wildwood-2026"
+    ]
   },
   "records": [
     {
@@ -1486,199 +1482,6 @@
       "previous_verified_at": "2026-09-22"
     },
     {
-      "id": "great-bristol-ball-run-2026",
-      "name": "The Great Bristol Ball Run",
-      "description": "Send a wooden ball through six giant outdoor runs across Millennium Square and Anchor Square.",
-      "kind": "event",
-      "region": "Bristol",
-      "city": "Bristol",
-      "locality": "Harbourside, Bristol",
-      "address": "Millennium Square and Anchor Square, Bristol, BS1 5DB",
-      "age_text": "Family activity; numerical age range TBC.",
-      "price_text": "£6 for a wooden ball, yours to keep and reuse on repeat visits.",
-      "price_type": "paid",
-      "booking_text": "No advance booking requirement is stated; balls are sold from the We The Curious shop.",
-      "schedule_text": "4 August–2 November 2026; selected weekend dates include 24–25 October and 31 October–1 November. Weekend ball collection is during shop opening, normally 10am–5pm; separate outdoor activity hours TBC.",
-      "occurrences": [
-        {
-          "start": "2026-09-26",
-          "end": "2026-09-26",
-          "start_time": null,
-          "end_time": null,
-          "weekday": "Saturday"
-        },
-        {
-          "start": "2026-09-27",
-          "end": "2026-09-27",
-          "start_time": null,
-          "end_time": null,
-          "weekday": "Sunday"
-        },
-        {
-          "start": "2026-10-03",
-          "end": "2026-10-03",
-          "start_time": null,
-          "end_time": null,
-          "weekday": "Saturday"
-        },
-        {
-          "start": "2026-10-04",
-          "end": "2026-10-04",
-          "start_time": null,
-          "end_time": null,
-          "weekday": "Sunday"
-        },
-        {
-          "start": "2026-10-10",
-          "end": "2026-10-10",
-          "start_time": null,
-          "end_time": null,
-          "weekday": "Saturday"
-        },
-        {
-          "start": "2026-10-11",
-          "end": "2026-10-11",
-          "start_time": null,
-          "end_time": null,
-          "weekday": "Sunday"
-        },
-        {
-          "start": "2026-10-17",
-          "end": "2026-10-17",
-          "start_time": null,
-          "end_time": null,
-          "weekday": "Saturday"
-        },
-        {
-          "start": "2026-10-18",
-          "end": "2026-10-18",
-          "start_time": null,
-          "end_time": null,
-          "weekday": "Sunday"
-        },
-        {
-          "start": "2026-10-24",
-          "end": "2026-10-24",
-          "start_time": null,
-          "end_time": null,
-          "weekday": "Saturday"
-        },
-        {
-          "start": "2026-10-25",
-          "end": "2026-10-25",
-          "start_time": null,
-          "end_time": null,
-          "weekday": "Sunday"
-        },
-        {
-          "start": "2026-10-31",
-          "end": "2026-10-31",
-          "start_time": null,
-          "end_time": null,
-          "weekday": "Saturday"
-        },
-        {
-          "start": "2026-11-01",
-          "end": "2026-11-01",
-          "start_time": null,
-          "end_time": null,
-          "weekday": "Sunday"
-        }
-      ],
-      "indoor": false,
-      "rainy_day": {
-        "suitable": false,
-        "basis": "All six ball runs are outdoors in the public squares around We The Curious.",
-        "classification": "Outdoor city-centre activity"
-      },
-      "tags": [
-        "weekend",
-        "in-town",
-        "outdoor",
-        "play"
-      ],
-      "practical_notes": [
-        "Keep the wooden ball to reuse on all six runs and on repeat visits.",
-        "The shop normally opens 10am–5pm on Saturdays and Sundays. These are ball-collection hours; separate outdoor activity hours remain TBC.",
-        "The organiser labels this outdoor activity as partially accessible; check access for your family."
-      ],
-      "sources": [
-        {
-          "url": "https://www.wethecurious.org/whats-on/events/great-bristol-ball-run",
-          "supports": [
-            "The organiser confirms six giant ball runs from 4 August to 2 November 2026 across Millennium Square and Anchor Square.",
-            "The official listing confirms a wooden ball costs £6 and can be kept and reused.",
-            "The page classifies the six runs as outdoors and partially accessible; it provides no numerical age range or separate outdoor operating timetable.",
-            "The current official listing confirms the 4 August–2 November 2026 outdoor season, six runs in Millennium and Anchor Squares, a GBP 6 reusable wooden ball, and partial accessibility. Numerical age guidance and separate outdoor hours remain TBC.",
-            "The official event page confirms the outdoor runs remain listed through 2 November 2026, with a £6 reusable ball, partial accessibility and no separately published outdoor activity hours or numerical age range.",
-            "The 19 October official event page still lists the outdoor runs through 2 November 2026, covering 31 October–1 November. £6 reusable ball, partial accessibility, no separate activity hours and no numerical age range are unchanged."
-          ],
-          "retrieval": "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
-          "label": "Official ball run details",
-          "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked.",
-          "retrieval_history": [
-            "Official We The Curious event page opened successfully on 20 September 2026.",
-            "Official source content reviewed on 21 September 2026 using web open; indexed responses may be returned. This is not a guarantee of same-day operation or ticket availability.",
-            "Official public HTML retrieved directly with curl GET on 22 September 2026 (HTTP 200); visible body, including At a glance / Booking information where present, read after HTML parsing. No booking transaction or on-site check performed.",
-            "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Request started 07:59:28 UTC; response Date 07:59:29 UTC, X-Cache HIT and Age 64 seconds. The web search copy was labelled crawled yesterday; verification uses the directly retrieved body. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
-            "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked.",
-            "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability.",
-            "Official organiser event page reviewed through the web tool on 12 October 2026 (BST). The 2026 dates, time or separate activity-hour limits, price basis, age guidance, booking terms and access notes were checked where stated; live availability may change.",
-            "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check."
-          ]
-        },
-        {
-          "url": "https://www.wethecurious.org/visit-us",
-          "supports": [
-            "The FAQ confirms Tuesday–Sunday 10am–5pm in term time and the same hours for the shop. The contact line 9am–4.30pm Monday–Friday is not the shop timetable.",
-            "The current official Visit FAQ confirms the shop follows Tuesday–Sunday 10am–5pm term-time opening, distinct from the outdoor Ball Run hours which remain TBC.",
-            "The official Visit us FAQ currently confirms that the shop follows the museum opening schedule: Tuesday–Sunday 10am–5pm in term time and daily 10am–5pm during Bristol school holidays.",
-            "The 19 October official visit FAQ says the shop follows visitor opening: 10am–5pm Tuesday–Sunday during term time and daily during Bristol school holidays. These are shop hours, not outdoor Ball Run hours."
-          ],
-          "label": "Shop opening information",
-          "retrieval": "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
-          "retrieval_history": [
-            "Official page content reviewed on 21 September 2026.",
-            "Official public HTML retrieved directly with curl GET on 22 September 2026 (HTTP 200); visible body, including At a glance / Booking information where present, read after HTML parsing. No booking transaction or on-site check performed.",
-            "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Request started 07:59:28 UTC; response Date 07:59:30 UTC, X-Cache MISS and Age 0. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
-            "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official visit FAQ reviewed on 5 October 2026 (BST).",
-            "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
-            "Official Visit us FAQ reviewed through the web tool on 12 October 2026 (BST); shop follows Tuesday–Sunday 10am–5pm term-time visitor hours and every day in Bristol school holidays. These are not published hours for the outdoor ball runs.",
-            "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check."
-          ],
-          "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official visit FAQ reviewed on 5 October 2026 (BST)."
-        }
-      ],
-      "verified_at": "2026-10-19",
-      "review_status": "verified",
-      "sheet_match": {
-        "live_sheet_checked": true,
-        "row_id": 149,
-        "event_rows": [
-          182
-        ],
-        "reconciliation_note": "Published Bristol master and event row match official 4 August–2 November 2026 season. Outdoor activity hours remain TBC; the 10am–5pm window refers only to the shop. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed. On 12 October the existing public Sheet candidate and event periods were rechecked against the organiser for 17–18 and 24–25 October; no Sheet cell or binding fingerprint changed.",
-        "checked_at": "2026-10-12T07:08:14+01:00"
-      },
-      "limitations": [
-        "No numerical age range or explicit advance booking rule is published for the outdoor ball runs.",
-        "The occurrences deliberately leave activity times null; the verified 10am–5pm times describe the shop only.",
-        "New dates fall within the explicit official event season; exceptional closures or ball availability are not guaranteed."
-      ],
-      "sheet_bindings": [
-        {
-          "candidate_id": "b19eb6eddcd77b2a3b5f6bde",
-          "name": "The Great Bristol Ball Run",
-          "region": "Bristol",
-          "fingerprint": "bddec6e53ca538a4afa21eeb267995837bf1101c09150580a922ad24ef6a5df9"
-        }
-      ],
-      "previous_verified_at": "2026-10-16",
-      "review_notes": [
-        "The official event lists 4 August–2 November 2026, six outdoor runs across Millennium and Anchor Squares, a £6 reusable wooden ball, partial access, no numerical age range or separate activity hours. The official visitor FAQ says the shop follows 10am–5pm weekend opening."
-      ]
-    },
-    {
       "id": "donkey-sanctuary-curious-coastal-quest-2026",
       "name": "Curious Coastal Quest at The Donkey Sanctuary",
       "description": "Follow a coastal-themed trail around the sanctuary, match hidden items with stickers and collect a prize.",
@@ -2534,6 +2337,180 @@
       "previous_verified_at": "2026-10-15"
     },
     {
+      "id": "great-bristol-ball-run-2026",
+      "name": "The Great Bristol Ball Run",
+      "description": "Send a wooden ball through six giant outdoor runs across Millennium Square and Anchor Square.",
+      "kind": "event",
+      "region": "Bristol",
+      "city": "Bristol",
+      "locality": "Harbourside, Bristol",
+      "address": "Millennium Square and Anchor Square, Bristol, BS1 5DB",
+      "age_text": "Family activity; numerical age range TBC.",
+      "price_text": "£6 for a wooden ball, yours to keep and reuse on repeat visits.",
+      "price_type": "paid",
+      "booking_text": "No advance booking requirement is stated; balls are sold from the We The Curious shop.",
+      "schedule_text": "4 August–2 November 2026; selected weekend dates include 24–25 October and 31 October–1 November. Weekend ball collection is during shop opening, normally 10am–5pm; separate outdoor activity hours TBC.",
+      "occurrences": [
+        {
+          "start": "2026-09-26",
+          "end": "2026-09-26",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-09-27",
+          "end": "2026-09-27",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Sunday"
+        },
+        {
+          "start": "2026-10-03",
+          "end": "2026-10-03",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-10-04",
+          "end": "2026-10-04",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Sunday"
+        },
+        {
+          "start": "2026-10-10",
+          "end": "2026-10-10",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-10-11",
+          "end": "2026-10-11",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Sunday"
+        },
+        {
+          "start": "2026-10-17",
+          "end": "2026-10-17",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-10-18",
+          "end": "2026-10-18",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Sunday"
+        },
+        {
+          "start": "2026-10-24",
+          "end": "2026-10-24",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-10-25",
+          "end": "2026-10-25",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Sunday"
+        },
+        {
+          "start": "2026-10-31",
+          "end": "2026-10-31",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-11-01",
+          "end": "2026-11-01",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Sunday"
+        }
+      ],
+      "indoor": false,
+      "rainy_day": {
+        "suitable": false,
+        "basis": "All six ball runs are outdoors in the public squares around We The Curious.",
+        "classification": "Outdoor city-centre activity"
+      },
+      "tags": [
+        "weekend",
+        "in-town",
+        "outdoor",
+        "play"
+      ],
+      "practical_notes": [
+        "Keep the wooden ball to reuse on all six runs and on repeat visits.",
+        "The shop normally opens 10am–5pm on Saturdays and Sundays. These are ball-collection hours; separate outdoor activity hours remain TBC.",
+        "The organiser labels this outdoor activity as partially accessible; check access for your family."
+      ],
+      "sources": [
+        {
+          "url": "https://www.wethecurious.org/whats-on/events/great-bristol-ball-run",
+          "supports": "4 August–2 November 2026. Six outdoor runs in Millennium and Anchor Squares; £6 reusable wooden ball. Numerical age guidance, separate outdoor hours and booking requirement not stated.",
+          "retrieval": "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit."
+        },
+        {
+          "url": "https://www.wethecurious.org/visit-us",
+          "supports": [
+            "The FAQ confirms Tuesday–Sunday 10am–5pm in term time and the same hours for the shop. The contact line 9am–4.30pm Monday–Friday is not the shop timetable.",
+            "The current official Visit FAQ confirms the shop follows Tuesday–Sunday 10am–5pm term-time opening, distinct from the outdoor Ball Run hours which remain TBC.",
+            "The official Visit us FAQ currently confirms that the shop follows the museum opening schedule: Tuesday–Sunday 10am–5pm in term time and daily 10am–5pm during Bristol school holidays.",
+            "The 19 October official visit FAQ says the shop follows visitor opening: 10am–5pm Tuesday–Sunday during term time and daily during Bristol school holidays. These are shop hours, not outdoor Ball Run hours."
+          ],
+          "label": "Shop opening information",
+          "retrieval": "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
+          "retrieval_history": [
+            "Official page content reviewed on 21 September 2026.",
+            "Official public HTML retrieved directly with curl GET on 22 September 2026 (HTTP 200); visible body, including At a glance / Booking information where present, read after HTML parsing. No booking transaction or on-site check performed.",
+            "Official public HTML retrieved directly with curl GET on 23 September 2026 (HTTP 200; no redirect); full body, including event detail and booking information where present, read after HTML parsing. Request started 07:59:28 UTC; response Date 07:59:30 UTC, X-Cache MISS and Age 0. No booking transaction or on-site check performed; future operation and availability are not guaranteed.",
+            "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official visit FAQ reviewed on 5 October 2026 (BST).",
+            "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
+            "Official Visit us FAQ reviewed through the web tool on 12 October 2026 (BST); shop follows Tuesday–Sunday 10am–5pm term-time visitor hours and every day in Bristol school holidays. These are not published hours for the outdoor ball runs.",
+            "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check."
+          ],
+          "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official visit FAQ reviewed on 5 October 2026 (BST)."
+        }
+      ],
+      "verified_at": "2026-10-21",
+      "review_status": "verified",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 149,
+        "event_rows": [
+          181
+        ],
+        "reconciliation_note": "21 October native cells and complete published CSV checked; only officially confirmed dates selected.",
+        "checked_at": "2026-10-21T09:09:55.133Z"
+      },
+      "limitations": [
+        "No numerical age range or explicit advance booking rule is published for the outdoor ball runs.",
+        "The occurrences deliberately leave activity times null; the verified 10am–5pm times describe the shop only.",
+        "New dates fall within the explicit official event season; exceptional closures or ball availability are not guaranteed."
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "b19eb6eddcd77b2a3b5f6bde",
+          "name": "The Great Bristol Ball Run",
+          "region": "Bristol",
+          "fingerprint": "bddec6e53ca538a4afa21eeb267995837bf1101c09150580a922ad24ef6a5df9"
+        }
+      ],
+      "previous_verified_at": "2026-10-19",
+      "review_notes": [
+        "The official event lists 4 August–2 November 2026, six outdoor runs across Millennium and Anchor Squares, a £6 reusable wooden ball, partial access, no numerical age range or separate activity hours. The official visitor FAQ says the shop follows 10am–5pm weekend opening."
+      ]
+    },
+    {
       "id": "blaise-museum-autumn-week-2026",
       "name": "Autumn Week at Blaise Museum",
       "description": "Seasonal stories, crafts, a museum search and an outdoor nature trail for families with children aged 0–9. Weekend dates include 24–25 and 31 October–1 November 2026.",
@@ -2543,10 +2520,10 @@
       "locality": "Henbury, Bristol",
       "address": "Blaise Museum, Henbury Road, Bristol BS10 7QS",
       "age_text": "Designed for families with children aged 0–9; under-4s enter free but need a separate ticket.",
-      "price_text": "£5 per person aged 4 or over; children under 4 free. Event activities included. A family-group ticket is advertised; its total is TBC.",
+      "price_text": "Official booking pages for 24–25 October: adult £5, ages 4–16 £3, under-4s free with a ticket. The general event page still says £5 per person; check your selected slot.",
       "price_type": "paid",
       "booking_text": "Book event tickets through the organiser. Under-4 tickets must be booked separately; walk-in availability TBC.",
-      "schedule_text": "Saturday–Sunday 24–25 October and Saturday 31 October–Sunday 1 November 2026. Event-session hours TBC; ordinary museum weekend opening is 11am–4pm.",
+      "schedule_text": "24, 25, 29, 30 and 31 October, and 1 November 2026. Hourly entry slots from 11am to 3pm are listed for 24–25 October. Museum opening is 11am–4pm.",
       "occurrences": [
         {
           "start": "2026-10-24",
@@ -2561,6 +2538,20 @@
           "start_time": null,
           "end_time": null,
           "weekday": "Sunday"
+        },
+        {
+          "start": "2026-10-29",
+          "end": "2026-10-29",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Thursday"
+        },
+        {
+          "start": "2026-10-30",
+          "end": "2026-10-30",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Friday"
         },
         {
           "start": "2026-10-31",
@@ -2591,78 +2582,372 @@
         "autumn"
       ],
       "practical_notes": [
-        "The event page lists 24, 25, 29, 30 and 31 October and 1 November; both upcoming weekend pairs are selected here.",
-        "Blaise Museum normally opens 11am–4pm on weekends; the event listing does not separately state session hours.",
-        "The museum is free for general visits, but Autumn Week event tickets are charged.",
-        "A nearby public car park is described by the museum; its current charge is TBC."
+        "24–25 October entry starts are listed hourly from 11am to 3pm; museum opening is 11am–4pm.",
+        "The ticket pages for both weekend dates show child prices lower than the general event page; use the selected-slot quote.",
+        "Book a separate free ticket for each child under 4.",
+        "Hourly entry starts are not a stated duration of stay. No events are listed for 26–28 October."
       ],
       "sources": [
         {
           "url": "https://www.bristolmuseums.org.uk/whats-on/blaise-museum/autumn-week/",
-          "label": "Official Autumn Week event details",
-          "supports": [
-            "The organiser lists 24 October–1 November 2026, explicitly including Saturday 24 and Sunday 25 October.",
-            "Family programme is designed for ages 0–9. Event entry is £5 per person aged 4 or over; under-4s are free but need a separate ticket. Storytelling, crafts, face painting and trail activities are included in event entry.",
-            "The event page offers ticket booking but does not state separate event-session times or walk-in availability.",
-            "The 19 October review confirmed 31 October and 1 November as separately listed 2026 dates alongside 24–25 October; admission, ages and separate under-4 ticket conditions were unchanged."
-          ],
-          "retrieval": "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
-          "retrieval_history": [
-            "Official Bristol Museums event page body reviewed through the web tool on 16 October 2026 (BST). Live checkout capacity was not tested."
-          ]
+          "supports": "Six selected dates, activities for families aged 0–9 and separate free under-4 ticket. General page says £5 per person.",
+          "retrieval": "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit."
+        },
+        {
+          "url": "https://pretix.eu/bristolmuseums/33pus/5012286/",
+          "supports": "24 October 11am entry: adults £5, children 4–16 £3, under-4s free. Hourly starts listed 11am–3pm.",
+          "retrieval": "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit."
+        },
+        {
+          "url": "https://pretix.eu/bristolmuseums/33pus/5012291/",
+          "supports": "25 October 11am entry: adults £5, children 4–16 £3, under-4s free. Hourly starts listed 11am–3pm.",
+          "retrieval": "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit."
         },
         {
           "url": "https://www.bristolmuseums.org.uk/blaise-museum/plan-your-visit/opening-times/",
-          "label": "Museum opening hours",
-          "supports": [
-            "2026 ordinary Blaise Museum opening is Thursday–Sunday, 11am–4pm from April to December. These are museum hours, not a separately published Autumn Week session timetable."
-          ],
-          "retrieval": "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
-          "retrieval_history": [
-            "Official Bristol Museums 2026 opening-time page reviewed through official indexed content on 16 October 2026 (BST)."
-          ]
-        },
-        {
-          "url": "https://www.bristolmuseums.org.uk/blaise-museum/plan-your-visit/getting-here/",
-          "label": "Location and parking",
-          "supports": [
-            "The museum address is Henbury Road, Bristol BS10 7QS. The operator describes a nearby public car park and directs visitors to Bristol City Council for current parking charges."
-          ],
-          "retrieval": "Official Bristol Museums getting-here page reviewed through the web tool on 16 October 2026 (BST)."
+          "supports": "Thursday–Sunday museum opening 11am–4pm in 2026.",
+          "retrieval": "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit."
         }
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-21",
       "review_status": "verified_with_explicit_limitations",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 152,
         "event_rows": [
-          184
+          184,
+          533
         ],
-        "reconciliation_note": "Exact Bristol master/event candidate matched against the current published Sheet CSV queue; official event explicitly lists 24–25 October within the broad Sheet period. No Sheet cells were changed.",
-        "checked_at": "2026-10-16T08:04:00+01:00"
+        "reconciliation_note": "21 October native cells and complete published CSV checked; only officially confirmed dates selected.",
+        "checked_at": "2026-10-21T09:09:55.132Z"
       },
       "limitations": [
-        "Event-session hours are not separately stated; ordinary museum opening hours are not represented as ticket-session times.",
-        "Walk-in ticket availability and live capacity are TBC.",
-        "The organiser family-group ticket total and current parking charge were not established."
+        "Walk-in availability, session duration and current parking charge remain TBC."
       ],
       "sheet_bindings": [
         {
           "candidate_id": "d485420c01130f1ec43340e0",
           "name": "Autumn Week at Blaise Museum",
           "region": "Bristol",
-          "fingerprint": "20b813990f583a89aecbbbd3c567a7d4374ed927d784dbdbe1e5cc3f9d861745"
+          "fingerprint": "f424748036af5633157d21a497b489e8a655e3c18ff489de0c62069b3e839ba2"
         }
       ],
-      "previous_verified_at": "2026-10-16",
+      "previous_verified_at": "2026-10-19",
       "review_notes": [
         "The official event lists 24–25 and 31 October plus 1 November 2026, ages 0–9, £5 for age 4+, under-4s free with separate tickets. The separate museum opening page lists ordinary weekend hours of 11am–4pm, not ticket-session times."
       ]
+    },
+    {
+      "id": "bristol-wear-your-story-adire-2026",
+      "name": "Wear your story – Adire family workshop",
+      "description": "Make wearable accessories while exploring Yoruba textile traditions with artist Tomi.",
+      "kind": "event",
+      "region": "Bristol",
+      "city": "Bristol",
+      "locality": "Clifton, Bristol",
+      "address": "Bristol Museum & Art Gallery, Queens Road, Bristol BS8 1RL",
+      "age_text": "Family workshop; numerical age guidance TBC.",
+      "price_text": "Activity charge TBC. Do not infer free workshop entry from free museum admission.",
+      "price_type": "unknown",
+      "booking_text": "Booking requirement TBC; check the official event page before travelling.",
+      "schedule_text": "Saturday 24 October 2026. Workshop start and finish times TBC; ordinary museum opening is 10am–5pm.",
+      "occurrences": [
+        {
+          "start": "2026-10-24",
+          "end": "2026-10-24",
+          "start_time": null,
+          "end_time": null,
+          "weekday": "Saturday"
+        }
+      ],
+      "indoor": null,
+      "rainy_day": {
+        "suitable": null,
+        "basis": "Workshop venue is the museum; specific room and access arrangements are not stated.",
+        "classification": "TBC"
+      },
+      "tags": [
+        "weekend",
+        "crafts",
+        "culture",
+        "family"
+      ],
+      "practical_notes": [
+        "Time, charge, booking and numerical ages remain TBC.",
+        "The British and World Wildlife Galleries are closed until summer 2027; this is not a notice cancelling the workshop."
+      ],
+      "sources": [
+        {
+          "url": "https://www.bristolmuseums.org.uk/whats-on/bristol-museum-and-art-gallery/wear-your-story/",
+          "supports": "24 October 2026 family textile workshop using Adire fabrics. No workshop fee, time, booking rule or numeric age range stated.",
+          "retrieval": "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit."
+        },
+        {
+          "url": "https://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/plan-your-visit/opening-times/",
+          "supports": "Museum weekend hours 10am–5pm; not workshop session times.",
+          "retrieval": "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit."
+        }
+      ],
+      "limitations": [
+        "Partial practical details only; verify TBC items with the organiser."
+      ],
+      "verified_at": "2026-10-21",
+      "review_status": "verified_with_explicit_limitations",
+      "sheet_bindings": [
+        {
+          "candidate_id": "0c7312532bdbbe4ef0eee249",
+          "name": "Wear your story – Adire family workshop",
+          "region": "Bristol",
+          "fingerprint": "9b9cad39cd17552c66f1847495d82895c26ae8942ff67b0c0be80bc3664a7a9a"
+        }
+      ],
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 272,
+        "event_rows": [
+          532
+        ],
+        "reconciliation_note": "21 October native cells and complete published CSV checked; only officially confirmed dates selected.",
+        "checked_at": "2026-10-21T09:09:55.133Z"
+      }
+    },
+    {
+      "id": "ramm-bayeux-digital-trail-2026",
+      "name": "Bayeux Around Britain digital trail – RAMM",
+      "description": "Follow a free, twelve-stop digital trail through RAMM’s galleries to explore Norman Exeter.",
+      "kind": "event",
+      "region": "Devon",
+      "city": "Exeter",
+      "locality": "Exeter city centre",
+      "address": "RAMM, Queen Street, Exeter EX4 3RX",
+      "age_text": "Listed under Families & Children; numerical age guidance TBC.",
+      "price_text": "Free digital trail.",
+      "price_type": "free",
+      "booking_text": "Self-guided digital trail; no booking requirement stated. Bring a suitable device and check access needs.",
+      "schedule_text": "15 September 2026–11 July 2027 during museum opening. Weekend opening 10am–5pm; the trail takes about one hour.",
+      "occurrences": [
+        {
+          "start": "2026-10-24",
+          "end": "2026-10-24",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-10-25",
+          "end": "2026-10-25",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Sunday"
+        },
+        {
+          "start": "2026-10-31",
+          "end": "2026-10-31",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-11-01",
+          "end": "2026-11-01",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Sunday"
+        }
+      ],
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "The trail runs through the museum galleries.",
+        "classification": "Indoor self-guided museum visit"
+      },
+      "tags": [
+        "weekend",
+        "free",
+        "history",
+        "museum"
+      ],
+      "practical_notes": [
+        "This is a self-guided ongoing trail, not a timed workshop.",
+        "The Bayeux Tapestry itself is not on display at RAMM."
+      ],
+      "sources": [
+        {
+          "url": "https://rammuseum.org.uk/whats-on/bayeux-around-britain-digital-trail/",
+          "supports": "Free twelve-stop gallery trail, about one hour, 15 September 2026–11 July 2027. Weekend museum opening 10am–5pm. Numeric age guidance and booking rule not stated.",
+          "retrieval": "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit."
+        }
+      ],
+      "limitations": [
+        "Device requirements and numerical age suitability remain TBC."
+      ],
+      "verified_at": "2026-10-21",
+      "review_status": "verified_with_explicit_limitations",
+      "sheet_bindings": [
+        {
+          "candidate_id": "41e70e7aa1893dbdaba53c41",
+          "name": "Bayeux Around Britain digital trail – RAMM",
+          "region": "Devon",
+          "fingerprint": "c4f0418446bdbcb8c5643f924813bd950432586890769d05b6a89fccc8bc57e4"
+        }
+      ],
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 254,
+        "event_rows": [
+          514
+        ],
+        "reconciliation_note": "21 October native cells and complete published CSV checked; only officially confirmed dates selected.",
+        "checked_at": "2026-10-21T09:09:55.133Z"
+      }
+    },
+    {
+      "id": "exeter-phoenix-wildwood-2026",
+      "name": "Wildwood (12A) – Exeter Phoenix",
+      "description": "A stop-motion fantasy film at Studio 74, with a 132-minute running time.",
+      "kind": "event",
+      "region": "Devon",
+      "city": "Exeter",
+      "locality": "Exeter city centre",
+      "address": "Studio 74, Exeter Phoenix, Gandy Street, Exeter EX4 3LS",
+      "age_text": "BBFC 12A. Check the rating guidance before choosing for younger children.",
+      "price_text": "£9; £7 members; £5 students and under-25s. A £1.50 ticketing-system charge applies; confirm the total.",
+      "price_type": "paid",
+      "booking_text": "Book via the official cinema link. Live seat availability not verified.",
+      "schedule_text": "24 October: 2pm and 5pm. 25 October: 5.15pm. Full run 23–29 October; 132 minutes. Baby-friendly session is 27 October, not this weekend.",
+      "occurrences": [
+        {
+          "start": "2026-10-23",
+          "end": "2026-10-23",
+          "start_time": "16:00",
+          "end_time": null,
+          "weekday": "Friday"
+        },
+        {
+          "start": "2026-10-24",
+          "end": "2026-10-24",
+          "start_time": "14:00",
+          "end_time": null,
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-10-24",
+          "end": "2026-10-24",
+          "start_time": "17:00",
+          "end_time": null,
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-10-25",
+          "end": "2026-10-25",
+          "start_time": "17:15",
+          "end_time": null,
+          "weekday": "Sunday"
+        },
+        {
+          "start": "2026-10-26",
+          "end": "2026-10-26",
+          "start_time": "12:00",
+          "end_time": null,
+          "weekday": "Monday"
+        },
+        {
+          "start": "2026-10-26",
+          "end": "2026-10-26",
+          "start_time": "17:00",
+          "end_time": null,
+          "weekday": "Monday"
+        },
+        {
+          "start": "2026-10-27",
+          "end": "2026-10-27",
+          "start_time": "11:00",
+          "end_time": null,
+          "weekday": "Tuesday"
+        },
+        {
+          "start": "2026-10-27",
+          "end": "2026-10-27",
+          "start_time": "16:30",
+          "end_time": null,
+          "weekday": "Tuesday"
+        },
+        {
+          "start": "2026-10-28",
+          "end": "2026-10-28",
+          "start_time": "13:15",
+          "end_time": null,
+          "weekday": "Wednesday"
+        },
+        {
+          "start": "2026-10-28",
+          "end": "2026-10-28",
+          "start_time": "17:00",
+          "end_time": null,
+          "weekday": "Wednesday"
+        },
+        {
+          "start": "2026-10-29",
+          "end": "2026-10-29",
+          "start_time": "15:00",
+          "end_time": null,
+          "weekday": "Thursday"
+        }
+      ],
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "Indoor film screening in Studio 74.",
+        "classification": "Indoor cinema"
+      },
+      "tags": [
+        "weekend",
+        "film",
+        "culture"
+      ],
+      "practical_notes": [
+        "12A is a film rating, not an all-ages recommendation.",
+        "Baby-friendly screening is on Tuesday 27 October at 11am."
+      ],
+      "sources": [
+        {
+          "url": "https://exeterphoenix.org.uk/events/wildwood/",
+          "supports": "23–29 October 2026. 24 October 2pm/5pm, 25 October 5.15pm, 132 minutes, BBFC 12A. Published fares £9/£7/£5 plus £1.50 ticketing-system charge.",
+          "retrieval": "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit."
+        }
+      ],
+      "limitations": [
+        "Seats and final checkout price not tested."
+      ],
+      "verified_at": "2026-10-21",
+      "review_status": "verified_with_explicit_limitations",
+      "sheet_bindings": [
+        {
+          "candidate_id": "3949b4b82f56396b52a5863b",
+          "name": "Wildwood (12A) – Exeter Phoenix",
+          "region": "Devon",
+          "fingerprint": "aa4fb986f8a34d1af191d6ba772a2c140142cf75bd1fb36f930c7b92ee585401"
+        }
+      ],
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 209,
+        "event_rows": [
+          252,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258
+        ],
+        "reconciliation_note": "21 October native cells and complete published CSV checked; only officially confirmed dates selected.",
+        "checked_at": "2026-10-21T09:09:55.133Z"
+      }
     }
   ],
   "previous_research_file": "verified-candidates-2026-10-19.json",
-  "reviewed_at": "2026-10-21T09:46:47+01:00",
+  "reviewed_at": "2026-10-21T09:09:55.133Z",
   "review_notes": [
     "Reverified 12 selected records on 23 September 2026. Source-specific retrieval limits and prior evidence are retained. Seven historical records remain unchanged.",
     "On 23 September, RAMM had ambiguous Gallery 20 closure notices, so the earlier export did not claim full dates. The 2 October official-source review supersedes that uncertainty for the current October notice.",
@@ -2688,7 +2973,10 @@
     "The 16 October 08:04 BST production staging fetched current published Sheet CSVs and passed live bindings for all 13 selected items after the Norman Lockyer rebind and workshop hold. The new Blaise candidate matched its existing Bristol master and dated events row without a Sheet edit.",
     "The official Crealy Spook-Fest event page and opening calendar were compared for 17–18 and 24–25 October 2026. The latter states last entry 4pm on all four selected dates. The Sheet master/events dates and status still match; no Sheet cell or binding changed. Live ticket availability remains unconfirmed.",
     "19 October: official provider pages reviewed for five selected dated activities. Added only explicit 31 October or 1 November weekend occurrences within unchanged Sheet event ranges; live Sheet fingerprints remain to be checked by stage.py. RAMM cafe maintenance notice added; unreviewed ordinary-place verification dates preserved.",
-    "21 October: RAMM official Visit page extended Gallery 20 maintenance from 19 to 21 October. Corrected the dated practical note on the Exeter free and rainy-day guides and removed the elapsed 20 October cafe notice. Free admission, general hours and the generic master Sheet partial-closure warning remain compatible; no Sheet cell or binding changed. Other records retain their verification dates. Fresh published Sheet CSV binding check passed at 09:47 BST."
+    "21 October: RAMM official Visit page extended Gallery 20 maintenance from 19 to 21 October. Corrected the dated practical note on the Exeter free and rainy-day guides and removed the elapsed 20 October cafe notice. Free admission, general hours and the generic master Sheet partial-closure warning remain compatible; no Sheet cell or binding changed. Other records retain their verification dates. Fresh published Sheet CSV binding check passed at 09:47 BST.",
+    "Blaise selected dates and live booking price conflict reconciled with native cells and full published CSV.",
+    "Adire workshop added once; time, fee, booking and numeric ages remain TBC.",
+    "Cat Video Fest excluded from this weekend: screenings occur on 23, 26, 28 and 31 October."
   ],
   "excluded_candidates": [
     {

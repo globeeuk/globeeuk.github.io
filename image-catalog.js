@@ -207,6 +207,7 @@
       if(p.name==='Pumpkin Patch – Avon Valley')return 'pumpkin-field-reference';
       if(p.name==='Spooky Week at The Red Lodge Museum')return 'red-lodge-museum';
       if(p.name==='Autumn Week at Blaise Museum')return 'blaise-castle-museum';
+      if(p.name==='Wear your story – Adire family workshop')return 'bristol-museum';
       if(p.name==='School’s Out Henleaze – October Holiday Club')return 'henleaze-infant-school';
       if(p.name==='Fun Science Bristol – October Holiday Club')return 'science-flasks-reference';
       if(p.name==='Whiteladies Road Market')return 'whiteladies-road';
