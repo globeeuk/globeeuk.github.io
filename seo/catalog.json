@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-10-19",
+  "source_verified_at": "2026-10-21",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -297,8 +297,8 @@
       "sources": [
         {
           "url": "https://rammuseum.org.uk/visit/",
-          "supports": "Confirms free entry, the Queen Street address and the weekly opening times above. Describes history, natural-history and world-cultures galleries. The current Visit-page banner lists Gallery 20 maintenance closure from 5–19 October. The previous 1 and 3 October event-closure notice is no longer shown; ordinary museum weekly hours remain separately listed. On 19 October 2026 the official visit notice said the cafe would close for maintenance on Tuesday 20 October, with a reduced hot-drinks-and-cakes service in its seating area. Free museum entry and Tue–Sun opening hours remain listed.",
-          "retrieval": "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
+          "supports": "Confirms free entry, the Queen Street address and the weekly opening times above. Describes history, natural-history and world-cultures galleries. The current Visit-page banner lists Gallery 20 maintenance closure from 5–21 October, extending the previously published 5–19 October notice. Ordinary museum weekly hours remain separately listed. On 19 October 2026 the official visit notice said the cafe would close for maintenance on Tuesday 20 October, with a reduced hot-drinks-and-cakes service in its seating area. Free museum entry and Tue–Sun opening hours remain listed.",
+          "retrieval": "Official RAMM Visit page body reviewed through the web tool on 21 October 2026 at about 07:30 BST. The Gallery 20 maintenance banner now says 5–21 October; ordinary museum free entry and weekly hours remain listed. The site still displays the historical 20 October cafe notice, which is no longer presented as an upcoming visitor condition. No on-site reopening or ticket availability was checked.",
           "previous_retrieval": "Official RAMM Visit page body reviewed on 2 October 2026 at about 07:20 BST; free entry, address, weekly hours and current Gallery 20 banners were read directly. No whole-museum closure is claimed.",
           "label": "Plan your museum visit",
           "retrieval_history": [
@@ -308,7 +308,8 @@
             "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body. Chrome also loaded the official page successfully after direct HTTP 403; the current Gallery 20 notices were checked separately.",
             "Official RAMM Visit page body reviewed on 2 October 2026 at about 07:20 BST; free entry, address, weekly hours and current Gallery 20 banners were read directly. No whole-museum closure is claimed.",
             "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
-            "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check."
+            "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check.",
+            "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested."
           ]
         },
         {
@@ -333,25 +334,24 @@
           "review_note": "Historical 2 October homepage evidence retained; current closure wording is verified on the Visit page on 7 October. This homepage was not rechecked today."
         }
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-21",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 5,
         "event_rows": [],
-        "reconciliation_note": "Official claims reviewed on 23 September 2026 and matched to fresh published master/events CSVs. RAMM and Powderham description corrections were read back natively with surrounding cells, formatting and validation preserved; all other selected bindings remain unchanged. On 2 October, the date-specific Gallery 20 notice was checked on the official site; the generic Sheet warning remains accurate and the live Sheet binding passed without changing its fingerprint. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed.",
-        "checked_at": "2026-10-07T07:08:34+01:00"
+        "reconciliation_note": "Official claims reviewed on 23 September 2026 and matched to fresh published master/events CSVs. RAMM and Powderham description corrections were read back natively with surrounding cells, formatting and validation preserved; all other selected bindings remain unchanged. On 2 October, the date-specific Gallery 20 notice was checked on the official site; the generic Sheet warning remains accurate and the live Sheet binding passed without changing its fingerprint. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed. On 21 October the date-specific Gallery 20 extension and removal of the elapsed cafe note did not conflict with the master Sheet generic warning; the published master candidate fingerprint remained unchanged. A fresh 21 October published Sheet master/events queue passed the selected-item binding check; no native Sheet edit was required.",
+        "checked_at": "2026-10-21T09:47:53+01:00"
       },
       "limitations": [
         "Specific children's trail availability and numerical age guidance were not established in this refresh.",
         "A general place has not been converted into dated event occurrences.",
-        "The current Gallery 20 banner omits a year; the 5–19 October maintenance notice continues the October notice checked on 2 October 2026. Check later changes before visiting; this is not a whole-museum closure."
+        "The Gallery 20 banner omits a year; the 5–21 October maintenance notice continues the October 2026 notice previously checked. The stated closure applies to Gallery 20, not the entire museum. Reopening after 21 October has not been confirmed on-site."
       ],
-      "previous_verified_at": "2026-10-16",
+      "previous_verified_at": "2026-10-19",
       "review_status": "verified",
       "practical_notes": [
         "The museum lists bank-holiday closures; check exceptional opening before travelling.",
-        "Gallery 20 is listed as closed for maintenance through 19 October; check reopening if that gallery is your reason to visit.",
-        "The museum cafe is closed for maintenance on Tuesday 20 October; only hot drinks and cakes are advertised in the cafe seating area that day."
+        "Gallery 20 is listed as closed for maintenance through 21 October; check reopening if that gallery is your reason to visit."
       ],
       "sheet_bindings": [
         {
@@ -362,13 +362,13 @@
         }
       ],
       "review_notes": [
-        "The official visit page confirms free entry, Monday closure and Tue–Sun hours, and warns that the cafe will be closed for maintenance on Tuesday 20 October with only hot drinks and cakes available in the cafe seating area."
+        "The official visit page confirms free entry, Monday closure and Tue–Sun hours, and warns that the cafe will be closed for maintenance on Tuesday 20 October with only hot drinks and cakes available in the cafe seating area.",
+        "21 October: the official Visit-page banner extended Gallery 20 maintenance through 21 October. The 20 October cafe closure is now past and was removed from current practical notes; the official site still displays it as a historical banner. General admission and opening hours remain unchanged."
       ],
       "city": "Exeter",
       "notes": [
         "The museum lists bank-holiday closures; check exceptional opening before travelling.",
-        "Gallery 20 is listed as closed for maintenance through 19 October; check reopening if that gallery is your reason to visit.",
-        "The museum cafe is closed for maintenance on Tuesday 20 October; only hot drinks and cakes are advertised in the cafe seating area that day."
+        "Gallery 20 is listed as closed for maintenance through 21 October; check reopening if that gallery is your reason to visit."
       ],
       "free_basis": "Free museum admission. Check individual event listings for any separate charges.",
       "indoor_basis": "Editorial classification based on the museum's indoor galleries described on its official visit page."
