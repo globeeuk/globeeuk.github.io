@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-10-21",
+  "source_verified_at": "2026-10-24",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -2876,7 +2876,7 @@
         {
           "start": "2026-10-28",
           "end": "2026-10-28",
-          "start_time": "13:15",
+          "start_time": "12:40",
           "end_time": null,
           "weekday": "Wednesday"
         },
@@ -2913,14 +2913,15 @@
       "sources": [
         {
           "url": "https://exeterphoenix.org.uk/events/wildwood/",
-          "supports": "23–29 October 2026. 24 October 2pm/5pm, 25 October 5.15pm, 132 minutes, BBFC 12A. Published fares £9/£7/£5 plus £1.50 ticketing-system charge.",
-          "retrieval": "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit."
+          "supports": "23–29 October 2026. 24 October 2pm/5pm, 25 October 5.15pm, 132 minutes, BBFC 12A. Published fares £9/£7/£5 plus £1.50 ticketing-system charge. The 24 October review confirms Wednesday 28 October at 12.40pm and 5pm.",
+          "retrieval": "Official organiser page body reviewed on 24 October 2026 (BST). The 28 October early screening is now listed at 12.40pm, not 1.15pm. Other listed screenings, 12A rating, 132-minute duration and published fares/charge agree; no booking or live-seat check.",
+          "previous_retrieval": "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit."
         }
       ],
       "limitations": [
         "Seats and final checkout price not tested."
       ],
-      "verified_at": "2026-10-21",
+      "verified_at": "2026-10-24",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -2942,9 +2943,14 @@
           257,
           258
         ],
-        "reconciliation_note": "21 October native cells and complete published CSV checked; only officially confirmed dates selected.",
-        "checked_at": "2026-10-21T09:09:55.133Z"
+        "reconciliation_note": "21 October native cells and complete published CSV checked; only officially confirmed dates selected. On 24 October, published master row209 states daily screenings at various times and matching events rows252–258 store dates only. No Sheet cell needs a time correction, and the existing fingerprint is unchanged.",
+        "checked_at": "2026-10-21T09:09:55.133Z",
+        "published_csv_checked_at": "2026-10-24T07:01:07.900529+01:00"
       },
+      "previous_verified_at": "2026-10-21",
+      "review_notes": [
+        "Corrected only the early 28 October start from 13:15 to 12:40 following the organiser's updated showing-times list. The 24–25 October weekend times are unchanged."
+      ],
       "notes": [
         "12A is a film rating, not an all-ages recommendation.",
         "Baby-friendly screening is on Tuesday 27 October at 11am."
