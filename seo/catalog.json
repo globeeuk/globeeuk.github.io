@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-10-24",
+  "source_verified_at": "2026-10-25",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -1984,13 +1984,13 @@
       "price_text": "Online tickets from £20 per person; gate price £25 per person; children under 92cm free. Some extras cost more. Check the date-specific final total.",
       "price_type": "paid",
       "booking_text": "Advance online booking offers the advertised lower price; gate tickets are listed. Check date-specific availability and ride restrictions.",
-      "schedule_text": "24–31 October 2026, 10am–5pm on listed dates; the official park calendar gives last entry at 4pm for 24–25 and 31 October.",
+      "schedule_text": "24–31 October 2026, normally 10am–5pm with last entry at 4pm for the checked 25 and 31 October dates. On 24 October the park closed at 4pm, with last entry at 3pm, because of the organiser's Storm Austen update.",
       "occurrences": [
         {
           "start": "2026-10-24",
           "end": "2026-10-24",
           "start_time": "10:00",
-          "end_time": "17:00",
+          "end_time": "16:00",
           "weekday": "Saturday"
         },
         {
@@ -2023,33 +2023,39 @@
       "practical_notes": [
         "Individual attractions have their own age and height rules.",
         "The final October run continues through Saturday 31 October; the separate free-return offer on 1 November has eligibility terms and is not listed here as a general event date.",
-        "The official park calendar gives 4pm as last entry for 24–25 and 31 October, one hour before the 5pm closing time."
+        "For 25 and 31 October the park calendar lists 10am–5pm, last entry 4pm. The separate 24 October weather exception was a 4pm close and 3pm last entry; it is not a change to the later dates."
       ],
       "sources": [
         {
           "url": "https://www.crealy.co.uk/events/halloween-at-crealy/",
           "label": "Official 2026 Halloween programme",
-          "supports": "The official event page lists 10–11, 17–18 and 24–31 October 2026, 10am–5pm. Online tickets start at £20 per person, gate tickets are £25, and children under 92cm are free; extra experiences may cost more. The family programme includes gentler activities for younger children; some attractions have separate restrictions. The current official Spook-Fest page confirms 10–11 and 17–18 October 2026, 10am–5pm, online admission from GBP 20, GBP 25 at the gate and free entry below 92cm. Attraction-specific restrictions and extras remain. The official 2026 page confirms 17–18 and 24–31 October, 10am–5pm, online tickets from £20, gate tickets £25, under-92cm admission free and the under-10s trick-or-treat option. The 19 October 2026 review confirms Spook-Fest runs 24–31 October, 10am–5pm; online admission starts at £20, gate admission is £25, under-92cm visitors are free, and some extras cost more. The 1 November free-return offer has separate terms and is not represented as ordinary Spook-Fest entry.",
-          "retrieval": "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
+          "supports": "The official event page lists 10–11, 17–18 and 24–31 October 2026, 10am–5pm. Online tickets start at £20 per person, gate tickets are £25, and children under 92cm are free; extra experiences may cost more. The family programme includes gentler activities for younger children; some attractions have separate restrictions. The current official Spook-Fest page confirms 10–11 and 17–18 October 2026, 10am–5pm, online admission from GBP 20, GBP 25 at the gate and free entry below 92cm. Attraction-specific restrictions and extras remain. The official 2026 page confirms 17–18 and 24–31 October, 10am–5pm, online tickets from £20, gate tickets £25, under-92cm admission free and the under-10s trick-or-treat option. The 19 October 2026 review confirms Spook-Fest runs 24–31 October, 10am–5pm; online admission starts at £20, gate admission is £25, under-92cm visitors are free, and some extras cost more. The 1 November free-return offer has separate terms and is not represented as ordinary Spook-Fest entry. The 25 October review confirms the 24–31 October 2026 programme, online admission from £20, gate £25, free admission below 92cm, under-10 trick-or-treat and paid extras; day-specific calendar exceptions take precedence over general event hours.",
+          "retrieval": "Official provider page body reviewed through the web tool on 25 October 2026 (Europe/London, GMT). Programme, dated calendar, admission basis, restrictions and booking conditions compared; no live capacity guarantee or ticket transaction.",
           "retrieval_history": [
             "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked.",
             "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability.",
             "Official organiser event page reviewed through the web tool on 12 October 2026 (BST). The 2026 dates, time or separate activity-hour limits, price basis, age guidance, booking terms and access notes were checked where stated; live availability may change.",
-            "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check."
+            "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check.",
+            "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested."
           ],
           "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked."
         },
         {
           "url": "https://www.crealy.co.uk/theme-park/plan-your-visit/opening-times/",
           "label": "Official Crealy park calendar for October 2026",
-          "supports": "The 17, 18, 24 and 25 October 2026 calendar cells show 10am–5pm park opening and 4pm last entry. The dated 31 October 2026 calendar cell shows 10am–5pm opening and 4pm last entry.",
-          "retrieval": "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
+          "supports": "The dated 25 and 31 October 2026 calendar cells show 10am–5pm, last entry 4pm. The dated 24 October cell and Storm Austen visitor notice show a 4pm close and 3pm last entry; the organiser says some rides could be unavailable on that date. This is a historical exception, not a cancellation of later dates.",
+          "retrieval": "Official provider page body reviewed through the web tool on 25 October 2026 (Europe/London, GMT). Programme, dated calendar, admission basis, restrictions and booking conditions compared; no live capacity guarantee or ticket transaction.",
           "retrieval_history": [
-            "Official calendar body reviewed through the web tool on 17 October 2026 (BST). The current-day banner was still dated Friday 16 October, so the explicit dated calendar cells were used instead."
+            "Official calendar body reviewed through the web tool on 17 October 2026 (BST). The current-day banner was still dated Friday 16 October, so the explicit dated calendar cells were used instead.",
+            "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested."
+          ],
+          "previous_supports": [
+            "The 17, 18, 24 and 25 October 2026 calendar cells show 10am–5pm park opening and 4pm last entry.",
+            "The dated 31 October 2026 calendar cell shows 10am–5pm opening and 4pm last entry."
           ]
         }
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-25",
       "review_status": "verified",
       "sheet_match": {
         "live_sheet_checked": true,
@@ -2059,8 +2065,10 @@
           98,
           99
         ],
-        "reconciliation_note": "After checking the official 2026 page, corrected master I101 final block to 24–31 October and events A99 to 24 October. Native readback and published master/events CSVs agree. This guide selects already-curated events row97 for 10–11 October. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed. On 12 October the existing public Sheet candidate and event periods were rechecked against the organiser for 17–18 and 24–25 October; no Sheet cell or binding fingerprint changed.",
-        "checked_at": "2026-10-12T07:08:14+01:00"
+        "reconciliation_note": "After checking the official 2026 page, corrected master I101 final block to 24–31 October and events A99 to 24 October. Native readback and published master/events CSVs agree. This guide selects already-curated events row97 for 10–11 October. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed. On 12 October the existing public Sheet candidate and event periods were rechecked against the organiser for 17–18 and 24–25 October; no Sheet cell or binding fingerprint changed. On 25 October, changed only native master 시트1!I101 to retain the 24 October 4pm-close/3pm-last-entry weather exception. Exact native CellData readback and complete published master/events CSV agree; events97–99 and historical rows preserved. Only the reviewed Crealy master text/binding fingerprint changed.",
+        "checked_at": "2026-10-25T07:09:18.392Z",
+        "previous_checked_at": "2026-10-12T07:08:14+01:00",
+        "published_csv_checked_at": "2026-10-25T07:08:02+00:00"
       },
       "limitations": [
         "The advertised online price is a starting price; the actual date-specific checkout total may vary.",
@@ -2071,18 +2079,19 @@
           "candidate_id": "35170ba887ae31826dbf5c36",
           "name": "Halloween Spook-Fest – Crealy",
           "region": "Devon",
-          "fingerprint": "4af32261e7a67c42f5b6622eed0f13f04de8ab9a50e6c41b33fe85cf3650125e"
+          "fingerprint": "4085d444c4e422d04d7435195e47794cc23b57ccacdf7b1c1d4c8c720bd10f9e"
         }
       ],
-      "previous_verified_at": "2026-10-17",
+      "previous_verified_at": "2026-10-19",
       "review_notes": [
-        "The official 2026 event and dated park calendar confirm Saturday 31 October, 10:00–17:00 with 16:00 last entry. The event page advertises admission from £20 online, £25 gate, under 92cm free, family shows, age-specific activities and paid extras."
+        "The official 2026 event and dated park calendar confirm Saturday 31 October, 10:00–17:00 with 16:00 last entry. The event page advertises admission from £20 online, £25 gate, under 92cm free, family shows, age-specific activities and paid extras.",
+        "25 October review: official calendar records a weather-related early 4pm closure and 3pm last entry on 24 October. Corrected that historical occurrence while preserving it. Checked 25/31 October hours, current programme, fares, restrictions and booking basis are unchanged. No live availability or checkout test."
       ],
       "city": "",
       "notes": [
         "Individual attractions have their own age and height rules.",
         "The final October run continues through Saturday 31 October; the separate free-return offer on 1 November has eligibility terms and is not listed here as a general event date.",
-        "The official park calendar gives 4pm as last entry for 24–25 and 31 October, one hour before the 5pm closing time."
+        "For 25 and 31 October the park calendar lists 10am–5pm, last entry 4pm. The separate 24 October weather exception was a 4pm close and 3pm last entry; it is not a change to the later dates."
       ]
     },
     {
