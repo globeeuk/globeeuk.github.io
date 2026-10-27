@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-10-26",
+  "source_verified_at": "2026-10-27",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -297,9 +297,9 @@
       "sources": [
         {
           "url": "https://rammuseum.org.uk/visit/",
-          "supports": "Confirms free entry, the Queen Street address and the weekly opening times above. Describes history, natural-history and world-cultures galleries. The current Visit-page banner lists Gallery 20 maintenance closure from 5–21 October, extending the previously published 5–19 October notice. Ordinary museum weekly hours remain separately listed. On 19 October 2026 the official visit notice said the cafe would close for maintenance on Tuesday 20 October, with a reduced hot-drinks-and-cakes service in its seating area. Free museum entry and Tue–Sun opening hours remain listed.",
-          "retrieval": "Official RAMM Visit page body reviewed through the web tool on 21 October 2026 at about 07:30 BST. The Gallery 20 maintenance banner now says 5–21 October; ordinary museum free entry and weekly hours remain listed. The site still displays the historical 20 October cafe notice, which is no longer presented as an upcoming visitor condition. No on-site reopening or ticket availability was checked.",
-          "previous_retrieval": "Official RAMM Visit page body reviewed on 2 October 2026 at about 07:20 BST; free entry, address, weekly hours and current Gallery 20 banners were read directly. No whole-museum closure is claimed.",
+          "supports": "Confirms free museum entry, Queen Street address, galleries and regular opening: Tuesday 10.30am–5pm, Wednesday–Sunday 10am–5pm, Monday closed. The current banner says Gallery 20 will close on Wednesday 28 October for an event; it is not a whole-museum closure notice.",
+          "retrieval": "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check.",
+          "previous_retrieval": "Official RAMM Visit page body reviewed through the web tool on 21 October 2026 at about 07:30 BST. The Gallery 20 maintenance banner now says 5–21 October; ordinary museum free entry and weekly hours remain listed. The site still displays the historical 20 October cafe notice, which is no longer presented as an upcoming visitor condition. No on-site reopening or ticket availability was checked.",
           "label": "Plan your museum visit",
           "retrieval_history": [
             "Official-source content reviewed on 20 September 2026. Web retrieval may use indexed official content; this does not promise live ticket availability or exceptional same-day opening.",
@@ -309,38 +309,72 @@
             "Official RAMM Visit page body reviewed on 2 October 2026 at about 07:20 BST; free entry, address, weekly hours and current Gallery 20 banners were read directly. No whole-museum closure is claimed.",
             "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
             "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check.",
-            "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested."
+            "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
+            "Official RAMM Visit page body reviewed through the web tool on 21 October 2026 at about 07:30 BST. The Gallery 20 maintenance banner now says 5–21 October; ordinary museum free entry and weekly hours remain listed. The site still displays the historical 20 October cafe notice, which is no longer presented as an upcoming visitor condition. No on-site reopening or ticket availability was checked."
+          ],
+          "supports_history": [
+            {
+              "observed_at": "2026-10-21",
+              "supports": [
+                "Confirms free entry, the Queen Street address and the weekly opening times above.",
+                "Describes history, natural-history and world-cultures galleries.",
+                "The current Visit-page banner lists Gallery 20 maintenance closure from 5–21 October, extending the previously published 5–19 October notice. Ordinary museum weekly hours remain separately listed.",
+                "On 19 October 2026 the official visit notice said the cafe would close for maintenance on Tuesday 20 October, with a reduced hot-drinks-and-cakes service in its seating area. Free museum entry and Tue–Sun opening hours remain listed."
+              ]
+            }
           ]
         },
         {
           "url": "https://rammuseum.org.uk/visit/access/",
-          "supports": "The museum access page lists Monday and bank-holiday closures alongside its regular weekly hours. Check exceptional opening before travelling.",
-          "retrieval": "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
+          "supports": "Confirms Tuesday 10.30am–5pm, Wednesday–Sunday 10am–5pm, and Monday/bank-holiday closures. The same 28 October Gallery 20 event-closure banner is displayed. Numerical visitor ages and general-visit booking requirements remain unstated.",
+          "retrieval": "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check.",
           "label": "Access and holiday opening",
-          "previous_retrieval": "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body. Chrome also loaded the official page successfully after direct HTTP 403; the current Gallery 20 notices were checked separately.",
+          "previous_retrieval": "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
           "retrieval_history": [
             "Official Access page indexed text reviewed on 20 September 2026 (crawler reported today); bank-holiday and Monday closures confirmed. Direct retrieval returned 403.",
             "Official Access page body successfully opened and reviewed on 21 September 2026; weekly hours and Monday/bank-holiday closures confirmed.",
             "Official Access-page full body reviewed through the web tool on 22 September 2026; crawler timestamp was 21 September. Weekly hours and Monday/bank-holiday closures matched. This may be indexed content and does not establish exceptional same-day opening.",
-            "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body. Chrome also loaded the official page successfully after direct HTTP 403; the current Gallery 20 notices were checked separately."
+            "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body. Chrome also loaded the official page successfully after direct HTTP 403; the current Gallery 20 notices were checked separately.",
+            "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed."
+          ],
+          "supports_history": [
+            {
+              "observed_at": "2026-10-21",
+              "supports": [
+                "The museum access page lists Monday and bank-holiday closures alongside its regular weekly hours. Check exceptional opening before travelling."
+              ]
+            }
           ]
         },
         {
           "url": "https://rammuseum.org.uk/",
           "label": "Current gallery closure notices",
-          "supports": "The current homepage banner lists Gallery 20 as closed Thursday 1 and Saturday 3 October for an event, then 5–19 October for maintenance. The ordinary museum visiting hours remain separately listed.",
-          "retrieval": "Official RAMM homepage body reviewed on 2 October 2026 at about 07:30 BST; the same current Gallery 20 event and maintenance notices appear there. The banner omits a year but its Thursday 1 and Saturday 3 October dates match 2026.",
-          "previous_retrieval": "Official homepage body and Chrome banner reviewed on 23 September 2026. Specific closure dates remain TBC; current programme dates and the footer year do not establish the banner dates.",
-          "review_note": "Historical 2 October homepage evidence retained; current closure wording is verified on the Visit page on 7 October. This homepage was not rechecked today."
+          "supports": "The current homepage repeats the Gallery 20-only 28 October event closure and lists the regular museum opening schedule and Queen Street address.",
+          "retrieval": "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check.",
+          "previous_retrieval": "Official RAMM homepage body reviewed on 2 October 2026 at about 07:30 BST; the same current Gallery 20 event and maintenance notices appear there. The banner omits a year but its Thursday 1 and Saturday 3 October dates match 2026.",
+          "review_note": "Earlier banner evidence is historical in supports_history/retrieval_history. Current 27 October review confirms the 28 October Gallery 20-only event closure.",
+          "supports_history": [
+            {
+              "observed_at": "2026-10-21",
+              "supports": [
+                "The current homepage banner lists Gallery 20 as closed Thursday 1 and Saturday 3 October for an event, then 5–19 October for maintenance. The ordinary museum visiting hours remain separately listed."
+              ]
+            }
+          ],
+          "retrieval_history": [
+            "Official RAMM homepage body reviewed on 2 October 2026 at about 07:30 BST; the same current Gallery 20 event and maintenance notices appear there. The banner omits a year but its Thursday 1 and Saturday 3 October dates match 2026."
+          ]
         }
       ],
-      "verified_at": "2026-10-21",
+      "verified_at": "2026-10-27",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 5,
         "event_rows": [],
-        "reconciliation_note": "Official claims reviewed on 23 September 2026 and matched to fresh published master/events CSVs. RAMM and Powderham description corrections were read back natively with surrounding cells, formatting and validation preserved; all other selected bindings remain unchanged. On 2 October, the date-specific Gallery 20 notice was checked on the official site; the generic Sheet warning remains accurate and the live Sheet binding passed without changing its fingerprint. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed. On 21 October the date-specific Gallery 20 extension and removal of the elapsed cafe note did not conflict with the master Sheet generic warning; the published master candidate fingerprint remained unchanged. A fresh 21 October published Sheet master/events queue passed the selected-item binding check; no native Sheet edit was required.",
-        "checked_at": "2026-10-21T09:47:53+01:00"
+        "reconciliation_note": "Native 시트1!N5 updated from the official current Gallery 20 notice, read back and compared with the complete published CSV. Existing museum hours, free price, region and historical rows preserved.",
+        "checked_at": "2026-10-27T07:12:02.980Z",
+        "published_csv_checked": true,
+        "published_csv_checked_at": "2026-10-27T07:08:32+00:00"
       },
       "limitations": [
         "Specific children's trail availability and numerical age guidance were not established in this refresh.",
@@ -351,24 +385,29 @@
       "review_status": "verified",
       "practical_notes": [
         "The museum lists bank-holiday closures; check exceptional opening before travelling.",
-        "Gallery 20 is listed as closed for maintenance through 21 October; check reopening if that gallery is your reason to visit."
+        "Gallery 20 is listed as closed on Wednesday 28 October 2026 for an event. This notice is for that gallery, not the whole museum; check individual gallery access before travelling."
       ],
       "sheet_bindings": [
         {
           "candidate_id": "f5492124652f836e731fef31",
           "name": "RAMM – Royal Albert Memorial Museum",
           "region": "Devon",
-          "fingerprint": "d62a190f1e06cb072e411b6add617e74973b0eca962b4f70d400aa3ffb9b4c07"
+          "fingerprint": "893319ed8db9ab24f199bb59f9bdf158f76aa243f49bf833ffe542cb7babc723"
         }
       ],
       "review_notes": [
         "The official visit page confirms free entry, Monday closure and Tue–Sun hours, and warns that the cafe will be closed for maintenance on Tuesday 20 October with only hot drinks and cakes available in the cafe seating area.",
-        "21 October: the official Visit-page banner extended Gallery 20 maintenance through 21 October. The 20 October cafe closure is now past and was removed from current practical notes; the official site still displays it as a historical banner. General admission and opening hours remain unchanged."
+        "21 October: the official Visit-page banner extended Gallery 20 maintenance through 21 October. The 20 October cafe closure is now past and was removed from current practical notes; the official site still displays it as a historical banner. General admission and opening hours remain unchanged.",
+        "The Wednesday 28 October banner matches the 2026 calendar and current 2026 museum programme. Ordinary museum hours are separate; no whole-museum closure or guaranteed reopening inferred."
+      ],
+      "previous_practical_notes": [
+        "The museum lists bank-holiday closures; check exceptional opening before travelling.",
+        "Gallery 20 is listed as closed for maintenance through 21 October; check reopening if that gallery is your reason to visit."
       ],
       "city": "Exeter",
       "notes": [
         "The museum lists bank-holiday closures; check exceptional opening before travelling.",
-        "Gallery 20 is listed as closed for maintenance through 21 October; check reopening if that gallery is your reason to visit."
+        "Gallery 20 is listed as closed on Wednesday 28 October 2026 for an event. This notice is for that gallery, not the whole museum; check individual gallery access before travelling."
       ],
       "free_basis": "Free museum admission. Check individual event listings for any separate charges.",
       "indoor_basis": "Editorial classification based on the museum's indoor galleries described on its official visit page."
@@ -3102,21 +3141,21 @@
       "price_type": "unknown",
       "price_text": "Visitor admission TBC. Food and other purchases cost extra.",
       "booking_text": "No visitor booking rule is stated. Stallholder pitch booking is separate; check for exceptions.",
-      "schedule_text": "Sundays, 10am–2.30pm. 1 and 8 November 2026 follow the published weekly schedule, not separate dated confirmations.",
+      "schedule_text": "Sunday 1 and 8 November 2026, from 10am. Closing time TBC: dated event pages say 2pm, but the calendar and general market guide say 2.30pm; confirm before travelling.",
       "occurrences": [
         {
           "start": "2026-11-01",
           "end": "2026-11-01",
           "weekday": "Sunday",
           "start_time": "10:00",
-          "end_time": "14:30"
+          "end_time": null
         },
         {
           "start": "2026-11-08",
           "end": "2026-11-08",
           "weekday": "Sunday",
           "start_time": "10:00",
-          "end_time": "14:30"
+          "end_time": null
         }
       ],
       "indoor": null,
@@ -3131,42 +3170,75 @@
       ],
       "practical_notes": [
         "A food-and-makers market, not a dedicated children's workshop.",
-        "Dates follow the regular Sunday schedule; check for cancellations."
+        "The organiser lists 1 and 8 November 2026 individually; check for changes before travelling.",
+        "Closing time TBC: the dated event pages say 2pm, while the calendar and general market guide say 2.30pm."
       ],
       "sources": [
         {
-          "url": "https://tobaccofactory.com/whats-on/sunday-market/",
-          "supports": "Venue page publishes a weekly Sunday market, 10:00–14:30, family visits, local food/crafts/produce and Raleigh Road BS3 1TF. Selected dates follow that rule. Visitor admission and booking rules are not stated.",
-          "retrieval": "Official organiser page body reviewed on 26 October 2026 (GMT). No booking transaction, live-availability guarantee or visit."
+          "url": "https://www.tobaccofactory.com/sunday-market",
+          "label": "Current official market guide",
+          "supports": "Confirms family visits, local food/crafts/produce and Raleigh Road, Bristol BS3 1TF. General weekly hours are 10am–2.30pm, conflicting with the dated event pages. Visitor admission, numerical ages and visitor booking rules are not stated.",
+          "retrieval": "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
+        },
+        {
+          "url": "https://www.tobaccofactory.com/whats-on?category=Market",
+          "label": "Official 2026 market calendar",
+          "supports": "Individually lists Sunday 1 and 8 November 2026, from 10am; calendar summary ends at 2.30pm. The dated event detail pages give 2pm instead. Closing time remains unresolved.",
+          "retrieval": "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
+        },
+        {
+          "url": "https://www.tobaccofactory.com/whats-on/sunday-market/01/11/26",
+          "label": "Official 1 November listing",
+          "supports": "Confirms 1 November 2026 and a 10am start; detail page says 2pm end, conflicting with the 2.30pm calendar/general guide. Visitor ticket prices and visitor booking rule not stated; stallholder pitch booking is separate.",
+          "retrieval": "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
+        },
+        {
+          "url": "https://www.tobaccofactory.com/whats-on/sunday-market/08/11/26",
+          "label": "Official 8 November listing",
+          "supports": "Confirms 8 November 2026 and a 10am start; detail page says 2pm end, conflicting with the 2.30pm calendar/general guide.",
+          "retrieval": "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
         }
       ],
       "limitations": [
-        "Unstated prices, numerical ages, entry/access rules and exceptional changes remain TBC."
+        "Unstated prices, numerical ages, entry/access rules and exceptional changes remain TBC.",
+        "Official closing times conflict: 2pm on dated pages versus 2.30pm on the calendar/general guide. No closing time is confirmed."
       ],
-      "verified_at": "2026-10-26",
+      "verified_at": "2026-10-27",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
           "candidate_id": "70adf53aba5f3888bfb41dc6",
           "name": "Tobacco Factory Sunday Market",
           "region": "Bristol",
-          "fingerprint": "67f0e60ef3488938540702e6a8ff5d3597ad86b3eee679e04c76675fae2da3d4"
+          "fingerprint": "93045ccded237da9731efe73216b21e290532d77b7955b0ea0d04a6f78009681"
         }
       ],
       "sheet_match": {
-        "live_sheet_checked": false,
+        "live_sheet_checked": true,
         "published_csv_checked": true,
         "row_id": 250,
         "event_rows": [
           500,
           501
         ],
-        "published_csv_checked_at": "2026-10-26T07:02:06+00:00",
-        "reconciliation_note": "Existing exact master and dated events compared in complete published CSV after official-source review. No native cell write or fresh native read claimed; no new DB row or region."
+        "published_csv_checked_at": "2026-10-27T07:08:32+00:00",
+        "reconciliation_note": "Native 시트1!I250/M250/N250 corrected and read back. Matching events 500/501 and all historical dates preserved. Complete published master/events CSV confirms the exact updated source and unresolved closing time before binding renewal.",
+        "checked_at": "2026-10-27T07:12:02.980Z"
       },
+      "historical_sources": [
+        {
+          "url": "https://tobaccofactory.com/whats-on/sunday-market/",
+          "supports": "Venue page publishes a weekly Sunday market, 10:00–14:30, family visits, local food/crafts/produce and Raleigh Road BS3 1TF. Selected dates follow that rule. Visitor admission and booking rules are not stated.",
+          "retrieval": "Official organiser page body reviewed on 26 October 2026 (GMT). No booking transaction, live-availability guarantee or visit.",
+          "retired_on": "2026-10-27",
+          "retired_reason": "Former official route now returns 404. Replaced by the organiser's current market guide, calendar and dated listings; not a cancellation."
+        }
+      ],
+      "previous_schedule_text": "Sundays, 10am–2.30pm. 1 and 8 November 2026 follow the published weekly schedule, not separate dated confirmations.",
       "notes": [
         "A food-and-makers market, not a dedicated children's workshop.",
-        "Dates follow the regular Sunday schedule; check for cancellations."
+        "The organiser lists 1 and 8 November 2026 individually; check for changes before travelling.",
+        "Closing time TBC: the dated event pages say 2pm, while the calendar and general market guide say 2.30pm."
       ]
     },
     {
