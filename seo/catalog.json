@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-10-27",
+  "source_verified_at": "2026-10-28",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -1861,19 +1861,20 @@
           "url": "https://avonvalley.co.uk/event/pumpkin-patch/",
           "supports": "The official 2026 page lists 3–4 and 10–11 October among selected daytime dates and states the patch is open 10am–5pm. The operator describes an all-ages family activity, advance booking advice, possible sell-out and an on-the-day surcharge, without showing a date-specific admission amount. It distinguishes optional pumpkin, rides and stall charges, says the adventure park is closed to patch visitors, and warns that the muddy farmland is unsuitable for wheelchairs or pushchairs. The current official Pumpkin Patch page explicitly lists 17–18 October among 2026 selected days, open 10am–5pm. It remains ticketed with exact entry amount TBC; pumpkins and optional activities cost extra, advance booking is advised, and the farmland patch is unsuitable for wheelchairs or pushchairs. The official daytime Pumpkin Patch page lists 17–18 and 24–31 October among selected 2026 dates, 10am–5pm; booking ahead is advised, exact admission remains TBC, pumpkins and optional activities cost extra, and muddy farmland is not suitable for wheelchairs or pushchairs. The 19 October official review confirms 24, 25 and 31 October 2026, 10am–5pm, advance-booking advice and separate optional charges. The page does not state an exact entry amount.",
           "label": "Official pumpkin patch dates and visit conditions",
-          "retrieval": "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
+          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
           "retrieval_history": [
             "Official event page retrieved directly on 27 September 2026 at 07:04 BST (HTTP 200; response Date Sun, 27 Sep 2026 06:04:15 GMT). Full displayed body and date list reviewed. The exact 2026 ticket amount and live availability were not established.",
             "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked.",
             "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability.",
             "Official organiser event page reviewed through the web tool on 12 October 2026 (BST). The 2026 dates, time or separate activity-hour limits, price basis, age guidance, booking terms and access notes were checked where stated; live availability may change.",
             "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check.",
-            "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested."
+            "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
+            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout."
           ],
           "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked."
         }
       ],
-      "verified_at": "2026-10-26",
+      "verified_at": "2026-10-28",
       "review_status": "verified",
       "sheet_match": {
         "live_sheet_checked": true,
@@ -1883,7 +1884,7 @@
         ],
         "reconciliation_note": "Published Bristol master and event row match the official selected dates. Official list explicitly includes 3–4 and 10–11 October; exact patch entry price remains TBC. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed. On 12 October the existing public Sheet candidate and event periods were rechecked against the organiser for 17–18 and 24–25 October; no Sheet cell or binding fingerprint changed.",
         "checked_at": "2026-10-12T07:08:14+01:00",
-        "published_csv_checked_at": "2026-10-26T07:02:06+00:00"
+        "published_csv_checked_at": "2026-10-28T07:13:52+00:00"
       },
       "limitations": [
         "Exact 2026 patch-entry amount and online booking fee are TBC.",
@@ -1898,9 +1899,10 @@
           "fingerprint": "6d44ef44e11b7b4c1fede66677aa3b94a6310b5249950aa9a09e958d798608e1"
         }
       ],
-      "previous_verified_at": "2026-10-19",
+      "previous_verified_at": "2026-10-26",
       "review_notes": [
-        "The official daytime Pumpkin Patch page explicitly lists 24, 25 and 31 October 2026, 10:00–17:00. Admission is ticketed with exact amount unconfirmed; pumpkins and optional rides cost extra, booking ahead is advised, on-day tickets cost more, and the muddy field is unsuitable for wheelchairs/pushchairs."
+        "The official daytime Pumpkin Patch page explicitly lists 24, 25 and 31 October 2026, 10:00–17:00. Admission is ticketed with exact amount unconfirmed; pumpkins and optional rides cost extra, booking ahead is advised, on-day tickets cost more, and the muddy field is unsuitable for wheelchairs/pushchairs.",
+        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity."
       ],
       "notes": [
         "Pumpkins, rides and side stalls are not included in patch entry; the ticket does not include access to Avon Valley Adventure Park.",
@@ -1966,19 +1968,20 @@
           "url": "https://shop.dartsfarm.co.uk/collections/all/products/pumpkin-fest-2026",
           "label": "Official 2026 festival ticket and visit details",
           "supports": "The official shop lists 10–11 and 17–18 October 2026, opening 10am–4.30pm with last entry at 3pm, £5 admission per adult or child, and under-1s free. The official FAQ says walk-ins are accepted but entry is not guaranteed, and recommends advance booking of an arrival slot. Pumpkin purchases and some activities cost extra. The organiser lists free parking, card-only payment and dogs on leads. An arrival booking slot sets arrival time; visitors may stay until closing. The official 2026 page confirms 17–18 and 24–25 October, 10am–4.30pm, last entry 3pm; £5 per adult or child, under-1s free; arrival-slot booking is recommended though walk-ins may be admitted. The 19 October review confirms Saturday 31 October is a listed daytime date, 10am–4.30pm with 3pm last entry. £5 admission applies to adults and children aged 1+, under-1s free; the booking slot is arrival time, walk-ins are not guaranteed, and parking is free.",
-          "retrieval": "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
+          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
           "retrieval_history": [
             "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked.",
             "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked.",
             "Official 2026 ticket page and FAQ reviewed through the web tool on 10 October 2026 (BST). Dates, opening hours, admission, walk-in/advance booking guidance and practical conditions checked; live slot availability may change.",
             "Official organiser event page reviewed through the web tool on 12 October 2026 (BST). The 2026 dates, time or separate activity-hour limits, price basis, age guidance, booking terms and access notes were checked where stated; live availability may change.",
             "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check.",
-            "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested."
+            "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
+            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout."
           ],
           "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked."
         }
       ],
-      "verified_at": "2026-10-26",
+      "verified_at": "2026-10-28",
       "review_status": "verified",
       "sheet_match": {
         "live_sheet_checked": true,
@@ -1990,7 +1993,7 @@
         ],
         "reconciliation_note": "Published Exeter master row124 and events row143 match the official 10–11 October 2026 dates and ticketed status; later event rows remain untouched. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed. On 10 October, the official FAQ corrected booking guidance only; the current published Sheet has no booking field to amend. Master and three events candidate values remain compatible, and the existing bound fingerprint is unchanged. On 12 October the existing public Sheet candidate and event periods were rechecked against the organiser for 17–18 and 24–25 October; no Sheet cell or binding fingerprint changed.",
         "checked_at": "2026-10-12T07:08:14+01:00",
-        "published_csv_checked_at": "2026-10-26T07:02:06+00:00"
+        "published_csv_checked_at": "2026-10-28T07:13:52+00:00"
       },
       "limitations": [
         "Walk-in entry is not guaranteed; advance-booking availability can change.",
@@ -2004,9 +2007,10 @@
           "fingerprint": "ecbf7d6ff506df3b7711b843f6cea67d96180e3da9122ae79371787168ff9bba"
         }
       ],
-      "previous_verified_at": "2026-10-19",
+      "previous_verified_at": "2026-10-26",
       "review_notes": [
-        "The 2026 official ticket page confirms 24–25 and 31 October, 10:00–16:30 with 15:00 last entry; £5 per adult/child, under-1s free, an arrival-slot ticket, walk-ins subject to availability, free parking and charged extras."
+        "The 2026 official ticket page confirms 24–25 and 31 October, 10:00–16:30 with 15:00 last entry; £5 per adult/child, under-1s free, an arrival-slot ticket, walk-ins subject to availability, free parking and charged extras.",
+        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity."
       ],
       "city": "",
       "notes": [
@@ -2073,14 +2077,15 @@
           "url": "https://www.crealy.co.uk/events/halloween-at-crealy/",
           "label": "Official 2026 Halloween programme",
           "supports": "The official event page lists 10–11, 17–18 and 24–31 October 2026, 10am–5pm. Online tickets start at £20 per person, gate tickets are £25, and children under 92cm are free; extra experiences may cost more. The family programme includes gentler activities for younger children; some attractions have separate restrictions. The current official Spook-Fest page confirms 10–11 and 17–18 October 2026, 10am–5pm, online admission from GBP 20, GBP 25 at the gate and free entry below 92cm. Attraction-specific restrictions and extras remain. The official 2026 page confirms 17–18 and 24–31 October, 10am–5pm, online tickets from £20, gate tickets £25, under-92cm admission free and the under-10s trick-or-treat option. The 19 October 2026 review confirms Spook-Fest runs 24–31 October, 10am–5pm; online admission starts at £20, gate admission is £25, under-92cm visitors are free, and some extras cost more. The 1 November free-return offer has separate terms and is not represented as ordinary Spook-Fest entry. The 25 October review confirms the 24–31 October 2026 programme, online admission from £20, gate £25, free admission below 92cm, under-10 trick-or-treat and paid extras; day-specific calendar exceptions take precedence over general event hours.",
-          "retrieval": "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
+          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
           "retrieval_history": [
             "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked.",
             "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability.",
             "Official organiser event page reviewed through the web tool on 12 October 2026 (BST). The 2026 dates, time or separate activity-hour limits, price basis, age guidance, booking terms and access notes were checked where stated; live availability may change.",
             "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check.",
             "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
-            "Official provider page body reviewed through the web tool on 25 October 2026 (Europe/London, GMT). Programme, dated calendar, admission basis, restrictions and booking conditions compared; no live capacity guarantee or ticket transaction."
+            "Official provider page body reviewed through the web tool on 25 October 2026 (Europe/London, GMT). Programme, dated calendar, admission basis, restrictions and booking conditions compared; no live capacity guarantee or ticket transaction.",
+            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout."
           ],
           "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked."
         },
@@ -2088,11 +2093,12 @@
           "url": "https://www.crealy.co.uk/theme-park/plan-your-visit/opening-times/",
           "label": "Official Crealy park calendar for October 2026",
           "supports": "The dated 25 and 31 October 2026 calendar cells show 10am–5pm, last entry 4pm. The dated 24 October cell and Storm Austen visitor notice show a 4pm close and 3pm last entry; the organiser says some rides could be unavailable on that date. This is a historical exception, not a cancellation of later dates.",
-          "retrieval": "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
+          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
           "retrieval_history": [
             "Official calendar body reviewed through the web tool on 17 October 2026 (BST). The current-day banner was still dated Friday 16 October, so the explicit dated calendar cells were used instead.",
             "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
-            "Official provider page body reviewed through the web tool on 25 October 2026 (Europe/London, GMT). Programme, dated calendar, admission basis, restrictions and booking conditions compared; no live capacity guarantee or ticket transaction."
+            "Official provider page body reviewed through the web tool on 25 October 2026 (Europe/London, GMT). Programme, dated calendar, admission basis, restrictions and booking conditions compared; no live capacity guarantee or ticket transaction.",
+            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout."
           ],
           "previous_supports": [
             "The 17, 18, 24 and 25 October 2026 calendar cells show 10am–5pm park opening and 4pm last entry.",
@@ -2100,7 +2106,7 @@
           ]
         }
       ],
-      "verified_at": "2026-10-26",
+      "verified_at": "2026-10-28",
       "review_status": "verified",
       "sheet_match": {
         "live_sheet_checked": true,
@@ -2113,7 +2119,7 @@
         "reconciliation_note": "After checking the official 2026 page, corrected master I101 final block to 24–31 October and events A99 to 24 October. Native readback and published master/events CSVs agree. This guide selects already-curated events row97 for 10–11 October. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed. On 12 October the existing public Sheet candidate and event periods were rechecked against the organiser for 17–18 and 24–25 October; no Sheet cell or binding fingerprint changed. On 25 October, changed only native master 시트1!I101 to retain the 24 October 4pm-close/3pm-last-entry weather exception. Exact native CellData readback and complete published master/events CSV agree; events97–99 and historical rows preserved. Only the reviewed Crealy master text/binding fingerprint changed.",
         "checked_at": "2026-10-25T07:09:18.392Z",
         "previous_checked_at": "2026-10-12T07:08:14+01:00",
-        "published_csv_checked_at": "2026-10-26T07:02:06+00:00"
+        "published_csv_checked_at": "2026-10-28T07:13:52+00:00"
       },
       "limitations": [
         "The advertised online price is a starting price; the actual date-specific checkout total may vary.",
@@ -2127,10 +2133,11 @@
           "fingerprint": "4085d444c4e422d04d7435195e47794cc23b57ccacdf7b1c1d4c8c720bd10f9e"
         }
       ],
-      "previous_verified_at": "2026-10-25",
+      "previous_verified_at": "2026-10-26",
       "review_notes": [
         "The official 2026 event and dated park calendar confirm Saturday 31 October, 10:00–17:00 with 16:00 last entry. The event page advertises admission from £20 online, £25 gate, under 92cm free, family shows, age-specific activities and paid extras.",
-        "25 October review: official calendar records a weather-related early 4pm closure and 3pm last entry on 24 October. Corrected that historical occurrence while preserving it. Checked 25/31 October hours, current programme, fares, restrictions and booking basis are unchanged. No live availability or checkout test."
+        "25 October review: official calendar records a weather-related early 4pm closure and 3pm last entry on 24 October. Corrected that historical occurrence while preserving it. Checked 25/31 October hours, current programme, fares, restrictions and booking basis are unchanged. No live availability or checkout test.",
+        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity."
       ],
       "city": "",
       "notes": [
@@ -2496,16 +2503,17 @@
         {
           "url": "https://www.wethecurious.org/whats-on/events/great-bristol-ball-run",
           "supports": "4 August–2 November 2026. Six outdoor runs in Millennium and Anchor Squares; £6 reusable wooden ball. Numerical age guidance, separate outdoor hours and booking requirement not stated.",
-          "retrieval": "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
+          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
           "retrieval_history": [
-            "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit."
+            "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit.",
+            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout."
           ]
         },
         {
           "url": "https://www.wethecurious.org/visit-us",
           "supports": "The FAQ confirms Tuesday–Sunday 10am–5pm in term time and the same hours for the shop. The contact line 9am–4.30pm Monday–Friday is not the shop timetable. The current official Visit FAQ confirms the shop follows Tuesday–Sunday 10am–5pm term-time opening, distinct from the outdoor Ball Run hours which remain TBC. The official Visit us FAQ currently confirms that the shop follows the museum opening schedule: Tuesday–Sunday 10am–5pm in term time and daily 10am–5pm during Bristol school holidays. The 19 October official visit FAQ says the shop follows visitor opening: 10am–5pm Tuesday–Sunday during term time and daily during Bristol school holidays. These are shop hours, not outdoor Ball Run hours.",
           "label": "Shop opening information",
-          "retrieval": "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
+          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
           "retrieval_history": [
             "Official page content reviewed on 21 September 2026.",
             "Official public HTML retrieved directly with curl GET on 22 September 2026 (HTTP 200); visible body, including At a glance / Booking information where present, read after HTML parsing. No booking transaction or on-site check performed.",
@@ -2514,12 +2522,13 @@
             "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
             "Official Visit us FAQ reviewed through the web tool on 12 October 2026 (BST); shop follows Tuesday–Sunday 10am–5pm term-time visitor hours and every day in Bristol school holidays. These are not published hours for the outdoor ball runs.",
             "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check.",
-            "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested."
+            "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
+            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout."
           ],
           "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official visit FAQ reviewed on 5 October 2026 (BST)."
         }
       ],
-      "verified_at": "2026-10-26",
+      "verified_at": "2026-10-28",
       "review_status": "verified",
       "sheet_match": {
         "live_sheet_checked": true,
@@ -2529,7 +2538,7 @@
         ],
         "reconciliation_note": "21 October native cells and complete published CSV checked; only officially confirmed dates selected.",
         "checked_at": "2026-10-21T09:09:55.133Z",
-        "published_csv_checked_at": "2026-10-26T07:02:06+00:00"
+        "published_csv_checked_at": "2026-10-28T07:13:52+00:00"
       },
       "limitations": [
         "No numerical age range or explicit advance booking rule is published for the outdoor ball runs.",
@@ -2544,9 +2553,10 @@
           "fingerprint": "bddec6e53ca538a4afa21eeb267995837bf1101c09150580a922ad24ef6a5df9"
         }
       ],
-      "previous_verified_at": "2026-10-21",
+      "previous_verified_at": "2026-10-26",
       "review_notes": [
-        "The official event lists 4 August–2 November 2026, six outdoor runs across Millennium and Anchor Squares, a £6 reusable wooden ball, partial access, no numerical age range or separate activity hours. The official visitor FAQ says the shop follows 10am–5pm weekend opening."
+        "The official event lists 4 August–2 November 2026, six outdoor runs across Millennium and Anchor Squares, a £6 reusable wooden ball, partial access, no numerical age range or separate activity hours. The official visitor FAQ says the shop follows 10am–5pm weekend opening.",
+        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity."
       ],
       "notes": [
         "Keep the wooden ball to reuse on all six runs and on repeat visits.",
@@ -2564,10 +2574,10 @@
       "locality": "Henbury, Bristol",
       "address": "Blaise Museum, Henbury Road, Bristol BS10 7QS",
       "age_text": "Designed for families with children aged 0–9; under-4s enter free but need a separate ticket.",
-      "price_text": "The general event page lists £5 per person, with under-4s free. The selected 31 October/1 November booking quote is TBC; confirm the final price.",
+      "price_text": "31 October 11am booking page: adult £5; child aged 4–16 £3; under-4s free. The general event page says £5 per person. The selected 1 November quote and other slots remain TBC; confirm the final price.",
       "price_type": "paid",
       "booking_text": "Book event tickets through the organiser. Under-4 tickets must be booked separately; walk-in availability TBC.",
-      "schedule_text": "24, 25, 29, 30 and 31 October, and 1 November 2026. Hourly entry slots from 11am to 3pm are listed for 24–25 October. Museum opening is 11am–4pm.",
+      "schedule_text": "31 October and 1 November 2026; museum opening 11am–4pm. The dated 31 October 11am entry slot was checked; choose a booked slot. Other listed dates are 24, 25, 29 and 30 October. Entry-slot times and remaining spaces can change.",
       "occurrences": [
         {
           "start": "2026-10-24",
@@ -2626,30 +2636,38 @@
         "autumn"
       ],
       "practical_notes": [
-        "Museum opening is 11am–4pm. Selected entry-slot times and last admission are TBC.",
+        "Museum opening is 11am–4pm; it is not the duration of a booked entry slot. Last admission TBC.",
         "Book a separate free ticket for each child under 4.",
-        "Selected-slot prices and entry times are not yet confirmed; check the organiser's booking page.",
+        "The checked 31 October 11am booking quote differs from the general event page. Confirm other slots and the 1 November quote.",
         "No events are listed for 26–28 October."
       ],
       "sources": [
         {
           "url": "https://www.bristolmuseums.org.uk/whats-on/blaise-museum/autumn-week/",
           "supports": "Six selected dates, activities for families aged 0–9 and separate free under-4 ticket. General page says £5 per person.",
-          "retrieval": "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
+          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
           "retrieval_history": [
-            "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit."
+            "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit.",
+            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout."
           ]
         },
         {
           "url": "https://www.bristolmuseums.org.uk/blaise-museum/plan-your-visit/opening-times/",
           "supports": "Thursday–Sunday museum opening 11am–4pm in 2026.",
-          "retrieval": "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
+          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
           "retrieval_history": [
-            "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit."
+            "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit.",
+            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout."
           ]
+        },
+        {
+          "url": "https://pretix.eu/bristolmuseums/33pus/5012306/",
+          "label": "Official 31 October 11am booking and prices",
+          "supports": "Saturday 31 October 2026, entry at 11am, Blaise Museum. Adult £5, child aged 4–16 £3, under-4s free; under-4 tickets separate. This date-specific quote differs from the general page and is not applied to every slot. No ticket/cart/checkout was submitted.",
+          "retrieval": "Official organiser-linked booking page body reviewed on 28 October 2026."
         }
       ],
-      "verified_at": "2026-10-26",
+      "verified_at": "2026-10-28",
       "review_status": "verified_with_explicit_limitations",
       "sheet_match": {
         "live_sheet_checked": true,
@@ -2658,26 +2676,27 @@
           184,
           533
         ],
-        "reconciliation_note": "21 October native cells and complete published CSV checked; only officially confirmed dates selected.",
-        "checked_at": "2026-10-21T09:09:55.132Z",
-        "published_csv_checked_at": "2026-10-26T07:02:06+00:00"
+        "reconciliation_note": "28 October: native row 152 price, schedule and notes corrected with exact dated booking evidence; native readback and complete published CSV agree. Past date rows and the former 24–25 October quote retained.",
+        "checked_at": "2026-10-28T07:16:57.643Z",
+        "published_csv_checked_at": "2026-10-28T07:13:52+00:00"
       },
       "limitations": [
         "Walk-in availability, session duration and current parking charge remain TBC.",
-        "Selected-slot price, entry time and availability remain TBC after the official booking service timed out."
+        "The 31 October 11am entry and prices were checked; other dates/slots and current availability require reconfirmation. The earlier booking-service timeout is historical."
       ],
       "sheet_bindings": [
         {
           "candidate_id": "d485420c01130f1ec43340e0",
           "name": "Autumn Week at Blaise Museum",
           "region": "Bristol",
-          "fingerprint": "f424748036af5633157d21a497b489e8a655e3c18ff489de0c62069b3e839ba2"
+          "fingerprint": "b2231f8983b9f17578724b86e5b65c7eb62611b8a4751cf8702a5d2df4392e3c"
         }
       ],
-      "previous_verified_at": "2026-10-21",
+      "previous_verified_at": "2026-10-26",
       "review_notes": [
         "The official event lists 24–25 and 31 October plus 1 November 2026, ages 0–9, £5 for age 4+, under-4s free with separate tickets. The separate museum opening page lists ordinary weekend hours of 11am–4pm, not ticket-session times.",
-        "26 October: retained confirmed event days and ages 0–9. Replaced expired ticket examples with the current general admission basis and selected-slot TBC. Earlier ticket-source evidence archived."
+        "26 October: retained confirmed event days and ages 0–9. Replaced expired ticket examples with the current general admission basis and selected-slot TBC. Earlier ticket-source evidence archived.",
+        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity."
       ],
       "previous_price_text": "Official booking pages for 24–25 October: adult £5, ages 4–16 £3, under-4s free with a ticket. The general event page still says £5 per person; check your selected slot.",
       "previous_practical_notes": [
@@ -2699,9 +2718,9 @@
         }
       ],
       "notes": [
-        "Museum opening is 11am–4pm. Selected entry-slot times and last admission are TBC.",
+        "Museum opening is 11am–4pm; it is not the duration of a booked entry slot. Last admission TBC.",
         "Book a separate free ticket for each child under 4.",
-        "Selected-slot prices and entry times are not yet confirmed; check the organiser's booking page.",
+        "The checked 31 October 11am booking quote differs from the general event page. Confirm other slots and the 1 November quote.",
         "No events are listed for 26–28 October."
       ]
     },
@@ -2861,16 +2880,17 @@
         {
           "url": "https://rammuseum.org.uk/whats-on/bayeux-around-britain-digital-trail/",
           "supports": "Free twelve-stop gallery trail, about one hour, 15 September 2026–11 July 2027. Weekend museum opening 10am–5pm. Numeric age guidance and booking rule not stated.",
-          "retrieval": "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
+          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
           "retrieval_history": [
-            "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit."
+            "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit.",
+            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout."
           ]
         }
       ],
       "limitations": [
         "Device requirements and numerical age suitability remain TBC."
       ],
-      "verified_at": "2026-10-26",
+      "verified_at": "2026-10-28",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -2888,11 +2908,12 @@
         ],
         "reconciliation_note": "21 October native cells and complete published CSV checked; only officially confirmed dates selected. On 26 October, added 7–8 November presentation dates covered by the existing ongoing Sheet event and reviewed provider period/hours. No native cell write or renewed native-read claim.",
         "checked_at": "2026-10-21T09:09:55.133Z",
-        "published_csv_checked_at": "2026-10-26T07:02:06+00:00"
+        "published_csv_checked_at": "2026-10-28T07:13:52+00:00"
       },
-      "previous_verified_at": "2026-10-21",
+      "previous_verified_at": "2026-10-26",
       "review_notes": [
-        "26 October: confirmed ongoing trail period and weekend hours support 7–8 November presentation dates within existing events row514; no Sheet change."
+        "26 October: confirmed ongoing trail period and weekend hours support 7–8 November presentation dates within existing events row514; no Sheet change.",
+        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity."
       ],
       "notes": [
         "This is a self-guided ongoing trail, not a timed workshop.",
@@ -3178,32 +3199,44 @@
           "url": "https://www.tobaccofactory.com/sunday-market",
           "label": "Current official market guide",
           "supports": "Confirms family visits, local food/crafts/produce and Raleigh Road, Bristol BS3 1TF. General weekly hours are 10am–2.30pm, conflicting with the dated event pages. Visitor admission, numerical ages and visitor booking rules are not stated.",
-          "retrieval": "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
+          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+          "retrieval_history": [
+            "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
+          ]
         },
         {
           "url": "https://www.tobaccofactory.com/whats-on?category=Market",
           "label": "Official 2026 market calendar",
           "supports": "Individually lists Sunday 1 and 8 November 2026, from 10am; calendar summary ends at 2.30pm. The dated event detail pages give 2pm instead. Closing time remains unresolved.",
-          "retrieval": "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
+          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+          "retrieval_history": [
+            "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
+          ]
         },
         {
           "url": "https://www.tobaccofactory.com/whats-on/sunday-market/01/11/26",
           "label": "Official 1 November listing",
           "supports": "Confirms 1 November 2026 and a 10am start; detail page says 2pm end, conflicting with the 2.30pm calendar/general guide. Visitor ticket prices and visitor booking rule not stated; stallholder pitch booking is separate.",
-          "retrieval": "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
+          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+          "retrieval_history": [
+            "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
+          ]
         },
         {
           "url": "https://www.tobaccofactory.com/whats-on/sunday-market/08/11/26",
           "label": "Official 8 November listing",
           "supports": "Confirms 8 November 2026 and a 10am start; detail page says 2pm end, conflicting with the 2.30pm calendar/general guide.",
-          "retrieval": "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
+          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+          "retrieval_history": [
+            "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
+          ]
         }
       ],
       "limitations": [
         "Unstated prices, numerical ages, entry/access rules and exceptional changes remain TBC.",
         "Official closing times conflict: 2pm on dated pages versus 2.30pm on the calendar/general guide. No closing time is confirmed."
       ],
-      "verified_at": "2026-10-27",
+      "verified_at": "2026-10-28",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -3221,7 +3254,7 @@
           500,
           501
         ],
-        "published_csv_checked_at": "2026-10-27T07:08:32+00:00",
+        "published_csv_checked_at": "2026-10-28T07:13:52+00:00",
         "reconciliation_note": "Native 시트1!I250/M250/N250 corrected and read back. Matching events 500/501 and all historical dates preserved. Complete published master/events CSV confirms the exact updated source and unresolved closing time before binding renewal.",
         "checked_at": "2026-10-27T07:12:02.980Z"
       },
@@ -3235,6 +3268,10 @@
         }
       ],
       "previous_schedule_text": "Sundays, 10am–2.30pm. 1 and 8 November 2026 follow the published weekly schedule, not separate dated confirmations.",
+      "previous_verified_at": "2026-10-27",
+      "review_notes": [
+        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity."
+      ],
       "notes": [
         "A food-and-makers market, not a dedicated children's workshop.",
         "The organiser lists 1 and 8 November 2026 individually; check for changes before travelling.",
@@ -3289,13 +3326,16 @@
         {
           "url": "https://www.wrmcic.co.uk/home",
           "supports": "Organiser lists every Saturday, 08:30–13:00, at Whiteladies/Apsley Road BS8 2ST, with local food and some crafts/plants. Selected dates follow that rule. Admission, age and visitor booking conditions are unstated.",
-          "retrieval": "Official organiser page body reviewed on 26 October 2026 (GMT). No booking transaction, live-availability guarantee or visit."
+          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+          "retrieval_history": [
+            "Official organiser page body reviewed on 26 October 2026 (GMT). No booking transaction, live-availability guarantee or visit."
+          ]
         }
       ],
       "limitations": [
         "Unstated prices, numerical ages, entry/access rules and exceptional changes remain TBC."
       ],
-      "verified_at": "2026-10-26",
+      "verified_at": "2026-10-28",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -3313,13 +3353,195 @@
           493,
           494
         ],
-        "published_csv_checked_at": "2026-10-26T07:02:06+00:00",
+        "published_csv_checked_at": "2026-10-28T07:13:52+00:00",
         "reconciliation_note": "Existing exact master and dated events compared in complete published CSV after official-source review. No native cell write or fresh native read claimed; no new DB row or region."
       },
+      "previous_verified_at": "2026-10-26",
+      "review_notes": [
+        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity."
+      ],
       "notes": [
         "Predominantly local food, rather than a street-food event.",
         "Dates follow the regular Saturday schedule; check for cancellations."
       ]
+    },
+    {
+      "id": "bristol-aardman-mini-museum-hunt-2026",
+      "name": "Mini-museum hunt! 50 years of Aardman",
+      "description": "Use a detective map to look for small Aardman objects around Bristol Museum & Art Gallery.",
+      "kind": "event",
+      "region": "Bristol",
+      "city": "Bristol",
+      "locality": "Clifton, Bristol",
+      "address": "Bristol Museum & Art Gallery, Queens Road, Bristol BS8 1RL",
+      "age_text": "The organiser welcomes families and explorers of all ages.",
+      "price_text": "Museum admission is free; any separate detective-map or trail charge is TBC.",
+      "price_type": "unknown",
+      "booking_text": "No booking for general visits unless the group has 10 or more people. A separate trail booking rule is not stated; confirm map access on arrival.",
+      "schedule_text": "13 February–1 November 2026 during museum opening. This weekend: Saturday 31 October and Sunday 1 November, 10am–5pm.",
+      "occurrences": [
+        {
+          "start": "2026-10-31",
+          "end": "2026-10-31",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Saturday"
+        },
+        {
+          "start": "2026-11-01",
+          "end": "2026-11-01",
+          "start_time": "10:00",
+          "end_time": "17:00",
+          "weekday": "Sunday"
+        }
+      ],
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "Self-guided hunt inside the museum galleries.",
+        "classification": "Indoor museum trail"
+      },
+      "tags": [
+        "weekend",
+        "animation",
+        "museum",
+        "indoor"
+      ],
+      "practical_notes": [
+        "Some objects have moved because the British and World Wildlife Galleries are closed until summer 2027; collect the current detective map.",
+        "This is an object hunt, not a film screening or an animation workshop.",
+        "The previous /mini-museum-hunt-aardman/ route still returns 404; the current /museum-hunt-aardman/ detail page works."
+      ],
+      "sources": [
+        {
+          "url": "https://www.bristolmuseums.org.uk/whats-on/bristol-museum-and-art-gallery/museum-hunt-aardman/",
+          "label": "Current official Aardman hunt",
+          "supports": "13 February–1 November 2026; all-ages family detective-map hunt. Some objects moved during renovation. No separate map/trail price stated.",
+          "retrieval": "Official provider body reviewed on 28 October 2026. Live availability and photo reuse permission not inferred."
+        },
+        {
+          "url": "https://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/plan-your-visit/",
+          "label": "Admission and group booking",
+          "supports": "Museum admission free; general visits need no booking except groups of 10 or more. Special exhibitions may have separate tickets.",
+          "retrieval": "Official provider body reviewed on 28 October 2026. Live availability and photo reuse permission not inferred."
+        },
+        {
+          "url": "https://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/plan-your-visit/opening-times/",
+          "label": "Official 2026 museum hours",
+          "supports": "Saturday and Sunday 10am–5pm. The listed November exception is 14 November, not 31 October/1 November.",
+          "retrieval": "Official provider body reviewed on 28 October 2026. Live availability and photo reuse permission not inferred."
+        }
+      ],
+      "limitations": [
+        "Free museum entry does not establish that every map or special activity is free.",
+        "Map access and current gallery layout may change; no on-site visit or capacity check."
+      ],
+      "verified_at": "2026-10-28",
+      "review_status": "verified_with_explicit_limitations",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 146,
+        "event_rows": [
+          172
+        ],
+        "checked_at": "2026-10-28T07:16:57.646Z",
+        "published_csv_checked_at": "2026-10-28T07:13:52+00:00",
+        "reconciliation_note": "Existing exact-name/region native master and events read; complete published CSV confirmed. No duplicate record or new calendar row added."
+      },
+      "sheet_bindings": [
+        {
+          "candidate_id": "c5230e44cdcbbe418f8c358f",
+          "name": "Mini-museum hunt! 50 years of Aardman",
+          "region": "Bristol",
+          "fingerprint": "4fdaec911f2ae863abce5b3ec79b43a37fb92dfc57a5c9c8ca2299ecf3e26c7f"
+        }
+      ],
+      "notes": [
+        "Some objects have moved because the British and World Wildlife Galleries are closed until summer 2027; collect the current detective map.",
+        "This is an object hunt, not a film screening or an animation workshop.",
+        "The previous /mini-museum-hunt-aardman/ route still returns 404; the current /museum-hunt-aardman/ detail page works."
+      ],
+      "indoor_basis": "Self-guided hunt inside the museum galleries."
+    },
+    {
+      "id": "exeter-phoenix-spooky-zine-2026",
+      "name": "Create a Spooky Zine – Exeter Phoenix",
+      "description": "Make a small spooky magazine through guided illustration, writing and assembly.",
+      "kind": "event",
+      "region": "Devon",
+      "city": "Exeter",
+      "locality": "Exeter city centre",
+      "address": "Top Studio, Exeter Phoenix, Gandy Street, Exeter EX4 3LS",
+      "age_text": "Ages 6+ in the practical details. The broader heading says All Ages; use the more specific 6+ guidance.",
+      "price_text": "£18 per adult; £24 per pair; £12 per additional person in a group of 3. A £1.50 ticketing-system charge applies; confirm the final total.",
+      "price_type": "paid",
+      "booking_text": "Book via the official workshop page. Remaining places, accompanying-adult ticket arrangements and the final total are TBC.",
+      "schedule_text": "Saturday 31 October 2026, 10.30am–1pm, Top Studio.",
+      "occurrences": [
+        {
+          "start": "2026-10-31",
+          "end": "2026-10-31",
+          "start_time": "10:30",
+          "end_time": "13:00",
+          "weekday": "Saturday"
+        }
+      ],
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "The workshop is in Exeter Phoenix's Top Studio.",
+        "classification": "Indoor creative workshop"
+      },
+      "tags": [
+        "weekend",
+        "creative",
+        "art",
+        "workshop",
+        "indoor"
+      ],
+      "practical_notes": [
+        "The pair price is not a per-child price; choose the right ticket combination.",
+        "Check Top Studio access and child-supervision arrangements with the venue.",
+        "Use the specific 6+ guidance rather than the generic All Ages heading."
+      ],
+      "sources": [
+        {
+          "url": "https://exeterphoenix.org.uk/events/create-a-spooky-zine/",
+          "label": "Official workshop date, prices and age guidance",
+          "supports": "Saturday 31 October 2026, 10.30am–1pm, Top Studio at Exeter Phoenix. Ages 6+. £18 adult, £24 pair, £12 additional person in group of 3, plus £1.50 ticketing-system charge. Official booking link provided.",
+          "retrieval": "Official provider body reviewed on 28 October 2026. Live availability and photo reuse permission not inferred."
+        }
+      ],
+      "limitations": [
+        "Live places and final checkout total not tested.",
+        "Numerical upper age and adult-stay rules not stated."
+      ],
+      "verified_at": "2026-10-28",
+      "review_status": "verified_with_explicit_limitations",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 212,
+        "event_rows": [
+          262
+        ],
+        "checked_at": "2026-10-28T07:16:57.646Z",
+        "published_csv_checked_at": "2026-10-28T07:13:52+00:00",
+        "reconciliation_note": "Existing exact-name/region native master and events read; complete published CSV confirmed. No duplicate record or new calendar row added."
+      },
+      "sheet_bindings": [
+        {
+          "candidate_id": "6f85455e79d74046107a516b",
+          "name": "Create a Spooky Zine – Exeter Phoenix",
+          "region": "Devon",
+          "fingerprint": "330db542fc846c8b623c0ecd01959cc05a2d502e565475b3b74fdb46a09d56fd"
+        }
+      ],
+      "notes": [
+        "The pair price is not a per-child price; choose the right ticket combination.",
+        "Check Top Studio access and child-supervision arrangements with the venue.",
+        "Use the specific 6+ guidance rather than the generic All Ages heading."
+      ],
+      "indoor_basis": "The workshop is in Exeter Phoenix's Top Studio."
     }
   ]
 }
