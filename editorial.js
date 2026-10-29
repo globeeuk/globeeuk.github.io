@@ -138,3 +138,16 @@ Object.assign(window.GLOBEE_EDITORIAL.annotations,{
     note:'Checked 15 October 2026. English-dubbed screening, 94 minutes. Saturday 17 October at 1pm and 3.30pm; Monday 19 October at 5pm. £9 standard, £7 members, £5 students/under-25s; stated £1.50 ticketing-system charge. Check the checkout total and remaining seats.'
   }
 });
+
+// Standard activity sessions, not lessons, holiday clubs or dated events.
+// 99 is the existing open-ended age-filter sentinel, not a provider upper-age limit.
+Object.assign(window.GLOBEE_EDITORIAL.annotations,{
+  'Clip ’n Climb Exeter':{
+    kind:'place',type:'activity',category:'Indoor climbing',ages:[4,99],ageLabel:'4+ years',
+    note:'Official information checked 29 October 2026. Standard sessions are for ages 4+ and adults: allow about 30 minutes for briefing/harnessing plus 55 minutes climbing; arrive 15 minutes early. Equipment is provided; wear suitable closed-toe shoes. £16.95 is the online session price; phone/walk-in bookings have a stated £1.05 fee. Leap of Faith is an extra package, with a separate height rule: the homepage/pricing says 120cm or taller, while the FAQ says over 120cm, so confirm if exactly 120cm. Auto-belay maximum weight is 136kg. A Clip ’n Climb ticket does not include the separate roped climbing area. Check the provider for supervision/access needs and live session availability.'
+  },
+  'Clip ’n Climb Nottingham':{
+    kind:'place',type:'activity',category:'Indoor climbing',ages:[4,99],ageLabel:'4+ years',
+    note:'Official information checked 29 October 2026. Standard climbing is £16; the published midweek term-time rate is £12, not a blanket weekend or holiday price. Leap of Faith costs £3 extra. Allow 30 minutes for briefing/harnessing, 55 minutes climbing and 5 minutes to exit; arrive 15 minutes early. At least one parent must remain on site, and under-18s need an adult-signed waiver. Closed-toe shoes required. Published hours differ between the contact page, footer and FAQ; use the live booking timetable for your chosen date. Standard sessions are ages 4+: the separate Family & Toddler label does not establish under-4 climbing eligibility. Check access, supervision and weight restrictions directly with the centre.'
+  }
+});

@@ -1,0 +1,44 @@
+{
+  "checked": "2026-10-29",
+  "request": "Add the existing Exeter and Nottingham Clip 'n Climb centres as activities in their own regions.",
+  "classification": "Two ongoing Days out places, type activity / Indoor climbing; not classes, holiday clubs or invented dated events.",
+  "source_of_truth": "Holiday club DB, native 시트1 rows 308–309. The events tab is unchanged. Native cells and complete public CSV are read back before publication.",
+  "age_filter": "Both standard sessions are 4+. Master age_min is 4 and age_max is blank because no upper age is published. The existing [4,99] display-only filter convention covers the site's child-age bands; 99 is not a provider age limit and the label is 4+ years.",
+  "images": "No suitable reusable local venue image was confirmed. Keep the current photo-first text-only card, not an illustration, an unrelated climbing wall or an unlicensed official photograph. Provider sites contain their own photographs.",
+  "map": "Exact map coordinates were not verified in this task. Both remain address-searchable listings without an invented pin.",
+  "records": [
+    {
+      "name": "Clip ’n Climb Exeter",
+      "region": "Exeter",
+      "row": 308,
+      "address": "The Quay Climbing Centre, Haven Road, Exeter, Devon EX2 8AX",
+      "age": "4+ including adults; standard Clip 'n Climb sessions, not separate roped climbing or bouldering",
+      "price": "£16.95 online per climber; £1.05 stated fee for telephone/walk-in bookings. Premium £19.50 and Ultimate £21 are optional Leap of Faith packages, not the standard ticket.",
+      "session": "About 30 minutes for briefing and harnessing, 55 minutes climbing; arrive 15 minutes early. Book a live session; building hours are not guaranteed session availability.",
+      "limitations": ["No live capacity or checkout quote established", "Leap of Faith height wording differs: homepage/pricing 120cm or taller; FAQ over 120cm. Confirm if exactly 120cm.", "136kg auto-belay maximum is published. Check supervision and accessibility needs directly."],
+      "sources": [
+        "https://clipnclimbexeter.co.uk/",
+        "https://clipnclimbexeter.co.uk/pricing/",
+        "https://clipnclimbexeter.co.uk/faqs/"
+      ]
+    },
+    {
+      "name": "Clip ’n Climb Nottingham",
+      "region": "Nottingham",
+      "row": 309,
+      "address": "Unit 2B Ash Court, Millennium Way East, Phoenix Park, Nottingham NG8 6AR",
+      "age": "4+ for standard climbing; adults may climb. The separate Family & Toddler price label is not taken as confirmation of under-4 standard climbing.",
+      "price": "£16 regular; £12 midweek term-time. Leap of Faith £3 extra. Do not promote the generic from-£10 header or an expired social offer as the standard rate.",
+      "session": "30 minutes briefing/harnessing, 55 minutes climbing and 5 minutes to exit; arrive 15 minutes early. At least one parent remains on site; under-18 waiver signed by an adult.",
+      "limitations": ["Contact-page weekday closing differs from the footer and FAQ; live booking timetable controls the visit", "Homepage rounds climbing time to one hour; specific experience page describes 55 minutes plus exit time", "No live ticket inventory, exact date-specific quote or under-4 climbing entitlement was confirmed"],
+      "sources": [
+        "https://www.clipnclimbnottingham.co.uk/",
+        "https://www.clipnclimbnottingham.co.uk/prices/",
+        "https://www.clipnclimbnottingham.co.uk/the-experience/",
+        "https://www.clipnclimbnottingham.co.uk/contact/",
+        "https://www.clipnclimbnottingham.co.uk/centre-faqs-including-covid-19-information/"
+      ]
+    }
+  ],
+  "boundaries": "No booking, waiver signing, external contact, social posting, analytics/privacy settings, new region, seasonal date rule or SEO-guide ranking claim. Snapshot refresh copies all existing public Sheet rows without claiming a fresh source review for unrelated records."
+}
