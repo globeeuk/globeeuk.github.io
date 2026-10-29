@@ -1,9 +1,10 @@
 /* The approved compact comparison cards now belong to Classes & lessons. */
+.notebook-page.class-cost-catalogue{background:#f3f2ed}
 .class-cost-catalogue .class-cost-key{font-size:13px;line-height:1.65;padding:14px 0;border-block:1px solid var(--line);margin:20px 0;color:var(--muted)}
 .class-cost-catalogue .class-cost-key strong{color:var(--ink)}
-.notebook-classes.class-cost-catalogue .list{align-items:start;gap:20px;grid-template-columns:repeat(2,minmax(0,1fr))}
-.notebook-classes.class-cost-catalogue .card.quick-card{display:block;min-height:0;padding:22px;border:1px solid #d5dacd;border-radius:10px;background:#fffefa;scroll-margin-top:20px}
-.class-cost-catalogue .quick-top{display:flex;justify-content:space-between;gap:12px;color:#626b60;font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.notebook-classes.class-cost-catalogue .list{align-items:start;gap:28px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.notebook-classes.class-cost-catalogue .card.quick-card{display:block;min-height:0;padding:22px;border:2px solid #a7b39f;border-radius:12px;background:#fff;box-shadow:0 3px 12px rgba(45,53,47,.06);scroll-margin-top:20px}
+.class-cost-catalogue .quick-top{display:flex;justify-content:space-between;gap:12px;padding-bottom:10px;margin-bottom:12px;border-bottom:1px solid #e2e7de;color:#52624b;font-size:11px;text-transform:uppercase;letter-spacing:.06em}
 .notebook-classes.class-cost-catalogue .card h3{font:600 23px/1.25 var(--font,Arial,sans-serif);margin:10px 0 4px;overflow-wrap:anywhere}
 .class-cost-catalogue .quick-track{margin:0 0 18px;color:#596253;font-size:14px;line-height:1.5}
 .class-cost-catalogue .quick-cost{display:flex;flex-direction:column;gap:5px;background:#edf0e5;padding:15px}
@@ -30,4 +31,4 @@
 .class-cost-catalogue .directory-source .facts{margin-top:10px;display:grid;gap:12px;grid-template-columns:1fr 1fr}
 .class-cost-catalogue .card :is(a,summary):focus-visible{outline:3px solid #ae6242;outline-offset:4px}
 .class-cost-catalogue .footer button{font:inherit;background:none;border:0;color:inherit;text-decoration:underline;padding:10px 0;cursor:pointer}
-@media(max-width:680px){.notebook-classes.class-cost-catalogue .list{grid-template-columns:1fr}.notebook-classes.class-cost-catalogue .card.quick-card{padding:18px}.notebook-classes.class-cost-catalogue .card h3{font-size:22px}.class-cost-catalogue .quick-cost strong{font-size:26px}}
+@media(max-width:680px){.notebook-classes.class-cost-catalogue .list{grid-template-columns:1fr;gap:24px}.notebook-classes.class-cost-catalogue .card.quick-card{padding:18px}.notebook-classes.class-cost-catalogue .card h3{font-size:22px}.class-cost-catalogue .quick-cost strong{font-size:26px}}
