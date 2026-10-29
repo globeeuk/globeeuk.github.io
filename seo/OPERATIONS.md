@@ -127,6 +127,14 @@ The 15 October selection is Robot Workshop, Mermaids and Monsters writing, Arrie
 
 ## Search Console and measurement
 
+### Shared family-travel Parent note — 29 October 2026
+
+The user approved `/parent-notes/amsterdam-with-kids/` for publication. This hand-maintained, static article is one shared Parent note, not three regional copies or a new event/region. The first compact card in the homepage Parent notes section is visible for Exeter/Devon, Bristol and Nottingham; the Days out seasonal banners are unchanged. Preserve the article, its assets and the root sitemap entry during ordinary staging. The private export source is `reviews/globee-family-travel-notes-2026-10-29/publish.mjs` in the project workspace; public source qualifications are in `qa/amsterdam-family-travel-sources-2026-10-29.json`.
+
+The account describes 23–28 October travel. The coast was planned but cancelled; Zuid-Kennemerland and Zaanse Schans are researched extras, not first-hand visits. Unknown actual spending, menu names and the Haarlem museum name are not invented. Operator facts and UK routes are dated guidance, not live availability. Only twelve user-supplied, resized and metadata-stripped trip photographs are reproduced, with no child faces. Original HEIC/MOV files, the unlicensed Stayokay room image and the third-party sign screenshot are excluded. Stayokay room photographs are linked on its official website. Saving deterrents and a display watermark are not copy protection; raw web JPEGs remain retrievable.
+
+The article retains the existing analytics scripts and consent controls without new collection settings. Publication is not evidence of indexing or visitor growth. The owner's planned 30 October Instagram post remains planned until confirmed; do not count preparation or this web release as a social post. No indexing request or sitemap resubmission is authorised by the release.
+
 ### Wednesday selection — 21 October 2026
 
 The dated `verified-candidates-2026-10-21.json` review supplements the existing weekend choices with Exeter's RAMM Bayeux digital trail and Wildwood, and Bristol's Adire family workshop. The Adire workshop has a confirmed 24 October date but its time, fee, booking rule and numerical ages remain TBC. Its new native master/event rows are 272/532; it has no verified map point and uses the existing licensed Bristol Museum venue photograph. Blaise's event periods were split into 24–25 October and 29 October–1 November (events 184/533), excluding the closed days in between. Its specific 24–25 October booking pages quote adult £5/child 4–16 £3/under-4 free, differing from the general event page. Preserve that qualification and the separate under-4 ticket requirement. Other item verification dates were retained. The Bristol five-card carousel is preparation only, not evidence of publication or visitor growth.
