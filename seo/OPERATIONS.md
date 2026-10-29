@@ -127,6 +127,12 @@ The 15 October selection is Robot Workshop, Mermaids and Monsters writing, Arrie
 
 ## Search Console and measurement
 
+### Classes comparison placement correction — 29 October 2026
+
+The user clarified that the approved price-first course comparison design belongs to the **Classes & lessons tab itself**, not separate Parent notes posts. `/classes.html` and `/bristol/classes/` now contain all twenty detailed course comparisons per region, including fees/extras, tasters, ages, times, adult-stay rules and source disclosures. All original 28 Exeter and 27 Bristol directory entries are preserved; split age groups produce 35 and 37 displayed options, not that many newly verified providers. No new source review or live availability check is claimed. Detailed source dates remain 21 October; older directory facts retain their previous context. Nottingham's existing eighteen listings are unchanged.
+
+The two former `/parent-notes/*-childrens-classes-costs/` routes are immediate, canonicalised move pages with visible fallback links; their script preserves course hashes. They are removed from the sitemap, while existing class routes retain their canonicals and receive the content-change date. Do not restore the old class-post cards to Parent notes. The comparison table links directly to inline class-course anchors and identifies Classes as its active section. Birthday, travel and childcare Parent notes remain. The private migration builder is `reviews/globee-classes-main-2026-10-29/build.mjs`; public mapping/scope evidence is `qa/classes-main-migration-2026-10-29.json`. This is a correction to the 21 October placement, not a new acquisition campaign, reverified database or a social post. Preserve the existing analytics/privacy settings and generated event guides.
+
 ### Shared family-travel Parent note — 29 October 2026
 
 The user approved `/parent-notes/amsterdam-with-kids/` for publication. This hand-maintained, static article is one shared Parent note, not three regional copies or a new event/region. The first compact card in the homepage Parent notes section is visible for Exeter/Devon, Bristol and Nottingham; the Days out seasonal banners are unchanged. Preserve the article, its assets and the root sitemap entry during ordinary staging. The private export source is `reviews/globee-family-travel-notes-2026-10-29/publish.mjs` in the project workspace; public source qualifications are in `qa/amsterdam-family-travel-sources-2026-10-29.json`.

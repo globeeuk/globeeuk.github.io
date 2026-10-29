@@ -56,7 +56,7 @@
  const tennis=cards.find(card=>card.querySelector('h3')?.textContent==='University of Exeter Youth Tennis');
  if(tennis){const figure=document.createElement('figure');figure.className='catalogue-photo';figure.innerHTML='<img src="/assets/images/exeter-tennis.webp" alt="Exeter Tennis Centre venue photograph, not a current lesson" width="640" height="426" loading="lazy"><figcaption>Venue photo · Pierre Terre / Wikimedia Commons · CC BY-SA 2.0 · <a href="/image-credits.html">Credits</a></figcaption>';tennis.prepend(figure);}
  document.querySelector('[data-notebook-class-region]')?.addEventListener('change',event=>{window.location.href=url('classes',event.currentTarget.value);});
- const title=document.querySelector('.topline h1');if(title)title.textContent='A little interest. A new beginning.';
+ const title=document.querySelector('.topline h1');if(title&&!body.classList.contains('class-cost-catalogue'))title.textContent='A little interest. A new beginning.';
  if(!document.querySelector('.notebook-classes .notebook-kicker')){const kicker=document.createElement('span');kicker.className='notebook-kicker';kicker.textContent='TRY SOMETHING NEW';document.querySelector('.topline').before(kicker);}
  let filter='all';
  function apply(){

@@ -16,7 +16,8 @@ test('Amsterdam is one indexable static Parent note with truthful publication me
 test('Travel discovery is compact and shared across all existing regions, not another main banner',()=>{
  const home=read('index.html');
  assert.match(home,/<article class="notebook-note-card" data-notes-region="Exeter Bristol Nottingham">/);
- assert(home.indexOf('/parent-notes/amsterdam-with-kids/')<home.indexOf('/parent-notes/exeter-childrens-classes-costs/'));
+ const notes=home.slice(home.indexOf('id="parent-notes-pending"'));
+ assert(notes.indexOf('/parent-notes/amsterdam-with-kids/')<notes.indexOf('/parent-notes/exeter-birthday-parties/'));
  assert.match(home,/href="\/parent-notes\/exeter-birthday-parties\/"/);
 });
 test('Only twelve supplied web photos ship, with no unlicensed room photo or original media',()=>{

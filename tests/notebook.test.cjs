@@ -22,7 +22,7 @@ test('Notebook lists use automatic batches with an all-items fallback and only h
  assert.match(app,/window\.GlobeeNotebook\?\.sync\(state\)/);
 });
 test('The shared class presentation retains all existing entries and combines search with interests',()=>{
- for(const [file,count] of [['classes.html',28],['bristol/classes/index.html',27],['nottingham/classes/index.html',18]])assert.equal((read(file).match(/<article class="card" data-category=/g)||[]).length,count,file);
+ for(const [file,count] of [['classes.html',35],['bristol/classes/index.html',37],['nottingham/classes/index.html',18]])assert.equal((read(file).match(/<article class="card(?: quick-card)?"/g)||[]).length,count,file);
  const script=read('notebook.js');assert.match(script,/words\.every\(word=>text\.includes\(word\)\)/);assert.match(script,/filter!=='all'&&card\.dataset\.category!==filter/);
  assert.doesNotMatch(script,/localStorage|document\.cookie|gtag|google-analytics|fetch\(/);
 });
