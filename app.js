@@ -363,7 +363,7 @@ $('#filter-close').addEventListener('click',closeMenu);
 $('#empty-reset').addEventListener('click',resetFilters);
 function openDetail(id){
   const p=data.find(v=>v.id===id);if(!p)return;
-  const credits=p.photoSource?`Photo: <a href="${escapeHTML(p.photoSource)}" target="_blank" rel="noopener noreferrer">${escapeHTML(p.credit)}</a>${p.photoLicenceUrl?` · <a href="${escapeHTML(p.photoLicenceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHTML(p.photoLicence)}</a>`:''}. ${escapeHTML(p.imageReference||'Photograph shown with a layout crop.')}`:'No photograph shown: a suitable image with confirmed reuse permission is not available.';
+  const credits=p.imageKind==='illustration'?`Illustration: ${escapeHTML(p.credit)}. ${escapeHTML(p.imageReference)} <a href="image-credits.html#children-climbing">Image credits</a>.`:p.photoSource?`Photo: <a href="${escapeHTML(p.photoSource)}" target="_blank" rel="noopener noreferrer">${escapeHTML(p.credit)}</a>${p.photoLicenceUrl?` · <a href="${escapeHTML(p.photoLicenceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHTML(p.photoLicence)}</a>`:''}. ${escapeHTML(p.imageReference||'Photograph shown with a layout crop.')}`:'No photograph shown: a suitable image with confirmed reuse permission is not available.';
   const editReason=p.editReasons?.[state.collection];
   const evidence=p.editEvidence?.[state.collection];
   const editNote=editReason?`<div class="detail-note edit-detail"><h3>Why it’s in this edit</h3><p>${escapeHTML(editReason)}</p>${evidence?`<p>${evidence.map(s=>`<a href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(s.label)}</a>`).join(' · ')}</p><p class="evidence-date">Official information checked ${escapeHTML(p.editChecked)}.</p>`:''}</div>`:'';

@@ -1,4 +1,4 @@
-/* Photo-first directory. Use licensed, relevant photos; otherwise show a text-only card. */
+/* Photo-first directory. Missing photos stay text-only, except specific owner-requested illustrations. */
 (function(root){
   'use strict';
   const photoRows=[
@@ -251,6 +251,13 @@
     return p.kind==='club'?'play':'making';
   }
   function decorate(p){
+    // Explicit owner request, 29 October 2026: these two climbing cards only.
+    if((p.region==='Exeter'&&p.name==='Clip ’n Climb Exeter')||(p.region==='Nottingham'&&p.name==='Clip ’n Climb Nottingham'))return {...p,
+      image:'assets/images/children-climbing-illustration.webp',imageKind:'illustration',imageLabel:'Illustration',
+      imageAlt:'Hand-drawn illustration of two children, seen from behind, climbing an indoor wall in harnesses',
+      credit:'AI-generated for Globee',photoSource:'',photoLicence:'',photoLicenceUrl:'',
+      imageReference:'Generic climbing activity illustration, not a photograph or a depiction of either Clip ’n Climb centre.'
+    };
     const k=photoKey(p);
     const image=k?photos[k]:{image:null,imageKind:'none',imageAlt:'',credit:'',imageReference:'No suitable photograph with confirmed reuse permission is available. This listing is shown without an image.',photoSource:'',photoLicence:'',photoLicenceUrl:''};
     const clarification=k==='robotics-activity'?{imageLabel:'Robot reference photo',imageReference:'Educational robotics reference photographed in 2020, not a photograph of the current event. NOT a photograph of the Sidmouth event, and not a promise that this exact robot is available there. Resized, converted to WebP and cropped by the layout. CC BY-SA 4.0.'}:k==='christmas-tree-field'?{imageLabel:'Tree reference photo',imageReference:'Tree-growing reference photographed in Ellisfield, Hampshire in 2006; NOT Cotley Farm and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:k==='thorverton'?{imageLabel:'Thorverton village',imageReference:'Thorverton village photograph from 2007; NOT Canns Farm or Exe Valley Christmas Trees and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:['dartmouth-train-of-lights','dartmouth-train-santa','south-devon-polar-express'].includes(k)?{imageLabel:'Railway photo'}:{};

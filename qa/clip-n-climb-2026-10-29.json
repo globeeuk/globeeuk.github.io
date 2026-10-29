@@ -4,7 +4,7 @@
   "classification": "Two ongoing Days out places, type activity / Indoor climbing; not classes, holiday clubs or invented dated events.",
   "source_of_truth": "Holiday club DB, native 시트1 rows 308–309. The events tab is unchanged. Native cells and complete public CSV are read back before publication.",
   "age_filter": "Both standard sessions are 4+. Master age_min is 4 and age_max is blank because no upper age is published. The existing [4,99] display-only filter convention covers the site's child-age bands; 99 is not a provider age limit and the label is 4+ years.",
-  "images": "No suitable reusable local venue image was confirmed. Keep the current photo-first text-only card, not an illustration, an unrelated climbing wall or an unlicensed official photograph. Provider sites contain their own photographs.",
+  "images": "Initially text-only because no reusable local venue photo was confirmed. Later on 29 October 2026 the owner explicitly requested an illustration of children climbing for both cards. The exact two listings now use a labelled AI-generated generic illustration; provenance is in qa/image-sources.json under requestedIllustrations. No third-party venue photograph or real child identity is used. Other listings retain the photo-first/text-only policy.",
   "map": "Exact map coordinates were not verified in this task. Both remain address-searchable listings without an invented pin.",
   "records": [
     {

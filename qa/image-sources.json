@@ -1319,7 +1319,25 @@
   },
   "photoFirstPolicy": {
     "date": "2026-10-29",
-    "policy": "Relevant licensed venue/location/activity photographs first. No generated directory thumbnails. No suitable licensed photograph means a compact text-only listing. Family artwork in approved seasonal banners is unchanged.",
+    "policy": "Relevant licensed venue/location/activity photographs first. No suitable licensed photograph means a compact text-only listing, except individually requested illustrations recorded below. No theme-based generated fallback. Family artwork in approved seasonal banners is unchanged.",
     "coverage": "Historical baseline coverage above is retained as historical, not a live count."
-  }
+  },
+  "requestedIllustrations": [
+    {
+      "key": "children-climbing",
+      "image": "assets/images/children-climbing-illustration.webp",
+      "created": "2026-10-29",
+      "creator": "AI-generated for Globee using built-in image_gen",
+      "ownerRequested": true,
+      "purpose": "Two children climbing an indoor wall, seen from behind. Explicit illustration exception for these two listings only; no generic fallback.",
+      "listings": [
+        {"name": "Clip ’n Climb Exeter", "region": "Exeter"},
+        {"name": "Clip ’n Climb Nottingham", "region": "Nottingham"}
+      ],
+      "label": "Illustration",
+      "disclosure": "Generic climbing activity illustration, not a photograph or a depiction of either centre. No real children or third-party photographs used.",
+      "changes": "Resized from the generated original to 960 × 640 and converted to WebP; no scene editing.",
+      "bytes": 84970
+    }
+  ]
 }

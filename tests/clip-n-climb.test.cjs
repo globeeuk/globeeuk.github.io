@@ -6,7 +6,7 @@ test('Two source-bound Clip n Climb venues are current Days out places, not fabr
  for(const [name,region,url]of [['Clip ’n Climb Exeter','Exeter','https://clipnclimbexeter.co.uk/'],['Clip ’n Climb Nottingham','Nottingham','https://www.clipnclimbnottingham.co.uk/']]){
   const masters=snapshot.master.filter(p=>p.name===name&&p.region===region);assert.equal(masters.length,1);assert.equal(masters[0].tab,'dayout');assert.equal(masters[0].age_min,'4');assert.equal(masters[0].age_max,'');assert.equal(masters[0].end_date,'');
   const p=items.find(p=>p.name===name&&p.region===region);assert(p);assert.equal(p.source,url);assert.equal(p.kind,'place');assert.equal(p.type,'activity');assert.equal(p.category,'Indoor climbing');assert.equal(p.datePeriods,null);assert.equal(p.priceType,'paid');assert.equal(p.ageLabel,'4+ years');assert.deepEqual(Array.from(p.ages),[4,99]);assert.equal(p.coords,null);
-  assert(!snapshot.events.some(e=>e.name===name));assert(!model.weekendPicks([p],'2026-10-29').length);const photo=images.decorate(p);assert.equal(photo.image,null);assert.equal(photo.imageKind,'none');
+  assert(!snapshot.events.some(e=>e.name===name));assert(!model.weekendPicks([p],'2026-10-29').length);const photo=images.decorate(p);assert.equal(photo.image,'assets/images/children-climbing-illustration.webp');assert.equal(photo.imageKind,'illustration');assert.equal(photo.imageLabel,'Illustration');assert.match(photo.imageReference,/not a photograph/);
  }
 });
 test('Price and session qualifications stay region-specific',()=>{
