@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-10-28",
+  "source_verified_at": "2026-10-29",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -1770,7 +1770,7 @@
       "locality": "Keynsham, near Bristol",
       "address": "Avon Valley Adventure Park, Pixash Lane, Bath Road, Keynsham, Bristol BS31 1TP",
       "age_text": "Family activity for all ages; supervise children throughout. Numerical age limits TBC.",
-      "price_text": "Ticketed; exact 2026 patch-entry price TBC. Pumpkins, optional rides and stalls cost extra. Check the final booking total; on-the-day tickets carry a surcharge.",
+      "price_text": "Ticketed; exact 2026 entry price TBC. On 28–31 October, the organiser advertises one free orange field pumpkin per child. Extra pumpkins, optional rides and stalls cost more; check the final booking total. On-the-day tickets carry a surcharge.",
       "price_type": "paid",
       "booking_text": "Book in advance to avoid disappointment; the operator says this event can sell out. On-the-day tickets, if available, carry a surcharge.",
       "schedule_text": "Selected daytime dates include 24–31 October 2026, 10am–5pm; weekend dates 24–25 and 31 October are explicitly listed. This is separate from Pumpkin Patch Nights.",
@@ -1852,16 +1852,16 @@
         "pumpkins"
       ],
       "practical_notes": [
-        "Pumpkins, rides and side stalls are not included in patch entry; the ticket does not include access to Avon Valley Adventure Park.",
+        "Date-limited offer: 28–31 October 2026, one free orange field pumpkin per child. Admission is still ticketed; extra pumpkins, rides and side stalls are separate purchases. Patch entry does not include Avon Valley Adventure Park.",
         "The operator advises boots or wellies and says the farmland patch is unsuitable for wheelchairs or pushchairs.",
         "Dates and hours here describe the daytime Pumpkin Patch, not the separate Pumpkin Patch Nights event."
       ],
       "sources": [
         {
           "url": "https://avonvalley.co.uk/event/pumpkin-patch/",
-          "supports": "The official 2026 page lists 3–4 and 10–11 October among selected daytime dates and states the patch is open 10am–5pm. The operator describes an all-ages family activity, advance booking advice, possible sell-out and an on-the-day surcharge, without showing a date-specific admission amount. It distinguishes optional pumpkin, rides and stall charges, says the adventure park is closed to patch visitors, and warns that the muddy farmland is unsuitable for wheelchairs or pushchairs. The current official Pumpkin Patch page explicitly lists 17–18 October among 2026 selected days, open 10am–5pm. It remains ticketed with exact entry amount TBC; pumpkins and optional activities cost extra, advance booking is advised, and the farmland patch is unsuitable for wheelchairs or pushchairs. The official daytime Pumpkin Patch page lists 17–18 and 24–31 October among selected 2026 dates, 10am–5pm; booking ahead is advised, exact admission remains TBC, pumpkins and optional activities cost extra, and muddy farmland is not suitable for wheelchairs or pushchairs. The 19 October official review confirms 24, 25 and 31 October 2026, 10am–5pm, advance-booking advice and separate optional charges. The page does not state an exact entry amount.",
+          "supports": "The 2026 daytime date list includes 24–31 October; published hours 10am–5pm. The separate Pumpkin Patch Nights product is not included. The dated banner says each child receives a free orange field pumpkin on 28–31 October. The generic FAQ on the same page still says pumpkins are not included: the dated offer is presented as a limited exception, not free entry. Entry remains ticketed, with no exact date-specific amount confirmed here. Advance booking is advised and on-the-day tickets carry a surcharge. Optional rides, side stalls and extra purchases are separate. The provider describes family suitability, muddy open farmland, no wheelchair/pushchair suitability, supervision and no admission to the separate Adventure Park.",
           "label": "Official pumpkin patch dates and visit conditions",
-          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+          "retrieval": "Official organiser page body reviewed through web on 29 October 2026 (GMT), including the date-specific pumpkin promotion, 2026 daytime date list, hours, address, booking, surcharge, access and remaining generic FAQ. No checkout, live capacity or price quote established.",
           "retrieval_history": [
             "Official event page retrieved directly on 27 September 2026 at 07:04 BST (HTTP 200; response Date Sun, 27 Sep 2026 06:04:15 GMT). Full displayed body and date list reviewed. The exact 2026 ticket amount and live availability were not established.",
             "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked.",
@@ -1869,43 +1869,61 @@
             "Official organiser event page reviewed through the web tool on 12 October 2026 (BST). The 2026 dates, time or separate activity-hour limits, price basis, age guidance, booking terms and access notes were checked where stated; live availability may change.",
             "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check.",
             "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
-            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout."
+            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
+            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout."
           ],
-          "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked."
+          "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked.",
+          "supports_history": [
+            {
+              "observed_at": "2026-10-28",
+              "supports": [
+                "The official 2026 page lists 3–4 and 10–11 October among selected daytime dates and states the patch is open 10am–5pm.",
+                "The operator describes an all-ages family activity, advance booking advice, possible sell-out and an on-the-day surcharge, without showing a date-specific admission amount.",
+                "It distinguishes optional pumpkin, rides and stall charges, says the adventure park is closed to patch visitors, and warns that the muddy farmland is unsuitable for wheelchairs or pushchairs.",
+                "The current official Pumpkin Patch page explicitly lists 17–18 October among 2026 selected days, open 10am–5pm. It remains ticketed with exact entry amount TBC; pumpkins and optional activities cost extra, advance booking is advised, and the farmland patch is unsuitable for wheelchairs or pushchairs.",
+                "The official daytime Pumpkin Patch page lists 17–18 and 24–31 October among selected 2026 dates, 10am–5pm; booking ahead is advised, exact admission remains TBC, pumpkins and optional activities cost extra, and muddy farmland is not suitable for wheelchairs or pushchairs.",
+                "The 19 October official review confirms 24, 25 and 31 October 2026, 10am–5pm, advance-booking advice and separate optional charges. The page does not state an exact entry amount."
+              ]
+            }
+          ]
         }
       ],
-      "verified_at": "2026-10-28",
+      "verified_at": "2026-10-29",
       "review_status": "verified",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 150,
         "event_rows": [
-          183
+          182
         ],
-        "reconciliation_note": "Published Bristol master and event row match the official selected dates. Official list explicitly includes 3–4 and 10–11 October; exact patch entry price remains TBC. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed. On 12 October the existing public Sheet candidate and event periods were rechecked against the organiser for 17–18 and 24–25 October; no Sheet cell or binding fingerprint changed.",
-        "checked_at": "2026-10-12T07:08:14+01:00",
-        "published_csv_checked_at": "2026-10-28T07:13:52+00:00"
+        "reconciliation_note": "Published Bristol master and event row match the official selected dates. Official list explicitly includes 3–4 and 10–11 October; exact patch entry price remains TBC. On 5 October, the official provider reconfirmed 17–18 October within existing matching Sheet event periods; no Sheet values or binding fingerprint changed. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed. On 12 October the existing public Sheet candidate and event periods were rechecked against the organiser for 17–18 and 24–25 October; no Sheet cell or binding fingerprint changed. 29 October: exact native row 150 and event row 182 read before and after a description-only correction at N150. Native cell has no formula, validation or chip; adjacent values/format and dated event row preserved. Complete published CSV confirms the dated promotion. Binding renewed to that reviewed candidate, not to bypass a mismatch.",
+        "checked_at": "2026-10-29T08:32:06Z",
+        "published_csv_checked_at": "2026-10-29T08:32:06Z",
+        "previous_event_rows": [
+          183
+        ]
       },
       "limitations": [
         "Exact 2026 patch-entry amount and online booking fee are TBC.",
         "Live ticket availability was not established.",
-        "Only explicitly reviewed weekend dates through 31 October appear in the guide; exact patch-entry amount and live ticket availability remain TBC."
+        "Only explicitly reviewed weekend dates through 31 October appear in the guide; exact patch-entry amount and live ticket availability remain TBC.",
+        "The date-specific 28–31 October promotion qualifies the same page's generic 'pumpkins not included' FAQ. No free admission or broader pumpkin entitlement is inferred."
       ],
       "sheet_bindings": [
         {
           "candidate_id": "1f4eec86fc366fdcc5ab987c",
           "name": "Pumpkin Patch – Avon Valley",
           "region": "Bristol",
-          "fingerprint": "6d44ef44e11b7b4c1fede66677aa3b94a6310b5249950aa9a09e958d798608e1"
+          "fingerprint": "6dbaec0e773a281ee08c3acb730ff5375607f1d1e5d360dbfc7e5bd347541a5f"
         }
       ],
-      "previous_verified_at": "2026-10-26",
+      "previous_verified_at": "2026-10-28",
       "review_notes": [
         "The official daytime Pumpkin Patch page explicitly lists 24, 25 and 31 October 2026, 10:00–17:00. Admission is ticketed with exact amount unconfirmed; pumpkins and optional rides cost extra, booking ahead is advised, on-day tickets cost more, and the muddy field is unsuitable for wheelchairs/pushchairs.",
         "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity."
       ],
       "notes": [
-        "Pumpkins, rides and side stalls are not included in patch entry; the ticket does not include access to Avon Valley Adventure Park.",
+        "Date-limited offer: 28–31 October 2026, one free orange field pumpkin per child. Admission is still ticketed; extra pumpkins, rides and side stalls are separate purchases. Patch entry does not include Avon Valley Adventure Park.",
         "The operator advises boots or wellies and says the farmland patch is unsuitable for wheelchairs or pushchairs.",
         "Dates and hours here describe the daytime Pumpkin Patch, not the separate Pumpkin Patch Nights event."
       ]

@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://globeeuk.github.io/bristol/this-weekend/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://globeeuk.github.io/bristol/</loc>
@@ -65,9 +65,18 @@
   </url>
   <url>
     <loc>https://globeeuk.github.io/bristol/edit/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
-  <url><loc>https://globeeuk.github.io/parent-notes/holiday-childcare-alternatives/</loc><lastmod>2026-10-21</lastmod></url>
-  <url><loc>https://globeeuk.github.io/parent-notes/classes-cost-comparison/</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://globeeuk.github.io/parent-notes/amsterdam-with-kids/</loc><lastmod>2026-10-29</lastmod></url>
+  <url>
+    <loc>https://globeeuk.github.io/parent-notes/holiday-childcare-alternatives/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://globeeuk.github.io/parent-notes/classes-cost-comparison/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://globeeuk.github.io/parent-notes/amsterdam-with-kids/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
 </urlset>
