@@ -130,19 +130,20 @@ test('Twelve-card batches reach every actual record exactly once with a partial 
  while((chunk=model.nextBatch(all,shown.length)).length){assert(chunk.length<=12);shown.push(...chunk);}
  assert.equal(shown.length,all.length);assert.equal(new Set(shown.map(p=>p.id)).size,all.length);assert.deepEqual(model.nextBatch(all,shown.length),[]);}
 });
-test('Every current card has a small local asset and honest image metadata',()=>{
+test('Every current card has a licensed local photograph or an explicit text-only state',()=>{
  const decorated=current.map(images.decorate);
  for(const p of decorated){
+ if(!p.image){assert.equal(p.imageKind,'none');assert.equal(p.photoSource,'');continue;}
  assert.match(p.image,/^assets\/images\/[a-z-]+\.webp$/);const asset=path.join(__dirname,'..',p.image);assert(fs.statSync(asset).size<80000,p.name);
- assert(p.imageAlt);if(p.imageKind==='illustration'){assert(p.imageReference.includes('AI-generated'));assert.equal(p.photoSource,'');}else{
+ assert(p.imageAlt);{
   assert.match(p.photoSource,/^https:\/\/commons.wikimedia.org/);assert.match(p.photoLicence,/^(CC BY|CC0)/);assert.match(p.photoLicenceUrl,/^https:\/\/creativecommons.org\/(licenses\/by(?:-sa)?|publicdomain\/zero)\//);assert(p.imageReference.includes('not a photograph of the current event'));
  }
  }
- assert(decorated.some(p=>p.imageKind!=='illustration'));
- assert(decorated.some(p=>p.imageKind==='illustration'));
+ assert(decorated.some(p=>p.image));
+ assert(decorated.some(p=>p.imageKind==='none'));
  assert(new Set(decorated.map(p=>p.image)).size>20);
  // A place sharing a word with a venue must not inherit another region's photo.
- assert.equal(images.decorate({name:'RAMM workshop',region:'Nottingham',type:'art'}).imageKind,'illustration');
+ assert.equal(images.decorate({name:'RAMM workshop',region:'Nottingham',type:'art'}).imageKind,'none');
 });
 test('The public image register matches every licensed local photo',()=>{
  assert.equal(imageSources.photos.length,74);

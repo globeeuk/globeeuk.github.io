@@ -1,7 +1,12 @@
-/* Licensed venue photos take priority. Illustrations never depict a real venue. */
+/* Photo-first directory. Use licensed, relevant photos; otherwise show a text-only card. */
 (function(root){
   'use strict';
   const photoRows=[
+    ['exeter-library','David Smith','https://commons.wikimedia.org/wiki/File:Exeter_Library_after_rebuilding_-_geograph.org.uk_-_4016656.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2014-06-07','venue','Exeter Library after its 2014 refurbishment; not the current activity'],
+    ['theatre-alibi','Derek Harper','https://commons.wikimedia.org/wiki/File:Former_Emmanuel_Church_Hall,_Exeter_-_geograph.org.uk_-_1070718.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2008-12-03','venue','Emmanuel Hall in Exeter, home of Theatre Alibi; not the current workshop'],
+    ['killerton-house','Derek Harper','https://commons.wikimedia.org/wiki/File:Killerton_House_01.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2006-09-10','venue','Killerton House in Broadclyst, Devon; not the current festive decorations'],
+    ['arlington-court','xlibber','https://commons.wikimedia.org/wiki/File:Arlington_Court_(7338271170).jpg','CC BY 2.0','https://creativecommons.org/licenses/by/2.0/','2012-06-04','venue','Arlington Court in Devon; not the current Christmas activity'],
+    ['greenway-house','Jason Ballard','https://commons.wikimedia.org/wiki/File:Greenway_-_Agatha_Christie%27s_holiday_home.jpg','CC BY 2.0','https://creativecommons.org/licenses/by/2.0/','2011-09-22','venue','Greenway House in Devon; not the current Christmas activity'],
     ['nottingham-castle-west','Alan Murray-Rust','https://commons.wikimedia.org/wiki/File:Nottingham_Castle,_West_Fa%C3%A7ade_-_geograph.org.uk_-_2721614.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2011-12-04','venue','West façade of Nottingham Castle; not the 2026 Spooky Circus trail'],
     ['nottingham-castle-view','Alan Murray-Rust','https://commons.wikimedia.org/wiki/File:Nottingham_Castle_%E2%80%93_a_different_view_-_geograph.org.uk_-_7119076.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2022-03-14','venue','Nottingham Castle from a different viewpoint; not the 2026 Spooky Circus trail'],
     ['clumber-parsonage','Neil Theasby','https://commons.wikimedia.org/wiki/File:Sundial_and_The_Old_Parsonage_-_Clumber_Estate_-_geograph.org.uk_-_4276557.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2014-12-12','venue','The Old Parsonage on the Clumber Estate; not the 2026 storytelling session'],
@@ -102,7 +107,6 @@
     imageReference:`${kindLabels[imageKind]} photograph${date?` (${date})`:''}; not a photograph of the current event. Cropped to fit, resized and converted to WebP. Source licence and credit are recorded on the Image credits page.`,
     imageKind,imageAlt:`${description}; ${imageKind==='activity'?'activity reference':imageKind} photograph${date?` from ${date}`:''}`
   }]));
-  const descriptions={reading:'An illustrated reading nook with books and a comfortable chair',making:'An illustrated table of paints, brushes and clay animals',woodland:'An illustrated woodland path, ferns and wellington boots',sports:'An illustrated collection of sports and skate equipment',performance:'An illustrated theatre stage with musical instruments',play:'An illustrated arrangement of early years toys and soft play shapes',heritage:'An illustrated collection of historical objects and a magnifying glass',food:'An illustrated picnic with gelato, a pastry and fruit',autumn:'An illustrated autumn garden with pumpkins and wellington boots'};
   photos['monmouth-beach']={
     image:'assets/images/monmouth-beach.jpg',credit:'Dylan Moore / Geograph',
     photoSource:'https://www.geograph.org.uk/photo/1988808',photoLicence:'CC BY-SA 2.0',photoLicenceUrl:'https://creativecommons.org/licenses/by-sa/2.0/',
@@ -136,7 +140,16 @@
       if(['Shrek the Musical Jr – Stage by Stage','Pinocchio – Exeter Corn Exchange'].includes(p.name))return 'corn-exchange';
       if(['A (little) Christmas Carol – Exeter Northcott','Cinderella – Barnfield Theatre'].includes(p.name))return 'barnfield-auditorium';
       if(['Sleeping Beauty – Exeter Northcott','The Space Explorers Academy – Exeter Northcott'].includes(p.name))return 'northcott';
-      if(p.name==='Exeter Cathedral')return 'cathedral';
+      if(/Exeter Cathedral/.test(p.name))return 'cathedral';
+      if(/Exeter Library/.test(p.name)&&!/Devon Libraries|Devon libraries/.test(p.name))return 'exeter-library';
+      if(/Theatre Alibi/.test(p.name)&&/Emmanuel Hall/.test(p.address||''))return 'theatre-alibi';
+      if(p.name==='Christmas at Killerton')return 'killerton-house';
+      if(p.name==="Teddy Bear's Christmas at Greenway")return 'greenway-house';
+      if(['Write Your Own Story Christmas Trail – Arlington Court','Father Christmas Storytelling – Arlington Court'].includes(p.name))return 'arlington-court';
+      if(p.name==='Heavitree Pleasure Grounds')return 'heavitree';
+      if(p.name==='Exeter Junior Chess Club')return 'chess';
+      if(p.name==='University of Exeter — Youth Tennis')return 'exeter-tennis';
+      if(/Exeter Northcott/.test(p.name)&&/Barnfield Theatre/.test(p.address||''))return 'barnfield-auditorium';
       if(/RAMM|Royal Albert Memorial Museum/.test(p.name)){
         if(/^RAMM – Royal Albert/.test(p.name))return 'ramm';
         if(/Roman Exeter/.test(p.name))return 'ramm-roman';
@@ -238,8 +251,8 @@
     return p.kind==='club'?'play':'making';
   }
   function decorate(p){
-    const k=photoKey(p),t=theme(p);
-    const image=k?photos[k]:{image:`assets/images/${t}.webp`,imageKind:'illustration',imageAlt:descriptions[t]+'; an activity illustration, not the venue',credit:'Globee',imageReference:'AI-generated activity illustration, created for Globee. It does not depict the venue or event.',photoSource:'',photoLicence:'',photoLicenceUrl:''};
+    const k=photoKey(p);
+    const image=k?photos[k]:{image:null,imageKind:'none',imageAlt:'',credit:'',imageReference:'No suitable photograph with confirmed reuse permission is available. This listing is shown without an image.',photoSource:'',photoLicence:'',photoLicenceUrl:''};
     const clarification=k==='robotics-activity'?{imageLabel:'Robot reference photo',imageReference:'Educational robotics reference photographed in 2020, not a photograph of the current event. NOT a photograph of the Sidmouth event, and not a promise that this exact robot is available there. Resized, converted to WebP and cropped by the layout. CC BY-SA 4.0.'}:k==='christmas-tree-field'?{imageLabel:'Tree reference photo',imageReference:'Tree-growing reference photographed in Ellisfield, Hampshire in 2006; NOT Cotley Farm and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:k==='thorverton'?{imageLabel:'Thorverton village',imageReference:'Thorverton village photograph from 2007; NOT Canns Farm or Exe Valley Christmas Trees and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:['dartmouth-train-of-lights','dartmouth-train-santa','south-devon-polar-express'].includes(k)?{imageLabel:'Railway photo'}:{};
     const localLabel=['mill-reservoir-club','mill-reservoir-teens','wembury-beach'].includes(k)?'Nearby photo':k==='stapleford-playing-fields'?'Area photo':['science-flasks-reference','filmmaking-camera-reference','pumpkin-field-reference'].includes(k)?'Activity reference':null;
     return {...p,...image,...clarification,...(localLabel?{imageLabel:localLabel}:{})};

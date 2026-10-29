@@ -32,5 +32,5 @@ test('All new markets use licensed local photographs with honest venue/location 
  const sources=JSON.parse(fs.readFileSync(path.join(root,'qa/image-sources.json'),'utf8'));
  for(const p of markets){const d=images.decorate(p),asset=path.join(root,d.image);assert(['venue','location'].includes(d.imageKind));assert(fs.statSync(asset).size<80000);assert.match(d.imageReference,/not a photograph of the current event/);assert.match(d.photoLicence,/CC BY-SA/);assert(sources.photos.some(s=>s.image===d.image));}
  assert.match(images.decorate(markets[2]).imageAlt,/not confirmation/);assert.match(images.decorate(markets[7]).imageAlt,/before later redevelopment/);
- assert.equal(images.decorate({...markets[0],region:'Bristol'}).imageKind,'illustration');
+ assert.equal(images.decorate({...markets[0],region:'Bristol'}).imageKind,'none');
 });

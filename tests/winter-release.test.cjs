@@ -6,7 +6,7 @@ test('Nine Devon Christmas search choices use licensed photos with honest farm l
  assert.equal(images.decorate({name:names[0],region:'Exeter'}).imageLabel,'Tree reference photo');
  assert.equal(images.decorate({name:names[1],region:'Exeter'}).imageLabel,'Thorverton village');
  assert.match(images.decorate({name:names[8],region:'Exeter'}).image,/barnfield-auditorium/);
- assert.equal(images.decorate({name:names[0],region:'Bristol'}).imageKind,'illustration');
+ assert.equal(images.decorate({name:names[0],region:'Bristol'}).imageKind,'none');
 });
 test('Winter entry opens the combined Christmas Edit and retains the tree guide and ice cream map',()=>{
  const home=read('index.html'),guide=read('exeter/christmas-trees/index.html'),css=read('ice-cream.css');

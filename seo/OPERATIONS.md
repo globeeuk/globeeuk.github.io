@@ -127,6 +127,12 @@ The 15 October selection is Robot Workshop, Mermaids and Monsters writing, Arrie
 
 ## Search Console and measurement
 
+### Photo-first homepage and directory — 29 October 2026
+
+The owner reiterated that directory cards must use relevant real photographs, with generated illustrations excluded. The shared image catalogue now returns no image when an appropriate licensed photograph is unavailable. Keep these listings readable as compact text-only cards, without a decorative placeholder or blank photo-height block, in the homepage, Holiday clubs, Plans and map details. Do not restore the theme-based illustration fallback. This does not remove any activity or change event facts, evidence dates, the Sheet or analytics/consent settings.
+
+Nineteen current Exeter/Devon records gain photo mappings, including Cathedral activities, Theatre Alibi at Emmanuel Hall, Exeter Library, Barnfield shows and the Killerton/Greenway/Arlington Court seasonal records. Five new licensed venue assets and their credits are documented in `qa/photo-first-2026-10-29.json` and the image register. These are historical venue photographs, not the current event or decorations. The family's explicitly approved rocket and handprint seasonal banners remain unchanged. Preserve `photo-first.css` and the matching image-catalogue/app cache versions during the 30 October seasonal switch and future homepage updates. Presentation changes do not establish visitor growth or a new marketing test.
+
 ### Classes comparison placement correction — 29 October 2026
 
 The user clarified that the approved price-first course comparison design belongs to the **Classes & lessons tab itself**, not separate Parent notes posts. `/classes.html` and `/bristol/classes/` now contain all twenty detailed course comparisons per region, including fees/extras, tasters, ages, times, adult-stay rules and source disclosures. All original 28 Exeter and 27 Bristol directory entries are preserved; split age groups produce 35 and 37 displayed options, not that many newly verified providers. No new source review or live availability check is claimed. Detailed source dates remain 21 October; older directory facts retain their previous context. Nottingham's existing eighteen listings are unchanged.

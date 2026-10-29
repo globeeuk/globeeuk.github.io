@@ -1,0 +1,30 @@
+/* A missing licensed photograph is not a reason to invent a scene. */
+.place-card.no-photo .card-open{
+  padding:18px;
+  border:1px solid #d8ddd2;
+  border-radius:13px;
+  background:#f6f7f2;
+  height:auto;
+}
+.place-card.no-photo .card-body{padding:0}
+.place-card.no-photo .card-category{
+  display:block;
+  margin:0 0 14px;
+  padding:0 0 10px;
+  border-bottom:1px solid #d8ddd2;
+  font-size:10px;
+  line-height:1.5;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:#56614d;
+}
+.place-card.no-photo .card-description{
+  display:block;
+  -webkit-line-clamp:unset;
+  min-height:0;
+}
+.place-card.no-photo .card-heading{align-items:flex-start}
+.place-card.no-photo .card-heading>svg{flex-shrink:0;margin-top:3px}
+.map-card.no-photo{grid-template-columns:minmax(0,1fr);padding:18px}
+.detail-body:first-child{padding-top:50px}

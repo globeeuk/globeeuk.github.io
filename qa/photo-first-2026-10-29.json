@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-29",
+  "basis": "User requested actual relevant photography and minimal illustration. Presentation and image-source changes only; event facts, dates, Sheet, evidence dates, analytics and privacy unchanged.",
+  "photographs": [
+    {
+      "key": "killerton-house",
+      "image": "assets/images/killerton-house.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Killerton_House_01.jpg",
+      "creator": "Derek Harper",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "date": "2006-09-10",
+      "checked": "2026-10-29",
+      "changes": "Resized to 640px and converted to WebP; cropped by layout. Venue photograph, not the 2026 activity or festive decorations.",
+      "bytes": 38798,
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Killerton_House_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "description": "Killerton House in Broadclyst, Devon"
+    },
+    {
+      "key": "arlington-court",
+      "image": "assets/images/arlington-court.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Arlington_Court_(7338271170).jpg",
+      "creator": "xlibber",
+      "licence": "CC BY 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "date": "2012-06-04",
+      "checked": "2026-10-29",
+      "changes": "Resized to 640px and converted to WebP; cropped by layout. Venue photograph, not the 2026 activity or festive decorations.",
+      "bytes": 48880,
+      "originalUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Arlington_Court_%287338271170%29.jpg/960px-Arlington_Court_%287338271170%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "description": "Arlington Court in Devon"
+    },
+    {
+      "key": "greenway-house",
+      "image": "assets/images/greenway-house.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Greenway_-_Agatha_Christie%27s_holiday_home.jpg",
+      "creator": "Jason Ballard",
+      "licence": "CC BY 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "date": "2011-09-22",
+      "checked": "2026-10-29",
+      "changes": "Resized to 640px and converted to WebP; cropped by layout. Venue photograph, not the 2026 activity or festive decorations.",
+      "bytes": 49848,
+      "originalUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Greenway_-_Agatha_Christie%27s_holiday_home.jpg/960px-Greenway_-_Agatha_Christie%27s_holiday_home.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "description": "Greenway House in Devon"
+    },
+    {
+      "key": "exeter-library",
+      "image": "assets/images/exeter-library.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Exeter_Library_after_rebuilding_-_geograph.org.uk_-_4016656.jpg",
+      "creator": "David Smith",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "date": "2014-06-07",
+      "checked": "2026-10-29",
+      "changes": "Resized to 640px and converted to WebP; cropped by layout. Venue photograph, not the 2026 activity or festive decorations.",
+      "bytes": 41220,
+      "originalUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Exeter_Library_after_rebuilding_-_geograph.org.uk_-_4016656.jpg/960px-Exeter_Library_after_rebuilding_-_geograph.org.uk_-_4016656.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "description": "Exeter Library after its 2014 refurbishment; venue photograph, not a current activity"
+    },
+    {
+      "key": "theatre-alibi",
+      "image": "assets/images/theatre-alibi.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Former_Emmanuel_Church_Hall,_Exeter_-_geograph.org.uk_-_1070718.jpg",
+      "creator": "Derek Harper",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "date": "2008-12-03",
+      "checked": "2026-10-29",
+      "changes": "Resized to 640px and converted to WebP; cropped by layout. Venue photograph, not the 2026 activity or festive decorations.",
+      "bytes": 35780,
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Former_Emmanuel_Church_Hall%2C_Exeter_-_geograph.org.uk_-_1070718.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "description": "Emmanuel Hall, home of Theatre Alibi in Exeter; historical venue photograph, not the workshop"
+    }
+  ],
+  "devonCurrentSnapshot": {
+    "total": 125,
+    "photosBefore": 66,
+    "photosAfter": 85,
+    "textOnly": 40,
+    "generatedThumbnails": 0,
+    "newPhotoMappings": [
+      {
+        "name": "Exeter Library",
+        "image": "assets/images/exeter-library.webp"
+      },
+      {
+        "name": "Exeter Junior Chess Club",
+        "image": "assets/images/chess.webp"
+      },
+      {
+        "name": "Heavitree Pleasure Grounds",
+        "image": "assets/images/heavitree.webp"
+      },
+      {
+        "name": "University of Exeter — Youth Tennis",
+        "image": "assets/images/exeter-tennis.webp"
+      },
+      {
+        "name": "October Half Term Family Activities – Exeter Cathedral",
+        "image": "assets/images/cathedral.webp"
+      },
+      {
+        "name": "October Half Term Play Café & Crafting – Theatre Alibi",
+        "image": "assets/images/theatre-alibi.webp"
+      },
+      {
+        "name": "Monster Book Workshop – Theatre Alibi",
+        "image": "assets/images/theatre-alibi.webp"
+      },
+      {
+        "name": "Shadow Puppet Workshop – Theatre Alibi",
+        "image": "assets/images/theatre-alibi.webp"
+      },
+      {
+        "name": "Spooky Stories – Theatre Alibi",
+        "image": "assets/images/theatre-alibi.webp"
+      },
+      {
+        "name": "Be a Chorister for a Day 2026 – Exeter Cathedral",
+        "image": "assets/images/cathedral.webp"
+      },
+      {
+        "name": "The Exeter Nativity – Exeter Cathedral",
+        "image": "assets/images/cathedral.webp"
+      },
+      {
+        "name": "Christingle Service 2026 – Exeter Cathedral",
+        "image": "assets/images/cathedral.webp"
+      },
+      {
+        "name": "Christmas at Killerton",
+        "image": "assets/images/killerton-house.webp"
+      },
+      {
+        "name": "Premier Education: Swan Lake – Exeter Northcott",
+        "image": "assets/images/barnfield-auditorium.webp"
+      },
+      {
+        "name": "Premier Education: The Carnival of the Animals – Exeter Northcott",
+        "image": "assets/images/barnfield-auditorium.webp"
+      },
+      {
+        "name": "Premier Education: The Nutcracker – Exeter Northcott",
+        "image": "assets/images/barnfield-auditorium.webp"
+      },
+      {
+        "name": "Teddy Bear's Christmas at Greenway",
+        "image": "assets/images/greenway-house.webp"
+      },
+      {
+        "name": "Write Your Own Story Christmas Trail – Arlington Court",
+        "image": "assets/images/arlington-court.webp"
+      },
+      {
+        "name": "Father Christmas Storytelling – Arlington Court",
+        "image": "assets/images/arlington-court.webp"
+      }
+    ]
+  },
+  "exceptions": [
+    "User-approved child rocket and Christmas handprint banners preserved",
+    "No unlicensed official image copied",
+    "Historical venue pictures do not depict the current event or festive decorations"
+  ],
+  "publicMetrics": "No traffic, indexing or acquisition effect measured."
+}
