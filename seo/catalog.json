@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-10-29",
+  "source_verified_at": "2026-10-30",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -297,8 +297,8 @@
       "sources": [
         {
           "url": "https://rammuseum.org.uk/visit/",
-          "supports": "Confirms free museum entry, Queen Street address, galleries and regular opening: Tuesday 10.30am–5pm, Wednesday–Sunday 10am–5pm, Monday closed. The current banner says Gallery 20 will close on Wednesday 28 October for an event; it is not a whole-museum closure notice.",
-          "retrieval": "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check.",
+          "supports": "Confirms free museum admission, Queen Street address, Monday closure, Tuesday 10.30am–5pm and Wednesday–Sunday 10am–5pm. The 28 October Gallery 20 event-closure banner is absent from the reviewed current page. This does not establish actual gallery reopening or exceptional opening.",
+          "retrieval": "Official Visit-page body reviewed through the web tool on 30 October 2026 (Europe/London, GMT). Entry, address, weekly hours and absence of the past banner compared. No on-site access or live availability check.",
           "previous_retrieval": "Official RAMM Visit page body reviewed through the web tool on 21 October 2026 at about 07:30 BST. The Gallery 20 maintenance banner now says 5–21 October; ordinary museum free entry and weekly hours remain listed. The site still displays the historical 20 October cafe notice, which is no longer presented as an upcoming visitor condition. No on-site reopening or ticket availability was checked.",
           "label": "Plan your museum visit",
           "retrieval_history": [
@@ -310,7 +310,8 @@
             "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
             "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check.",
             "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
-            "Official RAMM Visit page body reviewed through the web tool on 21 October 2026 at about 07:30 BST. The Gallery 20 maintenance banner now says 5–21 October; ordinary museum free entry and weekly hours remain listed. The site still displays the historical 20 October cafe notice, which is no longer presented as an upcoming visitor condition. No on-site reopening or ticket availability was checked."
+            "Official RAMM Visit page body reviewed through the web tool on 21 October 2026 at about 07:30 BST. The Gallery 20 maintenance banner now says 5–21 October; ordinary museum free entry and weekly hours remain listed. The site still displays the historical 20 October cafe notice, which is no longer presented as an upcoming visitor condition. No on-site reopening or ticket availability was checked.",
+            "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check."
           ],
           "supports_history": [
             {
@@ -320,6 +321,13 @@
                 "Describes history, natural-history and world-cultures galleries.",
                 "The current Visit-page banner lists Gallery 20 maintenance closure from 5–21 October, extending the previously published 5–19 October notice. Ordinary museum weekly hours remain separately listed.",
                 "On 19 October 2026 the official visit notice said the cafe would close for maintenance on Tuesday 20 October, with a reduced hot-drinks-and-cakes service in its seating area. Free museum entry and Tue–Sun opening hours remain listed."
+              ]
+            },
+            {
+              "observed_at": "2026-10-27",
+              "supports": [
+                "Confirms free museum entry, Queen Street address, galleries and regular opening: Tuesday 10.30am–5pm, Wednesday–Sunday 10am–5pm, Monday closed.",
+                "The current banner says Gallery 20 will close on Wednesday 28 October for an event; it is not a whole-museum closure notice."
               ]
             }
           ]
@@ -349,24 +357,31 @@
         {
           "url": "https://rammuseum.org.uk/",
           "label": "Current gallery closure notices",
-          "supports": "The current homepage repeats the Gallery 20-only 28 October event closure and lists the regular museum opening schedule and Queen Street address.",
-          "retrieval": "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check.",
+          "supports": "The current homepage lists Queen Street address and ordinary museum opening hours and does not display the past 28 October Gallery 20 closure banner.",
+          "retrieval": "Official homepage body reviewed through the web tool on 30 October 2026 (Europe/London, GMT); ordinary schedule and absence of the past banner compared. No reopening guarantee.",
           "previous_retrieval": "Official RAMM homepage body reviewed on 2 October 2026 at about 07:30 BST; the same current Gallery 20 event and maintenance notices appear there. The banner omits a year but its Thursday 1 and Saturday 3 October dates match 2026.",
-          "review_note": "Earlier banner evidence is historical in supports_history/retrieval_history. Current 27 October review confirms the 28 October Gallery 20-only event closure.",
+          "review_note": "Previous dated gallery-closure evidence is retained in supports_history and retrieval_history; no current whole-museum closure or guaranteed gallery reopening is inferred.",
           "supports_history": [
             {
               "observed_at": "2026-10-21",
               "supports": [
                 "The current homepage banner lists Gallery 20 as closed Thursday 1 and Saturday 3 October for an event, then 5–19 October for maintenance. The ordinary museum visiting hours remain separately listed."
               ]
+            },
+            {
+              "observed_at": "2026-10-27",
+              "supports": [
+                "The current homepage repeats the Gallery 20-only 28 October event closure and lists the regular museum opening schedule and Queen Street address."
+              ]
             }
           ],
           "retrieval_history": [
-            "Official RAMM homepage body reviewed on 2 October 2026 at about 07:30 BST; the same current Gallery 20 event and maintenance notices appear there. The banner omits a year but its Thursday 1 and Saturday 3 October dates match 2026."
+            "Official RAMM homepage body reviewed on 2 October 2026 at about 07:30 BST; the same current Gallery 20 event and maintenance notices appear there. The banner omits a year but its Thursday 1 and Saturday 3 October dates match 2026.",
+            "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check."
           ]
         }
       ],
-      "verified_at": "2026-10-27",
+      "verified_at": "2026-10-30",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 5,
@@ -379,35 +394,56 @@
       "limitations": [
         "Specific children's trail availability and numerical age guidance were not established in this refresh.",
         "A general place has not been converted into dated event occurrences.",
-        "The Gallery 20 banner omits a year; the 5–21 October maintenance notice continues the October 2026 notice previously checked. The stated closure applies to Gallery 20, not the entire museum. Reopening after 21 October has not been confirmed on-site."
+        "The past Gallery 20-only 28 October closure is retained in evidence history, not shown as a forthcoming visitor condition. Removal of the banner does not establish on-site reopening.",
+        "The Visit page and homepage were reviewed on 30 October. The separate access URL returned HTTP 403; its earlier 27 October evidence has not been renewed."
       ],
-      "previous_verified_at": "2026-10-19",
+      "previous_verified_at": "2026-10-27",
       "review_status": "verified",
       "practical_notes": [
         "The museum lists bank-holiday closures; check exceptional opening before travelling.",
-        "Gallery 20 is listed as closed on Wednesday 28 October 2026 for an event. This notice is for that gallery, not the whole museum; check individual gallery access before travelling."
+        "Check individual gallery access before travelling."
       ],
       "sheet_bindings": [
         {
           "candidate_id": "f5492124652f836e731fef31",
           "name": "RAMM – Royal Albert Memorial Museum",
           "region": "Devon",
-          "fingerprint": "893319ed8db9ab24f199bb59f9bdf158f76aa243f49bf833ffe542cb7babc723"
+          "fingerprint": "86f3916d3faa735edf6dd4be5d003d669255d8c20d9c6a713d7c422619843ef0"
         }
       ],
       "review_notes": [
         "The official visit page confirms free entry, Monday closure and Tue–Sun hours, and warns that the cafe will be closed for maintenance on Tuesday 20 October with only hot drinks and cakes available in the cafe seating area.",
         "21 October: the official Visit-page banner extended Gallery 20 maintenance through 21 October. The 20 October cafe closure is now past and was removed from current practical notes; the official site still displays it as a historical banner. General admission and opening hours remain unchanged.",
-        "The Wednesday 28 October banner matches the 2026 calendar and current 2026 museum programme. Ordinary museum hours are separate; no whole-museum closure or guaranteed reopening inferred."
+        "The Wednesday 28 October banner matches the 2026 calendar and current 2026 museum programme. Ordinary museum hours are separate; no whole-museum closure or guaranteed reopening inferred.",
+        "30 October: the official Visit page and homepage no longer display the past 28 October Gallery 20-only banner. Removed the expired current notice from the exact existing master row and current visitor notes. Regular entry/hours confirmed; general age and booking remain TBC. Access URL returned 403, so that source retains its previous review date. No reopening inferred."
       ],
       "previous_practical_notes": [
         "The museum lists bank-holiday closures; check exceptional opening before travelling.",
         "Gallery 20 is listed as closed for maintenance through 21 October; check reopening if that gallery is your reason to visit."
       ],
+      "practical_notes_history": [
+        {
+          "observed_at": "2026-10-27",
+          "notes": [
+            "The museum lists bank-holiday closures; check exceptional opening before travelling.",
+            "Gallery 20 is listed as closed on Wednesday 28 October 2026 for an event. This notice is for that gallery, not the whole museum; check individual gallery access before travelling."
+          ]
+        }
+      ],
+      "limitations_history": [
+        {
+          "observed_at": "2026-10-27",
+          "limitations": [
+            "Specific children's trail availability and numerical age guidance were not established in this refresh.",
+            "A general place has not been converted into dated event occurrences.",
+            "The Gallery 20 banner omits a year; the 5–21 October maintenance notice continues the October 2026 notice previously checked. The stated closure applies to Gallery 20, not the entire museum. Reopening after 21 October has not been confirmed on-site."
+          ]
+        }
+      ],
       "city": "Exeter",
       "notes": [
         "The museum lists bank-holiday closures; check exceptional opening before travelling.",
-        "Gallery 20 is listed as closed on Wednesday 28 October 2026 for an event. This notice is for that gallery, not the whole museum; check individual gallery access before travelling."
+        "Check individual gallery access before travelling."
       ],
       "free_basis": "Free museum admission. Check individual event listings for any separate charges.",
       "indoor_basis": "Editorial classification based on the museum's indoor galleries described on its official visit page."
@@ -2046,7 +2082,7 @@
       "locality": "Clyst St Mary, near Exeter",
       "address": "Crealy Theme Park & Resort, Sidmouth Road, Clyst St Mary, Devon EX5 1DR",
       "age_text": "Family event; a gentler trick-or-treat experience is aimed at under-10s. Individual rides and attractions have age or height restrictions.",
-      "price_text": "Online tickets from £20 per person; gate price £25 per person; children under 92cm free. Some extras cost more. Check the date-specific final total.",
+      "price_text": "Online tickets from £20 per person; gate price £25 per person; children under 92cm free. A pumpkin for each child is included during Spook-Fest (24–31 October). Optional upgrades cost extra; check the date-specific final total.",
       "price_type": "paid",
       "booking_text": "Advance online booking offers the advertised lower price; gate tickets are listed. Check date-specific availability and ride restrictions.",
       "schedule_text": "24–31 October 2026, normally 10am–5pm with last entry at 4pm for the checked 25 and 31 October dates. On 24 October the park closed at 4pm, with last entry at 3pm, because of the organiser's Storm Austen update.",
@@ -2094,8 +2130,8 @@
         {
           "url": "https://www.crealy.co.uk/events/halloween-at-crealy/",
           "label": "Official 2026 Halloween programme",
-          "supports": "The official event page lists 10–11, 17–18 and 24–31 October 2026, 10am–5pm. Online tickets start at £20 per person, gate tickets are £25, and children under 92cm are free; extra experiences may cost more. The family programme includes gentler activities for younger children; some attractions have separate restrictions. The current official Spook-Fest page confirms 10–11 and 17–18 October 2026, 10am–5pm, online admission from GBP 20, GBP 25 at the gate and free entry below 92cm. Attraction-specific restrictions and extras remain. The official 2026 page confirms 17–18 and 24–31 October, 10am–5pm, online tickets from £20, gate tickets £25, under-92cm admission free and the under-10s trick-or-treat option. The 19 October 2026 review confirms Spook-Fest runs 24–31 October, 10am–5pm; online admission starts at £20, gate admission is £25, under-92cm visitors are free, and some extras cost more. The 1 November free-return offer has separate terms and is not represented as ordinary Spook-Fest entry. The 25 October review confirms the 24–31 October 2026 programme, online admission from £20, gate £25, free admission below 92cm, under-10 trick-or-treat and paid extras; day-specific calendar exceptions take precedence over general event hours.",
-          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+          "supports": "The official event page confirms Spook-Fest 24–31 October 2026, normally 10am–5pm; day-specific calendar exceptions remain separate. Online admission starts at £20 per person, gate admission is £25, and children under 92cm enter free. A pumpkin for every child is included during Spook-Fest. Optional ticket upgrades cost extra. Buddy's Trick or Treat is for under-10s and included in admission; rides and other attractions have their own restrictions. The 1 November free-return offer has separate eligibility terms, not ordinary event entry.",
+          "retrieval": "Official 2026 Spook-Fest page body reviewed through the web tool on 30 October 2026 (Europe/London, GMT). Programme dates, price basis, included pumpkin, age guidance and booking/upgrade conditions compared; no ticket transaction or live capacity guarantee.",
           "retrieval_history": [
             "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked.",
             "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability.",
@@ -2103,28 +2139,53 @@
             "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check.",
             "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
             "Official provider page body reviewed through the web tool on 25 October 2026 (Europe/London, GMT). Programme, dated calendar, admission basis, restrictions and booking conditions compared; no live capacity guarantee or ticket transaction.",
-            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout."
+            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
+            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout."
           ],
-          "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked."
+          "previous_retrieval": "Official organiser page retrieved directly on 28 September 2026 (HTTP 200); 2026 dates and listed visit conditions reviewed. Availability and future opening can change. Official page text reviewed on 5 October 2026 (BST); dates, cost basis, age/height guidance and practical booking or access conditions checked.",
+          "supports_history": [
+            {
+              "observed_at": "2026-10-28",
+              "supports": [
+                "The official event page lists 10–11, 17–18 and 24–31 October 2026, 10am–5pm.",
+                "Online tickets start at £20 per person, gate tickets are £25, and children under 92cm are free; extra experiences may cost more.",
+                "The family programme includes gentler activities for younger children; some attractions have separate restrictions.",
+                "The current official Spook-Fest page confirms 10–11 and 17–18 October 2026, 10am–5pm, online admission from GBP 20, GBP 25 at the gate and free entry below 92cm. Attraction-specific restrictions and extras remain.",
+                "The official 2026 page confirms 17–18 and 24–31 October, 10am–5pm, online tickets from £20, gate tickets £25, under-92cm admission free and the under-10s trick-or-treat option.",
+                "The 19 October 2026 review confirms Spook-Fest runs 24–31 October, 10am–5pm; online admission starts at £20, gate admission is £25, under-92cm visitors are free, and some extras cost more. The 1 November free-return offer has separate terms and is not represented as ordinary Spook-Fest entry.",
+                "The 25 October review confirms the 24–31 October 2026 programme, online admission from £20, gate £25, free admission below 92cm, under-10 trick-or-treat and paid extras; day-specific calendar exceptions take precedence over general event hours."
+              ]
+            }
+          ]
         },
         {
           "url": "https://www.crealy.co.uk/theme-park/plan-your-visit/opening-times/",
           "label": "Official Crealy park calendar for October 2026",
-          "supports": "The dated 25 and 31 October 2026 calendar cells show 10am–5pm, last entry 4pm. The dated 24 October cell and Storm Austen visitor notice show a 4pm close and 3pm last entry; the organiser says some rides could be unavailable on that date. This is a historical exception, not a cancellation of later dates.",
-          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+          "supports": "The dated Saturday 31 October 2026 calendar cell lists 10am–5pm, last entry 4pm. Friday 30 October also lists these hours. The previously checked 24 October storm-related early close is retained in historical evidence and the past occurrence; it is not applied to 31 October.",
+          "retrieval": "Official park calendar body reviewed through the web tool on 30 October 2026 (Europe/London, GMT), using the explicit 30 and 31 October date cells. Past weather exceptions not newly verified or extended to later dates; no live availability check.",
           "retrieval_history": [
             "Official calendar body reviewed through the web tool on 17 October 2026 (BST). The current-day banner was still dated Friday 16 October, so the explicit dated calendar cells were used instead.",
             "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
             "Official provider page body reviewed through the web tool on 25 October 2026 (Europe/London, GMT). Programme, dated calendar, admission basis, restrictions and booking conditions compared; no live capacity guarantee or ticket transaction.",
-            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout."
+            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
+            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout."
           ],
           "previous_supports": [
             "The 17, 18, 24 and 25 October 2026 calendar cells show 10am–5pm park opening and 4pm last entry.",
             "The dated 31 October 2026 calendar cell shows 10am–5pm opening and 4pm last entry."
+          ],
+          "supports_history": [
+            {
+              "observed_at": "2026-10-28",
+              "supports": [
+                "The dated 25 and 31 October 2026 calendar cells show 10am–5pm, last entry 4pm.",
+                "The dated 24 October cell and Storm Austen visitor notice show a 4pm close and 3pm last entry; the organiser says some rides could be unavailable on that date. This is a historical exception, not a cancellation of later dates."
+              ]
+            }
           ]
         }
       ],
-      "verified_at": "2026-10-28",
+      "verified_at": "2026-10-30",
       "review_status": "verified",
       "sheet_match": {
         "live_sheet_checked": true,
@@ -2148,15 +2209,17 @@
           "candidate_id": "35170ba887ae31826dbf5c36",
           "name": "Halloween Spook-Fest – Crealy",
           "region": "Devon",
-          "fingerprint": "4085d444c4e422d04d7435195e47794cc23b57ccacdf7b1c1d4c8c720bd10f9e"
+          "fingerprint": "95541323ba728f77a4c8c235b24fefb76fca152bfe3d6a5d75dc2066d9036506"
         }
       ],
-      "previous_verified_at": "2026-10-26",
+      "previous_verified_at": "2026-10-28",
       "review_notes": [
         "The official 2026 event and dated park calendar confirm Saturday 31 October, 10:00–17:00 with 16:00 last entry. The event page advertises admission from £20 online, £25 gate, under 92cm free, family shows, age-specific activities and paid extras.",
         "25 October review: official calendar records a weather-related early 4pm closure and 3pm last entry on 24 October. Corrected that historical occurrence while preserving it. Checked 25/31 October hours, current programme, fares, restrictions and booking basis are unchanged. No live availability or checkout test.",
-        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity."
+        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity.",
+        "30 October: current official Spook-Fest body confirms a free pumpkin for every child during 24–31 October, paid admission from £20 online/£25 gate and under-92cm free entry. Included under-10 trick-or-treat and optional paid upgrades distinguished. The dated calendar confirms 31 October 10am–5pm, last entry 4pm. Three precise existing master cells across this activity and RAMM reconciled; no event dates or rows changed and no checkout performed."
       ],
+      "previous_price_text": "Online tickets from GBP 20 per person; gate price GBP 25 per person; children under 92cm free. Some extras cost more. Check the date-specific final total.",
       "city": "",
       "notes": [
         "Individual attractions have their own age and height rules.",
