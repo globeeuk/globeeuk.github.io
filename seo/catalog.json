@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-10-30",
+  "source_verified_at": "2026-11-02",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -2939,6 +2939,20 @@
           "start_time": "10:00",
           "end_time": "17:00",
           "weekday": "Sunday"
+        },
+        {
+          "start": "2026-11-14",
+          "end": "2026-11-14",
+          "weekday": "Saturday",
+          "start_time": "10:00",
+          "end_time": "17:00"
+        },
+        {
+          "start": "2026-11-15",
+          "end": "2026-11-15",
+          "weekday": "Sunday",
+          "start_time": "10:00",
+          "end_time": "17:00"
         }
       ],
       "indoor": true,
@@ -2961,17 +2975,18 @@
         {
           "url": "https://rammuseum.org.uk/whats-on/bayeux-around-britain-digital-trail/",
           "supports": "Free twelve-stop gallery trail, about one hour, 15 September 2026–11 July 2027. Weekend museum opening 10am–5pm. Numeric age guidance and booking rule not stated.",
-          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+          "retrieval": "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit.",
           "retrieval_history": [
             "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit.",
-            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout."
+            "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
+            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout."
           ]
         }
       ],
       "limitations": [
         "Device requirements and numerical age suitability remain TBC."
       ],
-      "verified_at": "2026-10-28",
+      "verified_at": "2026-11-02",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -2987,14 +3002,20 @@
         "event_rows": [
           514
         ],
-        "reconciliation_note": "21 October native cells and complete published CSV checked; only officially confirmed dates selected. On 26 October, added 7–8 November presentation dates covered by the existing ongoing Sheet event and reviewed provider period/hours. No native cell write or renewed native-read claim.",
-        "checked_at": "2026-10-21T09:09:55.133Z",
-        "published_csv_checked_at": "2026-10-28T07:13:52+00:00"
+        "reconciliation_note": "2 November: bounded native CellData and full published CSV compared with the reviewed official body. Current values/dates, formulas, formats and validation preserved. Only the separately audited RAMM/master and Tobacco/events provenance notes changed; no native visual check or new DB/date row claimed.",
+        "checked_at": "2026-11-02T07:34:31.121850+00:00",
+        "published_csv_checked_at": "2026-11-02T07:31:51+00:00",
+        "reconciliation_history": [
+          "21 October native cells and complete published CSV checked; only officially confirmed dates selected. On 26 October, added 7–8 November presentation dates covered by the existing ongoing Sheet event and reviewed provider period/hours. No native cell write or renewed native-read claim."
+        ],
+        "published_csv_checked": true
       },
-      "previous_verified_at": "2026-10-26",
+      "previous_verified_at": "2026-10-28",
       "review_notes": [
         "26 October: confirmed ongoing trail period and weekend hours support 7–8 November presentation dates within existing events row514; no Sheet change.",
-        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity."
+        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity.",
+        "2 November: relevant current and next-weekend official sources rechecked and exact native records reconciled; fees, numerical ages and booking conditions not stated by the organiser remain TBC. Historical occurrences retained.",
+        "14–15 November presentation dates are within the existing 15 September–11 July native event and published museum weekend opening, not a new workshop or new Sheet event."
       ],
       "notes": [
         "This is a self-guided ongoing trail, not a timed workshop.",
@@ -3199,13 +3220,16 @@
         {
           "url": "https://tickets.illuminatethenight.co.uk/events/illuminatethenight/2360453",
           "supports": "Organiser ticket page lists 7 November 2026, 16:00–21:00, Escot Park EX11 1LU, fireworks/lasers/funfair and all-age wording. Prices and detailed entry/access conditions were not exposed.",
-          "retrieval": "Official organiser page body reviewed on 26 October 2026 (GMT). No booking transaction, live-availability guarantee or visit."
+          "retrieval": "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit.",
+          "retrieval_history": [
+            "Official organiser page body reviewed on 26 October 2026 (GMT). No booking transaction, live-availability guarantee or visit."
+          ]
         }
       ],
       "limitations": [
         "Unstated prices, numerical ages, entry/access rules and exceptional changes remain TBC."
       ],
-      "verified_at": "2026-10-26",
+      "verified_at": "2026-11-02",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -3216,15 +3240,23 @@
         }
       ],
       "sheet_match": {
-        "live_sheet_checked": false,
+        "live_sheet_checked": true,
         "published_csv_checked": true,
         "row_id": 206,
         "event_rows": [
           249
         ],
-        "published_csv_checked_at": "2026-10-26T07:02:06+00:00",
-        "reconciliation_note": "Existing exact master and dated events compared in complete published CSV after official-source review. No native cell write or fresh native read claimed; no new DB row or region."
+        "published_csv_checked_at": "2026-11-02T07:31:51+00:00",
+        "reconciliation_note": "2 November: bounded native CellData and full published CSV compared with the reviewed official body. Current values/dates, formulas, formats and validation preserved. Only the separately audited RAMM/master and Tobacco/events provenance notes changed; no native visual check or new DB/date row claimed.",
+        "reconciliation_history": [
+          "Existing exact master and dated events compared in complete published CSV after official-source review. No native cell write or fresh native read claimed; no new DB row or region."
+        ],
+        "checked_at": "2026-11-02T07:34:31.121850+00:00"
       },
+      "previous_verified_at": "2026-10-26",
+      "review_notes": [
+        "2 November: relevant current and next-weekend official sources rechecked and exact native records reconciled; fees, numerical ages and booking conditions not stated by the organiser remain TBC. Historical occurrences retained."
+      ],
       "notes": [
         "Check noise levels, accessibility and children's arrangements with the organiser before booking.",
         "This is Escot Park, not the separate Westpoint fireworks event."
@@ -3243,7 +3275,7 @@
       "price_type": "unknown",
       "price_text": "Visitor admission TBC. Food and other purchases cost extra.",
       "booking_text": "No visitor booking rule is stated. Stallholder pitch booking is separate; check for exceptions.",
-      "schedule_text": "Sunday 1 and 8 November 2026, from 10am. Closing time TBC: dated event pages say 2pm, but the calendar and general market guide say 2.30pm; confirm before travelling.",
+      "schedule_text": "Sunday 8 and 15 November 2026, from 10am. Closing time TBC: dated event pages say 2pm, but the calendar and general market guide say 2.30pm; confirm before travelling.",
       "occurrences": [
         {
           "start": "2026-11-01",
@@ -3255,6 +3287,13 @@
         {
           "start": "2026-11-08",
           "end": "2026-11-08",
+          "weekday": "Sunday",
+          "start_time": "10:00",
+          "end_time": null
+        },
+        {
+          "start": "2026-11-15",
+          "end": "2026-11-15",
           "weekday": "Sunday",
           "start_time": "10:00",
           "end_time": null
@@ -3272,7 +3311,7 @@
       ],
       "practical_notes": [
         "A food-and-makers market, not a dedicated children's workshop.",
-        "The organiser lists 1 and 8 November 2026 individually; check for changes before travelling.",
+        "The organiser lists 8 and 15 November 2026 individually; check for changes before travelling.",
         "Closing time TBC: the dated event pages say 2pm, while the calendar and general market guide say 2.30pm."
       ],
       "sources": [
@@ -3280,44 +3319,44 @@
           "url": "https://www.tobaccofactory.com/sunday-market",
           "label": "Current official market guide",
           "supports": "Confirms family visits, local food/crafts/produce and Raleigh Road, Bristol BS3 1TF. General weekly hours are 10am–2.30pm, conflicting with the dated event pages. Visitor admission, numerical ages and visitor booking rules are not stated.",
-          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+          "retrieval": "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit.",
           "retrieval_history": [
-            "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
+            "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today.",
+            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout."
           ]
         },
         {
           "url": "https://www.tobaccofactory.com/whats-on?category=Market",
           "label": "Official 2026 market calendar",
-          "supports": "Individually lists Sunday 1 and 8 November 2026, from 10am; calendar summary ends at 2.30pm. The dated event detail pages give 2pm instead. Closing time remains unresolved.",
-          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+          "supports": "Individually lists Sunday 8 and 15 November 2026, from 10am; calendar summary ends at 2.30pm. The dated event detail pages give 2pm instead. Closing time remains unresolved.",
+          "retrieval": "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit.",
           "retrieval_history": [
-            "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
-          ]
-        },
-        {
-          "url": "https://www.tobaccofactory.com/whats-on/sunday-market/01/11/26",
-          "label": "Official 1 November listing",
-          "supports": "Confirms 1 November 2026 and a 10am start; detail page says 2pm end, conflicting with the 2.30pm calendar/general guide. Visitor ticket prices and visitor booking rule not stated; stallholder pitch booking is separate.",
-          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
-          "retrieval_history": [
-            "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
+            "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today.",
+            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout."
           ]
         },
         {
           "url": "https://www.tobaccofactory.com/whats-on/sunday-market/08/11/26",
           "label": "Official 8 November listing",
           "supports": "Confirms 8 November 2026 and a 10am start; detail page says 2pm end, conflicting with the 2.30pm calendar/general guide.",
-          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+          "retrieval": "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit.",
           "retrieval_history": [
-            "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
+            "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today.",
+            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout."
           ]
+        },
+        {
+          "url": "https://www.tobaccofactory.com/whats-on/sunday-market/15/12/26",
+          "label": "Official 15 November listing",
+          "supports": "Linked from the official 15 November calendar entry. Heading/body explicitly say 15 November 2026, 10am–2pm, despite the URL containing 12. General guide/calendar say 2.30pm, so closing remains TBC. Family food/craft market at Raleigh Road BS3 1TF. Visitor admission, numerical ages and visitor booking rules unstated; pitch booking is for stallholders.",
+          "retrieval": "Official linked body reviewed on 2 November 2026 (GMT). The /15/11/26 guessed route did not resolve; use the actual organiser link and body date, not an inferred December occurrence. No transaction or live capacity check."
         }
       ],
       "limitations": [
         "Unstated prices, numerical ages, entry/access rules and exceptional changes remain TBC.",
         "Official closing times conflict: 2pm on dated pages versus 2.30pm on the calendar/general guide. No closing time is confirmed."
       ],
-      "verified_at": "2026-10-28",
+      "verified_at": "2026-11-02",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -3333,11 +3372,15 @@
         "row_id": 250,
         "event_rows": [
           500,
-          501
+          501,
+          502
         ],
-        "published_csv_checked_at": "2026-10-28T07:13:52+00:00",
-        "reconciliation_note": "Native 시트1!I250/M250/N250 corrected and read back. Matching events 500/501 and all historical dates preserved. Complete published master/events CSV confirms the exact updated source and unresolved closing time before binding renewal.",
-        "checked_at": "2026-10-27T07:12:02.980Z"
+        "published_csv_checked_at": "2026-11-02T07:31:51+00:00",
+        "reconciliation_note": "2 November: bounded native CellData and full published CSV compared with the reviewed official body. Current values/dates, formulas, formats and validation preserved. Only the separately audited RAMM/master and Tobacco/events provenance notes changed; no native visual check or new DB/date row claimed.",
+        "checked_at": "2026-11-02T07:34:31.121850+00:00",
+        "reconciliation_history": [
+          "Native 시트1!I250/M250/N250 corrected and read back. Matching events 500/501 and all historical dates preserved. Complete published master/events CSV confirms the exact updated source and unresolved closing time before binding renewal."
+        ]
       },
       "historical_sources": [
         {
@@ -3346,16 +3389,34 @@
           "retrieval": "Official organiser page body reviewed on 26 October 2026 (GMT). No booking transaction, live-availability guarantee or visit.",
           "retired_on": "2026-10-27",
           "retired_reason": "Former official route now returns 404. Replaced by the organiser's current market guide, calendar and dated listings; not a cancellation."
+        },
+        {
+          "url": "https://www.tobaccofactory.com/whats-on/sunday-market/01/11/26",
+          "label": "Official 1 November listing",
+          "supports": [
+            "Confirms 1 November 2026 and a 10am start; detail page says 2pm end, conflicting with the 2.30pm calendar/general guide.",
+            "Visitor ticket prices and visitor booking rule not stated; stallholder pitch booking is separate."
+          ],
+          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+          "retrieval_history": [
+            "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today."
+          ],
+          "retired_on": "2026-11-02",
+          "retired_reason": "Past 1 November occurrence; source history preserved, no longer linked as current-weekend information."
         }
       ],
       "previous_schedule_text": "Sundays, 10am–2.30pm. 1 and 8 November 2026 follow the published weekly schedule, not separate dated confirmations.",
-      "previous_verified_at": "2026-10-27",
+      "previous_verified_at": "2026-10-28",
       "review_notes": [
-        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity."
+        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity.",
+        "2 November: relevant current and next-weekend official sources rechecked and exact native records reconciled; fees, numerical ages and booking conditions not stated by the organiser remain TBC. Historical occurrences retained."
+      ],
+      "schedule_history": [
+        "Sunday 1 and 8 November 2026, from 10am. Closing time TBC: dated event pages say 2pm, but the calendar and general market guide say 2.30pm; confirm before travelling."
       ],
       "notes": [
         "A food-and-makers market, not a dedicated children's workshop.",
-        "The organiser lists 1 and 8 November 2026 individually; check for changes before travelling.",
+        "The organiser lists 8 and 15 November 2026 individually; check for changes before travelling.",
         "Closing time TBC: the dated event pages say 2pm, while the calendar and general market guide say 2.30pm."
       ]
     },
@@ -3372,7 +3433,7 @@
       "price_type": "unknown",
       "price_text": "Visitor admission TBC. Purchases cost extra.",
       "booking_text": "Visitor booking requirements TBC; check the organiser before travelling.",
-      "schedule_text": "Saturdays, 8.30am–1pm. 31 October and 7 November 2026 follow the published weekly schedule, not separate dated confirmations.",
+      "schedule_text": "Saturdays, 8.30am–1pm. 7 and 14 November 2026 follow the published weekly schedule, not separate dated confirmations.",
       "occurrences": [
         {
           "start": "2026-10-31",
@@ -3384,6 +3445,13 @@
         {
           "start": "2026-11-07",
           "end": "2026-11-07",
+          "weekday": "Saturday",
+          "start_time": "08:30",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-11-14",
+          "end": "2026-11-14",
           "weekday": "Saturday",
           "start_time": "08:30",
           "end_time": "13:00"
@@ -3407,16 +3475,17 @@
         {
           "url": "https://www.wrmcic.co.uk/home",
           "supports": "Organiser lists every Saturday, 08:30–13:00, at Whiteladies/Apsley Road BS8 2ST, with local food and some crafts/plants. Selected dates follow that rule. Admission, age and visitor booking conditions are unstated.",
-          "retrieval": "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+          "retrieval": "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit.",
           "retrieval_history": [
-            "Official organiser page body reviewed on 26 October 2026 (GMT). No booking transaction, live-availability guarantee or visit."
+            "Official organiser page body reviewed on 26 October 2026 (GMT). No booking transaction, live-availability guarantee or visit.",
+            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout."
           ]
         }
       ],
       "limitations": [
         "Unstated prices, numerical ages, entry/access rules and exceptional changes remain TBC."
       ],
-      "verified_at": "2026-10-28",
+      "verified_at": "2026-11-02",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -3427,19 +3496,28 @@
         }
       ],
       "sheet_match": {
-        "live_sheet_checked": false,
+        "live_sheet_checked": true,
         "published_csv_checked": true,
         "row_id": 249,
         "event_rows": [
           493,
-          494
+          494,
+          495
         ],
-        "published_csv_checked_at": "2026-10-28T07:13:52+00:00",
-        "reconciliation_note": "Existing exact master and dated events compared in complete published CSV after official-source review. No native cell write or fresh native read claimed; no new DB row or region."
+        "published_csv_checked_at": "2026-11-02T07:31:51+00:00",
+        "reconciliation_note": "2 November: bounded native CellData and full published CSV compared with the reviewed official body. Current values/dates, formulas, formats and validation preserved. Only the separately audited RAMM/master and Tobacco/events provenance notes changed; no native visual check or new DB/date row claimed.",
+        "reconciliation_history": [
+          "Existing exact master and dated events compared in complete published CSV after official-source review. No native cell write or fresh native read claimed; no new DB row or region."
+        ],
+        "checked_at": "2026-11-02T07:34:31.121850+00:00"
       },
-      "previous_verified_at": "2026-10-26",
+      "previous_verified_at": "2026-10-28",
       "review_notes": [
-        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity."
+        "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity.",
+        "2 November: relevant current and next-weekend official sources rechecked and exact native records reconciled; fees, numerical ages and booking conditions not stated by the organiser remain TBC. Historical occurrences retained."
+      ],
+      "schedule_history": [
+        "Saturdays, 8.30am–1pm. 31 October and 7 November 2026 follow the published weekly schedule, not separate dated confirmations."
       ],
       "notes": [
         "Predominantly local food, rather than a street-food event.",
