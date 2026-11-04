@@ -247,6 +247,7 @@ function render(){
   if($('#location-eyebrow'))$('#location-eyebrow').textContent=REGION_LABELS[state.region].toUpperCase();
   const activeEdit=state.edit?GlobeeDiscovery.seasonalDefinition(state.edit,TODAY):null;
   if($('#plans-page-title')){
+    document.body.classList.toggle('christmas-edition-active',activeEdit?.id==='christmas');
     $('#plans-page-title').textContent=activeEdit?activeEdit.title:'What’s on & holiday clubs';
     $('.plans-intro-copy').textContent=activeEdit?.id==='christmas-book-ahead'?'Family Christmas events with published 2026 dates and booking links. Check availability with the organiser.':activeEdit?.id==='half-term'?'Holiday clubs, days out and shows with confirmed dates for the October school break. Check places, times and prices with each organiser.':activeEdit?.id==='christmas'&&state.region==='Exeter'?'Tree-buying ideas and Christmas events together. Check dates, prices and booking with each organiser.':activeEdit?.id==='christmas'?'Christmas events and shows with published dates. Check availability with each organiser.':activeEdit?'Every verified seasonal plan, together in one list.':'Browse upcoming events and holiday clubs in one place.';
     document.title=activeEdit?`${activeEdit.title} in ${state.region==='Exeter'?'Exeter & Devon':state.region} | Globee`:'What’s on & holiday clubs | Globee';

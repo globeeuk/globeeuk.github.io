@@ -10,8 +10,8 @@ test('Christmas switch uses one illustrated banner with the family handprint pho
   assert.match(entry, /<h2>The Christmas<br>Edit<\/h2>/);
   assert.match(entry, /Trees · Festive days out · Shows/);
   assert.match(entry, /child-handprint-christmas-tree-2026\.jpg/);
-  assert.match(entry, /christmas-banner-2026\.webp/);
-  assert.ok(fs.existsSync(path.join(__dirname, '..', 'assets/christmas-banner-2026.webp')));
+  assert.match(entry, /christmas-print-motifs/);
+  assert.ok(fs.existsSync(path.join(__dirname, '..', 'assets/christmas-newsprint-2026.webp')));
   assert.doesNotMatch(home, /id="christmas-tree-entry"/);
   assert.match(home, /ice-cream\.css\?v=christmas-banner-20261104/);
 });
