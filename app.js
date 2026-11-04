@@ -255,12 +255,17 @@ function render(){
   const scoopPromo=$('#scoop-promo-link');
   const halfTermEntry=$('#half-term-entry');
   const christmasEntry=$('#christmas-entry');
+  const yearEndEntry=$('#year-end-entry');
   const winterMapLink=$('#winter-map-link');
   if(halfTermEntry){
     const halfTermActive=!!GlobeeDiscovery.seasonalDefinition('half-term',TODAY);
     const christmasActive=!!GlobeeDiscovery.seasonalDefinition('christmas',TODAY);
     halfTermEntry.hidden=!halfTermActive;
     halfTermEntry.href=`plans.html?region=${encodeURIComponent(state.region==='Exeter'?'Devon':state.region)}&edit=half-term`;
+    if(yearEndEntry){
+      yearEndEntry.hidden=!christmasActive||state.region!=='Exeter';
+      yearEndEntry.querySelector('.year-end-entry-topics').textContent=TODAY<'2026-12-01'?'Trees · Days out · Black Friday shopping':'Trees · Santa visits · Christmas markets';
+    }
     if(christmasEntry){
       christmasEntry.hidden=!christmasActive;
       christmasEntry.href=`plans.html?region=${encodeURIComponent(state.region==='Exeter'?'Devon':state.region)}&edit=christmas`;
