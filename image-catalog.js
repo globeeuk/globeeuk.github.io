@@ -2,6 +2,8 @@
 (function(root){
   'use strict';
   const photoRows=[
+    ["easton-community-centre", "Tadeusz Hare", "https://commons.wikimedia.org/wiki/File:Easton_Community_Centre,_Bristol_-_DSC_0663.jpg", "CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/", "2025-09-22", "venue", "Easton Community Centre exterior"],
+    ["trinity-centre-bristol", "Tadeusz Hare", "https://commons.wikimedia.org/wiki/File:Trinity_Centre,_Bristol_-_DSC_2831.jpg", "CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/", "2026-07-04", "venue", "Trinity Centre exterior"],
     ['exeter-library','David Smith','https://commons.wikimedia.org/wiki/File:Exeter_Library_after_rebuilding_-_geograph.org.uk_-_4016656.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2014-06-07','venue','Exeter Library after its 2014 refurbishment; not the current activity'],
     ['theatre-alibi','Derek Harper','https://commons.wikimedia.org/wiki/File:Former_Emmanuel_Church_Hall,_Exeter_-_geograph.org.uk_-_1070718.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2008-12-03','venue','Emmanuel Hall in Exeter, home of Theatre Alibi; not the current workshop'],
     ['killerton-house','Derek Harper','https://commons.wikimedia.org/wiki/File:Killerton_House_01.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2006-09-10','venue','Killerton House in Broadclyst, Devon; not the current festive decorations'],
@@ -217,6 +219,8 @@
       if(/Nottingham High School/.test(p.name))return 'nottingham-high-school';
     }
     if(p.region==='Bristol'){
+      if(p.name==="Everyone Makes It – Easton Community Centre")return 'easton-community-centre';
+      if(p.name==="Hide & Seek – Trinity Centre")return 'trinity-centre-bristol';
       if(p.name==='Pumpkin Patch – Avon Valley')return 'pumpkin-field-reference';
       if(p.name==='Spooky Week at The Red Lodge Museum')return 'red-lodge-museum';
       if(p.name==='Autumn Week at Blaise Museum')return 'blaise-castle-museum';

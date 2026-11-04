@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-11-02",
+  "source_verified_at": "2026-11-04",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -3701,6 +3701,167 @@
         "Use the specific 6+ guidance rather than the generic All Ages heading."
       ],
       "indoor_basis": "The workshop is in Exeter Phoenix's Top Studio."
+    },
+    {
+      "id": "everyone-makes-it-easton-2026-11-07",
+      "description": "Make and experiment with art together in Easton’s community hall, with a facilitator on hand.",
+      "locality": "Easton",
+      "age_text": "All ages and abilities are welcome.",
+      "price_text": "£2 per family or group.",
+      "price_type": "paid",
+      "booking_text": "Booking requirements TBC. The organiser invites families to join the session.",
+      "schedule_text": "Saturday 7 November 2026, 10am–noon.",
+      "occurrences": [
+        {
+          "start": "2026-11-07",
+          "end": "2026-11-07",
+          "weekday": "Saturday",
+          "start_time": "10:00",
+          "end_time": "12:00"
+        }
+      ],
+      "practical_notes": [
+        "The organiser lists 7 November as the return date following the October building works."
+      ],
+      "name": "Everyone Makes It – Easton Community Centre",
+      "kind": "event",
+      "region": "Bristol",
+      "city": "Bristol",
+      "address": "Main Hall, Easton Community Centre, Kilburn Street, Bristol BS5 6AW",
+      "indoor": true,
+      "verified_at": "2026-11-04",
+      "review_status": "verified",
+      "rainy_day": {
+        "suitable": true,
+        "basis": "Organiser places the activity in an indoor venue.",
+        "classification": "Indoor family workshop"
+      },
+      "tags": [
+        "weekend",
+        "creative",
+        "family"
+      ],
+      "sources": [
+        {
+          "url": "https://eastsidecommunitytrust.org.uk/whats-on/everyone-makes-it/",
+          "label": "Eastside Community Trust session details",
+          "supports": "The organiser lists the 7 November 2026 return date, 10am–noon in the Main Hall, £2 per family/group and all ages and abilities. No explicit booking requirement is stated.",
+          "retrieval": "Official page body reviewed on 4 November 2026 (Europe/London)."
+        }
+      ],
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 327,
+        "event_rows": [
+          627
+        ],
+        "published_csv_checked": true,
+        "checked_at": "2026-11-04T07:03:52.313Z",
+        "published_csv_checked_at": "2026-11-04T07:05:47+00:00",
+        "reconciliation_note": "The two native ranges were read back and matched against the complete public CSV exports."
+      },
+      "sheet_bindings": [
+        {
+          "candidate_id": "77a36ce33a18d15bcf82f0ba",
+          "name": "Everyone Makes It – Easton Community Centre",
+          "region": "Bristol",
+          "fingerprint": "39f45a49b54f71d051a01281f3b3f279d57d1382b572169964d53d0774cfe02d"
+        }
+      ],
+      "limitations": [
+        "Current capacity and exceptional access arrangements are TBC."
+      ],
+      "notes": [
+        "The organiser lists 7 November as the return date following the October building works."
+      ],
+      "indoor_basis": "Organiser places the activity in an indoor venue."
+    },
+    {
+      "id": "hide-and-seek-trinity-2026-11-08",
+      "description": "A hands-on making and dressing-up workshop for families, exploring camouflage and how cameras see us.",
+      "locality": "Old Market area",
+      "age_text": "Families with children aged 5+.",
+      "price_text": "Free, as part of the Being Human Festival programme.",
+      "price_type": "free",
+      "booking_text": "The festival lists no booking requirement.",
+      "schedule_text": "Sunday 8 November 2026, start TBC, ends 2pm.",
+      "occurrences": [
+        {
+          "start": "2026-11-08",
+          "end": "2026-11-08",
+          "weekday": "Sunday",
+          "start_time": null,
+          "end_time": "14:00"
+        }
+      ],
+      "practical_notes": [
+        "Start time TBC. Trinity Centre lists noon–2pm and the festival lists 10am–2pm. Check the venue’s latest time before setting off."
+      ],
+      "name": "Hide & Seek – Trinity Centre",
+      "kind": "event",
+      "region": "Bristol",
+      "city": "Bristol",
+      "address": "Trinity Centre, Trinity Road, Bristol BS2 0NW",
+      "indoor": true,
+      "verified_at": "2026-11-04",
+      "review_status": "verified",
+      "rainy_day": {
+        "suitable": true,
+        "basis": "Organiser places the activity in an indoor venue.",
+        "classification": "Indoor family workshop"
+      },
+      "tags": [
+        "weekend",
+        "creative",
+        "family"
+      ],
+      "sources": [
+        {
+          "url": "https://www.beinghumanfestival.org/events/hide-seek",
+          "label": "Being Human Festival event details",
+          "supports": "8 November 2026 at Trinity Community Arts, 10am–2pm, no booking, families and children aged 5+.",
+          "retrieval": "Official page body reviewed on 4 November 2026 (Europe/London)."
+        },
+        {
+          "url": "https://www.trinitybristol.org.uk/whats-on/2026/hide-and-seek",
+          "label": "Trinity Centre venue listing",
+          "supports": "The venue agrees on 8 November, family ages 5+ and a 2pm end. Its start time is noon, conflicting with the festival’s 10am listing.",
+          "retrieval": "Official page body reviewed on 4 November 2026 (Europe/London)."
+        },
+        {
+          "url": "https://www.beinghumanfestival.org/",
+          "label": "Festival programme and admission",
+          "supports": "The 5–14 November 2026 programme offers free events.",
+          "retrieval": "Official page body reviewed on 4 November 2026 (Europe/London)."
+        }
+      ],
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 328,
+        "event_rows": [
+          628
+        ],
+        "published_csv_checked": true,
+        "checked_at": "2026-11-04T07:03:52.313Z",
+        "published_csv_checked_at": "2026-11-04T07:05:47+00:00",
+        "reconciliation_note": "The two native ranges were read back and matched against the complete public CSV exports."
+      },
+      "sheet_bindings": [
+        {
+          "candidate_id": "8821935e5f16925af965d95b",
+          "name": "Hide & Seek – Trinity Centre",
+          "region": "Bristol",
+          "fingerprint": "7e387cf090d659941c859f0ac16282cf733c4018af64580ff151b9de82d91e4b"
+        }
+      ],
+      "limitations": [
+        "Current capacity and exceptional access arrangements are TBC."
+      ],
+      "notes": [
+        "Start time TBC. Trinity Centre lists noon–2pm and the festival lists 10am–2pm. Check the venue’s latest time before setting off."
+      ],
+      "free_basis": "Free, as part of the Being Human Festival programme.",
+      "indoor_basis": "Organiser places the activity in an indoor venue."
     }
   ]
 }
