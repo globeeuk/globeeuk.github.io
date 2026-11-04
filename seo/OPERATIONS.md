@@ -117,6 +117,12 @@ The user requested purchase places and prices on the existing tree guide. Cotley
 
 Exe Valley explicitly labels its price list 2026. Cotley’s price table has no season label. Haldon publishes 2026 opening dates and prices by minimum height. Greendale’s product collection dates omit a year, so its 2026 availability/prices remain TBC despite visible pre-order pages. Do not silently promote these caveats to confirmed stock, rental coverage or booking availability. No indexing or traffic result is inferred from publication.
 
+### Exeter and Devon Year-End Family Edit — 4 November 2026
+
+The Devon homepage Christmas banner opens the existing Christmas Edit. Its unfiltered Devon list links to the hand-maintained `/exeter/year-end-family-edit/` guide, which brings together shopping, Santa and reindeer visits, tree crafts and four Devon markets. Keep the existing Bristol and Nottingham routes regional. Preserve the guide and its root-sitemap entry during generated builds. Shopping links, workshops and market dates in this issue are editorial notes. This release makes no changes to the Sheet or event snapshot.
+
+When a dated organiser notice or relevant email update arrives, check its date, region, source and any fee or booking change before correcting the guide. Recheck active time-sensitive items during the existing seasonal review when relevant. Record the actual source check, keep any uncertain dates or prices qualified and preserve older verification dates for sources that were not rechecked. The Cotley 6–7ft price comparison is checked on 4 November. Its price table does not state a year, its Premium and Standard criteria are unspecified and Fraser stock is limited. A change to calendar facts still follows the normal Sheet reconciliation procedure. No new schedule or social posting is part of this release.
+
 ## Weekend discovery completion gate — 15 October 2026
 
 The user explicitly authorised ongoing registration and homepage updates for selected, officially checked Exeter/Devon and Bristol Weekend Edit discoveries. A recommendation table or social draft alone is not completion. Prefer varied experiences (science, creative workshops, culture and free activities), not only familiar large attractions; never fill a numerical quota with weak evidence.

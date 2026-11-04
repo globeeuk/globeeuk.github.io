@@ -3,11 +3,11 @@ const read = file => fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
 const html = read('exeter/christmas-trees/index.html');
 test('Tree buying guide has four sourced retailers and matching indexable metadata', () => {
   const data = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
-  assert.equal(data.dateModified, '2026-10-11');
+  assert.equal(data.dateModified, '2026-11-04');
   assert.equal(data.mainEntity.numberOfItems, 4);
   assert.equal(data.mainEntity.itemListElement.length, 4);
   assert.match(html, /name="robots" content="index,follow"/);
-  assert.match(read('sitemap.xml'), /<loc>https:\/\/globeeuk.github.io\/exeter\/christmas-trees\/<\/loc>\s*<lastmod>2026-10-11<\/lastmod>/);
+  assert.match(read('sitemap.xml'), /<loc>https:\/\/globeeuk.github.io\/exeter\/christmas-trees\/<\/loc>\s*<lastmod>2026-11-04<\/lastmod>/);
   const source = JSON.parse(read('qa/christmas-tree-buying-sources.json'));
   for (const row of source.sources) {
     assert.match(html, new RegExp('id="' + row.id + '"'));
@@ -16,6 +16,10 @@ test('Tree buying guide has four sourced retailers and matching indexable metada
 });
 test('Prices retain sizes, tree distinctions and season caveats', () => {
   assert.match(html, /£38 standard \/ £55 premium/);
+  assert.match(html, /id="cotley-compare"/);
+  for (const [name, price] of [['Norway Spruce · Premium', 40], ['Nordmann Fir · Standard', 45], ['Fraser Fir', 60]]) {
+    assert.ok(html.includes(`<dt>${name}</dt><dd><strong>£${price}</strong>`));
+  }
   assert.match(html, /Norway 2–3ft: <strong>£24.50/);
   assert.match(html, /Minimum 5ft: <strong>fir £46 \/ spruce £30/);
   assert.match(html, /minimum heights, not 5–6ft bands/);
