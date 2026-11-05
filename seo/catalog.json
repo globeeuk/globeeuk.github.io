@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-11-04",
+  "source_verified_at": "2026-11-05",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -478,69 +478,75 @@
         {
           "url": "https://discover.librariesunlimited.org.uk/-/exeter-library",
           "supports": "Confirms the Castle Street address and branch contact details.",
-          "retrieval": "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability.",
+          "retrieval": "Official-source body reviewed through the web tool on 5 November 2026 (Europe/London, GMT). Address, general visiting/entry basis, family guidance, access and any published hours or improvement notices compared. The library pages were indexed six days earlier; the park listing one day earlier and council consultation today. No on-site check or exceptional-opening guarantee.",
           "previous_retrieval": "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body.",
           "label": "Library details",
           "retrieval_history": [
             "Official-source content reviewed on 20 September 2026. Web retrieval may use indexed official content; this does not promise live ticket availability or exceptional same-day opening.",
             "Official branch page body reviewed on 21 September 2026; Castle Street address and contact details confirmed.",
             "Official branch-page body reviewed through the web tool on 22 September 2026; crawler timestamp was 21 September. Castle Street address and branch details matched.",
-            "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body."
+            "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body.",
+            "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability."
           ]
         },
         {
           "url": "https://discover.librariesunlimited.org.uk/-/services-at-exeter-library",
           "supports": "Confirms a large children's section overlooking Rougemont Gardens and step-free access to library areas.",
-          "retrieval": "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability.",
+          "retrieval": "Official-source body reviewed through the web tool on 5 November 2026 (Europe/London, GMT). Address, general visiting/entry basis, family guidance, access and any published hours or improvement notices compared. The library pages were indexed six days earlier; the park listing one day earlier and council consultation today. No on-site check or exceptional-opening guarantee.",
           "previous_retrieval": "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body.",
           "label": "Facilities and access",
           "retrieval_history": [
             "Official-source content reviewed on 20 September 2026. Web retrieval may use indexed official content; this does not promise live ticket availability or exceptional same-day opening.",
             "Official services page body reviewed on 21 September 2026; indoor children’s section overlooking Rougemont Gardens and step-free access confirmed.",
             "Official services-page body reviewed through the web tool on 22 September 2026; crawler timestamp was 21 September. Indoor children’s section overlooking Rougemont Gardens and access information matched.",
-            "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body."
+            "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body.",
+            "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability."
           ]
         },
         {
           "url": "https://discover.librariesunlimited.org.uk/-/children",
           "supports": "The library operator welcomes children of every age and states that browsing, borrowing books and joining are free.",
-          "retrieval": "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability.",
+          "retrieval": "Official-source body reviewed through the web tool on 5 November 2026 (Europe/London, GMT). Address, general visiting/entry basis, family guidance, access and any published hours or improvement notices compared. The library pages were indexed six days earlier; the park listing one day earlier and council consultation today. No on-site check or exceptional-opening guarantee.",
           "previous_retrieval": "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body.",
           "label": "Children’s library services",
           "retrieval_history": [
             "Official-source content reviewed on 20 September 2026. Web retrieval may use indexed official content; this does not promise live ticket availability or exceptional same-day opening.",
             "Official children’s services page body reviewed on 21 September 2026; all-age welcome and free reading, borrowing and membership confirmed.",
             "Official children’s-services body reviewed through the web tool on 22 September 2026; crawler timestamp was 21 September. All-age welcome and free reading, borrowing and membership matched.",
-            "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body."
+            "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body.",
+            "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability."
           ]
         },
         {
           "url": "https://roomhire.librariesunlimited.org.uk/venues/99-exeter-library",
           "supports": "The operator's Exeter Library venue page publishes the full weekly opening schedule and Castle Street address.",
-          "retrieval": "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability. The web response was labelled crawled today and exposed the complete weekly timetable; direct Python retrieval failed TLS verification and is not claimed as successful.",
+          "retrieval": "Official operator venue page successfully loaded in Chrome with HTTP 200 and its full weekly opening timetable and Castle Street address reviewed on 5 November 2026 (Europe/London, GMT). Web retrieval timed out and direct Python TLS failed; neither is represented as a successful fetch. Room-hire fees are separate from a free reading visit. No exceptional-opening or live booking guarantee.",
           "label": "Published opening hours",
           "previous_retrieval": "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body. Chrome confirmed the complete published weekly timetable after the direct client encountered a TLS error.",
           "retrieval_history": [
             "Official operator venue page opened successfully on 20 September 2026; complete weekly opening timetable and address matched the existing record.",
             "Official operator venue-page body successfully reviewed on 21 September 2026; complete weekly opening timetable confirmed. Exceptional date-specific opening is not guaranteed.",
             "Official operator room-hire venue body reviewed on 22 September 2026; crawler timestamp was today. Complete weekly opening timetable matched. Chrome fallback also loaded normally after a TLS retrieval problem. General hours do not guarantee exceptional date-specific opening.",
-            "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body. Chrome confirmed the complete published weekly timetable after the direct client encountered a TLS error."
+            "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body. Chrome confirmed the complete published weekly timetable after the direct client encountered a TLS error.",
+            "Official page body reviewed through the web tool on 7 October 2026 (BST); published dates or opening hours, admission basis, age guidance and booking conditions where stated were checked. The tool may use indexed official content; this is not a guarantee of exceptional opening or live ticket availability. The web response was labelled crawled today and exposed the complete weekly timetable; direct Python retrieval failed TLS verification and is not claimed as successful."
           ]
         }
       ],
-      "verified_at": "2026-10-07",
+      "verified_at": "2026-11-05",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 6,
         "event_rows": [],
-        "reconciliation_note": "Official claims reviewed on 23 September 2026 and matched to fresh published master/events CSVs. RAMM and Powderham description corrections were read back natively with surrounding cells, formatting and validation preserved; all other selected bindings remain unchanged. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed.",
-        "checked_at": "2026-10-07T07:08:34+01:00"
+        "reconciliation_note": "5 November: exact-name/region candidate and existing binding compared with the complete published master/events CSV after the source-body review. Existing master facts and fingerprint match. No cell correction or new event is required; no fresh native read or edit claimed.",
+        "checked_at": "2026-10-07T07:08:34+01:00",
+        "published_csv_checked": true,
+        "published_csv_checked_at": "2026-11-05T07:03:01+00:00"
       },
       "limitations": [
         "Hours come from the operator's general venue page, not a date-specific confirmation of special opening or closures.",
         "The general children's programme list does not establish a scheduled session on a particular day."
       ],
-      "previous_verified_at": "2026-09-23",
+      "previous_verified_at": "2026-10-07",
       "review_status": "verified",
       "sheet_bindings": [
         {
@@ -549,6 +555,9 @@
           "region": "Devon",
           "fingerprint": "358a121e628e2c304b0d1b3848cf90066e27a23442b5e38de1bc28f1271c858e"
         }
+      ],
+      "review_notes": [
+        "5 November: source bodies rechecked before the 30-day ordinary-place evidence limit. Existing public facts and unresolved age/booking or gate-time qualifications remain unchanged. Matching exact-name/region master row and source URL confirmed in the complete published master/events CSV; fingerprint unchanged. No native Sheet edit or fresh native read is claimed."
       ],
       "city": "Exeter",
       "notes": [],
@@ -749,14 +758,15 @@
         {
           "url": "https://www.visitexeter.com/things-to-do/heavitree-pleasure-grounds-p763523",
           "supports": "Lists free admission, outdoor park facilities, family suitability, address and a January–December 2026 visiting period; no daily hours.",
-          "retrieval": "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
+          "retrieval": "Official-source body reviewed through the web tool on 5 November 2026 (Europe/London, GMT). Address, general visiting/entry basis, family guidance, access and any published hours or improvement notices compared. The library pages were indexed six days earlier; the park listing one day earlier and council consultation today. No on-site check or exceptional-opening guarantee.",
           "previous_retrieval": "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
           "label": "Official park information",
           "retrieval_history": [
             "Official-source content reviewed on 20 September 2026. Web retrieval may use indexed official content; this does not promise live ticket availability or exceptional same-day opening.",
             "Official Visit Exeter park-page body reviewed on 21 September 2026; free outdoor park, address, family facilities and 2026 visiting period confirmed. Daily gate times are not published.",
             "Official Visit Exeter park-page body reviewed through the web tool on 22 September 2026; crawler timestamp was today. Free admission, outdoor family facilities, address and 2026 visiting period matched; daily gate times remain unpublished.",
-            "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed."
+            "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
+            "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed."
           ]
         },
         {
@@ -770,31 +780,34 @@
         {
           "url": "https://engage.exeter.gov.uk/heavitree-play-area",
           "supports": "Council consultation describes planned play-area and water-play improvements; it does not establish closure dates.",
-          "retrieval": "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
+          "retrieval": "Official-source body reviewed through the web tool on 5 November 2026 (Europe/London, GMT). Address, general visiting/entry basis, family guidance, access and any published hours or improvement notices compared. The library pages were indexed six days earlier; the park listing one day earlier and council consultation today. No on-site check or exceptional-opening guarantee.",
           "previous_retrieval": "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
           "label": "Play-area improvement notices",
           "retrieval_history": [
             "Official-source content reviewed on 20 September 2026. Web retrieval may use indexed official content; this does not promise live ticket availability or exceptional same-day opening.",
             "Official council consultation-page body reviewed on 21 September 2026; planned play and water-play improvements and concluded consultation confirmed. No closure dates are established.",
             "Official council consultation-page body reviewed through the web tool on 22 September 2026; crawler timestamp was today. Planned play and water-play improvements matched; the notice does not establish current closure dates.",
-            "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed."
+            "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
+            "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed."
           ]
         }
       ],
-      "verified_at": "2026-10-07",
+      "verified_at": "2026-11-05",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 128,
         "event_rows": [],
-        "reconciliation_note": "Official claims reviewed on 23 September 2026 and matched to fresh published master/events CSVs. RAMM and Powderham description corrections were read back natively with surrounding cells, formatting and validation preserved; all other selected bindings remain unchanged. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed.",
-        "checked_at": "2026-10-07T07:08:34+01:00"
+        "reconciliation_note": "5 November: exact-name/region candidate and existing binding compared with the complete published master/events CSV after the source-body review. Existing master facts and fingerprint match. No cell correction or new event is required; no fresh native read or edit claimed.",
+        "checked_at": "2026-10-07T07:08:34+01:00",
+        "published_csv_checked": true,
+        "published_csv_checked_at": "2026-11-05T07:03:01+00:00"
       },
       "limitations": [
         "Seasonal paddling-pool wording does not confirm operation on a particular day; no current pool-opening claim is made.",
         "Daily access hours and availability of individual facilities remain unconfirmed.",
         "The tennis operator lists a different postcode for its courts (EX1 3DS); the park address follows the official city tourism listing."
       ],
-      "previous_verified_at": "2026-09-23",
+      "previous_verified_at": "2026-10-07",
       "review_status": "verified",
       "sheet_bindings": [
         {
@@ -803,6 +816,9 @@
           "region": "Devon",
           "fingerprint": "5112aedfb187c2d0b90f79a1e4d5bcf54f0ce584cec9dbf74c973bdc617f1686"
         }
+      ],
+      "review_notes": [
+        "5 November: source bodies rechecked before the 30-day ordinary-place evidence limit. Existing public facts and unresolved age/booking or gate-time qualifications remain unchanged. Matching exact-name/region master row and source URL confirmed in the complete published master/events CSV; fingerprint unchanged. No native Sheet edit or fresh native read is claimed."
       ],
       "city": "Exeter",
       "notes": [
