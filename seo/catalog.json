@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-11-05",
+  "source_verified_at": "2026-11-06",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -3878,6 +3878,79 @@
       ],
       "free_basis": "Free, as part of the Being Human Festival programme.",
       "indoor_basis": "Organiser places the activity in an indoor venue."
+    },
+    {
+      "id": "cullompton-farmers-market-2026-11-14",
+      "name": "Cullompton Farmers’ Market",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Cullompton",
+      "address": "High Street, Cullompton, Devon EX15 1AA",
+      "description": "Browse food and crafts from local producers. The 14 November listing includes live entertainment and a children’s book launch.",
+      "age_text": "A local children’s author is listed. Numerical age guidance TBC.",
+      "price_text": "Visitor admission TBC. Food, books and other purchases cost extra.",
+      "price_type": "unknown",
+      "booking_text": "Visitor booking requirements TBC.",
+      "schedule_text": "Saturday 14 November 2026, 9.30am–12.30pm.",
+      "occurrences": [
+        {
+          "start": "2026-11-14",
+          "end": "2026-11-14",
+          "weekday": "Saturday",
+          "start_time": "09:30",
+          "end_time": "12:30"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "market",
+        "local food",
+        "weekend"
+      ],
+      "practical_notes": [
+        "Visit Mid Devon lists the market on High Street. Exact stall positions, parking arrangements and charges are TBC."
+      ],
+      "sources": [
+        {
+          "url": "https://www.cullomptonfarmersmarket.com/",
+          "label": "Market organiser",
+          "supports": "The organiser lists the market on the second Saturday, usually 9.30am–12.30pm, with food from local producers.",
+          "retrieval": "Official organiser page body reviewed on 6 November 2026 (Europe/London, GMT); web response crawled the previous day. Admission, numerical ages, visitor booking and exact stall positions are not stated."
+        },
+        {
+          "url": "https://visitmiddevon.co.uk/event/cullompton-farmers-market/",
+          "label": "Dated Visit Mid Devon listing",
+          "supports": "The district council’s tourism listing and calendar timestamps give 14 November 2026, 9.30am–12.30pm GMT, on High Street in Cullompton EX15 1AA. Its programme mentions local food and crafts, a children’s author launching books, and live entertainment.",
+          "retrieval": "The dated page returned HTTP 200 via direct retrieval on 6 November 2026 (Europe/London, GMT). The page body and date/time markup were checked; availability, individual stall positions and fees were not confirmed."
+        }
+      ],
+      "verified_at": "2026-11-06",
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "published_csv_checked": true,
+        "row_id": 248,
+        "event_rows": [
+          490
+        ],
+        "checked_at": "2026-11-06T07:05:49.790Z",
+        "published_csv_checked_at": "2026-11-06T07:05:49+00:00",
+        "reconciliation_note": "Existing master I248, L248 and N248 updated with the corroborated 14 November schedule, venue and programme. Existing events A490 retained its date and gained a source note. Native values, cell metadata and full published CSV were checked. Only the three master CSV fields changed; the events CSV is byte-identical."
+      },
+      "sheet_bindings": [
+        {
+          "candidate_id": "e1f046c3dacfa723c3c7c2c2",
+          "name": "Cullompton Farmers’ Market",
+          "region": "Devon",
+          "fingerprint": "0096e0ab0e3120c22e44b154e21ed2bd0626b801156d9865eda416c21be13b32"
+        }
+      ],
+      "limitations": [
+        "Visitor admission, ages, booking, parking and precise stall positions are not stated in the checked official listings."
+      ],
+      "city": "",
+      "notes": [
+        "Visit Mid Devon lists the market on High Street. Exact stall positions, parking arrangements and charges are TBC."
+      ]
     }
   ]
 }
