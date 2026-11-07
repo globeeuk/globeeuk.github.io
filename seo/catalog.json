@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-11-06",
+  "source_verified_at": "2026-11-07",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -3800,18 +3800,18 @@
       "price_text": "Free, as part of the Being Human Festival programme.",
       "price_type": "free",
       "booking_text": "The festival lists no booking requirement.",
-      "schedule_text": "Sunday 8 November 2026, start TBC, ends 2pm.",
+      "schedule_text": "Sunday 8 November 2026, from 10am; finish time TBC.",
       "occurrences": [
         {
           "start": "2026-11-08",
           "end": "2026-11-08",
           "weekday": "Sunday",
-          "start_time": null,
-          "end_time": "14:00"
+          "start_time": "10:00",
+          "end_time": null
         }
       ],
       "practical_notes": [
-        "Start time TBC. Trinity Centre lists noon–2pm and the festival lists 10am–2pm. Check the venue’s latest time before setting off."
+        "Finish time TBC: Trinity Centre lists noon and Being Human Festival lists 2pm. Check the finish time if planning a late arrival."
       ],
       "name": "Hide & Seek – Trinity Centre",
       "kind": "event",
@@ -3819,8 +3819,8 @@
       "city": "Bristol",
       "address": "Trinity Centre, Trinity Road, Bristol BS2 0NW",
       "indoor": true,
-      "verified_at": "2026-11-04",
-      "review_status": "verified",
+      "verified_at": "2026-11-07",
+      "review_status": "verified_with_explicit_limitations",
       "rainy_day": {
         "suitable": true,
         "basis": "Organiser places the activity in an indoor venue.",
@@ -3836,19 +3836,28 @@
           "url": "https://www.beinghumanfestival.org/events/hide-seek",
           "label": "Being Human Festival event details",
           "supports": "8 November 2026 at Trinity Community Arts, 10am–2pm, no booking, families and children aged 5+.",
-          "retrieval": "Official page body reviewed on 4 November 2026 (Europe/London)."
+          "retrieval": "Official page body reviewed on 7 November 2026 (Europe/London). No capacity or exceptional access guarantee.",
+          "retrieval_history": [
+            "Official page body reviewed on 4 November 2026 (Europe/London)."
+          ]
         },
         {
           "url": "https://www.trinitybristol.org.uk/whats-on/2026/hide-and-seek",
           "label": "Trinity Centre venue listing",
-          "supports": "The venue agrees on 8 November, family ages 5+ and a 2pm end. Its start time is noon, conflicting with the festival’s 10am listing.",
-          "retrieval": "Official page body reviewed on 4 November 2026 (Europe/London)."
+          "supports": "The updated venue listing gives Sunday 8 November, 10am–noon and families with children aged 5+. The festival lists the same start and a 2pm finish.",
+          "retrieval": "Official page body reviewed on 7 November 2026 (Europe/London). No capacity or exceptional access guarantee. Direct HTTP 200 and structured start/end times also checked.",
+          "retrieval_history": [
+            "Official page body reviewed on 4 November 2026 (Europe/London)."
+          ]
         },
         {
           "url": "https://www.beinghumanfestival.org/",
           "label": "Festival programme and admission",
           "supports": "The 5–14 November 2026 programme offers free events.",
-          "retrieval": "Official page body reviewed on 4 November 2026 (Europe/London)."
+          "retrieval": "Official page body reviewed on 7 November 2026 (Europe/London). No capacity or exceptional access guarantee.",
+          "retrieval_history": [
+            "Official page body reviewed on 4 November 2026 (Europe/London)."
+          ]
         }
       ],
       "sheet_match": {
@@ -3858,23 +3867,28 @@
           628
         ],
         "published_csv_checked": true,
-        "checked_at": "2026-11-04T07:03:52.313Z",
-        "published_csv_checked_at": "2026-11-04T07:05:47+00:00",
-        "reconciliation_note": "The two native ranges were read back and matched against the complete public CSV exports."
+        "checked_at": "2026-11-07T07:07:13.546299+00:00",
+        "published_csv_checked_at": "2026-11-07T07:06:38+00:00",
+        "reconciliation_note": "Master I328/N328 and event date-cell note A628 were read back from native Sheet; exact master/event values compared against the complete published CSVs. The existing dated event, formats and other values were preserved."
       },
       "sheet_bindings": [
         {
           "candidate_id": "8821935e5f16925af965d95b",
           "name": "Hide & Seek – Trinity Centre",
           "region": "Bristol",
-          "fingerprint": "7e387cf090d659941c859f0ac16282cf733c4018af64580ff151b9de82d91e4b"
+          "fingerprint": "acffd1b2e6d81ecec38eb9c5a74f3b9320b8d8a14ae8626d0bae033f0b56ea3c"
         }
       ],
       "limitations": [
-        "Current capacity and exceptional access arrangements are TBC."
+        "Current capacity and exceptional access arrangements are TBC.",
+        "Finish time is unconfirmed because the venue and festival disagree."
+      ],
+      "previous_verified_at": "2026-11-04",
+      "review_notes": [
+        "The venue changed its listing from noon–2pm to 10am–noon. Both sources now agree on the start; they disagree on the finish, which is left TBC."
       ],
       "notes": [
-        "Start time TBC. Trinity Centre lists noon–2pm and the festival lists 10am–2pm. Check the venue’s latest time before setting off."
+        "Finish time TBC: Trinity Centre lists noon and Being Human Festival lists 2pm. Check the finish time if planning a late arrival."
       ],
       "free_basis": "Free, as part of the Being Human Festival programme.",
       "indoor_basis": "Organiser places the activity in an indoor venue."
