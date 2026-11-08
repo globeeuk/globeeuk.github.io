@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-11-07",
+  "source_verified_at": "2026-11-08",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -2991,18 +2991,25 @@
         {
           "url": "https://rammuseum.org.uk/whats-on/bayeux-around-britain-digital-trail/",
           "supports": "Free twelve-stop gallery trail, about one hour, 15 September 2026–11 July 2027. Weekend museum opening 10am–5pm. Numeric age guidance and booking rule not stated.",
-          "retrieval": "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit.",
+          "retrieval": "Official provider page body reviewed on 8 November 2026 (Europe/London) for the active date(s) only.",
           "retrieval_history": [
             "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit.",
             "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
-            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout."
+            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+            "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit."
           ]
+        },
+        {
+          "url": "https://rammuseum.org.uk/visit/",
+          "label": "RAMM opening times and access",
+          "supports": "Weekend gallery opening is 10am to 5pm. Museum entry is free.",
+          "retrieval": "Official RAMM visitor page body reviewed on 8 November 2026 (Europe/London)."
         }
       ],
       "limitations": [
         "Device requirements and numerical age suitability remain TBC."
       ],
-      "verified_at": "2026-11-02",
+      "verified_at": "2026-11-08",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -3026,12 +3033,13 @@
         ],
         "published_csv_checked": true
       },
-      "previous_verified_at": "2026-10-28",
+      "previous_verified_at": "2026-11-02",
       "review_notes": [
         "26 October: confirmed ongoing trail period and weekend hours support 7–8 November presentation dates within existing events row514; no Sheet change.",
         "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity.",
         "2 November: relevant current and next-weekend official sources rechecked and exact native records reconciled; fees, numerical ages and booking conditions not stated by the organiser remain TBC. Historical occurrences retained.",
-        "14–15 November presentation dates are within the existing 15 September–11 July native event and published museum weekend opening, not a new workshop or new Sheet event."
+        "14–15 November presentation dates are within the existing 15 September–11 July native event and published museum weekend opening, not a new workshop or new Sheet event.",
+        "8 November: the official programme still gives a free twelve-stop digital trail through 11 July 2027. The RAMM visitor page confirms Saturday and Sunday gallery hours of 10:00–17:00. Rechecked 8 and 14–15 November only."
       ],
       "notes": [
         "This is a self-guided ongoing trail, not a timed workshop.",
@@ -3335,44 +3343,50 @@
           "url": "https://www.tobaccofactory.com/sunday-market",
           "label": "Current official market guide",
           "supports": "Confirms family visits, local food/crafts/produce and Raleigh Road, Bristol BS3 1TF. General weekly hours are 10am–2.30pm, conflicting with the dated event pages. Visitor admission, numerical ages and visitor booking rules are not stated.",
-          "retrieval": "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit.",
+          "retrieval": "Official provider page body reviewed on 8 November 2026 (Europe/London) for the active date(s) only.",
           "retrieval_history": [
             "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today.",
-            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout."
+            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+            "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit."
           ]
         },
         {
           "url": "https://www.tobaccofactory.com/whats-on?category=Market",
           "label": "Official 2026 market calendar",
           "supports": "Individually lists Sunday 8 and 15 November 2026, from 10am; calendar summary ends at 2.30pm. The dated event detail pages give 2pm instead. Closing time remains unresolved.",
-          "retrieval": "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit.",
+          "retrieval": "Official provider page body reviewed on 8 November 2026 (Europe/London) for the active date(s) only.",
           "retrieval_history": [
             "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today.",
-            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout."
+            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+            "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit."
           ]
         },
         {
           "url": "https://www.tobaccofactory.com/whats-on/sunday-market/08/11/26",
           "label": "Official 8 November listing",
           "supports": "Confirms 8 November 2026 and a 10am start; detail page says 2pm end, conflicting with the 2.30pm calendar/general guide.",
-          "retrieval": "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit.",
+          "retrieval": "Official provider page body reviewed on 8 November 2026 (Europe/London) for the active date(s) only.",
           "retrieval_history": [
             "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today.",
-            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout."
+            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+            "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit."
           ]
         },
         {
           "url": "https://www.tobaccofactory.com/whats-on/sunday-market/15/12/26",
           "label": "Official 15 November listing",
           "supports": "Linked from the official 15 November calendar entry. Heading/body explicitly say 15 November 2026, 10am–2pm, despite the URL containing 12. General guide/calendar say 2.30pm, so closing remains TBC. Family food/craft market at Raleigh Road BS3 1TF. Visitor admission, numerical ages and visitor booking rules unstated; pitch booking is for stallholders.",
-          "retrieval": "Official linked body reviewed on 2 November 2026 (GMT). The /15/11/26 guessed route did not resolve; use the actual organiser link and body date, not an inferred December occurrence. No transaction or live capacity check."
+          "retrieval": "Official provider page body reviewed on 8 November 2026 (Europe/London) for the active date(s) only.",
+          "retrieval_history": [
+            "Official linked body reviewed on 2 November 2026 (GMT). The /15/11/26 guessed route did not resolve; use the actual organiser link and body date, not an inferred December occurrence. No transaction or live capacity check."
+          ]
         }
       ],
       "limitations": [
         "Unstated prices, numerical ages, entry/access rules and exceptional changes remain TBC.",
         "Official closing times conflict: 2pm on dated pages versus 2.30pm on the calendar/general guide. No closing time is confirmed."
       ],
-      "verified_at": "2026-11-02",
+      "verified_at": "2026-11-08",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -3422,10 +3436,11 @@
         }
       ],
       "previous_schedule_text": "Sundays, 10am–2.30pm. 1 and 8 November 2026 follow the published weekly schedule, not separate dated confirmations.",
-      "previous_verified_at": "2026-10-28",
+      "previous_verified_at": "2026-11-02",
       "review_notes": [
         "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity.",
-        "2 November: relevant current and next-weekend official sources rechecked and exact native records reconciled; fees, numerical ages and booking conditions not stated by the organiser remain TBC. Historical occurrences retained."
+        "2 November: relevant current and next-weekend official sources rechecked and exact native records reconciled; fees, numerical ages and booking conditions not stated by the organiser remain TBC. Historical occurrences retained.",
+        "8 November: verified the 8 and 15 November dated listings and the official calendar and market guide. The 2pm versus 2.30pm closing discrepancy remains. Past occurrences remain historical."
       ],
       "schedule_history": [
         "Sunday 1 and 8 November 2026, from 10am. Closing time TBC: dated event pages say 2pm, but the calendar and general market guide say 2.30pm; confirm before travelling."
@@ -3491,17 +3506,18 @@
         {
           "url": "https://www.wrmcic.co.uk/home",
           "supports": "Organiser lists every Saturday, 08:30–13:00, at Whiteladies/Apsley Road BS8 2ST, with local food and some crafts/plants. Selected dates follow that rule. Admission, age and visitor booking conditions are unstated.",
-          "retrieval": "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit.",
+          "retrieval": "Official provider page body reviewed on 8 November 2026 (Europe/London) for the active date(s) only.",
           "retrieval_history": [
             "Official organiser page body reviewed on 26 October 2026 (GMT). No booking transaction, live-availability guarantee or visit.",
-            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout."
+            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
+            "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit."
           ]
         }
       ],
       "limitations": [
         "Unstated prices, numerical ages, entry/access rules and exceptional changes remain TBC."
       ],
-      "verified_at": "2026-11-02",
+      "verified_at": "2026-11-08",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -3527,10 +3543,11 @@
         ],
         "checked_at": "2026-11-02T07:34:31.121850+00:00"
       },
-      "previous_verified_at": "2026-10-28",
+      "previous_verified_at": "2026-11-02",
       "review_notes": [
         "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity.",
-        "2 November: relevant current and next-weekend official sources rechecked and exact native records reconciled; fees, numerical ages and booking conditions not stated by the organiser remain TBC. Historical occurrences retained."
+        "2 November: relevant current and next-weekend official sources rechecked and exact native records reconciled; fees, numerical ages and booking conditions not stated by the organiser remain TBC. Historical occurrences retained.",
+        "8 November: official market page confirms the regular Saturday 08:30–13:00 schedule at Whiteladies Road and Apsley Road. The 14 November listing follows that schedule. Admission, booking and numerical ages remain TBC."
       ],
       "schedule_history": [
         "Saturdays, 8.30am–1pm. 31 October and 7 November 2026 follow the published weekly schedule, not separate dated confirmations."
@@ -3964,6 +3981,88 @@
       "city": "",
       "notes": [
         "Visit Mid Devon lists the market on High Street. Exact stall positions, parking arrangements and charges are TBC."
+      ]
+    },
+    {
+      "id": "pikachu-art-adventure-killerton-2026",
+      "name": "The Pikachu Art Adventure at Killerton",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Killerton, Broadclyst",
+      "address": "Killerton, Broadclyst, Exeter, Devon EX5 3LE",
+      "description": "Find illustrated Pikachu cards on a self-guided outdoor trail and try designing your own trading card.",
+      "age_text": "The National Trust lists the trail as suitable for children of all ages.",
+      "price_type": "paid",
+      "price_text": "Included with Killerton admission. Standard entry without Gift Aid: adult £11, age 5–17 £5.50, under 5s free, family £27.50 (2 adults and up to 3 children) or £16.50 (1 adult and up to 3 children).",
+      "booking_text": "No advance booking. Start at Visitor Reception.",
+      "schedule_text": "Sunday 8 November 2026 from 10am. Plan around the garden closing at 4.30pm. The trail listing runs until 5pm.",
+      "occurrences": [
+        {
+          "start": "2026-11-08",
+          "end": "2026-11-08",
+          "weekday": "Sunday",
+          "start_time": "10:00",
+          "end_time": "16:30"
+        }
+      ],
+      "indoor": false,
+      "rainy_day": {
+        "suitable": false,
+        "basis": "The trail takes place outdoors, with some gravel paths and steep inclines.",
+        "classification": "Outdoor trail"
+      },
+      "tags": [
+        "weekend",
+        "family",
+        "creative",
+        "outdoor"
+      ],
+      "practical_notes": [
+        "The trail is listed from 10am to 5pm. On 8 November the garden closes at 4.30pm and the house and chapel are closed. Last admission and access to the full trail are TBC.",
+        "Non-member parking: £2.60 for up to two hours or £5.20 all day."
+      ],
+      "sources": [
+        {
+          "url": "https://www.nationaltrust.org.uk/visit/devon/killerton/events/56b06f53-d703-45ce-a90d-ddd91b8e785d",
+          "label": "National Trust trail details",
+          "supports": "Lists Sunday 8 November 2026 10:00–17:00, outdoor route starting at Visitor Reception, no extra fee with normal admission, no booking and all ages. The provider calendar lists remaining dates up to 13 November.",
+          "retrieval": "National Trust page body reviewed on 8 November 2026 (Europe/London)."
+        },
+        {
+          "url": "https://www.nationaltrust.org.uk/visit/devon/killerton",
+          "label": "Killerton opening times, admission and parking",
+          "supports": "Date-specific 8 November opening times list the garden 10:00–16:30 and the house and chapel closed. 2026 standard rates without Gift Aid and non-member parking tariffs support the figures quoted.",
+          "retrieval": "National Trust page body reviewed on 8 November 2026 (Europe/London)."
+        }
+      ],
+      "verified_at": "2026-11-08",
+      "review_status": "verified_with_explicit_limitations",
+      "limitations": [
+        "Trail listing and garden closing differ. The displayed window is capped at the garden closing time for the 8 November occurrence. Last admission and whether every artwork is accessible are TBC."
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "fe754cf211057f43382a6e15",
+          "name": "The Pikachu Art Adventure at Killerton",
+          "region": "Devon",
+          "fingerprint": "43b8632b5e05c0b10b30a5918588353327f959c4218faf9f4189e3a01e4e0cbf"
+        }
+      ],
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "published_csv_checked": true,
+        "row_id": 326,
+        "event_rows": [
+          626
+        ],
+        "published_csv_checked_at": "2026-11-08T08:17:43+00:00",
+        "checked_at": "2026-11-08T08:17:43.166058+00:00",
+        "reconciliation_note": "Read back native master E326, H326 and N326 and events E626 and date-cell note A626. Compared both complete published CSVs. Existing date range, row identity, formats and other values were retained."
+      },
+      "city": "",
+      "notes": [
+        "The trail is listed from 10am to 5pm. On 8 November the garden closes at 4.30pm and the house and chapel are closed. Last admission and access to the full trail are TBC.",
+        "Non-member parking: £2.60 for up to two hours or £5.20 all day."
       ]
     }
   ]
