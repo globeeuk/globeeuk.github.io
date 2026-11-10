@@ -82,7 +82,24 @@
 .weekend-newsletter h2{font:700 clamp(27px,4vw,47px)/1.02 Georgia,serif;letter-spacing:-.03em;margin:0 0 .45rem}
 .weekend-newsletter p{margin:0 0 .45rem;line-height:1.4}
 .weekend-newsletter .weekend-newsletter-kicker,.weekend-issue-date{font-size:.7rem;font-weight:800;letter-spacing:.11em;color:#80382d}
-.weekend-newsletter .weekend-newsletter-status{font-size:.8rem;margin:.35rem 0 0}
+.weekend-signup{grid-column:1/-1;min-width:0}
+.weekend-signup summary{
+  width:fit-content;
+  padding:.65rem .9rem;
+  border-radius:999px;
+  background:#243852;
+  color:#fffaf1;
+  cursor:pointer;
+  font-weight:750;
+}
+.weekend-signup summary:focus-visible{outline:2px solid #243852;outline-offset:3px}
+.weekend-signup-panel{padding-top:.75rem;font-size:.88rem}
+.weekend-signup-panel a{text-decoration:underline;text-underline-offset:.15em}
+.weekend-signup-frame{display:block;width:100%;height:715px;border:0;margin-top:.65rem;background:#fffaf1;border-radius:6px}
+.notebook-home:has(.weekend-newsletter:not([hidden]) .weekend-signup[open]) #view-toggle{display:none}
+@media(max-width:720px){.weekend-signup-frame{height:850px}}
+@media(max-width:420px){.weekend-signup-frame{height:940px}}
+@media(max-width:360px){.weekend-signup-frame{height:1040px}}
 .weekend-newsletter-art{display:block;width:100%;height:auto;border-radius:4px}
 .weekend-issue{margin-top:.7rem}
 .weekend-issue summary{
