@@ -374,7 +374,14 @@ function openMenu(menu){
   $('#filter-title').textContent=titles[menu];
   let html='';
   if(menu==='search')html=`<label for="search-input" class="filter-help">${isPlansPage?'Search events, activities and holiday clubs.':'Search places, activities or a little treat.'}</label><input id="search-input" class="search-field" type="search" name="query" value="${escapeHTML(state.query)}" placeholder="${isPlansPage?'Music, sport, holiday camps…':'Museum, coffee, ice cream…'}" autocomplete="off"><p class="search-examples">${isPlansPage?'Search the full event and club list.':'Try RAMM, art or gelato.'}<br>Search stays within your selected region.</p>`;
-  if(menu==='region')html=`<p class="filter-help">Choose a local area to explore.</p><div class="filter-options">${option('Exeter','Exeter · Devon','Exeter and across Devon',state.region==='Exeter')}${option('Bristol','Bristol','Bristol family events and days out',state.region==='Bristol')}${option('Nottingham','Nottingham','Nottingham & nearby places',state.region==='Nottingham')}</div>`;
+  if(menu==='region'){
+    const choices=[
+      option('Exeter','Exeter · Devon','Exeter and across Devon',state.region==='Exeter'),
+      option('Bristol','Bristol','Bristol family events and days out',state.region==='Bristol')
+    ];
+    if(!isNotebookHome||state.region!=='Exeter')choices.push(option('Nottingham','Nottingham','Nottingham & nearby places',state.region==='Nottingham'));
+    html=`<p class="filter-help">Choose a local area to explore.</p><div class="filter-options">${choices.join('')}</div>`;
+  }
   if(menu==='age')html=`<p class="filter-help">Choose one or more ages. We’ll show places suitable for at least one selected age. Places with unconfirmed ages are left out.</p><div class="filter-options age-options">${ageBands.map(b=>option(b.id,b.label+' years','',state.age.includes(b.id),'checkbox','ages')).join('')}</div>`;
   if(menu==='price')html=`<p class="filter-help">Paid includes tickets and food or drink purchases. Conditional offers are explained on the place card.</p><div class="filter-options">${option('all','Any price','',state.price==='all')}${option('free','Free','No entry fee for the activity shown',state.price==='free')}${option('paid','Paid','Tickets, food or drink',state.price==='paid')}</div>`;
   if(menu==='type')html=`<div class="filter-options">${availableTypes.filter(([id])=>id!=='fossil'||state.region==='Exeter').map(([id,title])=>option(id,title,id==='activity'?'Includes arts, outdoor activities and holiday clubs':id==='market'?'Farmers’ markets, produce and food & makers markets':id==='fossil'?'Jurassic Coast day trips from Exeter · Devon':'',state.type===id)).join('')}</div>`;
