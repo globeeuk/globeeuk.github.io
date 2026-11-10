@@ -29,7 +29,9 @@
   <script defer src="discovery-model.js?v=christmas-markets-20261110"></script>
   <script defer src="fossil-map.js?v=2"></script>
   <script defer src="notebook.js?v=notebook1-region1-notes1-cost1"></script>
-  <script defer src="app.js?v=christmas-markets-20261110"></script>
+  <script defer src="nearby-data.js?v=20261110"></script>
+  <script defer src="nearby.js?v=20261110"></script>
+  <script defer src="app.js?v=home-edits-20261110"></script>
   <script defer src="db-loader.js?v=simple1"></script>
   <script defer src="basic-analytics.js?v=basic2"></script>
 <script defer src="analytics.js?v=music-banner-click1"></script>
@@ -37,6 +39,7 @@
   <link rel="stylesheet" href="instagram-shortcut.css?v=2">
   <link rel="stylesheet" href="notebook.css?v=notebook1-region1-notes1">
   <link rel="stylesheet" href="/christmas-print.css?v=20261110-1">
+  <link rel="stylesheet" href="/home-edits.css?v=20261110">
 </head>
 <body class="notebook-page notebook-home" data-notebook-section="days">
   <header class="site-header">
@@ -65,6 +68,33 @@
         <label class="notebook-search"><span data-icon="search" aria-hidden="true"></span><input id="notebook-home-query" type="search" name="q" aria-label="Search local places and activities" placeholder="Search places &amp; activities"></label>
         <button type="button" class="notebook-filter-toggle" data-notebook-filter-toggle aria-expanded="false" aria-controls="notebook-filter-controls">☷ Filter</button>
       </form>
+      <div class="nearby-search" id="nearby-search" hidden>
+        <div class="nearby-controls">
+          <button class="nearby-toggle" type="button" id="nearby-toggle" aria-expanded="false" aria-controls="nearby-panel">
+            <span data-icon="pin" aria-hidden="true"></span><span>Nearby <strong id="nearby-origin-label">Choose a town or postcode</strong></span>
+          </button>
+          <div class="nearby-distance" id="nearby-distance" role="group" aria-label="Distance" hidden>
+            <button type="button" data-nearby-miles="0" aria-pressed="true">Closest first</button>
+            <button type="button" data-nearby-miles="5" aria-pressed="false">Within 5 miles</button>
+            <button type="button" data-nearby-miles="10" aria-pressed="false">Within 10 miles</button>
+          </div>
+          <button class="nearby-clear" type="button" id="nearby-clear" hidden>Clear location</button>
+        </div>
+        <div class="nearby-panel" id="nearby-panel" hidden>
+          <p id="nearby-hint">Enter the first part of your postcode (e.g. EX3) or choose a town.</p>
+          <div class="nearby-fields">
+            <form id="nearby-postcode-form">
+              <label for="nearby-postcode">Postcode district</label>
+              <div><input id="nearby-postcode" type="text" placeholder="EX3" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="9" aria-describedby="nearby-hint"><button type="submit">Show nearby</button></div>
+            </form>
+            <div class="nearby-town-field"><label for="nearby-town">Town</label><select id="nearby-town"><option value="">Choose a town</option></select></div>
+          </div>
+          <button type="button" id="nearby-device" class="nearby-device">Use my location</button>
+          <p class="nearby-note">Globee uses your postcode or location for this search only and does not save it. Distances are approximate and measured in a straight line.</p>
+          <p class="nearby-credit"><a href="https://postcodes.io/docs/licences/">Postcode and town data</a> · Contains OS and National Statistics data © Crown copyright and database right 2025, and Royal Mail data © Royal Mail copyright and database right 2025.</p>
+          <p class="nearby-message" id="nearby-message" role="status"></p>
+        </div>
+      </div>
     </div>
     <nav class="filterbar" id="notebook-filter-controls" hidden aria-label="Filter places">
       <button class="filter-control date-control" data-menu="dates" aria-expanded="false"><span data-icon="calendar" class="filter-leading"></span><span id="dates-label">Dates</span><span data-icon="chevron"></span></button>
@@ -87,6 +117,28 @@
       </a>
       <a class="entry-card entry-card-ice" id="scoop-promo-link" href="ice-cream.html?from=Devon" hidden><span class="entry-kicker">Explore by map · Devon &amp; Bristol</span><span class="entry-symbol" aria-hidden="true">✳</span><h2>Ice cream map</h2><p>Find a little treat near your next family outing.</p><span class="entry-action">Open the map <span aria-hidden="true">↗</span></span></a>
     </nav>
+    <section class="content-width weekend-newsletter" id="weekend-newsletter" aria-labelledby="weekend-newsletter-title" hidden>
+      <div class="weekend-newsletter-inner">
+        <div class="weekend-newsletter-copy">
+          <p class="weekend-newsletter-kicker">THE GLOBEE NEWSLETTER · EXETER &amp; DEVON</p>
+          <h2 id="weekend-newsletter-title">Get the Weekend Edit</h2>
+          <p>Two local family plans and one thing to book ahead, in one free weekly email.</p>
+          <details class="weekend-issue">
+            <summary>Preview an issue</summary>
+            <div class="weekend-issue-body">
+              <p class="weekend-issue-date">SAMPLE ISSUE · 14–15 NOVEMBER 2026</p>
+              <ul>
+                <li><strong>Market morning.</strong> Explore the chalets on <a href="/exeter/year-end-family-edit/#devon-markets">Exeter Cathedral Green</a>.</li>
+                <li><strong>Meet the makers.</strong> Head to <a href="https://missivyevents.co.uk/event/bridwell-christmas-makers-festival/">Bridwell’s Christmas Makers Festival</a> in Uffculme.</li>
+                <li><strong>Booking Watch.</strong> Check tickets for <a href="/plans.html?region=Devon&amp;edit=christmas#christmas-shows-heading">Christmas shows and pantos</a> before the school holidays.</li>
+              </ul>
+            </div>
+          </details>
+          <p class="weekend-newsletter-status">Email sign-ups opening soon.</p>
+        </div>
+        <img class="weekend-newsletter-art" src="/assets/weekend-edit-explorers.jpg" width="720" height="480" alt="" loading="lazy" decoding="async">
+      </div>
+    </section>
     <div class="content-width home-secondary-links" id="instagram">
       <p class="winter-map-link" id="winter-map-link"><a class="home-shortcut" href="ice-cream.html?from=Devon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2Z"/><path d="M9 3v16M15 5v16"/></svg><span>Ice cream map</span><span aria-hidden="true">↗</span></a></p>
     </div>
