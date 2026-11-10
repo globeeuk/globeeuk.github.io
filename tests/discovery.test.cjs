@@ -106,7 +106,7 @@ test('October half-term rail is rendered before Christmas book-ahead on the home
  assert(!home.includes('id="exeter-music-feature"'));
  assert(!home.includes('src="music-feature.js'));
 });
-test('30 October Christmas switch uses one handprint banner and a combined tree-and-events edit',()=>{
+test('30 October Christmas switch uses one banner and a grouped seasonal edit',()=>{
  const exeter=items.filter(p=>p.region==='Exeter');
  const christmas=model.seasonalPlaces(exeter,'2026-10-30','christmas');
  assert(christmas.some(p=>p.name==='Cotley Farm Christmas'));
@@ -115,7 +115,7 @@ test('30 October Christmas switch uses one handprint banner and a combined tree-
  assert.equal(model.seasonalDefinition('christmas','2026-10-29'),null);
  const home=fs.readFileSync(path.join(__dirname,'..','index.html'),'utf8');
  assert(home.includes('id="christmas-entry"'));
- assert(home.includes('child-handprint-christmas-tree-2026.jpg'));
+ assert(home.includes('christmas-banner-2026.webp'));
  assert(!home.includes('id="christmas-tree-entry"'));
  const app=fs.readFileSync(path.join(__dirname,'..','app.js'),'utf8');
  assert(app.includes("state.edit==='christmas'"));
@@ -123,7 +123,8 @@ test('30 October Christmas switch uses one handprint banner and a combined tree-
  assert(app.includes("['Exe Valley Christmas Trees'"));
  assert(app.includes("['Haldon Christmas Tree Centre'"));
  assert(app.includes("['Greendale Farm Shop'"));
- assert(app.includes('Festive events &amp; shows'));
+ assert(app.includes('Shows &amp; pantos'));
+ assert(app.includes('christmas-markets-heading'));
 });
 test('Twelve-card batches reach every actual record exactly once with a partial final batch',()=>{
  for(const region of ['Exeter','Bristol','Nottingham']){const all=current.filter(p=>p.region===region),shown=[];let chunk;

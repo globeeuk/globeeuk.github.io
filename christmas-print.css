@@ -6,77 +6,81 @@
   --christmas-rule:#a79578;
   --christmas-ribbon:#254534;
   --christmas-serif:Baskerville,"Times New Roman",serif;
-  --christmas-engraving:url("/assets/christmas-newsprint-2026.webp");
 }
 
-.year-end-entry{
-  border-color:var(--christmas-rule);
-  border-left-color:var(--christmas-ribbon);
-  border-radius:0;
-  background:var(--christmas-light);
-  color:var(--christmas-ink);
+/* The seasonal masthead shares the artwork with the Devon homepage. */
+.entry-cards #christmas-entry,
+.plans-page.christmas-edition-active .plans-intro{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border:1px solid #9c5c48;
+  border-radius:10px;
+  background:linear-gradient(125deg,#4e1022,#771d33 60%,#8b233b);
+  color:#fff8e8;
 }
-.year-end-entry-copy strong{font-family:var(--christmas-serif)}
-.year-end-entry-topics,.year-end-entry-action{color:var(--christmas-ribbon)}
-
+.entry-cards #christmas-entry::after,
+.plans-page.christmas-edition-active .plans-intro::after{
+  content:"";
+  position:absolute;
+  inset:8px;
+  border:1px solid #f6ce8590;
+  border-radius:4px;
+  z-index:3;
+  pointer-events:none;
+}
 .entry-cards #christmas-entry{
-  border:1px solid var(--christmas-rule);
-  border-radius:0;
-  background:linear-gradient(112deg,var(--christmas-light),var(--christmas-paper));
-  color:var(--christmas-ink);
+  min-height:clamp(220px,20vw,280px);
+  padding:clamp(23px,3.3vw,45px);
 }
+#christmas-entry .christmas-copy{width:49%}
 #christmas-entry .christmas-edition{
   display:table;
   padding:4px 0;
-  border-block:1px solid var(--christmas-rule);
-  color:var(--christmas-ribbon);
+  border-block:1px solid #e9bd786e;
+  color:#ffe0a4;
 }
-.entry-cards #christmas-entry h2{font-family:var(--christmas-serif);font-weight:700}
-#christmas-entry .christmas-kinds{color:#45392b}
+.entry-cards #christmas-entry h2{
+  font-family:var(--christmas-serif);
+  color:#fff8e8;
+  font-weight:700;
+}
+#christmas-entry .christmas-kinds{color:#fff1d7}
 .entry-cards #christmas-entry .entry-action{
-  border-radius:0;
-  background:var(--christmas-ribbon);
-  color:var(--christmas-light);
+  border-radius:3px;
+  background:#ffdda0;
+  color:#4e1022;
 }
-#christmas-entry:hover .entry-action{background:#173627}
+#christmas-entry:hover .entry-action{background:#fff1c6}
 #christmas-entry .christmas-banner-art{
-  display:grid;
-  align-items:center;
-  border-left:4px solid var(--christmas-ribbon);
-  background:var(--christmas-paper);
+  width:48%;
+  border-left:2px solid #dfac69;
 }
-.christmas-print-motifs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
-.christmas-print-motif{
-  display:block;
-  min-width:0;
-  aspect-ratio:1.5;
-  background:var(--christmas-engraving) 50% 0 / 100% 300% no-repeat;
-  mix-blend-mode:multiply;
-}
-.christmas-print-motif+.christmas-print-motif{border-left:1px solid var(--christmas-rule)}
-.christmas-print-motif:nth-child(2){background-position:center}
-.christmas-print-motif:nth-child(3){background-position:center bottom}
-#christmas-entry .christmas-handprint-art{
-  width:clamp(48px,6.4vw,88px);
-  right:clamp(7px,1.4vw,19px);
-  bottom:clamp(7px,1.2vw,14px);
-  border-color:var(--christmas-light);
-  background:var(--christmas-light);
-  box-shadow:0 2px 7px #35291f54;
-}
-#christmas-entry .christmas-handprint-art img{filter:saturate(.38) sepia(.18)}
+#christmas-entry .christmas-banner-illustration{object-position:44% 50%}
 
-.plans-page.christmas-edition-active .plans-intro,
+.plans-page.christmas-edition-active .plans-intro{
+  display:block;
+  min-height:clamp(180px,19vw,238px);
+  padding:clamp(22px,3.4vw,42px);
+  margin-bottom:18px;
+}
+.plans-page.christmas-edition-active .plans-intro::before{
+  content:"";
+  position:absolute;
+  inset:0 0 0 auto;
+  width:44%;
+  background:#f8e0bb url("/assets/christmas-banner-2026.webp") 44% center / cover no-repeat;
+  border-left:2px solid #dfac69;
+}
+.plans-page.christmas-edition-active .plans-intro>div{position:relative;width:52%}
+.plans-page.christmas-edition-active .plans-intro .eyebrow{color:#ffe0a4}
+.plans-page.christmas-edition-active .plans-intro .plans-intro-copy{color:#fff1d7}
 .christmas-tree-paper .tree-guide-intro{
   border-block:3px double var(--christmas-rule);
   background:var(--christmas-paper);
   color:var(--christmas-ink);
 }
-.plans-page.christmas-edition-active .plans-intro{
-  padding:clamp(15px,3.4vw,30px);
-  margin-bottom:18px;
-}
-.plans-page.christmas-edition-active .plans-intro h1,
+.plans-page.christmas-edition-active .plans-intro h1{font-family:var(--christmas-serif);color:#fff8e8}
 .christmas-tree-paper .tree-guide-intro h1{
   font-family:var(--christmas-serif);
   color:var(--christmas-ink);
@@ -117,13 +121,40 @@
 .year-end-paper .art img{height:100%;object-fit:contain;transform:none}
 .year-end-paper .card,.year-end-paper .market-lead,.year-end-paper .jump a{border-radius:0}
 
+
+.christmas-jumps{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0}
+.christmas-jumps a{
+  padding:.55rem .8rem;
+  border:1px solid #d9c4a0;
+  border-radius:4px;
+  color:#502331;
+  background:#fbf1df;
+  font-weight:750;
+  text-underline-offset:.2em;
+}
+.christmas-edition-active .seasonal-results-heading h3{scroll-margin-top:6rem}
+.christmas-market-list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:1.5rem;
+  padding:0;
+  list-style:none;
+}
+.christmas-market-list li{border-bottom:1px solid #dccbb0}
+.christmas-market-list summary{padding:.75rem 0;cursor:pointer;color:#40382e}
+.christmas-market-list summary strong{color:#542333}
+.christmas-market-list summary span{display:block;font-size:.88rem;margin:.22rem 0 0 1rem}
+.christmas-market-list li p{margin:0 0 .35rem 1rem}
+.christmas-market-list li a{display:inline-flex;align-items:center;gap:.35rem;margin:0 0 .75rem 1rem;text-underline-offset:.2em}
+.christmas-market-list li a svg{width:1rem;height:1rem}
+.christmas-more{margin:1.5rem 0}
+
 @media(max-width:800px){
-  #christmas-entry .christmas-banner-art{border-left-width:3px}
-  .christmas-print-motifs{
-    width:100%;
-    height:100%;
-    background:var(--christmas-engraving) center 50% / auto 100% no-repeat;
-    mix-blend-mode:multiply;
-  }
-  .christmas-print-motif{display:none}
+  .entry-cards #christmas-entry{min-height:195px;padding:23px 18px}
+  #christmas-entry .christmas-copy,.plans-page.christmas-edition-active .plans-intro>div{width:60%}
+  #christmas-entry .christmas-banner-art,.plans-page.christmas-edition-active .plans-intro::before{width:36%}
+  .plans-page.christmas-edition-active .plans-intro h1{font-size:clamp(29px,8vw,47px)}
+}
+@media(max-width:600px){
+  .christmas-market-list{grid-template-columns:1fr}
 }

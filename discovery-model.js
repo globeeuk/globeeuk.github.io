@@ -6,7 +6,7 @@
     {id:'half-term',title:'October Half Term Edit',start:'2026-10-16',end:'2026-10-29',minPicks:1,subtitle:'Days out, shows and holiday clubs for the school break'},
     {id:'halloween',title:'Halloween plans',page:'halloween.html',start:'2026-09-13',end:'2026-10-31',home:false,minPicks:1,terms:/halloween|pumpkin|ghost|spook|trick or treat|monster|skeleton|tim burton|hocus pocus|nightmare before christmas/i,subtitle:'Halloween family plans'},
     {id:'christmas-book-ahead',title:'Christmas · book ahead',start:'2026-10-05',end:'2027-01-03',secondary:true,minPicks:1,terms:/./,subtitle:'Festive family events with booking links'},
-    {id:'christmas',title:'The Christmas Edit',start:'2026-10-30',end:'2026-12-24',minPicks:1,showWhileChecking:true,terms:/christmas|festive|santa|father christmas|pantomime|polar express|nativity/i,subtitle:'Christmas trees, festive days out and shows'},
+    {id:'christmas',title:'The Christmas Edit',start:'2026-10-30',end:'2026-12-24',minPicks:1,showWhileChecking:true,terms:/christmas|festive|santa|father christmas|pantomime|polar express|nativity|lanterns, lights & .luminations/i,subtitle:'Christmas markets, trees, days out and shows'},
     {id:'bristol',title:'The Bristol edit',page:'bristol/edit/',region:'Bristol',start:'2026-09-21',end:'2027-01-31',minPicks:1,terms:/./i,subtitle:'A growing set of checked Bristol family picks'}
   ];
   const HALF_TERM_FEATURED={

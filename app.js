@@ -185,10 +185,19 @@ function renderRails(places){
       ['Greendale Farm Shop','Near Farringdon · East Devon','2026 collection dates TBC','greendale']
     ];
     const treeGuide=showTreeSources?`<section class="seasonal-results-group" aria-labelledby="christmas-trees-heading"><div class="seasonal-results-heading"><h3 id="christmas-trees-heading">Christmas trees</h3><p>Four places to buy a real tree near Exeter. Compare cut and pot-grown choices, prices and visiting details.</p><a class="seasonal-guide-link" href="/exeter/christmas-trees/">Compare tree-buying places ${icon('arrow')}</a></div><div class="tree-source-grid" aria-label="Christmas tree buying places">${treeSources.map(([name,area,status,id])=>`<a class="tree-source-card" href="/exeter/christmas-trees/#${id}"><span class="tree-source-area">${area}</span><h4>${name}</h4><span class="tree-source-status">${status}</span><span class="tree-source-action">See buying details ${icon('arrow')}</span></a>`).join('')}</div></section>`:'';
-    const events=showTreeSources?places.filter(p=>p.name!=='Cotley Farm Christmas'):places;
-    const eventGroup=events.length?`<section class="seasonal-results-group" aria-labelledby="christmas-events-heading"><div class="seasonal-results-heading"><h3 id="christmas-events-heading">Festive events &amp; shows</h3><p>${events.length} ${events.length===1?'plan':'plans'} with published dates and organiser links. Check availability before booking.</p></div><div class="plans-grid" aria-label="Festive events and shows">${events.map(card).join('')}</div></section>`:'';
-    const familyGuide=showTreeSources?'<section class="seasonal-results-group" aria-labelledby="year-end-family-edit-heading"><div class="seasonal-results-heading"><h3 id="year-end-family-edit-heading">The Year-End Family Edit</h3><p>Exeter &amp; Devon · Shop for kids, compare real trees and plan reindeer visits, Santa stops and Christmas markets.</p><a class="seasonal-guide-link" href="/exeter/year-end-family-edit/">Read the Devon family guide '+icon('arrow')+'</a></div></section>':'';
-    $('#discovery-rails').innerHTML=familyGuide+treeGuide+eventGroup;
+    const markets=state.region==='Exeter'?places.filter(p=>p.type==='market'||/christmas markets?|christmas makers fayre|dickensian christmas evening/i.test(p.name)):[];
+    const marketSet=new Set(markets.map(p=>p.id));
+    const marketList=markets.map(p=>`<li><details><summary><strong>${escapeHTML(p.name)}</strong><span>${escapeHTML(p.scheduleText)}</span><span>${escapeHTML(p.address)} · ${escapeHTML(p.priceLabel)}</span></summary><p>${escapeHTML(p.description)}</p>${p.source?`<a href="${escapeHTML(p.source)}">Official details ${icon('external')}</a>`:''}</details></li>`).join('');
+    const marketGuide=state.region==='Exeter'&&(markets.length||showTreeSources)?`<section class="seasonal-results-group" aria-labelledby="christmas-markets-heading"><div class="seasonal-results-heading"><h3 id="christmas-markets-heading">Christmas markets</h3><p>Upcoming Devon markets and festive street fairs.</p>${showTreeSources?`<a class="seasonal-guide-link" href="/exeter/year-end-family-edit/#markets">Full Devon &amp; Cornwall markets guide ${icon('arrow')}</a>`:''}</div>${markets.length?`<ul class="christmas-market-list">${marketList}</ul>`:''}</section>`:'';
+    const events=places.filter(p=>!marketSet.has(p.id));
+    const shows=state.region==='Exeter'?events.filter(p=>p.type==='theatre'||p.category==='Music'||/the nutcracker/i.test(p.name)):[];
+    const showSet=new Set(shows.map(p=>p.id));
+    const outings=events.filter(p=>!showSet.has(p.id));
+    const group=(id,title,items)=>items.length?`<section class="seasonal-results-group" aria-labelledby="${id}"><div class="seasonal-results-heading"><h3 id="${id}">${title}</h3></div><div class="plans-grid" aria-label="${title}">${items.map(card).join('')}</div></section>`:'';
+    const familyGuide=showTreeSources?`<p class="christmas-more"><a class="seasonal-guide-link" href="/exeter/year-end-family-edit/">Read the full Year-End Family Edit ${icon('arrow')}</a></p>`:'';
+    const sections=[[marketGuide,'christmas-markets-heading','Markets'],[treeGuide,'christmas-trees-heading','Trees'],[group('christmas-days-heading',state.region==='Exeter'?'Festive days out':'Festive events &amp; shows',outings),'christmas-days-heading','Days out'],[group('christmas-shows-heading','Shows &amp; pantos',shows),'christmas-shows-heading','Shows']];
+    const nav=showTreeSources?`<nav class="christmas-jumps" aria-label="Christmas Edit sections">${sections.filter(([html])=>html).map(([,id,label])=>`<a href="#${id}">${label}</a>`).join('')}</nav>`:'';
+    $('#discovery-rails').innerHTML=nav+sections.map(([html])=>html).join('')+familyGuide;
   }else $('#discovery-rails').innerHTML=places.length?`<div class="plans-grid" aria-label="${isPlansPage?'All matching events and holiday clubs':'All matching places, events and holiday clubs'}">${places.map(card).join('')}</div>`:'';
   fixImages($('#discovery-rails'));
 }
@@ -249,25 +258,23 @@ function render(){
   if($('#plans-page-title')){
     document.body.classList.toggle('christmas-edition-active',activeEdit?.id==='christmas');
     $('#plans-page-title').textContent=activeEdit?activeEdit.title:'What’s on & holiday clubs';
-    $('.plans-intro-copy').textContent=activeEdit?.id==='christmas-book-ahead'?'Family Christmas events with published 2026 dates and booking links. Check availability with the organiser.':activeEdit?.id==='half-term'?'Holiday clubs, days out and shows with confirmed dates for the October school break. Check places, times and prices with each organiser.':activeEdit?.id==='christmas'&&state.region==='Exeter'?'Tree-buying ideas and Christmas events together. Check dates, prices and booking with each organiser.':activeEdit?.id==='christmas'?'Christmas events and shows with published dates. Check availability with each organiser.':activeEdit?'Every verified seasonal plan, together in one list.':'Browse upcoming events and holiday clubs in one place.';
+    $('.plans-intro-copy').textContent=activeEdit?.id==='christmas-book-ahead'?'Family Christmas events with published 2026 dates and booking links. Check availability with the organiser.':activeEdit?.id==='half-term'?'Holiday clubs, days out and shows with confirmed dates for the October school break. Check places, times and prices with each organiser.':activeEdit?.id==='christmas'&&state.region==='Exeter'?'Find Christmas markets, tree farms, festive days out and family shows.':activeEdit?.id==='christmas'?'Christmas events and shows with published dates. Check availability with each organiser.':activeEdit?'Every verified seasonal plan, together in one list.':'Browse upcoming events and holiday clubs in one place.';
     document.title=activeEdit?`${activeEdit.title} in ${state.region==='Exeter'?'Exeter & Devon':state.region} | Globee`:'What’s on & holiday clubs | Globee';
   }
   if($('.weekend-shortcut'))$('.weekend-shortcut').hidden=!!activeEdit;
   const scoopPromo=$('#scoop-promo-link');
   const halfTermEntry=$('#half-term-entry');
   const christmasEntry=$('#christmas-entry');
-  const yearEndEntry=$('#year-end-entry');
   const winterMapLink=$('#winter-map-link');
   if(halfTermEntry){
     const halfTermActive=!!GlobeeDiscovery.seasonalDefinition('half-term',TODAY);
     const christmasActive=!!GlobeeDiscovery.seasonalDefinition('christmas',TODAY);
     halfTermEntry.hidden=!halfTermActive;
     halfTermEntry.href=`plans.html?region=${encodeURIComponent(state.region==='Exeter'?'Devon':state.region)}&edit=half-term`;
-    if(yearEndEntry)yearEndEntry.hidden=!christmasActive||state.region!=='Exeter';
     if(christmasEntry){
       christmasEntry.hidden=!christmasActive;
       christmasEntry.href=`plans.html?region=${encodeURIComponent(state.region==='Exeter'?'Devon':state.region)}&edit=christmas`;
-      christmasEntry.querySelector('.christmas-kinds').textContent=state.region==='Exeter'?'Trees · Festive days out · Shows':'Festive days out · Shows';
+      christmasEntry.querySelector('.christmas-kinds').textContent=state.region==='Exeter'?'Markets · Trees · Days out · Shows':'Festive days out · Shows';
     }
     if(scoopPromo)scoopPromo.hidden=halfTermActive||christmasActive;
     if(winterMapLink)winterMapLink.hidden=!halfTermActive||state.region==='Nottingham';
@@ -284,7 +291,7 @@ function render(){
     $('#results-subtitle').textContent='School-break clubs and multi-day workshops. Check dates, hours and places with the provider.';
   }
   const combinedChristmas=activeEdit?.id==='christmas'&&state.region==='Exeter'&&!state.age.length&&state.price==='all'&&state.type==='all'&&!state.query&&!state.dates&&!state.collection;
-  $('#result-count').textContent=weekendOnlyPilot?'':combinedChristmas?`4 tree places · ${Math.max(0,places.length-1)} festive plans`:`${places.length} ${places.length===1?'result':'results'}`;
+  $('#result-count').textContent=weekendOnlyPilot?'':combinedChristmas?`4 tree places · ${places.length} festive plans`:`${places.length} ${places.length===1?'result':'results'}`;
   $('#date-scope-note').hidden=!state.dates;
   $('#date-scope-note').textContent=isPlansPage?'Showing events and clubs with confirmed dates. Clear Dates to include clubs with dates TBC.':'Showing date-confirmed events. Clear Dates to include cafés, regular places and activities with dates TBC.';
   renderWeekend();

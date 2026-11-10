@@ -4,14 +4,15 @@ const fs = require('node:fs');
 const path = require('node:path');
 const read = name => fs.readFileSync(path.join(__dirname, '..', name), 'utf8');
 
-test('Christmas switch uses one illustrated banner with the family handprint photograph', () => {
+test('Christmas switch uses one illustrated banner for the seasonal edit', () => {
   const home = read('index.html');
   const entry = home.match(/<a class="entry-card entry-card-christmas"[\s\S]*?<\/a>/)[0];
-  assert.match(entry, /<h2>The Christmas<br>Edit<\/h2>/);
-  assert.match(entry, /Trees · Festive days out · Shows/);
-  assert.match(entry, /child-handprint-christmas-tree-2026\.jpg/);
-  assert.match(entry, /christmas-print-motifs/);
-  assert.ok(fs.existsSync(path.join(__dirname, '..', 'assets/christmas-newsprint-2026.webp')));
+  assert.match(entry, /<h2>The Christmas Edit<\/h2>/);
+  assert.match(entry, /Markets · Trees · Days out · Shows/);
+  assert.match(entry, /christmas-banner-2026\.webp/);
+  assert.match(entry, /plans\.html\?region=Devon&amp;edit=christmas/);
+  assert.doesNotMatch(home, /id="year-end-entry"/);
+  assert.ok(fs.existsSync(path.join(__dirname, '..', 'assets/christmas-banner-2026.webp')));
   assert.doesNotMatch(home, /id="christmas-tree-entry"/);
   assert.match(home, /ice-cream\.css\?v=christmas-banner-20261104/);
 });
