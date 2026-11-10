@@ -70,29 +70,40 @@
 .weekend-newsletter[hidden]{display:none!important}
 .weekend-newsletter-inner{
   display:grid;
-  grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);
+  grid-template-columns:minmax(0,1fr) min(34%,360px);
+  grid-template-areas:"copy art" "actions art";
   align-items:center;
-  gap:clamp(.75rem,3vw,2rem);
-  padding:clamp(16px,3.4vw,38px);
+  gap:.5rem clamp(12px,2.5vw,26px);
+  padding:clamp(12px,2vw,20px) clamp(14px,3vw,32px);
   border:1px solid #d1b775;
   border-radius:8px;
-  background:#f7e5ad;
+  background:#faedc7;
   color:#243852;
 }
-.weekend-newsletter h2{font:700 clamp(27px,4vw,47px)/1.02 Georgia,serif;letter-spacing:-.03em;margin:0 0 .45rem}
+.weekend-newsletter-copy{grid-area:copy;align-self:end}
+.weekend-newsletter h2{font:700 clamp(25px,3.3vw,39px)/1.08 Georgia,serif;letter-spacing:-.03em;margin:0 0 .35rem}
 .weekend-newsletter p{margin:0 0 .45rem;line-height:1.4}
+.weekend-newsletter-copy>p:last-child{margin-bottom:0}
 .weekend-newsletter .weekend-newsletter-kicker,.weekend-issue-date{font-size:.7rem;font-weight:800;letter-spacing:.11em;color:#80382d}
-.weekend-signup{grid-column:1/-1;min-width:0}
-.weekend-signup summary{
+.weekend-newsletter-art{grid-area:art;display:block;width:100%;height:auto;border-radius:4px}
+.weekend-newsletter-actions{grid-area:actions;align-self:start;display:flex;flex-wrap:wrap;gap:.45rem;align-items:flex-start;min-width:0}
+.weekend-newsletter-inner:has(.weekend-newsletter-actions details[open]){grid-template-areas:"copy art" "actions actions"}
+.weekend-newsletter-actions details{min-width:0;max-width:100%}
+.weekend-newsletter-actions details[open]{flex-basis:100%}
+.weekend-newsletter-actions summary{
   width:fit-content;
-  padding:.65rem .9rem;
-  border-radius:999px;
-  background:#243852;
-  color:#fffaf1;
+  min-height:44px;
+  padding:.55rem .75rem;
+  border:1px solid #243852;
+  border-radius:5px;
+  background:#fff7dc;
   cursor:pointer;
+  font-size:.85rem;
   font-weight:750;
+  line-height:1.55;
 }
-.weekend-signup summary:focus-visible{outline:2px solid #243852;outline-offset:3px}
+.weekend-signup summary{background:#243852;color:#fffaf1}
+.weekend-newsletter-actions summary:focus-visible{outline:2px solid #243852;outline-offset:3px}
 .weekend-signup-panel{padding-top:.75rem;font-size:.88rem}
 .weekend-signup-panel a{text-decoration:underline;text-underline-offset:.15em}
 .weekend-signup-frame{display:block;width:100%;height:875px;border:0;margin-top:.65rem;background:#fffaf1;border-radius:6px}
@@ -102,18 +113,6 @@
 @media(max-width:480px){.weekend-signup-frame{height:1140px}}
 @media(max-width:420px){.weekend-signup-frame{height:1240px}}
 @media(max-width:360px){.weekend-signup-frame{height:1370px}}
-.weekend-newsletter-art{display:block;width:100%;height:auto;border-radius:4px}
-.weekend-issue{margin-top:.7rem}
-.weekend-issue summary{
-  width:fit-content;
-  min-height:44px;
-  padding:.55rem .85rem;
-  border-radius:4px;
-  background:#29446d;
-  color:#fffaf0;
-  font-weight:750;
-  cursor:pointer;
-}
 .weekend-issue-body{margin-top:.55rem;padding:.65rem .8rem;background:#fff7dc;border-radius:4px}
 .weekend-issue-body ul{padding-left:1.15rem;margin:.35rem 0;font-size:.88rem}
 .weekend-issue-body li+li{margin-top:.35rem}
@@ -126,8 +125,17 @@
   #christmas-entry.devon-christmas-strip .christmas-copy{width:88%;grid-template-columns:1fr;gap:2px}
   .notebook-home .entry-cards #christmas-entry.devon-christmas-strip .entry-action{grid-column:1;grid-row:auto;background:none;color:#ffdfa3;padding:0;margin:0;text-decoration:underline;text-underline-offset:.16em}
   #christmas-entry.devon-christmas-strip .christmas-banner-art{width:13%}
-  .weekend-newsletter-inner{grid-template-columns:minmax(0,1fr) 28%;align-items:start;padding:14px;gap:7px}
-  .weekend-newsletter-art{margin-top:1.3rem;aspect-ratio:4/5;object-fit:cover;object-position:50% 50%}
-  .weekend-newsletter h2{font-size:clamp(25px,7vw,34px)}
+}
+
+@media(max-width:720px){
+  .weekend-newsletter-inner{grid-template-columns:minmax(0,1fr) 27%;grid-template-areas:"copy art" "actions actions";padding:12px;gap:.55rem}
+  .weekend-newsletter h2{font-size:clamp(24px,6vw,30px)}
   .weekend-newsletter-copy>p:not(.weekend-newsletter-kicker){font-size:.88rem}
+  .weekend-newsletter-actions summary{padding-inline:.55rem;font-size:.78rem}
+}
+
+@media(max-width:380px){
+  .weekend-newsletter-actions .weekend-issue:not([open]){flex:2}
+  .weekend-newsletter-actions .weekend-signup:not([open]){flex:3}
+  .weekend-newsletter-actions summary{max-width:100%;padding-block:.375rem;line-height:1.25}
 }
