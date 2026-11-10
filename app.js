@@ -12,6 +12,13 @@ const routeParams=new URLSearchParams(window.location.search);
 const REGIONS=['Exeter','Bristol','Nottingham'];
 const REGION_LABELS={Exeter:'Exeter · Devon',Bristol:'Bristol',Nottingham:'Nottingham'};
 const REGION_CENTRES={Exeter:[50.7236,-3.5303],Bristol:[51.4545,-2.5879],Nottingham:[52.951,-1.15]};
+const CHRISTMAS_TREE_SOURCES=[
+  ['Cotley Farm Christmas','Whimple · East Devon','Book a vehicle slot','cotley-farm'],
+  ['Exe Valley Christmas Trees','Thorverton · Mid Devon','25 Nov–23 Dec 2026','exe-valley'],
+  ['Haldon Christmas Tree Centre','Haldon Forest · Near Exeter','25 Nov–22 Dec 2026','haldon'],
+  ['Greendale Farm Shop','Near Farringdon · East Devon','2026 collection dates TBC','greendale'],
+  ['The Old Well Garden Centre','Uffculme · Mid Devon','Cut trees arriving from 16 Nov','old-well']
+];
 const requestedRegion=routeParams.get('region');
 const PAGE_SIZE=12;
 const state={region:requestedRegion==='Devon'?'Exeter':REGIONS.includes(requestedRegion)?requestedRegion:'Exeter',age:[],price:'all',type:'all',query:'',dates:null,collection:null,edit:null,view:'list',browseAll:false};
@@ -197,13 +204,7 @@ function renderRails(places){
     $('#discovery-rails').innerHTML=group('half-term-clubs-heading','Holiday clubs','For school-break days',clubs)+group('half-term-outings-heading','Days out & shows','For time together',outings);
   }else if(isPlansPage&&state.edit==='christmas'){
     const showTreeSources=state.region==='Exeter'&&!state.age.length&&state.price==='all'&&state.type==='all'&&!state.query&&!state.dates&&!state.collection;
-    const treeSources=[
-      ['Cotley Farm Christmas','Whimple · East Devon','Book a vehicle slot','cotley-farm'],
-      ['Exe Valley Christmas Trees','Thorverton · Mid Devon','25 Nov–23 Dec 2026','exe-valley'],
-      ['Haldon Christmas Tree Centre','Haldon Forest · Near Exeter','25 Nov–22 Dec 2026','haldon'],
-      ['Greendale Farm Shop','Near Farringdon · East Devon','2026 collection dates TBC','greendale']
-    ];
-    const treeGuide=showTreeSources?`<section class="seasonal-results-group" aria-labelledby="christmas-trees-heading"><div class="seasonal-results-heading"><h3 id="christmas-trees-heading">Christmas trees</h3><p>Four places to buy a real tree near Exeter. Compare cut and pot-grown choices, prices and visiting details.</p><a class="seasonal-guide-link" href="/exeter/christmas-trees/">Compare tree-buying places ${icon('arrow')}</a></div><div class="tree-source-grid" aria-label="Christmas tree buying places">${treeSources.map(([name,area,status,id])=>`<a class="tree-source-card" href="/exeter/christmas-trees/#${id}"><span class="tree-source-area">${area}</span><h4>${name}</h4><span class="tree-source-status">${status}</span><span class="tree-source-action">See buying details ${icon('arrow')}</span></a>`).join('')}</div></section>`:'';
+    const treeGuide=showTreeSources?`<section class="seasonal-results-group" aria-labelledby="christmas-trees-heading"><div class="seasonal-results-heading"><h3 id="christmas-trees-heading">Christmas trees</h3><p>Compare cut and pot-grown trees in Exeter and Devon, with prices and visiting details.</p><a class="seasonal-guide-link" href="/exeter/christmas-trees/">Compare tree-buying places ${icon('arrow')}</a></div><div class="tree-source-grid" aria-label="Christmas tree buying places">${CHRISTMAS_TREE_SOURCES.map(([name,area,status,id])=>`<a class="tree-source-card" href="/exeter/christmas-trees/#${id}"><span class="tree-source-area">${area}</span><h4>${name}</h4><span class="tree-source-status">${status}</span><span class="tree-source-action">See buying details ${icon('arrow')}</span></a>`).join('')}</div></section>`:'';
     const markets=state.region==='Exeter'?places.filter(p=>p.type==='market'||/christmas markets?|christmas makers fayre|dickensian christmas evening/i.test(p.name)):[];
     const marketSet=new Set(markets.map(p=>p.id));
     const marketList=markets.map(p=>`<li><details><summary><strong>${escapeHTML(p.name)}</strong><span>${escapeHTML(p.scheduleText)}</span><span>${escapeHTML(p.address)} · ${escapeHTML(p.priceLabel)}</span></summary><p>${escapeHTML(p.description)}</p>${p.source?`<a href="${escapeHTML(p.source)}">Official details ${icon('external')}</a>`:''}</details></li>`).join('');
@@ -320,7 +321,7 @@ function render(){
   }
   const showAllResults=!!nearbyOrigin||isPlansPage&&['half-term','christmas'].includes(state.edit);
   const combinedChristmas=activeEdit?.id==='christmas'&&state.region==='Exeter'&&!state.age.length&&state.price==='all'&&state.type==='all'&&!state.query&&!state.dates&&!state.collection;
-  $('#result-count').textContent=weekendOnlyPilot?'':combinedChristmas?`4 tree places · ${places.length} festive plans`:`${places.length} ${places.length===1?'result':'results'}`;
+  $('#result-count').textContent=weekendOnlyPilot?'':combinedChristmas?`${CHRISTMAS_TREE_SOURCES.length} tree places · ${places.length} festive plans`:`${places.length} ${places.length===1?'result':'results'}`;
   $('#date-scope-note').hidden=!state.dates;
   $('#date-scope-note').textContent=isPlansPage?'Showing events and clubs with confirmed dates. Clear Dates to include clubs with dates TBC.':'Showing date-confirmed events. Clear Dates to include cafés, regular places and activities with dates TBC.';
   renderWeekend();

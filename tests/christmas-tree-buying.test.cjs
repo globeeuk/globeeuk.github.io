@@ -1,13 +1,13 @@
 const test = require('node:test'), assert = require('node:assert/strict'), fs = require('node:fs'), path = require('node:path');
 const read = file => fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
 const html = read('exeter/christmas-trees/index.html');
-test('Tree buying guide has four sourced retailers and matching indexable metadata', () => {
+test('Tree buying guide has five sourced retailers and matching indexable metadata', () => {
   const data = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
-  assert.equal(data.dateModified, '2026-11-04');
-  assert.equal(data.mainEntity.numberOfItems, 4);
-  assert.equal(data.mainEntity.itemListElement.length, 4);
+  assert.equal(data.dateModified, '2026-11-10');
+  assert.equal(data.mainEntity.numberOfItems, 5);
+  assert.equal(data.mainEntity.itemListElement.length, 5);
   assert.match(html, /name="robots" content="index,follow"/);
-  assert.match(read('sitemap.xml'), /<loc>https:\/\/globeeuk.github.io\/exeter\/christmas-trees\/<\/loc>\s*<lastmod>2026-11-04<\/lastmod>/);
+  assert.match(read('sitemap.xml'), /<loc>https:\/\/globeeuk.github.io\/exeter\/christmas-trees\/<\/loc>\s*<lastmod>2026-11-10<\/lastmod>/);
   const source = JSON.parse(read('qa/christmas-tree-buying-sources.json'));
   for (const row of source.sources) {
     assert.match(html, new RegExp('id="' + row.id + '"'));
