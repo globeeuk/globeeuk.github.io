@@ -153,3 +153,23 @@ Object.assign(window.GLOBEE_EDITORIAL.annotations,{
     note:'Official information checked 29 October 2026. Standard climbing is £16; the published midweek term-time rate is £12, not a blanket weekend or holiday price. Leap of Faith costs £3 extra. Allow 30 minutes for briefing/harnessing, 55 minutes climbing and 5 minutes to exit; arrive 15 minutes early. At least one parent must remain on site, and under-18s need an adult-signed waiver. Closed-toe shoes required. Published hours differ between the contact page, footer and FAQ; use the live booking timetable for your chosen date. Standard sessions are ages 4+: the separate Family & Toddler label does not establish under-4 climbing eligibility. Check access, supervision and weight restrictions directly with the centre.'
   }
 });
+
+// Selected weekend events checked on 11 November 2026.
+Object.assign(window.GLOBEE_EDITORIAL.annotations,{
+  "Discover, Decode, Preserve – Exeter Innovation Hub": {
+    "ageLabel": "Age guidance TBC",
+    "note": "Checked 11 November 2026. Numerical age guidance TBC in the organiser’s listings. Free drop-in. No booking required."
+  },
+  "Theatre in the Library: Mimi and the Golden Touch – Exeter Library": {
+    "ageLabel": "Age guidance TBC",
+    "note": "Checked 11 November 2026. Designed for younger and SEND audiences. All are welcome; numerical age guidance TBC. Book via the library’s TicketSource link. Availability and eligibility for individual ticket types can change."
+  },
+  "Crafternoon – Fishponds Library": {
+    "ageLabel": "Ages 3–12",
+    "note": "Checked 11 November 2026. Ages 3–12. Children must attend with an adult. Drop in. No booking required."
+  },
+  "Tobacco Factory Sunday Market": {
+    "category": "Food & makers market",
+    "note": "Checked 13 October 2026 for dates explicitly shown on the organiser’s calendar. Rechecked 11 November 2026 for 15 November: the event page says 2pm and the organiser’s calendar and general guide say 2.30pm. Closing time, visitor admission and booking TBC."
+  }
+});

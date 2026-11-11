@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "verified_at": "2026-11-11",
   "timezone": "Europe/London",
-  "scope": "11 November morning review for the 14–15 and 21–22 November Exeter/Devon and Bristol weekend guides and Exeter free/rainy-day guides. Material correction: two current RAMM exhibition/gallery access notices. Other record evidence dates retained.",
+  "scope": "11 November morning review for the 14–15 and 21–22 November Exeter/Devon and Bristol weekend guides and Exeter free/rainy-day guides. Material correction: two current RAMM exhibition/gallery access notices. Other record evidence dates retained. The Wednesday selection adds two Exeter events, a Bristol library craft session and a market timing clarification.",
   "publication_status": "Official-source research reconciled to the operational Sheet. Publication remains subject to the live binding guard, renderer checks and deployment verification.",
   "source_policy": "Official-source research supplements the operational Google Sheet. Active publication records are bound to checked master/event rows; source changes require rechecking before publication.",
   "disclaimer": "Prices & schedules change — always check the provider before booking.",
@@ -26,7 +26,10 @@
       "cullompton-farmers-market-2026-11-14",
       "exeter-phoenix-family-xmas-stocking-2026-11-21",
       "firehorse-exeter-corn-exchange-2026-11-22",
-      "exeter-underground-passages"
+      "exeter-underground-passages",
+      "discover-decode-preserve-exeter-2026-11-14",
+      "mimi-golden-touch-exeter-2026-11-15",
+      "crafternoon-fishponds-library-2026-11-14"
     ]
   },
   "records": [
@@ -3350,7 +3353,7 @@
       "price_type": "unknown",
       "price_text": "Visitor admission TBC. Food and other purchases cost extra.",
       "booking_text": "No visitor booking rule is stated. Stallholder pitch booking is separate; check for exceptions.",
-      "schedule_text": "Sunday 15 and 22 November 2026, from 10am. Closing time TBC: dated event pages say 2pm and the calendar and general market guide say 2.30pm.",
+      "schedule_text": "Sunday 15 and 22 November 2026, from 10am. Closing time TBC: the 15 November event page says 2pm; the organiser’s calendar and general market guide say 2.30pm.",
       "occurrences": [
         {
           "start": "2026-11-01",
@@ -3392,66 +3395,33 @@
         "market"
       ],
       "practical_notes": [
-        "A food-and-makers market, not a dedicated children's workshop.",
-        "The organiser lists 15 and 22 November 2026 individually.",
-        "Closing time TBC: the dated event pages say 2pm, while the calendar and general market guide say 2.30pm."
+        "For 15 November the organiser publishes two different closing times. Aim to visit before 2pm or check directly. Food and other purchases are separate; visitor admission and booking TBC."
       ],
       "sources": [
         {
           "url": "https://www.tobaccofactory.com/sunday-market",
-          "label": "Current official market guide",
-          "supports": [
-            "Confirms family visits, local food/crafts/produce and Raleigh Road, Bristol BS3 1TF.",
-            "General weekly hours are 10am–2.30pm, conflicting with the dated event pages. Visitor admission, numerical ages and visitor booking rules are not stated."
-          ],
-          "retrieval": "Official page body reviewed on 9 November 2026 (Europe/London) for the selected upcoming dates.",
-          "retrieval_history": [
-            "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today.",
-            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
-            "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit.",
-            "Official provider page body reviewed on 8 November 2026 (Europe/London) for the active date(s) only."
-          ]
+          "label": "Tobacco Factory market guide",
+          "supports": "Published Sunday market hours are 10am–2.30pm. Visitor admission and booking terms are not specified.",
+          "retrieval": "Official source read on 11 November 2026 (Europe/London)."
         },
         {
           "url": "https://www.tobaccofactory.com/whats-on?category=Market",
-          "label": "Official 2026 market calendar",
-          "supports": [
-            "Individually lists Sunday 15 and 22 November 2026, from 10am; calendar summary ends at 2.30pm.",
-            "Dated pages say 2pm instead. Closing time remains unresolved."
-          ],
-          "retrieval": "Official page body reviewed on 9 November 2026 (Europe/London) for the selected upcoming dates.",
-          "retrieval_history": [
-            "Official organiser page body reviewed through the web tool on 27 October 2026 (GMT). No booking transaction, capacity guarantee or visit. The What's On response was indexed four days earlier; dated detail and general guide were labelled crawled today.",
-            "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
-            "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit.",
-            "Official provider page body reviewed on 8 November 2026 (Europe/London) for the active date(s) only."
-          ]
+          "label": "Tobacco Factory market calendar",
+          "supports": "15 and 22 November 2026, 10am–2.30pm.",
+          "retrieval": "Official source read on 11 November 2026 (Europe/London)."
         },
         {
           "url": "https://www.tobaccofactory.com/whats-on/sunday-market/15/12/26",
-          "label": "Official 15 November listing",
-          "supports": [
-            "Linked from the official 15 November calendar entry. Heading/body explicitly say 15 November 2026, 10am–2pm, despite the URL containing 12. General guide/calendar say 2.30pm, so closing remains TBC.",
-            "Family food/craft market at Raleigh Road BS3 1TF. Visitor admission, numerical ages and visitor booking rules unstated; pitch booking is for stallholders."
-          ],
-          "retrieval": "Official page body reviewed on 9 November 2026 (Europe/London) for the selected upcoming dates.",
-          "retrieval_history": [
-            "Official linked body reviewed on 2 November 2026 (GMT). The /15/11/26 guessed route did not resolve; use the actual organiser link and body date, not an inferred December occurrence. No transaction or live capacity check.",
-            "Official provider page body reviewed on 8 November 2026 (Europe/London) for the active date(s) only."
-          ]
-        },
-        {
-          "url": "https://www.tobaccofactory.com/whats-on/sunday-market-every-week/22/11/26",
-          "label": "Official 22 November listing",
-          "supports": "Linked from the official calendar. Dated listing explicitly gives 22 November 2026, 10am–2pm. General guide and calendar say 2.30pm.",
-          "retrieval": "Official page body reviewed on 9 November 2026 (Europe/London)."
+          "label": "Tobacco Factory dated 15 November page",
+          "supports": "The body explicitly gives Sunday 15 November 2026, 10am–2pm, despite the December slug. Closing time is kept TBC.",
+          "retrieval": "Official source read on 11 November 2026 (Europe/London)."
         }
       ],
       "limitations": [
         "Unstated prices, numerical ages, entry/access rules and exceptional changes remain TBC.",
         "Official closing times conflict: 2pm on dated pages versus 2.30pm on the calendar/general guide. No closing time is confirmed."
       ],
-      "verified_at": "2026-11-09",
+      "verified_at": "2026-11-11",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -3463,22 +3433,23 @@
       ],
       "sheet_match": {
         "live_sheet_checked": true,
-        "published_csv_checked": true,
         "row_id": 250,
         "event_rows": [
+          498,
+          499,
           500,
           501,
           502,
-          503
+          503,
+          504,
+          505,
+          506,
+          507
         ],
-        "published_csv_checked_at": "2026-11-11T07:12:21+00:00",
-        "reconciliation_note": "11 November concurrent master I250/N250 wording now refers to 15 November instead of 1/8 November. Native CellData and published CSV agree. Official calendar plus dated 15/22 November bodies reviewed: dates, 10am start, conflicting 2pm/2.30pm close and TBC visitor terms match the existing export; no published fact or evidence date change. Historical event rows preserved.",
-        "checked_at": "2026-11-11T07:12:21+00:00",
-        "reconciliation_history": [
-          "Native 시트1!I250/M250/N250 corrected and read back. Matching events 500/501 and all historical dates preserved. Complete published master/events CSV confirms the exact updated source and unresolved closing time before binding renewal.",
-          "2 November: bounded native CellData and full published CSV compared with the reviewed official body. Current values/dates, formulas, formats and validation preserved. Only the separately audited RAMM/master and Tobacco/events provenance notes changed; no native visual check or new DB/date row claimed.",
-          "Compared exact master and events entries in the complete published CSVs against the reviewed provider details. Existing native dates and values were preserved. No new native cell read or write for this review."
-        ]
+        "published_csv_checked": true,
+        "checked_at": "2026-11-11T07:09:49.817Z",
+        "published_csv_checked_at": "2026-11-11T07:11:22+00:00",
+        "reconciliation_note": "The I250 and N250 clarification matches the native readback and published master; existing dated events were retained."
       },
       "historical_sources": [
         {
@@ -4280,10 +4251,246 @@
         "checked_at": "2026-11-09T08:54:51+00:00",
         "reconciliation_note": "Compared exact master and events entries in the complete published CSVs against the reviewed provider details. Existing native dates and values were preserved. No new native cell read or write for this review."
       }
+    },
+    {
+      "id": "discover-decode-preserve-exeter-2026-11-14",
+      "name": "Discover, Decode, Preserve – Exeter Innovation Hub",
+      "kind": "event",
+      "region": "Devon",
+      "city": "Exeter",
+      "locality": "Princesshay",
+      "address": "Exeter Innovation Hub, Princesshay, Dix’s Field, Exeter",
+      "description": "Become an archivist for the morning: try puzzles and decode material from the University of Exeter’s Special Collections.",
+      "age_text": "Numerical age guidance TBC in the organiser’s listings.",
+      "price_type": "free",
+      "price_text": "Free",
+      "booking_text": "Free drop-in. No booking required.",
+      "schedule_text": "Saturday 14 November 2026, 10am–2pm.",
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "The programme takes place inside the named venue.",
+        "classification": "Indoor event"
+      },
+      "tags": [
+        "weekend",
+        "family",
+        "history"
+      ],
+      "verified_at": "2026-11-11",
+      "review_status": "verified",
+      "occurrences": [
+        {
+          "start": "2026-11-14",
+          "end": "2026-11-14",
+          "weekday": "Saturday",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        }
+      ],
+      "practical_notes": [
+        "Use the Exeter Innovation Hub on Dix’s Field. The university event page and festival listing give different postcodes for the same named venue.",
+        "The festival lists step-free access, with doors that are not automatic."
+      ],
+      "sources": [
+        {
+          "url": "https://libguides.exeter.ac.uk/c.php?g=656130&p=5401934",
+          "label": "University of Exeter Special Collections events",
+          "supports": "The organiser confirms Saturday 14 November, 10am–2pm, at its Exeter Innovation Hub on Dix’s Field. Free, no booking.",
+          "retrieval": "Official source read on 11 November 2026 (Europe/London)."
+        },
+        {
+          "url": "https://www.beinghumanfestival.org/events/discover-decode-preserve",
+          "label": "Being Human Festival programme",
+          "supports": "The official programme confirms the 2026 date, venue, archive activities, no booking and venue access; indexed organiser programme reviewed.",
+          "retrieval": "Official source read on 11 November 2026 (Europe/London)."
+        },
+        {
+          "url": "https://www.exeterinnovation.com/v8media/exeterinnovation/images/Innovation_Hub_Flyer_January_2024.pdf",
+          "label": "Exeter Innovation Hub venue flyer",
+          "supports": "Confirms the venue name, Princesshay and Dix’s Field, and matches the festival postcode. The university event page gives a different postcode; the named venue is consistent.",
+          "retrieval": "Official source read on 11 November 2026 (Europe/London)."
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "2bd63fb8b165d611cdc832de",
+          "name": "Discover, Decode, Preserve – Exeter Innovation Hub",
+          "region": "Devon",
+          "fingerprint": "db3d8d86cc751de75e824276b3b10a847555f44f14dc4b18e3428cd02cdc4fd7"
+        }
+      ],
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 373,
+        "event_rows": [
+          716
+        ],
+        "published_csv_checked": true,
+        "checked_at": "2026-11-11T07:09:49.817Z",
+        "published_csv_checked_at": "2026-11-11T07:11:22+00:00",
+        "reconciliation_note": "New master and dated event rows were read in the native spreadsheet and compared to the complete published CSV exports."
+      },
+      "limitations": [
+        "Check current capacity and exceptional access changes with the organiser."
+      ]
+    },
+    {
+      "id": "mimi-golden-touch-exeter-2026-11-15",
+      "name": "Theatre in the Library: Mimi and the Golden Touch – Exeter Library",
+      "kind": "event",
+      "region": "Devon",
+      "city": "Exeter",
+      "locality": "City centre",
+      "address": "Children’s Library, Exeter Library, Castle Street, Exeter EX4 3PQ",
+      "description": "A relaxed English Touring Opera performance retelling King Midas, created with younger and SEND audiences in mind.",
+      "age_text": "Designed for younger and SEND audiences. All are welcome; numerical age guidance TBC.",
+      "price_type": "paid",
+      "price_text": "Ticketed: £0–£8.62 incl. booking fee",
+      "booking_text": "Book via the library’s TicketSource link. Availability and eligibility for individual ticket types can change.",
+      "schedule_text": "Sunday 15 November 2026, 3–4pm.",
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "The programme takes place inside the named venue.",
+        "classification": "Indoor event"
+      },
+      "tags": [
+        "weekend",
+        "family",
+        "theatre"
+      ],
+      "verified_at": "2026-11-11",
+      "review_status": "verified",
+      "occurrences": [
+        {
+          "start": "2026-11-15",
+          "end": "2026-11-15",
+          "weekday": "Sunday",
+          "start_time": "15:00",
+          "end_time": "16:00"
+        }
+      ],
+      "practical_notes": [
+        "Approximately 60 minutes. It is a relaxed performance; moving around and making noise are welcome. The Children’s Library is on the accessible ground floor."
+      ],
+      "sources": [
+        {
+          "url": "https://www.librariesunlimited.org.uk/event/theatre-in-the-library-mimi-and-the-golden-touch/",
+          "label": "Libraries Unlimited event page",
+          "supports": "The venue confirms 15 November 2026, 3–4pm, relaxed performance in the Children’s Library, audience guidance and its official booking link.",
+          "retrieval": "Official source read on 11 November 2026 (Europe/London)."
+        },
+        {
+          "url": "https://www.ticketsource.com/librariesunlimited/theatre-in-the-library-mimi-and-the-golden-touch/e-pmxkjl",
+          "label": "Libraries Unlimited official booking page",
+          "supports": "Shows Sunday 15 November 2026 at 3pm, Book Now and £0.00–£8.62 including booking fees. Counts varied between reads, so no current number is promised.",
+          "retrieval": "Official source read on 11 November 2026 (Europe/London)."
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "2302de7188924bc8f61d754f",
+          "name": "Theatre in the Library: Mimi and the Golden Touch – Exeter Library",
+          "region": "Devon",
+          "fingerprint": "27888961381d3de54d3d0a8766ba9f46828c5522e5b6904d02ece0d2dd264a33"
+        }
+      ],
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 374,
+        "event_rows": [
+          717
+        ],
+        "published_csv_checked": true,
+        "checked_at": "2026-11-11T07:09:49.817Z",
+        "published_csv_checked_at": "2026-11-11T07:11:22+00:00",
+        "reconciliation_note": "New master and dated event rows were read in the native spreadsheet and compared to the complete published CSV exports."
+      },
+      "limitations": [
+        "Check current capacity and exceptional access changes with the organiser."
+      ]
+    },
+    {
+      "id": "crafternoon-fishponds-library-2026-11-14",
+      "name": "Crafternoon – Fishponds Library",
+      "kind": "event",
+      "region": "Bristol",
+      "city": "Bristol",
+      "locality": "Fishponds",
+      "address": "Fishponds Library, Hockeys Lane, Fishponds, Bristol BS16 3HL",
+      "description": "A library craft session for children aged 3 to 12, with materials provided and an accompanying adult required.",
+      "age_text": "Ages 3–12. Children must attend with an adult.",
+      "price_type": "unknown",
+      "price_text": "Entry price TBC",
+      "booking_text": "Drop in. No booking required.",
+      "schedule_text": "Saturday 14 November 2026, 1–2pm.",
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "The programme takes place inside the named venue.",
+        "classification": "Indoor event"
+      },
+      "tags": [
+        "weekend",
+        "family",
+        "art"
+      ],
+      "verified_at": "2026-11-11",
+      "review_status": "verified",
+      "occurrences": [
+        {
+          "start": "2026-11-14",
+          "end": "2026-11-14",
+          "weekday": "Saturday",
+          "start_time": "13:00",
+          "end_time": "14:00"
+        }
+      ],
+      "practical_notes": [
+        "The library’s general Saturday opening is 10am–5pm. Crafternoon runs 1–2pm.",
+        "The event page confirms materials are supplied. It does not state admission for this venue."
+      ],
+      "sources": [
+        {
+          "url": "https://www.bristol.gov.uk/residents/libraries-and-archives/find-a-library/library-finder/library?id=8",
+          "label": "Bristol City Council Fishponds Library page",
+          "supports": "Confirms venue, address, Saturday opening and the regular 1–2pm Crafternoon slot.",
+          "retrieval": "Official source read on 11 November 2026 (Europe/London)."
+        },
+        {
+          "url": "https://bristol.events.mylibrary.digital/event?id=374830",
+          "label": "Bristol Library Service dated Crafternoon listing",
+          "supports": "Indexed official listing gives 14 November 2026, 1–2pm, ages 3–12, accompanying adult, materials supplied and no booking. Direct automated HTTP returned 403. The council venue page is the working public link.",
+          "retrieval": "Official source read on 11 November 2026 (Europe/London)."
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "527db98da9ace3ba7bbb309f",
+          "name": "Crafternoon – Fishponds Library",
+          "region": "Bristol",
+          "fingerprint": "3b27536ba48e7f4efd573c8aa5aeab38730d3091d5646dd6ab724e9ab5482bea"
+        }
+      ],
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 375,
+        "event_rows": [
+          718
+        ],
+        "published_csv_checked": true,
+        "checked_at": "2026-11-11T07:09:49.817Z",
+        "published_csv_checked_at": "2026-11-11T07:11:22+00:00",
+        "reconciliation_note": "New master and dated event rows were read in the native spreadsheet and compared to the complete published CSV exports."
+      },
+      "limitations": [
+        "Check current capacity and exceptional access changes with the organiser."
+      ]
     }
   ],
   "previous_research_file": "verified-candidates-2026-11-09.json",
-  "reviewed_at": "2026-11-11T07:07:32.075214+00:00",
+  "reviewed_at": "2026-11-11T07:11:44.883076+00:00",
   "review_notes": [
     "Six existing event verification dates renewed only after relevant source-body reviews. Historical records and ordinary-place dates retained.",
     "Blaise selected-slot quote/time TBC after booking-service timeout.",
@@ -4296,7 +4503,8 @@
     "4 November: native master 327–328 and events 627–628 verified in both native cells and published CSVs. Existing record objects and all previous occurrence dates are preserved. Hide & Seek start TBC due to conflicting official times.",
     "5 November morning: selected official source bodies and all 11 selected live Sheet bindings compared. No material event changes found; Hide & Seek start-time conflict and Tobacco Factory closing-time conflict persist as TBC. RAMM general Visit page returned 403 and its general verification date is retained. Only Exeter Library and Heavitree ordinary-place evidence renewed after successful review; the library hours page loaded successfully in Chrome after retrieval errors. No Sheet mutation, new event, new region or social action.",
     "6 November morning: added one existing Devon market to improve next-weekend coverage. Visit Mid Devon’s dated listing corroborates the organiser’s recurring hours and supplies the High Street venue. Native master and event records reconciled; all other export records and their verification dates are preserved. Checked Bristol dates remain supported; the two known discrepancies in Hide & Seek and Tobacco Factory times remain qualified.",
-    "11 November: selected official source bodies compared. Only RAMM has a material change and a renewed item verification date; 37 other record objects are preserved; Tobacco Factory binding metadata reconciled after a concurrent master-note update, with its published facts and verification date preserved. The Bayeux detail and RAMM access URLs returned 403; older evidence dates retained. Bristol existing candidate dates compared: the two markets remain the only selected upcoming choices, with Tobacco Factory conflicting closing times still TBC. No broader database scan, new region, event row or availability claim. Concurrent operational Sheet additions are not treated as verified completed work by this review."
+    "11 November: selected official source bodies compared. Only RAMM has a material change and a renewed item verification date; 37 other record objects are preserved; Tobacco Factory binding metadata reconciled after a concurrent master-note update, with its published facts and verification date preserved. The Bayeux detail and RAMM access URLs returned 403; older evidence dates retained. Bristol existing candidate dates compared: the two markets remain the only selected upcoming choices, with Tobacco Factory conflicting closing times still TBC. No broader database scan, new region, event row or availability claim. Concurrent operational Sheet additions are not treated as verified completed work by this review.",
+    "11 November: new native master 373–375 and events 716–718 match the full public CSVs. Tobacco Factory master I250/N250 clarifies the dated 2pm vs calendar 2.30pm discrepancy. Existing records and their verification dates remain unless explicitly rechecked in this export. Both Make Together sessions at Bedminster and St George on 14 November were shown as sold out by the organiser's booking system and were not selected."
   ],
   "excluded_candidates": [
     {
