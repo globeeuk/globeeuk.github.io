@@ -173,3 +173,16 @@ Object.assign(window.GLOBEE_EDITORIAL.annotations,{
     "note": "Checked 13 October 2026 for dates explicitly shown on the organiser’s calendar. Rechecked 11 November 2026 for 15 November: the event page says 2pm and the organiser’s calendar and general guide say 2.30pm. Closing time, visitor admission and booking TBC."
   }
 });
+
+// Venue structure and family conditions checked with organisers, 11 November 2026.
+// Dates, prices and closures remain in the Sheet; Planet Ice is a permanent place.
+Object.assign(window.GLOBEE_EDITORIAL.annotations, {
+  'Undercover Real Ice Rink – Exeter Winter Wonderland': {category:'Covered outdoor ice skating',ageLabel:'3+ · ages 3–7 with a skating adult'},
+  'Icescape Westpoint – Exeter Ice Rink': {category:'Indoor ice skating'},
+  'Plymouth Winter Wonderland – Ice Rink': {category:'Covered outdoor ice skating'},
+  'Bay of Lights Ice Rink – Torquay': {category:'Covered seasonal ice skating',ageLabel:'Must walk unaided'},
+  'North Devon Christmas Ice Rink – Barnstaple': {category:'Covered outdoor ice skating',ageLabel:'All ages · under-4s with a skating adult'},
+  'Festive Skate – Affinity Devon': {category:'Outdoor synthetic skating',ageLabel:'4+ · adult supervision for young children'},
+  'Bristol on Ice – Harbourside Ice Rink': {category:'Outdoor ice skating · cover TBC',ageLabel:'5+ years'},
+  'Planet Ice Bristol – Cribbs Causeway': {category:'Indoor ice skating'}
+});
