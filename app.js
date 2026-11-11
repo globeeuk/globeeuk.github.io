@@ -304,7 +304,7 @@ function render(){
   }
   const newsletter=$('#weekend-newsletter');
   if(newsletter)newsletter.hidden=state.region!=='Exeter'||state.notebookSection!=='days'||state.view!=='list'||!!nearbyOrigin;
-  nearbyControls?.sync(nearbyOrigin,nearbyMiles,state.notebookSection!=='notes');
+  nearbyControls?.sync(nearbyOrigin,nearbyMiles,state.notebookSection!=='notes',state.region);
   if(scoopPromo)scoopPromo.href=`ice-cream.html?from=${state.region==='Bristol'?'Bristol':'Devon'}`;
   if(winterMapLink)winterMapLink.querySelector('a').href=`ice-cream.html?from=${state.region==='Bristol'?'Bristol':'Devon'}`;
   const classesEntry=$('#classes-entry-link');

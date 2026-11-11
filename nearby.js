@@ -25,13 +25,7 @@
     const originLabel = container.querySelector('#nearby-origin-label');
     let request = 0;
     let lastOrigin = null;
-
-    for (const [region, towns] of Object.entries(dataset.towns)) {
-      const group = document.createElement('optgroup');
-      group.label = regionLabels[region];
-      for (const town of Object.keys(towns)) group.append(new Option(town, region + '|' + town));
-      choice.append(group);
-    }
+    let townRegion = null;
 
     function openPanel(open) {
       panel.hidden = !open;
@@ -104,7 +98,18 @@
     clearButton.addEventListener('click', clear);
 
     return {
-      sync(origin, miles, visible) {
+      sync(origin, miles, visible, region) {
+        const towns = dataset.towns[region];
+        if (towns && region !== townRegion) {
+          const group = document.createElement('optgroup');
+          group.label = regionLabels[region];
+          for (const town of Object.keys(towns)) {
+            group.append(new Option(town, region + '|' + town));
+          }
+          choice.replaceChildren(choice.options[0], group);
+          choice.value = '';
+          townRegion = region;
+        }
         container.hidden = !visible;
         distance.hidden = !origin;
         clearButton.hidden = !origin;
