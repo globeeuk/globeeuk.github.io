@@ -25,6 +25,41 @@
     if(master.length+events.length>10000)throw new Error('Database response too large');
     return true;
   }
+  // A term/block span is not a session on every date. Expand only plain weekly
+  // schedules, including a single explicitly dated exclusion. School holidays
+  // and other recurrence rules need individual event rows, not inferred dates.
+  function sessionPeriods(periods,schedule){
+    const text=String(schedule||'').replace(/\bweekly booking\b/gi,'');
+    const weekdays=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+      .flatMap((day,index)=>new RegExp(`\\b(?:every\\s+|each\\s+)${day}\\b|\\b${day}s\\b`,'i').test(text)?[index]:[]);
+    const recurring=weekdays.length||/\b(?:weekly|fortnightly|monthly|term[ -]?time)\b/i.test(text)
+      ||/\b(?:every|each|first|second|third|fourth|last)\b[^.;]*\b(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b/i.test(text);
+    if(!recurring)return {periods,unconfirmed:false};
+    const excluded=text.match(/\b(?:except|excluding)\s+(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December)(?:\s+(\d{4}))?\s*\.?$/i);
+    const rule=excluded?text.slice(0,excluded.index):text;
+    const uncertain=!weekdays.length||/\b(?:term[ -]?time|fortnightly|monthly|alternate|alternating|other|first|second|third|fourth|last|except\w*|exclud\w*)\b/i.test(rule);
+    let unconfirmed=false;
+    const dates=new Set();
+    for(const period of periods){
+      // An explicitly supplied individual session remains authoritative.
+      if(period.start===period.end){dates.add(period.start);continue;}
+      const first=new Date(period.start+'T12:00:00Z'),last=new Date(period.end+'T12:00:00Z');
+      if(uncertain||(last-first)/86400000>3660){unconfirmed=true;continue;}
+      let excludedDay=null;
+      if(excluded){
+        // An omitted year is unambiguous only within a single-year block.
+        if(!excluded[3]&&period.start.slice(0,4)!==period.end.slice(0,4)){unconfirmed=true;continue;}
+        const month=['january','february','march','april','may','june','july','august','september','october','november','december'].indexOf(excluded[2].toLowerCase())+1;
+        excludedDay=`${excluded[3]||period.start.slice(0,4)}-${String(month).padStart(2,'0')}-${excluded[1].padStart(2,'0')}`;
+        if(!iso(excludedDay)){unconfirmed=true;continue;}
+      }
+      for(const cursor=new Date(first);cursor<=last;cursor.setUTCDate(cursor.getUTCDate()+1)){
+        const day=cursor.toISOString().slice(0,10);
+        if(weekdays.includes(cursor.getUTCDay())&&day!==excludedDay)dates.add(day);
+      }
+    }
+    return {periods:[...dates].sort().map(day=>({start:day,end:day})),unconfirmed};
+  }
   function normalise(master,events,editorial={}){
     validate(master,events);
     const groups=new Map(),aliases=editorial.aliases||{},annotations=editorial.annotations||{};
@@ -35,14 +70,15 @@
     for(const [k,g] of groups){
       const m=g.master||{},es=g.events,name=m.name||g.name,a=annotations[name]||{};
       if(/\bcancelled\b|\bcanceled\b/i.test([m.dates,m.description].join(' ')))continue;
-      const datePeriods=[];
-      for(const e of es){if(!iso(e.date)||e.end&&!iso(e.end))continue;const d={start:e.date,end:e.end||e.date};if(d.end<d.start)continue;if(!datePeriods.some(v=>v.start===d.start&&v.end===d.end))datePeriods.push(d);}
-      datePeriods.sort((x,y)=>x.start.localeCompare(y.start));
+      const rawPeriods=[];
+      for(const e of es){if(!iso(e.date)||e.end&&!iso(e.end))continue;const d={start:e.date,end:e.end||e.date};if(d.end<d.start)continue;if(!rawPeriods.some(v=>v.start===d.start&&v.end===d.end))rawPeriods.push(d);}
+      rawPeriods.sort((x,y)=>x.start.localeCompare(y.start));
+      const sessions=sessionPeriods(rawPeriods,m.dates),datePeriods=sessions.periods;
       // Checked 17 Oct 2026: this St Luke's venue currently says it has no
       // online-bookable courses. Hide its undated legacy listing, not the provider;
       // a newly verified dated course can still appear from the Sheet.
       if(/\/venue\/courses\/20996(?:\/|\?|$)/.test(m.url||'')&&!datePeriods.length)continue;
-      const kind=a.kind||(m.tab==='club'?'club':datePeriods.length||iso(m.end_date)?'event':'place');
+      const kind=a.kind||(m.tab==='club'?'club':rawPeriods.length||iso(m.end_date)?'event':'place');
       const isShow=m.tab==='dayout'&&m.type==='theatre';
       const type=kind==='club'?'club':isShow?'theatre':a.type||({art:'art',arts:'art',animation:'art',outdoor:'outdoors',themepark:'outdoors',cafe:'cafe',ice:'ice',market:'market'}[m.type]||'activity');
       const category=a.category||(kind==='club'?'Holiday club':({sports:'Sport',theatre:'Theatre',music:'Music',arts:'Arts & making',art:'Arts & making',history:'History',sensory:'Sensory activities',education:'Learning',food:'Food & drink',outdoor:'Outdoors',themepark:'Theme park',film:'Film',cinema:'Cinema',dance:'Dance',animation:'Animation',festival:'Festival'}[m.type]|| (kind==='event'?'What’s on':'Family activity')));
@@ -57,6 +93,7 @@
       const filteredAges=Array.isArray(a.ages)&&a.ages.length===2?a.ages:ages;
       const item={id:'db-'+encodeURIComponent(k),name,region:g.region,type,kind,category,description:m.description||'Open the details for the available schedule. Further venue information is being checked.',address:m.location||'Location details TBC',source,priceType,priceLabel,ages:filteredAges,ageLabel:a.ageLabel||(filteredAges?(filteredAges[0]===0&&filteredAges[1]>=16?'All ages':`${filteredAges[0]}–${filteredAges[1]} years`):'Age TBC'),dateNote:datePeriods.length?'':kind==='place'?(m.dates||'Check opening times'):'Dates TBC',datePeriods:datePeriods.length?datePeriods:null,endDate:iso(m.end_date)?m.end_date:null,scheduleText:m.dates||'Dates TBC',note:a.priceCaution||'Prices & schedules change — always check the provider before booking.',image:a.image||'',imageAlt:a.imageAlt||'',credit:a.credit||'',imageReference:a.imageReference||'',coords:a.coords||venue?.coords||null,collections:kind==='place'?(a.collections||[]):[],bookAhead:a.bookAhead===true,editReasons:a.editReasons||{},editEvidence:a.editEvidence||{},editChecked:a.editChecked||'',eatPlay:a.eatPlay||null,photoSource:a.photoSource||'',photoLicence:a.photoLicence||'',photoLicenceUrl:a.photoLicenceUrl||'',sourceRows:{master:!!g.master,events:es.length}};
       if(a.note)item.note=a.note+' Prices & schedules change — always check the provider before booking.';
+      if(sessions.unconfirmed&&!datePeriods.length)item.dateNote='Session dates TBC — check the provider';
       if(!source)item.note='The official venue link and practical details are being checked. Please confirm the event with its organiser before travelling.';
       if(isShow)item.category='Theatre & shows';
       items.push(item);
