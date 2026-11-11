@@ -43,4 +43,39 @@
   script.src='https://static.cloudflareinsights.com/beacon.min.js';
   script.setAttribute('data-cf-beacon',JSON.stringify({token:'c6205392d37e42398ba17db361152656',spa:false}));
   document.head.appendChild(script);
+
+  // Public site ID on the owner's free Umami Hobby account (EU region).
+  // An empty ID leaves Cloudflare running without sending anything to Umami.
+  const UMAMI_WEBSITE_ID='eddd6cd3-f82e-4b15-9354-fb3929460053';
+  if(!/^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i.test(UMAMI_WEBSITE_ID))return;
+  window.globeeUmamiBeforeSend=(type,payload)=>{
+    if(type!=='event'||payload.name)return false;
+    try{
+      if(localStorage.getItem(KEY)!=='on'||navigator.globalPrivacyControl===true)return false;
+    }catch{return false;}
+    let referrer='';
+    try{
+      const source=new URL(document.referrer);
+      if(source.protocol==='https:'||source.protocol==='http:')referrer=source.origin;
+    }catch{/* No referrer is normal for direct and privacy-protected visits. */}
+    // Allow only pageview fields. Never forward search text, age filters,
+    // custom event data, explicit user IDs or a full referring URL.
+    return {
+      website:UMAMI_WEBSITE_ID,hostname:location.hostname,url:location.pathname,
+      title:document.title,referrer,
+      language:payload.language,screen:payload.screen
+    };
+  };
+  const umamiScript=document.createElement('script');
+  umamiScript.src='https://cloud.umami.is/script.js';
+  umamiScript.defer=true;umamiScript.referrerPolicy='origin';
+  umamiScript.setAttribute('data-website-id',UMAMI_WEBSITE_ID);
+  umamiScript.setAttribute('data-domains','globeeuk.github.io');
+  umamiScript.setAttribute('data-auto-track','false');
+  umamiScript.setAttribute('data-exclude-search','true');
+  umamiScript.setAttribute('data-exclude-hash','true');
+  umamiScript.setAttribute('data-before-send','globeeUmamiBeforeSend');
+  // One pageview per document, matching the existing non-SPA basic counter.
+  umamiScript.addEventListener('load',()=>{if(window.umami)window.umami.track();});
+  document.head.appendChild(umamiScript);
 })();
