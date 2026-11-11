@@ -4,6 +4,40 @@
   const key=s=>String(s||'').normalize('NFC').trim().toLowerCase().replace(/[–—]/g,'-').replace(/\s+/g,' ');
   const iso=s=>/^\d{4}-\d{2}-\d{2}$/.test(s||'')&&!Number.isNaN(Date.parse(s))&&new Date(s+'T12:00:00Z').toISOString().slice(0,10)===s;
   const safeURL=s=>{try{const u=new URL(s);return ['http:','https:'].includes(u.protocol)?u.href:'';}catch{return '';}};
+  const publicationKey=(name,r)=>`${region(r)}|${key(name)}`;
+  // Persist first publication, including null for undated legacy rows and keys
+  // for removed listings. Never replace it with a refresh or later session date.
+  function publicationHistory(master,events,previous={}){
+    const history={...previous},groups=new Map();
+    for(const [rows,field] of [[master,'date_added'],[events,'added']])for(const row of rows){
+      if(!region(row.region)||!row.name)continue;
+      const k=publicationKey(row.name,row.region);
+      if(!groups.has(k))groups.set(k,{master:undefined,dates:[]});
+      const group=groups.get(k),value=row[field]||'';
+      if(field==='date_added')group.master=value;
+      group.dates.push(value);
+    }
+    for(const [k,g]of groups){
+      if(Object.prototype.hasOwnProperty.call(history,k))continue;
+      const dates=g.dates.filter(iso).sort();
+      history[k]=(g.master!==undefined?!iso(g.master):g.dates.some(d=>!iso(d)))?null:dates[0]||null;
+    }
+    return history;
+  }
+  function londonDay(now=new Date()){
+    if(!(now instanceof Date))now=new Date(now);
+    if(Number.isNaN(now.getTime()))return null;
+    const parts=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now).map(p=>[p.type,p.value]));
+    return `${parts.year}-${parts.month}-${parts.day}`;
+  }
+  function isNewThisWeek(item,now=new Date()){
+    const today=londonDay(now),added=item.firstPublished;
+    if(!today||!['event','club'].includes(item.kind)||!iso(added)||added>today)return false;
+    if(item.datePeriods?.length?!item.datePeriods.some(d=>d.end>=today):item.endDate&&item.endDate<today)return false;
+    const monday=new Date(today+'T12:00:00Z');
+    monday.setUTCDate(monday.getUTCDate()-(monday.getUTCDay()+6)%7);
+    return added>=monday.toISOString().slice(0,10);
+  }
   function parseCSV(text){
     const rows=[];let row=[],cell='',quoted=false;
     for(let i=0;i<text.length;i++){
@@ -60,10 +94,18 @@
     }
     return {periods:[...dates].sort().map(day=>({start:day,end:day})),unconfirmed};
   }
-  function normalise(master,events,editorial={}){
+  function normalise(master,events,editorial={},previousPublications={}){
     validate(master,events);
     const groups=new Map(),aliases=editorial.aliases||{},annotations=editorial.annotations||{};
     const groupKey=(name,r)=>`${r}|${key(name)}`;
+    const history=publicationHistory(master,events,previousPublications),publications=new Map();
+    for(const [id,day]of Object.entries(history)){
+      const split=id.indexOf('|'),r=id.slice(0,split),oldName=id.slice(split+1);
+      const alias=Object.entries(aliases).find(([name])=>key(name)===oldName)?.[1];
+      const k=groupKey(alias||oldName,r),known=publications.get(k);
+      // An unknown earlier identity stays unknown, even after a dated rename.
+      publications.set(k,known===null||!iso(day)?null:known&&known<day?known:day);
+    }
     for(const m of master){const r=region(m.region);if(!r||!m.name)continue;const k=groupKey(m.name,r);if(groups.has(k))throw new Error('Duplicate master record');groups.set(k,{master:m,events:[],region:r});}
     for(const e of events){const r=region(e.region);if(!r||!e.name)continue;const name=aliases[e.name]||e.name,k=groupKey(name,r);if(!groups.has(k))groups.set(k,{master:null,events:[],region:r,name});groups.get(k).events.push(e);}
     const items=[];
@@ -93,6 +135,7 @@
       const filteredAges=Array.isArray(a.ages)&&a.ages.length===2?a.ages:ages;
       const item={id:'db-'+encodeURIComponent(k),name,region:g.region,type,kind,category,description:m.description||'Open the details for the available schedule. Further venue information is being checked.',address:m.location||'Location details TBC',source,priceType,priceLabel,ages:filteredAges,ageLabel:a.ageLabel||(filteredAges?(filteredAges[0]===0&&filteredAges[1]>=16?'All ages':`${filteredAges[0]}–${filteredAges[1]} years`):'Age TBC'),dateNote:datePeriods.length?'':kind==='place'?(m.dates||'Check opening times'):'Dates TBC',datePeriods:datePeriods.length?datePeriods:null,endDate:iso(m.end_date)?m.end_date:null,scheduleText:m.dates||'Dates TBC',note:a.priceCaution||'Prices & schedules change — always check the provider before booking.',image:a.image||'',imageAlt:a.imageAlt||'',credit:a.credit||'',imageReference:a.imageReference||'',coords:a.coords||venue?.coords||null,collections:kind==='place'?(a.collections||[]):[],bookAhead:a.bookAhead===true,editReasons:a.editReasons||{},editEvidence:a.editEvidence||{},editChecked:a.editChecked||'',eatPlay:a.eatPlay||null,photoSource:a.photoSource||'',photoLicence:a.photoLicence||'',photoLicenceUrl:a.photoLicenceUrl||'',sourceRows:{master:!!g.master,events:es.length}};
       if(a.note)item.note=a.note+' Prices & schedules change — always check the provider before booking.';
+      item.firstPublished=publications.get(k)||null;
       if(sessions.unconfirmed&&!datePeriods.length)item.dateNote='Session dates TBC — check the provider';
       if(!source)item.note='The official venue link and practical details are being checked. Please confirm the event with its organiser before travelling.';
       if(isShow)item.category='Theatre & shows';
@@ -100,6 +143,6 @@
     }
     return items;
   }
-  const api={parseCSV,normalise,validate,iso,safeURL};
+  const api={parseCSV,normalise,validate,iso,safeURL,publicationHistory,londonDay,isNewThisWeek};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.GlobeeDB=api;
 })(typeof window!=='undefined'?window:globalThis);

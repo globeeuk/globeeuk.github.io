@@ -132,7 +132,7 @@ function fixImages(container){
   container.querySelectorAll('img[data-src]').forEach(img=>{
     if(!preparedImages.has(img)){
       preparedImages.add(img);
-      img.addEventListener('error',()=>{const p=data.find(v=>v.id===img.dataset.placeId),picture=img.closest('.picture,.detail-picture'),card=img.closest('.place-card'),mapCard=img.closest('.map-card');if(card&&p){card.classList.add('no-photo');card.querySelector('.card-body').insertAdjacentHTML('afterbegin',fallback(p));}if(picture)picture.remove();else img.remove();if(mapCard)mapCard.classList.add('no-photo');},{once:true});
+      img.addEventListener('error',()=>{const p=data.find(v=>v.id===img.dataset.placeId),picture=img.closest('.picture,.detail-picture'),card=img.closest('.place-card'),mapCard=img.closest('.map-card');if(card&&p){card.classList.add('no-photo');const badge=picture?.querySelector('.new-badge');if(badge)card.querySelector('.card-open').prepend(badge);card.querySelector('.card-body').insertAdjacentHTML('afterbegin',fallback(p));}if(picture)picture.remove();else img.remove();if(mapCard)mapCard.classList.add('no-photo');},{once:true});
     }
     if(imageObserver){imageObserver.observe(img);observedImages.add(img);}else loadImage(img);
   });
@@ -145,8 +145,20 @@ function card(p){
   const miles=nearbyDistance(p);
   const distanceTag=Number.isFinite(miles)?`<span class="nearby-card-distance">${miles<0.1?'Under 0.1':miles.toFixed(1)} mi</span>`:'';
   const clubSchedule=isNotebookHome&&state.notebookSection==='holidays'?`<p class="club-practical">${escapeHTML(p.scheduleText||'Daily hours TBC — check with the provider.')}</p>`:'';
-  return `<article class="place-card${p.image?'':' no-photo'}"><button class="card-open" data-open="${escapeHTML(p.id)}" aria-label="View ${escapeHTML(p.name)}">${p.image?`<div class="picture">${photo(p)}<span class="category-badge">${icon(p.type)}${escapeHTML(p.category)}</span></div>`:''}<div class="card-body">${p.image?'':fallback(p)}${locality(p)}<div class="card-heading"><h3>${escapeHTML(title)}</h3>${icon('arrow')}</div><p class="card-description">${escapeHTML(description)}</p><div class="card-meta">${meta(fossil?{...p,priceLabel:'Free beach entry'}:p)}${distanceTag}</div>${practical}${clubSchedule}</div></button></article>`;
+  const isNew=GlobeeDB.isNewThisWeek(p),badge=isNew?'<span class="new-badge" title="First listed on Globee this week" aria-hidden="true">NEW</span>':'';
+  return `<article class="place-card${p.image?'':' no-photo'}${isNew?' has-new':''}"><button class="card-open" data-open="${escapeHTML(p.id)}" aria-label="View ${escapeHTML(p.name)}${isNew?' — new on Globee this week':''}">${p.image?`<div class="picture">${photo(p)}<span class="category-badge">${icon(p.type)}${escapeHTML(p.category)}</span>${badge}</div>`:badge}<div class="card-body">${p.image?'':fallback(p)}${locality(p)}<div class="card-heading"><h3>${escapeHTML(title)}</h3>${icon('arrow')}</div><p class="card-description">${escapeHTML(description)}</p><div class="card-meta">${meta(fossil?{...p,priceLabel:'Free beach entry'}:p)}${distanceTag}</div>${practical}${clubSchedule}</div></button></article>`;
 }
+// Open tabs also lose last week's badge at the next minute boundary (and
+// immediately on return from sleep/background); no list reordering is needed.
+function refreshNewBadges(){
+  document.querySelectorAll('.place-card.has-new').forEach(card=>{
+    const button=card.querySelector('[data-open]'),p=data.find(p=>p.id===button?.dataset.open);
+    if(p&&!GlobeeDB.isNewThisWeek(p)){card.querySelector('.new-badge')?.remove();card.classList.remove('has-new');button.setAttribute('aria-label',`View ${p.name}`);}
+  });
+}
+function scheduleNewBadgeRefresh(){setTimeout(()=>{refreshNewBadges();scheduleNewBadgeRefresh();},60000-Date.now()%60000+25);}
+scheduleNewBadgeRefresh();
+document.addEventListener('visibilitychange',refreshNewBadges);
 function hasFilters(){return !!nearbyOrigin||isNotebookHome&&state.notebookSection!=='days'||state.browseAll||state.age.length||state.price!=='all'||state.type!=='all'||state.query||state.dates||state.collection||state.edit;}
 function renderWeekend(){
   if(isPlansPage)return;

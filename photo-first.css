@@ -28,3 +28,9 @@
 .place-card.no-photo .card-heading>svg{flex-shrink:0;margin-top:3px}
 .map-card.no-photo{grid-template-columns:minmax(0,1fr);padding:18px}
 .detail-body:first-child{padding-top:50px}
+/* First-listed-this-week marker; approved 11 November 2026. */
+.place-card.has-new .card-open{position:relative}
+.place-card .new-badge{position:absolute;top:12px;right:12px;z-index:3;display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:5px 10px;border:2px solid #FFFEFA;border-radius:5px;background:#2D352F;color:#FFFEFA;font:800 12px/1.2 var(--font);letter-spacing:.065em;white-space:nowrap;pointer-events:none}
+.place-card.has-new.no-photo .card-category{min-height:33px;padding-right:65px;display:flex;align-items:center}
+.place-card.has-new:not(.no-photo) .category-badge{max-width:calc(100% - 91px);align-items:center}
+.place-card.has-new:not(.no-photo) .category-badge svg{display:none}

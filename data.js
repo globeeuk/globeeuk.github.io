@@ -1,1 +1,2 @@
-window.GLOBEE_PLACES=GlobeeDB.normalise(GLOBEE_SNAPSHOT.master,GLOBEE_SNAPSHOT.events,GLOBEE_EDITORIAL);
+GLOBEE_SNAPSHOT.publicationHistory=GlobeeDB.publicationHistory(GLOBEE_SNAPSHOT.master,GLOBEE_SNAPSHOT.events,GLOBEE_SNAPSHOT.publicationHistory);
+window.GLOBEE_PLACES=GlobeeDB.normalise(GLOBEE_SNAPSHOT.master,GLOBEE_SNAPSHOT.events,GLOBEE_EDITORIAL,GLOBEE_SNAPSHOT.publicationHistory);

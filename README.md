@@ -18,6 +18,38 @@ The existing published Google Sheet is the source of truth. `db-loader.js` reads
 
 ## Home and discovery
 
+### NEW means first published this London calendar week
+
+NEW applies to an event or club first listed from Monday 00:00 until the following
+Monday 00:00 in Europe/London, independently of its event dates. Missing, invalid,
+future or unknown legacy registration dates do not qualify. Expired/cancelled
+listings keep the existing exclusion rules. Opening a page never changes dates.
+
+The adapter preserves the earliest `date_added`/`added` evidence and the snapshot's
+`publicationHistory`. Refreshes retain that history, including removed listings
+and null dates for unknown legacy records. Do not regenerate it from the current
+date or remove it when re-registering a listing. The public CSV, saved snapshot and
+browser cache use the same first-publication rule. Unknown legacy dates require
+checked historical evidence before an explicit correction; do not backfill today.
+
+Identity is an event/programme, not its organiser, venue or URL. A distinct new
+topic/programme at the same venue can be new. Price, description, photo, title,
+date and extra-session edits keep the original publication date. For a title
+rename, add an old-name → new-name entry to `GLOBEE_EDITORIAL.aliases` in the same
+release and retain the original Sheet registration date. Aliases carry the old
+publication history forward. Do not create a new identity just to refresh NEW.
+For a genuinely different programme with the same generic title, use a distinct
+programme-specific canonical name in both Sheet tabs (for example “Craft Club —
+paper folding” and “Craft Club — Christmas decorations”), without an alias between
+them. Another session of the same programme keeps the same name and history.
+Duplicate master names in one region are rejected. The Sheet has no immutable
+event ID: semantic title changes and whether a programme is genuinely distinct
+require this editorial identity check; software does not infer that from wording.
+
+The approved dark marker sits 12px inside the photo's top-right corner, or the
+card's top-right corner without a photo. Open tabs clear expired badges at minute
+boundaries and when returning from the background. Card ordering is unchanged.
+
 An active editorial shortlist can appear above This weekend. It is hidden outside its configured dates or when the selected region has no verified matching event. Halloween runs from 13 September through 31 October 2026 and currently contains five verified Devon plans. The Bristol edit runs from 21 September 2026 through 31 January 2027 and groups the growing Bristol pilot. Home shortlists show at most five; View all opens the dedicated seasonal or SEO list. Future edits retain the same twelve-card incremental loading as the main directory.
 
 This weekend shows up to five date-confirmed entries from the selected region. Saturday and Sunday are calculated using the current Europe/London date; on Sunday only the remaining day is shown. Ongoing programmes can qualify. Recurring entries count once; TBC and out-of-window activities never fill empty slots. Shorter dated outings come first, with names breaking ties. This is a date-based selection, not a quality or popularity ranking.
