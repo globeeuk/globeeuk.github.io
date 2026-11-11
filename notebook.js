@@ -37,7 +37,8 @@
   };
   if(heading&&copy[section]){kicker.textContent=copy[section][0];heading.textContent=copy[section][1];intro.textContent=copy[section][2];}
   const notes=section==='notes';
-  ['.entry-cards','.home-secondary-links','.notebook-browse-row','.notebook-home .result-section','.notebook-home .notebook-search-row'].forEach(selector=>{const el=document.querySelector(selector);if(el)el.hidden=notes;});
+  ['.entry-cards','.home-secondary-links','.notebook-browse-row'].forEach(selector=>{const el=document.querySelector(selector);if(el)el.hidden=notes||!!state.query;});
+  ['.notebook-home .result-section','.notebook-home .notebook-search-row'].forEach(selector=>{const el=document.querySelector(selector);if(el)el.hidden=notes;});
   const pending=document.getElementById('parent-notes-pending');if(pending)pending.hidden=!notes;
   const localRegion=region==='Devon'?'Exeter':region;let localNotes=0;
   document.querySelectorAll('[data-notes-region]').forEach(card=>{card.hidden=!card.dataset.notesRegion.split(' ').includes(localRegion);if(!card.hidden)localNotes++;});
@@ -49,7 +50,9 @@
   const options={days:[['classes','Something new to try?'],['notes','A question to figure out?']],classes:[['days','A day to spend together?'],['holidays','Planning the school break?']],holidays:[['days','A day out together?'],['notes','A few practical notes?']],notes:[['days','Ready to head out?'],['classes','Follow a little interest?']]};
   document.querySelectorAll('.notebook-continue a').forEach((a,i)=>{const [key,prompt]=options[section][i];a.href=url(key,region);a.querySelector('span').textContent=prompt;a.querySelector('strong').textContent=labels[key]+' →';});
  }
- window.GlobeeNotebook={sync};
+ let searchTimer,composing=false;
+ function cancelSearch(){clearTimeout(searchTimer);searchTimer=null;}
+ window.GlobeeNotebook={sync,cancelSearch};
  const signup=document.getElementById('weekend-newsletter-signup');
  signup?.addEventListener('toggle',()=>{
   if(!signup.open||signup.querySelector('iframe'))return;
@@ -66,8 +69,12 @@
  document.querySelector('[data-notebook-filter-toggle]')?.addEventListener('click',event=>{
   const controls=document.getElementById('notebook-filter-controls');controls.hidden=!controls.hidden;event.currentTarget.setAttribute('aria-expanded',String(!controls.hidden));
  });
- document.getElementById('notebook-home-search')?.addEventListener('submit',event=>{event.preventDefault();window.GlobeeNotebookSearch?.(document.getElementById('notebook-home-query').value.trim());});
- let searchTimer;document.getElementById('notebook-home-query')?.addEventListener('input',event=>{clearTimeout(searchTimer);const value=event.currentTarget.value;searchTimer=setTimeout(()=>window.GlobeeNotebookSearch?.(value),220);});
+ const homeQuery=document.getElementById('notebook-home-query');
+ document.getElementById('notebook-home-search')?.addEventListener('submit',event=>{event.preventDefault();if(composing)return;cancelSearch();window.GlobeeNotebookSearch?.(homeQuery.value.trim());const heading=document.getElementById('results-heading');heading?.focus({preventScroll:true});heading?.scrollIntoView({block:'start'});});
+ function scheduleSearch(){cancelSearch();if(composing)return;searchTimer=setTimeout(()=>{searchTimer=null;window.GlobeeNotebookSearch?.(homeQuery.value);},220);}
+ homeQuery?.addEventListener('input',scheduleSearch);
+ homeQuery?.addEventListener('compositionstart',()=>{composing=true;cancelSearch();});
+ homeQuery?.addEventListener('compositionend',()=>{composing=false;scheduleSearch();});
  sync();
  if(!body.classList.contains('notebook-classes'))return;
  const cards=[...document.querySelectorAll('.card[data-category]')],input=document.getElementById('notebook-class-query');

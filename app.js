@@ -104,10 +104,7 @@ function matches(p,ignore){
     if(!p.ages)return false;
     if(!state.age.some(id=>{const b=ageBands.find(v=>v.id===id);return p.ages[0]<=b.max&&p.ages[1]>=b.min;}))return false;
   }
-  if(ignore!=='search'&&state.query){
-    const text=[p.name,p.description,p.address,p.type,p.category,...(p.keywords||[])].join(' ').toLowerCase();
-    if(!state.query.toLowerCase().trim().split(/\s+/).every(word=>text.includes(word)))return false;
-  }
+  if(ignore!=='search'&&!GlobeeDiscovery.matchesQuery(p,state.query))return false;
   return true;
 }
 function visiblePlaces(){
@@ -271,11 +268,11 @@ function setupRails(){
     el.addEventListener('click',e=>{if(moved){e.preventDefault();e.stopPropagation();moved=false;}},true);
   });
 }
-function render(){
+function render(options={}){
   const places=visiblePlaces();
   const weekendOnlyPilot=!isNotebookHome&&!isPlansPage&&state.region==='Bristol'&&!hasFilters()&&state.view==='list'&&places.length>0&&places.length<=10&&GlobeeDiscovery.weekendPicks(places,TODAY).length===places.length;
   const filterSignature=JSON.stringify([state.region,state.age,state.price,state.type,state.query,state.dates,state.collection,state.edit,state.browseAll,nearbyVersion,nearbyMiles]);
-  if(lastFilterSignature!==null&&lastFilterSignature!==filterSignature){visibleCount=PAGE_SIZE;if(state.view==='list')window.scrollTo({top:0,behavior:'instant'});}
+  if(lastFilterSignature!==null&&lastFilterSignature!==filterSignature){visibleCount=PAGE_SIZE;if(state.view==='list'&&!options.preserveScroll)window.scrollTo({top:0,behavior:'instant'});}
   lastFilterSignature=filterSignature;
   if(isNotebookHome&&!('IntersectionObserver' in window))visibleCount=places.length;
   updatePlanRoute();
@@ -315,7 +312,7 @@ function render(){
     halfTermEntry.closest('.entry-cards').classList.toggle('entry-cards-winter',halfTermActive||christmasActive);
   }
   const newsletter=$('#weekend-newsletter');
-  if(newsletter)newsletter.hidden=state.region!=='Exeter'||state.notebookSection!=='days'||state.view!=='list'||!!nearbyOrigin;
+  if(newsletter)newsletter.hidden=state.region!=='Exeter'||state.notebookSection!=='days'||state.view!=='list'||!!nearbyOrigin||!!state.query;
   nearbyControls?.sync(nearbyOrigin,nearbyMiles,state.notebookSection!=='notes',state.region);
   if(scoopPromo)scoopPromo.href=`ice-cream.html?from=${state.region==='Bristol'?'Bristol':'Devon'}`;
   if(winterMapLink)winterMapLink.querySelector('a').href=`ice-cream.html?from=${state.region==='Bristol'?'Bristol':'Devon'}`;
@@ -334,6 +331,8 @@ function render(){
   const showAllResults=!!nearbyOrigin||isPlansPage&&['half-term','christmas'].includes(state.edit);
   const combinedChristmas=activeEdit?.id==='christmas'&&state.region==='Exeter'&&!state.age.length&&state.price==='all'&&state.type==='all'&&!state.query&&!state.dates&&!state.collection;
   $('#result-count').textContent=weekendOnlyPilot?'':combinedChristmas?`${CHRISTMAS_TREE_SOURCES.length} tree places · ${places.length} festive plans`:`${places.length} ${places.length===1?'result':'results'}`;
+  const searchFeedback=$('#notebook-search-feedback');
+  if(searchFeedback){searchFeedback.hidden=!state.query;searchFeedback.innerHTML=state.query?`${places.length} ${places.length===1?'result':'results'} for “${escapeHTML(state.query)}” <a href="#results-heading">View results</a>`:'';}
   $('#date-scope-note').hidden=!state.dates;
   $('#date-scope-note').textContent=isPlansPage?'Showing events and clubs with confirmed dates. Clear Dates to include clubs with dates TBC.':'Showing date-confirmed events. Clear Dates to include cafés, regular places and activities with dates TBC.';
   renderWeekend();
@@ -356,8 +355,8 @@ function render(){
   if(isNotebookHome)window.GlobeeNotebook?.sync(state);
   if(state.view==='map')renderMap(places);
 }
-function resetFilters(){nearbyOrigin=null;nearbyMiles=0;nearbyVersion++;state.age=[];state.price='all';state.type='all';state.query='';state.dates=null;state.collection=null;state.edit=dedicatedEdit;state.browseAll=false;render();}
-function clearFilter(key){state[key]=key==='browseAll'?false:['dates','collection','edit'].includes(key)?null:key==='age'?[]:key==='query'?'':'all';render();}
+function resetFilters(){window.GlobeeNotebook?.cancelSearch();nearbyOrigin=null;nearbyMiles=0;nearbyVersion++;state.age=[];state.price='all';state.type='all';state.query='';state.dates=null;state.collection=null;state.edit=dedicatedEdit;state.browseAll=false;render();}
+function clearFilter(key){if(key==='query')window.GlobeeNotebook?.cancelSearch();state[key]=key==='browseAll'?false:['dates','collection','edit'].includes(key)?null:key==='age'?[]:key==='query'?'':'all';render();}
 function option(value,title,sub,selected,inputType='radio',name='choice'){return `<label class="option-label"><input type="${inputType}" name="${name}" value="${escapeHTML(value)}" ${selected?'checked':''}><span>${escapeHTML(title)}${sub?`<small>${escapeHTML(sub)}</small>`:''}</span></label>`;}
 function renderCalendar(){
   const first=utcDate(calendarMonth+'-01');
@@ -562,7 +561,7 @@ $('#view-toggle').addEventListener('click',()=>{
   if(!toMap)window.scrollTo({top:listScroll,behavior:'instant'});
   if(toMap&&map)requestAnimationFrame(()=>map.invalidateSize());
 });
-window.GlobeeNotebookSearch=query=>{state.query=String(query||'').trim();render();};
+window.GlobeeNotebookSearch=query=>{state.query=String(query||'').trim();render({preserveScroll:true});};
 window.addEventListener('globee:data',event=>{data=withVerifiedHalfTermClubs(event.detail.places).map(GlobeeImages.decorate);lastListSignature='';lastPrimaryPlansKey=null;render();if(currentMenu==='dates')renderCalendar();});
 const nearbyControls=isNotebookHome&&window.GlobeeNearby&&window.GlobeeNearbyData
   ?GlobeeNearby.mount($('#nearby-search'),origin=>{

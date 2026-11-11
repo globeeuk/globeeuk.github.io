@@ -9,7 +9,7 @@ test('The region button explains its action and retains the existing dialog',()=
 });
 test('All notebook pages load the visible-region controls and preserve native class selection',()=>{
  for(const f of ['index.html','classes.html','bristol/classes/index.html','nottingham/classes/index.html']){
-  assert.match(read(f),/notebook\.css\?v=notebook1-region1/);assert.match(read(f),/notebook\.js\?v=notebook1-region1/);
+  assert.match(read(f),/notebook\.css\?v=[\w-]+/);assert.match(read(f),/notebook\.js\?v=[\w-]+/);
  }
  const script=read('notebook.js');assert.match(script,/wrapper\.append\(caption,classRegion,arrow\)/);
  assert.match(script,/window\.location\.href=url\('classes',event\.currentTarget\.value\)/);

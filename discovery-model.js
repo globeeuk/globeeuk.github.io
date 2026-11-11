@@ -2,6 +2,14 @@
 (function(root){
   'use strict';
   const date=s=>new Date(s+'T12:00:00Z');
+  // Match whole words and word beginnings, not "ice" inside "service"/"price".
+  const searchWords=text=>String(text||'').normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().match(/[\p{L}\p{N}]+/gu)||[];
+  function matchesQuery(place,query){
+    const terms=searchWords(query);
+    if(!terms.length)return !String(query||'').trim();
+    const words=searchWords([place.name,place.description,place.address,place.type,place.category,...(place.keywords||[])].join(' '));
+    return terms.every(term=>words.some(word=>word.startsWith(term)));
+  }
   const SEASONAL_EDITS=[
     {id:'half-term',title:'October Half Term Edit',start:'2026-10-16',end:'2026-10-29',minPicks:1,subtitle:'Days out, shows and holiday clubs for the school break'},
     {id:'halloween',title:'Halloween plans',page:'halloween.html',start:'2026-09-13',end:'2026-10-31',home:false,minPicks:1,terms:/halloween|pumpkin|ghost|spook|trick or treat|monster|skeleton|tim burton|hocus pocus|nightmare before christmas/i,subtitle:'Halloween family plans'},
@@ -94,6 +102,6 @@
     }
     return groups;
   }
-  const api={SEASONAL_EDITS,halfTermWindow,weekendRange,weekendPicks,nextFourWeeksRange,nextFourWeeksPicks,seasonalDefinition,matchesSeasonal,seasonalPlaces,seasonalEdit,bookAheadEdit,nextBatch,hasMapLocation,initialMapSelection,mapGroups};
+  const api={matchesQuery,SEASONAL_EDITS,halfTermWindow,weekendRange,weekendPicks,nextFourWeeksRange,nextFourWeeksPicks,seasonalDefinition,matchesSeasonal,seasonalPlaces,seasonalEdit,bookAheadEdit,nextBatch,hasMapLocation,initialMapSelection,mapGroups};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.GlobeeDiscovery=api;
 })(typeof window!=='undefined'?window:globalThis);
