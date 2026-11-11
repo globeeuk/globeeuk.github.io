@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-11-09",
+  "source_verified_at": "2026-11-11",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -297,9 +297,9 @@
       "sources": [
         {
           "url": "https://rammuseum.org.uk/visit/",
-          "supports": "Confirms free museum admission, Queen Street address, Monday closure, Tuesday 10.30am–5pm and Wednesday–Sunday 10am–5pm. The 28 October Gallery 20 event-closure banner is absent from the reviewed current page. This does not establish actual gallery reopening or exceptional opening.",
-          "retrieval": "Official Visit-page body reviewed through the web tool on 30 October 2026 (Europe/London, GMT). Entry, address, weekly hours and absence of the past banner compared. No on-site access or live availability check.",
-          "previous_retrieval": "Official RAMM Visit page body reviewed through the web tool on 21 October 2026 at about 07:30 BST. The Gallery 20 maintenance banner now says 5–21 October; ordinary museum free entry and weekly hours remain listed. The site still displays the historical 20 October cafe notice, which is no longer presented as an upcoming visitor condition. No on-site reopening or ticket availability was checked.",
+          "supports": "Free museum admission, Queen Street address, Monday closure, Tuesday 10.30am–5pm and Wednesday–Sunday 10am–5pm remain stated. Living Labyrinths: Art and Fungi closes at 4.30pm on Wednesday 11 November 2026, with last entry at 3.30pm. Gallery 20 (Exeter's Fine Art Gallery) closes from noon on Thursday 12 November 2026. The museum expects it to reopen the following day; confirm access before travelling. These notices concern an exhibition and a gallery, not the whole museum.",
+          "retrieval": "Official page body reviewed through the web tool on 11 November 2026 (Europe/London, GMT), including the two current banners. No on-site access, reopening or live ticket availability check.",
+          "previous_retrieval": "Official Visit-page body reviewed through the web tool on 30 October 2026 (Europe/London, GMT). Entry, address, weekly hours and absence of the past banner compared. No on-site access or live availability check.",
           "label": "Plan your museum visit",
           "retrieval_history": [
             "Official-source content reviewed on 20 September 2026. Web retrieval may use indexed official content; this does not promise live ticket availability or exceptional same-day opening.",
@@ -311,7 +311,8 @@
             "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check.",
             "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
             "Official RAMM Visit page body reviewed through the web tool on 21 October 2026 at about 07:30 BST. The Gallery 20 maintenance banner now says 5–21 October; ordinary museum free entry and weekly hours remain listed. The site still displays the historical 20 October cafe notice, which is no longer presented as an upcoming visitor condition. No on-site reopening or ticket availability was checked.",
-            "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check."
+            "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check.",
+            "Official Visit-page body reviewed through the web tool on 30 October 2026 (Europe/London, GMT). Entry, address, weekly hours and absence of the past banner compared. No on-site access or live availability check."
           ],
           "supports_history": [
             {
@@ -328,6 +329,13 @@
               "supports": [
                 "Confirms free museum entry, Queen Street address, galleries and regular opening: Tuesday 10.30am–5pm, Wednesday–Sunday 10am–5pm, Monday closed.",
                 "The current banner says Gallery 20 will close on Wednesday 28 October for an event; it is not a whole-museum closure notice."
+              ]
+            },
+            {
+              "observed_at": "2026-10-30",
+              "supports": [
+                "Confirms free museum admission, Queen Street address, Monday closure, Tuesday 10.30am–5pm and Wednesday–Sunday 10am–5pm.",
+                "The 28 October Gallery 20 event-closure banner is absent from the reviewed current page. This does not establish actual gallery reopening or exceptional opening."
               ]
             }
           ]
@@ -357,9 +365,9 @@
         {
           "url": "https://rammuseum.org.uk/",
           "label": "Current gallery closure notices",
-          "supports": "The current homepage lists Queen Street address and ordinary museum opening hours and does not display the past 28 October Gallery 20 closure banner.",
-          "retrieval": "Official homepage body reviewed through the web tool on 30 October 2026 (Europe/London, GMT); ordinary schedule and absence of the past banner compared. No reopening guarantee.",
-          "previous_retrieval": "Official RAMM homepage body reviewed on 2 October 2026 at about 07:30 BST; the same current Gallery 20 event and maintenance notices appear there. The banner omits a year but its Thursday 1 and Saturday 3 October dates match 2026.",
+          "supports": "Free museum admission, Queen Street address, Monday closure, Tuesday 10.30am–5pm and Wednesday–Sunday 10am–5pm remain stated. Living Labyrinths: Art and Fungi closes at 4.30pm on Wednesday 11 November 2026, with last entry at 3.30pm. Gallery 20 (Exeter's Fine Art Gallery) closes from noon on Thursday 12 November 2026. The museum expects it to reopen the following day; confirm access before travelling. These notices concern an exhibition and a gallery, not the whole museum.",
+          "retrieval": "Official page body reviewed through the web tool on 11 November 2026 (Europe/London, GMT), including the two current banners. No on-site access, reopening or live ticket availability check.",
+          "previous_retrieval": "Official homepage body reviewed through the web tool on 30 October 2026 (Europe/London, GMT); ordinary schedule and absence of the past banner compared. No reopening guarantee.",
           "review_note": "Previous dated gallery-closure evidence is retained in supports_history and retrieval_history; no current whole-museum closure or guaranteed gallery reopening is inferred.",
           "supports_history": [
             {
@@ -373,53 +381,63 @@
               "supports": [
                 "The current homepage repeats the Gallery 20-only 28 October event closure and lists the regular museum opening schedule and Queen Street address."
               ]
+            },
+            {
+              "observed_at": "2026-10-30",
+              "supports": [
+                "The current homepage lists Queen Street address and ordinary museum opening hours and does not display the past 28 October Gallery 20 closure banner."
+              ]
             }
           ],
           "retrieval_history": [
             "Official RAMM homepage body reviewed on 2 October 2026 at about 07:30 BST; the same current Gallery 20 event and maintenance notices appear there. The banner omits a year but its Thursday 1 and Saturday 3 October dates match 2026.",
-            "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check."
+            "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check.",
+            "Official homepage body reviewed through the web tool on 30 October 2026 (Europe/London, GMT); ordinary schedule and absence of the past banner compared. No reopening guarantee."
           ]
         }
       ],
-      "verified_at": "2026-10-30",
+      "verified_at": "2026-11-11",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 5,
         "event_rows": [],
-        "reconciliation_note": "Native 시트1!N5 updated from the official current Gallery 20 notice, read back and compared with the complete published CSV. Existing museum hours, free price, region and historical rows preserved.",
-        "checked_at": "2026-10-27T07:12:02.980Z",
+        "reconciliation_note": "Native 시트1!N5 only: added the two dated official notices, read back the value and existing format, and confirmed matching published CSV. No event rows, hours, price, region or historical rows changed.",
+        "checked_at": "2026-11-11T07:07:32.075214+00:00",
         "published_csv_checked": true,
-        "published_csv_checked_at": "2026-10-27T07:08:32+00:00"
+        "published_csv_checked_at": "2026-11-11T07:06:38+00:00"
       },
       "limitations": [
         "Specific children's trail availability and numerical age guidance were not established in this refresh.",
         "A general place has not been converted into dated event occurrences.",
-        "The past Gallery 20-only 28 October closure is retained in evidence history, not shown as a forthcoming visitor condition. Removal of the banner does not establish on-site reopening.",
-        "The Visit page and homepage were reviewed on 30 October. The separate access URL returned HTTP 403; its earlier 27 October evidence has not been renewed."
+        "The current banners omit a year; their Wednesday 11 and Thursday 12 November dates match the current 2026 programme/calendar. Expected reopening is a provider statement, not confirmation of actual reopening.",
+        "The Visit page and homepage were reviewed on 11 November. The separate access URL returned HTTP 403; its earlier 27 October evidence has not been renewed."
       ],
-      "previous_verified_at": "2026-10-27",
+      "previous_verified_at": "2026-10-30",
       "review_status": "verified",
       "practical_notes": [
         "The museum lists bank-holiday closures; check exceptional opening before travelling.",
-        "Check individual gallery access before travelling."
+        "Check individual gallery access before travelling.",
+        "Living Labyrinths: Art and Fungi closes at 4.30pm on Wednesday 11 November 2026, with last entry at 3.30pm.",
+        "Gallery 20 (Exeter's Fine Art Gallery) closes from noon on Thursday 12 November 2026. The museum expects it to reopen the following day; confirm access before travelling. These notices concern an exhibition and a gallery, not the whole museum."
       ],
       "sheet_bindings": [
         {
           "candidate_id": "f5492124652f836e731fef31",
           "name": "RAMM – Royal Albert Memorial Museum",
           "region": "Devon",
-          "fingerprint": "86f3916d3faa735edf6dd4be5d003d669255d8c20d9c6a713d7c422619843ef0"
+          "fingerprint": "3fe369070fac463005b0c73116d0d8e6658a9e0e96bc34f8ef1fefdc91dadf55"
         }
       ],
       "review_notes": [
         "The official visit page confirms free entry, Monday closure and Tue–Sun hours, and warns that the cafe will be closed for maintenance on Tuesday 20 October with only hot drinks and cakes available in the cafe seating area.",
         "21 October: the official Visit-page banner extended Gallery 20 maintenance through 21 October. The 20 October cafe closure is now past and was removed from current practical notes; the official site still displays it as a historical banner. General admission and opening hours remain unchanged.",
         "The Wednesday 28 October banner matches the 2026 calendar and current 2026 museum programme. Ordinary museum hours are separate; no whole-museum closure or guaranteed reopening inferred.",
-        "30 October: the official Visit page and homepage no longer display the past 28 October Gallery 20-only banner. Removed the expired current notice from the exact existing master row and current visitor notes. Regular entry/hours confirmed; general age and booking remain TBC. Access URL returned 403, so that source retains its previous review date. No reopening inferred."
+        "30 October: the official Visit page and homepage no longer display the past 28 October Gallery 20-only banner. Removed the expired current notice from the exact existing master row and current visitor notes. Regular entry/hours confirmed; general age and booking remain TBC. Access URL returned 403, so that source retains its previous review date. No reopening inferred.",
+        "11 November: current exhibition early closing/last entry and Gallery 20-only next-day closure added to native master N5 and visible practical notes. Normal museum entry/hours unchanged; age and general booking remain TBC. Native value/format readback and fresh published CSV confirmed before binding update. Access source retains older evidence after 403."
       ],
       "previous_practical_notes": [
         "The museum lists bank-holiday closures; check exceptional opening before travelling.",
-        "Gallery 20 is listed as closed for maintenance through 21 October; check reopening if that gallery is your reason to visit."
+        "Check individual gallery access before travelling."
       ],
       "practical_notes_history": [
         {
@@ -427,6 +445,13 @@
           "notes": [
             "The museum lists bank-holiday closures; check exceptional opening before travelling.",
             "Gallery 20 is listed as closed on Wednesday 28 October 2026 for an event. This notice is for that gallery, not the whole museum; check individual gallery access before travelling."
+          ]
+        },
+        {
+          "observed_at": "2026-10-30",
+          "notes": [
+            "The museum lists bank-holiday closures; check exceptional opening before travelling.",
+            "Check individual gallery access before travelling."
           ]
         }
       ],
@@ -438,12 +463,23 @@
             "A general place has not been converted into dated event occurrences.",
             "The Gallery 20 banner omits a year; the 5–21 October maintenance notice continues the October 2026 notice previously checked. The stated closure applies to Gallery 20, not the entire museum. Reopening after 21 October has not been confirmed on-site."
           ]
+        },
+        {
+          "observed_at": "2026-10-30",
+          "limitations": [
+            "Specific children's trail availability and numerical age guidance were not established in this refresh.",
+            "A general place has not been converted into dated event occurrences.",
+            "The past Gallery 20-only 28 October closure is retained in evidence history, not shown as a forthcoming visitor condition. Removal of the banner does not establish on-site reopening.",
+            "The Visit page and homepage were reviewed on 30 October. The separate access URL returned HTTP 403; its earlier 27 October evidence has not been renewed."
+          ]
         }
       ],
       "city": "Exeter",
       "notes": [
         "The museum lists bank-holiday closures; check exceptional opening before travelling.",
-        "Check individual gallery access before travelling."
+        "Check individual gallery access before travelling.",
+        "Living Labyrinths: Art and Fungi closes at 4.30pm on Wednesday 11 November 2026, with last entry at 3.30pm.",
+        "Gallery 20 (Exeter's Fine Art Gallery) closes from noon on Thursday 12 November 2026. The museum expects it to reopen the following day; confirm access before travelling. These notices concern an exhibition and a gallery, not the whole museum."
       ],
       "free_basis": "Free museum admission. Check individual event listings for any separate charges.",
       "indoor_basis": "Editorial classification based on the museum's indoor galleries described on its official visit page."
@@ -3418,7 +3454,7 @@
           "candidate_id": "70adf53aba5f3888bfb41dc6",
           "name": "Tobacco Factory Sunday Market",
           "region": "Bristol",
-          "fingerprint": "93045ccded237da9731efe73216b21e290532d77b7955b0ea0d04a6f78009681"
+          "fingerprint": "26cf7aeeedad470dece644add5615adf7e44c8604a93a0d933675885f04e210a"
         }
       ],
       "sheet_match": {
@@ -3431,12 +3467,13 @@
           502,
           503
         ],
-        "published_csv_checked_at": "2026-11-09T08:54:51+00:00",
-        "reconciliation_note": "Compared exact master and events entries in the complete published CSVs against the reviewed provider details. Existing native dates and values were preserved. No new native cell read or write for this review.",
-        "checked_at": "2026-11-09T08:54:51+00:00",
+        "published_csv_checked_at": "2026-11-11T07:12:21+00:00",
+        "reconciliation_note": "11 November concurrent master I250/N250 wording now refers to 15 November instead of 1/8 November. Native CellData and published CSV agree. Official calendar plus dated 15/22 November bodies reviewed: dates, 10am start, conflicting 2pm/2.30pm close and TBC visitor terms match the existing export; no published fact or evidence date change. Historical event rows preserved.",
+        "checked_at": "2026-11-11T07:12:21+00:00",
         "reconciliation_history": [
           "Native 시트1!I250/M250/N250 corrected and read back. Matching events 500/501 and all historical dates preserved. Complete published master/events CSV confirms the exact updated source and unresolved closing time before binding renewal.",
-          "2 November: bounded native CellData and full published CSV compared with the reviewed official body. Current values/dates, formulas, formats and validation preserved. Only the separately audited RAMM/master and Tobacco/events provenance notes changed; no native visual check or new DB/date row claimed."
+          "2 November: bounded native CellData and full published CSV compared with the reviewed official body. Current values/dates, formulas, formats and validation preserved. Only the separately audited RAMM/master and Tobacco/events provenance notes changed; no native visual check or new DB/date row claimed.",
+          "Compared exact master and events entries in the complete published CSVs against the reviewed provider details. Existing native dates and values were preserved. No new native cell read or write for this review."
         ]
       },
       "historical_sources": [

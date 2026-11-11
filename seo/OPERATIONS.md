@@ -12,8 +12,10 @@ The active narrow SEO heartbeat, **Globee SEO refresh**, runs twice daily in **E
 
 | Time | Purpose |
 | --- | --- |
-| 07:30 | Review official sources for the selected guides, reconcile relevant Sheet changes and rebuild when appropriate |
+| 07:00 | Review official sources for the selected guides, reconcile relevant Sheet changes and rebuild when appropriate |
 | 18:30 | Rebuild primarily to remove expired or ended choices; review source changes only when needed |
+
+**Schedule and ownership updated on 10 November 2026:** the narrow daily checks run in 04 at 07:00 and 18:30 Europe/London. Wednesday event operations stay in 01; Monday statistics belong to 06. The 04 record comparison does not add daily statistics queries.
 
 **Activated on 13 September 2026** and confirmed in the saved automation. A scheduled invocation is not proof of successful publication. This local scheduled task requires the computer to remain on, the desktop app to be running and the checkout to be available. See [official scheduled-task guidance](https://learn.chatgpt.com/docs/automations?surface=app).
 
