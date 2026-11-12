@@ -498,6 +498,11 @@
     margin-bottom: 5px;
   }
 
+  #home-christmas-market-map .market-map-tree {
+    align-self: flex-start;
+    margin-top: .105em;
+  }
+
   #home-christmas-market-map .market-map-controls button {
     padding-inline: 12px;
   }
