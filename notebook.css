@@ -42,6 +42,15 @@
 .notebook-kicker{display:block;font-size:11px;line-height:1.6;letter-spacing:.09em;font-weight:600;color:var(--nb-rust);margin-bottom:8px}
 .notebook-page .entry-intro h1,.notebook-classes .topline h1{font:500 clamp(29px,3.7vw,43px)/1.13 var(--heading);letter-spacing:-.035em;margin:0 0 10px}
 .notebook-page .entry-intro>p,.notebook-classes .topline p{font-size:14px;line-height:1.8;color:var(--muted);margin:0;max-width:720px}
+.notebook-home .devon-weekend-guide{
+ --guide-accent:#244a78;
+ display:flex;align-items:center;gap:.4em;width:fit-content;max-width:100%;min-height:44px;margin-top:-5px;
+ color:var(--ink);font:700 14px/1.45 var(--font);
+ text-decoration:underline var(--guide-accent);text-decoration-thickness:2px;text-underline-offset:.2em;
+}
+.notebook-home .devon-weekend-guide span{color:var(--guide-accent)}
+.notebook-home .devon-weekend-guide:hover{text-decoration-thickness:3px}
+.notebook-home .devon-weekend-guide:not([hidden])+.notebook-search-row{margin-top:5px}
 .notebook-search-row{display:flex;gap:9px;margin-top:20px;margin-bottom:20px}
 .notebook-search{display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:7px;padding:0 12px;min-height:44px;flex:1;min-width:0;background:var(--paper)}
 .notebook-search input{border:0;background:none;color:var(--ink);font:400 14px var(--font);width:100%;min-width:0;padding:12px 0;outline-offset:2px}

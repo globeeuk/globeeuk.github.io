@@ -36,6 +36,12 @@
    notes:['THE GLOBEE NOTEBOOK','Things I wanted to know.','Notes on the questions that come with family life.']
   };
   if(heading&&copy[section]){kicker.textContent=copy[section][0];heading.textContent=copy[section][1];intro.textContent=copy[section][2];}
+  const weekendGuide=document.getElementById('devon-weekend-guide');
+  if(weekendGuide){
+   const showGuide=state.notebookSection==='days'&&(state.region==='Exeter'||state.region==='Devon');
+   weekendGuide.hidden=!showGuide;
+   intro.hidden=showGuide;
+  }
   const notes=section==='notes';
   ['.entry-cards','.home-secondary-links','.notebook-browse-row'].forEach(selector=>{const el=document.querySelector(selector);if(el)el.hidden=notes||!!state.query;});
   ['.notebook-home .result-section','.notebook-home .notebook-search-row'].forEach(selector=>{const el=document.querySelector(selector);if(el)el.hidden=notes;});
