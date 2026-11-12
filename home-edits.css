@@ -192,7 +192,7 @@
   .home-weekend-edit{margin-right:18px}
 }
 
-#home-christmas-market-map {
+[data-market-map-variant="paper"] {
   --map-paper: #fffefa;
   --map-ink: #2d352f;
   --map-secondary: #62665e;
@@ -206,7 +206,7 @@
   font-family: Manrope, system-ui, sans-serif;
 }
 
-#home-christmas-market-map .market-map-heading {
+[data-market-map-variant="paper"] .market-map-heading {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -217,7 +217,7 @@
   padding-top: clamp(14px, 2vw, 22px);
 }
 
-#home-christmas-market-map .market-map-heading h2 {
+[data-market-map-variant="paper"] .market-map-heading h2 {
   display:flex;
   align-items:center;
   gap:.28em;
@@ -226,20 +226,20 @@
   letter-spacing: -.018em;
 }
 
-#home-christmas-market-map .market-map-tree {
+[data-market-map-variant="paper"] .market-map-tree {
   position:relative;
   flex:0 0 .67em;
   height:.84em;
 }
 
-#home-christmas-market-map .market-map-tree-crown {
+[data-market-map-variant="paper"] .market-map-tree-crown {
   position:absolute;
   inset:0 0 .08em;
   background:#36543a;
   clip-path:polygon(50% 0,76% 32%,65% 32%,89% 61%,75% 61%,100% 91%,0 91%,25% 61%,11% 61%,35% 32%,24% 32%);
 }
 
-#home-christmas-market-map .market-map-tree-trunk {
+[data-market-map-variant="paper"] .market-map-tree-trunk {
   position:absolute;
   bottom:0;
   left:.27em;
@@ -248,7 +248,7 @@
   background:#62665e;
 }
 
-#home-christmas-market-map .market-map-bauble {
+[data-market-map-variant="paper"] .market-map-bauble {
   position:absolute;
   top:.26em;
   left:.29em;
@@ -259,40 +259,40 @@
   box-shadow:-.12em .19em #a73538,.13em .29em #a73538;
 }
 
-#home-christmas-market-map .market-map-year {
+[data-market-map-variant="paper"] .market-map-year {
   color: var(--map-secondary);
   font: 650 .41em/1 Outfit, system-ui, sans-serif;
   letter-spacing: .04em;
   white-space: nowrap;
 }
 
-#home-christmas-market-map a {
+[data-market-map-variant="paper"] a {
   color: var(--map-slate);
   font-weight: 750;
   text-decoration: underline;
   text-underline-offset: .22em;
 }
 
-#home-christmas-market-map .market-map-guide {
+[data-market-map-variant="paper"] .market-map-guide {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
   font-size: 13px;
 }
 
-#home-christmas-market-map .market-map-controls {
+[data-market-map-variant="paper"] .market-map-controls {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   margin-bottom: 12px;
 }
 
-#home-christmas-market-map button,
-#home-christmas-market-map summary {
+[data-market-map-variant="paper"] button,
+[data-market-map-variant="paper"] summary {
   font-family: inherit;
 }
 
-#home-christmas-market-map .market-map-controls button {
+[data-market-map-variant="paper"] .market-map-controls button {
   min-height: 44px;
   border: 1px solid var(--map-rule);
   border-radius: 4px;
@@ -303,29 +303,29 @@
   font-weight: 750;
 }
 
-#home-christmas-market-map .market-map-controls button[aria-pressed="true"] {
+[data-market-map-variant="paper"] .market-map-controls button[aria-pressed="true"] {
   border-color: var(--map-ink);
   background: var(--map-ink);
   color: var(--map-paper);
 }
 
-#home-christmas-market-map .market-map-layout {
+[data-market-map-variant="paper"] .market-map-layout {
   display: grid;
   grid-template-columns: minmax(0, min(54%, 440px)) minmax(0, 1fr);
   align-items: start;
   gap: clamp(14px, 2.7vw, 28px);
 }
 
-#home-christmas-market-map .market-map-no-outline {
+[data-market-map-variant="paper"] .market-map-no-outline {
   grid-template-columns:minmax(0,1fr);
 }
 
-#home-christmas-market-map .market-map-frame {
+[data-market-map-variant="paper"] .market-map-frame {
   position:relative;
   min-width:0;
 }
 
-#home-christmas-market-map .market-map-logo {
+[data-market-map-variant="paper"] .market-map-logo {
   position:absolute;
   right:10px;
   bottom:7px;
@@ -336,13 +336,13 @@
   pointer-events:none;
 }
 
-#home-christmas-market-map .market-map-status {
+[data-market-map-variant="paper"] .market-map-status {
   margin:0 0 .65rem;
   color:var(--map-secondary);
   font-size:.84rem;
 }
 
-#home-christmas-market-map .market-map-canvas {
+[data-market-map-variant="paper"] .market-map-canvas {
   position: relative;
   container-type: inline-size;
   min-width: 0;
@@ -351,14 +351,14 @@
   background: var(--map-sage);
 }
 
-#home-christmas-market-map .market-map-outline {
+[data-market-map-variant="paper"] .market-map-outline {
   display: block;
   width: 100%;
   height: auto;
   border-radius: inherit;
 }
 
-#home-christmas-market-map .market-map-pin {
+[data-market-map-variant="paper"] .market-map-pin {
   position: absolute;
   display: grid;
   place-items: center;
@@ -376,77 +376,77 @@
   font-variant-numeric: tabular-nums;
 }
 
-#home-christmas-market-map .market-map-pin[aria-pressed="true"] {
+[data-market-map-variant="paper"] .market-map-pin[aria-pressed="true"] {
   z-index: 1;
   background: var(--map-ink);
   box-shadow: 0 0 0 1px var(--map-ink);
 }
 
-#home-christmas-market-map .market-map-side {
+[data-market-map-variant="paper"] .market-map-side {
   min-width: 0;
   border-top: 1px solid var(--map-rule);
 }
 
-#home-christmas-market-map .market-map-info {
+[data-market-map-variant="paper"] .market-map-info {
   padding: clamp(12px, 2vw, 20px);
   background: var(--map-sage);
   overflow-wrap: anywhere;
 }
 
-#home-christmas-market-map .market-map-info h3 {
+[data-market-map-variant="paper"] .market-map-info h3 {
   margin: 0 0 8px;
   color: var(--map-slate);
   font: 600 20px/1.15 Outfit, system-ui, sans-serif;
 }
 
-#home-christmas-market-map .market-map-event + .market-map-event {
+[data-market-map-variant="paper"] .market-map-event + .market-map-event {
   border-top: 1px solid var(--map-rule);
   margin-top: 12px;
   padding-top: 12px;
 }
 
-#home-christmas-market-map .market-map-event h4 {
+[data-market-map-variant="paper"] .market-map-event h4 {
   margin: 0;
   font: 600 clamp(16px, 2.2vw, 21px)/1.2 Outfit, system-ui, sans-serif;
 }
 
-#home-christmas-market-map .market-map-event p {
+[data-market-map-variant="paper"] .market-map-event p {
   margin: 5px 0 0;
   font-size: 13px;
   line-height: 1.4;
   color: var(--map-secondary);
 }
 
-#home-christmas-market-map .market-map-event .market-map-date {
+[data-market-map-variant="paper"] .market-map-event .market-map-date {
   color: var(--map-ink);
   font-weight: 800;
 }
 
-#home-christmas-market-map .market-map-event a {
+[data-market-map-variant="paper"] .market-map-event a {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
   font-size: 13px;
 }
 
-#home-christmas-market-map .market-map-index {
+[data-market-map-variant="paper"] .market-map-index {
   border-bottom: 1px solid var(--map-rule);
 }
 
-#home-christmas-market-map .market-map-index summary {
+[data-market-map-variant="paper"] .market-map-index summary {
   min-height: 44px;
   padding: 13px 0 9px;
   font-size: 13px;
   font-weight: 800;
 }
 
-#home-christmas-market-map .market-map-index ul {
+[data-market-map-variant="paper"] .market-map-index ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#home-christmas-market-map .market-map-index li {
+[data-market-map-variant="paper"] .market-map-index li {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
@@ -454,7 +454,7 @@
   border-top: 1px solid var(--map-rule);
 }
 
-#home-christmas-market-map .market-map-index li button {
+[data-market-map-variant="paper"] .market-map-index li button {
   min-height: 44px;
   border: 0;
   background: transparent;
@@ -467,22 +467,22 @@
   padding: 5px 0;
 }
 
-#home-christmas-market-map .market-map-index li span {
+[data-market-map-variant="paper"] .market-map-index li span {
   font-size: 12px;
   color: var(--map-secondary);
   overflow-wrap: anywhere;
 }
 
-#home-christmas-market-map :is(a, button, summary):focus-visible {
+[data-market-map-variant="paper"] :is(a, button, summary):focus-visible {
   outline: 2px solid var(--map-ink);
   outline-offset: 3px;
 }
 
-#home-christmas-market-map .market-map-pin:focus-visible {
+[data-market-map-variant="paper"] .market-map-pin:focus-visible {
   z-index: 2;
 }
 
-#home-christmas-market-map .market-map-credit {
+[data-market-map-variant="paper"] .market-map-credit {
   margin: 9px 0 0;
   color: var(--map-secondary);
   font-size: 11px;
@@ -490,20 +490,20 @@
 }
 
 @media (max-width: 620px) {
-  #home-christmas-market-map .market-map-layout {
+  [data-market-map-variant="paper"] .market-map-layout {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  #home-christmas-market-map .market-map-heading {
+  [data-market-map-variant="paper"] .market-map-heading {
     margin-bottom: 5px;
   }
 
-  #home-christmas-market-map .market-map-tree {
+  [data-market-map-variant="paper"] .market-map-tree {
     align-self: flex-start;
     margin-top: .105em;
   }
 
-  #home-christmas-market-map .market-map-controls button {
+  [data-market-map-variant="paper"] .market-map-controls button {
     padding-inline: 12px;
   }
 }

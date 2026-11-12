@@ -158,3 +158,48 @@
 @media(max-width:600px){
   .christmas-market-list{grid-template-columns:1fr}
 }
+
+/* Match the Devon home Christmas banner and paper map. */
+.plans-page.christmas-edition-active {
+  --christmas-night: #14292e;
+  --christmas-cream: #fff8e8;
+  --christmas-sage: #f1f2eb;
+  --christmas-sage-rule: #d9dbd0;
+  --christmas-serif: "Cormorant Garamond", Georgia, serif;
+}
+.plans-page.christmas-edition-active .plans-intro {
+  border: 0;
+  border-radius: 5px;
+  background: var(--christmas-night);
+}
+.plans-page.christmas-edition-active .plans-intro::after { display: none; }
+.plans-page.christmas-edition-active .plans-intro::before {
+  width: 46%;
+  border: 0;
+  background: url("/assets/christmas-winter-night-tree.webp") right center / cover no-repeat;
+  mask-image: linear-gradient(to right, transparent, #000 20%);
+}
+.plans-page.christmas-edition-active .plans-intro .eyebrow,
+.plans-page.christmas-edition-active .plans-intro .plans-intro-copy {
+  color: var(--christmas-cream);
+}
+.plans-page.christmas-edition-active .results-top h2,
+.plans-page.christmas-edition-active .seasonal-results-heading h3 {
+  color: var(--christmas-night);
+  font: 700 clamp(25px, 4vw, 38px)/1.05 var(--christmas-serif);
+}
+.plans-page.christmas-edition-active .christmas-jumps a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  border-color: var(--christmas-sage-rule);
+  color: var(--christmas-night);
+  background: var(--christmas-sage);
+}
+.plans-page.christmas-edition-active .christmas-market-list li {
+  border-color: var(--christmas-sage-rule);
+}
+.plans-page.christmas-edition-active .christmas-market-list summary,
+.plans-page.christmas-edition-active .christmas-market-list summary strong {
+  color: var(--christmas-night);
+}
