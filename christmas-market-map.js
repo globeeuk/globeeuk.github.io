@@ -2,8 +2,6 @@
   'use strict';
   const regions = {england: 'England', devon: 'Devon', cornwall: 'Cornwall'};
   const heights = {england: 640, devon: 560, cornwall: 530};
-  let selectedRegion = 'devon';
-  let selectedTown = 'Exeter';
 
   function element(tag, text, className) {
     const node = document.createElement(tag);
@@ -16,17 +14,36 @@
     const data = root.GlobeeChristmasMarketData;
     if (!container || !data || container.dataset.ready) return;
     container.dataset.ready = 'true';
-    const label = element('p', 'THE GLOBEE CHRISTMAS EDIT · 2026', 'market-map-kicker');
-    const heading = element('h3', 'Christmas Markets Map');
-    heading.id = 'christmas-map-title';
-    container.setAttribute('role', 'region');
-    container.setAttribute('aria-labelledby', heading.id);
+    const paper = container.dataset.marketMapVariant === 'paper';
+    let selectedRegion = 'devon';
+    let selectedTown = 'Exeter';
+    if (!paper) {
+      const label = element('p', 'THE GLOBEE CHRISTMAS EDIT · 2026', 'market-map-kicker');
+      const heading = element('h3', 'Christmas Markets Map');
+      heading.id = 'christmas-map-title';
+      container.setAttribute('role', 'region');
+      container.setAttribute('aria-labelledby', heading.id);
+      container.append(label, heading);
+    }
 
     const nav = element('div', '', 'market-map-controls');
     nav.setAttribute('role', 'group');
     nav.setAttribute('aria-label', 'Map area');
+    const warning = element('p', 'The map image couldn’t load. Choose an area to try again, or browse the dates below.', 'market-map-status');
+    warning.setAttribute('role', 'status');
+    warning.hidden = true;
     const panel = element('div', '', 'market-map-layout');
     const canvas = element('div', '', 'market-map-canvas');
+    const mapSurface = paper ? element('div', '', 'market-map-frame') : canvas;
+    if (paper) {
+      const logo = element('img', '', 'market-map-logo');
+      logo.src = '/assets/brand/globee-handwriting-v2.png';
+      logo.alt = 'Globee';
+      logo.width = 1774;
+      logo.height = 887;
+      logo.decoding = 'async';
+      mapSurface.append(canvas, logo);
+    }
     const aside = element('div', '', 'market-map-side');
     const info = element('div', '', 'market-map-info');
     info.setAttribute('aria-live', 'polite');
@@ -35,13 +52,14 @@
     const index = element('ul');
     all.append(allTitle, index);
     aside.append(info, all);
-    panel.append(canvas, aside);
+    panel.append(mapSurface, aside);
 
     const foot = element('p', 'Pins show market towns or local areas. Check the organiser for the venue and opening hours. ', 'market-map-credit');
     const attribution = element('a', 'Boundary data and licence');
     attribution.href = 'https://www.data.gov.uk/dataset/e4bc1e1b-72b1-4559-b270-b34a9740a990/counties-and-unitary-authorities-december-2024-boundaries-uk-bgc';
     foot.append(attribution, ' · Contains OS and National Statistics data © Crown copyright and database right 2024 (OGL v3.0).');
-    container.append(label, heading, nav, panel, foot);
+    container.querySelector('[data-market-map-placeholder]')?.remove();
+    container.append(nav, warning, panel, foot);
 
     function showTown(name, focusDetails = false) {
       selectedTown = name;
@@ -52,13 +70,13 @@
       for (const button of panel.querySelectorAll('[data-market-town]')) {
         button.setAttribute('aria-pressed', String(button.dataset.marketTown === name));
       }
-      const placeHeading = element('h4', `${townIndex + 1}. ${town.town}`);
+      const placeHeading = element(paper ? 'h3' : 'h4', `${townIndex + 1}. ${town.town}`);
       info.replaceChildren(placeHeading);
       for (const market of town.events) {
         const article = element('article', '', 'market-map-event');
         const official = element('a', 'Official details →');
         official.href = market.url;
-        article.append(element('h5', market.name), element('p', market.date, 'market-map-date'));
+        article.append(element(paper ? 'h4' : 'h5', market.name), element('p', market.date, 'market-map-date'));
         if (market.note) article.append(element('p', market.note));
         article.append(official);
         info.append(article);
@@ -75,11 +93,22 @@
         control.setAttribute('aria-pressed', String(control.dataset.marketRegion === area));
       }
       const outline = element('img', '', 'market-map-outline');
-      outline.src = `/assets/maps/christmas-markets-${area}.svg`;
+      const asset = paper ? 'home-christmas-markets' : 'christmas-markets';
       outline.alt = '';
       outline.width = 620;
       outline.height = heights[area];
+      outline.addEventListener('error', () => {
+        if (outline.parentElement !== canvas) return;
+        mapSurface.hidden = true;
+        warning.hidden = false;
+        panel.classList.add('market-map-no-outline');
+        all.open = true;
+      });
+      mapSurface.hidden = false;
+      warning.hidden = true;
+      panel.classList.remove('market-map-no-outline');
       canvas.replaceChildren(outline);
+      outline.src = `/assets/maps/${asset}-${area}.svg`;
       index.replaceChildren();
       all.open = false;
       const towns = data[area];
@@ -118,5 +147,5 @@
   }
 
   root.GlobeeChristmasMarketMap = {mount};
-  for (const container of document.querySelectorAll('[data-christmas-market-map]')) mount(container);
+  for (const container of document.querySelectorAll('[data-christmas-market-map]:not([hidden])')) mount(container);
 })(window);

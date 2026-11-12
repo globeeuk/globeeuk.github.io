@@ -26,6 +26,7 @@
 .christmas-market-map button[aria-pressed=true]{background:#33533d;color:#fff9e9;border-color:#33533d}
 .christmas-market-map button:focus-visible,.market-map-index summary:focus-visible{outline:3px solid #241d36;outline-offset:2px;z-index:2}
 .market-map-layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(.7rem,2.5vw,1.4rem);align-items:start}
+.market-map-layout.market-map-no-outline{grid-template-columns:minmax(0,1fr)}
 .market-map-canvas{position:relative;min-width:0;max-width:620px;background:#f0c9b4;border-radius:7px}
 .market-map-outline{width:100%;height:auto;display:block;border-radius:7px}
 .christmas-market-map .market-map-pin{

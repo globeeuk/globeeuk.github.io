@@ -50,6 +50,10 @@ const isoDate=d=>d.toISOString().slice(0,10);
 function addDays(s,n){const d=utcDate(s);d.setUTCDate(d.getUTCDate()+n);return isoDate(d);}
 function dateShort(s){return utcDate(s).toLocaleDateString('en-GB',{day:'numeric',month:'short',timeZone:'UTC'});}
 function dateRangeLabel(range){return range?range.start===range.end?dateShort(range.start):`${dateShort(range.start)} – ${dateShort(range.end)}`:'Any date';}
+function weekendEditDate(range){
+  const formatter=new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});
+  return formatter.formatRange?.(utcDate(range.start),utcDate(range.end))||`${dateRangeLabel(range)} ${range.end.slice(0,4)}`;
+}
 function shortcutDates(key){if(key==='all')return null;if(key==='today')return {start:TODAY,end:TODAY};if(key==='tomorrow'){const d=addDays(TODAY,1);return {start:d,end:d};}const day=utcDate(TODAY).getUTCDay(),start=day===0?TODAY:addDays(TODAY,(6-day+7)%7);return {start,end:day===0?TODAY:addDays(start,1)};}
 function occursWithin(p,range){return !!range&&(p.datePeriods||[]).some(d=>d.start<=range.end&&d.end>=range.start);}
 function isCurrent(p){return p.datePeriods?.length?p.datePeriods.some(d=>d.end>=TODAY):!p.endDate||p.endDate>=TODAY;}
@@ -162,9 +166,10 @@ function renderWeekend(){
   const container=$('#main-plans');
   container.hidden=!!hasFilters()||state.view==='map';
   if(container.hidden)return;
-  const regional=data.filter(p=>p.region===state.region);
+  const regional=data.filter(p=>p.region===state.region&&!p.recommendationPaused);
   const seasonal=GlobeeDiscovery.seasonalEdit(regional,TODAY);
   const bookAhead=TODAY<'2026-10-30'?GlobeeDiscovery.bookAheadEdit(regional,TODAY):null;
+  const devonHomeEdit=isNotebookHome&&state.region==='Exeter';
   const eligible=regional.filter(p=>TODAY<'2026-10-30'||!GlobeeDiscovery.matchesSeasonal(p,TODAY,'halloween'));
   const weekend=plansWindow==='four-weeks'?GlobeeDiscovery.nextFourWeeksPicks(eligible,TODAY):GlobeeDiscovery.weekendPicks(eligible,TODAY);
   const primaryKey=`${state.region}|${TODAY}|${plansWindow}|${seasonal?.id||'none'}|${seasonal?.picks.map(p=>p.id).join(',')||''}|${bookAhead?.picks.map(p=>p.id).join(',')||''}|${weekend.map(p=>p.id).join(',')}`;
@@ -172,6 +177,10 @@ function renderWeekend(){
   lastPrimaryPlansKey=primaryKey;
   const range=plansWindow==='four-weeks'?GlobeeDiscovery.nextFourWeeksRange(TODAY):GlobeeDiscovery.weekendRange(TODAY);
   const sections=[];
+  if(devonHomeEdit){
+    const label=weekendEditDate(GlobeeDiscovery.weekendRange(TODAY));
+    sections.push(`<header class="home-weekend-edit"><p>This week’s Edit · ${escapeHTML(label)}</p><h2>A little weekend curiosity.</h2></header>`);
+  }
   if(seasonal&&!(seasonal.id==='christmas'&&isNotebookHome&&state.region==='Exeter')){
     const region=encodeURIComponent(state.region==='Exeter'?'Devon':state.region);
     const allLink=seasonal.page?`${seasonal.page}?region=${region}`:`plans.html?region=${region}&edit=${encodeURIComponent(seasonal.id)}`;
@@ -296,6 +305,7 @@ function render(options={}){
   const halfTermEntry=$('#half-term-entry');
   const christmasEntry=$('#christmas-entry');
   const winterMapLink=$('#winter-map-link');
+  const marketMap=$('#home-christmas-market-map');
   if(halfTermEntry){
     const halfTermActive=!!GlobeeDiscovery.seasonalDefinition('half-term',TODAY);
     const christmasActive=!!GlobeeDiscovery.seasonalDefinition('christmas',TODAY);
@@ -305,11 +315,16 @@ function render(options={}){
       christmasEntry.hidden=!christmasActive;
       christmasEntry.classList.toggle('devon-christmas-strip',state.region==='Exeter');
       christmasEntry.href=`plans.html?region=${encodeURIComponent(state.region==='Exeter'?'Devon':state.region)}&edit=christmas`;
-      christmasEntry.querySelector('.christmas-kinds').textContent=state.region==='Exeter'?'Markets · Trees · Days out · Shows':'Festive days out · Shows';
+      christmasEntry.querySelector('.christmas-edition').textContent=state.region==='Exeter'?'Exeter & Devon':'THE LOCAL EDIT · CHRISTMAS 2026';
+      christmasEntry.querySelector('.christmas-kinds').textContent=state.region==='Exeter'?'Markets, makers & festive days out.':'Festive days out · Shows';
     }
     if(scoopPromo)scoopPromo.hidden=halfTermActive||christmasActive;
     if(winterMapLink)winterMapLink.hidden=!halfTermActive||state.region==='Nottingham';
     halfTermEntry.closest('.entry-cards').classList.toggle('entry-cards-winter',halfTermActive||christmasActive);
+    if(marketMap){
+      marketMap.hidden=!christmasActive||state.region!=='Exeter'||state.view!=='list'||!!hasFilters();
+      if(!marketMap.hidden)window.GlobeeChristmasMarketMap?.mount(marketMap);
+    }
   }
   const newsletter=$('#weekend-newsletter');
   if(newsletter)newsletter.hidden=state.region!=='Exeter'||state.notebookSection!=='days'||state.view!=='list'||!!nearbyOrigin||!!state.query;

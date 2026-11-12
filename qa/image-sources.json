@@ -1293,6 +1293,66 @@
       "bytes": 35780,
       "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Former_Emmanuel_Church_Hall%2C_Exeter_-_geograph.org.uk_-_1070718.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
       "description": "Emmanuel Hall, home of Theatre Alibi in Exeter; historical venue photograph, not the workshop"
+    },
+    {
+      "key": "bridwell-house",
+      "image": "assets/images/bridwell-house.webp",
+      "source": "https://www.geograph.org.uk/photo/7366122",
+      "creator": "Lewis Clarke",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "date": "2022",
+      "checked": "2026-11-12",
+      "changes": "Cropped, resized to 640 × 440 and converted to WebP. Bridwell House venue reference; does not show the listed event.",
+      "bytes": 57932
+    },
+    {
+      "key": "archive-books-reference",
+      "image": "assets/images/archive-books-reference.webp",
+      "source": "https://unsplash.com/photos/open-old-books-with-handwritten-text-on-a-wooden-table-BgDf7_FFVhE",
+      "creator": "Magic Fan",
+      "licence": "Unsplash License",
+      "licenceUrl": "https://unsplash.com/license",
+      "date": "",
+      "checked": "2026-11-12",
+      "changes": "Cropped, resized to 640 × 440 and converted to WebP. Archive activity reference; does not show the listed event.",
+      "bytes": 29666
+    },
+    {
+      "key": "autumn-leaf-reference",
+      "image": "assets/images/autumn-leaf-reference.webp",
+      "source": "https://www.pexels.com/photo/close-up-shot-of-hand-holding-autumn-leaf-34212863/",
+      "creator": "Nathan J Hilton",
+      "licence": "Pexels License",
+      "licenceUrl": "https://www.pexels.com/license/",
+      "date": "",
+      "checked": "2026-11-12",
+      "changes": "Cropped, resized to 640 × 440 and converted to WebP. Autumn activity reference; does not show the listed event.",
+      "bytes": 24172
+    },
+    {
+      "key": "ice-skate-laces-reference",
+      "image": "assets/images/ice-skate-laces-reference.webp",
+      "source": "https://www.pexels.com/photo/a-person-tying-the-lace-of-an-ice-skates-6541481/",
+      "creator": "Pavel Danilyuk",
+      "licence": "Pexels License",
+      "licenceUrl": "https://www.pexels.com/license/",
+      "date": "",
+      "checked": "2026-11-12",
+      "changes": "Cropped, resized to 640 × 440 and converted to WebP. Skating activity reference; does not show the listed event.",
+      "bytes": 12380
+    },
+    {
+      "key": "cullompton-past-market",
+      "image": "assets/images/cullompton-past-market.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cullompton_,_Cullompton_Farmer%27s_Market_-_geograph.org.uk_-_1581592.jpg",
+      "creator": "Lewis Clarke",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "date": "2009-11-14",
+      "checked": "2026-11-12",
+      "changes": "Cropped, resized to 640 × 353 and converted to WebP. Past Cullompton market; not confirmation of current stallholders or layout.",
+      "bytes": 44744
     }
   ],
   "coverageAsOf": "2026-09-21 (historical coverage snapshot; new photo sources below checked separately)",

@@ -9,11 +9,11 @@ window.GlobeeChristmasMarketData = {
     {"town": "Norwich", "x": 82.33, "y": 53.93, "events": [{"name": "Norwich Christkindl Market", "date": "11–20 Dec", "note": "Chapelfield Gardens", "url": "https://www.norwich.gov.uk/events/christkindl-market"}]},
     {"town": "Bristol", "x": 46.8, "y": 70.97, "events": [{"name": "Bristol Christmas Market", "date": "6 Nov–23 Dec", "note": "Broadmead", "url": "https://www.bristolchristmasmarket.com/"}]},
     {"town": "Bath", "x": 55.45, "y": 71.99, "events": [{"name": "Bath Christmas Market", "date": "26 Nov–13 Dec", "note": "City centre", "url": "https://www.bathchristmasmarket.co.uk/information-residents"}]},
-    {"town": "London · South Bank", "x": 69.47, "y": 70.2, "events": [{"name": "Southbank Centre Winter Market", "date": "2 Nov–3 Jan 2027", "note": "Queen’s Walk. Check holiday hours.", "url": "https://www.southbankcentre.co.uk/activity/winter-market/"}]},
+    {"town": "London · South Bank", "x": 69.47, "y": 70.2, "events": [{"name": "Southbank Centre Winter Market", "date": "2 Nov–3 Jan 2027", "note": "Queen’s Walk · Closed 25 & 31 Dec and 1 Jan", "url": "https://www.southbankcentre.co.uk/activity/winter-market/"}]},
     {"town": "Winchester", "x": 61.55, "y": 77.83, "events": [{"name": "Winchester Cathedral Christmas Market", "date": "20 Nov–22 Dec", "note": "Cathedral Close", "url": "https://www.winchester-cathedral.org.uk/christmas/"}]},
   ],
   devon: [
-    {"town": "Totnes", "x": 53.66, "y": 70.71, "events": [{"name": "Totnes Christmas Markets & lantern parade", "date": "Tuesdays 8, 15 & 22 Dec", "note": "3–9pm · Free entry", "url": "https://missivyevents.co.uk/event/totnes-christmas-markets-and-late-night-shopping-2026/"}]},
+    {"town": "Totnes", "x": 53.66, "y": 70.71, "events": [{"name": "Totnes Christmas Markets", "date": "Tuesdays 8, 15 & 22 Dec", "note": "3–9pm · Free entry · Lantern parade: 8 Dec only, 4.30pm", "url": "https://missivyevents.co.uk/event/totnes-christmas-markets-and-late-night-shopping-2026/"}]},
     {"town": "Exeter", "x": 60.08, "y": 49.45, "events": [{"name": "Exeter Cathedral Christmas Market", "date": "13 Nov–13 Dec", "note": "Daytime & evenings", "url": "https://www.exeter-cathedral.org.uk/whats-on/events/exeter-cathedral-christmas-market-2026/"}]},
     {"town": "Buckfastleigh", "x": 46.89, "y": 65.71, "events": [{"name": "Buckfast Abbey Christmas Market", "date": "Thu 26–Sat 28 Nov", "note": "10am–5pm · £1 per person", "url": "https://www.buckfastabbey.org/christmas_market_2026_1/"}, {"name": "Wintertide Makers Market", "date": "21 Nov", "note": "10am–5pm · Entry TBC", "url": "https://buckfastleighnews.org.uk/Articles/Details/1196"}]},
     {"town": "Plymouth", "x": 34.74, "y": 75.2, "events": [{"name": "Plymouth Christmas Market", "date": "26 Nov–20 Dec", "note": "Santa Bus · Wed 9 Dec", "url": "https://www.visitplymouth.co.uk/whats-on/major-events/plymouth-christmas-market"}]},
@@ -39,6 +39,6 @@ window.GlobeeChristmasMarketData = {
     {"town": "Pencarrow", "x": 58.83, "y": 47.76, "events": [{"name": "Pencarrow Christmas Artisan Fair", "date": "21–22 Nov", "note": "10am–4pm; last entry 4pm · £4; under 16s free", "url": "https://www.pencarrow.co.uk/events/christmas-artisan-fair-21st-22nd-november/"}]},
     {"town": "Fowey", "x": 62.61, "y": 59.35, "events": [{"name": "Fowey Town Hall Christmas Market", "date": "5–6 Dec", "note": "Sat 10am–5pm; Sun 10am–4pm", "url": "https://www.lovefowey.com/event/christmas-market"}]},
     {"town": "Wadebridge", "x": 50.91, "y": 50.9, "events": [{"name": "Cornwall Christmas Market", "date": "11–13 Dec", "note": "Fri 5–8.30pm; Sat 10am–7.30pm; Sun 10am–4pm · Ticketed; under 3s free", "url": "https://cornwallchristmasmarket.co.uk/book-tickets/"}]},
-    {"town": "Mount Edgcumbe", "x": 83.67, "y": 57.28, "events": [{"name": "Christmas Fair at Mount Edgcumbe", "date": "12–13 Dec", "note": "10am–3.30pm", "url": "https://www.mountedgcumbe.gov.uk/whats-on-for-2026/"}]},
+    {"town": "Mount Edgcumbe", "x": 83.67, "y": 57.28, "events": [{"name": "Christmas Fair at Mount Edgcumbe", "date": "12–13 Dec", "note": "10am–3.30pm · Book entry and parking in advance", "url": "https://www.mountedgcumbe.gov.uk/whats-on-for-2026/"}]},
   ],
 };

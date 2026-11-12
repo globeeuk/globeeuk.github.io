@@ -46,7 +46,9 @@
   const filters=document.getElementById('notebook-filter-controls');if(notes&&filters){filters.hidden=true;document.querySelector('[data-notebook-filter-toggle]')?.setAttribute('aria-expanded','false');}
   const browse=document.querySelector('[data-notebook-browse]');if(browse)browse.textContent=section==='holidays'?'All holiday clubs ↓':'Explore all ↓';
   const notesLink=document.querySelector('[data-notebook-notes-link]');if(notesLink)notesLink.href=url('notes',region);
-  const input=document.querySelector('#notebook-home-query');if(input&&input.value!==state.query)input.value=state.query||'';
+  // A directory refresh can render while a visitor is still entering a query.
+  const input=document.querySelector('#notebook-home-query');
+  if(input&&!searchTimer&&!composing&&input.value!==state.query)input.value=state.query||'';
   const options={days:[['classes','Something new to try?'],['notes','A question to figure out?']],classes:[['days','A day to spend together?'],['holidays','Planning the school break?']],holidays:[['days','A day out together?'],['notes','A few practical notes?']],notes:[['days','Ready to head out?'],['classes','Follow a little interest?']]};
   document.querySelectorAll('.notebook-continue a').forEach((a,i)=>{const [key,prompt]=options[section][i];a.href=url(key,region);a.querySelector('span').textContent=prompt;a.querySelector('strong').textContent=labels[key]+' →';});
  }

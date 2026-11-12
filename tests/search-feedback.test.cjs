@@ -36,6 +36,13 @@ test('Latest input wins and reset cancels pending search instead of restoring st
  const n=notebook();n.input.value='ice';n.input.events.input();n.input.value='Mimi';n.input.events.input();n.flush();assert.deepEqual(n.calls,['Mimi']);
  n.input.value='ice';n.input.events.input();n.ctx.GlobeeNotebook.cancelSearch();n.ctx.GlobeeNotebook.sync({query:''});n.flush();assert.deepEqual(n.calls,['Mimi']);assert.equal(n.input.value,'');
 });
+test('A directory refresh preserves search input until the pending query is applied',()=>{
+ const n=notebook();
+ n.input.value='ice';n.input.events.input();n.ctx.GlobeeNotebook.sync({query:'',notebookSection:'days'});
+ assert.equal(n.input.value,'ice');n.flush();assert.deepEqual(n.calls,['ice']);
+ n.input.events.compositionstart();n.input.value='미';n.ctx.GlobeeNotebook.sync({query:'ice',notebookSection:'days'});
+ assert.equal(n.input.value,'미');
+});
 test('Enter immediately submits once and moves focus to results; IME waits until composition finishes',()=>{
  const n=notebook();n.input.value=' ice ';n.input.events.input();n.form.events.submit({preventDefault(){}});n.flush();assert.deepEqual(n.calls,['ice']);assert(n.heading.focused&&n.heading.scrolled);
  n.input.events.compositionstart();n.input.value='미';n.input.events.input();n.flush();assert.equal(n.calls.length,1);

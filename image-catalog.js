@@ -6,6 +6,11 @@
     ["trinity-centre-bristol", "Tadeusz Hare", "https://commons.wikimedia.org/wiki/File:Trinity_Centre,_Bristol_-_DSC_2831.jpg", "CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/", "2026-07-04", "venue", "Trinity Centre exterior"],
     ['exeter-library','David Smith','https://commons.wikimedia.org/wiki/File:Exeter_Library_after_rebuilding_-_geograph.org.uk_-_4016656.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2014-06-07','venue','Exeter Library after its 2014 refurbishment; not the current activity'],
     ['theatre-alibi','Derek Harper','https://commons.wikimedia.org/wiki/File:Former_Emmanuel_Church_Hall,_Exeter_-_geograph.org.uk_-_1070718.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2008-12-03','venue','Emmanuel Hall in Exeter, home of Theatre Alibi; not the current workshop'],
+    ['bridwell-house','Lewis Clarke','https://www.geograph.org.uk/photo/7366122','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2022','venue','The front of Bridwell House in Uffculme','Geograph'],
+    ['archive-books-reference','Magic Fan','https://unsplash.com/photos/open-old-books-with-handwritten-text-on-a-wooden-table-BgDf7_FFVhE','Unsplash License','https://unsplash.com/license','','activity','Open archive books with handwritten pages on a wooden table','Unsplash'],
+    ['autumn-leaf-reference','Nathan J Hilton','https://www.pexels.com/photo/close-up-shot-of-hand-holding-autumn-leaf-34212863/','Pexels License','https://www.pexels.com/license/','','activity','A hand holding an orange autumn leaf','Pexels'],
+    ['ice-skate-laces-reference','Pavel Danilyuk','https://www.pexels.com/photo/a-person-tying-the-lace-of-an-ice-skates-6541481/','Pexels License','https://www.pexels.com/license/','','activity','Hands tying a white ice skate beside the rink','Pexels'],
+    ['cullompton-past-market','Lewis Clarke','https://commons.wikimedia.org/wiki/File:Cullompton_,_Cullompton_Farmer%27s_Market_-_geograph.org.uk_-_1581592.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2009-11-14','location','Market stalls in Cullompton in 2009; not confirmation of the current stallholders or layout'],
     ['killerton-house','Derek Harper','https://commons.wikimedia.org/wiki/File:Killerton_House_01.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2006-09-10','venue','Killerton House in Broadclyst, Devon; not the current festive decorations'],
     ['arlington-court','xlibber','https://commons.wikimedia.org/wiki/File:Arlington_Court_(7338271170).jpg','CC BY 2.0','https://creativecommons.org/licenses/by/2.0/','2012-06-04','venue','Arlington Court in Devon; not the current Christmas activity'],
     ['greenway-house','Jason Ballard','https://commons.wikimedia.org/wiki/File:Greenway_-_Agatha_Christie%27s_holiday_home.jpg','CC BY 2.0','https://creativecommons.org/licenses/by/2.0/','2011-09-22','venue','Greenway House in Devon; not the current Christmas activity'],
@@ -104,8 +109,8 @@
     ['wollaton-garden','Enchufla Con Clave','https://commons.wikimedia.org/wiki/File:Circular%20Pond%20On%20The%20Upper%20Garden%20Terrace%20In%20Front%20Of%20Wollaton%20Hall%2C%20Nottingham%20%281%29.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0','2018','venue','The upper garden terrace and Wollaton Hall']
   ];
   const kindLabels={venue:'Venue',location:'Location',activity:'Activity reference'};
-  const photos=Object.fromEntries(photoRows.map(([key,creator,source,photoLicence,photoLicenceUrl,date,imageKind,description])=>[key,{
-    image:`assets/images/${key}.webp`,credit:`${creator} / Wikimedia Commons`,photoSource:source,photoLicence,photoLicenceUrl,
+  const photos=Object.fromEntries(photoRows.map(([key,creator,source,photoLicence,photoLicenceUrl,date,imageKind,description,provider='Wikimedia Commons'])=>[key,{
+    image:`assets/images/${key}.webp`,credit:`${creator} / ${provider}`,photoSource:source,photoLicence,photoLicenceUrl,
     imageReference:`${kindLabels[imageKind]} photograph${date?` (${date})`:''}; not a photograph of the current event. Cropped to fit, resized and converted to WebP. Source licence and credit are recorded on the Image credits page.`,
     imageKind,imageAlt:`${description}; ${imageKind==='activity'?'activity reference':imageKind} photograph${date?` from ${date}`:''}`
   }]));
@@ -125,7 +130,11 @@
       if(p.name==="Family Fun Day – Norman Lockyer Observatory")return "norman-lockyer-observatory";
       if(p.name==='Exeter Quayside Farmers’ Market')return 'quay';
       if(p.name==='Crediton Farmers’ Market')return 'crediton-market-square';
-      if(p.name==='Cullompton Farmers’ Market')return 'cullompton-walronds';
+      if(p.name==='Cullompton Farmers’ Market')return 'cullompton-past-market';
+      if(p.name==='Bridwell Christmas Makers Festival')return 'bridwell-house';
+      if(p.name==='Discover, Decode, Preserve – Exeter Innovation Hub')return 'archive-books-reference';
+      if(p.name==='Little Acorns – Coleton Fishacre')return 'autumn-leaf-reference';
+      if(p.name==='Eden Project Ice Skating – Cornwall')return 'ice-skate-laces-reference';
       if(p.name==='Charmouth Beach – Fossil Hunting (Dorset day trip)')return 'charmouth-beach';
       if(p.name==='Monmouth Beach – Fossil Hunting (Dorset day trip)')return 'monmouth-beach';
       if(p.name==='Christmas Train of Lights – Dartmouth Steam Railway')return 'dartmouth-train-of-lights';
@@ -144,8 +153,8 @@
       if(['Sleeping Beauty – Exeter Northcott','The Space Explorers Academy – Exeter Northcott'].includes(p.name))return 'northcott';
       if(/Exeter Cathedral/.test(p.name))return 'cathedral';
       if(/Exeter Library/.test(p.name)&&!/Devon Libraries|Devon libraries/.test(p.name))return 'exeter-library';
-      if(/Theatre Alibi/.test(p.name)&&/Emmanuel Hall/.test(p.address||''))return 'theatre-alibi';
-      if(p.name==='Christmas at Killerton')return 'killerton-house';
+      if(p.name==='Home Ed Drama Club: Pantomime! – Theatre Alibi'||/Theatre Alibi/.test(p.name)&&/Emmanuel Hall/.test(p.address||''))return 'theatre-alibi';
+      if(['Christmas at Killerton','The Pikachu Art Adventure at Killerton'].includes(p.name))return 'killerton-house';
       if(p.name==="Teddy Bear's Christmas at Greenway")return 'greenway-house';
       if(['Write Your Own Story Christmas Trail – Arlington Court','Father Christmas Storytelling – Arlington Court'].includes(p.name))return 'arlington-court';
       if(p.name==='Heavitree Pleasure Grounds')return 'heavitree';
@@ -265,7 +274,7 @@
     const k=photoKey(p);
     const image=k?photos[k]:{image:null,imageKind:'none',imageAlt:'',credit:'',imageReference:'No suitable photograph with confirmed reuse permission is available. This listing is shown without an image.',photoSource:'',photoLicence:'',photoLicenceUrl:''};
     const clarification=k==='robotics-activity'?{imageLabel:'Robot reference photo',imageReference:'Educational robotics reference photographed in 2020, not a photograph of the current event. NOT a photograph of the Sidmouth event, and not a promise that this exact robot is available there. Resized, converted to WebP and cropped by the layout. CC BY-SA 4.0.'}:k==='christmas-tree-field'?{imageLabel:'Tree reference photo',imageReference:'Tree-growing reference photographed in Ellisfield, Hampshire in 2006; NOT Cotley Farm and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:k==='thorverton'?{imageLabel:'Thorverton village',imageReference:'Thorverton village photograph from 2007; NOT Canns Farm or Exe Valley Christmas Trees and not a photograph of the current event. Resized, converted to WebP and cropped by the layout. CC BY-SA 2.0.'}:['dartmouth-train-of-lights','dartmouth-train-santa','south-devon-polar-express'].includes(k)?{imageLabel:'Railway photo'}:{};
-    const localLabel=['mill-reservoir-club','mill-reservoir-teens','wembury-beach'].includes(k)?'Nearby photo':k==='stapleford-playing-fields'?'Area photo':['science-flasks-reference','filmmaking-camera-reference','pumpkin-field-reference'].includes(k)?'Activity reference':null;
+    const localLabel=['mill-reservoir-club','mill-reservoir-teens','wembury-beach'].includes(k)?'Nearby photo':k==='stapleford-playing-fields'?'Area photo':k==='cullompton-past-market'?'Past market photo':['science-flasks-reference','filmmaking-camera-reference','pumpkin-field-reference','archive-books-reference','autumn-leaf-reference','ice-skate-laces-reference'].includes(k)?'Activity reference':null;
     return {...p,...image,...clarification,...(localLabel?{imageLabel:localLabel}:{})};
   }
   const api={decorate,theme};
