@@ -40,7 +40,7 @@ test('Exeter bowling is a verified party package with explicit unknown maximum c
  assert.equal(source.source_review.checked,'2026-10-20');assert.equal(source.source_review.sources.length,3);
 });
 test('Existing analytics scripts and settings remain, with no new tracking in article behaviour',()=>{
- assert.match(html,/basic-analytics.js\?v=basic2/);assert.match(html,/analytics.js\?v=music-banner-click1/);
+ assert.match(html,/basic-analytics.js\?v=basic2/);assert.match(html,/analytics.js\?v=consent4/);
  assert.match(html,/data-analytics-toggle/);
  assert.doesNotMatch(read('parent-notes/birthday.js'),/localStorage|document.cookie|fetch\(|gtag|sendBeacon/);
  assert.match(html,/href="\/classes.html"/);

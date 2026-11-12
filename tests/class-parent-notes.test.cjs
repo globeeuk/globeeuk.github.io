@@ -6,7 +6,7 @@ test('Approved class and care notes are indexable static pages, not private rese
   assert.match(html,/<meta name="robots" content="index,follow">/);assert(html.includes(`rel="canonical" href="https://globeeuk.github.io/parent-notes/${route}/"`));
   assert.match(html,/"@type":"BlogPosting"/);assert.match(html,/"@type":"BreadcrumbList"/);assert.match(html,/"datePublished":"2026-10-21"/);
   assert.doesNotMatch(html,/REVIEW DRAFT|noindex|operator-notes|Ohai|DOWTK|href="(?:exeter-classes|bristol-classes|comparison|holiday-care)\.html/);
-  assert.match(html,/data-analytics-toggle/);assert.match(html,/src="\/basic-analytics\.js\?v=basic2"/);assert.match(html,/src="\/analytics\.js\?v=music-banner-click1"/);
+  assert.match(html,/data-analytics-toggle/);assert.match(html,/src="\/basic-analytics\.js\?v=basic2"/);assert.match(html,/src="\/analytics\.js\?v=consent4"/);
   assert(read('sitemap.xml').includes('https://globeeuk.github.io/parent-notes/'+route+'/'));
  }
 });

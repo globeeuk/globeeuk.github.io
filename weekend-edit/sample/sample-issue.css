@@ -17,6 +17,13 @@ h1, h2, h3, p, figure { margin: 0; }
 h1, h2, h3 { font-family: var(--heading); line-height: 1.15; }
 a { color: inherit; text-underline-offset: 3px; }
 a:focus-visible { outline: 2px solid var(--slate); outline-offset: 4px; }
+button:focus-visible { outline: 2px solid var(--slate); outline-offset: 4px; }
+.analytics-choice { padding: 14px 0; margin-bottom: 14px; border-bottom: 1px solid var(--rule); font-size: 12px; }
+.analytics-choice[hidden] { display: none; }
+.analytics-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 10px; }
+.analytics-actions button { background: var(--paper); color: var(--ink); border: 1px solid var(--ink); border-radius: 3px; padding: 7px 10px; font: inherit; cursor: pointer; }
+.analytics-actions [data-analytics-choice="granted"] { background: var(--ink); color: var(--paper); }
+[data-analytics-toggle] { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .masthead { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); }
 .masthead img { display: block; width: 125px; height: auto; }
 .social { font-size: 12px; font-weight: 700; text-align: right; }

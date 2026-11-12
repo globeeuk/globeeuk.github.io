@@ -32,6 +32,6 @@ test('Only twelve supplied web photos ship, with no unlicensed room photo or ori
 });
 test('Qualifications and existing privacy controls are retained',()=>{
  for(const text of ['Planned, then cancelled','NOT VISITED','Zuid-Kennemerland','Zaanse Schans','not an all-hotel cost comparison','If you choose a GVB day ticket','East Midlands (EMA) currently says it is not flying'])assert(html.includes(text),text);
- for(const text of ['/basic-analytics.js?v=basic2','/analytics.js?v=music-banner-click1','data-analytics-toggle','/privacy.html'])assert(html.includes(text),text);
+ for(const text of ['/basic-analytics.js?v=basic2','/analytics.js?v=consent4','data-analytics-toggle','/privacy.html'])assert(html.includes(text),text);
  assert.doesNotMatch(read('parent-notes/amsterdam-with-kids/travel.js'),/fetch\(|gtag|sendBeacon|localStorage|document.cookie/);
 });

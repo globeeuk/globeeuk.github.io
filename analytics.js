@@ -2,6 +2,14 @@
   'use strict';
   const ID='G-YRRY654LS1',KEY='globee-analytics-consent-v2',OPT_OUT_KEY='globee-analytics-opt-out',OLD_KEY='globee-analytics-choice';
   const live=location.hostname==='globeeuk.github.io';
+  // Keep only publisher-controlled campaign labels, never the full query.
+  // Capture the landing values before directory filters change the address.
+  const campaign={};
+  const landing=new URL(location.origin+location.pathname+location.search).searchParams;
+  for(const [query,field] of [['utm_source','campaign_source'],['utm_medium','campaign_medium'],['utm_campaign','campaign_name'],['utm_content','campaign_content'],['utm_id','campaign_id']]){
+    const value=landing.get(query);
+    if(value&&/^[A-Za-z0-9][A-Za-z0-9._~-]{0,99}$/.test(value))campaign[field]=value;
+  }
   let choice='unset',started=false;
   try{
     const saved=localStorage.getItem(KEY);
@@ -36,7 +44,7 @@
       status.textContent=!live?'Local preview: analytics are not sent.':choice==='granted'?'Analytics cookies are allowed on this browser.':choice==='denied'?'Google Analytics cookies are off on this browser.':'Google Analytics is off until you choose Allow analytics.';
     });
   }
-  function pageView(){gtag('event','page_view',{page_location:location.origin+location.pathname,page_title:document.title});}
+  function pageView(){gtag('event','page_view',{page_location:location.origin+location.pathname,page_title:document.title,...campaign});}
   function start(){
     if(!live||choice!=='granted')return;
     window['ga-disable-'+ID]=false;
@@ -47,9 +55,13 @@
     gtag('consent','update',{analytics_storage:'granted'});
     gtag('set','ads_data_redaction',true);
     gtag('set','url_passthrough',false);
-    gtag('set',{page_location:location.origin+location.pathname,page_referrer:document.referrer?new URL(document.referrer).origin:''});
+    let referrer='';
+    try{const source=new URL(document.referrer);if(/^https?:$/.test(source.protocol))referrer=source.origin;}catch{}
+    gtag('set',{page_location:location.origin+location.pathname,page_referrer:referrer,...campaign});
     gtag('js',new Date());
-    gtag('config',ID,{send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,cookie_domain:location.hostname});
+    // GA stream settings must also keep history pageviews and site search off.
+    // send_page_view:false alone does not disable Enhanced Measurement history.
+    gtag('config',ID,{send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,cookie_domain:location.hostname,...campaign});
     pageView();
     const script=document.createElement('script');script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+ID;document.head.appendChild(script);
   }
@@ -77,7 +89,7 @@
   updateControls();start();
   window.globeeTrack=(name,params={})=>{
     if(!live||!started||choice!=='granted')return;
-    const safe={};for(const k of ['region','view','page_number','collection','filter_name','provider_host','social_platform'])if(k in params)safe[k]=params[k];
+    const safe={};for(const k of ['region','view','page_number','collection','filter_name','provider_host','social_platform','market_town','direction'])if(k in params)safe[k]=params[k];
     gtag('event',name,safe);
   };
   document.addEventListener('click',e=>{
@@ -85,11 +97,27 @@
     if(el.matches('#view-toggle'))globeeTrack('switch_view',{view:document.body.classList.contains('map-mode')?'map':'list'});
     if(el.dataset.collection)globeeTrack('open_edit',{collection:el.dataset.collection});
     if(el.dataset.resultsPage)globeeTrack('results_page',{page_number:Number(el.dataset.resultsPage)});
-    if(el.matches('.detail-link'))globeeTrack('provider_visit',{provider_host:new URL(el.href).hostname});
+    if(el.matches('.detail-link')||el.matches('.market-map-event a'))globeeTrack('provider_visit',{provider_host:new URL(el.href).hostname});
+    if(el.dataset.marketTown){
+      const map=el.closest('[data-christmas-market-map]');
+      globeeTrack('market_town_select',{market_town:el.dataset.marketTown,region:map?.querySelector('[data-market-region][aria-pressed="true"]')?.dataset.marketRegion||''});
+    }
+    if(el.dataset.marketRegion)globeeTrack('market_area_select',{region:el.dataset.marketRegion});
+    if(el.dataset.plansWindow)globeeTrack('weekend_period_select',{view:el.dataset.plansWindow});
+    if(el.dataset.rail==='weekend-picks')globeeTrack('weekend_list_move',{direction:el.dataset.direction==='-1'?'previous':'next'});
+    if(el.tagName==='A'){
+      const url=new URL(el.href,location.origin);
+      if(url.origin===location.origin&&url.pathname==='/weekend-edit/sample/')globeeTrack('newsletter_sample_open');
+    }
     if(el.matches('#exeter-music-feature .music-feature-links a')){
       const host=new URL(el.href).hostname;
       globeeTrack('music_banner_click',{region:'Exeter',social_platform:host.includes('instagram.com')?'instagram':'facebook'});
     }
     if(el.dataset.socialPlatform)globeeTrack('social_visit',{social_platform:el.dataset.socialPlatform,region:new URLSearchParams(location.search).get('region')||''});
   });
+  // A form being opened is not a successful subscription. The Google Form
+  // response sheet remains the source for completed, deduplicated signups.
+  document.addEventListener('toggle',e=>{
+    if(e.target.id==='weekend-newsletter-signup'&&e.target.open)globeeTrack('newsletter_form_open');
+  },true);
 })();
