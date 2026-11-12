@@ -126,8 +126,8 @@ function photo(p){return p.image?`${imageTag(p)}<span class="image-kind">${escap
 function meta(p){return `<span class="price ${p.priceType==='free'?'free':''}">${escapeHTML(p.priceLabel)}</span><span class="meta-dot">·</span><span class="age">${escapeHTML(p.ageLabel||'Age TBC')}</span>`;}
 function locality(p){const fossil=window.GlobeeFossilMap?.isFossilPlace(p);return `<span class="card-locality ${p.region.toLowerCase()}${fossil?' fossil-locality':''}">${icon('pin')}${escapeHTML(fossil?'Dorset · Day trip':REGION_LABELS[p.region]||p.region)}</span>`;}
 const observedImages=new Set(),preparedImages=new WeakSet();
-function loadImage(img){const src=img.dataset.src;if(!src||!img.isConnected)return;img.src=src;delete img.dataset.src;imageObserver?.unobserve(img);observedImages.delete(img);}
-const imageObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)loadImage(entry.target);});},{rootMargin:'80px 0px',threshold:0.01}):null;
+function loadImage(img){const src=img.dataset.src;if(!src||!img.isConnected)return;img.loading='eager';img.src=src;delete img.dataset.src;imageObserver?.unobserve(img);observedImages.delete(img);}
+const imageObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)loadImage(entry.target);});},{rootMargin:'360px 0px',threshold:0.01}):null;
 function fixImages(container){
   for(const img of observedImages)if(!img.isConnected){imageObserver?.unobserve(img);observedImages.delete(img);}
   container.querySelectorAll('img[data-src]').forEach(img=>{
