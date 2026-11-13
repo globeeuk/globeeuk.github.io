@@ -133,6 +133,30 @@
   text-underline-offset:.2em;
 }
 .christmas-edition-active .seasonal-results-heading h3{scroll-margin-top:6rem}
+#christmas-santa-heading{scroll-margin-top:10rem}
+.christmas-santa-counties{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+}
+.christmas-santa-county{
+  padding:clamp(1rem,2.5vw,1.5rem);
+  background:var(--christmas-light);
+  border:1px solid #dccbb0;
+  border-radius:4px;
+  color:var(--christmas-ink);
+}
+.christmas-santa-county h4{
+  margin:0;
+  color:var(--christmas-ribbon);
+  font:700 1.5rem/1.15 var(--christmas-serif);
+}
+.christmas-santa-list{list-style:none;margin:0;padding:0}
+.christmas-santa-list li{border-top:1px solid #dccbb0;margin-top:.8rem;padding-top:.8rem}
+.christmas-santa-list h5{margin:0;color:var(--christmas-ribbon);font:700 1.1rem/1.3 var(--heading)}
+.christmas-santa-list p,.christmas-santa-note{margin:.3rem 0;font-size:.9rem;line-height:1.5}
+.christmas-santa-list a{color:var(--christmas-ribbon);font-weight:700;font-size:.9rem;text-underline-offset:.2em}
+.christmas-santa-note{margin-top:.75rem;color:var(--muted)}
 .christmas-market-list{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -156,5 +180,5 @@
   .plans-page.christmas-edition-active .plans-intro h1{font-size:clamp(29px,8vw,47px)}
 }
 @media(max-width:600px){
-  .christmas-market-list{grid-template-columns:1fr}
+  .christmas-market-list,.christmas-santa-counties{grid-template-columns:1fr}
 }
