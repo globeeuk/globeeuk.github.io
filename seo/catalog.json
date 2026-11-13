@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-11-11",
+  "source_verified_at": "2026-11-13",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -633,7 +633,7 @@
         {
           "url": "https://exetercustomhouse.co.uk/your-visit/",
           "supports": "Confirms the address, seasonal opening pattern, entry cut-off 30 minutes before closing and free general admission. Groups should arrange visits in advance. Some display areas may close for private bookings.",
-          "retrieval": "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check.",
+          "retrieval": "Official source body reviewed through web retrieval on 13 November 2026 (Europe/London). Provider visit page confirms 46 The Quay, free general admission with separately ticketed events, April–October 10am–5pm daily and November–March Thursday–Sunday 11am–4pm, with last admission 30 minutes before closing. Group visits require prior contact. Private events can limit display access. The venue identifies Cathedral & Quay and Haven Banks as nearby car parks. No numerical age limit or ordinary family booking requirement is stated.",
           "previous_retrieval": "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
           "label": "Opening times and visitor information",
           "retrieval_history": [
@@ -641,24 +641,26 @@
             "Official visit-page body reviewed on 21 September 2026; free general entry, seasonal hours, last admission 30 minutes before closing and group/private-event conditions confirmed.",
             "Official visit-page body reviewed through the web tool on 22 September 2026; crawler timestamp was today. Free admission, address, seasonal hours, last-entry rule and group/private-event conditions matched.",
             "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
-            "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed."
+            "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
+            "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check."
           ]
         },
         {
           "url": "https://exetercustomhouse.co.uk/about/",
           "supports": "Describes displays and objects inside the building about the development of Exeter Quayside.",
-          "retrieval": "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
+          "retrieval": "Official source body reviewed through web retrieval on 13 November 2026 (Europe/London). Provider About page describes the historical objects and displays inside the building.",
           "previous_retrieval": "Official About-page body reviewed on 23 September 2026; the web response was labelled crawled on 22 September. Indoor objects and displays about Exeter Quayside history matched. A separate direct link check returned HTTP 200.",
           "label": "About the displays",
           "retrieval_history": [
             "Official-source content reviewed on 20 September 2026. Web retrieval may use indexed official content; this does not promise live ticket availability or exceptional same-day opening.",
             "Official About-page body reviewed on 21 September 2026; indoor objects and displays about Exeter Quayside history confirmed.",
             "Official About-page body reviewed through the web tool on 22 September 2026; crawler timestamp was today. Indoor objects and displays about Exeter Quayside history matched.",
-            "Official About-page body reviewed on 23 September 2026; the web response was labelled crawled on 22 September. Indoor objects and displays about Exeter Quayside history matched. A separate direct link check returned HTTP 200."
+            "Official About-page body reviewed on 23 September 2026; the web response was labelled crawled on 22 September. Indoor objects and displays about Exeter Quayside history matched. A separate direct link check returned HTTP 200.",
+            "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed."
           ]
         }
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-11-13",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 21,
@@ -670,7 +672,7 @@
         "No particular children's trail, minimum age or guaranteed display availability is asserted.",
         "This is an ordinary place visit, not an additional occurrence of the shanty festival."
       ],
-      "previous_verified_at": "2026-10-07",
+      "previous_verified_at": "2026-10-16",
       "review_status": "verified",
       "sheet_bindings": [
         {
@@ -720,7 +722,7 @@
         {
           "url": "https://www.exetercornexchange.co.uk/book-tickets/exeters-underground-passages/",
           "supports": "Official council ticket page verifies admission, age limits, access, booking advice, address and seasonal hours.",
-          "retrieval": "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check.",
+          "retrieval": "Official source body reviewed through web retrieval on 13 November 2026 (Europe/London). Council listing confirms Paris Street entrance, Thursday/Friday/Sunday 11am–4pm and Saturday 10.30am–4.30pm subject to change during term, summer holiday Wednesday–Sunday 11am–4pm (last tour 3pm), closed 24–25 December. Adult £9, concession £7, ages 5–17 £6, family £25. Ages 5–17 require an accompanying adult on tours and under-5s can visit the exhibition free with an adult. Arrive 15 minutes before the tour. Advance booking is advised at weekends and school holidays.",
           "previous_retrieval": "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
           "label": "Times, tickets and booking",
           "retrieval_history": [
@@ -728,11 +730,12 @@
             "Official council ticket-page body reviewed on 21 September 2026; prices, age restrictions, booking advice, seasonal hours, address and access conditions confirmed. Individual tour availability was not checked.",
             "Official council ticket-page body reviewed through HTTP/web retrieval on 22 September 2026; an independent link check also returned HTTP 200. Existing prices, hours, address, age restrictions, booking advice and access conditions matched. Individual tour availability was not checked.",
             "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
-            "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed."
+            "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
+            "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check."
           ]
         }
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-11-13",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 127,
@@ -744,7 +747,7 @@
         "General visitor record; individual tour availability has not been checked.",
         "Separate free Heritage Open Days tours must not be implied by this ordinary paid-place listing."
       ],
-      "previous_verified_at": "2026-10-07",
+      "previous_verified_at": "2026-10-16",
       "review_status": "verified",
       "sheet_bindings": [
         {
