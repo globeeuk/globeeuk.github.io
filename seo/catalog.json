@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-11-13",
+  "source_verified_at": "2026-11-14",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -297,8 +297,8 @@
       "sources": [
         {
           "url": "https://rammuseum.org.uk/visit/",
-          "supports": "Free museum admission, Queen Street address, Monday closure, Tuesday 10.30am–5pm and Wednesday–Sunday 10am–5pm remain stated. Living Labyrinths: Art and Fungi closes at 4.30pm on Wednesday 11 November 2026, with last entry at 3.30pm. Gallery 20 (Exeter's Fine Art Gallery) closes from noon on Thursday 12 November 2026. The museum expects it to reopen the following day; confirm access before travelling. These notices concern an exhibition and a gallery, not the whole museum.",
-          "retrieval": "Official page body reviewed through the web tool on 11 November 2026 (Europe/London, GMT), including the two current banners. No on-site access, reopening or live ticket availability check.",
+          "supports": "Free general admission, regular hours, exceptional opening guidance and access to visitor information.",
+          "retrieval": "Official source body reviewed 14 November 2026 (Europe/London). Visit, homepage and accessibility pages show ordinary hours and omit both past dated notices. General admission is free. Two Blue Badge spaces require advance reservation. This does not confirm physical reopening of Gallery 20.",
           "previous_retrieval": "Official Visit-page body reviewed through the web tool on 30 October 2026 (Europe/London, GMT). Entry, address, weekly hours and absence of the past banner compared. No on-site access or live availability check.",
           "label": "Plan your museum visit",
           "retrieval_history": [
@@ -312,7 +312,8 @@
             "Official provider page reviewed through the web tool on 19 October 2026 (BST). Published date, hours, admission basis, age guidance, booking and practical conditions were checked where stated; live capacity was not tested.",
             "Official RAMM Visit page body reviewed through the web tool on 21 October 2026 at about 07:30 BST. The Gallery 20 maintenance banner now says 5–21 October; ordinary museum free entry and weekly hours remain listed. The site still displays the historical 20 October cafe notice, which is no longer presented as an upcoming visitor condition. No on-site reopening or ticket availability was checked.",
             "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check.",
-            "Official Visit-page body reviewed through the web tool on 30 October 2026 (Europe/London, GMT). Entry, address, weekly hours and absence of the past banner compared. No on-site access or live availability check."
+            "Official Visit-page body reviewed through the web tool on 30 October 2026 (Europe/London, GMT). Entry, address, weekly hours and absence of the past banner compared. No on-site access or live availability check.",
+            "Official page body reviewed through the web tool on 11 November 2026 (Europe/London, GMT), including the two current banners. No on-site access, reopening or live ticket availability check."
           ],
           "supports_history": [
             {
@@ -337,13 +338,18 @@
                 "Confirms free museum admission, Queen Street address, Monday closure, Tuesday 10.30am–5pm and Wednesday–Sunday 10am–5pm.",
                 "The 28 October Gallery 20 event-closure banner is absent from the reviewed current page. This does not establish actual gallery reopening or exceptional opening."
               ]
-            }
+            },
+            [
+              "Free museum admission, Queen Street address, Monday closure, Tuesday 10.30am–5pm and Wednesday–Sunday 10am–5pm remain stated.",
+              "Living Labyrinths: Art and Fungi closes at 4.30pm on Wednesday 11 November 2026, with last entry at 3.30pm.",
+              "Gallery 20 (Exeter's Fine Art Gallery) closes from noon on Thursday 12 November 2026. The museum expects it to reopen the following day; confirm access before travelling. These notices concern an exhibition and a gallery, not the whole museum."
+            ]
           ]
         },
         {
           "url": "https://rammuseum.org.uk/visit/access/",
-          "supports": "Confirms Tuesday 10.30am–5pm, Wednesday–Sunday 10am–5pm, and Monday/bank-holiday closures. The same 28 October Gallery 20 event-closure banner is displayed. Numerical visitor ages and general-visit booking requirements remain unstated.",
-          "retrieval": "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check.",
+          "supports": "Regular hours, building access and Blue Badge parking arrangements.",
+          "retrieval": "Official source body reviewed 14 November 2026 (Europe/London). Visit, homepage and accessibility pages show ordinary hours and omit both past dated notices. General admission is free. Two Blue Badge spaces require advance reservation. This does not confirm physical reopening of Gallery 20.",
           "label": "Access and holiday opening",
           "previous_retrieval": "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
           "retrieval_history": [
@@ -351,7 +357,8 @@
             "Official Access page body successfully opened and reviewed on 21 September 2026; weekly hours and Monday/bank-holiday closures confirmed.",
             "Official Access-page full body reviewed through the web tool on 22 September 2026; crawler timestamp was 21 September. Weekly hours and Monday/bank-holiday closures matched. This may be indexed content and does not establish exceptional same-day opening.",
             "Official-source body reviewed on 23 September 2026. The initial web response was labelled crawled on 22 September; this does not establish exceptional same-day opening or live booking availability. Published visitor claims were checked against the displayed body. Chrome also loaded the official page successfully after direct HTTP 403; the current Gallery 20 notices were checked separately.",
-            "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed."
+            "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
+            "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check."
           ],
           "supports_history": [
             {
@@ -359,14 +366,18 @@
               "supports": [
                 "The museum access page lists Monday and bank-holiday closures alongside its regular weekly hours. Check exceptional opening before travelling."
               ]
-            }
+            },
+            [
+              "Confirms Tuesday 10.30am–5pm, Wednesday–Sunday 10am–5pm, and Monday/bank-holiday closures.",
+              "The same 28 October Gallery 20 event-closure banner is displayed. Numerical visitor ages and general-visit booking requirements remain unstated."
+            ]
           ]
         },
         {
           "url": "https://rammuseum.org.uk/",
-          "label": "Current gallery closure notices",
-          "supports": "Free museum admission, Queen Street address, Monday closure, Tuesday 10.30am–5pm and Wednesday–Sunday 10am–5pm remain stated. Living Labyrinths: Art and Fungi closes at 4.30pm on Wednesday 11 November 2026, with last entry at 3.30pm. Gallery 20 (Exeter's Fine Art Gallery) closes from noon on Thursday 12 November 2026. The museum expects it to reopen the following day; confirm access before travelling. These notices concern an exhibition and a gallery, not the whole museum.",
-          "retrieval": "Official page body reviewed through the web tool on 11 November 2026 (Europe/London, GMT), including the two current banners. No on-site access, reopening or live ticket availability check.",
+          "label": "Museum homepage and current notices",
+          "supports": "Current general opening times. The expired 11–12 November notices no longer appear on the homepage.",
+          "retrieval": "Official source body reviewed 14 November 2026 (Europe/London). Visit, homepage and accessibility pages show ordinary hours and omit both past dated notices. General admission is free. Two Blue Badge spaces require advance reservation. This does not confirm physical reopening of Gallery 20.",
           "previous_retrieval": "Official homepage body reviewed through the web tool on 30 October 2026 (Europe/London, GMT); ordinary schedule and absence of the past banner compared. No reopening guarantee.",
           "review_note": "Previous dated gallery-closure evidence is retained in supports_history and retrieval_history; no current whole-museum closure or guaranteed gallery reopening is inferred.",
           "supports_history": [
@@ -387,45 +398,48 @@
               "supports": [
                 "The current homepage lists Queen Street address and ordinary museum opening hours and does not display the past 28 October Gallery 20 closure banner."
               ]
-            }
+            },
+            [
+              "Free museum admission, Queen Street address, Monday closure, Tuesday 10.30am–5pm and Wednesday–Sunday 10am–5pm remain stated.",
+              "Living Labyrinths: Art and Fungi closes at 4.30pm on Wednesday 11 November 2026, with last entry at 3.30pm.",
+              "Gallery 20 (Exeter's Fine Art Gallery) closes from noon on Thursday 12 November 2026. The museum expects it to reopen the following day; confirm access before travelling. These notices concern an exhibition and a gallery, not the whole museum."
+            ]
           ],
           "retrieval_history": [
             "Official RAMM homepage body reviewed on 2 October 2026 at about 07:30 BST; the same current Gallery 20 event and maintenance notices appear there. The banner omits a year but its Thursday 1 and Saturday 3 October dates match 2026.",
             "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check.",
-            "Official homepage body reviewed through the web tool on 30 October 2026 (Europe/London, GMT); ordinary schedule and absence of the past banner compared. No reopening guarantee."
+            "Official homepage body reviewed through the web tool on 30 October 2026 (Europe/London, GMT); ordinary schedule and absence of the past banner compared. No reopening guarantee.",
+            "Official page body reviewed through the web tool on 11 November 2026 (Europe/London, GMT), including the two current banners. No on-site access, reopening or live ticket availability check."
           ]
         }
       ],
-      "verified_at": "2026-11-11",
+      "verified_at": "2026-11-14",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 5,
         "event_rows": [],
-        "reconciliation_note": "Native 시트1!N5 only: added the two dated official notices, read back the value and existing format, and confirmed matching published CSV. No event rows, hours, price, region or historical rows changed.",
-        "checked_at": "2026-11-11T07:07:32.075214+00:00",
+        "reconciliation_note": "Exact existing master cell corrected, read back in native Sheet and matched in published CSV. Historical rows and event occurrences preserved.",
+        "checked_at": "2026-11-14T12:40:49+00:00",
         "published_csv_checked": true,
-        "published_csv_checked_at": "2026-11-11T07:06:38+00:00"
+        "published_csv_checked_at": "2026-11-14T12:40:49+00:00"
       },
       "limitations": [
         "Specific children's trail availability and numerical age guidance were not established in this refresh.",
         "A general place has not been converted into dated event occurrences.",
-        "The current banners omit a year; their Wednesday 11 and Thursday 12 November dates match the current 2026 programme/calendar. Expected reopening is a provider statement, not confirmation of actual reopening.",
-        "The Visit page and homepage were reviewed on 11 November. The separate access URL returned HTTP 403; its earlier 27 October evidence has not been renewed."
+        "Past dated notices archived. Their removal from current official pages does not confirm on-site reopening."
       ],
-      "previous_verified_at": "2026-10-30",
+      "previous_verified_at": "2026-11-11",
       "review_status": "verified",
       "practical_notes": [
         "The museum lists bank-holiday closures; check exceptional opening before travelling.",
-        "Check individual gallery access before travelling.",
-        "Living Labyrinths: Art and Fungi closes at 4.30pm on Wednesday 11 November 2026, with last entry at 3.30pm.",
-        "Gallery 20 (Exeter's Fine Art Gallery) closes from noon on Thursday 12 November 2026. The museum expects it to reopen the following day; confirm access before travelling. These notices concern an exhibition and a gallery, not the whole museum."
+        "Check individual gallery access before travelling."
       ],
       "sheet_bindings": [
         {
           "candidate_id": "f5492124652f836e731fef31",
           "name": "RAMM – Royal Albert Memorial Museum",
           "region": "Devon",
-          "fingerprint": "3fe369070fac463005b0c73116d0d8e6658a9e0e96bc34f8ef1fefdc91dadf55"
+          "fingerprint": "86f3916d3faa735edf6dd4be5d003d669255d8c20d9c6a713d7c422619843ef0"
         }
       ],
       "review_notes": [
@@ -433,7 +447,8 @@
         "21 October: the official Visit-page banner extended Gallery 20 maintenance through 21 October. The 20 October cafe closure is now past and was removed from current practical notes; the official site still displays it as a historical banner. General admission and opening hours remain unchanged.",
         "The Wednesday 28 October banner matches the 2026 calendar and current 2026 museum programme. Ordinary museum hours are separate; no whole-museum closure or guaranteed reopening inferred.",
         "30 October: the official Visit page and homepage no longer display the past 28 October Gallery 20-only banner. Removed the expired current notice from the exact existing master row and current visitor notes. Regular entry/hours confirmed; general age and booking remain TBC. Access URL returned 403, so that source retains its previous review date. No reopening inferred.",
-        "11 November: current exhibition early closing/last entry and Gallery 20-only next-day closure added to native master N5 and visible practical notes. Normal museum entry/hours unchanged; age and general booking remain TBC. Native value/format readback and fresh published CSV confirmed before binding update. Access source retains older evidence after 403."
+        "11 November: current exhibition early closing/last entry and Gallery 20-only next-day closure added to native master N5 and visible practical notes. Normal museum entry/hours unchanged; age and general booking remain TBC. Native value/format readback and fresh published CSV confirmed before binding update. Access source retains older evidence after 403.",
+        "Visit, homepage and accessibility pages show ordinary hours and omit both past dated notices. General admission is free. Two Blue Badge spaces require advance reservation. This does not confirm physical reopening of Gallery 20."
       ],
       "previous_practical_notes": [
         "The museum lists bank-holiday closures; check exceptional opening before travelling.",
@@ -452,6 +467,15 @@
           "notes": [
             "The museum lists bank-holiday closures; check exceptional opening before travelling.",
             "Check individual gallery access before travelling."
+          ]
+        },
+        {
+          "observed_at": "2026-11-11",
+          "notes": [
+            "The museum lists bank-holiday closures; check exceptional opening before travelling.",
+            "Check individual gallery access before travelling.",
+            "Living Labyrinths: Art and Fungi closes at 4.30pm on Wednesday 11 November 2026, with last entry at 3.30pm.",
+            "Gallery 20 (Exeter's Fine Art Gallery) closes from noon on Thursday 12 November 2026. The museum expects it to reopen the following day; confirm access before travelling. These notices concern an exhibition and a gallery, not the whole museum."
           ]
         }
       ],
@@ -477,9 +501,7 @@
       "city": "Exeter",
       "notes": [
         "The museum lists bank-holiday closures; check exceptional opening before travelling.",
-        "Check individual gallery access before travelling.",
-        "Living Labyrinths: Art and Fungi closes at 4.30pm on Wednesday 11 November 2026, with last entry at 3.30pm.",
-        "Gallery 20 (Exeter's Fine Art Gallery) closes from noon on Thursday 12 November 2026. The museum expects it to reopen the following day; confirm access before travelling. These notices concern an exhibition and a gallery, not the whole museum."
+        "Check individual gallery access before travelling."
       ],
       "free_basis": "Free museum admission. Check individual event listings for any separate charges.",
       "indoor_basis": "Editorial classification based on the museum's indoor galleries described on its official visit page."
@@ -701,7 +723,7 @@
       "price_text": "Ticketed: adult £9; concession £7; child 5–17 £6; family up to 2 adults and 3 children £25.",
       "price_type": "paid",
       "booking_text": "Advance booking advised at weekends and during school holidays. Arrive 15 minutes before your tour.",
-      "schedule_text": "Term time: Thursday–Friday and Sunday 11am–4pm; Saturday 10.30am–4.30pm (subject to change); Monday–Wednesday closed. Summer holidays: Wednesday–Sunday 11am–4pm. Closed 24–25 December.",
+      "schedule_text": "Term time: Thursday–Sunday 11am–4pm; Monday–Wednesday closed. Summer holidays: see the operator’s current timetable before travelling. Closed 24–25 December.",
       "indoor": true,
       "rainy_day": {
         "suitable": true,
@@ -716,13 +738,14 @@
       ],
       "practical_notes": [
         "Under-5s may visit the exhibition free with an adult, but cannot join the tour.",
-        "Wheelchairs and pushchairs can access the exhibition only. Passages are narrow and low; unsuitable for claustrophobia."
+        "Wheelchairs and pushchairs can access the exhibition only. Passages are narrow and low; unsuitable for claustrophobia.",
+        "Summer opening days are TBC because the operator and tourism timetables differ. The operator lists 3pm as the last summer tour. Check timed slots before travelling."
       ],
       "sources": [
         {
           "url": "https://www.exetercornexchange.co.uk/book-tickets/exeters-underground-passages/",
           "supports": "Official council ticket page verifies admission, age limits, access, booking advice, address and seasonal hours.",
-          "retrieval": "Official source body reviewed through web retrieval on 13 November 2026 (Europe/London). Council listing confirms Paris Street entrance, Thursday/Friday/Sunday 11am–4pm and Saturday 10.30am–4.30pm subject to change during term, summer holiday Wednesday–Sunday 11am–4pm (last tour 3pm), closed 24–25 December. Adult £9, concession £7, ages 5–17 £6, family £25. Ages 5–17 require an accompanying adult on tours and under-5s can visit the exhibition free with an adult. Arrive 15 minutes before the tour. Advance booking is advised at weekends and school holidays.",
+          "retrieval": "Official source body reviewed 14 November 2026 (Europe/London). Council confirms term-time Thu–Sun 11am–4pm and Mon–Wed closure, 24–25 December closure, adult £9, concession £7, child 5–17 £6, family £25, adult accompaniment and 15-minute advance arrival. Council and tourism listings give different summer weekdays. Summer opening days are TBC; the operator gives 3pm as the summer last tour.",
           "previous_retrieval": "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
           "label": "Times, tickets and booking",
           "retrieval_history": [
@@ -731,36 +754,49 @@
             "Official council ticket-page body reviewed through HTTP/web retrieval on 22 September 2026; an independent link check also returned HTTP 200. Existing prices, hours, address, age restrictions, booking advice and access conditions matched. Individual tour availability was not checked.",
             "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
             "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
-            "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check."
+            "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check.",
+            "Official source body reviewed through web retrieval on 13 November 2026 (Europe/London). Council listing confirms Paris Street entrance, Thursday/Friday/Sunday 11am–4pm and Saturday 10.30am–4.30pm subject to change during term, summer holiday Wednesday–Sunday 11am–4pm (last tour 3pm), closed 24–25 December. Adult £9, concession £7, ages 5–17 £6, family £25. Ages 5–17 require an accompanying adult on tours and under-5s can visit the exhibition free with an adult. Arrive 15 minutes before the tour. Advance booking is advised at weekends and school holidays."
           ]
+        },
+        {
+          "url": "https://www.visitexeter.com/things-to-do/exeters-underground-passages-p134013",
+          "label": "Visit Exeter visitor information",
+          "supports": "Corroborates 2026 term-time Thu–Sun 11am–4pm; gives different summer weekdays. Refer to the operator for the current summer timetable.",
+          "retrieval": "Official tourism listing read on 14 November 2026 (Europe/London)."
         }
       ],
-      "verified_at": "2026-11-13",
+      "verified_at": "2026-11-14",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 127,
         "event_rows": [],
-        "reconciliation_note": "Official claims reviewed on 23 September 2026 and matched to fresh published master/events CSVs. RAMM and Powderham description corrections were read back natively with surrounding cells, formatting and validation preserved; all other selected bindings remain unchanged. On 7 October, the reviewed visitor claims matched fresh published master/events CSV bindings; no Sheet cell or fingerprint was changed.",
-        "checked_at": "2026-10-07T07:08:34+01:00"
+        "reconciliation_note": "Exact existing master cell corrected, read back in native Sheet and matched in published CSV. Historical rows and event occurrences preserved.",
+        "checked_at": "2026-11-14T12:40:49+00:00",
+        "published_csv_checked": true,
+        "published_csv_checked_at": "2026-11-14T12:40:49+00:00"
       },
       "limitations": [
         "General visitor record; individual tour availability has not been checked.",
         "Separate free Heritage Open Days tours must not be implied by this ordinary paid-place listing."
       ],
-      "previous_verified_at": "2026-10-16",
+      "previous_verified_at": "2026-11-13",
       "review_status": "verified",
       "sheet_bindings": [
         {
           "candidate_id": "65d15a18b564f7812563c8a2",
           "name": "Exeter's Underground Passages",
           "region": "Devon",
-          "fingerprint": "cee5d726d2eb825fdb7cc2653b3231937f3985c7b8f41f40d6a24e46379a2593"
+          "fingerprint": "ec781bc39c574482f537dc4d099b95ba98f7a107be7b27230078a1c673e1a3dd"
         }
+      ],
+      "review_notes": [
+        "Council confirms term-time Thu–Sun 11am–4pm and Mon–Wed closure, 24–25 December closure, adult £9, concession £7, child 5–17 £6, family £25, adult accompaniment and 15-minute advance arrival. Council and tourism listings give different summer weekdays. Summer opening days are TBC; the operator gives 3pm as the summer last tour."
       ],
       "city": "Exeter",
       "notes": [
         "Under-5s may visit the exhibition free with an adult, but cannot join the tour.",
-        "Wheelchairs and pushchairs can access the exhibition only. Passages are narrow and low; unsuitable for claustrophobia."
+        "Wheelchairs and pushchairs can access the exhibition only. Passages are narrow and low; unsuitable for claustrophobia.",
+        "Summer opening days are TBC because the operator and tourism timetables differ. The operator lists 3pm as the last summer tour. Check timed slots before travelling."
       ],
       "indoor_basis": "Exhibition and enclosed underground tour."
     },
@@ -3044,29 +3080,31 @@
         {
           "url": "https://rammuseum.org.uk/whats-on/bayeux-around-britain-digital-trail/",
           "supports": "Free twelve-stop gallery trail, about one hour, 15 September 2026–11 July 2027. Weekend museum opening 10am–5pm. Numeric age guidance and booking rule not stated.",
-          "retrieval": "Official page body reviewed on 9 November 2026 (Europe/London) for the selected upcoming dates.",
+          "retrieval": "Official source body reviewed 14 November 2026 (Europe/London). RAMM programme confirms free 12-stop digital trail from 15 September 2026 through 11 July 2027, approximately one hour; visitor page confirms weekend opening 10am–5pm. No numeric ages or booking requirement published.",
           "retrieval_history": [
             "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit.",
             "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
             "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
             "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit.",
-            "Official provider page body reviewed on 8 November 2026 (Europe/London) for the active date(s) only."
+            "Official provider page body reviewed on 8 November 2026 (Europe/London) for the active date(s) only.",
+            "Official page body reviewed on 9 November 2026 (Europe/London) for the selected upcoming dates."
           ]
         },
         {
           "url": "https://rammuseum.org.uk/visit/",
           "label": "RAMM opening times and access",
           "supports": "Weekend gallery opening is 10am to 5pm. Museum entry is free.",
-          "retrieval": "Official page body reviewed on 9 November 2026 (Europe/London) for the selected upcoming dates.",
+          "retrieval": "Official source body reviewed 14 November 2026 (Europe/London). RAMM programme confirms free 12-stop digital trail from 15 September 2026 through 11 July 2027, approximately one hour; visitor page confirms weekend opening 10am–5pm. No numeric ages or booking requirement published.",
           "retrieval_history": [
-            "Official RAMM visitor page body reviewed on 8 November 2026 (Europe/London)."
+            "Official RAMM visitor page body reviewed on 8 November 2026 (Europe/London).",
+            "Official page body reviewed on 9 November 2026 (Europe/London) for the selected upcoming dates."
           ]
         }
       ],
       "limitations": [
         "Device requirements and numerical age suitability remain TBC."
       ],
-      "verified_at": "2026-11-09",
+      "verified_at": "2026-11-14",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -3091,14 +3129,15 @@
         ],
         "published_csv_checked": true
       },
-      "previous_verified_at": "2026-11-08",
+      "previous_verified_at": "2026-11-09",
       "review_notes": [
         "26 October: confirmed ongoing trail period and weekend hours support 7–8 November presentation dates within existing events row514; no Sheet change.",
         "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity.",
         "2 November: relevant current and next-weekend official sources rechecked and exact native records reconciled; fees, numerical ages and booking conditions not stated by the organiser remain TBC. Historical occurrences retained.",
         "14–15 November presentation dates are within the existing 15 September–11 July native event and published museum weekend opening, not a new workshop or new Sheet event.",
         "8 November: the official programme still gives a free twelve-stop digital trail through 11 July 2027. The RAMM visitor page confirms Saturday and Sunday gallery hours of 10:00–17:00. Rechecked 8 and 14–15 November only.",
-        "9 November: the official ongoing event period and weekend museum hours cover 14–15 and 21–22 November. Added the next weekend dates only."
+        "9 November: the official ongoing event period and weekend museum hours cover 14–15 and 21–22 November. Added the next weekend dates only.",
+        "RAMM programme confirms free 12-stop digital trail from 15 September 2026 through 11 July 2027, approximately one hour; visitor page confirms weekend opening 10am–5pm. No numeric ages or booking requirement published."
       ],
       "notes": [
         "This is a self-guided ongoing trail, not a timed workshop.",
@@ -3407,26 +3446,35 @@
           "url": "https://www.tobaccofactory.com/sunday-market",
           "label": "Tobacco Factory market guide",
           "supports": "Published Sunday market hours are 10am–2.30pm. Visitor admission and booking terms are not specified.",
-          "retrieval": "Official source read on 11 November 2026 (Europe/London)."
+          "retrieval": "Official source body reviewed 14 November 2026 (Europe/London). Official calendar confirms 15 and 22 November 2026 at 10am. Calendar says 2.30pm close for 15 November and the dated page says 2pm. Retain published closing-time qualification; admission, age and booking TBC.",
+          "retrieval_history": [
+            "Official source read on 11 November 2026 (Europe/London)."
+          ]
         },
         {
           "url": "https://www.tobaccofactory.com/whats-on?category=Market",
           "label": "Tobacco Factory market calendar",
           "supports": "15 and 22 November 2026, 10am–2.30pm.",
-          "retrieval": "Official source read on 11 November 2026 (Europe/London)."
+          "retrieval": "Official source body reviewed 14 November 2026 (Europe/London). Official calendar confirms 15 and 22 November 2026 at 10am. Calendar says 2.30pm close for 15 November and the dated page says 2pm. Retain published closing-time qualification; admission, age and booking TBC.",
+          "retrieval_history": [
+            "Official source read on 11 November 2026 (Europe/London)."
+          ]
         },
         {
           "url": "https://www.tobaccofactory.com/whats-on/sunday-market/15/12/26",
           "label": "Tobacco Factory dated 15 November page",
           "supports": "The body explicitly gives Sunday 15 November 2026, 10am–2pm, despite the December slug. Closing time is kept TBC.",
-          "retrieval": "Official source read on 11 November 2026 (Europe/London)."
+          "retrieval": "Official source body reviewed 14 November 2026 (Europe/London). Official calendar confirms 15 and 22 November 2026 at 10am. Calendar says 2.30pm close for 15 November and the dated page says 2pm. Retain published closing-time qualification; admission, age and booking TBC.",
+          "retrieval_history": [
+            "Official source read on 11 November 2026 (Europe/London)."
+          ]
         }
       ],
       "limitations": [
         "Unstated prices, numerical ages, entry/access rules and exceptional changes remain TBC.",
         "Official closing times conflict: 2pm on dated pages versus 2.30pm on the calendar/general guide. No closing time is confirmed."
       ],
-      "verified_at": "2026-11-11",
+      "verified_at": "2026-11-14",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -3495,12 +3543,13 @@
         }
       ],
       "previous_schedule_text": "Sundays, 10am–2.30pm. 1 and 8 November 2026 follow the published weekly schedule, not separate dated confirmations.",
-      "previous_verified_at": "2026-11-08",
+      "previous_verified_at": "2026-11-11",
       "review_notes": [
         "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity.",
         "2 November: relevant current and next-weekend official sources rechecked and exact native records reconciled; fees, numerical ages and booking conditions not stated by the organiser remain TBC. Historical occurrences retained.",
         "8 November: verified the 8 and 15 November dated listings and the official calendar and market guide. The 2pm versus 2.30pm closing discrepancy remains. Past occurrences remain historical.",
-        "9 November: the 15 and 22 November dated pages both give 10am–2pm, while the programme and general market guide give 10am–2.30pm. Both closing times remain TBC."
+        "9 November: the 15 and 22 November dated pages both give 10am–2pm, while the programme and general market guide give 10am–2.30pm. Both closing times remain TBC.",
+        "Official calendar confirms 15 and 22 November 2026 at 10am. Calendar says 2.30pm close for 15 November and the dated page says 2pm. Retain published closing-time qualification; admission, age and booking TBC."
       ],
       "schedule_history": [
         "Sunday 1 and 8 November 2026, from 10am. Closing time TBC: dated event pages say 2pm, but the calendar and general market guide say 2.30pm; confirm before travelling."
@@ -3571,19 +3620,20 @@
         {
           "url": "https://www.wrmcic.co.uk/home",
           "supports": "Organiser lists every Saturday, 08:30–13:00, at Whiteladies/Apsley Road BS8 2ST, with local food and some crafts/plants. Selected dates follow that rule. Admission, age and visitor booking conditions are unstated.",
-          "retrieval": "Official page body reviewed on 9 November 2026 (Europe/London) for the selected upcoming dates.",
+          "retrieval": "Official source body reviewed 14 November 2026 (Europe/London). Organiser confirms regular Saturday 8.30am–1pm at Whiteladies/Apsley Road; 21 November follows recurring schedule. General admission, numerical ages and booking remain TBC.",
           "retrieval_history": [
             "Official organiser page body reviewed on 26 October 2026 (GMT). No booking transaction, live-availability guarantee or visit.",
             "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
             "Official provider body reviewed on 2 November 2026 (Europe/London, GMT): relevant programme dates, opening hours, admission basis, age guidance and visitor booking/access qualifications compared. No live availability guarantee, checkout or visit.",
-            "Official provider page body reviewed on 8 November 2026 (Europe/London) for the active date(s) only."
+            "Official provider page body reviewed on 8 November 2026 (Europe/London) for the active date(s) only.",
+            "Official page body reviewed on 9 November 2026 (Europe/London) for the selected upcoming dates."
           ]
         }
       ],
       "limitations": [
         "Unstated prices, numerical ages, entry/access rules and exceptional changes remain TBC."
       ],
-      "verified_at": "2026-11-09",
+      "verified_at": "2026-11-14",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -3611,12 +3661,13 @@
         ],
         "checked_at": "2026-11-09T08:54:51+00:00"
       },
-      "previous_verified_at": "2026-11-08",
+      "previous_verified_at": "2026-11-09",
       "review_notes": [
         "28 October weekly check: official programme and practical conditions compared with current published CSV. No new DB row or occurrence created for this existing activity.",
         "2 November: relevant current and next-weekend official sources rechecked and exact native records reconciled; fees, numerical ages and booking conditions not stated by the organiser remain TBC. Historical occurrences retained.",
         "8 November: official market page confirms the regular Saturday 08:30–13:00 schedule at Whiteladies Road and Apsley Road. The 14 November listing follows that schedule. Admission, booking and numerical ages remain TBC.",
-        "9 November: the venue confirms the continuing Saturday schedule. 14 and 21 November follow that schedule."
+        "9 November: the venue confirms the continuing Saturday schedule. 14 and 21 November follow that schedule.",
+        "Organiser confirms regular Saturday 8.30am–1pm at Whiteladies/Apsley Road; 21 November follows recurring schedule. General admission, numerical ages and booking remain TBC."
       ],
       "schedule_history": [
         "Saturdays, 8.30am–1pm. 31 October and 7 November 2026 follow the published weekly schedule, not separate dated confirmations."
@@ -4189,16 +4240,22 @@
           "url": "https://exeterphoenix.org.uk/events/family-workshop-xmas-stocking/",
           "label": "Exeter Phoenix workshop and booking",
           "supports": "Specifies 21 November 2026, 10am–1pm, Top Studio, ages 6+, published prices and ticketing fee.",
-          "retrieval": "Official page body reviewed on 9 November 2026 (Europe/London)."
+          "retrieval": "Official source body reviewed 14 November 2026 (Europe/London). Official workshop and fee pages confirm 21 November 2026, 10am–1pm, Top Studio, ages 6+, published £18 adult or £24 pair and £12 third person, £1.50 online ticket fee and booking link. Availability and adult accompaniment TBC.",
+          "retrieval_history": [
+            "Official page body reviewed on 9 November 2026 (Europe/London)."
+          ]
         },
         {
           "url": "https://exeterphoenix.org.uk/ticketing-system-charge/",
           "label": "Exeter Phoenix online ticket fee",
           "supports": "States the £1.50 ticketing system charge applies to all tickets bought online.",
-          "retrieval": "Official page body reviewed on 9 November 2026 (Europe/London)."
+          "retrieval": "Official source body reviewed 14 November 2026 (Europe/London). Official workshop and fee pages confirm 21 November 2026, 10am–1pm, Top Studio, ages 6+, published £18 adult or £24 pair and £12 third person, £1.50 online ticket fee and booking link. Availability and adult accompaniment TBC.",
+          "retrieval_history": [
+            "Official page body reviewed on 9 November 2026 (Europe/London)."
+          ]
         }
       ],
-      "verified_at": "2026-11-09",
+      "verified_at": "2026-11-14",
       "review_status": "verified_with_explicit_limitations",
       "limitations": [
         "Adult accompaniment, parking and live capacity were not confirmed."
@@ -4223,6 +4280,10 @@
         "checked_at": "2026-11-09T08:54:51+00:00",
         "reconciliation_note": "Compared exact master and events entries in the complete published CSVs against the reviewed provider details. Existing native dates and values were preserved. No new native cell read or write for this review."
       },
+      "previous_verified_at": "2026-11-09",
+      "review_notes": [
+        "Official workshop and fee pages confirm 21 November 2026, 10am–1pm, Top Studio, ages 6+, published £18 adult or £24 pair and £12 third person, £1.50 online ticket fee and booking link. Availability and adult accompaniment TBC."
+      ],
       "notes": [
         "The venue lists a separate 12 December session. This listing covers 21 November."
       ],
@@ -4270,10 +4331,13 @@
           "url": "https://exetercornexchange.co.uk/whats-on/firehorse-by-aura-performing-arts/",
           "label": "Exeter Corn Exchange performance and booking",
           "supports": "Specifies the public 22 November performance, 5pm start, 4.30pm doors, £14 including £1 fee, and adult accompaniment for under-14s.",
-          "retrieval": "Official page body reviewed on 9 November 2026 (Europe/London)."
+          "retrieval": "Official source body reviewed 14 November 2026 (Europe/London). Council venue confirms 22 November 2026, 5pm, doors 4.30pm, £14 including fee, booking link and adult accompaniment under 14. Finish time, minimum age and availability remain TBC.",
+          "retrieval_history": [
+            "Official page body reviewed on 9 November 2026 (Europe/London)."
+          ]
         }
       ],
-      "verified_at": "2026-11-09",
+      "verified_at": "2026-11-14",
       "review_status": "verified_with_explicit_limitations",
       "limitations": [
         "Minimum recommended age, duration, interval, last admission and live capacity are TBC."
@@ -4297,6 +4361,10 @@
         "checked_at": "2026-11-09T08:54:51+00:00",
         "reconciliation_note": "Compared exact master and events entries in the complete published CSVs against the reviewed provider details. Existing native dates and values were preserved. No new native cell read or write for this review."
       },
+      "previous_verified_at": "2026-11-09",
+      "review_notes": [
+        "Council venue confirms 22 November 2026, 5pm, doors 4.30pm, £14 including fee, booking link and adult accompaniment under 14. Finish time, minimum age and availability remain TBC."
+      ],
       "notes": [
         "Doors open at 4.30pm. Show duration, interval and last admission are TBC."
       ],
