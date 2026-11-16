@@ -85,3 +85,8 @@ body{margin:0;background:#fffefa}html{scroll-behavior:smooth}.sr-only{position:a
   #globee-birthday-notes .bp-venue-option strong{font-size:22px;}
   #globee-birthday-notes .bp-venue-group .bp-provider{padding:14px;}
 }
+
+#globee-birthday-notes #bp-food-cake{scroll-margin-top:22px;}
+#globee-birthday-notes .bp-cake-photo{margin:0 0 12px;max-width:260px;}
+#globee-birthday-notes .bp-cake-photo img{display:block;width:100%;height:auto;border-radius:10px;}
+#globee-birthday-notes .bp-cake-links{display:flex;flex-wrap:wrap;gap:5px 14px;}
