@@ -61,19 +61,6 @@
  let searchTimer,composing=false;
  function cancelSearch(){clearTimeout(searchTimer);searchTimer=null;}
  window.GlobeeNotebook={sync,cancelSearch};
- const signup=document.getElementById('weekend-newsletter-signup');
- signup?.addEventListener('toggle',()=>{
-  if(!signup.open||signup.querySelector('iframe'))return;
-  const formLink=signup.querySelector('[data-weekend-signup-form]');
-  const url=new URL(formLink.href);
-  url.searchParams.set('embedded','true');
-  const frame=document.createElement('iframe');
-  frame.className='weekend-signup-frame';
-  frame.title='Exeter and Devon Weekend Edit email form';
-  frame.referrerPolicy='no-referrer';
-  frame.src=url.href;
-  formLink.closest('p').after(frame);
- });
  document.querySelector('[data-notebook-filter-toggle]')?.addEventListener('click',event=>{
   const controls=document.getElementById('notebook-filter-controls');controls.hidden=!controls.hidden;event.currentTarget.setAttribute('aria-expanded',String(!controls.hidden));
  });

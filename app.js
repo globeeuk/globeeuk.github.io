@@ -356,8 +356,8 @@ function render(options={}){
       if(!marketMap.hidden)window.GlobeeChristmasMarketMap?.mount(marketMap);
     }
   }
-  const newsletter=$('#weekend-newsletter');
-  if(newsletter)newsletter.hidden=state.region!=='Exeter'||state.notebookSection!=='days'||state.view!=='list'||!!nearbyOrigin||!!state.query;
+  const instagramPreview=$('#home-instagram-preview');
+  if(instagramPreview)instagramPreview.hidden=state.region!=='Exeter'||state.notebookSection!=='days'||state.view!=='list'||!!nearbyOrigin||!!state.query;
   nearbyControls?.sync(nearbyOrigin,nearbyMiles,state.notebookSection!=='notes',state.region);
   if(scoopPromo)scoopPromo.href=`ice-cream.html?from=${state.region==='Bristol'?'Bristol':'Devon'}`;
   if(winterMapLink)winterMapLink.querySelector('a').href=`ice-cream.html?from=${state.region==='Bristol'?'Bristol':'Devon'}`;

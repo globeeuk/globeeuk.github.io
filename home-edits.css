@@ -46,13 +46,13 @@
 .christmas-night-art{display:none}
 
 @media(min-width:840px){
-  .home-featured-edits:has(.entry-cards:not([hidden]) .devon-christmas-strip:not([hidden])):has(.weekend-newsletter:not([hidden])){
+  .home-featured-edits:has(.entry-cards:not([hidden]) .devon-christmas-strip:not([hidden])):has(.home-instagram-preview:not([hidden])){
     display:grid;
     grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);
     gap:clamp(12px,2vw,24px);
-    align-items:start;
+    align-items:stretch;
   }
-  .home-featured-edits:has(.entry-cards:not([hidden]) .devon-christmas-strip:not([hidden])):has(.weekend-newsletter:not([hidden])) > *{
+  .home-featured-edits:has(.entry-cards:not([hidden]) .devon-christmas-strip:not([hidden])):has(.home-instagram-preview:not([hidden])) > *{
     margin:0;
   }
 }
@@ -112,53 +112,61 @@
   font-size:clamp(.72rem,1.5vw,.92rem);
 }
 
-.weekend-newsletter{margin-top:.65rem;container-type:inline-size}
-.weekend-newsletter[hidden]{display:none!important}
-.weekend-newsletter-inner{
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  gap:.8rem;
-  min-height:clamp(130px,17vw,245px);
-  padding:clamp(15px,2vw,25px);
-  border-block:1px solid #d9dbd0;
+.home-instagram-preview{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) clamp(88px,31%,132px);
+  align-items:center;
+  gap:clamp(10px,1.4vw,18px);
+  min-height:clamp(138px,18vw,253px);
+  margin-top:.65rem;
+  padding:clamp(12px,1.6vw,20px);
+  border:1px solid #d9dbd0;
+  border-radius:5px;
   background:#f1f2eb;
   color:#2d352f;
+  text-decoration:none;
 }
-.weekend-newsletter h2{font:650 clamp(27px,3.3vw,37px)/1.04 var(--edit-serif);letter-spacing:-.02em;margin:0 0 .35rem}
-.weekend-newsletter p{margin:0 0 .45rem;line-height:1.5;font-size:.83rem;color:#4f554d}
-.weekend-newsletter-copy>p:last-child{margin-bottom:0}
-.weekend-newsletter .weekend-newsletter-kicker{font-size:.7rem;font-weight:800;letter-spacing:.09em;color:#4f554d}
-.weekend-newsletter-actions{display:flex;flex-wrap:wrap;gap:.45rem .75rem;align-items:flex-start;min-width:0}
-.weekend-newsletter-actions details{min-width:0;max-width:100%}
-.weekend-newsletter-actions details[open]{flex-basis:100%}
-.weekend-newsletter-actions :is(summary,.weekend-sample-link){
-  width:fit-content;
-  min-height:44px;
-  padding:.64rem .7rem;
-  cursor:pointer;
-  font-size:.79rem;
-  font-weight:750;
-  line-height:1.45;
+.home-instagram-preview[hidden]{display:none}
+.home-instagram-preview:hover{border-color:#849183}
+.home-instagram-preview:focus-visible{outline:2px solid #244a78;outline-offset:3px}
+.home-instagram-copy p{margin:0;font-size:.8125rem;line-height:1.45;color:#4f554d}
+.home-instagram-copy .home-instagram-kicker{
+  margin:0 0 .35rem;
+  font-size:.6875rem;
+  font-weight:800;
+  letter-spacing:.07em;
+  text-transform:uppercase;
 }
-.weekend-newsletter-actions .weekend-signup summary{border-radius:4px;background:#2d352f;color:#fffefa}
-.weekend-newsletter-actions :is(summary,.weekend-sample-link):focus-visible{outline:2px solid #2d352f;outline-offset:3px}
-.weekend-signup-panel{padding-top:.75rem;font-size:.88rem}
-.weekend-signup-panel a{text-decoration:underline;text-underline-offset:.15em}
-.weekend-signup-frame{display:block;width:100%;height:875px;border:0;margin-top:.65rem;background:#fffefa;border-radius:6px}
-.notebook-home:has(.weekend-newsletter:not([hidden]) .weekend-signup[open]) #view-toggle{display:none}
-@container(max-width:600px){.weekend-signup-frame{height:1080px}}
-@container(max-width:480px){.weekend-signup-frame{height:1140px}}
-@container(max-width:420px){.weekend-signup-frame{height:1240px}}
-@container(max-width:360px){.weekend-signup-frame{height:1370px}}
-.weekend-newsletter-actions .weekend-sample-link{
-  display:inline-flex;
-  align-items:center;
-  gap:.3rem;
-  padding-inline:0;
-  color:#2d352f;
+.home-instagram-copy h2{
+  margin:0 0 .35rem;
+  font:600 clamp(21px,2vw,29px)/1.08 Outfit,system-ui,sans-serif;
+  letter-spacing:-.02em;
+}
+.home-instagram-action{
+  display:inline-block;
+  margin-top:.5rem;
+  font-size:.8125rem;
+  font-weight:800;
   text-decoration:underline;
-  text-underline-offset:.21em;
+  text-decoration-color:#244a78;
+  text-underline-offset:.2em;
+}
+.home-instagram-action span{color:#244a78}
+.home-instagram-cover{position:relative}
+.home-instagram-cover img{display:block;width:100%;height:auto;border-radius:4px;background:#fffefa}
+.home-instagram-cover::after{
+  content:"▶";
+  position:absolute;
+  right:6px;
+  bottom:6px;
+  display:grid;
+  place-items:center;
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  background:#fffefa;
+  color:#244a78;
+  font-size:11px;
 }
 
 .home-weekend-edit{
@@ -186,9 +194,6 @@
   .nearby-controls .nearby-distance{flex-basis:100%}
   .notebook-home .entry-cards #christmas-entry.devon-christmas-strip{min-height:130px}
   #christmas-entry.devon-christmas-strip .christmas-copy{width:60%}
-  .weekend-newsletter-inner{min-height:0}
-  .weekend-newsletter-actions{column-gap:.4rem}
-  .weekend-newsletter-actions .weekend-signup summary{padding-inline:.55rem}
   .home-weekend-edit{margin-right:18px}
 }
 
