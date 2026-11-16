@@ -177,8 +177,16 @@ Object.assign(window.GLOBEE_EDITORIAL.annotations,{
 // Venue structure and family conditions checked with organisers, 11 November 2026.
 // Dates, prices and closures remain in the Sheet; Planet Ice is a permanent place.
 Object.assign(window.GLOBEE_EDITORIAL.annotations, {
-  'Undercover Real Ice Rink – Exeter Winter Wonderland': {category:'Covered outdoor ice skating',ageLabel:'3+ · ages 3–7 with a skating adult'},
-  'Icescape Westpoint – Exeter Ice Rink': {category:'Indoor ice skating'},
+  'Undercover Real Ice Rink – Exeter Winter Wonderland': {
+    category:'Covered outdoor ice skating',
+    ageLabel:'3+ · ages 3–7 with a skating adult',
+    winterPlayFrom:'2026-11-16'
+  },
+  'Icescape Westpoint – Exeter Ice Rink': {
+    category:'Indoor ice skating',
+    ageLabel:'Must walk unaided',
+    winterPlayFrom:'2026-11-16'
+  },
   'Plymouth Winter Wonderland – Ice Rink': {category:'Covered outdoor ice skating'},
   'Bay of Lights Ice Rink – Torquay': {category:'Covered seasonal ice skating',ageLabel:'Must walk unaided'},
   'North Devon Christmas Ice Rink – Barnstaple': {category:'Covered outdoor ice skating',ageLabel:'All ages · under-4s with a skating adult'},
