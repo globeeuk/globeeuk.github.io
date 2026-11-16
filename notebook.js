@@ -91,14 +91,21 @@
  document.querySelector('[data-notebook-class-region]')?.addEventListener('change',event=>{window.location.href=url('classes',event.currentTarget.value);});
  const title=document.querySelector('.topline h1');if(title&&!body.classList.contains('class-cost-catalogue'))title.textContent='A little interest. A new beginning.';
  if(!document.querySelector('.notebook-classes .notebook-kicker')){const kicker=document.createElement('span');kicker.className='notebook-kicker';kicker.textContent='TRY SOMETHING NEW';document.querySelector('.topline').before(kicker);}
- let filter='all';
+ const filters=[...document.querySelectorAll('[data-filter]')];
+ const requestedFilter=new URLSearchParams(window.location.search).get('filter');
+ let filter=requestedFilter==='indoor'&&filters.some(button=>button.dataset.filter==='indoor')?'indoor':'all';
  function apply(){
   const words=(input?.value||'').trim().toLocaleLowerCase('en-GB').split(/\s+/).filter(Boolean);let shown=0;
-  cards.forEach(card=>{const text=card.textContent.toLocaleLowerCase('en-GB');card.hidden=(filter!=='all'&&card.dataset.category!==filter)||!words.every(word=>text.includes(word));if(!card.hidden)shown++;});
+  cards.forEach(card=>{
+   const text=card.textContent.toLocaleLowerCase('en-GB');
+   const wrongFilter=filter==='indoor'?!card.hasAttribute('data-indoor-lesson'):filter!=='all'&&card.dataset.category!==filter;
+   card.hidden=wrongFilter||!words.every(word=>text.includes(word));if(!card.hidden)shown++;
+  });
+  filters.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.filter===filter)));
   const count=document.getElementById('count');count.textContent=shown+' '+(shown===1?'option':'options');count.setAttribute('aria-live','polite');
   document.getElementById('notebook-class-empty').hidden=shown>0;
  }
- document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));apply();}));
+ filters.forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;apply();}));
  input?.addEventListener('input',apply);
  document.getElementById('notebook-class-search')?.addEventListener('submit',event=>{event.preventDefault();document.getElementById('lessons').scrollIntoView({block:'start'});});
  apply();

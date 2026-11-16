@@ -22,7 +22,18 @@ test('Notebook lists use automatic batches with an all-items fallback and only h
  assert.match(app,/window\.GlobeeNotebook\?\.sync\(state\)/);
 });
 test('The shared class presentation retains all existing entries and combines search with interests',()=>{
- for(const [file,count] of [['classes.html',35],['bristol/classes/index.html',37],['nottingham/classes/index.html',18]])assert.equal((read(file).match(/<article class="card(?: quick-card)?"/g)||[]).length,count,file);
+ for(const [file,count] of [['classes.html',39],['bristol/classes/index.html',40],['nottingham/classes/index.html',18]])assert.equal((read(file).match(/<article class="card(?: quick-card)?"/g)||[]).length,count,file);
  const script=read('notebook.js');assert.match(script,/words\.every\(word=>text\.includes\(word\)\)/);assert.match(script,/filter!=='all'&&card\.dataset\.category!==filter/);
  assert.doesNotMatch(script,/localStorage|document\.cookie|gtag|google-analytics|fetch\(/);
+});
+test('The indoor shortcut excludes outdoor and unconfirmed venues and is limited to the refreshed regions',()=>{
+ for(const file of ['classes.html','bristol/classes/index.html']){
+  const html=read(file);
+  assert.match(html,/data-filter="indoor"/);
+  const indoor=html.match(/<article[^>]+data-indoor-lesson[^>]*>[\s\S]*?<\/article>/g);
+  assert.equal(indoor.length,4,file);
+  indoor.forEach(card=>assert.doesNotMatch(card,/data-venue-setting="(?:outdoor|unconfirmed)"/));
+  assert.equal((html.match(/data-venue-setting="(?:outdoor|unconfirmed)"/g)||[]).length,1);
+ }
+ assert.doesNotMatch(read('nottingham/classes/index.html'),/data-filter="indoor"/);
 });

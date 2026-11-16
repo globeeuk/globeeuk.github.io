@@ -194,3 +194,17 @@ Object.assign(window.GLOBEE_EDITORIAL.annotations, {
   'Bristol on Ice – Harbourside Ice Rink': {category:'Outdoor ice skating · cover TBC',ageLabel:'5+ years'},
   'Planet Ice Bristol – Cribbs Causeway': {category:'Indoor ice skating'}
 });
+
+// Dedicated listings in Classes & lessons; keep these out of Days out.
+Object.assign(window.GLOBEE_EDITORIAL.annotations,{
+  "Exeter Academy of Dance — Pre-school Ballet":{classesOnly:true},
+  "Joanna Mardon School of Dance — Beginner Ballet":{classesOnly:true},
+  "Saints Southwest — Exeter Futsal Development Centre":{classesOnly:true},
+  "Phase Football Academy — Exmouth Wildcats":{classesOnly:true},
+  "Exmouth Jesters Basketball Club — Juniors":{classesOnly:true},
+  "Bristol Ballet School — Pre-Primary and Primary Ballet":{classesOnly:true},
+  "Bristol Russian Ballet School — Ashton Park Saturday Ballet":{classesOnly:true},
+  "Little Kickers — Ashton Park Saturday Indoor Football":{classesOnly:true},
+  "Downend Flyers FC — Girls’ Mini Football":{classesOnly:true},
+  "Bristol Beacon — Singing Sparks (Years 3–4)":{classesOnly:true},
+});
