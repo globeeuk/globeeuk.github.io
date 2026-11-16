@@ -41,3 +41,47 @@ body{margin:0;background:#fffefa}html{scroll-behavior:smooth}.sr-only{position:a
 @media(max-width:650px){
   #garland-the-arches .bp-with-photo{grid-template-columns:minmax(0,1fr);gap:12px;}
 }
+
+/* Keep the two kinds of birthday venue easy to compare. */
+#globee-birthday-notes .bp-venue-options{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0 32px;
+}
+#globee-birthday-notes a.bp-venue-option{
+  display:flex;flex-direction:column;align-items:flex-start;min-width:0;gap:8px;padding:16px 18px;
+  border:1px solid var(--bp-line);border-radius:13px;background:light-dark(#f1f2eb,#334030);
+  text-decoration:none;line-height:1.45;
+}
+#globee-birthday-notes a.bp-venue-option-hall{background:light-dark(#f7f5ee,#40392d);}
+#globee-birthday-notes .bp-venue-option-top{
+  display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;
+  font-size:11px;font-weight:700;letter-spacing:.09em;color:var(--bp-muted);
+}
+#globee-birthday-notes .bp-venue-option-top svg{flex:none;width:22px;height:22px;color:var(--bp-ink);}
+#globee-birthday-notes .bp-venue-option strong{font:500 25px/1.15 Outfit,Arial,sans-serif;letter-spacing:-.02em;}
+#globee-birthday-notes .bp-venue-option-copy{font-size:13px;line-height:1.6;}
+#globee-birthday-notes .bp-venue-option-link{
+  margin-top:auto;padding-top:6px;font-size:13px;font-weight:700;
+  color:light-dark(#244a78,#bdd9ff);text-decoration:underline;text-underline-offset:4px;
+}
+#globee-birthday-notes .bp-venue-option:hover{border-color:var(--bp-green);}
+#globee-birthday-notes .bp-venue-group{scroll-margin-top:22px;}
+#globee-birthday-notes .bp-venue-group + .bp-venue-group{margin-top:38px;}
+#globee-birthday-notes .bp-venue-group .bp-typeheading{margin:0 0 6px;align-items:baseline;}
+#globee-birthday-notes .bp-venue-group .bp-typeheading h3{margin:0;font-size:25px;}
+#globee-birthday-notes .bp-venue-group .bp-provider-grid{gap:14px;align-items:start;}
+#globee-birthday-notes .bp-venue-group .bp-provider{
+  padding:15px 17px;border:1px solid var(--bp-line);border-radius:13px;background:var(--bp-paper);
+}
+#globee-birthday-notes .bp-venue-group .bp-venue-enquiries-title{
+  font:500 20px/1.35 Outfit,Arial,sans-serif;margin:18px 0 12px;
+}
+@media(max-width:730px){
+  #globee-birthday-notes .bp-venue-group .bp-provider-grid{grid-template-columns:1fr;}
+  #globee-birthday-notes .bp-venue-group .bp-typeheading{align-items:flex-start;}
+}
+@media(max-width:560px){
+  #globee-birthday-notes .bp-venue-options{grid-template-columns:1fr;gap:10px;margin:16px 0 28px;}
+  #globee-birthday-notes a.bp-venue-option{padding:13px 15px;gap:5px;}
+  #globee-birthday-notes .bp-venue-option strong{font-size:22px;}
+  #globee-birthday-notes .bp-venue-group .bp-provider{padding:14px;}
+}
