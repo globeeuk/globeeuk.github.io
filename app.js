@@ -155,7 +155,7 @@ function card(p){
   const isNew=GlobeeDB.isNewThisWeek(p),badge=isNew?'<span class="new-badge" title="First listed on Globee this week" aria-hidden="true">NEW</span>':'';
   const winterTag=isWinterPlay(p)?'<span class="winter-play-tag">Winter play ❄️</span>':'';
   const saveAction=window.GlobeeMyPlans?.cardAction(p)||'';
-  const topSave=isNotebookHome&&state.notebookSection==='days'&&!!saveAction;
+  const topSave=!!saveAction&&(isPlansPage||(isNotebookHome&&state.notebookSection==='days'));
   const saveRow=topSave?`<div class="place-card-save-row"><span class="place-card-save-category">${escapeHTML(p.category)}</span>${saveAction}</div>`:'';
   const categoryBadge=topSave?'':`<span class="category-badge">${icon(p.type)}${escapeHTML(p.category)}</span>`;
   const media=p.image?`<div class="picture">${photo(p)}${categoryBadge}${badge}</div>`:topSave?'':badge;

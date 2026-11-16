@@ -105,19 +105,10 @@
     if(el.dataset.marketRegion)globeeTrack('market_area_select',{region:el.dataset.marketRegion});
     if(el.dataset.plansWindow)globeeTrack('weekend_period_select',{view:el.dataset.plansWindow});
     if(el.dataset.rail==='weekend-picks')globeeTrack('weekend_list_move',{direction:el.dataset.direction==='-1'?'previous':'next'});
-    if(el.tagName==='A'){
-      const url=new URL(el.href,location.origin);
-      if(url.origin===location.origin&&url.pathname==='/weekend-edit/sample/')globeeTrack('newsletter_sample_open');
-    }
     if(el.matches('#exeter-music-feature .music-feature-links a')){
       const host=new URL(el.href).hostname;
       globeeTrack('music_banner_click',{region:'Exeter',social_platform:host.includes('instagram.com')?'instagram':'facebook'});
     }
     if(el.dataset.socialPlatform)globeeTrack('social_visit',{social_platform:el.dataset.socialPlatform,region:new URLSearchParams(location.search).get('region')||''});
   });
-  // A form being opened is not a successful subscription. The Google Form
-  // response sheet remains the source for completed, deduplicated signups.
-  document.addEventListener('toggle',e=>{
-    if(e.target.id==='weekend-newsletter-signup'&&e.target.open)globeeTrack('newsletter_form_open');
-  },true);
 })();

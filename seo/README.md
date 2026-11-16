@@ -83,7 +83,7 @@ Each guide has a unique title and description, a root-domain canonical, crawlabl
 
 Search Console ownership and sitemap submission are confirmed; sitemap processing remains a separate outcome tracked in [OPERATIONS.md](OPERATIONS.md). Inspect indexing, search impressions and clicks manually when useful; no additional statistics schedule is established here. Indexability and sitemap submission do not guarantee ranking.
 
-There is no email signup form in these guides. Subscription collection and newsletter sending belong to a separate implementation.
+The public Weekend Edit outing guides continue during the mailing pause. Keep email signup, opt-out forms, sample issues and email promotion out of published guides and other entry pages until mailing explicitly resumes.
 
 ## Checks
 

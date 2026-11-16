@@ -50,7 +50,7 @@ test('Invalid campaign values and malformed referrers do not leak or stop collec
  assert.equal(event.campaign_medium,'email');for(const k of ['campaign_source','campaign_content','campaign_name'])assert.equal(event[k],undefined);
  assert(!JSON.stringify(a.ctx.dataLayer).includes('test@example.com'));assert.equal(a.requests.length,1);
 });
-test('Map, weekend, sample and form actions respect consent without adding page views',()=>{
+test('Map and weekend actions respect consent and retired mailing actions do not fire',()=>{
  const a=analytics();
  const click=(dataset={},matches=[],href)=>{
   const element={dataset,tagName:href?'A':'BUTTON',href,matches:s=>matches.includes(s),closest:()=>({querySelector:()=>({dataset:{marketRegion:'devon'}})})};
@@ -60,17 +60,17 @@ test('Map, weekend, sample and form actions respect consent without adding page 
  click({marketTown:'Totnes'});click({marketRegion:'cornwall'});click({plansWindow:'four-weeks'});click({rail:'weekend-picks',direction:'1'});
  click({},[], 'https://globeeuk.github.io/weekend-edit/sample/');
  click({},['.market-map-event a'],'https://provider.example/event?private=ignored');
- a.listeners.toggle({target:{id:'weekend-newsletter-signup',open:true}});a.listeners.toggle({target:{id:'weekend-newsletter-signup',open:false}});
+ a.listeners.toggle?.({target:{id:'weekend-newsletter-signup',open:true}});
  const events=a.ctx.dataLayer.filter(x=>x[0]==='event');
- for(const name of ['page_view','market_town_select','market_area_select','weekend_period_select','weekend_list_move','newsletter_sample_open','provider_visit','newsletter_form_open'])assert.equal(events.filter(x=>x[1]===name).length,1,name);
- assert(!JSON.stringify(events).includes('private'));assert(!events.some(x=>/submit|sign_up/.test(x[1])));
- a.deny.click();const count=a.ctx.dataLayer.length;click({marketTown:'Totnes'});a.listeners.toggle({target:{id:'weekend-newsletter-signup',open:true}});assert.equal(a.ctx.dataLayer.length,count);
+ for(const name of ['page_view','market_town_select','market_area_select','weekend_period_select','weekend_list_move','provider_visit'])assert.equal(events.filter(x=>x[1]===name).length,1,name);
+ assert(!JSON.stringify(events).includes('private'));assert(!events.some(x=>/submit|sign_up|newsletter/.test(x[1])));
+ a.deny.click();const count=a.ctx.dataLayer.length;click({marketTown:'Totnes'});assert.equal(a.ctx.dataLayer.length,count);
 });
-test('Published sample uses the shared consent and basic statistics controls',()=>{
+test('The retired sample links to the public guide without signup, tracking or indexing',()=>{
  const html=source('weekend-edit/sample/index.html');
- assert.equal((html.match(/src="\/analytics.js\?v=consent4"/g)||[]).length,1);
- assert.equal((html.match(/src="\/basic-analytics.js\?v=basic2"/g)||[]).length,1);
- assert(html.includes('data-analytics-toggle'));assert(html.includes('href="/privacy.html"'));
+ assert.match(html,/name="robots" content="noindex,follow"/);
+ assert.match(html,/href="\/exeter\/this-weekend\/"/);
+ assert.doesNotMatch(html,/<form|analytics\.js|sign.?up|unsubscribe/i);
 });
 function loader(fetch){const updates=[],status={innerHTML:'',parts:[],append(n){this.parts.push(n);}},snap={schema:1,fetchedAt:'2026-09-01T10:00:00Z',master:[{name:'saved'}],events:[{name:'saved'}]};const ctx={console,Date,JSON,Promise,AbortController,setTimeout,clearTimeout,fetch,localStorage:{getItem(){return null;},setItem(){}},document:{getElementById:()=>status,createTextNode:t=>t,createElement:()=>({addEventListener(){}})},CustomEvent:class{constructor(name,arg){this.detail=arg.detail;}},GLOBEE_SNAPSHOT:snap,GLOBEE_EDITORIAL:{},GlobeeDB:{publicationHistory:require('../db-adapter.js').publicationHistory,validate(m,e){if(!m.length||!e.length)throw Error('empty');},parseCSV(s){if(s==='bad')throw Error('bad');return [{name:s}];},normalise:(m,e)=>m},dispatchEvent:e=>updates.push(e.detail)};ctx.window=ctx;vm.createContext(ctx);vm.runInContext(source('db-loader.js'),ctx);return {updates,status};}
 test('Loss of connection retains saved results and offers retry',async()=>{const a=loader(()=>Promise.reject(Error('offline')));await new Promise(setImmediate);assert.equal(a.updates.length,0);assert(a.status.parts.some(p=>typeof p==='string'&&p.includes('saved directory')));assert(a.status.parts.some(p=>p.textContent==='Refresh'));});
