@@ -154,7 +154,14 @@ function card(p){
   const clubSchedule=isNotebookHome&&state.notebookSection==='holidays'?`<p class="club-practical">${escapeHTML(p.scheduleText||'Daily hours TBC — check with the provider.')}</p>`:'';
   const isNew=GlobeeDB.isNewThisWeek(p),badge=isNew?'<span class="new-badge" title="First listed on Globee this week" aria-hidden="true">NEW</span>':'';
   const winterTag=isWinterPlay(p)?'<span class="winter-play-tag">Winter play ❄️</span>':'';
-  return `<article class="place-card${p.image?'':' no-photo'}${isNew?' has-new':''}"><button class="card-open" data-open="${escapeHTML(p.id)}" aria-label="${escapeHTML(cardLabel(p,isNew))}">${p.image?`<div class="picture">${photo(p)}<span class="category-badge">${icon(p.type)}${escapeHTML(p.category)}</span>${badge}</div>`:badge}<div class="card-body">${p.image?'':fallback(p)}${locality(p)}${winterTag}<div class="card-heading"><h3>${escapeHTML(title)}</h3>${icon('arrow')}</div><p class="card-description">${escapeHTML(description)}</p><div class="card-meta">${meta(fossil?{...p,priceLabel:'Free beach entry'}:p)}${distanceTag}</div>${practical}${clubSchedule}</div></button>${window.GlobeeMyPlans?.cardAction(p)||''}</article>`;
+  const saveAction=window.GlobeeMyPlans?.cardAction(p)||'';
+  const topSave=isNotebookHome&&state.notebookSection==='days'&&!!saveAction;
+  const saveRow=topSave?`<div class="place-card-save-row"><span class="place-card-save-category">${escapeHTML(p.category)}</span>${saveAction}</div>`:'';
+  const categoryBadge=topSave?'':`<span class="category-badge">${icon(p.type)}${escapeHTML(p.category)}</span>`;
+  const media=p.image?`<div class="picture">${photo(p)}${categoryBadge}${badge}</div>`:topSave?'':badge;
+  const textCategory=p.image||topSave?'':fallback(p);
+  const textBadge=!p.image&&topSave?badge:'';
+  return `<article class="place-card${p.image?'':' no-photo'}${isNew?' has-new':''}${topSave?' has-save-row':''}">${saveRow}<button class="card-open" data-open="${escapeHTML(p.id)}" aria-label="${escapeHTML(cardLabel(p,isNew))}">${media}<div class="card-body">${textCategory}${locality(p)}${textBadge}${winterTag}<div class="card-heading"><h3>${escapeHTML(title)}</h3>${icon('arrow')}</div><p class="card-description">${escapeHTML(description)}</p><div class="card-meta">${meta(fossil?{...p,priceLabel:'Free beach entry'}:p)}${distanceTag}</div>${practical}${clubSchedule}</div></button>${topSave?'':saveAction}</article>`;
 }
 // Open tabs also lose last week's badge at the next minute boundary (and
 // immediately on return from sleep/background); no list reordering is needed.

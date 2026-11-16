@@ -204,9 +204,10 @@
     }
     return state;
   }
-  function actionMessage(button,message){
+  function actionMessage(button,message,ok){
     const inline=button.parentElement?.querySelector('.my-plan-inline');
     if(!inline)return;
+    inline.classList.toggle('is-success',ok);
     inline.hidden=!message;inline.textContent=message;
   }
   doc.addEventListener('click',event=>{
@@ -235,7 +236,7 @@
       undo=panel&&before&&!restoring?before:null;
       lastRemoved=items.length===0;
     }
-    if(panel)status=message;else actionMessage(button,message);
+    if(panel)status=message;else actionMessage(button,message,ok);
     sync();
     if(restoring&&ok){
       const restored=[...panel.querySelectorAll('[data-save-plan]')].find(b=>b.dataset.savePlan===add.id);

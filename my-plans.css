@@ -22,6 +22,43 @@
 .christmas-santa-list .my-plan-action,.christmas-market-list .my-plan-action{margin-top:8px}
 .my-plan-action [hidden],.my-plan-header-link [hidden],.my-plans-page [hidden]{display:none!important}
 
+.place-card.has-save-row{
+  align-self:start;overflow:hidden;border:1px solid #d8ddd2;border-radius:13px;background:#fffefa;
+}
+.place-card.has-save-row.no-photo{background:#f1f3ec}
+.place-card-save-row{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:0 6px;
+  min-height:53px;padding:4px 10px;border-bottom:1px solid #d8ddd2;
+}
+.place-card-save-category{
+  color:#4d5d50;font:800 .6875rem/1.3 var(--font);letter-spacing:.055em;text-transform:uppercase;
+  overflow-wrap:anywhere;
+}
+.place-card-save-row .my-plan-action{display:contents}
+.place-card-save-row .my-plan-toggle{
+  gap:5px;min-width:44px;padding:0 8px;border-color:transparent;background:transparent;color:#244a78;font-size:.8125rem;
+}
+.place-card-save-row .my-plan-toggle::before{
+  --bookmark:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 4h12v16l-6-4-6 4z' fill='none' stroke='black' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E");
+  content:"";width:16px;height:16px;flex:none;background:currentColor;
+  -webkit-mask:var(--bookmark) center/contain no-repeat;mask:var(--bookmark) center/contain no-repeat;
+}
+.place-card-save-row .my-plan-toggle:hover{background:#f4f7fa;border-color:#b4c6dc}
+.place-card-save-row .my-plan-toggle[aria-pressed="true"]{background:#edf2f9;border-color:#b4c6dc}
+.place-card-save-row .my-plan-toggle[aria-pressed="true"]::before{
+  --bookmark:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 4h12v16l-6-4-6 4zM9 10.8l2 2 4-4' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.place-card-save-row .my-plan-toggle:focus-visible{outline-offset:0}
+.place-card-save-row .my-plan-inline{grid-column:1/-1;margin:0;padding:0 0 5px}
+.place-card-save-row .my-plan-inline.is-success{
+  position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;
+}
+.has-save-row .picture{border-radius:0}
+.has-save-row .card-open:focus-visible{outline:2px solid #244a78;outline-offset:-3px}
+.place-card.has-save-row.no-photo .card-open{padding:0;border:0;border-radius:0;background:transparent}
+.place-card.has-save-row .card-body{padding:12px}
+.has-save-row.no-photo .card-body>.new-badge{position:static;min-height:20px;margin:0 0 4px 4px;padding:2px 5px;font-size:.625rem}
+
 .my-plans-page{margin:0;background:#fffefa;color:#293328;font:.97rem/1.55 Manrope,system-ui,sans-serif}
 .my-plans-page .my-plan-frame{width:min(1080px,calc(100% - 40px));margin-inline:auto}
 .my-plans-page .my-plan-site-head{border-bottom:1px solid #d8ddd2}
