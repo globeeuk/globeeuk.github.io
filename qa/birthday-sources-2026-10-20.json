@@ -562,6 +562,51 @@
       "licence": "https://creativecommons.org/licenses/by-sa/2.0/",
       "changes": "Resized and recompressed for the preview. No scene alterations. CSS cover display may crop the preview; original is retained.",
       "publication_ready": true
+    },
+    {
+      "id": "lush-exeter",
+      "source": "https://commons.wikimedia.org/wiki/File:Bath_Bombs_-_Lush_Cosmetics_(51333340003).jpg",
+      "image": "/assets/parent-notes/lush-bath-bombs.webp",
+      "original_image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Bath_Bombs_-_Lush_Cosmetics_%2851333340003%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Ajay Suresh",
+      "kind": "Lush bath bombs",
+      "alt": "Four colourful Lush bath bombs lined up on a table",
+      "rights": "CC BY 2.0",
+      "licence": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Resized and converted to WebP.",
+      "subject": "Lush products",
+      "publication_ready": true,
+      "checked": "2026-11-16"
+    },
+    {
+      "id": "crealy-atlantis",
+      "source": "https://commons.wikimedia.org/wiki/File:Twistin%27_Tea_Cups_Ride.jpg",
+      "image": "/assets/parent-notes/spinning-cups-reference.webp",
+      "original_image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Twistin%27_Tea_Cups_Ride.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Pmagda0",
+      "kind": "Indoor spinning ride example",
+      "alt": "Teacup ride cars under a purple-lit indoor glass roof",
+      "rights": "CC BY-SA 4.0",
+      "licence": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Cropped, resized and converted to WebP.",
+      "subject": "Twistin’ Tea Cups at Adventuredome, pictured as an example of an indoor spinning ride",
+      "publication_ready": true,
+      "checked": "2026-11-16"
+    },
+    {
+      "id": "crealy-adventure-zone",
+      "source": "https://www.pexels.com/photo/colorful-indoor-playground-ball-pit-adventure-28499364/",
+      "image": "/assets/parent-notes/soft-play-reference.webp",
+      "original_image": "https://images.pexels.com/photos/28499364/pexels-photo-28499364.jpeg",
+      "credit": "cake cat远见",
+      "kind": "Indoor soft play example",
+      "alt": "Netted climbing frame beside a colourful ball pit",
+      "rights": "Pexels License",
+      "licence": "https://www.pexels.com/license/",
+      "changes": "Cropped, resized and converted to WebP.",
+      "subject": "Stock photograph of an indoor climbing frame and ball pit, pictured as an example of soft play",
+      "publication_ready": true,
+      "checked": "2026-11-16"
     }
   ],
   "unpublishedImageCount": 6
