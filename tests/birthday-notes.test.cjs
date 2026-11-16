@@ -21,12 +21,13 @@ test('The note retains compact hall limits, entertainment, savings and uncertain
  assert.match(html,/Studio party prices are not a quote/);
  assert.match(html,/not a review of a party we’ve already held/);
 });
-test('Only licensed photographs ship; the other seven venues link to official galleries',()=>{
- assert.equal((html.match(/class="bp-venue-photo"/g)||[]).length,2);
+test('Venue photographs carry credits and seven venues link to official galleries',()=>{
+ assert.equal((html.match(/class="bp-venue-photo"/g)||[]).length,3);
  assert.equal((html.match(/Venue photos on official site/g)||[]).length,7);
  for(const id of ['iplay','wonderland','sidwells','parklife','wonford','longdown'])assert(!fs.existsSync(path.join(__dirname,'../assets/parent-notes',id+'.jpg')));
  for(const src of html.matchAll(/<img[^>]+src="([^"]+)"/g))assert(fs.existsSync(path.join(__dirname,'..',src[1])));
  assert.match(html,/CC BY-SA 2.0/);assert.match(html,/Sam Grozyan/);
+ assert.match(html,/Example party set-up · Photo supplied to Globee/);
 });
 test('Exeter bowling is a verified party package with explicit unknown maximum capacity',()=>{
  const card=html.match(/<article class="bp-provider" data-provider-id="tenpin">[\s\S]*?<\/article>/)?.[0];
