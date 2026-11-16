@@ -1,9 +1,11 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const read=file=>fs.readFileSync(path.join(__dirname,'..',file),'utf8');
 const html=read('parent-notes/exeter-birthday-parties/index.html');
-test('The birthday note is an indexable static article with all twenty providers',()=>{
- assert.equal((html.match(/data-provider-id=/g)||[]).length,20);
- assert.equal(JSON.parse(read('qa/birthday-sources-2026-10-20.json')).providers.length,20);
+test('The birthday note is indexable and all researched providers have a unique static card',()=>{
+ const cardIds=[...html.matchAll(/data-provider-id="([^"]+)"/g)].map(([,id])=>id);
+ const sourceIds=JSON.parse(read('qa/birthday-sources-2026-10-20.json')).providers.map(p=>p.id);
+ assert.equal(new Set(cardIds).size,cardIds.length);
+ assert.deepEqual(cardIds.sort(),sourceIds.sort());
  assert.match(html,/<html lang="en-GB">/);
  assert.match(html,/<link rel="canonical" href="https:\/\/globeeuk.github.io\/parent-notes\/exeter-birthday-parties\/">/);
  assert.match(html,/<meta name="robots" content="index,follow">/);

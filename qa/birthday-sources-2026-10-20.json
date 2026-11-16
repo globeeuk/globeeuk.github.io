@@ -85,6 +85,89 @@
       "photo_link": "https://www.exeterleisure.com/centres/st-sidwells-point-leisure-centre/"
     },
     {
+      "id": "lush-exeter",
+      "group": "package",
+      "name": "Lush Exeter",
+      "area": "3 Princesshay · Exeter EX1 1GB",
+      "offer": "In-store birthday party",
+      "price": "£25 per person",
+      "basis": "Lush UK advertised price · confirm with the Exeter shop",
+      "party_facts": {
+        "Ages": "5+ recommended",
+        "Party time": "90 minutes",
+        "Group size": null
+      },
+      "included": "A Lush host leads games and activities. Guests make a product and each take home a party product.",
+      "check": "Ask the Exeter shop for dates, the minimum and maximum group size, supervision rules and the deposit. Mention any allergies when you enquire.",
+      "url": "https://www.lush.com/uk/en/a/lush-parties",
+      "venue_url": "https://www.lush.com/uk/en/shops/lush-exeter?id=UK044",
+      "booking_url": "mailto:exeter@lush.co.uk",
+      "source_review": {
+        "checked": "2026-11-16",
+        "sources": [
+          "https://www.lush.com/uk/en/shops/lush-exeter?id=UK044",
+          "https://www.lush.com/uk/en/a/lush-parties",
+          "https://www.lush.com/uk/en/a/party-policies",
+          "https://princesshay.co.uk/shops/lifestyle/lush/"
+        ],
+        "qualification": "Exeter lists in-store parties. The national £25 price, 90-minute duration and recommended minimum age of five are not a live Exeter quote. The shopping centre lists the shop email. Confirm capacity directly with the shop."
+      }
+    },
+    {
+      "id": "crealy-atlantis",
+      "group": "package",
+      "name": "Crealy · Lost World of Atlantis",
+      "area": "Clyst St Mary · near Exeter EX5 1DR",
+      "offer": "Private indoor rides and soft play after closing",
+      "price": "£399 for the group",
+      "basis": "Private hire after closing · listed until January 2027",
+      "party_facts": {
+        "Ages": "3–10 years",
+        "Party time": "2 hours",
+        "Max children": "60"
+      },
+      "included": "Exclusive use of four indoor rides and the Blue Lagoon soft play area. You can bring your own food and drink.",
+      "check": "Crealy lists a £100 non-refundable deposit. Confirm your date and any ride height or supervision rules. See the current range for parties after January 2027.",
+      "url": "https://www.crealy.co.uk/theme-park/birthdays/lost-world-of-atlantis-party/",
+      "venue_url": "https://www.crealy.co.uk/theme-park/birthdays/",
+      "booking_url": "https://www.crealy.co.uk/theme-park/birthdays/lost-world-of-atlantis-party/",
+      "source_review": {
+        "checked": "2026-11-16",
+        "sources": [
+          "https://www.crealy.co.uk/theme-park/birthdays/lost-world-of-atlantis-party/",
+          "https://www.crealy.co.uk/theme-park/birthdays/"
+        ],
+        "qualification": "The £399 price is for the private-hire version shown as bookable until January 2027. Crealy also lists different per-child prices for other versions. Platinum Pass rates and live availability are not assumed."
+      }
+    },
+    {
+      "id": "crealy-adventure-zone",
+      "group": "package",
+      "name": "Crealy · Adventure Zone",
+      "area": "Clyst St Mary · near Exeter EX5 1DR",
+      "offer": "Private indoor soft play after closing",
+      "price": "From £500 for the group",
+      "basis": "Private hire after closing · listed until January 2027",
+      "party_facts": {
+        "Ages": "Up to 13 years",
+        "Party time": "2 hours",
+        "Max children": null
+      },
+      "included": "Exclusive use of the large indoor play area, with slides, climbing nets and rope swings. Food can be added for an extra charge.",
+      "check": "The starting price is listed for a group of up to 200 children. Confirm the price and limit for your group, your date and the £100 non-refundable deposit. See the current range for parties after January 2027.",
+      "url": "https://www.crealy.co.uk/theme-park/birthdays/adventure-zone-party/",
+      "venue_url": "https://www.crealy.co.uk/theme-park/birthdays/",
+      "booking_url": "https://www.crealy.co.uk/theme-park/birthdays/adventure-zone-party/",
+      "source_review": {
+        "checked": "2026-11-16",
+        "sources": [
+          "https://www.crealy.co.uk/theme-park/birthdays/adventure-zone-party/",
+          "https://www.crealy.co.uk/theme-park/birthdays/"
+        ],
+        "qualification": "The £500 starting price is shown for up to 200 children, while a separate overview on the same page says up to 500. Confirm total capacity and quote rather than treating either as a guaranteed limit. The older hire version is listed until January 2027; live dates are not confirmed."
+      }
+    },
+    {
       "id": "parklife",
       "group": "hall",
       "name": "Park Hub · ParkLife Heavitree",
