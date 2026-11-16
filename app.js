@@ -154,7 +154,7 @@ function card(p){
   const clubSchedule=isNotebookHome&&state.notebookSection==='holidays'?`<p class="club-practical">${escapeHTML(p.scheduleText||'Daily hours TBC — check with the provider.')}</p>`:'';
   const isNew=GlobeeDB.isNewThisWeek(p),badge=isNew?'<span class="new-badge" title="First listed on Globee this week" aria-hidden="true">NEW</span>':'';
   const winterTag=isWinterPlay(p)?'<span class="winter-play-tag">Winter play ❄️</span>':'';
-  return `<article class="place-card${p.image?'':' no-photo'}${isNew?' has-new':''}"><button class="card-open" data-open="${escapeHTML(p.id)}" aria-label="${escapeHTML(cardLabel(p,isNew))}">${p.image?`<div class="picture">${photo(p)}<span class="category-badge">${icon(p.type)}${escapeHTML(p.category)}</span>${badge}</div>`:badge}<div class="card-body">${p.image?'':fallback(p)}${locality(p)}${winterTag}<div class="card-heading"><h3>${escapeHTML(title)}</h3>${icon('arrow')}</div><p class="card-description">${escapeHTML(description)}</p><div class="card-meta">${meta(fossil?{...p,priceLabel:'Free beach entry'}:p)}${distanceTag}</div>${practical}${clubSchedule}</div></button></article>`;
+  return `<article class="place-card${p.image?'':' no-photo'}${isNew?' has-new':''}"><button class="card-open" data-open="${escapeHTML(p.id)}" aria-label="${escapeHTML(cardLabel(p,isNew))}">${p.image?`<div class="picture">${photo(p)}<span class="category-badge">${icon(p.type)}${escapeHTML(p.category)}</span>${badge}</div>`:badge}<div class="card-body">${p.image?'':fallback(p)}${locality(p)}${winterTag}<div class="card-heading"><h3>${escapeHTML(title)}</h3>${icon('arrow')}</div><p class="card-description">${escapeHTML(description)}</p><div class="card-meta">${meta(fossil?{...p,priceLabel:'Free beach entry'}:p)}${distanceTag}</div>${practical}${clubSchedule}</div></button>${window.GlobeeMyPlans?.cardAction(p)||''}</article>`;
 }
 // Open tabs also lose last week's badge at the next minute boundary (and
 // immediately on return from sleep/background); no list reordering is needed.
@@ -236,12 +236,13 @@ function renderRails(places,showChristmasGuides){
       for(const county of santaGuide.querySelectorAll('.christmas-santa-county')){
         if(!county.querySelector('[data-visit-end]'))county.remove();
       }
+      window.GlobeeMyPlans?.addEditorialButtons(santaGuide);
     }
     const santaSection=santaGuide?.querySelector('[data-visit-end]') ? santaGuide.outerHTML : '';
     const treeGuide=showChristmasGuides?`<section class="seasonal-results-group" aria-labelledby="christmas-trees-heading"><div class="seasonal-results-heading"><h3 id="christmas-trees-heading">Christmas trees</h3><p>Compare cut and pot-grown trees in Exeter and Devon, with prices and visiting details.</p><a class="seasonal-guide-link" href="/exeter/christmas-trees/">Compare tree-buying places ${icon('arrow')}</a></div><div class="tree-source-grid" aria-label="Christmas tree buying places">${CHRISTMAS_TREE_SOURCES.map(([name,area,status,id])=>`<a class="tree-source-card" href="/exeter/christmas-trees/#${id}"><span class="tree-source-area">${area}</span><h4>${name}</h4><span class="tree-source-status">${status}</span><span class="tree-source-action">See buying details ${icon('arrow')}</span></a>`).join('')}</div></section>`:'';
     const markets=state.region==='Exeter'?places.filter(p=>p.type==='market'||/christmas markets?|christmas makers fayre|dickensian christmas evening/i.test(p.name)):[];
     const marketSet=new Set(markets.map(p=>p.id));
-    const marketList=markets.map(p=>`<li><details><summary><strong>${escapeHTML(p.name)}</strong><span>${escapeHTML(p.scheduleText)}</span><span>${escapeHTML(p.address)} · ${escapeHTML(p.priceLabel)}</span></summary><p>${escapeHTML(p.description)}</p>${p.source?`<a href="${escapeHTML(p.source)}">Official details ${icon('external')}</a>`:''}</details></li>`).join('');
+    const marketList=markets.map(p=>`<li><details><summary><strong>${escapeHTML(p.name)}</strong><span>${escapeHTML(p.scheduleText)}</span><span>${escapeHTML(p.address)} · ${escapeHTML(p.priceLabel)}</span></summary><p>${escapeHTML(p.description)}</p>${p.source?`<a href="${escapeHTML(p.source)}">Official details ${icon('external')}</a>`:''}</details>${window.GlobeeMyPlans?.cardAction(p)||''}</li>`).join('');
     const marketGuide=state.region==='Exeter'&&(markets.length||showChristmasGuides)?`<section class="seasonal-results-group" aria-labelledby="christmas-markets-heading"><div class="seasonal-results-heading"><h3 id="christmas-markets-heading">Christmas markets</h3><p>Upcoming Devon markets and festive street fairs.</p>${showChristmasGuides?`<a class="seasonal-guide-link" href="/exeter/year-end-family-edit/#markets">Full Devon &amp; Cornwall markets guide ${icon('arrow')}</a>`:''}</div>${showChristmasGuides?'<div id="christmas-markets-map" class="christmas-market-map" data-christmas-market-map></div>':''}${markets.length?`<ul class="christmas-market-list">${marketList}</ul>`:''}</section>`:'';
     const events=places.filter(p=>!marketSet.has(p.id));
     const shows=state.region==='Exeter'?events.filter(p=>p.type==='theatre'||p.category==='Music'||/the nutcracker/i.test(p.name)):[];
@@ -390,6 +391,8 @@ function render(options={}){
   $('#applied-filters').hidden=!chips.length;
   $('#applied-filters').innerHTML=chips.map(([key,label])=>`<button class="applied-chip" data-clear="${key}" aria-label="Remove ${escapeHTML(label)} filter">${escapeHTML(label)}${icon('close')}</button>`).join('')+(chips.length>1?'<button class="clear-all" data-reset>Clear all</button>':'');
   if(isNotebookHome)window.GlobeeNotebook?.sync(state);
+  window.GlobeeMyPlans?.setRegion(state.region);
+  window.GlobeeMyPlans?.sync();
   if(state.view==='map')renderMap(places);
 }
 function resetFilters(){window.GlobeeNotebook?.cancelSearch();nearbyOrigin=null;nearbyMiles=0;nearbyVersion++;state.age=[];state.price='all';state.type='all';state.query='';state.dates=null;state.collection=null;state.edit=dedicatedEdit;state.browseAll=false;render();}
@@ -473,6 +476,8 @@ function openDetail(id){
   const pairing=state.collection==='eat-play'&&p.eatPlay?`<div class="detail-note play-pair"><h3>Two stops, one outing</h3><dl><dt>Eat</dt><dd>${escapeHTML(p.eatPlay.food)}</dd><dt>Play</dt><dd>${escapeHTML(p.eatPlay.play)}</dd><dt>Between the two</dt><dd>${escapeHTML(p.eatPlay.connection)}</dd></dl><p>${escapeHTML(p.eatPlay.note)}</p></div>`:'';
   $('#detail-content').innerHTML=`${p.image?`<div class="detail-picture">${photo(p)}</div>`:''}<div class="detail-body">${locality(p)}<h2>${escapeHTML(p.name)}</h2><div class="card-meta">${meta(p)}</div>${(p.dateNote||p.datePeriods?.length)?`<p class="date-note event-date">${p.datePeriods?icon('calendar'):''}${escapeHTML(scheduleLabel(p))}</p>`:''}<p>${escapeHTML(p.description)}</p>${editNote}${pairing}<div class="detail-note"><h3>Good to know</h3><p>${escapeHTML(p.note)}</p><p><strong>Schedule:</strong> ${escapeHTML(p.scheduleText||'Check the provider')}</p>${p.datePeriods?.length?`<p>${p.datePeriods.filter(d=>d.end>=TODAY).map(dateRangeLabel).join(' · ')}</p>`:''}</div><p class="detail-address">${icon('pin')} ${escapeHTML(p.address)}</p>${p.source?`<a class="primary-button detail-link" href="${escapeHTML(p.source)}" target="_blank" rel="noopener noreferrer">Check the official details${icon('external')}</a>`:'<p class="detail-note">Official link to follow.</p>'}<p class="detail-source">${credits}${p.checked?`<br>Official event details checked: ${escapeHTML(p.checked)}.`:''}<br>Prices & schedules change — always check the provider before booking.</p></div>`;
   if(window.GlobeeFossilMap?.isFossilPlace(p))$('#detail-content .detail-address').insertAdjacentHTML('afterend','<p><a class="primary-button" href="/?region=Devon&amp;q=fossil&amp;view=map">See fossil-hunting spots on the Globee Map ↗</a></p>');
+  const saved=window.GlobeeMyPlans?.cardAction(p,true);
+  if(saved)$('#detail-content .detail-address').insertAdjacentHTML('afterend',saved);
   fixImages($('#detail-content'));$('#detail-dialog').showModal();
 }
 $('#detail-close').addEventListener('click',()=>$('#detail-dialog').close());
@@ -599,7 +604,7 @@ $('#view-toggle').addEventListener('click',()=>{
   if(toMap&&map)requestAnimationFrame(()=>map.invalidateSize());
 });
 window.GlobeeNotebookSearch=query=>{state.query=String(query||'').trim();render({preserveScroll:true});};
-window.addEventListener('globee:data',event=>{data=withVerifiedHalfTermClubs(event.detail.places).map(GlobeeImages.decorate);lastListSignature='';lastPrimaryPlansKey=null;render();if(currentMenu==='dates')renderCalendar();});
+window.addEventListener('globee:data',event=>{data=withVerifiedHalfTermClubs(event.detail.places).map(GlobeeImages.decorate);window.GlobeeMyPlans?.setDirectory(data,true);lastListSignature='';lastPrimaryPlansKey=null;render();if(currentMenu==='dates')renderCalendar();});
 const nearbyControls=isNotebookHome&&window.GlobeeNearby&&window.GlobeeNearbyData
   ?GlobeeNearby.mount($('#nearby-search'),origin=>{
     nearbyOrigin=origin;
@@ -623,6 +628,7 @@ document.getElementById('nearby-distance')?.addEventListener('click',event=>{
   render();
   if(state.view==='list')button.focus({preventScroll:true});
 });
+window.GlobeeMyPlans?.setDirectory(data);
 render();
 if(isPlansPage&&state.edit==='christmas'&&window.location.hash.startsWith('#christmas-')){
   requestAnimationFrame(()=>document.getElementById(window.location.hash.slice(1))?.scrollIntoView());

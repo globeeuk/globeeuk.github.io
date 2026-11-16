@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <title>My plans | Globee</title>
+  <link rel="icon" href="/favicon.svg?v=child1" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css?v=winter-play-20261116">
+  <link rel="stylesheet" href="/brand.css?v=child1">
+  <link rel="stylesheet" href="/my-plans.css?v=20261116">
+  <script defer src="/db-adapter.js?v=indoor-lessons-20261116"></script>
+  <script defer src="/editorial.js?v=indoor-lessons-20261116"></script>
+  <script defer src="/db-snapshot.js?v=winter-play-20261116"></script>
+  <script defer src="/data.js?v=new-week-20261111"></script>
+  <script defer src="/my-plans.js?v=20261116"></script>
+  <script defer src="/db-loader.js?v=new-week-20261111"></script>
+  <script defer src="/basic-analytics.js?v=basic2"></script>
+  <script defer src="/analytics.js?v=consent4"></script>
+</head>
+<body class="my-plans-page">
+  <header class="my-plan-site-head">
+    <div class="my-plan-frame">
+      <a class="my-plan-brand" href="/" aria-label="Globee home"><img src="/assets/brand/globee-handwriting-v2.png" width="1774" height="887" alt="Globee"></a>
+      <a href="/?region=Devon" data-my-plans-home>Explore Days out</a>
+    </div>
+  </header>
+  <main class="my-plan-frame" data-my-plans-page>
+    <header class="my-plan-intro">
+      <p class="my-plan-kicker">Your saved outings</p>
+      <h1>My plans</h1>
+      <p>Keep ideas for another day. No account needed; your plans stay in this browser.</p>
+      <p data-my-plans-total></p>
+    </header>
+    <p id="database-status" hidden aria-hidden="true"></p>
+    <noscript><p class="my-plan-notice">Turn on JavaScript to see your saved plans. You can still <a href="/plans.html?region=Devon">browse upcoming family outings</a>.</p></noscript>
+    <div class="my-plan-notice" data-my-plans-error hidden>
+      <h2>Saved plans aren’t available right now.</h2>
+      <p>Check whether this browser allows site storage. You can still browse upcoming outings.</p>
+      <a class="my-plan-browse" href="/plans.html?region=Devon" data-my-plans-browse>Browse the next 4 weeks <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="my-plan-notice" data-my-plans-limit hidden>
+      <h2>50 of 50 plans saved</h2>
+      <p>Remove a plan to make room for another.</p>
+    </div>
+    <div class="my-plan-status-row"><p role="status" aria-atomic="true" data-my-plans-status></p><button type="button" class="my-plan-undo" data-my-plans-undo hidden>Undo</button></div>
+    <div class="my-plan-empty" data-my-plans-empty hidden>
+      <h2 data-my-plans-empty-heading>No plans saved yet.</h2>
+      <p>Tap Save on an outing card to come back to it here.</p>
+      <a class="my-plan-browse" href="/plans.html?region=Devon" data-my-plans-browse>Browse the next 4 weeks <span aria-hidden="true">→</span></a>
+    </div>
+    <section class="my-plan-results" data-my-plans-upcoming aria-labelledby="my-plans-upcoming-title" hidden>
+      <h2 id="my-plans-upcoming-title">Coming up</h2>
+      <div class="my-plan-grid"></div>
+    </section>
+    <section class="my-plan-results" data-my-plans-past aria-labelledby="my-plans-past-title" hidden>
+      <h2 id="my-plans-past-title">Past plans</h2>
+      <p>Your four most recently ended plans stay here.</p>
+      <div class="my-plan-grid"></div>
+    </section>
+    <footer class="my-plan-info">
+      <p>Plans don’t sync across devices. If you clear this site’s browser data, your saved plans are removed. Check the organiser for current dates and prices.</p>
+      <a href="/privacy.html#saved-plans">Privacy &amp; local storage</a> · <button class="text-button" type="button" data-analytics-toggle>Analytics settings</button>
+    </footer>
+  </main>
+</body>
+</html>

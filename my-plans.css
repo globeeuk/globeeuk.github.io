@@ -1,0 +1,77 @@
+/* Saved plans reuse the site's ink, paper and sage, with the approved blue for links and focus. */
+.my-plan-header-link,.my-plan-toggle,.my-plan-undo{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;
+  border:1px solid #aab4a3;border-radius:8px;padding:7px 12px;background:#fffefa;color:#293328;
+  font:700 .875rem/1.3 Manrope,system-ui,sans-serif;white-space:nowrap;text-decoration:none;
+}
+.my-plan-header-link:hover,.my-plan-toggle:hover,.my-plan-undo:hover{background:#eff2e8;border-color:#62725d}
+.my-plan-header-link:focus-visible,.my-plan-toggle:focus-visible,.my-plan-undo:focus-visible,.my-plans-page a:focus-visible{
+  outline:2px solid #244a78;outline-offset:3px;
+}
+.my-plan-header-link svg{width:17px;height:17px;flex:none}
+.my-plan-header-link [data-my-plans-count]:not([hidden]){
+  font-size:.75rem;min-width:1.4rem;text-align:center;color:#fff;background:#40543c;border-radius:50px;padding:2px 5px;
+}
+.my-plans-entry-tools{display:flex;gap:12px;align-items:center;justify-content:flex-end}
+.plans-page .header-inner .my-plan-header-link{margin-left:auto}
+.plans-page .header-inner .header-note+.my-plan-header-link{margin-left:0}
+.my-plan-action{margin-top:8px}
+.my-plan-action-detail{margin:12px 0 8px}
+.my-plan-toggle[aria-pressed="true"]{background:#e8eee3;border-color:#84957e}
+.my-plan-inline{font-size:.8125rem;color:#37483a;line-height:1.45;margin:5px 0 0;overflow-wrap:anywhere}
+.christmas-santa-list .my-plan-action,.christmas-market-list .my-plan-action{margin-top:8px}
+.my-plan-action [hidden],.my-plan-header-link [hidden],.my-plans-page [hidden]{display:none!important}
+
+.my-plans-page{margin:0;background:#fffefa;color:#293328;font:.97rem/1.55 Manrope,system-ui,sans-serif}
+.my-plans-page .my-plan-frame{width:min(1080px,calc(100% - 40px));margin-inline:auto}
+.my-plans-page .my-plan-site-head{border-bottom:1px solid #d8ddd2}
+.my-plans-page .my-plan-site-head .my-plan-frame{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:75px;padding-block:6px
+}
+.my-plans-page .my-plan-brand img{display:block;width:112px;height:auto}
+.my-plans-page .my-plan-site-head a,.my-plans-page .my-plan-source,.my-plans-page .my-plan-info a{color:#244a78;text-underline-offset:3px}
+.my-plans-page h1,.my-plans-page h2,.my-plans-page h3{font-family:Outfit,system-ui,sans-serif;line-height:1.18;color:inherit}
+.my-plans-page h1{font-size:clamp(2.6rem,5vw,4.4rem);margin:.12em 0 .18em;font-weight:600;letter-spacing:-.045em}
+.my-plans-page h2{font-size:clamp(1.55rem,3vw,2rem);margin:0 0 6px;font-weight:600}
+.my-plans-page .my-plan-intro{padding:clamp(28px,6vw,60px) 0 20px}
+.my-plans-page .my-plan-intro p{margin:0 0 7px}
+.my-plans-page .my-plan-intro [data-my-plans-total]{margin-top:14px;font-weight:700}
+.my-plans-page #database-status{display:none!important}
+.my-plan-kicker{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}
+.my-plans-page .my-plan-notice,.my-plans-page .my-plan-empty{
+  border:1px solid #cbd3c4;border-radius:12px;background:#eff2e8;padding:clamp(16px,4vw,26px);margin:0 0 22px
+}
+.my-plans-page .my-plan-notice p,.my-plans-page .my-plan-empty p{margin:0 0 12px}
+.my-plans-page .my-plan-browse{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 14px;
+  border:1px solid #475e43;border-radius:8px;background:#40543c;color:#fff;text-decoration:none;font-weight:800}
+.my-plans-page .my-plan-browse:hover{background:#30442c}
+.my-plans-page .my-plan-results{margin:0 0 32px}
+.my-plans-page .my-plan-results>p{margin:0 0 15px;color:#465646}
+.my-plans-page .my-plan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.my-plan-card{border:1px solid #cbd3c4;border-radius:12px;background:#fffefa;padding:clamp(15px,3vw,24px);overflow-wrap:anywhere}
+.my-plan-card-ended{background:#f5f4ef}
+.my-plan-card-top{display:flex;align-items:center;gap:8px;justify-content:space-between}
+.my-plan-card p{margin:0 0 6px}
+.my-plan-card h3{font-size:clamp(1.22rem,2.8vw,1.55rem);margin:8px 0}
+.my-plan-ended{padding:3px 8px;border:1px solid #b7b8af;border-radius:6px;font-size:.75rem;font-weight:800}
+.my-plan-address,.my-plan-muted{color:#465646}
+.my-plan-dates,.my-plan-price{font-weight:700}
+.my-plan-card-buttons{display:flex;align-items:center;flex-wrap:wrap;gap:10px 15px;margin-top:12px}
+.my-plans-page .my-plan-source{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.my-plans-page .my-plan-status-row{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.my-plans-page .my-plan-status-row:has(p:empty) button[hidden]{display:none}
+.my-plans-page .my-plan-status-row:has(p:empty){margin-bottom:0}
+.my-plans-page .my-plan-status-row p{margin:0}
+.my-plans-page .my-plan-info{border-top:1px solid #d8ddd2;margin:24px 0 0;padding:12px 0 30px}
+@media(max-width:700px){
+  .my-plans-entry-tools{display:grid;justify-items:end;gap:5px}
+  .my-plans-entry-tools .my-plan-header-link{order:1}
+  .plans-page .header-inner .header-note+.my-plan-header-link{margin-left:auto}
+  .my-plans-page .my-plan-grid{grid-template-columns:1fr}
+}
+@media(max-width:420px){
+  .plans-page .header-inner .brand-caption{display:none}
+  .my-plan-header-link,.my-plan-toggle,.my-plan-undo{padding-inline:9px}
+  .my-plans-page .my-plan-frame{width:calc(100% - 32px)}
+}
+@media print{.my-plan-action,.my-plan-header-link{display:none!important}}
