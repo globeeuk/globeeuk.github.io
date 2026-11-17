@@ -73,6 +73,19 @@
 .my-plans-page .my-plan-intro{padding:clamp(28px,6vw,60px) 0 20px}
 .my-plans-page .my-plan-intro p{margin:0 0 7px}
 .my-plans-page .my-plan-intro [data-my-plans-total]{margin-top:14px;font-weight:700}
+.my-plans-page .my-plan-shortcut{max-width:32rem;margin-top:8px;color:#244a78}
+.my-plans-page .my-plan-shortcut summary{min-height:44px;padding:10px 0;cursor:pointer;font-weight:700;text-underline-offset:3px}
+.my-plans-page .my-plan-shortcut-hint{display:block;margin:2px 0 0 1em;color:#465646;font-size:.8125rem;font-weight:400}
+.my-plans-page .my-plan-shortcut summary:focus-visible{outline:2px solid #244a78;outline-offset:3px}
+.my-plans-page .my-plan-shortcut-content{
+  border:1px solid #cbd3c4;border-radius:10px;padding:12px 14px;background:#eff2e8;color:#293328;
+  font-size:.875rem;overflow-wrap:anywhere
+}
+.my-plans-page .my-plan-shortcut-content ul{margin:8px 0;padding-left:20px}
+.my-plans-page .my-plan-shortcut-content li+li{margin-top:7px}
+.my-plans-page .my-plan-shortcut-content a{
+  display:inline-flex;align-items:center;gap:6px;min-height:44px;color:#244a78;font-weight:700;text-underline-offset:3px
+}
 .my-plans-page #database-status{display:none!important}
 .my-plan-kicker{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}
 .my-plans-page .my-plan-notice,.my-plans-page .my-plan-empty{

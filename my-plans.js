@@ -61,6 +61,9 @@
   if(typeof module!=='undefined'&&module.exports){module.exports={KEY,LIMIT,PAST_LIMIT,group,fromPlace,plan,londonDay,nextWeeks};return;}
   const doc=root.document;
   const panel=doc.querySelector('[data-my-plans-page]');
+  const shortcut=panel?.querySelector('[data-my-plans-shortcut]');
+  const shortcutHome=shortcut?.querySelector('[data-my-plans-home]');
+  const setupHash='#home-shortcut-setup';
   const country=new URLSearchParams(root.location.search).get('region');
   let region=['Bristol','Nottingham'].includes(country)?country:'Devon';
   const directory=new Map(),edits=new Map();
@@ -179,7 +182,13 @@
     panel.querySelector('[data-my-plans-undo]').hidden=!undo;
     panel.querySelector('[data-my-plans-limit]').hidden=state.items.length<LIMIT;
     for(const link of panel.querySelectorAll('[data-my-plans-browse]'))link.href=nextWeeks(region,state.today);
-    doc.querySelector('[data-my-plans-home]').href='/?region='+region;
+    if(shortcut){
+      const appWindow=root.navigator.standalone===true||root.matchMedia('(display-mode: standalone)').matches;
+      shortcut.hidden=state.error||state.items.length===0||appWindow;
+    }
+    for(const link of doc.querySelectorAll('[data-my-plans-home]')){
+      link.href='/?region='+region+(link===shortcutHome?setupHash:'');
+    }
     if(oldId){
       const buttons=[...panel.querySelectorAll('[data-save-plan]')];
       const target=buttons.find(b=>b.dataset.savePlan===oldId)||buttons[Math.min(selected,buttons.length-1)]||(undo?panel.querySelector('[data-my-plans-undo]'):panel.querySelector('[data-my-plans-browse]'));
@@ -209,6 +218,16 @@
     if(!inline)return;
     inline.classList.toggle('is-success',ok);
     inline.hidden=!message;inline.textContent=message;
+  }
+  if(shortcut){
+    shortcut.addEventListener('toggle',()=>{
+      if(shortcut.open&&!shortcut.hidden)root.globeeTrack?.('home_shortcut_guide_open');
+    });
+  }
+  if(root.location.pathname==='/'&&root.location.hash===setupHash){
+    // Measure the arrival after navigation. Leave the ordinary homepage URL for the bookmark.
+    root.history.replaceState(root.history.state,'',root.location.pathname+root.location.search);
+    doc.addEventListener('DOMContentLoaded',()=>root.globeeTrack?.('home_shortcut_setup_start'),{once:true});
   }
   doc.addEventListener('click',event=>{
     const button=event.target.closest('[data-save-plan],[data-my-plans-undo]');
