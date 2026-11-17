@@ -6,17 +6,19 @@
   <meta name="robots" content="noindex,follow">
   <title>My plans | Globee</title>
   <link rel="icon" href="/favicon.svg?v=child1" type="image/svg+xml">
+  <link rel="icon" href="/assets/brand/globee-home-icon.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/brand/globee-home-icon.png" sizes="192x192">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css?v=winter-play-20261116">
   <link rel="stylesheet" href="/brand.css?v=child1">
-  <link rel="stylesheet" href="/my-plans.css?v=20261116">
+  <link rel="stylesheet" href="/my-plans.css?v=20261117-home-shortcut">
   <script defer src="/db-adapter.js?v=indoor-lessons-20261116"></script>
   <script defer src="/editorial.js?v=indoor-lessons-20261116"></script>
   <script defer src="/db-snapshot.js?v=winter-play-20261116"></script>
   <script defer src="/data.js?v=new-week-20261111"></script>
-  <script defer src="/my-plans.js?v=20261116"></script>
+  <script defer src="/my-plans.js?v=20261117-home-shortcut"></script>
   <script defer src="/db-loader.js?v=new-week-20261111"></script>
   <script defer src="/basic-analytics.js?v=basic2"></script>
   <script defer src="/analytics.js?v=consent4"></script>
@@ -34,6 +36,17 @@
       <h1>My plans</h1>
       <p>Keep ideas for another day. No account needed; your plans stay in this browser.</p>
       <p data-my-plans-total></p>
+      <details class="my-plan-shortcut" data-my-plans-shortcut hidden>
+        <summary>Add Globee to your home screen</summary>
+        <div class="my-plan-shortcut-content">
+          <p>Open Globee home in the browser you use for My plans. Then add it to your phone’s home screen.</p>
+          <ul>
+            <li><strong>iPhone · Safari</strong> Tap Share, then Add to Home Screen. Turn off <em>Open as Web App</em> if shown. The shortcut opens in your default browser.</li>
+            <li><strong>Android · Chrome</strong> Tap the three dots, then Install and create shortcut → Create shortcut → Add. Some versions call this Add to home screen.</li>
+          </ul>
+          <a href="/?region=Devon" data-my-plans-home>Open Globee home <span aria-hidden="true">→</span></a>
+        </div>
+      </details>
     </header>
     <p id="database-status" hidden aria-hidden="true"></p>
     <noscript><p class="my-plan-notice">Turn on JavaScript to see your saved plans. You can still <a href="/plans.html?region=Devon">browse upcoming family outings</a>.</p></noscript>
