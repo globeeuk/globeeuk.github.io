@@ -246,6 +246,16 @@ function renderRails(places,showChristmasGuides){
       window.GlobeeMyPlans?.addEditorialButtons(santaGuide);
     }
     const santaSection=santaGuide?.querySelector('[data-visit-end]') ? santaGuide.outerHTML : '';
+    const nearbyShows=showChristmasGuides ? $('#christmas-nearby-shows')?.content.firstElementChild.cloneNode(true) : null;
+    if(nearbyShows){
+      for(const show of nearbyShows.querySelectorAll('[data-show-end]')){
+        if(show.dataset.showEnd<TODAY)show.remove();
+      }
+      for(const area of nearbyShows.querySelectorAll('[data-show-area]')){
+        if(!area.querySelector('[data-show-end]'))area.remove();
+      }
+    }
+    const nearbySection=nearbyShows?.querySelector('[data-show-end]') ? nearbyShows.outerHTML : '';
     const treeGuide=showChristmasGuides?`<section class="seasonal-results-group" aria-labelledby="christmas-trees-heading"><div class="seasonal-results-heading"><h3 id="christmas-trees-heading">Christmas trees</h3><p>Compare cut and pot-grown trees in Exeter and Devon, with prices and visiting details.</p><a class="seasonal-guide-link" href="/exeter/christmas-trees/">Compare tree-buying places ${icon('arrow')}</a></div><div class="tree-source-grid" aria-label="Christmas tree buying places">${CHRISTMAS_TREE_SOURCES.map(([name,area,status,id])=>`<a class="tree-source-card" href="/exeter/christmas-trees/#${id}"><span class="tree-source-area">${area}</span><h4>${name}</h4><span class="tree-source-status">${status}</span><span class="tree-source-action">See buying details ${icon('arrow')}</span></a>`).join('')}</div></section>`:'';
     const markets=state.region==='Exeter'?places.filter(p=>p.type==='market'||/christmas markets?|christmas makers fayre|dickensian christmas evening/i.test(p.name)):[];
     const marketSet=new Set(markets.map(p=>p.id));
@@ -262,7 +272,8 @@ function renderRails(places,showChristmasGuides){
       [marketGuide,'christmas-markets-heading','Markets &amp; map'],
       [treeGuide,'christmas-trees-heading','Trees'],
       [group('christmas-days-heading',state.region==='Exeter'?'Festive days out':'Festive events &amp; shows',outings),'christmas-days-heading','Days out'],
-      [group('christmas-shows-heading','Shows &amp; pantos',shows),'christmas-shows-heading','Shows']
+      [group('christmas-shows-heading','Shows &amp; pantos',shows),'christmas-shows-heading','Shows'],
+      [nearbySection,'christmas-nearby-shows-heading','Shows further afield']
     ];
     const nav=showChristmasGuides?`<nav class="christmas-jumps" aria-label="Christmas Edit sections">${sections.filter(([html])=>html).map(([,id,label])=>`<a href="#${id}">${label}</a>`).join('')}</nav>`:'';
     $('#discovery-rails').innerHTML=nav+sections.map(([html])=>html).join('')+familyGuide;
@@ -338,7 +349,8 @@ function render(options={}){
   const marketMap=$('#home-christmas-market-map');
   if(halfTermEntry){
     const halfTermActive=!!GlobeeDiscovery.seasonalDefinition('half-term',TODAY);
-    const christmasActive=!!GlobeeDiscovery.seasonalDefinition('christmas',TODAY);
+    const christmasDefinition=GlobeeDiscovery.seasonalDefinition('christmas',TODAY);
+    const christmasActive=!!christmasDefinition&&(!christmasDefinition.homeEnd||TODAY<=christmasDefinition.homeEnd);
     halfTermEntry.hidden=!halfTermActive;
     halfTermEntry.href=`plans.html?region=${encodeURIComponent(state.region==='Exeter'?'Devon':state.region)}&edit=half-term`;
     if(christmasEntry){
