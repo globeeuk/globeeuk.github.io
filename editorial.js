@@ -195,6 +195,12 @@ Object.assign(window.GLOBEE_EDITORIAL.annotations, {
   'Planet Ice Bristol – Cribbs Causeway': {category:'Indoor ice skating'}
 });
 
+// Bristol family workshops on 21–22 November 2026.
+Object.assign(window.GLOBEE_EDITORIAL.annotations,{
+  'Scribble and Sketch – Windmill Hill City Farm': {ageLabel:'All ages · adult supervision',editReasons:{weekend:'Free family art with the RWA. Drop in for hands-on making.'}},
+  'Stokes Croft China Mug Decorating Workshop': {ageLabel:'8+ years · adult supervision',note:'The 1pm slot appeared on the host’s booking page. Price for an accompanying adult who does not take part: TBC.',editReasons:{weekend:'Try decorating a china mug in Stokes Croft. Book ahead for the Sunday session.'}}
+});
+
 // Dedicated listings in Classes & lessons; keep these out of Days out.
 Object.assign(window.GLOBEE_EDITORIAL.annotations,{
   "Exeter Academy of Dance — Pre-school Ballet":{classesOnly:true},

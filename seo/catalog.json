@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-11-16",
+  "source_verified_at": "2026-11-18",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -4904,6 +4904,168 @@
       ],
       "free_basis": "Free to attend.",
       "indoor_basis": "The service takes place inside Exeter Cathedral."
+    },
+    {
+      "id": "scribble-sketch-windmill-hill-2026-11-21",
+      "name": "Scribble and Sketch – Windmill Hill City Farm",
+      "kind": "event",
+      "region": "Bristol",
+      "city": "Bristol",
+      "locality": "Bedminster",
+      "address": "Training Room, Windmill Hill City Farm, Philip Street, Bedminster, Bristol BS3 4EA",
+      "description": "Drop in for a free RWA family art workshop in the Training Room. Materials are provided. All ages are welcome and children must be supervised by an adult. No booking required.",
+      "age_text": "All ages. Children must be supervised by an adult.",
+      "price_type": "free",
+      "price_text": "Free",
+      "booking_text": "Drop in. No booking required.",
+      "schedule_text": "Saturday 21 November 2026, 10:30am–12:30pm.",
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "Official programme names an indoor workshop room.",
+        "classification": "Indoor event"
+      },
+      "tags": [
+        "weekend",
+        "family",
+        "art"
+      ],
+      "verified_at": "2026-11-18",
+      "review_status": "verified",
+      "occurrences": [
+        {
+          "start": "2026-11-21",
+          "end": "2026-11-21",
+          "weekday": "Saturday",
+          "start_time": "10:30",
+          "end_time": "12:30"
+        }
+      ],
+      "practical_notes": [
+        "The 21 November workshop uses the Training Room. The programme also lists the John James Room for other dates."
+      ],
+      "sources": [
+        {
+          "url": "https://windmillhillcityfarm.org.uk/products/scribble-and-sketch-free-family-art-workshop-with-the-rwa",
+          "label": "Windmill Hill City Farm programme",
+          "supports": "The farm confirms the November date, 10.30am–12.30pm, free drop-in, materials and all-age family participation.",
+          "retrieval": "Official source body read on 18 November 2026 (Europe/London)."
+        },
+        {
+          "url": "https://www.rwa.org.uk/products/scribble-and-sketch",
+          "label": "Royal West of England Academy programme",
+          "supports": "The organiser confirms the Training Room for 21 November and adult supervision for children.",
+          "retrieval": "Official source body read on 18 November 2026 (Europe/London)."
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "9e5e412971cbe138d0cd3e04",
+          "name": "Scribble and Sketch – Windmill Hill City Farm",
+          "region": "Bristol",
+          "fingerprint": "073e46727ce642c5819326fc4777503d9fdc02096801cee83e7e202e22cdacd2"
+        }
+      ],
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 403,
+        "event_rows": [
+          752
+        ],
+        "published_csv_checked": true,
+        "checked_at": "2026-11-18T07:27:49.124Z",
+        "published_csv_checked_at": "2026-11-18T07:27:51+00:00",
+        "reconciliation_note": "Native master and dated event rows were read back and compared with the complete published CSVs."
+      },
+      "limitations": [
+        "Exceptional room or capacity changes: check with the organiser."
+      ],
+      "notes": [
+        "The 21 November workshop uses the Training Room. The programme also lists the John James Room for other dates."
+      ],
+      "free_basis": "Free",
+      "indoor_basis": "Official programme names an indoor workshop room."
+    },
+    {
+      "id": "stokes-croft-china-mug-decorating-2026-11-22",
+      "name": "Stokes Croft China Mug Decorating Workshop",
+      "kind": "event",
+      "region": "Bristol",
+      "city": "Bristol",
+      "locality": "Stokes Croft",
+      "address": "14 Hillgrove Street, Stokes Croft, Bristol",
+      "description": "Decorate a china mug at Stokes Croft China. Ages 8+ with adult supervision throughout. Book ahead for the 1pm session. Collect the fired mug one week later.",
+      "age_text": "Ages 8+. Children must be supervised by an adult.",
+      "price_type": "paid",
+      "price_text": "£45 per participant",
+      "booking_text": "Book ahead on the host’s ticket page. Workshop needs at least 3 participants to run.",
+      "schedule_text": "Sunday 22 November 2026, 1–3pm.",
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "Official programme names an indoor workshop room.",
+        "classification": "Indoor event"
+      },
+      "tags": [
+        "weekend",
+        "family",
+        "art"
+      ],
+      "verified_at": "2026-11-18",
+      "review_status": "verified",
+      "occurrences": [
+        {
+          "start": "2026-11-22",
+          "end": "2026-11-22",
+          "weekday": "Sunday",
+          "start_time": "13:00",
+          "end_time": "15:00"
+        }
+      ],
+      "practical_notes": [
+        "Book the 1pm session on the host’s ticket page. Collect your fired mug one week later."
+      ],
+      "sources": [
+        {
+          "url": "https://www.yuup.co/experiences/china-decorating-workshop",
+          "label": "Stokes Croft China and PRSC booking",
+          "supports": "Host-managed ticket page showed the 22 November 1–3pm slot, £45 per participant, ages 8+, supervision and minimum group size.",
+          "retrieval": "Official source body read on 18 November 2026 (Europe/London)."
+        },
+        {
+          "url": "https://www.visitstokescroft.co.uk/events/stokes-croft-china-mug-decorating-workshop-7/",
+          "label": "Visit Stokes Croft dated organiser event page",
+          "supports": "Confirms 22 November 2026 and 14 Hillgrove Street, and links to the host-managed ticket page. The calendar advertises two sessions.",
+          "retrieval": "Official source body read on 18 November 2026 (Europe/London)."
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "73e12341f04ca81367be65e7",
+          "name": "Stokes Croft China Mug Decorating Workshop",
+          "region": "Bristol",
+          "fingerprint": "79fc991cdfb16b75d9d144b8b2013a4a573e8eca5db455f2598745785b2b16e4"
+        }
+      ],
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 404,
+        "event_rows": [
+          753
+        ],
+        "published_csv_checked": true,
+        "checked_at": "2026-11-18T07:27:49.124Z",
+        "published_csv_checked_at": "2026-11-18T07:27:51+00:00",
+        "reconciliation_note": "Native master and dated event rows were read back and compared with the complete published CSVs."
+      },
+      "limitations": [
+        "The 3.15pm session and the charge for an accompanying adult who does not take part are TBC.",
+        "Postcode TBC: the programme and the linked ticket page give different postcodes for 14 Hillgrove Street."
+      ],
+      "notes": [
+        "Book the 1pm session on the host’s ticket page. Collect your fired mug one week later."
+      ],
+      "indoor_basis": "Official programme names an indoor workshop room."
     }
   ]
 }

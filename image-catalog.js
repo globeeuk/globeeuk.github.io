@@ -2,6 +2,7 @@
 (function(root){
   'use strict';
   const photoRows=[
+    ['windmill-hill-city-farm','Neil Owen','https://www.geograph.org.uk/photo/8203058','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2025-11-08','venue','The entrance to Windmill Hill City Farm in Bristol','Geograph'],
     ["easton-community-centre", "Tadeusz Hare", "https://commons.wikimedia.org/wiki/File:Easton_Community_Centre,_Bristol_-_DSC_0663.jpg", "CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/", "2025-09-22", "venue", "Easton Community Centre exterior"],
     ["trinity-centre-bristol", "Tadeusz Hare", "https://commons.wikimedia.org/wiki/File:Trinity_Centre,_Bristol_-_DSC_2831.jpg", "CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/", "2026-07-04", "venue", "Trinity Centre exterior"],
     ['exeter-library','David Smith','https://commons.wikimedia.org/wiki/File:Exeter_Library_after_rebuilding_-_geograph.org.uk_-_4016656.jpg','CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/','2014-06-07','venue','Exeter Library after its 2014 refurbishment; not the current activity'],
@@ -228,6 +229,7 @@
       if(/Nottingham High School/.test(p.name))return 'nottingham-high-school';
     }
     if(p.region==='Bristol'){
+      if(p.name==='Scribble and Sketch – Windmill Hill City Farm')return 'windmill-hill-city-farm';
       if(p.name==="Everyone Makes It – Easton Community Centre")return 'easton-community-centre';
       if(p.name==="Hide & Seek – Trinity Centre")return 'trinity-centre-bristol';
       if(p.name==='Pumpkin Patch – Avon Valley')return 'pumpkin-field-reference';
