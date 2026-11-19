@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "media_reviewed_at": "2026-11-19T13:41:18.656074+00:00",
+  "scope": "Photos for the nine existing featured December guide cards only; no event verification renewal",
+  "records": [
+    {
+      "id": "winter-haf-devon-14486",
+      "gallery_url": "https://eequ.org/book/ecct-football-haf-primary-with-exeter-city-communitytrust-14486",
+      "gallery_checked_at": "2026-11-19T13:41:18.656074+00:00",
+      "reproduction_status": "user-approved licensed activity-reference photo; official club gallery linked separately",
+      "photo": {
+        "kind": "activity-reference",
+        "src": "/assets/images/holiday-football-reference.webp",
+        "alt": "Activity reference: Feet playing football on an outdoor pitch",
+        "label": "Activity reference",
+        "caption": "Reference photo, not this club or its December session.",
+        "creator": "Emre Simsek",
+        "title": "Feet playing football on an outdoor pitch",
+        "source_url": "https://www.pexels.com/photo/legs-of-child-playing-soccer-19932627/",
+        "licence": "Pexels License",
+        "licence_url": "https://www.pexels.com/license/",
+        "changes": "Resized and converted to WebP; metadata removed; displayed in a cropped frame."
+      }
+    },
+    {
+      "id": "winter-haf-devon-14033",
+      "gallery_url": "https://eequ.org/book/skern-adventure-appledore-with-skern-adventure-appledore-14033",
+      "gallery_checked_at": "2026-11-19T13:41:18.656074+00:00",
+      "reproduction_status": "user-approved licensed activity-reference photo; official club gallery linked separately",
+      "photo": {
+        "kind": "activity-reference",
+        "src": "/assets/images/holiday-water-sports-reference.webp",
+        "alt": "Activity reference: Point-of-view photograph from a yellow kayak on a lake",
+        "label": "Activity reference",
+        "caption": "Reference photo, not this club or its December session.",
+        "creator": "Helen",
+        "title": "Point-of-view photograph from a yellow kayak on a lake",
+        "source_url": "https://www.pexels.com/photo/photograph-of-a-yellow-kayak-on-a-lake-near-green-trees-7731669/",
+        "licence": "Pexels License",
+        "licence_url": "https://www.pexels.com/license/",
+        "changes": "Resized and converted to WebP; metadata removed; displayed in a cropped frame.",
+        "position": "50% 85%"
+      }
+    },
+    {
+      "id": "winter-haf-devon-24268",
+      "gallery_url": "https://eequ.org/book/xmas-hols-creative-arts-camp-with-kaleidoscope-clubs-and-courses-24268",
+      "gallery_checked_at": "2026-11-19T13:41:18.656074+00:00",
+      "reproduction_status": "user-approved licensed activity-reference photo; official club gallery linked separately",
+      "photo": {
+        "kind": "activity-reference",
+        "src": "/assets/images/holiday-colouring-reference.webp",
+        "alt": "Activity reference: Hands colouring a wooden planet cutout",
+        "label": "Activity reference",
+        "caption": "Reference photo, not this club or its December session.",
+        "creator": "Towfiqu barbhuiya",
+        "title": "Hands colouring a wooden planet cutout",
+        "source_url": "https://www.pexels.com/photo/a-hand-of-a-child-while-coloring-on-paper-13048834/",
+        "licence": "Pexels License",
+        "licence_url": "https://www.pexels.com/license/",
+        "changes": "Resized and converted to WebP; metadata removed; displayed in a cropped frame."
+      }
+    },
+    {
+      "id": "winter-haf-devon-14327",
+      "gallery_url": "https://eequ.org/book/haf-ocra-primary-sessions-with-ocra-okehampton-community-and-recreation-association-14327",
+      "gallery_checked_at": "2026-11-19T13:41:18.656074+00:00",
+      "reproduction_status": "user-approved licensed activity-reference photo; official club gallery linked separately",
+      "photo": {
+        "kind": "activity-reference",
+        "src": "/assets/images/holiday-basketball-reference.webp",
+        "alt": "Activity reference: Legs and a basketball during indoor sports practice",
+        "label": "Activity reference",
+        "caption": "Reference photo, not this club or its December session.",
+        "creator": "Ivo Rosenberg",
+        "title": "Legs and a basketball during indoor sports practice",
+        "source_url": "https://www.pexels.com/photo/a-person-playing-basketball-11834787/",
+        "licence": "Pexels License",
+        "licence_url": "https://www.pexels.com/license/",
+        "changes": "Resized and converted to WebP; metadata removed; displayed in a cropped frame.",
+        "position": "50% 75%"
+      }
+    },
+    {
+      "id": "winter-haf-bristol-7528",
+      "gallery_url": "https://eequ.org/book/bizzy-kidz-club-frome-vale-academy-haf-with-bizzy-kidz-club-7528",
+      "gallery_checked_at": "2026-11-19T13:41:18.656074+00:00",
+      "reproduction_status": "user-approved licensed activity-reference photo; official club gallery linked separately",
+      "photo": {
+        "kind": "activity-reference",
+        "src": "/assets/images/holiday-scissors-reference.webp",
+        "alt": "Activity reference: Hands using scissors for a paper craft activity",
+        "label": "Activity reference",
+        "caption": "Reference photo, not this club or its December session.",
+        "creator": "Anastasia Shuraeva",
+        "title": "Hands using scissors for a paper craft activity",
+        "source_url": "https://www.pexels.com/photo/a-kid-s-hands-using-scissors-6966384/",
+        "licence": "Pexels License",
+        "licence_url": "https://www.pexels.com/license/",
+        "changes": "Resized and converted to WebP; metadata removed; displayed in a cropped frame."
+      }
+    },
+    {
+      "id": "winter-haf-bristol-24379",
+      "gallery_url": "https://eequ.org/book/haf-holiday-club-in-the-woodland-with-back2basics-forest-school-24379",
+      "gallery_checked_at": "2026-11-19T13:41:18.656074+00:00",
+      "reproduction_status": "user-approved licensed activity-reference photo; official club gallery linked separately",
+      "photo": {
+        "kind": "activity-reference",
+        "src": "/assets/images/autumn-leaf-reference.webp",
+        "alt": "Activity reference: A hand holding autumn leaves during nature observation",
+        "label": "Activity reference",
+        "caption": "Reference photo, not this club or its December session.",
+        "creator": "Nathan J Hilton",
+        "title": "A hand holding autumn leaves during nature observation",
+        "source_url": "https://www.pexels.com/photo/close-up-shot-of-hand-holding-autumn-leaf-34212863/",
+        "licence": "Pexels License",
+        "licence_url": "https://www.pexels.com/license/",
+        "changes": "Resized and converted to WebP; metadata removed; displayed in a cropped frame."
+      }
+    },
+    {
+      "id": "winter-haf-bristol-24937",
+      "gallery_url": "https://eequ.org/book/haf-indoor-bouldering-experience-with-the-climbing-hangar-bristol-24937",
+      "gallery_checked_at": "2026-11-19T13:41:18.656074+00:00",
+      "reproduction_status": "user-approved licensed activity-reference photo; official club gallery linked separately",
+      "photo": {
+        "kind": "activity-reference",
+        "src": "/assets/images/holiday-climbing-reference.webp",
+        "alt": "Activity reference: Climbing shoes stepping on holds on an indoor climbing wall",
+        "label": "Activity reference",
+        "caption": "Reference photo, not this club or its December session.",
+        "creator": "Pavel Danilyuk",
+        "title": "Climbing shoes stepping on holds on an indoor climbing wall",
+        "source_url": "https://www.pexels.com/photo/a-person-stepping-on-a-climbing-hold-7590908/",
+        "licence": "Pexels License",
+        "licence_url": "https://www.pexels.com/license/",
+        "changes": "Resized and converted to WebP; metadata removed; displayed in a cropped frame."
+      }
+    },
+    {
+      "id": "winter-club-nottingham-nic",
+      "gallery_url": "https://national-ice-centre.com/whats-on/holiday-club/",
+      "gallery_checked_at": "2026-11-19T13:41:18.656074+00:00",
+      "reproduction_status": "existing licensed venue photograph; current official gallery linked separately",
+      "photo": {
+        "kind": "venue",
+        "src": "/assets/images/national-ice-centre-club.webp",
+        "alt": "Skaters on the indoor rink at the National Ice Centre in 2018",
+        "label": "Venue photo · 2018",
+        "caption": "National Ice Centre rink; not the December holiday club.",
+        "creator": "NottinghamArena",
+        "title": "National Ice Centre",
+        "source_url": "https://commons.wikimedia.org/wiki/File:National_Ice_Centre.jpg",
+        "licence": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "changes": "Previously resized to 720px and converted to WebP; displayed in a cropped frame."
+      }
+    },
+    {
+      "id": "winter-club-nottingham-rascals",
+      "gallery_url": "https://www.rascals-uk.com/holiday-clubs",
+      "gallery_checked_at": "2026-11-19T13:41:18.656074+00:00",
+      "reproduction_status": "user-approved licensed activity-reference photo; official club gallery linked separately",
+      "photo": {
+        "kind": "activity-reference",
+        "src": "/assets/images/holiday-paper-craft-reference.webp",
+        "alt": "Activity reference: Hands cutting coloured paper",
+        "label": "Activity reference",
+        "caption": "Reference photo, not this club or its December session.",
+        "creator": "Ksenia Chernaya",
+        "title": "Hands cutting coloured paper",
+        "source_url": "https://www.pexels.com/photo/person-holding-a-scissor-and-a-colored-paper-7695282/",
+        "licence": "Pexels License",
+        "licence_url": "https://www.pexels.com/license/",
+        "changes": "Resized and converted to WebP; metadata removed; displayed in a cropped frame."
+      }
+    }
+  ]
+}
