@@ -32,13 +32,13 @@
   <script defer src="image-catalog.js?v=weekend-20261118"></script>
   <script defer src="discovery-model.js?v=notebook1-search-20261111"></script>
   <script defer src="fossil-map.js?v=2"></script>
-  <script defer src="notebook.js?v=notebook1-december-clubs-20261119"></script>
+  <script defer src="notebook.js?v=notebook1-region-choice-20261119"></script>
   <script defer src="nearby-data.js?v=20261110"></script>
   <script defer src="nearby.js?v=nearby-town-20261111"></script>
   <script defer src="/christmas-market-map-data.js?v=20261112"></script>
   <script defer src="/christmas-market-map.js?v=20261112-home"></script>
   <script defer src="/my-plans.js?v=20261117-home-shortcut-2"></script>
-  <script defer src="app.js?v=save-row-plans-20261116"></script>
+  <script defer src="app.js?v=region-choice-20261119"></script>
   <script defer src="db-loader.js?v=new-week-20261111"></script>
   <script defer src="basic-analytics.js?v=basic2"></script>
 <script defer src="analytics.js?v=consent4"></script>
@@ -49,6 +49,8 @@
   <link rel="stylesheet" href="/home-edits.css?v=instagram-preview-20261116">
   <link rel="stylesheet" href="/seo-assets/holiday-clubs.css?v=december-crafts-20261119">
   <link rel="stylesheet" href="/my-plans.css?v=save-row-20261116">
+  <link rel="stylesheet" href="/region-choice.css?v=region-choice-20261119">
+  <script src="/region-preference.js?v=region-choice-20261119"></script>
 </head>
 <body class="notebook-page notebook-home" data-notebook-section="days">
   <header class="site-header">
@@ -70,6 +72,7 @@
       <a href="/?region=Devon&amp;section=notes" data-notebook-section="notes">Parent<br> notes</a>
     </nav>
   </header>
+  <p class="content-width" id="region-save-message" role="status" hidden>Your area is selected for this visit. This browser couldn’t remember it for next time.</p>
   <a class="skip-link" href="#results-heading">Skip to activities</a>
   <main>
     <div class="content-width entry-intro">
@@ -194,5 +197,18 @@
   </dialog>
   <dialog id="detail-dialog" class="detail-dialog" aria-label="Place details"><button class="icon-button detail-close" id="detail-close" aria-label="Close details"><span data-icon="close"></span></button><div id="detail-content"></div></dialog>
 
+  <dialog id="region-choice" aria-labelledby="region-choice-title" aria-describedby="region-choice-intro region-choice-help">
+    <div class="region-choice-inner">
+      <div class="region-choice-logo"><span class="brand-art"><img src="/assets/brand/globee-handwriting-v2.png" alt="Globee" width="1774" height="887"></span></div>
+      <h2 id="region-choice-title" tabindex="-1" autofocus>Where shall we <span>explore?</span></h2>
+      <p class="region-choice-intro" id="region-choice-intro">Choose an area for local family plans.</p>
+      <nav class="region-choice-options" aria-label="Choose your area">
+        <a class="region-choice-option" href="/?region=Devon" data-choose-region="Exeter">Exeter &amp; Devon</a>
+        <a class="region-choice-option" href="/?region=Bristol" data-choose-region="Bristol">Bristol</a>
+        <a class="region-choice-option" href="/?region=Nottingham" data-choose-region="Nottingham">Nottingham</a>
+      </nav>
+      <p class="region-choice-help" id="region-choice-help">We’ll remember your area on this browser. You can change it anytime using “Change area”.</p>
+    </div>
+  </dialog>
 </body>
 </html>

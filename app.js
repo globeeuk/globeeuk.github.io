@@ -21,7 +21,7 @@ const CHRISTMAS_TREE_SOURCES=[
 ];
 const requestedRegion=routeParams.get('region');
 const PAGE_SIZE=12;
-const state={region:requestedRegion==='Devon'?'Exeter':REGIONS.includes(requestedRegion)?requestedRegion:'Exeter',age:[],price:'all',type:'all',query:'',dates:null,collection:null,edit:null,view:'list',browseAll:false};
+const state={region:window.GlobeeRegionPreference?.initialRegion||(requestedRegion==='Devon'?'Exeter':REGIONS.includes(requestedRegion)?requestedRegion:'Exeter'),age:[],price:'all',type:'all',query:'',dates:null,collection:null,edit:null,view:'list',browseAll:false};
 state.notebookSection=isNotebookHome&&['holidays','notes'].includes(routeParams.get('section'))?routeParams.get('section'):'days';
 const ageBands=[{id:'0-2',label:'0–2',min:0,max:2},{id:'3-5',label:'3–5',min:3,max:5},{id:'6-8',label:'6–8',min:6,max:8},{id:'9-12',label:'9–12',min:9,max:12},{id:'13+',label:'13+',min:13,max:17}];
 const types=[['all','All types'],['activity','Activities'],['theatre','Theatre & shows'],['market','Markets'],['ice','Ice cream'],['outdoors','Parks & nature'],['fossil','Fossil hunting'],['art','Arts & making'],['club','Holiday clubs']];
@@ -73,6 +73,7 @@ if(isPlansPage||isNotebookHome){
   if(GlobeeDiscovery.seasonalDefinition(edit,TODAY))state.edit=edit;
 }
 function updatePlanRoute(){
+  if(window.GlobeeRegionPreference?.needsChoice)return;
   if(!isPlansPage){const params=new URLSearchParams(window.location.search);params.set('region',state.region==='Exeter'?'Devon':state.region);if(state.query)params.set('q',state.query);else params.delete('q');if(state.view==='map')params.set('view','map');else params.delete('view');if(isNotebookHome){if(state.notebookSection==='days')params.delete('section');else params.set('section',state.notebookSection);if(state.age.length)params.set('age',state.age.join(','));else params.delete('age');if(state.price!=='all')params.set('price',state.price);else params.delete('price');if(state.type!=='all')params.set('type',state.type);else params.delete('type');if(state.dates){params.set('from',state.dates.start);params.set('to',state.dates.end);}else{params.delete('from');params.delete('to');}}window.history.replaceState(null,'',`${window.location.pathname}?${params}${window.location.hash}`);return;}
   const params=new URLSearchParams();params.set('region',state.region==='Exeter'?'Devon':state.region);
   if(state.query)params.set('q',state.query);
@@ -449,7 +450,7 @@ function openMenu(menu){
       option('Exeter','Exeter · Devon','Exeter and across Devon',state.region==='Exeter'),
       option('Bristol','Bristol','Bristol family events and days out',state.region==='Bristol')
     ];
-    if(!isNotebookHome||state.region!=='Exeter')choices.push(option('Nottingham','Nottingham','Nottingham & nearby places',state.region==='Nottingham'));
+    choices.push(option('Nottingham','Nottingham','Nottingham & nearby places',state.region==='Nottingham'));
     html=`<p class="filter-help">Choose a local area to explore.</p><div class="filter-options">${choices.join('')}</div>`;
   }
   if(menu==='age')html=`<p class="filter-help">Choose one or more ages. We’ll show places suitable for at least one selected age. Places with unconfirmed ages are left out.</p><div class="filter-options age-options">${ageBands.map(b=>option(b.id,b.label+' years','',state.age.includes(b.id),'checkbox','ages')).join('')}</div>`;
@@ -475,6 +476,7 @@ $('#filter-form').addEventListener('submit',event=>{
     const region=form.get('choice')||'Exeter';
     if(region!==state.region){nearbyOrigin=null;nearbyMiles=0;nearbyVersion++;}
     state.region=region;
+    window.GlobeeRegionPreference?.remember(region);
   }else state[currentMenu]=form.get('choice')||'all';
   closeMenu();render();
 });
@@ -630,6 +632,7 @@ const nearbyControls=isNotebookHome&&window.GlobeeNearby&&window.GlobeeNearbyDat
     nearbyMiles=0;
     nearbyVersion++;
     state.region=origin.region;
+    window.GlobeeRegionPreference?.remember(origin.region);
     render();
     if(state.view==='list')$('#results-heading').focus();
   },()=>{
@@ -648,6 +651,12 @@ document.getElementById('nearby-distance')?.addEventListener('click',event=>{
   if(state.view==='list')button.focus({preventScroll:true});
 });
 window.GlobeeMyPlans?.setDirectory(data);
+window.GlobeeRegionPreference?.mount(region=>{
+  if(!REGIONS.includes(region))return;
+  state.region=region;
+  render();
+  document.querySelector('[data-menu="region"]')?.focus({preventScroll:true});
+});
 render();
 if(isPlansPage&&state.edit==='christmas'&&window.location.hash.startsWith('#christmas-')){
   requestAnimationFrame(()=>document.getElementById(window.location.hash.slice(1))?.scrollIntoView());

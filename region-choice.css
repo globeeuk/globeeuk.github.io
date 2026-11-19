@@ -1,0 +1,106 @@
+/* First-visit area selection uses Globee's approved notebook identity. */
+.region-choice-pending body > :not(#region-choice) {
+  visibility: hidden;
+}
+.region-choice-open {
+  overflow: hidden;
+}
+#region-choice {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: max(32px, env(safe-area-inset-top)) 24px max(32px, env(safe-area-inset-bottom));
+  border: 0;
+  background: #fffefa;
+  color: #2d352f;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+#region-choice::backdrop {
+  background: #fffefa;
+}
+#region-choice[open] {
+  display: grid;
+  align-items: center;
+}
+.region-choice-inner {
+  width: min(100%, 560px);
+  margin: auto;
+}
+.region-choice-logo {
+  margin-bottom: 38px;
+}
+#region-choice-title {
+  margin: 0 0 16px;
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+}
+#region-choice-title span {
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-color: #244a78;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 7px;
+}
+.region-choice-intro {
+  margin: 0 0 28px;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.region-choice-options {
+  display: grid;
+  gap: 12px;
+}
+.region-choice-option {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+  padding: 18px 24px;
+  border: 1px solid #8b9086;
+  border-radius: 12px;
+  background: #fffefa;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.region-choice-option:hover {
+  background: #f1f2eb;
+  border-color: #2d352f;
+}
+#region-choice .region-choice-option:focus-visible {
+  outline: 3px solid #244a78;
+  outline-offset: 4px;
+  box-shadow: none;
+}
+#region-choice-title:focus {
+  outline: none;
+}
+.region-choice-help {
+  margin: 26px 0 0;
+  color: #62665e;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+#region-save-message {
+  margin-block: 16px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+@media (max-width: 400px) {
+  #region-choice {
+    padding-inline: 20px;
+  }
+  .region-choice-logo {
+    margin-bottom: 30px;
+  }
+  .region-choice-option {
+    min-height: 64px;
+    padding: 16px 20px;
+  }
+}
