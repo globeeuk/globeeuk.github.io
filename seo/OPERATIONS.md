@@ -143,6 +143,8 @@ The 25 checked programmes (13 Devon, 7 Bristol, 5 Nottingham) reuse the shared m
 
 The first cards are editorial examples chosen for confirmed winter sessions, clear practical details and geographic/activity variety, not a popularity or quality ranking. Other verified choices appear in the comparison table. The checked source is `research/december-holiday-clubs-2026.json`. Preserve each actual source-review timestamp. To refresh this bounded seasonal selection after reviewing changed facts and reconciling native cells plus the complete published CSVs:
 
+**19 November follow-up:** Devon has top-of-guide town buttons for all 13 confirmed programme areas, plus a separately labelled Tiverton TBC state. A town filters both first cards and additional rows; empty sections and their jump links disappear. All areas restores the complete guide. The optional `?area=exmouth` value preserves a selection on reload and sharing, with the unfiltered canonical retained. Unknown values fall back to all areas. Without the script, all existing programme content remains readable and the inactive picker stays hidden. The compact HAF disclosure retains the same eligibility text. This UI-only change does not modify the Sheet, source-review timestamps, analytics configuration or programme totals.
+
 ```sh
 python3 seo/prepare_catalog.py seo/research/december-holiday-clubs-2026.json --output seo/holiday-clubs-catalog.json
 python3 seo/build_holiday_clubs.py
