@@ -39,12 +39,11 @@
       if (intro) intro.hidden = !all;
     });
     more.querySelector('caption').textContent = all ? originalCaption : 'December 2026 · Check the provider for current prices and places';
-    if (pending) pending.hidden = !all && key !== 'tiverton';
+    if (pending) pending.hidden = !all;
     document.querySelectorAll('[data-holiday-area-reset]').forEach(button => { button.hidden = all; });
     buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.holidayAreaChoice === key)));
     counter.textContent = all
-      ? count + ' programmes across ' + new Set(programmes.map(programme => programme.dataset.holidayArea)).size + ' areas. Tiverton dates are still TBC.'
-      : key === 'tiverton' ? 'Tiverton: winter dates are still TBC. Choose another area or check FISH Kids below.'
+      ? count + ' programmes across ' + new Set(programmes.map(programme => programme.dataset.holidayArea)).size + ' areas.'
       : count + (count === 1 ? ' programme in ' : ' programmes in ') + label + '.';
     if (updateAddress) {
       const url = new URL(location.href);

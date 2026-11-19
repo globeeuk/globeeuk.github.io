@@ -82,17 +82,24 @@ def area_key(label):
 
 
 def area_attributes(item):
-    if item['region'] != 'Devon':
-        return ''
     return f' data-holiday-programme data-holiday-area="{e(area_key(item["locality"]))}"'
 
 
-def area_picker(items):
-    areas = list(dict.fromkeys(item['locality'] for item in items))
+def area_picker(items, region):
+    areas = sorted(set(item['locality'] for item in items))
     buttons = '<button type="button" data-holiday-area-choice="all" aria-pressed="true">All areas</button>'
     buttons += ''.join(f'<button type="button" data-holiday-area-choice="{e(area_key(label))}" aria-pressed="false">{e(label)}</button>' for label in areas)
-    buttons += '<button type="button" data-holiday-area-choice="tiverton" aria-pressed="false">Tiverton <span class="holiday-area-tbc">TBC</span></button>'
-    return f'<section class="holiday-area-picker" id="choose-area" aria-labelledby="holiday-area-title" hidden><h2 id="holiday-area-title">Choose your area in Devon.</h2><div class="holiday-area-buttons" role="group" aria-label="Choose a Devon area">{buttons}</div><p class="holiday-area-count" id="holiday-area-count" role="status" aria-live="polite" aria-atomic="true">{len(items)} programmes across {len(areas)} areas. Tiverton dates are still TBC.</p></section>'
+    return f'<section class="holiday-area-picker" id="choose-area" aria-labelledby="holiday-area-title" hidden><h2 id="holiday-area-title">Choose your area in {e(region)}.</h2><div class="holiday-area-buttons" role="group" aria-label="Choose a local area">{buttons}</div><p class="holiday-area-count" id="holiday-area-count" role="status" aria-live="polite" aria-atomic="true">{len(items)} dated programmes across {len(areas)} areas.</p></section>'
+
+
+def session_details(item):
+    days = {}
+    for session in item['sessions']:
+        day = session['startDate'][:10]
+        times = session['startDate'][11:16]+'–'+session['endDate'][11:16]
+        days.setdefault(day, set()).add(times)
+    rows = ''.join('<li>'+e(datetime.fromisoformat(day).strftime('%a %-d Dec'))+': '+e(', '.join(sorted(times)))+'</li>' for day,times in sorted(days.items()))
+    return '<details class="holiday-session-dates"><summary>Exact dates &amp; session times</summary><ul>'+rows+'</ul></details>'
 
 
 def photo_markup(item, media):
@@ -147,10 +154,10 @@ def pick(item, media):
 def table_row(item):
     cells = [
         ('Place', f'<strong>{e(item["locality"])}</strong><small>{e(item["name"])}</small><small>{e(item["address"])}</small><small>{e(item["format"])}</small>'),
-        ('Dates', f'<p>{e(item["schedule_text"])}</p><small>{e(item["hours"])}</small>'),
+        ('Dates', f'<p>{e(item["schedule_text"])}</p><small>{e(item["hours"])}</small>'+session_details(item)),
         ('Ages', f'<p>{e(item["age_text"])}</p>'),
         ('Cost & rules', f'<strong>{e(item["price_text"])}</strong>' + ''.join(f'<small>{e(n)}</small>' for n in item['notes'])),
-        ('Book', '<div>'+source_links(item)+'</div>')]
+        ('Book', '<div>'+source_links(item)+'</div><small>'+e(item['booking_text'])+'</small>')]
     return '<tr'+area_attributes(item)+'>'+''.join(f'<td data-label="{label}">{value}</td>' for label,value in cells)+'</tr>'
 
 
@@ -170,16 +177,16 @@ def render(region, items, media):
     extras = [i for i in items if i['placement']=='additional']
     pending = ''
     if region == 'Devon':
-        pending = '<aside class="holiday-pending" id="holiday-area-pending"><h2>Tiverton: winter dates TBC.</h2><p>FISH Kids’ Tiverton listing has no confirmed upcoming winter session yet. That does not mean other Tiverton clubs are closed.</p>'+link('https://eequ.org/book/fish-kids-haf-club-tiverton-school-with-fish-kids-14410','Check FISH Kids for new dates')+'<button class="holiday-area-reset" type="button" data-holiday-area-reset hidden>Show all areas</button></aside>'
+        pending = '<aside class="holiday-pending" id="holiday-area-pending"><h2>More winter dates still to confirm.</h2><p>Other Exeter providers, including Puffins at Manston Terrace, advertise winter provision but exact December dates or prices still need confirmation. Tubers and A Touch of the Wild currently show older holiday dates; The Outdoors Group excludes Christmas. FISH Tiverton winter dates are still TBC. These are not counted as confirmed sessions or shown as closed.</p>'+link('https://puffinsofexeter.co.uk/winter-holiday-clubs-at-puffins/','Puffins winter enquiries')+' · '+link('https://fishkids.co.uk/holiday-club/','FISH bookings')+'</aside>'
     elif region == 'Nottingham':
-        pending = '<aside class="holiday-pending"><h3>A longer day at Camp Williams?</h3><p>Christmas dates and prices are published, but the Christmas-specific venue and drop-off instructions need confirmation. The published general base is The Becket School. See the table before booking.</p></aside>'
+        pending = '<aside class="holiday-pending" id="holiday-area-pending"><h2>More HAF dates are still to come.</h2><p>The council-linked directory has one programme with December dates when checked; the other listings have no published December calendar yet. That does not mean those clubs are closed. Let’s Leap at Nottingham High School currently lists 2027 dates. Camp Williams’ Christmas venue and drop-off remain TBC.</p>'+link('https://eequ.org/nottinghamcityholidayactivitiesandfoodhaf','All Nottingham City HAF listings')+'</aside>'
     structured = {'@context':'https://schema.org','@type':'ItemList','name':title.removesuffix(' | Globee'),'url':BASE+route,'itemListElement':[{'@type':'ListItem','position':n+1,'name':item['name'],'url':item['primary_url']} for n,item in enumerate(items)]}
     structured_json = json.dumps(structured,ensure_ascii=False).replace('</','<\\/')
     checked = max(datetime.fromisoformat(i['verified_at'].replace('Z','+00:00')) for i in items)
-    picker = area_picker(items) if region == 'Devon' else ''
+    picker = area_picker(items, region)
     style_version = 'club-photos-20261119'
-    area_script = '<script defer src="/seo-assets/holiday-clubs.js?v=devon-areas-20261119"></script>' if region == 'Devon' else ''
-    if region == 'Devon':
+    area_script = '<script defer src="/seo-assets/holiday-clubs.js?v=all-areas-20261119"></script>'
+    if region in REGIONS:
         funding_html = '<details class="holiday-funding holiday-funding-compact" id="funding"><summary>Free or paid? Check HAF eligibility.</summary><div>'+funding(region)+'</div></details>'
     else:
         funding_html = '<section class="holiday-funding" id="funding"><h2>Free or paid? Start here.</h2>'+funding(region)+'</section>'
@@ -192,11 +199,11 @@ def render(region, items, media):
 <link rel="icon" href="/favicon.svg?v=child1" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="/seo-assets/holiday-clubs.css?v={style_version}">
 {area_script}<script defer src="/basic-analytics.js?v=basic2"></script><script defer src="/analytics.js?v=consent4"></script><script type="application/ld+json">{structured_json}</script></head>
 <body class="holiday-guide-page"><a class="skip-link" href="#holiday-main">Skip to holiday clubs</a><header class="holiday-header"><a class="holiday-logo" href="/?region={region}" aria-label="Globee home"><img src="/assets/brand/globee-handwriting-v2.png" alt="Globee" width="132" height="64"></a><details class="holiday-area"><summary><small>Change area</small>{e(area)} ⌄</summary><nav aria-label="December guides by area">{peers}</nav></details></header><p class="holiday-slogan">Dream &amp; explore, together 🌱</p><nav class="holiday-nav" aria-label="Globee sections">{nav}</nav>
-<main class="holiday-main" id="holiday-main"><a class="holiday-back" href="/?region={region}&amp;section=holidays">← All holiday clubs</a><header class="holiday-seasonal-banner"><div class="holiday-seasonal-copy"><p class="holiday-kicker">WHEN SCHOOL’S OUT · CHRISTMAS BREAK 2026</p><h1>December holiday clubs<br>in {e(area)}.</h1><p class="holiday-deck">A few local places to start, then more options to compare. Find the dates, ages and day length that fit your family.</p></div><div class="holiday-seasonal-art" aria-hidden="true"><img src="/seo-assets/december-holiday-crafts-2026.webp" width="1536" height="1024" alt="" decoding="async"></div></header><p class="holiday-checked">Official dates and details checked <time datetime="{checked.date().isoformat()}">{checked.strftime('%-d %B %Y')}</time> · All times are UK time · Places can change</p><nav class="holiday-jumps" aria-label="On this page"><a href="#funding">Free or paid?</a><a href="#local-picks">Places to start</a><a href="#more-clubs">More programmes</a><a href="#how-we-chose">How we chose</a></nav>
+<main class="holiday-main" id="holiday-main"><a class="holiday-back" href="/?region={region}&amp;section=holidays">← All holiday clubs</a><header class="holiday-seasonal-banner"><div class="holiday-seasonal-copy"><p class="holiday-kicker">WHEN SCHOOL’S OUT · CHRISTMAS BREAK 2026</p><h1>December holiday clubs<br>in {e(area)}.</h1><p class="holiday-deck">Browse the December programmes we’ve verified in your area. Compare dates, ages, session length and funded or paid booking conditions.</p></div><div class="holiday-seasonal-art" aria-hidden="true"><img src="/seo-assets/december-holiday-crafts-2026.webp" width="1536" height="1024" alt="" decoding="async"></div></header><p class="holiday-checked">Official dates and details checked <time datetime="{checked.date().isoformat()}">{checked.strftime('%-d %B %Y')}</time> · All times are UK time · Places can change</p><nav class="holiday-jumps" aria-label="On this page"><a href="#funding">Free or paid?</a><a href="#local-picks">Places to start</a><a href="#more-clubs">More programmes</a><a href="#how-we-chose">About this list</a></nav>
 {picker}{funding_html}
-<section id="local-picks"><h2>A few local places to start.</h2><p class="holiday-section-intro">Chosen for confirmed winter dates, clear practical details and a mix of areas, ages and activities. These are examples to compare, not a popularity or quality ranking.</p><div class="holiday-picks{' holiday-picks-three' if len(featured)==3 else ''}">{''.join(pick(i,media) for i in featured)}</div></section>
+<section id="local-picks"><h2>A few local places to start.</h2><p class="holiday-section-intro">Featured programmes from the full checked list below. Selecting an area shows every verified in-period programme for that area, with no one-programme limit.</p><div class="holiday-picks{' holiday-picks-three' if len(featured)==3 else ''}">{''.join(pick(i,media) for i in featured)}</div></section>
 <section id="more-clubs"><h2>More December programmes.</h2><p class="holiday-section-intro">Other local choices, with short sessions, family activities and any important booking conditions labelled. Check whether an adult needs to stay.</p><div class="holiday-table-wrap"><table class="holiday-table"><caption>Additional choices · December 2026 · Latest prices and places are confirmed with the provider</caption><thead><tr><th scope="col">Place &amp; programme</th><th scope="col">Dates &amp; hours</th><th scope="col">Ages</th><th scope="col">Cost &amp; conditions</th><th scope="col">Official link</th></tr></thead><tbody>{''.join(table_row(i) for i in extras)}</tbody></table></div>{pending_in_more}</section>{pending_after_more}
-<section class="holiday-how" id="how-we-chose"><h2>How we chose these examples.</h2><p>We checked the organiser’s own 2026 winter notice or booking calendar, then looked for clear dates, location, age guidance, costs and a route to book. The first cards add a mix of local areas and activities; the table gives you more choices. We have not compared popularity or inspected these clubs in person.</p><ul><li>Choose an actual session date; a run of dates does not mean every day is available.</li><li>Funded HAF needs eligibility checks. Paid places, longer days and extras may cost more.</li><li>Confirm collection, meals, allergies and any support needs with the provider. TBC means we could not confirm that detail.</li></ul><p>{link('/?region='+region+'&section=holidays','Continue to all local holiday clubs')} · {link('/parent-notes/holiday-childcare-alternatives/','Need different childcare hours?')}</p></section></main>
+<section class="holiday-how" id="how-we-chose"><h2>About this December list.</h2><p>We reviewed the council-linked official booking directories and checked provider calendars, then included their verified December 2026 sessions. The list includes funded programmes and checked paid camps. Duplicates, undated listings and trips with unresolved meeting details are withheld. Providers may add further dates; this is not a guarantee that every provider has been found. Family activities and short sessions are labelled separately from holiday clubs.</p><ul><li>Choose an actual session date; a run of dates does not mean every day is available.</li><li>Funded HAF needs eligibility checks. Paid places, longer days and extras may cost more.</li><li>Confirm collection, meals, allergies and any support needs with the provider. TBC means we could not confirm that detail.</li></ul><p>{link('/?region='+region+'&section=holidays','Continue to all local holiday clubs')} · {link('/parent-notes/holiday-childcare-alternatives/','Need different childcare hours?')}</p></section></main>
 <footer class="holiday-footer"><span>Collected with care. Shared with other families.</span><nav aria-label="Footer"><a href="/privacy.html">Privacy &amp; analytics</a><button type="button" data-analytics-toggle>Analytics settings</button><a href="/?region={region}&amp;section=holidays">Back to holiday clubs</a></nav></footer></body></html>'''
 
 
