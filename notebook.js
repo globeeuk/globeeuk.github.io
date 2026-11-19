@@ -43,6 +43,17 @@
    intro.hidden=showGuide;
   }
   const notes=section==='notes';
+  const decemberClubs=document.getElementById('december-clubs-entry');
+  if(decemberClubs){
+   const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+   decemberClubs.hidden=section!=='holidays'||today<'2026-11-19'||today>'2026-12-31'||!!state.query;
+   const guideRegion=region==='Exeter'||region==='Devon'?'exeter':region.toLowerCase();
+   decemberClubs.href='/'+guideRegion+'/december-holiday-clubs/';
+   decemberClubs.querySelector('[data-december-area]').textContent=area.toUpperCase()+' · CHRISTMAS BREAK 2026';
+   if(section==='holidays'){
+    ['christmas-entry','half-term-entry','scoop-promo-link'].forEach(id=>{const entry=document.getElementById(id);if(entry)entry.hidden=true;});
+   }
+  }
   ['.entry-cards','.home-secondary-links','.notebook-browse-row'].forEach(selector=>{const el=document.querySelector(selector);if(el)el.hidden=notes||!!state.query;});
   ['.notebook-home .result-section','.notebook-home .notebook-search-row'].forEach(selector=>{const el=document.querySelector(selector);if(el)el.hidden=notes;});
   const pending=document.getElementById('parent-notes-pending');if(pending)pending.hidden=!notes;

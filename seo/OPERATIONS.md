@@ -135,6 +135,22 @@ The 15 October selection is Robot Workshop, Mermaids and Monsters writing, Arrie
 
 ## Search Console and measurement
 
+### December holiday-club guides — 19 November 2026
+
+The owner requested December registration information in the existing Holiday clubs tab for Devon, Bristol and Nottingham, with local starting examples followed by a table of other programmes. Only that tab replaces its Christmas entry with the December guide banner, through 31 December 2026 inclusive. Other sections retain their seasonal entries. The routes are `/exeter/december-holiday-clubs/`, `/bristol/december-holiday-clubs/` and `/nottingham/december-holiday-clubs/`; retain these non-weekend routes during ordinary staging.
+
+The 25 checked programmes (13 Devon, 7 Bristol, 5 Nottingham) reuse the shared master/events database. Two existing Nottingham master entries are reused; 23 master entries and 82 exact date rows were added, without deleting history. Open-access Southmead play and FCDC's targeted family event are labelled family activities, not drop-off holiday clubs. Free tickets retain eligibility, accompaniment and membership conditions. Nottingham City and Nottinghamshire funding are separate; their winter opening is not established. Camp Williams' Christmas venue/drop-off remains TBC, and its October coach arrangement must not be carried into December.
+
+The first cards are editorial examples chosen for confirmed winter sessions, clear practical details and geographic/activity variety, not a popularity or quality ranking. Other verified choices appear in the comparison table. The checked source is `research/december-holiday-clubs-2026.json`. Preserve each actual source-review timestamp. To refresh this bounded seasonal selection after reviewing changed facts and reconciling native cells plus the complete published CSVs:
+
+```sh
+python3 seo/prepare_catalog.py seo/research/december-holiday-clubs-2026.json --output seo/holiday-clubs-catalog.json
+python3 seo/build_holiday_clubs.py
+python3 seo/stage.py
+```
+
+The seasonal builder checks every programme against a fresh live Sheet queue, including exact dated occurrences. It rejects changed/missing bindings and source reviews older than seven days for a new release. It does not renew evidence, fetch facts, write the Sheet or publish a commit. It is not an additional daily research job. Preserve the existing analytics and consent scripts; new guide URLs do not establish measured visits or search indexing. First complete-day measurement is 20 November; the existing 06 review is 23 November. No Instagram post or new schedule is implied.
+
 ### Photo-first homepage and directory — 29 October 2026
 
 The owner reiterated that directory cards must use relevant real photographs, with generated illustrations excluded. The shared image catalogue now returns no image when an appropriate licensed photograph is unavailable. Keep these listings readable as compact text-only cards, without a decorative placeholder or blank photo-height block, in the homepage, Holiday clubs, Plans and map details. Do not restore the theme-based illustration fallback. This does not remove any activity or change event facts, evidence dates, the Sheet or analytics/consent settings.

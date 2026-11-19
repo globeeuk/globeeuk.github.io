@@ -1,0 +1,2531 @@
+{
+  "schema_version": 1,
+  "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
+  "source_verified_at": "2026-11-19",
+  "items": [
+    {
+      "id": "winter-haf-devon-14486",
+      "name": "ECCT Football HAF – Exwick",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Exeter",
+      "city": "Exeter",
+      "address": "Exwick Sports Hub, Ennerdale Way, Exeter, EX4 2BQ",
+      "description": "Football coaching, games and small matches at Exwick Sports Hub.",
+      "age_text": "5–11 years",
+      "age_min": 5,
+      "age_max": 11,
+      "price_type": "free",
+      "price_text": "£0 for eligible Devon HAF children",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21–23 December 2026",
+      "hours": "09:30–15:30",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T09:30:00.000Z",
+          "endDate": "2026-12-21T15:30:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-22T09:30:00.000Z",
+          "endDate": "2026-12-22T15:30:00.000Z",
+          "hasDropInPlaces": false
+        },
+        {
+          "startDate": "2026-12-23T09:30:00.000Z",
+          "endDate": "2026-12-23T15:30:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "09:30",
+          "end_time": "15:30"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "09:30",
+          "end_time": "15:30"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "09:30",
+          "end_time": "15:30"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:16:41.702174+00:00",
+      "practical_notes": [
+        "Wear suitable astroturf shoes and shin pads; bring weather-appropriate clothing. Packed lunch provided."
+      ],
+      "placement": "featured",
+      "selection_reason": "A football option in Exeter with a six-hour session.",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "sports",
+      "sheet_name": "ECCT Football HAF – Exwick",
+      "primary_url": "https://eequ.org/book/ecct-football-haf-primary-with-exeter-city-communitytrust-14486",
+      "booking_url": "https://eequ.org/book/ecct-football-haf-primary-with-exeter-city-communitytrust-14486",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/ecct-football-haf-primary-with-exeter-city-communitytrust-14486",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:16:41.702174+00:00"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "4ec0bf6d8619962f7d55121f",
+          "name": "ECCT Football HAF – Exwick",
+          "region": "Devon",
+          "fingerprint": "cd1a80564554f0d919274440085ed800dad13629b3e2594aabdff9903b6a1130"
+        }
+      ],
+      "notes": [
+        "Wear suitable astroturf shoes and shin pads; bring weather-appropriate clothing. Packed lunch provided."
+      ],
+      "free_basis": "£0 for eligible Devon HAF children"
+    },
+    {
+      "id": "winter-haf-devon-14320",
+      "name": "Primary Sports HAF – The Beacon, Exmouth",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Exmouth",
+      "city": "Exmouth",
+      "address": "The Beacon Church Primary School & Pre-school, 1 Beacon Place, Exmouth, EX8 2SR",
+      "description": "Multi-sport activities at The Beacon Church Primary School.",
+      "age_text": "5–13 years",
+      "age_min": 5,
+      "age_max": 13,
+      "price_type": "free",
+      "price_text": "£0 for eligible Devon HAF children",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21–23, 29 December 2026",
+      "hours": "09:00–13:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T09:00:00.000Z",
+          "endDate": "2026-12-21T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-22T09:00:00.000Z",
+          "endDate": "2026-12-22T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-23T09:00:00.000Z",
+          "endDate": "2026-12-23T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-29T09:00:00.000Z",
+          "endDate": "2026-12-29T13:00:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-29",
+          "end": "2026-12-29",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:16:41.706221+00:00",
+      "practical_notes": [
+        "Funded session ends at 13:00. Paid extended time is booked separately."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "sports",
+      "sheet_name": "Primary Sports HAF – The Beacon, Exmouth",
+      "primary_url": "https://eequ.org/book/the-beacon-haf-programme-exmouth-2026-with-primary-sports-and-education-ltd-14320",
+      "booking_url": "https://eequ.org/book/the-beacon-haf-programme-exmouth-2026-with-primary-sports-and-education-ltd-14320",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/the-beacon-haf-programme-exmouth-2026-with-primary-sports-and-education-ltd-14320",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:16:41.706221+00:00"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "9680d00ad044b756139a2276",
+          "name": "Primary Sports HAF – The Beacon, Exmouth",
+          "region": "Devon",
+          "fingerprint": "6df8c0ce4915072f96e3d61e11649280c8386e1a4a1dfb42669b601493041d4e"
+        }
+      ],
+      "notes": [
+        "Funded session ends at 13:00. Paid extended time is booked separately."
+      ],
+      "free_basis": "£0 for eligible Devon HAF children"
+    },
+    {
+      "id": "winter-haf-devon-14360",
+      "name": "Primary Sports HAF – Littletown, Honiton",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Honiton",
+      "city": "Honiton",
+      "address": "Littletown Primary Academy, Honiton Bottom Road, Honiton, EX14 2EG",
+      "description": "A school-based multi-activity holiday programme.",
+      "age_text": "5–12 years",
+      "age_min": 5,
+      "age_max": 12,
+      "price_type": "free",
+      "price_text": "£0 for eligible Devon HAF children",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21–23, 29 December 2026",
+      "hours": "09:00–13:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T09:00:00.000Z",
+          "endDate": "2026-12-21T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-22T09:00:00.000Z",
+          "endDate": "2026-12-22T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-23T09:00:00.000Z",
+          "endDate": "2026-12-23T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-29T09:00:00.000Z",
+          "endDate": "2026-12-29T13:00:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-29",
+          "end": "2026-12-29",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:16:41.669474+00:00",
+      "practical_notes": [
+        "Funded session ends at 13:00. Paid extended time is booked separately."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "multi",
+      "sheet_name": "Primary Sports HAF – Littletown, Honiton",
+      "primary_url": "https://eequ.org/book/littletown-haf-programme-2026-with-primary-sports-and-education-ltd-14360",
+      "booking_url": "https://eequ.org/book/littletown-haf-programme-2026-with-primary-sports-and-education-ltd-14360",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/littletown-haf-programme-2026-with-primary-sports-and-education-ltd-14360",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:16:41.669474+00:00"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "c2c3c0141a94cd321a69df07",
+          "name": "Primary Sports HAF – Littletown, Honiton",
+          "region": "Devon",
+          "fingerprint": "d26b21a5ca4c3c465d08abd2ffb905c55741a9068f5be6280f42a62ae35a501c"
+        }
+      ],
+      "notes": [
+        "Funded session ends at 13:00. Paid extended time is booked separately."
+      ],
+      "free_basis": "£0 for eligible Devon HAF children"
+    },
+    {
+      "id": "winter-haf-devon-14431",
+      "name": "Sporty Stars HAF – St John’s, Sidmouth",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Sidmouth",
+      "city": "Sidmouth",
+      "address": "Broadway, Sidmouth, Sidmouth, EX10 8RG",
+      "description": "Multi-sport games and active play at St John’s School.",
+      "age_text": "5–12 years",
+      "age_min": 5,
+      "age_max": 12,
+      "price_type": "free",
+      "price_text": "£0 for eligible Devon HAF children",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21–22, 29–30 December 2026",
+      "hours": "09:00–13:00; selected afternoons 12:30–16:30",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T09:00:00.000Z",
+          "endDate": "2026-12-21T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-22T09:00:00.000Z",
+          "endDate": "2026-12-22T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-29T09:00:00.000Z",
+          "endDate": "2026-12-29T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-30T09:00:00.000Z",
+          "endDate": "2026-12-30T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-21T12:30:00.000Z",
+          "endDate": "2026-12-21T16:30:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-29T12:30:00.000Z",
+          "endDate": "2026-12-29T16:30:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-30T12:30:00.000Z",
+          "endDate": "2026-12-30T16:30:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-29",
+          "end": "2026-12-29",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-30",
+          "end": "2026-12-30",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:16:41.688568+00:00",
+      "practical_notes": [
+        "Morning: 21, 22, 29, 30 Dec, 09:00–13:00. Afternoon: 21, 29, 30 Dec, 12:30–16:30. One funded session per child per day; extended-day arrangements need separate confirmation."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "sports",
+      "sheet_name": "Sporty Stars HAF – St John’s, Sidmouth",
+      "primary_url": "https://eequ.org/book/sporty-stars-sidmouth-st-johns-school-with-sporty-stars-14431",
+      "booking_url": "https://eequ.org/book/sporty-stars-sidmouth-st-johns-school-with-sporty-stars-14431",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/sporty-stars-sidmouth-st-johns-school-with-sporty-stars-14431",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:16:41.688568+00:00"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "1d244c6e15490d37aba818d8",
+          "name": "Sporty Stars HAF – St John’s, Sidmouth",
+          "region": "Devon",
+          "fingerprint": "136befae48da8bb90285ae50d57678d56a96e3af8283cabc0ea44f26cc1b21b4"
+        }
+      ],
+      "notes": [
+        "Morning: 21, 22, 29, 30 Dec, 09:00–13:00. Afternoon: 21, 29, 30 Dec, 12:30–16:30. One funded session per child per day; extended-day arrangements need separate confirmation."
+      ],
+      "free_basis": "£0 for eligible Devon HAF children"
+    },
+    {
+      "id": "winter-haf-devon-14358",
+      "name": "Primary Sports HAF – Landscore, Crediton",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Crediton",
+      "city": "Crediton",
+      "address": "Landscore Primary School, Threshers, Crediton, EX17 3JH",
+      "description": "Multi-sport activities at Landscore Primary School.",
+      "age_text": "5–12 years",
+      "age_min": 5,
+      "age_max": 12,
+      "price_type": "free",
+      "price_text": "£0 for eligible Devon HAF children",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21–23, 29 December 2026",
+      "hours": "09:00–13:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T09:00:00.000Z",
+          "endDate": "2026-12-21T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-22T09:00:00.000Z",
+          "endDate": "2026-12-22T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-23T09:00:00.000Z",
+          "endDate": "2026-12-23T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-29T09:00:00.000Z",
+          "endDate": "2026-12-29T13:00:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-29",
+          "end": "2026-12-29",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:16:42.162739+00:00",
+      "practical_notes": [
+        "Funded session ends at 13:00. Paid extended time is booked separately."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "sports",
+      "sheet_name": "Primary Sports HAF – Landscore, Crediton",
+      "primary_url": "https://eequ.org/book/landscore-haf-camp-2026-with-primary-sports-and-education-ltd-14358",
+      "booking_url": "https://eequ.org/book/landscore-haf-camp-2026-with-primary-sports-and-education-ltd-14358",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/landscore-haf-camp-2026-with-primary-sports-and-education-ltd-14358",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:16:42.162739+00:00"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "7593555334244e313d6a20e9",
+          "name": "Primary Sports HAF – Landscore, Crediton",
+          "region": "Devon",
+          "fingerprint": "ce5fa4b073e034ec812e5788f28ddff34c9e77953bac9879d279ba45903aa7d3"
+        }
+      ],
+      "notes": [
+        "Funded session ends at 13:00. Paid extended time is booked separately."
+      ],
+      "free_basis": "£0 for eligible Devon HAF children"
+    },
+    {
+      "id": "winter-haf-devon-23571",
+      "name": "Cullompton Christmas HAF – Secondary Football Trip",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Cullompton",
+      "city": "Cullompton",
+      "address": "Culm Valley Sports Centre ( Meeting Place), Meadow Lane, Cullompton, EX15 1LL",
+      "description": "A trip to watch Torquay United, meeting at Culm Valley Sports Centre.",
+      "age_text": "10–16 years",
+      "age_min": 10,
+      "age_max": 16,
+      "price_type": "free",
+      "price_text": "£0 for eligible Devon HAF children; paid £25.75 incl. fee",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "19 December 2026",
+      "hours": "13:00–18:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-19T13:00:00.000Z",
+          "endDate": "2026-12-19T18:00:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-19",
+          "end": "2026-12-19",
+          "start_time": "13:00",
+          "end_time": "18:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:16:42.297338+00:00",
+      "practical_notes": [
+        "19 Dec only is confirmed in the live booking calendar. Meet at Culm Valley Sports Centre at 13:00; return at 18:00. The separate 22 Dec Flip Out trip has conflicting meeting instructions and is not included here."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "sports",
+      "sheet_name": "Cullompton Christmas HAF – Secondary Football Trip",
+      "primary_url": "https://eequ.org/book/cullompton-christmas-haf-secondary-trips-with-healthy-appetite-and-activities-23571",
+      "booking_url": "https://eequ.org/book/cullompton-christmas-haf-secondary-trips-with-healthy-appetite-and-activities-23571",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/cullompton-christmas-haf-secondary-trips-with-healthy-appetite-and-activities-23571",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:16:42.297338+00:00"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "9c2a8c0bad8d9bf53ab2ba39",
+          "name": "Cullompton Christmas HAF – Secondary Football Trip",
+          "region": "Devon",
+          "fingerprint": "73c66a4634bc49373c74a9851c957b05db1d8a7f41a687ca419cdd00bc02cc83"
+        }
+      ],
+      "notes": [
+        "19 Dec only is confirmed in the live booking calendar. Meet at Culm Valley Sports Centre at 13:00; return at 18:00. The separate 22 Dec Flip Out trip has conflicting meeting instructions and is not included here."
+      ],
+      "free_basis": "£0 for eligible Devon HAF children; paid £25.75 incl. fee"
+    },
+    {
+      "id": "winter-haf-devon-14547",
+      "name": "Primary Sports HAF – Eden Park, Barnstaple",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Barnstaple",
+      "city": "Barnstaple",
+      "address": "Eden Park Academy, Forches Avenue, Barnstaple, EX32 8EF",
+      "description": "A school-based active holiday programme at Eden Park Academy.",
+      "age_text": "5–11 years",
+      "age_min": 5,
+      "age_max": 11,
+      "price_type": "free",
+      "price_text": "£0 for eligible Devon HAF children",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21–23, 29 December 2026",
+      "hours": "09:00–13:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T09:00:00.000Z",
+          "endDate": "2026-12-21T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-22T09:00:00.000Z",
+          "endDate": "2026-12-22T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-23T09:00:00.000Z",
+          "endDate": "2026-12-23T13:00:00.000Z",
+          "hasDropInPlaces": false
+        },
+        {
+          "startDate": "2026-12-29T09:00:00.000Z",
+          "endDate": "2026-12-29T13:00:00.000Z",
+          "hasDropInPlaces": false
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-29",
+          "end": "2026-12-29",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:16:42.196654+00:00",
+      "practical_notes": [
+        "Meal, snacks and drinks are included. Funded session ends at 13:00."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "multi",
+      "sheet_name": "Primary Sports HAF – Eden Park, Barnstaple",
+      "primary_url": "https://eequ.org/book/eden-park-haf-programme-barnstaple-with-primary-sports-and-education-north-devon-ltd-14547",
+      "booking_url": "https://eequ.org/book/eden-park-haf-programme-barnstaple-with-primary-sports-and-education-north-devon-ltd-14547",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/eden-park-haf-programme-barnstaple-with-primary-sports-and-education-north-devon-ltd-14547",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:16:42.196654+00:00"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "4ee1e4c6ad1a935aa2d26510",
+          "name": "Primary Sports HAF – Eden Park, Barnstaple",
+          "region": "Devon",
+          "fingerprint": "64e925491688ef673ec1b4bd93ff8f22580f3d78584ce03dd39cf74c3c5d0ca6"
+        }
+      ],
+      "notes": [
+        "Meal, snacks and drinks are included. Funded session ends at 13:00."
+      ],
+      "free_basis": "£0 for eligible Devon HAF children"
+    },
+    {
+      "id": "winter-haf-devon-14033",
+      "name": "Skern Adventure Appledore – Winter HAF",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Bideford / Appledore",
+      "city": "Bideford / Appledore",
+      "address": "Skern Adventure Appledore, Watertown, Bideford, EX39 1NG",
+      "description": "Outdoor adventure activities at Skern, near Bideford; the daily activity mix varies.",
+      "age_text": "8–11 years",
+      "age_min": 8,
+      "age_max": 11,
+      "price_type": "free",
+      "price_text": "£0 for eligible Devon HAF children",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "19–22 December 2026",
+      "hours": "12:30–16:30",
+      "sessions": [
+        {
+          "startDate": "2026-12-19T12:30:00.000Z",
+          "endDate": "2026-12-19T16:30:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-20T12:30:00.000Z",
+          "endDate": "2026-12-20T16:30:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-21T12:30:00.000Z",
+          "endDate": "2026-12-21T16:30:00.000Z",
+          "hasDropInPlaces": false
+        },
+        {
+          "startDate": "2026-12-22T12:30:00.000Z",
+          "endDate": "2026-12-22T16:30:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-19",
+          "end": "2026-12-19",
+          "start_time": "12:30",
+          "end_time": "16:30"
+        },
+        {
+          "start": "2026-12-20",
+          "end": "2026-12-20",
+          "start_time": "12:30",
+          "end_time": "16:30"
+        },
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "12:30",
+          "end_time": "16:30"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "12:30",
+          "end_time": "16:30"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:16:42.569359+00:00",
+      "practical_notes": [
+        "21 Dec was marked fully booked when checked; the other listed dates were not. Arrive 10 minutes before the session for drop-off and collection. No 1:1 support is provided; discuss support needs before booking. Paid places are mentioned but a current paid ticket price is TBC."
+      ],
+      "placement": "featured",
+      "selection_reason": "An outdoor adventure option for north Devon, ages 8–11.",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "outdoor",
+      "sheet_name": "Skern Adventure Appledore – Winter HAF",
+      "primary_url": "https://eequ.org/book/skern-adventure-appledore-with-skern-adventure-appledore-14033",
+      "booking_url": "https://eequ.org/book/skern-adventure-appledore-with-skern-adventure-appledore-14033",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/skern-adventure-appledore-with-skern-adventure-appledore-14033",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:16:42.569359+00:00"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "06ad99982ed4ce1b9e93048e",
+          "name": "Skern Adventure Appledore – Winter HAF",
+          "region": "Devon",
+          "fingerprint": "bd94c69febe73344c7d96e94db1bf1c0d03ff657953ba1958f0e6365029f43be"
+        }
+      ],
+      "notes": [
+        "21 Dec was marked fully booked when checked; the other listed dates were not. Arrive 10 minutes before the session for drop-off and collection. No 1:1 support is provided; discuss support needs before booking. Paid places are mentioned but a current paid ticket price is TBC."
+      ],
+      "free_basis": "£0 for eligible Devon HAF children"
+    },
+    {
+      "id": "winter-haf-devon-18464",
+      "name": "Ilfracombe CofE Junior School – Winter HAF",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Ilfracombe",
+      "city": "Ilfracombe",
+      "address": "Princess Avenue, Junior School, Ilfracombe, EX34 9LW",
+      "description": "Multi-sport, creative and cooking activities for pupils of Ilfracombe CofE Junior School.",
+      "age_text": "7–11 years",
+      "age_min": 7,
+      "age_max": 11,
+      "price_type": "free",
+      "price_text": "£0 for eligible Devon HAF children",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "18, 21–23 December 2026",
+      "hours": "18 Dec 16:00–20:00; 21–23 Dec 10:00–14:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-18T16:00:00.000Z",
+          "endDate": "2026-12-18T20:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-21T10:00:00.000Z",
+          "endDate": "2026-12-21T14:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-22T10:00:00.000Z",
+          "endDate": "2026-12-22T14:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-23T10:00:00.000Z",
+          "endDate": "2026-12-23T14:00:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-18",
+          "end": "2026-12-18",
+          "start_time": "16:00",
+          "end_time": "20:00"
+        },
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:16:42.554343+00:00",
+      "practical_notes": [
+        "Only for pupils attending Ilfracombe Church of England Junior School. 18 Dec: 16:00–20:00; 21–23 Dec: 10:00–14:00."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "multi",
+      "sheet_name": "Ilfracombe CofE Junior School – Winter HAF",
+      "primary_url": "https://eequ.org/book/ilfracombe-cofe-junior-school-haf-with-exeter-city-communitytrust-18464",
+      "booking_url": "https://eequ.org/book/ilfracombe-cofe-junior-school-haf-with-exeter-city-communitytrust-18464",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/ilfracombe-cofe-junior-school-haf-with-exeter-city-communitytrust-18464",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:16:42.554343+00:00"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "58ccb450496b625bf46a5c84",
+          "name": "Ilfracombe CofE Junior School – Winter HAF",
+          "region": "Devon",
+          "fingerprint": "86a7bc58fc75131cc28295eb56ef56787a966ccf6aa19d764d7f00401a7a0961"
+        }
+      ],
+      "notes": [
+        "Only for pupils attending Ilfracombe Church of England Junior School. 18 Dec: 16:00–20:00; 21–23 Dec: 10:00–14:00."
+      ],
+      "free_basis": "£0 for eligible Devon HAF children"
+    },
+    {
+      "id": "winter-haf-devon-14333",
+      "name": "Achieve4All HAF – Kingsteignton",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Newton Abbot / Kingsteignton",
+      "city": "Newton Abbot / Kingsteignton",
+      "address": "St Michael's C of E Primary School, Church Street, Newton Abbot, TQ12 3BQ",
+      "description": "Festive games, crafts and outdoor activities at St Michael’s Primary School.",
+      "age_text": "4–11 years",
+      "age_min": 4,
+      "age_max": 11,
+      "price_type": "free",
+      "price_text": "£0 for eligible Devon HAF children",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21–23 December 2026",
+      "hours": "09:30–13:30",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T09:30:00.000Z",
+          "endDate": "2026-12-21T13:30:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-22T09:30:00.000Z",
+          "endDate": "2026-12-22T13:30:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-23T09:30:00.000Z",
+          "endDate": "2026-12-23T13:30:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "09:30",
+          "end_time": "13:30"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "09:30",
+          "end_time": "13:30"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "09:30",
+          "end_time": "13:30"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:16:42.542973+00:00",
+      "practical_notes": [
+        "Published ages 4–11; a funded place for a four-year-old requires Reception/eligibility confirmation. Ask about the 23 Dec cinema trip and support arrangements."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "multi",
+      "sheet_name": "Achieve4All HAF – Kingsteignton",
+      "primary_url": "https://eequ.org/book/achieve4all-haf-kingsteignton-with-achieve4all-14333",
+      "booking_url": "https://eequ.org/book/achieve4all-haf-kingsteignton-with-achieve4all-14333",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/achieve4all-haf-kingsteignton-with-achieve4all-14333",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:16:42.542973+00:00"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "b0ae8ec8cfc98e6cfc13a7ce",
+          "name": "Achieve4All HAF – Kingsteignton",
+          "region": "Devon",
+          "fingerprint": "e26964657d5ef1591abb1888d0d2eab7108c9f4e789205cfdd64efcde910d2bf"
+        }
+      ],
+      "notes": [
+        "Published ages 4–11; a funded place for a four-year-old requires Reception/eligibility confirmation. Ask about the 23 Dec cinema trip and support arrangements."
+      ],
+      "free_basis": "£0 for eligible Devon HAF children"
+    },
+    {
+      "id": "winter-haf-devon-24268",
+      "name": "Kaleidoscope Christmas Creative Arts Camp – Totnes",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Totnes",
+      "city": "Totnes",
+      "address": "The Grove School, The Grove, Totnes, TQ9 5ED",
+      "description": "Art, drama, music, dance and games at The Grove School.",
+      "age_text": "5–11 years",
+      "age_min": 5,
+      "age_max": 11,
+      "price_type": "free",
+      "price_text": "£0 for eligible Devon HAF children; paid £30.90/day incl. fee",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21–24 December 2026",
+      "hours": "10:00–15:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T10:00:00.000Z",
+          "endDate": "2026-12-21T15:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-22T10:00:00.000Z",
+          "endDate": "2026-12-22T15:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-23T10:00:00.000Z",
+          "endDate": "2026-12-23T15:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-24T10:00:00.000Z",
+          "endDate": "2026-12-24T15:00:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "10:00",
+          "end_time": "15:00"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "10:00",
+          "end_time": "15:00"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "10:00",
+          "end_time": "15:00"
+        },
+        {
+          "start": "2026-12-24",
+          "end": "2026-12-24",
+          "start_time": "10:00",
+          "end_time": "15:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:16:42.761710+00:00",
+      "practical_notes": [
+        "Paid place: £30 plus 3% booking fee (£30.90). Paid hot lunch is £6 extra before any fee; 09:00–10:00 early drop-off is a separate £5 ticket before any fee. Funded HAF includes a meal."
+      ],
+      "placement": "featured",
+      "selection_reason": "A south Devon choice centred on creative activities, with a paid route as well as HAF.",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "art",
+      "sheet_name": "Kaleidoscope Christmas Creative Arts Camp – Totnes",
+      "primary_url": "https://eequ.org/book/xmas-hols-creative-arts-camp-with-kaleidoscope-clubs-and-courses-24268",
+      "booking_url": "https://eequ.org/book/xmas-hols-creative-arts-camp-with-kaleidoscope-clubs-and-courses-24268",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/xmas-hols-creative-arts-camp-with-kaleidoscope-clubs-and-courses-24268",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:16:42.761710+00:00"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "3e6f26308c10c864b518a8d3",
+          "name": "Kaleidoscope Christmas Creative Arts Camp – Totnes",
+          "region": "Devon",
+          "fingerprint": "7d6965535235cfebd3b4a6fe5c7ed600abdf32842b2b7a57181e23f36711555f"
+        }
+      ],
+      "notes": [
+        "Paid place: £30 plus 3% booking fee (£30.90). Paid hot lunch is £6 extra before any fee; 09:00–10:00 early drop-off is a separate £5 ticket before any fee. Funded HAF includes a meal."
+      ],
+      "free_basis": "£0 for eligible Devon HAF children; paid £30.90/day incl. fee"
+    },
+    {
+      "id": "winter-haf-devon-14327",
+      "name": "OCRA Primary Winter HAF – Okehampton",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Okehampton",
+      "city": "Okehampton",
+      "address": "OCRA, Pavilion in the Park, Okehampton, EX20 1GE",
+      "description": "A primary-age holiday activity programme at Pavilion in the Park.",
+      "age_text": "5–11 years",
+      "age_min": 5,
+      "age_max": 11,
+      "price_type": "free",
+      "price_text": "£0 for eligible Devon HAF children",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21–22, 29–30 December 2026",
+      "hours": "09:45–15:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T09:45:00.000Z",
+          "endDate": "2026-12-21T15:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-22T09:45:00.000Z",
+          "endDate": "2026-12-22T15:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-29T09:45:00.000Z",
+          "endDate": "2026-12-29T15:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-30T09:45:00.000Z",
+          "endDate": "2026-12-30T15:00:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "09:45",
+          "end_time": "15:00"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "09:45",
+          "end_time": "15:00"
+        },
+        {
+          "start": "2026-12-29",
+          "end": "2026-12-29",
+          "start_time": "09:45",
+          "end_time": "15:00"
+        },
+        {
+          "start": "2026-12-30",
+          "end": "2026-12-30",
+          "start_time": "09:45",
+          "end_time": "15:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:16:43.050606+00:00",
+      "practical_notes": [
+        "Meal, drinks and equipment are included. Ask OCRA about any additional support before booking."
+      ],
+      "placement": "featured",
+      "selection_reason": "A west Devon option, with sessions on both sides of Christmas.",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "multi",
+      "sheet_name": "OCRA Primary Winter HAF – Okehampton",
+      "primary_url": "https://eequ.org/book/haf-ocra-primary-sessions-with-ocra-okehampton-community-and-recreation-association-14327",
+      "booking_url": "https://eequ.org/book/haf-ocra-primary-sessions-with-ocra-okehampton-community-and-recreation-association-14327",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/haf-ocra-primary-sessions-with-ocra-okehampton-community-and-recreation-association-14327",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:16:43.050606+00:00"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "f682054b57c6adffa6ef59fc",
+          "name": "OCRA Primary Winter HAF – Okehampton",
+          "region": "Devon",
+          "fingerprint": "65540093364fc105e7892618df19750135a752620ee4864c0581603c452670b5"
+        }
+      ],
+      "notes": [
+        "Meal, drinks and equipment are included. Ask OCRA about any additional support before booking."
+      ],
+      "free_basis": "£0 for eligible Devon HAF children"
+    },
+    {
+      "id": "winter-haf-devon-14068",
+      "name": "Pro-Coaching Winter Camp – Tavistock Primary",
+      "kind": "event",
+      "region": "Devon",
+      "locality": "Tavistock",
+      "city": "Tavistock",
+      "address": "Tavistock Primary & Nursery School, Plymouth Road, Tavistock, PL19 8BX",
+      "description": "Sports, crafts and food at Tavistock Primary School.",
+      "age_text": "5–11 years",
+      "age_min": 5,
+      "age_max": 11,
+      "price_type": "free",
+      "price_text": "£0 for eligible Devon HAF children; paid £20.60/day incl. fee",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21–24 December 2026",
+      "hours": "10:00–14:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T10:00:00.000Z",
+          "endDate": "2026-12-21T14:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-22T10:00:00.000Z",
+          "endDate": "2026-12-22T14:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-23T10:00:00.000Z",
+          "endDate": "2026-12-23T14:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-24T10:00:00.000Z",
+          "endDate": "2026-12-24T14:00:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        },
+        {
+          "start": "2026-12-24",
+          "end": "2026-12-24",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:16:42.997425+00:00",
+      "practical_notes": [
+        "Paid child ticket: £20 plus 3% booking fee (£20.60). Swimming is only for children aged 8+ who can swim unaided, on specified sessions; confirm the dates with the provider."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "multi",
+      "sheet_name": "Pro-Coaching Winter Camp – Tavistock Primary",
+      "primary_url": "https://eequ.org/book/tavistock-primary-school-pro-coaching-camp-with-procoaching-14068",
+      "booking_url": "https://eequ.org/book/tavistock-primary-school-pro-coaching-camp-with-procoaching-14068",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/tavistock-primary-school-pro-coaching-camp-with-procoaching-14068",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:16:42.997425+00:00"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "a04bd838191f6ccfb420f11c",
+          "name": "Pro-Coaching Winter Camp – Tavistock Primary",
+          "region": "Devon",
+          "fingerprint": "f10ded796862e3544f376cfa1ba8c9e9dfddaab5cd626dc94a18a2fc916326e6"
+        }
+      ],
+      "notes": [
+        "Paid child ticket: £20 plus 3% booking fee (£20.60). Swimming is only for children aged 8+ who can swim unaided, on specified sessions; confirm the dates with the provider."
+      ],
+      "free_basis": "£0 for eligible Devon HAF children; paid £20.60/day incl. fee"
+    },
+    {
+      "id": "winter-haf-bristol-7528",
+      "name": "Bizzy Kidz Club @ Frome Vale Academy HAF – Bizzy Kidz Club",
+      "kind": "event",
+      "region": "Bristol",
+      "locality": "Frome Vale / Frenchay Road",
+      "city": "Frome Vale / Frenchay Road",
+      "address": "Frome Vale Academy, Frenchay Road, Bristol, BS16 2QS",
+      "description": "Winter-themed creative activities, experiments, outdoor games and free play.",
+      "age_text": "4–11 years",
+      "age_min": 4,
+      "age_max": 11,
+      "price_type": "free",
+      "price_text": "£0 for eligible Bristol HAF children; paid £23/half day or £40/day",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21–23 December 2026",
+      "hours": "09:00–13:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T09:00:00.000Z",
+          "endDate": "2026-12-21T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-22T09:00:00.000Z",
+          "endDate": "2026-12-22T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-23T09:00:00.000Z",
+          "endDate": "2026-12-23T13:00:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:13:05.100921Z",
+      "practical_notes": [
+        "HAF includes lunch and runs 09:00–13:00. Paid sessions: 09:00–13:00 or 13:00–17:00 (£23); 08:30–17:00 (£40). Paid customers bring a packed lunch. Parent/carer stay requirement: TBC; discuss support needs before booking."
+      ],
+      "placement": "featured",
+      "selection_reason": "Primary-age option in north-east Bristol; combines creative and physical activity and has a published paid route.",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "multi",
+      "sheet_name": "Bizzy Kidz Club @ Frome Vale Academy HAF – Bizzy Kidz Club",
+      "primary_url": "https://eequ.org/book/bizzy-kidz-club-frome-vale-academy-haf-with-bizzy-kidz-club-7528",
+      "booking_url": "https://eequ.org/book/bizzy-kidz-club-frome-vale-academy-haf-with-bizzy-kidz-club-7528",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/bizzy-kidz-club-frome-vale-academy-haf-with-bizzy-kidz-club-7528",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:13:05.100921Z"
+        },
+        {
+          "url": "https://www.bizzykidzclub.com/about-4",
+          "supports": "Current public price list",
+          "retrieval": "Official source reviewed at 2026-11-19T11:13:52.915319+00:00"
+        },
+        {
+          "url": "https://www.bizzykidzclub.com/",
+          "supports": "Christmas opening dates, full-day hours and paid packed-lunch guidance",
+          "retrieval": "Official source reviewed at 2026-11-19T11:17:46.966807Z"
+        },
+        {
+          "url": "https://www.bizzykidzclub.com/copy-of-christmas-2024",
+          "supports": "Page title and content explicitly say WINTER 2026 despite legacy URL slug",
+          "retrieval": "Official source reviewed at 2026-11-19T11:13:53.186215+00:00"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "1adc3b4be81d484169fb9491",
+          "name": "Bizzy Kidz Club @ Frome Vale Academy HAF – Bizzy Kidz Club",
+          "region": "Bristol",
+          "fingerprint": "da3901b209ac184a0d1351ebf0c7d7ddd35f9d6205ce078467882f407adf029c"
+        }
+      ],
+      "notes": [
+        "HAF includes lunch and runs 09:00–13:00. Paid sessions: 09:00–13:00 or 13:00–17:00 (£23); 08:30–17:00 (£40). Paid customers bring a packed lunch. Parent/carer stay requirement: TBC; discuss support needs before booking."
+      ],
+      "free_basis": "£0 for eligible Bristol HAF children; paid £23/half day or £40/day"
+    },
+    {
+      "id": "winter-haf-bristol-24379",
+      "name": "HAF Holiday Club in the Woodland – Back2Basics Forest School",
+      "kind": "event",
+      "region": "Bristol",
+      "locality": "Lawrence Weston",
+      "city": "Lawrence Weston",
+      "address": "Lawrence Weston Community Farm, Saltmarsh Drive, Bristol, BS11 0NJ",
+      "description": "Forest-school activities, shelter building, woodland exploration and campfire-based activities at the community farm.",
+      "age_text": "6–11 years",
+      "age_min": 6,
+      "age_max": 11,
+      "price_type": "free",
+      "price_text": "£0 for eligible Bristol HAF children",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21 December 2026",
+      "hours": "10:00–14:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T10:00:00.000Z",
+          "endDate": "2026-12-21T14:00:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:13:05.469208Z",
+      "practical_notes": [
+        "Outdoor session. Keep a carer or nominated emergency contact available for early collection in adverse weather. Parent/carer stay requirement: TBC. Meal, snacks and drinks included."
+      ],
+      "placement": "featured",
+      "selection_reason": "North-west Bristol coverage and an outdoor option distinct from the school-based and indoor-sport examples.",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "multi",
+      "sheet_name": "HAF Holiday Club in the Woodland – Back2Basics Forest School",
+      "primary_url": "https://eequ.org/book/haf-holiday-club-in-the-woodland-with-back2basics-forest-school-24379",
+      "booking_url": "https://eequ.org/book/haf-holiday-club-in-the-woodland-with-back2basics-forest-school-24379",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/haf-holiday-club-in-the-woodland-with-back2basics-forest-school-24379",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:13:05.469208Z"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "4a4dcd80965a04ee2160183f",
+          "name": "HAF Holiday Club in the Woodland – Back2Basics Forest School",
+          "region": "Bristol",
+          "fingerprint": "e09b1ad8aa78b3aceb4eb3e86e2faa8640f6c81d3cb3dec7e9b4b61fa870074f"
+        }
+      ],
+      "notes": [
+        "Outdoor session. Keep a carer or nominated emergency contact available for early collection in adverse weather. Parent/carer stay requirement: TBC. Meal, snacks and drinks included."
+      ],
+      "free_basis": "£0 for eligible Bristol HAF children"
+    },
+    {
+      "id": "winter-haf-bristol-24937",
+      "name": "HAF Indoor Bouldering Experience – The Climbing Hangar - Bristol",
+      "kind": "event",
+      "region": "Bristol",
+      "locality": "City centre / Union Street",
+      "city": "City centre / Union Street",
+      "address": "15-29 Union Street, The Climbing Hangar, Bristol, BS1 2DF",
+      "description": "Indoor bouldering coaching, climbing games and paper-based activities; rental shoes and chalk included.",
+      "age_text": "7–17 years",
+      "age_min": 7,
+      "age_max": 17,
+      "price_type": "free",
+      "price_text": "£0 for eligible Bristol HAF children",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21–23, 28–30 December 2026",
+      "hours": "12:30–16:30",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T12:30:00.000Z",
+          "endDate": "2026-12-21T16:30:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-22T12:30:00.000Z",
+          "endDate": "2026-12-22T16:30:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-23T12:30:00.000Z",
+          "endDate": "2026-12-23T16:30:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-28T12:30:00.000Z",
+          "endDate": "2026-12-28T16:30:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-29T12:30:00.000Z",
+          "endDate": "2026-12-29T16:30:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-30T12:30:00.000Z",
+          "endDate": "2026-12-30T16:30:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "12:30",
+          "end_time": "16:30"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "12:30",
+          "end_time": "16:30"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "12:30",
+          "end_time": "16:30"
+        },
+        {
+          "start": "2026-12-28",
+          "end": "2026-12-28",
+          "start_time": "12:30",
+          "end_time": "16:30"
+        },
+        {
+          "start": "2026-12-29",
+          "end": "2026-12-29",
+          "start_time": "12:30",
+          "end_time": "16:30"
+        },
+        {
+          "start": "2026-12-30",
+          "end": "2026-12-30",
+          "start_time": "12:30",
+          "end_time": "16:30"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:13:05.276745Z",
+      "practical_notes": [
+        "Under-14s need an adult throughout; ages 14–17 need an adult on their first visit. Published ages 7–17; funded eligibility at age 17 is TBC with the provider. Lunch, snacks and rental shoes included."
+      ],
+      "placement": "featured",
+      "selection_reason": "Central Bristol option with an older published age range and an indoor sport activity. Adult attendance conditions need prominent display.",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "multi",
+      "sheet_name": "HAF Indoor Bouldering Experience – The Climbing Hangar - Bristol",
+      "primary_url": "https://eequ.org/book/haf-indoor-bouldering-experience-with-the-climbing-hangar-bristol-24937",
+      "booking_url": "https://eequ.org/book/haf-indoor-bouldering-experience-with-the-climbing-hangar-bristol-24937",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/haf-indoor-bouldering-experience-with-the-climbing-hangar-bristol-24937",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:13:05.276745Z"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "14c3658405413420ede3829b",
+          "name": "HAF Indoor Bouldering Experience – The Climbing Hangar - Bristol",
+          "region": "Bristol",
+          "fingerprint": "031852e621b6f1b932938e1670e201fd0890bac8b0030ae2dddfe9a02c3f2c66"
+        }
+      ],
+      "notes": [
+        "Under-14s need an adult throughout; ages 14–17 need an adult on their first visit. Published ages 7–17; funded eligibility at age 17 is TBC with the provider. Lunch, snacks and rental shoes included."
+      ],
+      "free_basis": "£0 for eligible Bristol HAF children"
+    },
+    {
+      "id": "winter-haf-bristol-25757",
+      "name": "HAF Open Access Play – Southmead Development Trust",
+      "kind": "event",
+      "region": "Bristol",
+      "locality": "Southmead",
+      "city": "Southmead",
+      "address": "Doncaster Road, Southmead, Bristol, BS10 5PP",
+      "description": "Open-access adventure play, sports, creative workshops, music and indoor/outdoor play at The Ranch.",
+      "age_text": "0–13 years",
+      "age_min": 0,
+      "age_max": 13,
+      "price_type": "free",
+      "price_text": "Free open-access play; primarily BS10 families",
+      "booking_text": "Targeted-FSM children should book; other children can turn up with the required adult.",
+      "schedule_text": "22–23, 29–30 December 2026",
+      "hours": "12:00–16:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-22T12:00:00.000Z",
+          "endDate": "2026-12-22T16:00:00.000Z",
+          "hasDropInPlaces": false
+        },
+        {
+          "startDate": "2026-12-23T12:00:00.000Z",
+          "endDate": "2026-12-23T16:00:00.000Z",
+          "hasDropInPlaces": false
+        },
+        {
+          "startDate": "2026-12-29T12:00:00.000Z",
+          "endDate": "2026-12-29T16:00:00.000Z",
+          "hasDropInPlaces": false
+        },
+        {
+          "startDate": "2026-12-30T12:00:00.000Z",
+          "endDate": "2026-12-30T16:00:00.000Z",
+          "hasDropInPlaces": false
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "12:00",
+          "end_time": "16:00"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "12:00",
+          "end_time": "16:00"
+        },
+        {
+          "start": "2026-12-29",
+          "end": "2026-12-29",
+          "start_time": "12:00",
+          "end_time": "16:00"
+        },
+        {
+          "start": "2026-12-30",
+          "end": "2026-12-30",
+          "start_time": "12:00",
+          "end_time": "16:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:13:05.162355Z",
+      "practical_notes": [
+        "Under-8s need an accompanying adult. Children receiving targeted free school meals should book; other children can turn up. Open-access play is not drop-off childcare."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Open-access family play",
+      "sheet_tab": "dayout",
+      "sheet_type": "multi",
+      "sheet_name": "HAF Open Access Play – Southmead Development Trust",
+      "primary_url": "https://eequ.org/book/haf-open-access-play-with-southmead-development-trust-25757",
+      "booking_url": "https://eequ.org/book/haf-open-access-play-with-southmead-development-trust-25757",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/haf-open-access-play-with-southmead-development-trust-25757",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:13:05.162355Z"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "14e69ab10f1c94e25d85d538",
+          "name": "HAF Open Access Play – Southmead Development Trust",
+          "region": "Bristol",
+          "fingerprint": "5d34c358d397aa109ceea23924e4a5a46ec6fbdbf34c73d389793209d3241898"
+        }
+      ],
+      "notes": [
+        "Under-8s need an accompanying adult. Children receiving targeted free school meals should book; other children can turn up. Open-access play is not drop-off childcare."
+      ],
+      "free_basis": "Free open-access play; primarily BS10 families"
+    },
+    {
+      "id": "winter-haf-bristol-29934",
+      "name": "Junior Holiday Club Ages 8 - 12 – 224 Youth Zone",
+      "kind": "event",
+      "region": "Bristol",
+      "locality": "South Bristol / Hartcliffe Way",
+      "city": "South Bristol / Hartcliffe Way",
+      "address": "224 - Bristol Youth Zone, Hartcliffe Way, Bristol, BS4 1GQ",
+      "description": "Cooking, arts and crafts, music and sports using the Youth Zone facilities.",
+      "age_text": "8–12 years",
+      "age_min": 8,
+      "age_max": 12,
+      "price_type": "free",
+      "price_text": "£0 for eligible Bristol HAF children",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21–24, 29–31 December 2026",
+      "hours": "10:00–14:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T10:00:00.000Z",
+          "endDate": "2026-12-21T14:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-22T10:00:00.000Z",
+          "endDate": "2026-12-22T14:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-23T10:00:00.000Z",
+          "endDate": "2026-12-23T14:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-24T10:00:00.000Z",
+          "endDate": "2026-12-24T14:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-29T10:00:00.000Z",
+          "endDate": "2026-12-29T14:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-30T10:00:00.000Z",
+          "endDate": "2026-12-30T14:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-31T10:00:00.000Z",
+          "endDate": "2026-12-31T14:00:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        },
+        {
+          "start": "2026-12-24",
+          "end": "2026-12-24",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        },
+        {
+          "start": "2026-12-29",
+          "end": "2026-12-29",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        },
+        {
+          "start": "2026-12-30",
+          "end": "2026-12-30",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        },
+        {
+          "start": "2026-12-31",
+          "end": "2026-12-31",
+          "start_time": "10:00",
+          "end_time": "14:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:13:05.091443Z",
+      "practical_notes": [
+        "Join 224 before attendance. General membership is £5/year; any HAF waiver is TBC. Ask 224 if cost is a barrier. Meal included; parent/carer stay requirement TBC."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "multi",
+      "sheet_name": "Junior Holiday Club Ages 8 - 12 – 224 Youth Zone",
+      "primary_url": "https://eequ.org/book/junior-holiday-club-ages-8-12-with-224-youth-zone-29934",
+      "booking_url": "https://eequ.org/book/junior-holiday-club-ages-8-12-with-224-youth-zone-29934",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/junior-holiday-club-ages-8-12-with-224-youth-zone-29934",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:13:05.091443Z"
+        },
+        {
+          "url": "https://224youthzone.org/become-a-member/",
+          "supports": "General annual membership price £5 and financial-barrier support",
+          "retrieval": "Official source reviewed at 2026-11-19T11:13:54.784174+00:00"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "2ec033f37d92a9f40d78456c",
+          "name": "Junior Holiday Club Ages 8 - 12 – 224 Youth Zone",
+          "region": "Bristol",
+          "fingerprint": "6d36582745fc649d811fb33a94bd6db5336285f78fc3e7ce6d44945867d0069d"
+        }
+      ],
+      "notes": [
+        "Join 224 before attendance. General membership is £5/year; any HAF waiver is TBC. Ask 224 if cost is a barrier. Meal included; parent/carer stay requirement TBC."
+      ],
+      "free_basis": "£0 for eligible Bristol HAF children"
+    },
+    {
+      "id": "winter-haf-bristol-7565",
+      "name": "Munchkins HAF Play Sessions – Munchkins Childcare",
+      "kind": "event",
+      "region": "Bristol",
+      "locality": "Brislington / St Anne’s",
+      "city": "Brislington / St Anne’s",
+      "address": "Saint Anne's Infant School, Bloomfield Road, Bristol, BS4 3QJ",
+      "description": "School-hall, classroom and outdoor play sessions with games and play resources.",
+      "age_text": "5–11 years",
+      "age_min": 5,
+      "age_max": 11,
+      "price_type": "free",
+      "price_text": "£0 for eligible Bristol HAF children",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21–23 December 2026",
+      "hours": "09:00–13:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T09:00:00.000Z",
+          "endDate": "2026-12-21T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-22T09:00:00.000Z",
+          "endDate": "2026-12-22T13:00:00.000Z",
+          "hasDropInPlaces": true
+        },
+        {
+          "startDate": "2026-12-23T09:00:00.000Z",
+          "endDate": "2026-12-23T13:00:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "09:00",
+          "end_time": "13:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:13:05.357049Z",
+      "practical_notes": [
+        "Drop-off permitted. Arrive before 10:00 and collect by 13:00. Hot lunch and pudding included; bring a named water bottle. Discuss additional support and medication with the provider first."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "multi",
+      "sheet_name": "Munchkins HAF Play Sessions – Munchkins Childcare",
+      "primary_url": "https://eequ.org/book/munchkins-haf-play-sessions-with-munchkins-childcare-7565",
+      "booking_url": "https://eequ.org/book/munchkins-haf-play-sessions-with-munchkins-childcare-7565",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/munchkins-haf-play-sessions-with-munchkins-childcare-7565",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:13:05.357049Z"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "d0c8e293076fdc0e79109d24",
+          "name": "Munchkins HAF Play Sessions – Munchkins Childcare",
+          "region": "Bristol",
+          "fingerprint": "ae504e26c78f078dd8cf8ceb45ad819eb734058149efbfdffd2388a7842728f8"
+        }
+      ],
+      "notes": [
+        "Drop-off permitted. Arrive before 10:00 and collect by 13:00. Hot lunch and pudding included; bring a named water bottle. Discuss additional support and medication with the provider first."
+      ],
+      "free_basis": "£0 for eligible Bristol HAF children"
+    },
+    {
+      "id": "winter-haf-bristol-35890",
+      "name": "Family Festive Party – The Family Centre Deaf Children",
+      "kind": "event",
+      "region": "Bristol",
+      "locality": "Upper Horfield",
+      "city": "Upper Horfield",
+      "address": "Elmfield School for Deaf Children Upper Horfield School, Sheridan Road, Bristol, BS7 0PU",
+      "description": "Family festive party, activities and a Father Christmas visit, run by The Family Centre Deaf Children.",
+      "age_text": "School-age funding; younger children TBC",
+      "age_min": 0,
+      "age_max": 17,
+      "price_type": "free",
+      "price_text": "£0 targeted family session; school-age funding rules apply",
+      "booking_text": "Book with the provider; eligibility and remaining places are checked when booking.",
+      "schedule_text": "21 December 2026",
+      "hours": "10:30–12:30",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T10:30:00.000Z",
+          "endDate": "2026-12-21T12:30:00.000Z",
+          "hasDropInPlaces": true
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "10:30",
+          "end_time": "12:30"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:15:17.488806Z",
+      "practical_notes": [
+        "For families including a child with hearing loss or a CODA child; benefits-related free school meals are not required. Funded children must be school age. Younger-child attendance and whether every child needs an accompanying adult: confirm with FCDC."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Targeted family event",
+      "sheet_tab": "dayout",
+      "sheet_type": "multi",
+      "sheet_name": "Family Festive Party – The Family Centre Deaf Children",
+      "primary_url": "https://eequ.org/book/family-festive-party-with-the-family-centre-deaf-children-35890",
+      "booking_url": "https://eequ.org/book/family-festive-party-with-the-family-centre-deaf-children-35890",
+      "sources": [
+        {
+          "url": "https://eequ.org/book/family-festive-party-with-the-family-centre-deaf-children-35890",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:15:17.488806Z"
+        },
+        {
+          "url": "https://www.yourholidayhubbristol.co.uk/wp-content/uploads/2026/11/YHH-Winter-Booklet-2026-for-Targeted-Groups.pdf",
+          "supports": "Pages 1–2: targeted-group FSM exemption, school-age rule and FCDC hearing-loss/CODA condition",
+          "retrieval": "Official source reviewed at 2026-11-19T11:14:34.538658Z"
+        },
+        {
+          "url": "https://www.yourholidayhubbristol.co.uk/wp-content/uploads/2026/11/YHH-Winter-Booklet-2026-for-Targeted-Groups.pdf",
+          "supports": "Family Centre Deaf Children targeted-group eligibility and school-age funding."
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "7547041e2b53bf5dfe25a836",
+          "name": "Family Festive Party – The Family Centre Deaf Children",
+          "region": "Bristol",
+          "fingerprint": "42855e44d3ea938eadb5dc7a0e07177a31091e33be1b53631a9e05ae709fa87c"
+        }
+      ],
+      "notes": [
+        "For families including a child with hearing loss or a CODA child; benefits-related free school meals are not required. Funded children must be school age. Younger-child attendance and whether every child needs an accompanying adult: confirm with FCDC."
+      ],
+      "free_basis": "£0 targeted family session; school-age funding rules apply"
+    },
+    {
+      "id": "winter-club-nottingham-nic",
+      "name": "National Ice Centre Holiday Club",
+      "kind": "event",
+      "region": "Nottingham",
+      "locality": "Lace Market / Nottingham city centre",
+      "city": "Lace Market / Nottingham city centre",
+      "address": "National Ice Centre, Bolero Square, Nottingham NG1 1LA",
+      "description": "Multi-sport games, arts and crafts, 1–2 hours of ice skating with skate hire",
+      "age_text": "7–13 years",
+      "age_min": 7,
+      "age_max": 13,
+      "price_type": "paid",
+      "price_text": "£35 per child per day",
+      "booking_text": "Choose a date with the provider. Remaining places are not guaranteed; check the final total and collection arrangements.",
+      "schedule_text": "21–23, 29–30 December 2026",
+      "hours": "Arrival 08:30–09:00; activities 09:00–17:00; pickup 17:00–17:30",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T08:30:00.000Z",
+          "endDate": "2026-12-21T17:30:00.000Z"
+        },
+        {
+          "startDate": "2026-12-22T08:30:00.000Z",
+          "endDate": "2026-12-22T17:30:00.000Z"
+        },
+        {
+          "startDate": "2026-12-23T08:30:00.000Z",
+          "endDate": "2026-12-23T17:30:00.000Z"
+        },
+        {
+          "startDate": "2026-12-29T08:30:00.000Z",
+          "endDate": "2026-12-29T17:30:00.000Z"
+        },
+        {
+          "startDate": "2026-12-30T08:30:00.000Z",
+          "endDate": "2026-12-30T17:30:00.000Z"
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "08:30",
+          "end_time": "17:30"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "08:30",
+          "end_time": "17:30"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "08:30",
+          "end_time": "17:30"
+        },
+        {
+          "start": "2026-12-29",
+          "end": "2026-12-29",
+          "start_time": "08:30",
+          "end_time": "17:30"
+        },
+        {
+          "start": "2026-12-30",
+          "end": "2026-12-30",
+          "start_time": "08:30",
+          "end_time": "17:30"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:19:29Z",
+      "practical_notes": [
+        "Verified paid club; December 2026 HAF availability not established",
+        "Arrival 08:30–09:00; activities 09:00–17:00; pickup by 17:30. Hot meal, snacks and skate hire included."
+      ],
+      "placement": "featured",
+      "selection_reason": "A city-centre choice with a full day, ice skating, a meal and skate hire in one price.",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "sports",
+      "sheet_name": "National Ice Centre Holiday Club",
+      "primary_url": "https://national-ice-centre.com/whats-on/holiday-club/",
+      "booking_url": "https://nationalicecentre.gladstonego.cloud/book",
+      "sources": [
+        {
+          "url": "https://national-ice-centre.com/whats-on/holiday-club/",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:19:29Z"
+        },
+        {
+          "url": "https://national-ice-centre.com/getting-here/",
+          "supports": "Lace Market, Bolero Square; tram about 3 minutes, railway about 10 minutes"
+        },
+        {
+          "url": "https://nationalicecentre.gladstonego.cloud/book",
+          "supports": "SPA exposed no inventory in text; no capacity claim"
+        },
+        {
+          "url": "https://eequ.org/book/holiday-club-ice-skating-with-national-ice-centre-35359",
+          "supports": "Belward Street, Nottingham NG1 1LA; null startDate, not proof of winter HAF opening"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "02a0167da6095ed3ce432ea3",
+          "name": "National Ice Centre Holiday Club",
+          "region": "Nottingham",
+          "fingerprint": "6df5eddbd27591f6dafdc7250231d80202b52798b8c8ab48e07552cd7758b671"
+        }
+      ],
+      "notes": [
+        "Verified paid club; December 2026 HAF availability not established",
+        "Arrival 08:30–09:00; activities 09:00–17:00; pickup by 17:30. Hot meal, snacks and skate hire included."
+      ]
+    },
+    {
+      "id": "winter-club-nottingham-camp-williams",
+      "name": "YMCA Camp Williams Nottingham",
+      "kind": "event",
+      "region": "Nottingham",
+      "locality": "West Bridgford",
+      "city": "West Bridgford",
+      "address": "Christmas-specific venue/dropoff TBC. Published general base: The Becket School, Wilford Lane, West Bridgford, Nottingham NG2 7QY",
+      "description": "Indoor/outdoor sports, group games, arts and crafts, swimming and age-dependent skill clinics",
+      "age_text": "4–15, in different age villages",
+      "age_min": 4,
+      "age_max": 15,
+      "price_type": "paid",
+      "price_text": "£62/day; 21–24 December week £192.80; 29–31 December week £144.60",
+      "booking_text": "Choose a date with the provider. Remaining places are not guaranteed; confirm Christmas venue/drop-off first.",
+      "schedule_text": "21–24, 29–31 December 2026",
+      "hours": "08:00–18:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T08:00:00.000Z",
+          "endDate": "2026-12-21T18:00:00.000Z"
+        },
+        {
+          "startDate": "2026-12-22T08:00:00.000Z",
+          "endDate": "2026-12-22T18:00:00.000Z"
+        },
+        {
+          "startDate": "2026-12-23T08:00:00.000Z",
+          "endDate": "2026-12-23T18:00:00.000Z"
+        },
+        {
+          "startDate": "2026-12-24T08:00:00.000Z",
+          "endDate": "2026-12-24T18:00:00.000Z"
+        },
+        {
+          "startDate": "2026-12-29T08:00:00.000Z",
+          "endDate": "2026-12-29T18:00:00.000Z"
+        },
+        {
+          "startDate": "2026-12-30T08:00:00.000Z",
+          "endDate": "2026-12-30T18:00:00.000Z"
+        },
+        {
+          "startDate": "2026-12-31T08:00:00.000Z",
+          "endDate": "2026-12-31T18:00:00.000Z"
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "08:00",
+          "end_time": "18:00"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "08:00",
+          "end_time": "18:00"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "08:00",
+          "end_time": "18:00"
+        },
+        {
+          "start": "2026-12-24",
+          "end": "2026-12-24",
+          "start_time": "08:00",
+          "end_time": "18:00"
+        },
+        {
+          "start": "2026-12-29",
+          "end": "2026-12-29",
+          "start_time": "08:00",
+          "end_time": "18:00"
+        },
+        {
+          "start": "2026-12-30",
+          "end": "2026-12-30",
+          "start_time": "08:00",
+          "end_time": "18:00"
+        },
+        {
+          "start": "2026-12-31",
+          "end": "2026-12-31",
+          "start_time": "08:00",
+          "end_time": "18:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:19:29Z",
+      "practical_notes": [
+        "Paid camp; scholarship application is separate and is not confirmed HAF allocation",
+        "Christmas-specific venue and drop-off: TBC. The Becket School is the general published base; confirm Christmas instructions before booking. October coach travel to Newark is not a Christmas arrangement.",
+        "£62 single-day Pioneer option is for ages 8–12; confirm day options for other ages. Meal arrangements TBC."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "multi",
+      "sheet_name": "Camp Williams – YMCA Robin Hood Group",
+      "primary_url": "https://www.ymcarobinhood.org/camp-williams/",
+      "booking_url": "https://bookings.nottsymca.com/Identity/Account/Login",
+      "sources": [
+        {
+          "url": "https://www.ymcarobinhood.org/camp-williams/",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:19:29Z"
+        },
+        {
+          "url": "https://bookings.nottsymca.com/Identity/Account/Login",
+          "supports": "Login required; no seat count verified"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "f572d4e294b1c84e63f5fb62",
+          "name": "Camp Williams – YMCA Robin Hood Group",
+          "region": "Nottingham",
+          "fingerprint": "aa00133341f5489e9dd38ce06d5782807e27f8cda6b1e2b61685b54750d01b4f"
+        }
+      ],
+      "notes": [
+        "Paid camp; scholarship application is separate and is not confirmed HAF allocation",
+        "Christmas-specific venue and drop-off: TBC. The Becket School is the general published base; confirm Christmas instructions before booking. October coach travel to Newark is not a Christmas arrangement.",
+        "£62 single-day Pioneer option is for ages 8–12; confirm day options for other ages. Meal arrangements TBC."
+      ]
+    },
+    {
+      "id": "winter-club-nottingham-premier-bunny",
+      "name": "Premier Education Multi-Activity Holiday Camp",
+      "kind": "event",
+      "region": "Nottingham",
+      "locality": "Bunny village, south of Nottingham",
+      "city": "Bunny village, south of Nottingham",
+      "address": "Bunny CofE Primary School, Church Street, Bunny, Nottingham NG11 6QW",
+      "description": "Competitive and non-competitive multi-activity games",
+      "age_text": "Reception (4/5) to Year 6 (10/11)",
+      "age_min": 4,
+      "age_max": 11,
+      "price_type": "paid",
+      "price_text": "From £8.07 plus £1.25 booking service fee per booking; selected session determines price",
+      "booking_text": "Choose a date with the provider. Remaining places are not guaranteed; check the final total and collection arrangements.",
+      "schedule_text": "21–23 December 2026",
+      "hours": "Options: 08:30–15:30; 09:00–15:30; 09:00–12:00; 12:00–15:30",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T08:30:00.000Z",
+          "endDate": "2026-12-21T15:30:00.000Z"
+        },
+        {
+          "startDate": "2026-12-22T08:30:00.000Z",
+          "endDate": "2026-12-22T15:30:00.000Z"
+        },
+        {
+          "startDate": "2026-12-23T08:30:00.000Z",
+          "endDate": "2026-12-23T15:30:00.000Z"
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "08:30",
+          "end_time": "15:30"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "08:30",
+          "end_time": "15:30"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "08:30",
+          "end_time": "15:30"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:19:29Z",
+      "practical_notes": [
+        "Paid listing accepts Tax-Free Childcare and listed childcare vouchers; no HAF allocation claimed for this course",
+        "£8.07 is a starting session price, not a full-day price; £1.25 service fee per booking. Choose the session for the final price. Food arrangements TBC."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "multi",
+      "sheet_name": "Premier Education Multi-Activity Holiday Camp",
+      "primary_url": "https://www.premier-education.com/parents/venue/courses/14327-963893/",
+      "booking_url": "https://family.premier-education.com/add-course/963893",
+      "sources": [
+        {
+          "url": "https://www.premier-education.com/parents/venue/courses/14327-963893/",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:19:29Z"
+        },
+        {
+          "url": "https://www.premier-education.com/parents/venue/courses/14327/?distance=7.4&location=NG2&type%5B%5D=Hol",
+          "supports": "Bunny address, dates, times, from-price and fee"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "57bd276a986b60cfb6bb3155",
+          "name": "Premier Education Multi-Activity Holiday Camp",
+          "region": "Nottingham",
+          "fingerprint": "f57e444c952535bc0cf33c05b305ccee3b659bb8691fd96c1b8b109596765cd9"
+        }
+      ],
+      "notes": [
+        "Paid listing accepts Tax-Free Childcare and listed childcare vouchers; no HAF allocation claimed for this course",
+        "£8.07 is a starting session price, not a full-day price; £1.25 service fee per booking. Choose the session for the final price. Food arrangements TBC."
+      ]
+    },
+    {
+      "id": "winter-club-nottingham-rascals",
+      "name": "Rascals ‘Nativity’ Holiday Camp — West Bridgford",
+      "kind": "event",
+      "region": "Nottingham",
+      "locality": "West Bridgford",
+      "city": "West Bridgford",
+      "address": "West Bridgford Methodist Church, Musters Road, West Bridgford NG2 7PQ",
+      "description": "Dance, singing, drama, Christmas crafts, team games and mini-musical performance",
+      "age_text": "4–12 years",
+      "age_min": 4,
+      "age_max": 12,
+      "price_type": "paid",
+      "price_text": "£28 per child; additional siblings £21 (25% discount)",
+      "booking_text": "Choose a date with the provider. Remaining places are not guaranteed; check the final total and collection arrangements.",
+      "schedule_text": "21 December 2026",
+      "hours": "10:00–15:00; parents invited back at 14:45 for performance",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T10:00:00.000Z",
+          "endDate": "2026-12-21T15:00:00.000Z"
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "10:00",
+          "end_time": "15:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:19:29Z",
+      "practical_notes": [
+        "Paid; no funded eligibility advertised",
+        "Bring a packed lunch, snack and drinks. Parents are invited back at 14:45 for the performance. Additional siblings £21 each."
+      ],
+      "placement": "featured",
+      "selection_reason": "A one-day creative option in West Bridgford, with a short performance for families.",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "art",
+      "sheet_name": "Rascals ‘Nativity’ Holiday Camp — West Bridgford",
+      "primary_url": "https://www.rascals-uk.com/holiday-clubs",
+      "booking_url": "https://rascals-west-bridgford.classforkids.io/camp/5",
+      "sources": [
+        {
+          "url": "https://www.rascals-uk.com/holiday-clubs",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:19:29Z"
+        },
+        {
+          "url": "https://rascals-west-bridgford.classforkids.io/camps",
+          "supports": "21December2026 and current /camp/5 link"
+        },
+        {
+          "url": "https://rascals-west-bridgford.classforkids.io/camp/5",
+          "supports": "Exact date/time/address/prices; packed lunch; parent performance14:45"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "235316190b740372c1a66afe",
+          "name": "Rascals ‘Nativity’ Holiday Camp — West Bridgford",
+          "region": "Nottingham",
+          "fingerprint": "64892870f027c00f4f2ea5aedf58ac6e9fe24ff5016a5682a9245d9c2a8a297e"
+        }
+      ],
+      "notes": [
+        "Paid; no funded eligibility advertised",
+        "Bring a packed lunch, snack and drinks. Parents are invited back at 14:45 for the performance. Additional siblings £21 each."
+      ]
+    },
+    {
+      "id": "winter-club-nottingham-powerleague-arnold",
+      "name": "Powerleague Nottingham Arnold Christmas Football Camps",
+      "kind": "event",
+      "region": "Nottingham",
+      "locality": "Arnold",
+      "city": "Arnold",
+      "address": "Arnold Hill Spencer Academy / Powerleague Nottingham Arnold, Gedling Road, Arnold NG5 6NZ",
+      "description": "Football drills, matches, challenges and outdoor games",
+      "age_text": "5–12; official general Christmas camp page reached through the official sitemap",
+      "age_min": 5,
+      "age_max": 12,
+      "price_type": "paid",
+      "price_text": "£15/day early-bird or £19/day standard, both visible in live Arnold list",
+      "booking_text": "Choose a date with the provider. Remaining places are not guaranteed; check the final total and collection arrangements.",
+      "schedule_text": "21–23, 28–30 December 2026",
+      "hours": "09:00–15:00",
+      "sessions": [
+        {
+          "startDate": "2026-12-21T09:00:00.000Z",
+          "endDate": "2026-12-21T15:00:00.000Z"
+        },
+        {
+          "startDate": "2026-12-22T09:00:00.000Z",
+          "endDate": "2026-12-22T15:00:00.000Z"
+        },
+        {
+          "startDate": "2026-12-23T09:00:00.000Z",
+          "endDate": "2026-12-23T15:00:00.000Z"
+        },
+        {
+          "startDate": "2026-12-28T09:00:00.000Z",
+          "endDate": "2026-12-28T15:00:00.000Z"
+        },
+        {
+          "startDate": "2026-12-29T09:00:00.000Z",
+          "endDate": "2026-12-29T15:00:00.000Z"
+        },
+        {
+          "startDate": "2026-12-30T09:00:00.000Z",
+          "endDate": "2026-12-30T15:00:00.000Z"
+        }
+      ],
+      "occurrences": [
+        {
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "start_time": "09:00",
+          "end_time": "15:00"
+        },
+        {
+          "start": "2026-12-22",
+          "end": "2026-12-22",
+          "start_time": "09:00",
+          "end_time": "15:00"
+        },
+        {
+          "start": "2026-12-23",
+          "end": "2026-12-23",
+          "start_time": "09:00",
+          "end_time": "15:00"
+        },
+        {
+          "start": "2026-12-28",
+          "end": "2026-12-28",
+          "start_time": "09:00",
+          "end_time": "15:00"
+        },
+        {
+          "start": "2026-12-29",
+          "end": "2026-12-29",
+          "start_time": "09:00",
+          "end_time": "15:00"
+        },
+        {
+          "start": "2026-12-30",
+          "end": "2026-12-30",
+          "start_time": "09:00",
+          "end_time": "15:00"
+        }
+      ],
+      "indoor": null,
+      "tags": [
+        "holiday-club"
+      ],
+      "verified_at": "2026-11-19T11:19:29Z",
+      "practical_notes": [
+        "Paid; no HAF allocation verified",
+        "Choose an early-bird or standard ticket. Food arrangements TBC; no early-bird deadline is confirmed here."
+      ],
+      "placement": "additional",
+      "selection_reason": "",
+      "format": "Holiday club",
+      "sheet_tab": "club",
+      "sheet_type": "sports",
+      "sheet_name": "Powerleague Nottingham Arnold Christmas Football Camps",
+      "primary_url": "https://www.powerleague.com/location/nottingham-arnold",
+      "booking_url": "https://www.powerleague.com/booking/select-date?location_id=fbf1863e-5346-9fa2-e314-42ebb8584ed0&search_package_type=&search_event_type=SoccerCamps&search_camp_activity_type=football&location_link=",
+      "sources": [
+        {
+          "url": "https://www.powerleague.com/location/nottingham-arnold",
+          "supports": "Organiser listing confirms the published 2026 dates, times, venue, ages, ticket basis and conditions.",
+          "retrieval": "Official source reviewed at 2026-11-19T11:19:29Z"
+        },
+        {
+          "url": "https://www.powerleague.com/booking/select-date?location_id=fbf1863e-5346-9fa2-e314-42ebb8584ed0&search_package_type=&search_event_type=SoccerCamps&search_camp_activity_type=football&location_link=",
+          "supports": "Six2026 dates,09:00–15:00,£15/£19, Places available"
+        },
+        {
+          "url": "https://arnoldhillspencer.org.uk/powerleague/",
+          "supports": "Links official Arnold venue; Gedling RoadNG5 6NZ"
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "8d46cf06a4304e41fb050fcb",
+          "name": "Powerleague Nottingham Arnold Christmas Football Camps",
+          "region": "Nottingham",
+          "fingerprint": "1d57601bc625be600711ac41cc3675f42a6ceb43720dc8142df68f0e93a3da46"
+        }
+      ],
+      "notes": [
+        "Paid; no HAF allocation verified",
+        "Choose an early-bird or standard ticket. Food arrangements TBC; no early-bird deadline is confirmed here."
+      ]
+    }
+  ]
+}
