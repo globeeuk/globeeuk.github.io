@@ -27,6 +27,8 @@ def validate_records(catalog, queue, now):
     records = catalog['items']
     ids = set()
     for item in records:
+        if item.get('source_visibility') != 'public':
+            raise ValueError(item['id'] + ': public enrolment must be verified before listing')
         if item['id'] in ids or item['region'] not in REGIONS:
             raise ValueError('Duplicate identity or unsupported region')
         ids.add(item['id'])

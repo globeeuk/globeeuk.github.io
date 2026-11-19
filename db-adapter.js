@@ -113,6 +113,7 @@
       const m=g.master||{},es=g.events,name=m.name||g.name,a=annotations[name]||{};
       // A lesson with a dedicated directory card stays out of Days out.
       if(m.tab==='lesson'&&a.classesOnly===true)continue;
+      if(/^\[Publication hold\]/i.test(m.description||''))continue;
       if(/\bcancelled\b|\bcanceled\b/i.test([m.dates,m.description].join(' ')))continue;
       const rawPeriods=[];
       for(const e of es){if(!iso(e.date)||e.end&&!iso(e.end))continue;const d={start:e.date,end:e.end||e.date};if(d.end<d.start)continue;if(!rawPeriods.some(v=>v.start===d.start&&v.end===d.end))rawPeriods.push(d);}
