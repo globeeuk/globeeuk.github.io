@@ -1,7 +1,28 @@
 const test=require('node:test');
 const assert=require('node:assert/strict');
-const {group,fromPlace,plan,londonDay,nextWeeks,LIMIT}=require('../my-plans.js');
+const {group,fromPlace,plan,londonDay,nextWeeks,LIMIT,planningShortcut}=require('../my-plans.js');
 const make=(id,endDate,extra={})=>({id,name:id,endDate,...extra});
+test('The planning action follows the saved list, including the last removal and ended-item retention',()=>{
+  const empty=group([],'2026-11-19');
+  assert.equal(planningShortcut('Bristol',empty.items.length).href,'/?region=Bristol#plans-window-weekend');
+  const saved=group([make('first','2026-11-21'),make('second','2026-11-22')],'2026-11-19');
+  assert.deepEqual(planningShortcut('Nottingham',saved.items.length),{action:'saved',label:'My plans · 2',href:'/my-plans/?region=Nottingham'});
+  const removed=group(saved.items.filter(p=>p.id==='first'),'2026-11-19');
+  assert.equal(planningShortcut('Nottingham',removed.items.length).label,'My plans · 1');
+  assert.equal(planningShortcut('Nottingham',group([], '2026-11-19').items.length).action,'weekend');
+  const ended=group(saved.items,'2026-11-23');
+  assert.equal(planningShortcut('Bristol',ended.items.length).label,'My plans · 2');
+});
+test('The planning action keeps the current region and shares the existing My plans default',()=>{
+  for(const region of ['Devon','Exeter','invalid']){
+    assert.equal(planningShortcut(region,0).href,'/?region=Devon#plans-window-weekend');
+    assert.equal(planningShortcut(region,1).href,'/my-plans/');
+  }
+  for(const region of ['Bristol','Nottingham']){
+    assert.equal(planningShortcut(region,0).href,'/?region='+region+'#plans-window-weekend');
+    assert.equal(planningShortcut(region,50).href,'/my-plans/?region='+region);
+  }
+});
 test('Past plans are kept by last day and the fifth older entry is pruned',()=>{
   const rows=['05','13','01','14','16'].map(day=>make('plan-'+day,'2026-11-'+day));
   const on=group(rows,'2026-11-16');

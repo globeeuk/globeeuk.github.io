@@ -27,17 +27,18 @@
   <script defer src="/christmas-market-map-data.js?v=20261112"></script>
   <script defer src="/christmas-market-map.js?v=20261112-home"></script>
   <script defer src="/my-plans.js?v=20261116"></script>
-  <script defer src="app.js?v=region-choice-20261119"></script>
+  <script defer src="app.js?v=planning-shortcut-20261119-1"></script>
   <script defer src="db-loader.js?v=new-week-20261111"></script>
   <script defer src="basic-analytics.js?v=basic2"></script>
-<script defer src="analytics.js?v=consent4"></script>
+<script defer src="analytics.js?v=consent4-planning-shortcut-20261119"></script>
 <link rel="stylesheet" href="/brand.css?v=child1">
   <link rel="stylesheet" href="/christmas-print.css?v=20261113">
   <link rel="stylesheet" href="/christmas-market-map.css?v=20261112">
   <link rel="stylesheet" href="/my-plans.css?v=save-row-20261116">
   <script src="/region-preference.js?v=region-choice-20261119"></script>
+  <link rel="stylesheet" href="/planning-shortcut.css?v=20261119-1">
 </head>
-<body class="plans-page" data-page="plans">
+<body class="has-planning-shortcut plans-page" data-page="plans">
   <header class="site-header">
     <div class="header-inner">
       <a href="./" class="brand" aria-label="Globee home"><span class="brand-art"><img src="/assets/brand/globee-handwriting-v2.png" alt="Globee" width="1774" height="887"></span></a>
@@ -62,7 +63,7 @@
       <button class="weekend-shortcut" data-date-shortcut="weekend"><span data-icon="calendar"></span>This weekend<span data-icon="arrow"></span></button>
     </div>
     <section class="content-width result-section" aria-labelledby="results-heading">
-      <div class="results-top"><div><h2 id="results-heading" tabindex="-1">All upcoming plans</h2><p id="results-subtitle">Events and clubs together, ordered by date. Dates TBC appear last.</p></div><span id="result-count" class="result-count" aria-live="polite"></span></div>
+      <div class="results-top"><div><h2 id="results-heading" tabindex="-1">All upcoming plans</h2><p id="results-subtitle">Events and clubs together, ordered by date. Dates TBC appear last.</p></div><div class="results-tools"><span id="result-count" class="result-count" aria-live="polite"></span><button class="view-toggle" id="view-toggle" aria-label="Show map"><span data-icon="map"></span><span id="view-toggle-label">Show map</span></button></div></div>
       <p id="database-status" class="database-status" hidden role="status">Loading the directory…</p>
       <div id="applied-filters" class="applied-filters" hidden></div>
       <p id="date-scope-note" class="date-scope-note" hidden></p>
@@ -72,7 +73,7 @@
     </section>
     <footer class="content-width footer"><div><span class="footer-brand"><span class="brand-art"><img src="/assets/brand/globee-handwriting-v2.png" alt="Globee" width="1774" height="887"></span></span><p>Prices &amp; schedules change — always check the provider before booking.</p></div><div class="footer-links"><a href="https://forms.gle/tVQQETV24frZhhpa6" target="_blank" rel="noopener">Ask a question or share a tip</a><a href="/exeter/">Exeter family guides</a><a href="/bristol/">Bristol family guides</a><a href="/bristol/this-weekend/">Bristol Weekend Edit</a><a href="image-credits.html">Image credits</a><a href="privacy.html">Privacy &amp; analytics</a><button class="text-button" data-analytics-toggle>Analytics settings</button></div></footer>
   </main>
-  <button class="view-toggle" id="view-toggle" aria-label="Show map"><span data-icon="map"></span><span id="view-toggle-label">Show map</span></button>
+  <div class="planning-shortcut-dock"><a class="planning-shortcut" href="/?region=Devon#plans-window-weekend" data-planning-shortcut data-planning-action="weekend" data-planning-region="Devon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 11h18"/></svg><span data-planning-label>This weekend</span></a></div>
   <dialog id="filter-dialog" class="filter-dialog" aria-labelledby="filter-title">
     <form id="filter-form"><div class="dialog-head"><h2 id="filter-title"></h2><button type="button" class="icon-button" id="filter-close" aria-label="Close filters"><span data-icon="close"></span></button></div><div id="filter-content"></div><div class="dialog-actions"><button type="button" class="text-button" id="filter-clear">Clear</button><button type="submit" class="primary-button" id="filter-apply">Show places</button></div></form>
   </dialog>

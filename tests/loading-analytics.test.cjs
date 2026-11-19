@@ -56,15 +56,17 @@ test('Map and weekend actions respect consent and retired mailing actions do not
   const element={dataset,tagName:href?'A':'BUTTON',href,matches:s=>matches.includes(s),closest:()=>({querySelector:()=>({dataset:{marketRegion:'devon'}})})};
   a.listeners.click({target:{closest:()=>element}});
  };
- click({marketTown:'Totnes'});assert.equal(a.ctx.dataLayer,undefined);a.allow.click();
+ click({marketTown:'Totnes'});click({planningAction:'weekend',planningRegion:'Bristol'},['[data-planning-shortcut]']);assert.equal(a.ctx.dataLayer,undefined);a.allow.click();
+ click({planningAction:'saved',planningRegion:'Bristol'},['[data-planning-shortcut]']);
  click({marketTown:'Totnes'});click({marketRegion:'cornwall'});click({plansWindow:'four-weeks'});click({rail:'weekend-picks',direction:'1'});
  click({},[], 'https://globeeuk.github.io/weekend-edit/sample/');
  click({},['.market-map-event a'],'https://provider.example/event?private=ignored');
  a.listeners.toggle?.({target:{id:'weekend-newsletter-signup',open:true}});
  const events=a.ctx.dataLayer.filter(x=>x[0]==='event');
+ assert.deepEqual(JSON.parse(JSON.stringify(events.find(x=>x[1]==='planning_shortcut_click')[2])),{view:'saved',region:'Bristol'});
  for(const name of ['page_view','market_town_select','market_area_select','weekend_period_select','weekend_list_move','provider_visit'])assert.equal(events.filter(x=>x[1]===name).length,1,name);
  assert(!JSON.stringify(events).includes('private'));assert(!events.some(x=>/submit|sign_up|newsletter/.test(x[1])));
- a.deny.click();const count=a.ctx.dataLayer.length;click({marketTown:'Totnes'});assert.equal(a.ctx.dataLayer.length,count);
+ a.deny.click();const count=a.ctx.dataLayer.length;click({marketTown:'Totnes'});click({planningAction:'saved',planningRegion:'Bristol'},['[data-planning-shortcut]']);assert.equal(a.ctx.dataLayer.length,count);
 });
 test('The retired sample links to the public guide without signup, tracking or indexing',()=>{
  const html=source('weekend-edit/sample/index.html');

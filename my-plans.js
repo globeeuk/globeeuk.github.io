@@ -58,7 +58,13 @@
     const selected=['Bristol','Nottingham'].includes(region)?region:'Devon';
     return '/plans.html?'+new URLSearchParams({region:selected,from:today,to:end.toISOString().slice(0,10)});
   }
-  if(typeof module!=='undefined'&&module.exports){module.exports={KEY,LIMIT,PAST_LIMIT,group,fromPlace,plan,londonDay,nextWeeks};return;}
+  function planningShortcut(region,count){
+    const selected=['Bristol','Nottingham'].includes(region)?region:'Devon';
+    return count>0
+      ?{action:'saved',label:'My plans · '+count,href:'/my-plans/'+(selected==='Devon'?'':'?region='+selected)}
+      :{action:'weekend',label:'This weekend',href:'/?region='+selected+'#plans-window-weekend'};
+  }
+  if(typeof module!=='undefined'&&module.exports){module.exports={KEY,LIMIT,PAST_LIMIT,group,fromPlace,plan,londonDay,nextWeeks,planningShortcut};return;}
   const doc=root.document;
   const panel=doc.querySelector('[data-my-plans-page]');
   const shortcut=panel?.querySelector('[data-my-plans-shortcut]');
@@ -204,6 +210,19 @@
       const count=link.querySelector('[data-my-plans-count]');
       count.hidden=state.items.length===0;count.textContent=state.items.length;
       link.setAttribute('aria-label',state.items.length?'My plans ('+state.items.length+' saved)':'My plans');
+    }
+    for(const link of doc.querySelectorAll('[data-planning-shortcut]')){
+      const next=planningShortcut(region,state.items.length);
+      link.href=next.href;
+      link.dataset.planningAction=next.action;
+      link.dataset.planningRegion=region;
+      link.setAttribute('aria-label',next.action==='saved'?'My plans ('+state.items.length+' saved)':'This weekend in '+regions[region]);
+      if(link.querySelector('[data-planning-label]').textContent!==next.label){
+        link.querySelector('[data-planning-label]').textContent=next.label;
+        link.querySelector('svg').innerHTML=next.action==='saved'
+          ?'<path d="M6 4h12v16l-6-4-6 4z"/>'
+          :'<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 11h18"/>';
+      }
     }
     if(!panel)for(const button of doc.querySelectorAll('[data-save-plan]')){
       const item=directory.get(button.dataset.savePlan)||edits.get(button.dataset.savePlan);

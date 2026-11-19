@@ -504,6 +504,17 @@ function openDetail(id){
 $('#detail-close').addEventListener('click',()=>$('#detail-dialog').close());
 document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));
 document.addEventListener('click',event=>{
+  const planning=event.target.closest('[data-planning-shortcut]');
+  if(planning?.dataset.planningAction==='weekend'&&isNotebookHome){
+    event.preventDefault();
+    if(state.view==='map')$('#view-toggle').click();
+    state.notebookSection='days';plansWindow='weekend';
+    resetFilters();
+    window.history.replaceState(null,'',window.location.pathname+window.location.search+'#plans-window-weekend');
+    const target=$('#plans-window-weekend');
+    target?.focus({preventScroll:true});target?.scrollIntoView({block:'start',behavior:'instant'});
+    return;
+  }
   const windowTab=event.target.closest('[data-plans-window]');
   if(windowTab){plansWindow=windowTab.dataset.plansWindow;renderWeekend();document.getElementById(`plans-window-${plansWindow}`)?.focus({preventScroll:true});return;}
   if(event.target.closest('[data-close-map-selection]')){selectedId=null;mapSelectionDismissed=true;$('#map-selection').hidden=true;document.querySelectorAll('.map-pin.selected').forEach(el=>el.classList.remove('selected'));return;}
@@ -658,6 +669,10 @@ window.GlobeeRegionPreference?.mount(region=>{
   document.querySelector('[data-menu="region"]')?.focus({preventScroll:true});
 });
 render();
+if(window.location.hash==='#plans-window-weekend')requestAnimationFrame(()=>{
+  const target=$('#plans-window-weekend');
+  target?.focus({preventScroll:true});target?.scrollIntoView({block:'start',behavior:'instant'});
+});
 if(isPlansPage&&state.edit==='christmas'&&window.location.hash.startsWith('#christmas-')){
   requestAnimationFrame(()=>document.getElementById(window.location.hash.slice(1))?.scrollIntoView());
 }
