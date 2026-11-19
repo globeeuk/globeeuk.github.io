@@ -32,3 +32,42 @@
 .holiday-guide-page .holiday-funding>h2{font:600 18px/1.4 Outfit,Arial,sans-serif;letter-spacing:0;margin:0 0 10px}
 @media(min-width:1000px){.holiday-picks-three{grid-template-columns:repeat(3,minmax(0,1fr))}.holiday-picks-three .holiday-pick{padding:20px}.holiday-picks-three .holiday-pick h3{font-size:23px}}
 @media(prefers-reduced-motion:reduce){.holiday-guide-page{scroll-behavior:auto}}
+
+/* Seasonal decoration; programme facts and controls remain native text. */
+.notebook-home .entry-cards .entry-card-december{position:relative;isolation:isolate;overflow:hidden;min-height:210px;padding:28px 36px;background:#f7f5ee;border:1px solid #d9dbd0;border-top:3px solid #863441}
+.entry-card-december .december-copy{position:relative;z-index:1;flex:1;max-width:690px;gap:9px}
+.entry-card-december .december-kicker{font-size:12px;color:#863441;letter-spacing:.08em}
+.notebook-home .entry-card-december h2{font-size:clamp(31px,3.5vw,46px);line-height:1.08}
+.entry-card-december .december-intro{max-width:540px;font-size:16px;line-height:1.45}
+.entry-card-december .december-action{font-size:15px;margin-top:7px}
+.entry-card-december .december-art{display:block;flex:0 0 32%;max-width:300px;align-self:center;pointer-events:none}
+.entry-card-december .december-art img{display:block;width:100%;height:auto}
+.holiday-seasonal-banner{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);align-items:center;gap:20px;margin:22px 0 16px;padding:27px 30px;background:#f7f5ee;border:1px solid #d9dbd0;border-top:3px solid #863441}
+.holiday-seasonal-copy{min-width:0}
+.holiday-seasonal-banner .holiday-kicker{font-size:12px;letter-spacing:.08em;color:#863441;margin:0 0 12px}
+.holiday-guide-page .holiday-seasonal-banner h1{font-size:clamp(38px,4.4vw,54px);line-height:1.04;margin:0 0 15px}
+.holiday-seasonal-banner .holiday-deck{font-size:16px;line-height:1.5;max-width:560px;margin:0}
+.holiday-seasonal-art{min-width:0;pointer-events:none}
+.holiday-seasonal-art img{display:block;width:100%;height:auto}
+@media(max-width:700px){
+ .notebook-home .entry-cards .entry-card-december{padding:22px;display:block;min-height:205px}
+ .entry-card-december .december-kicker{font-size:11px;letter-spacing:.04em;max-width:calc(100% - 80px);min-height:44px}
+ .notebook-home .entry-card-december h2{font-size:32px}
+ .entry-card-december .december-intro{font-size:14px}
+ .entry-card-december .december-action{font-size:14px}
+ .entry-card-december .december-art{position:absolute;width:90px;min-width:0;right:10px;top:12px;z-index:2}
+ .holiday-seasonal-banner{grid-template-columns:minmax(0,1fr);gap:0;position:relative;padding:24px 20px 20px;margin-top:20px;overflow:hidden}
+ .holiday-seasonal-banner .holiday-kicker{max-width:180px;font-size:11px;line-height:1.5;min-height:46px;margin-bottom:15px}
+ .holiday-guide-page .holiday-seasonal-banner h1{font-size:39px;max-width:100%}
+ .holiday-seasonal-banner .holiday-deck{font-size:16px}
+ .holiday-seasonal-art{position:absolute;right:8px;top:8px;width:96px}
+}
+@media(max-width:360px){
+ .notebook-home .entry-cards .entry-card-december{padding:20px;gap:0}
+ .entry-card-december .december-copy{padding-right:0}
+ .entry-card-december .december-art{width:78px;right:8px;top:8px}
+ .entry-card-december .december-kicker{max-width:calc(100% - 68px)}
+ .holiday-guide-page .holiday-seasonal-banner h1{font-size:35px}
+ .holiday-seasonal-banner .holiday-kicker{max-width:155px}
+ .holiday-seasonal-art{width:80px;right:5px}
+}

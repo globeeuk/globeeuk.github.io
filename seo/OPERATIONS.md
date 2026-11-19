@@ -145,6 +145,8 @@ The first cards are editorial examples chosen for confirmed winter sessions, cle
 
 **19 November follow-up:** Devon has top-of-guide town buttons for all 13 confirmed programme areas, plus a separately labelled Tiverton TBC state. A town filters both first cards and additional rows; empty sections and their jump links disappear. All areas restores the complete guide. The optional `?area=exmouth` value preserves a selection on reload and sharing, with the unfiltered canonical retained. Unknown values fall back to all areas. Without the script, all existing programme content remains readable and the inactive picker stays hidden. The compact HAF disclosure retains the same eligibility text. This UI-only change does not modify the Sheet, source-review timestamps, analytics configuration or programme totals.
 
+**December banner presentation follow-up, 19 November:** The user requested a stronger December/year-end mood. The Holiday clubs entry and the three December guide headers share an original decorative illustration of evergreen, a cranberry ribbon, a paper star, a bell and a knitted mitten. It was generated with OpenAI image generation and is artwork, not a photograph of any listed club. Headings, region names, links and source-review dates remain HTML text; the image has empty alternative text as decoration. Preserve the area picker, factual content, other section banners and analytics settings. The original artwork/prompt and responsive QA evidence are held in the private `reviews/globee-december-banner-2026-11-19/` task folder outside the publication checkout.
+
 ```sh
 python3 seo/prepare_catalog.py seo/research/december-holiday-clubs-2026.json --output seo/holiday-clubs-catalog.json
 python3 seo/build_holiday_clubs.py
