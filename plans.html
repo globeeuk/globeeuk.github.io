@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="style.css?v=winter-play-20261116">
+  <link rel="stylesheet" href="style.css?v=no-floating-map-20261119-2">
   <link rel="stylesheet" href="discovery-v2.css?v=christmas-switch1">
   <script defer src="db-adapter.js?v=indoor-lessons-20261116"></script>
   <script defer src="editorial.js?v=weekend-20261118"></script>
@@ -27,16 +27,16 @@
   <script defer src="/christmas-market-map-data.js?v=20261112"></script>
   <script defer src="/christmas-market-map.js?v=20261112-home"></script>
   <script defer src="/my-plans.js?v=20261116"></script>
-  <script defer src="app.js?v=planning-shortcut-20261119-1"></script>
+  <script defer src="app.js?v=planning-shortcut-no-map-20261119-2"></script>
   <script defer src="db-loader.js?v=new-week-20261111"></script>
   <script defer src="basic-analytics.js?v=basic2"></script>
-<script defer src="analytics.js?v=consent4-planning-shortcut-20261119"></script>
+<script defer src="analytics.js?v=consent4-no-floating-map-20261119-2"></script>
 <link rel="stylesheet" href="/brand.css?v=child1">
   <link rel="stylesheet" href="/christmas-print.css?v=20261113">
   <link rel="stylesheet" href="/christmas-market-map.css?v=20261112">
   <link rel="stylesheet" href="/my-plans.css?v=save-row-20261116">
   <script src="/region-preference.js?v=region-choice-20261119"></script>
-  <link rel="stylesheet" href="/planning-shortcut.css?v=20261119-1">
+  <link rel="stylesheet" href="/planning-shortcut.css?v=20261119-2">
 </head>
 <body class="has-planning-shortcut plans-page" data-page="plans">
   <header class="site-header">
@@ -63,12 +63,12 @@
       <button class="weekend-shortcut" data-date-shortcut="weekend"><span data-icon="calendar"></span>This weekend<span data-icon="arrow"></span></button>
     </div>
     <section class="content-width result-section" aria-labelledby="results-heading">
-      <div class="results-top"><div><h2 id="results-heading" tabindex="-1">All upcoming plans</h2><p id="results-subtitle">Events and clubs together, ordered by date. Dates TBC appear last.</p></div><div class="results-tools"><span id="result-count" class="result-count" aria-live="polite"></span><button class="view-toggle" id="view-toggle" aria-label="Show map"><span data-icon="map"></span><span id="view-toggle-label">Show map</span></button></div></div>
+      <div class="results-top"><div><h2 id="results-heading" tabindex="-1">All upcoming plans</h2><p id="results-subtitle">Events and clubs together, ordered by date. Dates TBC appear last.</p></div><div class="results-tools"><span id="result-count" class="result-count" aria-live="polite"></span></div></div>
       <p id="database-status" class="database-status" hidden role="status">Loading the directory…</p>
       <div id="applied-filters" class="applied-filters" hidden></div>
       <p id="date-scope-note" class="date-scope-note" hidden></p>
       <div id="list-view"><div id="discovery-rails"></div><div id="empty-state" class="empty-state" hidden><span data-icon="search"></span><h3>No plans found just yet</h3><p>Try different filters, or choose another region.<br>New plans are added as details are checked.</p><button id="empty-reset" class="primary-button">Clear filters</button></div></div>
-      <div id="map-view" hidden><div class="map-stage"><div id="map" aria-label="Map of matching events and holiday clubs"></div><div id="map-selection" hidden></div></div><p id="map-note" class="map-note"></p></div>
+      <div id="map-view" hidden><button type="button" class="map-return" id="map-return" hidden>Show list</button><div class="map-stage"><div id="map" aria-label="Map of matching events and holiday clubs"></div><div id="map-selection" hidden></div></div><p id="map-note" class="map-note"></p></div>
       <div id="list-progress" class="list-progress" hidden></div>
     </section>
     <footer class="content-width footer"><div><span class="footer-brand"><span class="brand-art"><img src="/assets/brand/globee-handwriting-v2.png" alt="Globee" width="1774" height="887"></span></span><p>Prices &amp; schedules change — always check the provider before booking.</p></div><div class="footer-links"><a href="https://forms.gle/tVQQETV24frZhhpa6" target="_blank" rel="noopener">Ask a question or share a tip</a><a href="/exeter/">Exeter family guides</a><a href="/bristol/">Bristol family guides</a><a href="/bristol/this-weekend/">Bristol Weekend Edit</a><a href="image-credits.html">Image credits</a><a href="privacy.html">Privacy &amp; analytics</a><button class="text-button" data-analytics-toggle>Analytics settings</button></div></footer>

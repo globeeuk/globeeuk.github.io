@@ -507,7 +507,7 @@ document.addEventListener('click',event=>{
   const planning=event.target.closest('[data-planning-shortcut]');
   if(planning?.dataset.planningAction==='weekend'&&isNotebookHome){
     event.preventDefault();
-    if(state.view==='map')$('#view-toggle').click();
+    if(state.view==='map')setMapView(false);
     state.notebookSection='days';plansWindow='weekend';
     resetFilters();
     window.history.replaceState(null,'',window.location.pathname+window.location.search+'#plans-window-weekend');
@@ -624,17 +624,17 @@ function selectMapPlace(id){
   fixImages($('#map-selection'));
   document.querySelectorAll('[data-marker-id]').forEach(e=>e.classList.toggle('selected',(e.dataset.groupIds||e.dataset.markerId).split('|').includes(id)));
 }
-$('#view-toggle').addEventListener('click',()=>{
-  const toMap=state.view==='list';if(toMap)listScroll=window.scrollY;
+function setMapView(toMap){
+  if(toMap)listScroll=window.scrollY;
   state.view=toMap?'map':'list';document.body.classList.toggle('map-mode',toMap);
   $('#map-view').hidden=!toMap;$('#list-view').hidden=toMap;
-  $('#view-toggle').innerHTML=`${icon(toMap?'list':'map')}<span>${toMap?'Show list':'Show map'}</span>`;
-  $('#view-toggle').setAttribute('aria-label',toMap?'Show list':'Show map');
+  const back=$('#map-return');if(back)back.hidden=!toMap;
   if(toMap)window.scrollTo({top:0,behavior:'instant'});
   render();
   if(!toMap)window.scrollTo({top:listScroll,behavior:'instant'});
   if(toMap&&map)requestAnimationFrame(()=>map.invalidateSize());
-});
+}
+$('#map-return')?.addEventListener('click',()=>setMapView(false));
 window.GlobeeNotebookSearch=query=>{state.query=String(query||'').trim();render({preserveScroll:true});};
 window.addEventListener('globee:data',event=>{data=withVerifiedHalfTermClubs(event.detail.places).map(GlobeeImages.decorate);window.GlobeeMyPlans?.setDirectory(data,true);lastListSignature='';lastPrimaryPlansKey=null;render();if(currentMenu==='dates')renderCalendar();});
 const nearbyControls=isNotebookHome&&window.GlobeeNearby&&window.GlobeeNearbyData
@@ -676,4 +676,4 @@ if(window.location.hash==='#plans-window-weekend')requestAnimationFrame(()=>{
 if(isPlansPage&&state.edit==='christmas'&&window.location.hash.startsWith('#christmas-')){
   requestAnimationFrame(()=>document.getElementById(window.location.hash.slice(1))?.scrollIntoView());
 }
-if(routeParams.get('view')==='map')$('#view-toggle').click();
+if(routeParams.get('view')==='map')setMapView(true);

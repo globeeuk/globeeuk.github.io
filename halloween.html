@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=no-floating-map-20261119-2">
   <link rel="stylesheet" href="discovery-v2.css?v=fossil-map1">
   <script defer src="db-adapter.js?v=indoor-lessons-20261116"></script>
   <script defer src="editorial.js?v=indoor-lessons-20261116"></script>
@@ -28,10 +28,10 @@
   <link rel="stylesheet" href="photo-first.css?v=new-week-20261111">
   <script defer src="image-catalog.js?v=climbing-illustration-20261029"></script>
   <script defer src="discovery-model.js?v=notebook1-search-20261111"></script>
-  <script defer src="app.js?v=region-choice-20261119"></script>
+  <script defer src="app.js?v=planning-shortcut-no-map-20261119-2"></script>
   <script defer src="db-loader.js?v=new-week-20261111"></script>
   <script defer src="basic-analytics.js?v=basic2"></script>
-<script defer src="analytics.js?v=consent4"></script>
+<script defer src="analytics.js?v=consent4-no-floating-map-20261119-2"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Halloween family events in Exeter, Devon and Bristol 2026","description":"Verified Halloween family events with confirmed dates, prices and official provider links.","url":"https://globeeuk.github.io/halloween.html","dateModified":"2026-09-21","mainEntity":{"@type":"ItemList","numberOfItems":11,"itemListElement":[{"@type":"ListItem","position":1,"name":"Pennywell Pumpkin Festival"},{"@type":"ListItem","position":2,"name":"Pumpkin Trick or Treat Trail – The Donkey Sanctuary"},{"@type":"ListItem","position":3,"name":"Darts Farm Pumpkin Fest 2026"},{"@type":"ListItem","position":4,"name":"Halloween Spook-Fest – Crealy"},{"@type":"ListItem","position":5,"name":"Model a Monster – Exeter Phoenix"},{"@type":"ListItem","position":6,"name":"Sketch A Skeleton – Exeter Phoenix"},{"@type":"ListItem","position":7,"name":"Trick or Treat Tram – Seaton Tramway"},{"@type":"ListItem","position":8,"name":"Halloween Potions Lab – Devon Science"},{"@type":"ListItem","position":9,"name":"Pumpkin Patch – Avon Valley"},{"@type":"ListItem","position":10,"name":"Spooky Week at The Red Lodge Museum"},{"@type":"ListItem","position":11,"name":"Autumn Week at Blaise Museum"}]}}</script>
 <link rel="stylesheet" href="/brand.css?v=child1">
   <script src="/region-preference.js?v=region-choice-20261119"></script>
@@ -65,12 +65,12 @@
       <div id="applied-filters" class="applied-filters" hidden></div>
       <p id="date-scope-note" class="date-scope-note" hidden></p>
       <div id="list-view"><div id="discovery-rails"></div><div id="empty-state" class="empty-state" hidden><span data-icon="search"></span><h3>No plans found just yet</h3><p>Try different filters, or choose another region.<br>New plans are added as details are checked.</p><button id="empty-reset" class="primary-button">Clear filters</button></div></div>
-      <div id="map-view" hidden><div class="map-stage"><div id="map" aria-label="Map of matching events and holiday clubs"></div><div id="map-selection" hidden></div></div><p id="map-note" class="map-note"></p></div>
+      <div id="map-view" hidden><button type="button" class="map-return" id="map-return" hidden>Show list</button><div class="map-stage"><div id="map" aria-label="Map of matching events and holiday clubs"></div><div id="map-selection" hidden></div></div><p id="map-note" class="map-note"></p></div>
       <div id="list-progress" class="list-progress" hidden></div>
     </section>
     <footer class="content-width footer"><div><span class="footer-brand"><span class="brand-art"><img src="/assets/brand/globee-handwriting-v2.png" alt="Globee" width="1774" height="887"></span></span><p>Prices &amp; schedules change — always check the provider before booking.</p></div><div class="footer-links"><a data-edit-map-link href="plans.html?region=Devon&amp;edit=halloween">Open Halloween plans on the map</a><a href="https://forms.gle/tVQQETV24frZhhpa6" target="_blank" rel="noopener">Ask a question or share a tip</a><a href="image-credits.html">Image credits</a><a href="privacy.html">Privacy &amp; analytics</a><button class="text-button" data-analytics-toggle>Analytics settings</button></div></footer>
   </main>
-  <button class="view-toggle" id="view-toggle" aria-label="Show map"><span data-icon="map"></span><span id="view-toggle-label">Show map</span></button>
+
   <dialog id="filter-dialog" class="filter-dialog" aria-labelledby="filter-title">
     <form id="filter-form"><div class="dialog-head"><h2 id="filter-title"></h2><button type="button" class="icon-button" id="filter-close" aria-label="Close filters"><span data-icon="close"></span></button></div><div id="filter-content"></div><div class="dialog-actions"><button type="button" class="text-button" id="filter-clear">Clear</button><button type="submit" class="primary-button" id="filter-apply">Show places</button></div></form>
   </dialog>

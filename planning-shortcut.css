@@ -17,13 +17,6 @@ html{scroll-padding-bottom:calc(88px + env(safe-area-inset-bottom))}
 .planning-shortcut span{pointer-events:none}
 .planning-shortcut:focus-visible{outline:3px solid #244a78;outline-offset:4px}
 .has-planning-shortcut .results-tools{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap}
-.has-planning-shortcut #view-toggle{
-  position:static;inset:auto;transform:none;display:inline-flex;align-items:center;justify-content:center;
-  min-height:44px;padding:8px 10px;gap:6px;border:1px solid var(--line);border-radius:8px;
-  background:var(--paper);color:var(--ink);box-shadow:none;font-size:13px;white-space:nowrap;
-}
-.has-planning-shortcut #view-toggle:hover{background:var(--soft)}
-.has-planning-shortcut #view-toggle svg{width:16px;height:16px}
 .has-planning-shortcut .place-card,.has-planning-shortcut #plans-window-weekend{scroll-margin-bottom:88px}
 .has-planning-shortcut #plans-window-weekend{scroll-margin-top:24px}
 .notebook-page[data-notebook-active="notes"] .planning-shortcut-dock{display:none}

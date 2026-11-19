@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="style.css?v=winter-play-20261116">
+  <link rel="stylesheet" href="style.css?v=no-floating-map-20261119-2">
   <link rel="stylesheet" href="discovery-v2.css?v=christmas-switch1">
 <link rel="stylesheet" href="ice-cream.css?v=christmas-banner-20261104-year-end-entry">
   <script defer src="db-adapter.js?v=indoor-lessons-20261116"></script>
@@ -38,10 +38,10 @@
   <script defer src="/christmas-market-map-data.js?v=20261112"></script>
   <script defer src="/christmas-market-map.js?v=20261112-home"></script>
   <script defer src="/my-plans.js?v=20261119-planning-shortcut-1"></script>
-  <script defer src="app.js?v=planning-shortcut-20261119-1"></script>
+  <script defer src="app.js?v=planning-shortcut-no-map-20261119-2"></script>
   <script defer src="db-loader.js?v=new-week-20261111"></script>
   <script defer src="basic-analytics.js?v=basic2"></script>
-<script defer src="analytics.js?v=consent4-planning-shortcut-20261119"></script>
+<script defer src="analytics.js?v=consent4-no-floating-map-20261119-2"></script>
 <link rel="stylesheet" href="/brand.css?v=child1">
   <link rel="stylesheet" href="instagram-shortcut.css?v=2">
   <link rel="stylesheet" href="notebook.css?v=notebook1-devon-weekend-guide-20261112">
@@ -51,7 +51,7 @@
   <link rel="stylesheet" href="/my-plans.css?v=save-row-20261116">
   <link rel="stylesheet" href="/region-choice.css?v=region-choice-20261119">
   <script src="/region-preference.js?v=region-choice-20261119"></script>
-  <link rel="stylesheet" href="/planning-shortcut.css?v=20261119-1">
+  <link rel="stylesheet" href="/planning-shortcut.css?v=20261119-2">
 </head>
 <body class="has-planning-shortcut notebook-page notebook-home" data-notebook-section="days">
   <header class="site-header">
@@ -180,12 +180,12 @@
     <section class="content-width main-plans" id="main-plans" aria-label="This weekend"></section>
     <div class="content-width notebook-browse-row"><a href="#results-heading" data-notebook-browse>Explore all ↓</a><a href="/?region=Devon&amp;section=notes" data-notebook-notes-link>Parent notes →</a></div>
     <section class="content-width result-section" aria-labelledby="results-heading">
-      <div class="results-top"><div><h2 id="results-heading" tabindex="-1">Explore all</h2><p id="results-subtitle">Places, what’s on &amp; holiday clubs</p></div><div class="results-tools"><span id="result-count" class="result-count" aria-live="polite"></span><button class="view-toggle" id="view-toggle" aria-label="Show map"><span data-icon="map"></span><span id="view-toggle-label">Show map</span></button></div></div>
+      <div class="results-top"><div><h2 id="results-heading" tabindex="-1">Explore all</h2><p id="results-subtitle">Places, what’s on &amp; holiday clubs</p></div><div class="results-tools"><span id="result-count" class="result-count" aria-live="polite"></span></div></div>
       <p id="database-status" class="database-status" hidden role="status">Loading the directory…</p>
       <div id="applied-filters" class="applied-filters" hidden></div>
       <p id="date-scope-note" class="date-scope-note" hidden></p>
       <div id="list-view"><div id="discovery-rails"></div><div id="empty-state" class="empty-state" hidden><span data-icon="search"></span><h3>No little plans found just yet</h3><p>Try another date, age, price or type to see more places.</p><button id="empty-reset" class="primary-button">Clear filters</button></div></div>
-      <div id="map-view" hidden><div class="map-stage"><div id="map" aria-label="Map of the filtered places"></div><div id="map-selection" hidden></div></div><p id="map-note" class="map-note"></p></div>
+      <div id="map-view" hidden><button type="button" class="map-return" id="map-return" hidden>Show list</button><div class="map-stage"><div id="map" aria-label="Map of the filtered places"></div><div id="map-selection" hidden></div></div><p id="map-note" class="map-note"></p></div>
       <div id="list-progress" class="list-progress" hidden></div>
     </section>
     <section class="content-width notebook-continue" aria-label="Continue to another notebook section"><p>ANOTHER PAGE IN THE NOTEBOOK</p><div><a href="/classes.html"><span>Something new to try?</span><strong>Classes &amp; lessons →</strong></a><a href="/?region=Devon&amp;section=notes"><span>A question to figure out?</span><strong>Parent notes →</strong></a></div></section>

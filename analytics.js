@@ -94,7 +94,7 @@
   };
   document.addEventListener('click',e=>{
     const el=e.target.closest('button,a');if(!el)return;
-    if(el.matches('#view-toggle'))globeeTrack('switch_view',{view:document.body.classList.contains('map-mode')?'map':'list'});
+    if(el.matches('#map-return'))globeeTrack('switch_view',{view:'list'});
     if(el.matches('[data-planning-shortcut]'))globeeTrack('planning_shortcut_click',{view:el.dataset.planningAction,region:el.dataset.planningRegion});
     if(el.dataset.collection)globeeTrack('open_edit',{collection:el.dataset.collection});
     if(el.dataset.resultsPage)globeeTrack('results_page',{page_number:Number(el.dataset.resultsPage)});
