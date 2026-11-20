@@ -45,6 +45,10 @@
     .play-media img, .play-media video { display: block; width: 100%; height: auto; border-radius: .65rem; }
     .play-media video { max-width: 28rem; }
     .play-media figcaption { margin-top: .35rem; font-size: .875rem; }
+    .vimeo-demo { margin: 1rem 0; padding: .85rem 1rem; border: 1px solid #dad6c9; border-radius: .65rem; }
+    .vimeo-demo summary { cursor: pointer; color: #244a78; font-weight: 700; }
+    .vimeo-demo summary:focus-visible { outline: 3px solid #244a78; outline-offset: 4px; }
+    .vimeo-demo iframe { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; }
     .try { background: #edeede; border-radius: .65rem; padding: 1.25rem; margin: 1rem 0 2rem; }
     footer { font-size: .875rem; }
     footer button { font: inherit; color: #244a78; background: transparent; border: 0; text-decoration: underline; cursor: pointer; min-height: 44px; }
@@ -111,6 +115,13 @@
               <video controls playsinline preload="none" width="680" height="600" poster="qvolution-video-cover.webp" aria-label="Hands testing a Qvolution marble run" src="qvolution-demo.mp4"><a href="qvolution-demo.mp4">Watch the Qvolution clip</a></video>
               <figcaption>A short look at the cubes and rails in use. The clip has no audio.</figcaption>
             </figure>
+            <details class="vimeo-demo" id="qvolution-vimeo">
+              <summary>Watch Qvolution’s product demo on Vimeo</summary>
+              <p><a href="https://vimeo.com/95381536">Open the demo on Vimeo ↗</a></p>
+              <template id="qvolution-vimeo-player">
+                <iframe src="https://player.vimeo.com/video/95381536?h=29ce58caf6&amp;dnt=1" width="640" height="360" title="Qvolution: Brand New 3-Dimensional Cube" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; picture-in-picture; encrypted-media" allowfullscreen></iframe>
+              </template>
+            </details>
             <p><strong>Hape Quadrilla.</strong> The open rails make much of the journey easy to follow. The coloured blocks also have different routes inside, so swapping a block can send the marble somewhere new. Guess where it will go, change one block and try again. <a href="https://toys.hape.com/products/e6009">Hape’s Quadrilla Vertigo set</a></p>
             <p>Follow the age guidance on your set and keep small marbles away from younger siblings.</p>
           </section>
@@ -149,5 +160,14 @@
     </main>
     <footer><a href="/privacy.html">Privacy &amp; analytics</a> · <button type="button" data-analytics-toggle>Analytics settings</button></footer>
   </div>
+  <script>
+    const qvolutionDemo = document.getElementById('qvolution-vimeo');
+    const qvolutionPlayer = document.getElementById('qvolution-vimeo-player');
+    qvolutionDemo.addEventListener('toggle', () => {
+      if (qvolutionDemo.open && !qvolutionDemo.querySelector('iframe')) {
+        qvolutionDemo.append(qvolutionPlayer.content.cloneNode(true));
+      }
+    });
+  </script>
 </body>
 </html>
