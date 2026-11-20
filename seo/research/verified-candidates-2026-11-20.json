@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "verified_at": "2026-11-20",
   "timezone": "Europe/London",
-  "scope": "Exeter/Devon and Bristol weekend guides for 21–22 and 28–29 November; two Bristol family art workshops added.",
+  "scope": "20 November morning review of Exeter/Devon and Bristol guides for 21–22 and 28–29 November, plus Exeter free and rainy-day visits. Phoenix 21 November withheld pending date confirmation; no new programmes added.",
   "publication_status": "Official-source research reconciled to the operational Sheet. Publication remains subject to the live binding guard, renderer checks and deployment verification.",
   "source_policy": "Official-source research supplements the operational Google Sheet. Active publication records are bound to checked master/event rows; source changes require rechecking before publication.",
   "disclaimer": "Prices & schedules change — always check the provider before booking.",
@@ -16,8 +16,24 @@
       "2026-11-29"
     ],
     "selected_reviewed_ids": [
+      "bristol-on-ice-harbourside-2026",
+      "exeter-cathedral-christingle-2026-11-28",
+      "exeter-custom-house",
+      "exeter-underground-passages",
+      "firehorse-exeter-corn-exchange-2026-11-22",
+      "ramm",
+      "ramm-bayeux-digital-trail-2026",
       "scribble-sketch-windmill-hill-2026-11-21",
-      "stokes-croft-china-mug-decorating-2026-11-22"
+      "stokes-croft-china-mug-decorating-2026-11-22",
+      "tobacco-factory-sunday-market-2026",
+      "whiteladies-road-market-2026"
+    ],
+    "partially_reviewed_ids": [
+      "exeter-library",
+      "heavitree-pleasure-grounds"
+    ],
+    "withheld_ids": [
+      "exeter-phoenix-family-xmas-stocking-2026-11-21"
     ]
   },
   "records": [
@@ -5173,6 +5189,42 @@
       "can_renew_verified_at": false,
       "resolved_at": "2026-10-28",
       "resolution": "Old route remains 404. Current organiser listing and new /museum-hunt-aardman/ page confirm the hunt through 1 November; native URL/price qualification reconciled, existing event row 172 preserved. Previous hold was not a cancellation."
+    }
+  ],
+  "coverage_history": [
+    {
+      "review_date": "2026-11-18",
+      "coverage": {
+        "current_weekend": [
+          "2026-11-21",
+          "2026-11-22"
+        ],
+        "next_weekend": [
+          "2026-11-28",
+          "2026-11-29"
+        ],
+        "selected_reviewed_ids": [
+          "bristol-on-ice-harbourside-2026",
+          "exeter-cathedral-christingle-2026-11-28",
+          "exeter-custom-house",
+          "exeter-underground-passages",
+          "firehorse-exeter-corn-exchange-2026-11-22",
+          "ramm",
+          "ramm-bayeux-digital-trail-2026",
+          "scribble-sketch-windmill-hill-2026-11-21",
+          "stokes-croft-china-mug-decorating-2026-11-22",
+          "tobacco-factory-sunday-market-2026",
+          "whiteladies-road-market-2026"
+        ],
+        "partially_reviewed_ids": [
+          "exeter-library",
+          "heavitree-pleasure-grounds"
+        ],
+        "withheld_ids": [
+          "exeter-phoenix-family-xmas-stocking-2026-11-21"
+        ]
+      },
+      "scope": "Exeter/Devon and Bristol weekend guides for 21–22 and 28–29 November; two Bristol family art workshops added."
     }
   ]
 }
