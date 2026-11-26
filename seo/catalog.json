@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provenance": "Generated presentation snapshot of the dated official-source research export. Update the source export after verification; do not maintain a second event database here.",
-  "source_verified_at": "2026-11-20",
+  "source_verified_at": "2026-11-26",
   "items": [
     {
       "id": "quayside-shanty-festival-2026",
@@ -298,7 +298,7 @@
         {
           "url": "https://rammuseum.org.uk/visit/",
           "supports": "Free general admission, regular hours, exceptional opening guidance and access to visitor information.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "previous_retrieval": "Official Visit-page body reviewed through the web tool on 30 October 2026 (Europe/London, GMT). Entry, address, weekly hours and absence of the past banner compared. No on-site access or live availability check.",
           "label": "Plan your museum visit",
           "retrieval_history": [
@@ -316,7 +316,8 @@
             "Official page body reviewed through the web tool on 11 November 2026 (Europe/London, GMT), including the two current banners. No on-site access, reopening or live ticket availability check.",
             "Official source body reviewed 14 November 2026 (Europe/London). Visit, homepage and accessibility pages show ordinary hours and omit both past dated notices. General admission is free. Two Blue Badge spaces require advance reservation. This does not confirm physical reopening of Gallery 20.",
             "Displayed official body reviewed on 15 November 2026 (Europe/London).",
-            "Official page body reviewed on 16 November 2026 (Europe/London)."
+            "Official page body reviewed on 16 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ],
           "supports_history": [
             {
@@ -352,7 +353,7 @@
         {
           "url": "https://rammuseum.org.uk/visit/access/",
           "supports": "Regular hours, building access and Blue Badge parking arrangements.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "label": "Access and holiday opening",
           "previous_retrieval": "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
           "retrieval_history": [
@@ -363,7 +364,8 @@
             "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
             "Official RAMM page body reviewed through the web tool on 27 October 2026 (GMT). Free entry, address, regular hours, gallery-only 28 October event notice and access/booking limitations compared. No on-site reopening or live availability check.",
             "Official source body reviewed 14 November 2026 (Europe/London). Visit, homepage and accessibility pages show ordinary hours and omit both past dated notices. General admission is free. Two Blue Badge spaces require advance reservation. This does not confirm physical reopening of Gallery 20.",
-            "Displayed official body reviewed on 15 November 2026 (Europe/London)."
+            "Displayed official body reviewed on 15 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ],
           "supports_history": [
             {
@@ -382,7 +384,7 @@
           "url": "https://rammuseum.org.uk/",
           "label": "Museum homepage and current notices",
           "supports": "Current general opening times. The expired 11–12 November notices no longer appear on the homepage.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "previous_retrieval": "Official homepage body reviewed through the web tool on 30 October 2026 (Europe/London, GMT); ordinary schedule and absence of the past banner compared. No reopening guarantee.",
           "review_note": "Previous dated gallery-closure evidence is retained in supports_history and retrieval_history; no current whole-museum closure or guaranteed gallery reopening is inferred.",
           "supports_history": [
@@ -416,11 +418,12 @@
             "Official homepage body reviewed through the web tool on 30 October 2026 (Europe/London, GMT); ordinary schedule and absence of the past banner compared. No reopening guarantee.",
             "Official page body reviewed through the web tool on 11 November 2026 (Europe/London, GMT), including the two current banners. No on-site access, reopening or live ticket availability check.",
             "Official source body reviewed 14 November 2026 (Europe/London). Visit, homepage and accessibility pages show ordinary hours and omit both past dated notices. General admission is free. Two Blue Badge spaces require advance reservation. This does not confirm physical reopening of Gallery 20.",
-            "Displayed official body reviewed on 15 November 2026 (Europe/London)."
+            "Displayed official body reviewed on 15 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ]
         }
       ],
-      "verified_at": "2026-11-20",
+      "verified_at": "2026-11-26",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 5,
@@ -458,7 +461,8 @@
         "Visit, homepage and accessibility pages show ordinary hours and omit both past dated notices. General admission is free. Two Blue Badge spaces require advance reservation. This does not confirm physical reopening of Gallery 20.",
         "Visit, Access and homepage confirm free admission, Monday closure, Tuesday 10.30am–5pm, Wednesday–Sunday 10am–5pm, Christmas/New Year’s Eve 10am–1pm and closures on Christmas Day, Boxing Day and New Year’s Day. Two Blue Badge bays require prebooking a free permit. No individual gallery reopening verified.",
         "Visit page confirms free entry, regular museum hours and the two Blue Badge bays requiring a prebooked free permit. Christmas and New Year holiday hours are stated separately. Individual gallery status was not verified.",
-        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained."
+        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained.",
+        "26 November: active 28–29 November and 5–6 December facts compared with current official bodies; existing TBC qualifications retained."
       ],
       "previous_practical_notes": [
         "The museum lists bank-holiday closures; check exceptional opening before travelling.",
@@ -512,6 +516,10 @@
         {
           "verified_at": "2026-11-16",
           "superseded_at": "2026-11-20T08:14:09.277056+00:00"
+        },
+        {
+          "verified_at": "2026-11-20",
+          "superseded_at": "2026-11-26T07:53:30.528491+00:00"
         }
       ],
       "city": "Exeter",
@@ -680,7 +688,7 @@
         {
           "url": "https://exetercustomhouse.co.uk/your-visit/",
           "supports": "Confirms the address, seasonal opening pattern, entry cut-off 30 minutes before closing and free general admission. Groups should arrange visits in advance. Some display areas may close for private bookings.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "previous_retrieval": "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
           "label": "Opening times and visitor information",
           "retrieval_history": [
@@ -692,13 +700,14 @@
             "Official provider page body reviewed through the web tool on 16 October 2026 (BST). Published dates or visiting hours, admission basis, age guidance, booking terms and practical limits were compared with this record where stated; this was not a live capacity or ticket transaction check.",
             "Official source body reviewed through web retrieval on 13 November 2026 (Europe/London). Provider visit page confirms 46 The Quay, free general admission with separately ticketed events, April–October 10am–5pm daily and November–March Thursday–Sunday 11am–4pm, with last admission 30 minutes before closing. Group visits require prior contact. Private events can limit display access. The venue identifies Cathedral & Quay and Haven Banks as nearby car parks. No numerical age limit or ordinary family booking requirement is stated.",
             "Displayed official body reviewed on 15 November 2026 (Europe/London).",
-            "Official page body reviewed on 16 November 2026 (Europe/London)."
+            "Official page body reviewed on 16 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ]
         },
         {
           "url": "https://exetercustomhouse.co.uk/about/",
           "supports": "Describes displays and objects inside the building about the development of Exeter Quayside.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "previous_retrieval": "Official About-page body reviewed on 23 September 2026; the web response was labelled crawled on 22 September. Indoor objects and displays about Exeter Quayside history matched. A separate direct link check returned HTTP 200.",
           "label": "About the displays",
           "retrieval_history": [
@@ -708,11 +717,12 @@
             "Official About-page body reviewed on 23 September 2026; the web response was labelled crawled on 22 September. Indoor objects and displays about Exeter Quayside history matched. A separate direct link check returned HTTP 200.",
             "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
             "Official source body reviewed through web retrieval on 13 November 2026 (Europe/London). Provider About page describes the historical objects and displays inside the building.",
-            "Displayed official body reviewed on 15 November 2026 (Europe/London)."
+            "Displayed official body reviewed on 15 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ]
         }
       ],
-      "verified_at": "2026-11-20",
+      "verified_at": "2026-11-26",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 21,
@@ -737,12 +747,17 @@
       "review_notes": [
         "Venue confirms winter Thursday–Sunday 11am–4pm, last entry 3.30pm, and summer daily 10am–5pm, last entry 4.30pm. General admission free except certain events. Contact ahead for groups; private events can limit access.",
         "Direct visitor information confirms free ordinary entry, winter Thu–Sun 11am–4pm with last entry 3.30pm, and summer daily 10am–5pm with last entry 4.30pm. Separate special events may be ticketed and displays can close for private events.",
-        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained."
+        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained.",
+        "26 November: active 28–29 November and 5–6 December facts compared with current official bodies; existing TBC qualifications retained."
       ],
       "verification_history": [
         {
           "verified_at": "2026-11-16",
           "superseded_at": "2026-11-20T08:14:09.277056+00:00"
+        },
+        {
+          "verified_at": "2026-11-20",
+          "superseded_at": "2026-11-26T07:53:30.528491+00:00"
         }
       ],
       "city": "Exeter",
@@ -786,7 +801,7 @@
         {
           "url": "https://www.exetercornexchange.co.uk/book-tickets/exeters-underground-passages/",
           "supports": "Official council ticket page verifies admission, age limits, access, booking advice, address and seasonal hours.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "previous_retrieval": "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
           "label": "Times, tickets and booking",
           "retrieval_history": [
@@ -799,22 +814,24 @@
             "Official source body reviewed through web retrieval on 13 November 2026 (Europe/London). Council listing confirms Paris Street entrance, Thursday/Friday/Sunday 11am–4pm and Saturday 10.30am–4.30pm subject to change during term, summer holiday Wednesday–Sunday 11am–4pm (last tour 3pm), closed 24–25 December. Adult £9, concession £7, ages 5–17 £6, family £25. Ages 5–17 require an accompanying adult on tours and under-5s can visit the exhibition free with an adult. Arrive 15 minutes before the tour. Advance booking is advised at weekends and school holidays.",
             "Official source body reviewed 14 November 2026 (Europe/London). Council confirms term-time Thu–Sun 11am–4pm and Mon–Wed closure, 24–25 December closure, adult £9, concession £7, child 5–17 £6, family £25, adult accompaniment and 15-minute advance arrival. Council and tourism listings give different summer weekdays. Summer opening days are TBC; the operator gives 3pm as the summer last tour.",
             "Displayed official body reviewed on 15 November 2026 (Europe/London).",
-            "Official page body reviewed on 16 November 2026 (Europe/London)."
+            "Official page body reviewed on 16 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ]
         },
         {
           "url": "https://www.visitexeter.com/things-to-do/exeters-underground-passages-p134013",
           "label": "Visit Exeter visitor information",
           "supports": "Corroborates 2026 term-time Thu–Sun 11am–4pm; gives different summer weekdays. Refer to the operator for the current summer timetable.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "retrieval_history": [
             "Official tourism listing read on 14 November 2026 (Europe/London).",
             "Displayed official body reviewed on 15 November 2026 (Europe/London).",
-            "Official page body reviewed on 16 November 2026 (Europe/London)."
+            "Official page body reviewed on 16 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ]
         }
       ],
-      "verified_at": "2026-11-20",
+      "verified_at": "2026-11-26",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 127,
@@ -842,12 +859,17 @@
         "Council confirms term-time Thu–Sun 11am–4pm and Mon–Wed closure, 24–25 December closure, adult £9, concession £7, child 5–17 £6, family £25, adult accompaniment and 15-minute advance arrival. Council and tourism listings give different summer weekdays. Summer opening days are TBC; the operator gives 3pm as the summer last tour.",
         "Venue confirms term-time Thursday–Sunday 11am–4pm, £9/£7/£6/£25 fares, tours ages 5+, and under-5 exhibition access with an adult. Summer days differ from tourism listing; venue gives 3pm as last summer tour.",
         "Operator confirms term-time Thu–Sun 11am–4pm, £9 adult, £7 concession, £6 child and £25 family, ages 5+ with an adult for children and a recommendation to book ahead. The operator's last summer tour is 3pm; the tourism and operator summer days differ. The exhibition can be visited separately by under-5s with an adult.",
-        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained."
+        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained.",
+        "26 November: active 28–29 November and 5–6 December facts compared with current official bodies; existing TBC qualifications retained."
       ],
       "verification_history": [
         {
           "verified_at": "2026-11-16",
           "superseded_at": "2026-11-20T08:14:09.277056+00:00"
+        },
+        {
+          "verified_at": "2026-11-20",
+          "superseded_at": "2026-11-26T07:53:30.528491+00:00"
         }
       ],
       "city": "Exeter",
@@ -891,7 +913,7 @@
         {
           "url": "https://www.visitexeter.com/things-to-do/heavitree-pleasure-grounds-p763523",
           "supports": "Lists free admission, outdoor park facilities, family suitability, address and a January–December 2026 visiting period; no daily hours.",
-          "retrieval": "Official page body reviewed on 16 November 2026 (Europe/London).",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "previous_retrieval": "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
           "label": "Official park information",
           "retrieval_history": [
@@ -901,7 +923,8 @@
             "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
             "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
             "Official-source body reviewed through the web tool on 5 November 2026 (Europe/London, GMT). Address, general visiting/entry basis, family guidance, access and any published hours or improvement notices compared. The library pages were indexed six days earlier; the park listing one day earlier and council consultation today. No on-site check or exceptional-opening guarantee.",
-            "Displayed official body reviewed on 15 November 2026 (Europe/London)."
+            "Displayed official body reviewed on 15 November 2026 (Europe/London).",
+            "Official page body reviewed on 16 November 2026 (Europe/London)."
           ]
         },
         {
@@ -918,7 +941,7 @@
         {
           "url": "https://engage.exeter.gov.uk/heavitree-play-area",
           "supports": "Council consultation describes planned play-area and water-play improvements; it does not establish closure dates.",
-          "retrieval": "Official page body reviewed on 16 November 2026 (Europe/London).",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "previous_retrieval": "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
           "label": "Play-area improvement notices",
           "retrieval_history": [
@@ -928,11 +951,12 @@
             "Official-source body reviewed on 23 September 2026; subsequent web retrieval was labelled crawled today. Existing visitor claims matched. The separate link check returned HTTP 200; exceptional date-specific access or live ticket availability is not guaranteed.",
             "Official page retrieved directly with HTTP 200 and displayed body reviewed on 7 October 2026 (BST). Published visitor details, access conditions and current notices were checked. No booking transaction or on-site check was performed.",
             "Official-source body reviewed through the web tool on 5 November 2026 (Europe/London, GMT). Address, general visiting/entry basis, family guidance, access and any published hours or improvement notices compared. The library pages were indexed six days earlier; the park listing one day earlier and council consultation today. No on-site check or exceptional-opening guarantee.",
-            "Displayed official body reviewed on 15 November 2026 (Europe/London)."
+            "Displayed official body reviewed on 15 November 2026 (Europe/London).",
+            "Official page body reviewed on 16 November 2026 (Europe/London)."
           ]
         }
       ],
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-26",
       "sheet_match": {
         "live_sheet_checked": true,
         "row_id": 128,
@@ -960,7 +984,14 @@
       "review_notes": [
         "5 November: source bodies rechecked before the 30-day ordinary-place evidence limit. Existing public facts and unresolved age/booking or gate-time qualifications remain unchanged. Matching exact-name/region master row and source URL confirmed in the complete published master/events CSV; fingerprint unchanged. No native Sheet edit or fresh native read is claimed.",
         "Council-run Visit Exeter confirms free admission and Whipton Lane access, with on-street parking described. Council consultation describes proposed play and water-play upgrades. Gate hours, works dates and actual parking availability/charges remain unconfirmed.",
-        "Visit Exeter and the council consultation confirm free park admission, Whipton Lane access and planned play improvements. The tourism page describes on-street parking; exact tariffs, access during works and gate hours remain TBC."
+        "Visit Exeter and the council consultation confirm free park admission, Whipton Lane access and planned play improvements. The tourism page describes on-street parking; exact tariffs, access during works and gate hours remain TBC.",
+        "26 November: active 28–29 November and 5–6 December facts compared with current official bodies; existing TBC qualifications retained."
+      ],
+      "verification_history": [
+        {
+          "verified_at": "2026-11-16",
+          "superseded_at": "2026-11-26T07:53:30.528491+00:00"
+        }
       ],
       "city": "Exeter",
       "notes": [
@@ -3139,6 +3170,20 @@
           "weekday": "Sunday",
           "start_time": "10:00",
           "end_time": "17:00"
+        },
+        {
+          "start": "2026-12-05",
+          "end": "2026-12-05",
+          "weekday": "Saturday",
+          "start_time": "10:00",
+          "end_time": "17:00"
+        },
+        {
+          "start": "2026-12-06",
+          "end": "2026-12-06",
+          "weekday": "Sunday",
+          "start_time": "10:00",
+          "end_time": "17:00"
         }
       ],
       "indoor": true,
@@ -3161,7 +3206,7 @@
         {
           "url": "https://rammuseum.org.uk/whats-on/bayeux-around-britain-digital-trail/",
           "supports": "Free twelve-stop gallery trail, about one hour, 15 September 2026–11 July 2027. Weekend museum opening 10am–5pm. Numeric age guidance and booking rule not stated.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "retrieval_history": [
             "Official organiser page reviewed on 21 October 2026. No booking, availability guarantee or on-site visit.",
             "Official provider page body reviewed on 26 October 2026 (Europe/London, GMT). Relevant dates, published hours, cost basis, age/height guidance and booking/access qualifications compared. No live availability guarantee or checkout.",
@@ -3171,27 +3216,29 @@
             "Official page body reviewed on 9 November 2026 (Europe/London) for the selected upcoming dates.",
             "Official source body reviewed 14 November 2026 (Europe/London). RAMM programme confirms free 12-stop digital trail from 15 September 2026 through 11 July 2027, approximately one hour; visitor page confirms weekend opening 10am–5pm. No numeric ages or booking requirement published.",
             "Displayed official body reviewed on 15 November 2026 (Europe/London).",
-            "Official page body reviewed on 16 November 2026 (Europe/London)."
+            "Official page body reviewed on 16 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ]
         },
         {
           "url": "https://rammuseum.org.uk/visit/",
           "label": "RAMM opening times and access",
           "supports": "Weekend gallery opening is 10am to 5pm. Museum entry is free.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "retrieval_history": [
             "Official RAMM visitor page body reviewed on 8 November 2026 (Europe/London).",
             "Official page body reviewed on 9 November 2026 (Europe/London) for the selected upcoming dates.",
             "Official source body reviewed 14 November 2026 (Europe/London). RAMM programme confirms free 12-stop digital trail from 15 September 2026 through 11 July 2027, approximately one hour; visitor page confirms weekend opening 10am–5pm. No numeric ages or booking requirement published.",
             "Displayed official body reviewed on 15 November 2026 (Europe/London).",
-            "Official page body reviewed on 16 November 2026 (Europe/London)."
+            "Official page body reviewed on 16 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ]
         }
       ],
       "limitations": [
         "Device requirements and numerical age suitability remain TBC."
       ],
-      "verified_at": "2026-11-20",
+      "verified_at": "2026-11-26",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -3227,12 +3274,17 @@
         "RAMM programme confirms free 12-stop digital trail from 15 September 2026 through 11 July 2027, approximately one hour; visitor page confirms weekend opening 10am–5pm. No numeric ages or booking requirement published.",
         "Official listing shows 15 September 2026–11 July 2027, a free self-guided 12-stop trail taking about an hour, and museum weekend hours 10am–5pm. Numerical ages and booking requirements unstated.",
         "RAMM confirms free 12-stop self-guided trail, advertised 15 Sep 2026–11 Jul 2027, about one hour, and ordinary weekend museum hours 10am–5pm. 28 and 29 Nov follow the published programme and museum hours. Numerical ages and booking are not stated.",
-        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained."
+        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained.",
+        "26 November: active 28–29 November and 5–6 December facts compared with current official bodies; existing TBC qualifications retained."
       ],
       "verification_history": [
         {
           "verified_at": "2026-11-16",
           "superseded_at": "2026-11-20T08:14:09.277056+00:00"
+        },
+        {
+          "verified_at": "2026-11-20",
+          "superseded_at": "2026-11-26T07:53:30.528491+00:00"
         }
       ],
       "notes": [
@@ -3493,7 +3545,7 @@
       "price_type": "unknown",
       "price_text": "Visitor admission TBC. Food and other purchases cost extra.",
       "booking_text": "No visitor booking rule is stated. Stallholder pitch booking is separate; check for exceptions.",
-      "schedule_text": "Sunday 22 November 2026 from 10am, closing time TBC. Sunday 29 November festive market, 10am–2.30pm.",
+      "schedule_text": "29 November and 6 December 2026 festive markets, 10am–2.30pm. Older dated November closing-time conflicts are retained as history.",
       "occurrences": [
         {
           "start": "2026-11-01",
@@ -3529,6 +3581,13 @@
           "weekday": "Sunday",
           "start_time": "10:00",
           "end_time": "14:30"
+        },
+        {
+          "start": "2026-12-06",
+          "end": "2026-12-06",
+          "weekday": "Sunday",
+          "start_time": "10:00",
+          "end_time": "14:30"
         }
       ],
       "indoor": null,
@@ -3542,32 +3601,34 @@
         "market"
       ],
       "practical_notes": [
-        "On 22 November the dated page says 2pm and the calendar says 2.30pm. Check with the organiser before travelling.",
-        "On 29 November the festive market runs 10am–2.30pm. Food, gifts and Christmas trees are sold separately."
+        "On 29 November the festive market runs 10am–2.30pm. Food, gifts and Christmas trees are sold separately.",
+        "6 December only: KidsCre8 workshops on The Terrace run 11am–2pm, donation based and subject to availability. Market admission and numerical age guidance remain TBC."
       ],
       "sources": [
         {
           "url": "https://www.tobaccofactory.com/sunday-market",
           "label": "Tobacco Factory market guide",
           "supports": "Published Sunday market hours are 10am–2.30pm. Visitor admission and booking terms are not specified.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "retrieval_history": [
             "Official source read on 11 November 2026 (Europe/London).",
             "Official source body reviewed 14 November 2026 (Europe/London). Official calendar confirms 15 and 22 November 2026 at 10am. Calendar says 2.30pm close for 15 November and the dated page says 2pm. Retain published closing-time qualification; admission, age and booking TBC.",
             "Displayed official body reviewed on 15 November 2026 (Europe/London).",
-            "Official page body reviewed on 16 November 2026 (Europe/London)."
+            "Official page body reviewed on 16 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ]
         },
         {
           "url": "https://www.tobaccofactory.com/whats-on?category=Market",
           "label": "Tobacco Factory market calendar",
           "supports": "Calendar lists 22 and 29 November from 10am to 2.30pm. The 22 November event text disagrees; the 29 November event text matches.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "retrieval_history": [
             "Official source read on 11 November 2026 (Europe/London).",
             "Official source body reviewed 14 November 2026 (Europe/London). Official calendar confirms 15 and 22 November 2026 at 10am. Calendar says 2.30pm close for 15 November and the dated page says 2pm. Retain published closing-time qualification; admission, age and booking TBC.",
             "Displayed official body reviewed on 15 November 2026 (Europe/London).",
-            "Official page body reviewed on 16 November 2026 (Europe/London)."
+            "Official page body reviewed on 16 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ]
         },
         {
@@ -3594,24 +3655,31 @@
           "url": "https://www.tobaccofactory.com/whats-on/festive-markets-2026-nov-29th",
           "label": "Tobacco Factory 29 November festive market",
           "supports": "Dated Sunday 29 November 2026 listing gives 10am–2.30pm. Shops and stalls include seasonal food, crafts and Christmas trees.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "retrieval_history": [
-            "Official page body reviewed on 16 November 2026 (Europe/London)."
+            "Official page body reviewed on 16 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ]
+        },
+        {
+          "url": "https://www.tobaccofactory.com/whats-on/festive-markets-2026-dec-6th",
+          "label": "Tobacco Factory 6 December festive market",
+          "supports": "Official dated 2026 page: Sunday6December10am–2.30pm; KidsCre8 donation-based workshops11am–2pm subject to availability.",
+          "retrieval": "Official body retrieved and reviewed26November2026, Europe/London."
         }
       ],
       "limitations": [
         "Unstated prices, numerical ages, entry/access rules and exceptional changes remain TBC.",
         "Official closing times conflict: 2pm on dated pages versus 2.30pm on the calendar/general guide. No closing time is confirmed."
       ],
-      "verified_at": "2026-11-20",
+      "verified_at": "2026-11-26",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
           "candidate_id": "70adf53aba5f3888bfb41dc6",
           "name": "Tobacco Factory Sunday Market",
           "region": "Bristol",
-          "fingerprint": "fc4c9725218ace72ef29685048ea3416c13c73ce5ce65ef51e50fc79c6dfb1b0"
+          "fingerprint": "a66404f7d5e046926aaf0bb258958621bfef5787c81cd507f54a46287b52a816"
         }
       ],
       "sheet_match": {
@@ -3630,9 +3698,9 @@
           507
         ],
         "published_csv_checked": true,
-        "checked_at": "2026-11-16T07:03:41+00:00",
-        "published_csv_checked_at": "2026-11-16T07:03:41+00:00",
-        "reconciliation_note": "Native master dates and description read back with formatting and matched with published CSV. The exact 22 and 29 November event rows and prior rows remain.",
+        "checked_at": "2026-11-26T07:53:30.528491+00:00",
+        "published_csv_checked_at": "2026-11-26T07:51:47+00:00",
+        "reconciliation_note": "Native 시트1 I250 and N250 saved and re-read; complete published master/events CSVs compared. Historical rows preserved.",
         "reconciliation_history": [
           "The I250 and N250 clarification matches the native readback and published master; existing dated events were retained.",
           "Native master I250 and N250 read back with original cell metadata, then matched against the full published CSV. Dated rows were preserved."
@@ -3686,22 +3754,28 @@
         "Official calendar confirms 15 and 22 November 2026 at 10am. Calendar says 2.30pm close for 15 November and the dated page says 2pm. Retain published closing-time qualification; admission, age and booking TBC.",
         "Dated event bodies give 10am–2pm for 15 and 22 November. Calendar and general market guide give 10am–2.30pm; the 22 November metadata also gives 2.30pm. Both closing times remain TBC. Admission, numerical ages and visitor booking unspecified. Pitch booking and café hours are separate.",
         "The 22 Nov calendar says 2.30pm and the dated body 2pm; 10am start is consistent. The 29 Nov Festive Markets dated listing and calendar both give 10am–2.30pm. No visitor fee, numeric ages or booking rule is published. Stallholder pitch booking is separate.",
-        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained."
+        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained.",
+        "26 November: active 28–29 November and 5–6 December facts compared with current official bodies; existing TBC qualifications retained."
       ],
       "schedule_history": [
         "Sunday 1 and 8 November 2026, from 10am. Closing time TBC: dated event pages say 2pm, but the calendar and general market guide say 2.30pm; confirm before travelling.",
         "Sunday 15 and 22 November 2026, from 10am. Closing time TBC: the 15 November event page says 2pm; the organiser’s calendar and general market guide say 2.30pm.",
-        "Sunday 15 and 22 November 2026, from 10am. Closing time TBC on both dates: the dated event pages say 2pm, while the organiser’s calendar and general market guide say 2.30pm."
+        "Sunday 15 and 22 November 2026, from 10am. Closing time TBC on both dates: the dated event pages say 2pm, while the organiser’s calendar and general market guide say 2.30pm.",
+        "Sunday 22 November 2026 from 10am, closing time TBC. Sunday 29 November festive market, 10am–2.30pm."
       ],
       "verification_history": [
         {
           "verified_at": "2026-11-16",
           "superseded_at": "2026-11-20T08:14:09.277056+00:00"
+        },
+        {
+          "verified_at": "2026-11-20",
+          "superseded_at": "2026-11-26T07:53:30.528491+00:00"
         }
       ],
       "notes": [
-        "On 22 November the dated page says 2pm and the calendar says 2.30pm. Check with the organiser before travelling.",
-        "On 29 November the festive market runs 10am–2.30pm. Food, gifts and Christmas trees are sold separately."
+        "On 29 November the festive market runs 10am–2.30pm. Food, gifts and Christmas trees are sold separately.",
+        "6 December only: KidsCre8 workshops on The Terrace run 11am–2pm, donation based and subject to availability. Market admission and numerical age guidance remain TBC."
       ]
     },
     {
@@ -3773,7 +3847,7 @@
         {
           "url": "https://www.wrmcic.co.uk/home",
           "supports": "Organiser lists every Saturday, 08:30–13:00, at Whiteladies/Apsley Road BS8 2ST, with local food and some crafts/plants. Selected dates follow that rule. Admission, age and visitor booking conditions are unstated.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "retrieval_history": [
             "Official organiser page body reviewed on 26 October 2026 (GMT). No booking transaction, live-availability guarantee or visit.",
             "Official provider page body reviewed on 28 October 2026 (Europe/London, GMT) for the upcoming weekend: dates/hours, price basis, age guidance and booking conditions compared. Older dated exceptions remain historical, not newly reverified. No live capacity guarantee or checkout.",
@@ -3782,14 +3856,15 @@
             "Official page body reviewed on 9 November 2026 (Europe/London) for the selected upcoming dates.",
             "Official source body reviewed 14 November 2026 (Europe/London). Organiser confirms regular Saturday 8.30am–1pm at Whiteladies/Apsley Road; 21 November follows recurring schedule. General admission, numerical ages and booking remain TBC.",
             "Displayed official body reviewed on 15 November 2026 (Europe/London).",
-            "Official page body reviewed on 16 November 2026 (Europe/London)."
+            "Official page body reviewed on 16 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ]
         }
       ],
       "limitations": [
         "Unstated prices, numerical ages, entry/access rules and exceptional changes remain TBC."
       ],
-      "verified_at": "2026-11-20",
+      "verified_at": "2026-11-26",
       "review_status": "verified_with_explicit_limitations",
       "sheet_bindings": [
         {
@@ -3826,7 +3901,8 @@
         "Organiser confirms regular Saturday 8.30am–1pm at Whiteladies/Apsley Road; 21 November follows recurring schedule. General admission, numerical ages and booking remain TBC.",
         "Organiser confirms Saturday 8.30am–1pm at Whiteladies Road and Apsley Road; 21 November follows the recurring schedule. Admission, numerical age guidance and visitor booking unstated.",
         "The organiser confirms the recurring 8.30am–1pm Saturday market at Whiteladies and Apsley Road. 21 and 28 Nov follow this schedule; visitor pricing, numeric age and booking are not stated.",
-        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained."
+        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained.",
+        "26 November: active 28–29 November and 5–6 December facts compared with current official bodies; existing TBC qualifications retained."
       ],
       "schedule_history": [
         "Saturdays, 8.30am–1pm. 31 October and 7 November 2026 follow the published weekly schedule, not separate dated confirmations."
@@ -3835,6 +3911,10 @@
         {
           "verified_at": "2026-11-16",
           "superseded_at": "2026-11-20T08:14:09.277056+00:00"
+        },
+        {
+          "verified_at": "2026-11-20",
+          "superseded_at": "2026-11-26T07:53:30.528491+00:00"
         }
       ],
       "notes": [
@@ -4730,7 +4810,7 @@
       "price_text": "Free site entry. Skating: child £12.95, adult £14.95 or family (two adults and two children) £49.95. Skate aid £5.",
       "age_text": "Skaters must be 5 or older. Under-15s need an accompanying adult. Ask which ticket to select for age 17, which appears in both price bands.",
       "booking_text": "Advance online booking is recommended for skating. Free site entry needs no ticket. Slot availability is TBC.",
-      "schedule_text": "28 and 29 November 2026, noon–10pm. Hourly skating sessions, last session 9–10pm.",
+      "schedule_text": "28–29 November and 5–6 December 2026, noon–10pm. Hourly skating sessions; last session 9–10pm.",
       "occurrences": [
         {
           "start": "2026-11-28",
@@ -4742,6 +4822,20 @@
         {
           "start": "2026-11-29",
           "end": "2026-11-29",
+          "weekday": "Sunday",
+          "start_time": "12:00",
+          "end_time": "22:00"
+        },
+        {
+          "start": "2026-12-05",
+          "end": "2026-12-05",
+          "weekday": "Saturday",
+          "start_time": "12:00",
+          "end_time": "22:00"
+        },
+        {
+          "start": "2026-12-06",
+          "end": "2026-12-06",
           "weekday": "Sunday",
           "start_time": "12:00",
           "end_time": "22:00"
@@ -4767,22 +4861,24 @@
           "url": "https://crowleisuregroup.co.uk/bristol-on-ice/",
           "label": "Crow Leisure event and visitor information",
           "supports": "Confirms 2026 opening weekend, venue, noon–10pm, 9pm last session, published prices and closures.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "retrieval_history": [
-            "Official page body reviewed on 16 November 2026 (Europe/London)."
+            "Official page body reviewed on 16 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ]
         },
         {
           "url": "https://crowleisuregroup.co.uk/product/bristol-on-ice-ice-skating/",
           "label": "Crow Leisure skating tickets and conditions",
           "supports": "Lists the £12.95, £14.95 and £49.95 fares, £5 skate aids, minimum age five, under-15 adult accompaniment, hourly slots and the nearby car park.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "retrieval_history": [
-            "Official page body reviewed on 16 November 2026 (Europe/London)."
+            "Official page body reviewed on 16 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ]
         }
       ],
-      "verified_at": "2026-11-20",
+      "verified_at": "2026-11-26",
       "review_status": "verified_with_explicit_limitations",
       "sheet_match": {
         "live_sheet_checked": true,
@@ -4807,10 +4903,15 @@
         {
           "verified_at": "2026-11-16",
           "superseded_at": "2026-11-20T08:14:09.277056+00:00"
+        },
+        {
+          "verified_at": "2026-11-20",
+          "superseded_at": "2026-11-26T07:53:30.528491+00:00"
         }
       ],
       "review_notes": [
-        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained."
+        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained.",
+        "26 November: active 28–29 November and 5–6 December facts compared with current official bodies; existing TBC qualifications retained."
       ],
       "notes": [
         "Rink cover is TBC. The organiser points to Millennium Square Car Park, BS1 5LL. Check parking charges separately.",
@@ -4859,13 +4960,14 @@
           "url": "https://www.exeter-cathedral.org.uk/whats-on/events/christingle-service-2026/",
           "label": "Exeter Cathedral service information",
           "supports": "Confirms 28 November 2026, 4pm, free admission, no booking and suitability for families with young children.",
-          "retrieval": "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee.",
+          "retrieval": "Official body retrieved and reviewed on 26 November 2026, Europe/London. No booking or availability guarantee.",
           "retrieval_history": [
-            "Official page body reviewed on 16 November 2026 (Europe/London)."
+            "Official page body reviewed on 16 November 2026 (Europe/London).",
+            "Official source body reviewed on 20 November 2026 (Europe/London). Published conditions compared; no booking or availability guarantee."
           ]
         }
       ],
-      "verified_at": "2026-11-20",
+      "verified_at": "2026-11-26",
       "review_status": "verified_with_explicit_limitations",
       "sheet_match": {
         "live_sheet_checked": true,
@@ -4890,10 +4992,15 @@
         {
           "verified_at": "2026-11-16",
           "superseded_at": "2026-11-20T08:14:09.277056+00:00"
+        },
+        {
+          "verified_at": "2026-11-20",
+          "superseded_at": "2026-11-26T07:53:30.528491+00:00"
         }
       ],
       "review_notes": [
-        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained."
+        "20 November: active 21–22/28–29 November dates or ordinary visitor conditions compared with official page bodies. Existing TBC qualifications retained.",
+        "26 November: active 28–29 November and 5–6 December facts compared with current official bodies; existing TBC qualifications retained."
       ],
       "notes": [
         "This is a church service. General cathedral visitor hours and admission are separate."
@@ -5092,6 +5199,83 @@
         "Book the 1pm session on the host’s ticket page. Collect your fired mug one week later."
       ],
       "indoor_basis": "Official programme names an indoor workshop room."
+    },
+    {
+      "id": "mind-over-mayhem-family-day-2026-12-06",
+      "name": "Mind over Mayhem Family Wellbeing Day – Exeter Phoenix",
+      "kind": "event",
+      "region": "Devon",
+      "city": "Exeter",
+      "locality": "Exeter city centre",
+      "address": "Auditorium, Exeter Phoenix, Gandy Street, Exeter EX4 3LS",
+      "description": "A free daytime family wellbeing programme with crafts, films, dance and taster activities. This listing covers the daytime programme only.",
+      "age_text": "Family-friendly programme; numerical ages TBC.",
+      "price_type": "free",
+      "price_text": "Daytime family programme free. The separate evening concert costs £25 plus the stated £1.50 ticketing charge.",
+      "booking_text": "Daytime booking requirements TBC; check the organiser. The Book Now link is for the separately ticketed evening programme.",
+      "schedule_text": "Sunday6December2026,11am–4pm for the free daytime family programme.",
+      "indoor": true,
+      "rainy_day": {
+        "suitable": true,
+        "basis": "The official page names the Auditorium at Exeter Phoenix.",
+        "classification": "Indoor family programme"
+      },
+      "tags": [
+        "weekend",
+        "family",
+        "wellbeing",
+        "craft"
+      ],
+      "verified_at": "2026-11-26",
+      "review_status": "verified_with_explicit_limitations",
+      "occurrences": [
+        {
+          "start": "2026-12-06",
+          "end": "2026-12-06",
+          "weekday": "Sunday",
+          "start_time": "11:00",
+          "end_time": "16:00"
+        }
+      ],
+      "practical_notes": [
+        "The venue page headline spans11am–11pm; its free daytime schedule is11am–4pm. The evening concert is a separate paid event.",
+        "Activity capacity and daytime booking rules are TBC; no guarantee of presents or Santa availability."
+      ],
+      "sources": [
+        {
+          "url": "https://exeterphoenix.org.uk/events/mind-over-mayhem/",
+          "label": "Exeter Phoenix dated programme",
+          "supports": "Sunday6December2026; free daytime Wellness Unplugged11am–4pm; family crafts, films and dance; Auditorium venue. Evening music£25 plus ticketing charge is separate.",
+          "retrieval": "Official current body retrieved and reviewed26November2026, Europe/London."
+        }
+      ],
+      "sheet_bindings": [
+        {
+          "candidate_id": "8545766d7a0fd86d036b5306",
+          "name": "Mind over Mayhem Family Wellbeing Day – Exeter Phoenix",
+          "region": "Devon",
+          "fingerprint": "8c447e86b91a0a1461ec17720502b1c4744a88d10abc5f92fe8fcb1bb883b270"
+        }
+      ],
+      "sheet_match": {
+        "live_sheet_checked": true,
+        "row_id": 211,
+        "event_rows": [
+          261
+        ],
+        "published_csv_checked": true,
+        "checked_at": "2026-11-26T07:51:47+00:00",
+        "reconciliation_note": "Existing master and exact6December event match the official daytime programme; no new Sheet row."
+      },
+      "limitations": [
+        "Numerical age guidance and daytime booking requirements TBC."
+      ],
+      "notes": [
+        "The venue page headline spans11am–11pm; its free daytime schedule is11am–4pm. The evening concert is a separate paid event.",
+        "Activity capacity and daytime booking rules are TBC; no guarantee of presents or Santa availability."
+      ],
+      "free_basis": "Daytime family programme free. The separate evening concert costs £25 plus the stated £1.50 ticketing charge.",
+      "indoor_basis": "The official page names the Auditorium at Exeter Phoenix."
     }
   ]
 }
