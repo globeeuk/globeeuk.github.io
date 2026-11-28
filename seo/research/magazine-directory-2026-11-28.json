@@ -1278,7 +1278,7 @@
       "end_date": "2026-12-12",
       "location": "Golden Sleigh under the glass canopy, outside Crew Clothing and Clarendon Fine Art, Princesshay, Exeter",
       "url": "https://princesshay.co.uk/meetsanta/",
-      "description": "A Deaf Academy Signing Santa with an interpreter; all visitors welcome. Drop in, with no booking system; lunch breaks and queue closure apply. The official page confirms 5 and 12 December 2026, although it mislabels 12 December as Sunday; the calendar date is Saturday. These replace the conflicting magazine dates. Numeric age guidance TBC.",
+      "description": "A Deaf Academy Signing Santa with an interpreter; all visitors welcome. Sessions take place on Saturdays 5 and 12 December 2026. Drop in, with no booking system; lunch breaks and queue closure apply. Numeric age guidance TBC.",
       "master_row": 650,
       "event_rows": [
         1478,
@@ -1287,7 +1287,8 @@
       "verified_at": "2026-11-28T10:04:37.806466+00:00",
       "evidence_url": "https://www.princesshay.co.uk/meetsanta",
       "source_sha256": "52addf2f4fb0cee9ef1495731f6c4ef7b398af626b89603fb79fab3b3a8221fb",
-      "source_http_status": 200
+      "source_http_status": 200,
+      "review_notes": "Public wording shortened; source facts and verification time unchanged. Prior wording: A Deaf Academy Signing Santa with an interpreter; all visitors welcome. Drop in, with no booking system; lunch breaks and queue closure apply. The official page confirms 5 and 12 December 2026, although it mislabels 12 December as Sunday; the calendar date is Saturday. These replace the conflicting magazine dates. Numeric age guidance TBC."
     },
     {
       "name": "Christmas with the Cathedral Choir 2026",
@@ -1351,7 +1352,7 @@
       "end_date": "2027-01-03",
       "location": "Jurassic Discovery, The Underfleet, Seaton, Devon EX12 2WD",
       "url": "https://jurassicdiscovery.co.uk/events/view/prehistoric-christmas-at-jurassic-discovery",
-      "description": "See animatronic dinosaurs in festive outfits; soft play is also open. The official event spans 28 November to 3 January and explicitly closes on Christmas Day and Boxing Day. The calendar’s outer 9.30am–5.30pm range is not treated as the opening time for every day. Check admission, soft-play eligibility, age guidance and daily hours before booking.",
+      "description": "See animatronic dinosaurs in festive outfits; soft play is also open. The advertised season runs from 28 November to 3 January, with closures on Christmas Day and Boxing Day. Check admission, soft-play eligibility, age guidance and daily opening hours before booking.",
       "master_row": 653,
       "event_rows": [
         1485,
@@ -1360,7 +1361,8 @@
       "verified_at": "2026-11-28T10:05:54.408671+00:00",
       "evidence_url": "https://jurassicdiscovery.co.uk/events/view/prehistoric-christmas-at-jurassic-discovery",
       "source_sha256": "0682f621f350822f87d709c5df66d88a173e932f7929c220396b8929982c5936",
-      "source_http_status": 200
+      "source_http_status": 200,
+      "review_notes": "Public wording shortened; source facts and verification time unchanged. Prior wording: See animatronic dinosaurs in festive outfits; soft play is also open. The official event spans 28 November to 3 January and explicitly closes on Christmas Day and Boxing Day. The calendar’s outer 9.30am–5.30pm range is not treated as the opening time for every day. Check admission, soft-play eligibility, age guidance and daily hours before booking."
     },
     {
       "name": "Insects Uncovered Exhibition – Newton Abbot Museum",
@@ -1375,13 +1377,14 @@
       "end_date": "",
       "location": "Newton Abbot Museum, Newton’s Place, Wolborough Street, Newton Abbot, Devon",
       "url": "https://www.museum-newtonabbot.org.uk/whats-on/2026/11/29/insects-uncovered",
-      "description": "A butterfly and moth exhibition with a family hunt trail. No booking required. Open only when the museum is open; check the museum’s current hours and holiday closures. The body says March 2027 while calendar metadata uses 1 March; the exact end date is TBC. Numeric age guidance TBC. Free entry.",
+      "description": "A butterfly and moth exhibition with a family hunt trail. Free entry; no booking required. Open only when the museum is open; check current hours and holiday closures. The exact closing date in March 2027 and numeric age guidance are TBC.",
       "master_row": 654,
       "event_rows": [],
       "verified_at": "2026-11-28T10:06:23.312107+00:00",
       "evidence_url": "https://www.museum-newtonabbot.org.uk/whats-on/2026/11/29/insects-uncovered",
       "source_sha256": "fdb6ab02231a513f534a0b518e5db22bd2187156664bea51e22ab843197ee920",
-      "source_http_status": 200
+      "source_http_status": 200,
+      "review_notes": "Public wording shortened; source facts and verification time unchanged. Prior wording: A butterfly and moth exhibition with a family hunt trail. No booking required. Open only when the museum is open; check the museum’s current hours and holiday closures. The body says March 2027 while calendar metadata uses 1 March; the exact end date is TBC. Numeric age guidance TBC. Free entry."
     },
     {
       "name": "A Very Miniature Christmas 2026 – Babbacombe Model Village",
@@ -1553,7 +1556,7 @@
       "end_date": "2026-12-09",
       "location": "The Landmark, Ilfracombe, Devon EX34 9BZ",
       "url": "https://landmark-ilfracombe.com/events/scrooge-live/",
-      "description": "The 1951 film Scrooge with a live score performed by the FB Pocket Orchestra. Film rated U; numeric age guidance and running time TBC. Book via the theatre. Template text includes several ticket-state labels; check live availability in the booking system.",
+      "description": "The 1951 film Scrooge with a live score performed by the FB Pocket Orchestra. Film rated U; numeric age guidance and running time TBC. Book via the theatre and check availability for the selected performance.",
       "master_row": 661,
       "event_rows": [
         1512
@@ -1561,7 +1564,8 @@
       "verified_at": "2026-11-28T10:31:20.386008+00:00",
       "evidence_url": "https://landmark-ilfracombe.com/events/scrooge-live/",
       "source_sha256": "c8d7fb43bc9e16e867033091e1fff5d36d7154f955ce029c8d65243599d58f54",
-      "source_http_status": 200
+      "source_http_status": 200,
+      "review_notes": "Public wording shortened; source facts and verification time unchanged. Prior wording: The 1951 film Scrooge with a live score performed by the FB Pocket Orchestra. Film rated U; numeric age guidance and running time TBC. Book via the theatre. Template text includes several ticket-state labels; check live availability in the booking system."
     },
     {
       "name": "Father Christmas 2026 – Eden Project",
@@ -1659,7 +1663,7 @@
       "end_date": "2026-12-24",
       "location": "Studio 74, Exeter Phoenix, Gandy Street, Exeter EX4 3LS",
       "url": "https://exeterphoenix.org.uk/events/muppet-christmas-carol/",
-      "description": "A rated-U family film screening, running 85 minutes. Book a specific screening. These dates, times and prices follow the live official page rather than older cached search snippets. Numeric age restrictions TBC.",
+      "description": "A rated-U family film screening, running 85 minutes. Book a specific screening. Numeric age restrictions TBC.",
       "master_row": 665,
       "event_rows": [
         1530
@@ -1667,7 +1671,8 @@
       "verified_at": "2026-11-28T10:34:23.344873+00:00",
       "evidence_url": "https://exeterphoenix.org.uk/events/muppet-christmas-carol/",
       "source_sha256": "4a598323abe9da173ab97d62ec389cc4b26fe50fabb54e29831a416beae71ee7",
-      "source_http_status": 200
+      "source_http_status": 200,
+      "review_notes": "Public wording shortened; source facts and verification time unchanged. Prior wording: A rated-U family film screening, running 85 minutes. Book a specific screening. These dates, times and prices follow the live official page rather than older cached search snippets. Numeric age restrictions TBC."
     }
   ]
 }
